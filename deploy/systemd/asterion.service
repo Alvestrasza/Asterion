@@ -1,0 +1,29 @@
+[Unit]
+Description=Asterion Next.js Application
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=webapps
+Group=www-data
+WorkingDirectory=/opt/sites/asterion/app
+EnvironmentFile=/etc/asterion/asterion.env
+ExecStart=/usr/bin/node /opt/sites/asterion/app/.next/standalone/server.js
+Restart=always
+RestartSec=10
+TimeoutStartSec=120
+SyslogIdentifier=asterion
+
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectHome=true
+ProtectSystem=strict
+ReadWritePaths=-/opt/sites/asterion/app/.next/standalone/.next/cache
+CapabilityBoundingSet=
+AmbientCapabilities=
+LockPersonality=true
+MemoryDenyWriteExecute=false
+
+[Install]
+WantedBy=multi-user.target

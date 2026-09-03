@@ -1,0 +1,14 @@
+.private/
+.env
+.env.*
+!.env.example
+.next/
+node_modules/
+*.tsbuildinfo
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+coverage/
+dist/
+*.log

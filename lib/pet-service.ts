@@ -1,0 +1,217 @@
+import type { Pet, PetEvent, Prisma } from "@prisma/client";
+import { Prisma as PrismaRuntime } from "@prisma/client";
+import {
+  SCHEMA_VERSION,
+  advanceState,
+  applyCareAction,
+  createInitialState,
+  normalizeState,
+  type CompanionState
+} from "@/lib/care-engine";
+import { prisma } from "@/lib/db";
+import type { PetCommand, PetCommandResponse, PetEventView, PetSnapshot } from "@/lib/pet-contract";
+
+const MAX_TRANSACTION_ATTEMPTS = 5;
+const HATCH_MESSAGE = "Asterion ist geschlüpft. Ein ruhiger Sternenfunke begleitet dich von nun an.";
+
+class VersionConflict extends Error {}
+
+function isRetryable(error: unknown) {
+  return (
+    error instanceof VersionConflict ||
+    (error instanceof PrismaRuntime.PrismaClientKnownRequestError &&
+      (error.code === "P2034" || error.code === "P2002"))
+  );
+}
+
+async function serializable<T>(operation: (tx: Prisma.TransactionClient) => Promise<T>): Promise<T> {
+  let lastError: unknown;
+
+  for (let attempt = 0; attempt < MAX_TRANSACTION_ATTEMPTS; attempt += 1) {
+    try {
+      return await prisma.$transaction(operation, {
+        isolationLevel: PrismaRuntime.TransactionIsolationLevel.Serializable,
+        maxWait: 5_000,
+        timeout: 10_000
+      });
+    } catch (error) {
+      lastError = error;
+      if (!isRetryable(error) || attempt === MAX_TRANSACTION_ATTEMPTS - 1) throw error;
+    }
+  }
+
+  throw lastError;
+}
+
+function petToState(pet: Pet): CompanionState {
+  return {
+    schemaVersion: SCHEMA_VERSION,
+    createdAt: pet.bornAt.getTime(),
+    lastUpdatedAt: pet.lastAdvancedAt.getTime(),
+    stats: {
+      satiety: pet.satiety,
+      energy: pet.energy,
+      joy: pet.joy,
+      bond: pet.bond
+    },
+    sleeping: pet.sleeping,
+    level: pet.level,
+    xp: pet.xp,
+    interactions: pet.interactions,
+    journal: []
+  };
+}
+
+function stateUpdate(state: CompanionState) {
+  return {
+    bornAt: new Date(state.createdAt),
+    lastAdvancedAt: new Date(state.lastUpdatedAt),
+    satiety: state.stats.satiety,
+    energy: state.stats.energy,
+    joy: state.stats.joy,
+    bond: state.stats.bond,
+    sleeping: state.sleeping,
+    level: state.level,
+    xp: state.xp,
+    interactions: state.interactions,
+    version: { increment: 1 }
+  };
+}
+
+function eventView(event: PetEvent): PetEventView {
+  return {
+    id: event.id,
+    action: event.action,
+    message: event.message,
+    animation: event.animation,
+    accepted: event.accepted,
+    occurredAt: event.occurredAt.toISOString()
+  };
+}
+
+function snapshot(pet: Pet, events: PetEvent[]): PetSnapshot {
+  const state = petToState(pet);
+  return {
+    ...state,
+    id: pet.id,
+    version: pet.version,
+    journal: events.map((event) => ({
+      id: event.id,
+      at: event.occurredAt.getTime(),
+      text: event.message,
+      action: event.action
+    }))
+  };
+}
+
+async function eventsForPet(tx: Prisma.TransactionClient, petId: string) {
+  return tx.petEvent.findMany({
+    where: { petId },
+    orderBy: { occurredAt: "desc" },
+    take: 10
+  });
+}
+
+async function ensurePet(tx: Prisma.TransactionClient, ownerId: string, now: Date) {
+  const existing = await tx.pet.findUnique({ where: { ownerId } });
+  if (existing) return existing;
+
+  const pet = await tx.pet.create({
+    data: {
+      ownerId,
+      bornAt: now,
+      lastAdvancedAt: now
+    }
+  });
+
+  await tx.petEvent.create({
+    data: {
+      petId: pet.id,
+      requestId: "system:hatch",
+      action: "hatch",
+      message: HATCH_MESSAGE,
+      animation: "waving",
+      occurredAt: now
+    }
+  });
+
+  return pet;
+}
+
+async function persistState(tx: Prisma.TransactionClient, pet: Pet, state: CompanionState) {
+  const updated = await tx.pet.updateMany({
+    where: { id: pet.id, version: pet.version },
+    data: stateUpdate(state)
+  });
+
+  if (updated.count !== 1) throw new VersionConflict("Asterion changed on another node.");
+
+  const persisted = await tx.pet.findUnique({ where: { id: pet.id } });
+  if (!persisted) throw new Error("Asterion disappeared while saving.");
+  return persisted;
+}
+
+export async function getPetSnapshot(ownerId: string): Promise<PetSnapshot> {
+  return serializable(async (tx) => {
+    const now = new Date();
+    const pet = await ensurePet(tx, ownerId, now);
+    const advanced = advanceState(petToState(pet), now.getTime());
+    const persisted = await persistState(tx, pet, advanced);
+    const events = await eventsForPet(tx, pet.id);
+    return snapshot(persisted, events);
+  });
+}
+
+export async function performPetCommand(ownerId: string, command: PetCommand): Promise<PetCommandResponse> {
+  return serializable(async (tx) => {
+    const now = new Date();
+    let pet = await ensurePet(tx, ownerId, now);
+    const prior = await tx.petEvent.findUnique({
+      where: { petId_requestId: { petId: pet.id, requestId: command.requestId } }
+    });
+
+    if (prior) {
+      const events = await eventsForPet(tx, pet.id);
+      return { pet: snapshot(pet, events), feedback: eventView(prior), replayed: true };
+    }
+
+    let state = advanceState(petToState(pet), now.getTime());
+    let message: string;
+    let animation: string;
+    let accepted = true;
+
+    if (command.action === "reset") {
+      state = createInitialState(now.getTime());
+      message = "Ein neuer Sternenfunke ist erwacht. Schön, dass du da bist.";
+      animation = "waving";
+      await tx.petEvent.deleteMany({ where: { petId: pet.id } });
+    } else if (command.action === "restore") {
+      state = normalizeState(command.state, now.getTime());
+      state.lastUpdatedAt = now.getTime();
+      message = "Asterion erinnert sich wieder an eure gemeinsame Zeit.";
+      animation = "waving";
+    } else {
+      const result = applyCareAction(state, command.action, now.getTime());
+      state = result.state;
+      message = result.message;
+      animation = result.animation;
+      accepted = result.accepted;
+    }
+
+    pet = await persistState(tx, pet, state);
+    const event = await tx.petEvent.create({
+      data: {
+        petId: pet.id,
+        requestId: command.requestId,
+        action: command.action,
+        message,
+        animation,
+        accepted,
+        occurredAt: now
+      }
+    });
+    const events = await eventsForPet(tx, pet.id);
+
+    return { pet: snapshot(pet, events), feedback: eventView(event), replayed: false };
+  });
+}

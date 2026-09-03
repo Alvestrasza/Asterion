@@ -1,0 +1,105 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id             String          @id @default(cuid())
+  name           String?
+  email          String?         @unique
+  emailVerified  DateTime?
+  image          String?
+  createdAt      DateTime        @default(now())
+  updatedAt      DateTime        @updatedAt
+  accounts       Account[]
+  sessions       Session[]
+  authenticators Authenticator[]
+  pet            Pet?
+}
+
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String? @db.Text
+  access_token      String? @db.Text
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String? @db.Text
+  session_state     String?
+  user              User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+}
+
+model Authenticator {
+  credentialID         String  @unique
+  userId               String
+  providerAccountId    String
+  credentialPublicKey  String
+  counter              Int
+  credentialDeviceType String
+  credentialBackedUp   Boolean
+  transports           String?
+  user                 User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@id([userId, credentialID])
+}
+
+model Pet {
+  id             String     @id @default(cuid())
+  ownerId        String     @unique
+  owner          User       @relation(fields: [ownerId], references: [id], onDelete: Cascade)
+  bornAt         DateTime   @default(now())
+  lastAdvancedAt DateTime   @default(now())
+  satiety        Float      @default(76)
+  energy         Float      @default(82)
+  joy            Float      @default(74)
+  bond           Float      @default(24)
+  sleeping       Boolean    @default(false)
+  level          Int        @default(1)
+  xp             Int        @default(0)
+  interactions   Int        @default(0)
+  version        Int        @default(1)
+  createdAt      DateTime   @default(now())
+  updatedAt      DateTime   @updatedAt
+  events         PetEvent[]
+}
+
+model PetEvent {
+  id         String   @id @default(cuid())
+  petId      String
+  pet        Pet      @relation(fields: [petId], references: [id], onDelete: Cascade)
+  requestId  String   @db.VarChar(64)
+  action     String   @db.VarChar(32)
+  message    String   @db.VarChar(320)
+  animation  String   @db.VarChar(32)
+  accepted   Boolean  @default(true)
+  occurredAt DateTime @default(now())
+
+  @@unique([petId, requestId])
+  @@index([petId, occurredAt(sort: Desc)])
+}

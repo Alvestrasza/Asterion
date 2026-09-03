@@ -1,0 +1,21 @@
+{
+  "name": "Asterion — Star Dragon Companion",
+  "short_name": "Asterion",
+  "description": "A gentle virtual companion whose shared chronicle follows you across devices.",
+  "lang": "de-DE",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#071426",
+  "theme_color": "#0b2844",
+  "categories": ["games", "lifestyle"],
+  "icons": [
+    {
+      "src": "/assets/animations/idle.gif",
+      "sizes": "192x208",
+      "type": "image/gif",
+      "purpose": "any"
+    }
+  ]
+}

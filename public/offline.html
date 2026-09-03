@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0b2844" />
+    <title>Asterion ist bei dir</title>
+    <style>
+      :root { color-scheme: dark; font-family: system-ui, sans-serif; background: #071426; color: #edf8fd; }
+      body { display: grid; min-height: 100vh; margin: 0; padding: 24px; place-items: center; text-align: center; }
+      main { width: min(460px, 100%); }
+      img { width: 192px; max-width: 60vw; height: auto; filter: drop-shadow(0 22px 24px #0008); }
+      h1 { font-family: Georgia, serif; font-weight: 500; }
+      p { color: #a9c1ce; line-height: 1.65; }
+      button { min-height: 44px; padding: 0 20px; color: #071426; border: 0; border-radius: 999px; background: #e8c56a; font-weight: 700; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <img src="/assets/animations/idle.gif" alt="Asterion wartet ruhig" />
+      <h1>Die Verbindung zu den Sternen schläft.</h1>
+      <p>Öffne Asterion wieder, sobald du online bist. Bereits vorgemerkte Augenblicke werden dann sicher synchronisiert.</p>
+      <button type="button" onclick="location.reload()">Erneut verbinden</button>
+    </main>
+  </body>
+</html>
