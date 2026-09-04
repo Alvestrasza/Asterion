@@ -15,6 +15,7 @@ After staging the release, use `deploy/internal/provision-database.sh` with a Po
 1. Build the release on Linux with `pnpm install --frozen-lockfile`, `pnpm test`, `pnpm check`, and `pnpm build`.
 2. Provision the database once, if it does not already exist.
 3. On the first web node, run `deploy/internal/finish-internal-test.sh`. It applies migrations and dispatches the root installation through the approved staged-release sudo rule. On the second node, run `sudo /bin/bash "$(pwd -P)/install-staged-release.sh" internal-test` from the release root so the sudo rule receives the required absolute path and migrations are not applied twice.
-4. Verify `/api/health`, the shared-test banner, a care action, and a companion change through each web node on port `8088`.
+4. If UFW is active, allow only the trusted test-client CIDR by running `sudo deploy/internal/configure-internal-test-firewall.sh allow <trusted-private-cidr>` on each node. Use the `remove` action with the same CIDR to revoke the temporary rule.
+5. Verify `/api/health`, the shared-test banner, a care action, and a companion change through each web node on port `8088`.
 
 The installer uses immutable releases and restores the previous application symlink when service or health verification fails.
