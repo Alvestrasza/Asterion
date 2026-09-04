@@ -86,6 +86,7 @@ rollback() {
     mv -Tf -- "${CURRENT_LINK}.rollback" "${CURRENT_LINK}"
     systemctl restart asterion-internal.service || true
   elif [[ -L "${CURRENT_LINK}" ]]; then
+    systemctl stop asterion-internal.service || true
     rm -f -- "${CURRENT_LINK}"
   fi
   echo "Installation failed; the previous application target was restored when available." >&2
@@ -121,6 +122,13 @@ done
 curl --fail --silent --show-error http://127.0.0.1:3011/api/health >/dev/null
 
 systemctl reload nginx
+
+for _ in {1..20}; do
+  if curl --fail --silent --show-error http://127.0.0.1:8088/api/health >/dev/null; then
+    break
+  fi
+  sleep 1
+done
 curl --fail --silent --show-error http://127.0.0.1:8088/api/health >/dev/null
 
 trap - ERR
