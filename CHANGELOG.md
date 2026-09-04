@@ -2,6 +2,18 @@
 
 All notable changes to Asterion are documented in this file.
 
+## 0.4.0 - 2026-09-04
+
+### Added
+
+- Selectable celestial pony, light fairy, celestial dog, and woodland-elf companions
+- Transparent companion artwork with distinct silhouettes and color palettes in the established painterly storybook style
+
+### Changed
+
+- The settings dialog now scrolls safely as the companion roster grows
+- The offline cache now includes all eight selectable companions
+
 ## 0.3.0 - 2026-09-04
 
 ### Added

@@ -6,7 +6,7 @@ Asterion is a gentle, multi-user Tamagotchi service built as an installable web 
 
 - Keycloak OpenID Connect authentication through Auth.js
 - PostgreSQL persistence with one isolated pet per user
-- Four selectable companions: Asterion, Liora the rabbit, Nyra the cat, and Brumo the young orc
+- Eight selectable companions: Asterion, Liora the rabbit, Nyra the cat, Brumo the young orc, Caelo the pony, Selya the fairy, Fenn the dog, and Aelira the elf
 - Server-authoritative satiety, energy, joy, bond, age, and experience
 - Feed, play, pet, sleep, wake, restore, and confirmed reset interactions
 - Serializable transactions and idempotency keys for safe multi-node operation

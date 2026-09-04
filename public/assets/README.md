@@ -14,3 +14,5 @@ Runtime state mapping:
 | Very tired | `failed.gif` |
 
 `spritesheet.webp` is also used to provide a non-animated frame when the operating system requests reduced motion.
+
+The `companions/` directory contains the selectable full-body portraits used by the web Tamagotchi. Asterion uses the validated animation set above; the additional companions use their transparent portrait together with the interface's state-specific reaction motion.

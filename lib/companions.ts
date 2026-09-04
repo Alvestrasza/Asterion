@@ -1,4 +1,13 @@
-export const COMPANION_KINDS = ["asterion", "rabbit", "cat", "orc"] as const;
+export const COMPANION_KINDS = [
+  "asterion",
+  "rabbit",
+  "cat",
+  "orc",
+  "pony",
+  "fairy",
+  "dog",
+  "elf"
+] as const;
 
 export type CompanionKind = (typeof COMPANION_KINDS)[number];
 
@@ -52,6 +61,46 @@ export const COMPANIONS: Record<CompanionKind, CompanionProfile> = {
     introduction: "Ein großes Herz braucht keine laute Stimme.",
     ariaLabel: "Brumo, ein junger freundlicher Ork in auberginefarbener und bronzener Rüstung",
     stillAsset: "/assets/companions/orc.png",
+    animated: false
+  },
+  pony: {
+    kind: "pony",
+    name: "Caelo",
+    species: "Sternenpony",
+    tagline: "Der mutige Läufer zwischen den Wolken",
+    introduction: "Wo Caelo seine Hufe setzt, wird der Himmel ein wenig weiter.",
+    ariaLabel: "Caelo, ein kleines weißes Sternenpony mit himmelblauer Mähne",
+    stillAsset: "/assets/companions/pony.png",
+    animated: false
+  },
+  fairy: {
+    kind: "fairy",
+    name: "Selya",
+    species: "Lichtfee",
+    tagline: "Die heitere Hüterin kleiner Wunder",
+    introduction: "Selya erinnert dich daran, dass selbst leises Licht den Weg findet.",
+    ariaLabel: "Selya, eine kleine Lichtfee mit rosafarbenem Haar und zarten Flügeln",
+    stillAsset: "/assets/companions/fairy.png",
+    animated: false
+  },
+  dog: {
+    kind: "dog",
+    name: "Fenn",
+    species: "Sternenhund",
+    tagline: "Der treue Wächter deiner Wege",
+    introduction: "Fenn bleibt an deiner Seite, ganz gleich wohin der Tag euch führt.",
+    ariaLabel: "Fenn, ein kleiner karamellfarbener Sternenhund mit blauen Augen",
+    stillAsset: "/assets/companions/dog.png",
+    animated: false
+  },
+  elf: {
+    kind: "elf",
+    name: "Aelira",
+    species: "Waldelfe",
+    tagline: "Die stille Bewahrerin des grünen Pfades",
+    introduction: "Aelira hört selbst das, was der Wald nur im Flüstern erzählt.",
+    ariaLabel: "Aelira, eine junge Waldelfe mit grünem Haar und amethystfarbenen Augen",
+    stillAsset: "/assets/companions/elf.png",
     animated: false
   }
 };
