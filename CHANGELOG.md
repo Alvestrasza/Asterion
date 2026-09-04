@@ -2,6 +2,22 @@
 
 All notable changes to Asterion are documented in this file.
 
+## 0.3.0 - 2026-09-04
+
+### Added
+
+- Selectable rabbit, cat, and young-orc companions alongside Asterion
+- Companion-aware care messages and persistent companion selection
+- Explicit internal shared-user test mode for the pre-Keycloak evaluation
+- Reversible systemd and private-network Nginx installation scripts
+- A restricted staged-release dispatcher compatible with the web-node sudo policy
+- Interactive database provisioning and migration helpers
+
+### Changed
+
+- The interface now presents the active companion's identity and artwork
+- Static companions receive accessible CSS-based reactions while Asterion retains his validated animation set
+
 ## 0.2.0 - 2026-09-03
 
 ### Added

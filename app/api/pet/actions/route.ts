@@ -1,5 +1,6 @@
 import { z } from "zod";
-import { auth } from "@/auth";
+import { COMPANION_KINDS } from "@/lib/companions";
+import { getCurrentActor } from "@/lib/current-actor";
 import { hasSameOrigin } from "@/lib/http";
 import { performPetCommand } from "@/lib/pet-service";
 
@@ -10,6 +11,7 @@ const requestId = z.string().uuid();
 const commandSchema = z.discriminatedUnion("action", [
   z.object({ requestId, action: z.enum(["feed", "play", "pet", "sleep", "wake"]) }),
   z.object({ requestId, action: z.literal("reset") }),
+  z.object({ requestId, action: z.literal("select"), kind: z.enum(COMPANION_KINDS) }),
   z.object({ requestId, action: z.literal("restore"), state: z.record(z.unknown()) })
 ]);
 
@@ -18,8 +20,8 @@ export async function POST(request: Request) {
     return Response.json({ error: "origin_not_allowed" }, { status: 403 });
   }
 
-  const session = await auth();
-  if (!session?.user?.id) {
+  const actor = await getCurrentActor();
+  if (!actor) {
     return Response.json({ error: "authentication_required" }, { status: 401 });
   }
 
@@ -35,7 +37,7 @@ export async function POST(request: Request) {
     return Response.json({ error: "invalid_command" }, { status: 400 });
   }
 
-  const result = await performPetCommand(session.user.id, parsed.data);
+  const result = await performPetCommand(actor.id, parsed.data);
   return Response.json(result, {
     headers: {
       "Cache-Control": "private, no-store"

@@ -1,0 +1,2 @@
+ALTER TABLE "Pet"
+ADD COLUMN "kind" VARCHAR(32) NOT NULL DEFAULT 'asterion';

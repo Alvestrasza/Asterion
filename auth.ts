@@ -39,13 +39,16 @@ declare module "next-auth" {
 export const { handlers, signIn, signOut, auth } = NextAuth({
   adapter: PrismaAdapter(prisma),
   session: { strategy: "database" },
-  providers: [
-    Keycloak({
-      clientId: process.env.AUTH_KEYCLOAK_ID!,
-      clientSecret: process.env.AUTH_KEYCLOAK_SECRET!,
-      issuer: process.env.AUTH_KEYCLOAK_ISSUER!
-    })
-  ],
+  providers:
+    process.env.AUTH_KEYCLOAK_ID && process.env.AUTH_KEYCLOAK_SECRET && process.env.AUTH_KEYCLOAK_ISSUER
+      ? [
+          Keycloak({
+            clientId: process.env.AUTH_KEYCLOAK_ID,
+            clientSecret: process.env.AUTH_KEYCLOAK_SECRET,
+            issuer: process.env.AUTH_KEYCLOAK_ISSUER
+          })
+        ]
+      : [],
   callbacks: {
     async signIn({ account, profile }) {
       if (account?.provider !== "keycloak") return false;

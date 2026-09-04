@@ -42,6 +42,7 @@ Production authentication fails closed unless `ASTERION_REQUIRED_ROLE` is config
 - satiety, energy, joy, and bond
 - sleeping state
 - level, experience, and interaction count
+- the currently selected companion kind
 - an optimistic concurrency version
 
 `PetEvent` stores the journal and the idempotency key for every command. The `(petId, requestId)` unique constraint guarantees that a retried browser request cannot apply an action twice.
@@ -70,3 +71,9 @@ DEV and PROD must use separate:
 - systemd units and reverse-proxy upstreams
 
 Database or identity fallback between environments is prohibited.
+
+## Temporary internal test mode
+
+Before the OIDC client exists, an explicit `ASTERION_INTERNAL_TEST_MODE=true` setting may map private-network visitors to one synthetic shared user. The application displays a persistent warning in this mode. The provided temporary Nginx profile is restricted to private source ranges and must not be connected to an Internet-facing load balancer.
+
+This is a deployment bridge, not an alternative identity model. Enabling Keycloak requires disabling the flag and replacing the temporary listener rather than extending it in place.

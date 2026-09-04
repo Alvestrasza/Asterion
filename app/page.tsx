@@ -1,14 +1,21 @@
 import { redirect } from "next/navigation";
-import { auth } from "@/auth";
+import { getCurrentActor } from "@/lib/current-actor";
 import { getPetSnapshot } from "@/lib/pet-service";
 import { AsterionClient } from "./asterion-client";
 
 export const dynamic = "force-dynamic";
 
 export default async function HomePage() {
-  const session = await auth();
-  if (!session?.user?.id) redirect("/login");
+  const actor = await getCurrentActor();
+  if (!actor) redirect("/login");
 
-  const pet = await getPetSnapshot(session.user.id);
-  return <AsterionClient initialPet={pet} userId={session.user.id} userName={session.user.name ?? session.user.email ?? "Gefährte"} />;
+  const pet = await getPetSnapshot(actor.id);
+  return (
+    <AsterionClient
+      initialPet={pet}
+      userId={actor.id}
+      userName={actor.name}
+      internalTestMode={actor.internalTestMode}
+    />
+  );
 }

@@ -9,6 +9,7 @@
 *.mjs text eol=lf
 *.prisma text eol=lf
 *.service text eol=lf
+*.sh text eol=lf
 *.sql text eol=lf
 *.toml text eol=lf
 *.ts text eol=lf

@@ -45,12 +45,12 @@ export const ACTION_DETAILS = Object.freeze({
   feed: {
     animation: "review",
     label: "Füttern",
-    message: "Die Sternenbeere knistert leise. Asterion wirkt sehr zufrieden."
+    message: (name: string) => `Die Sternenbeere knistert leise. ${name} wirkt sehr zufrieden.`
   },
   play: {
     animation: "jumping",
     label: "Spielen",
-    message: "Asterion jagt einem Lichtfunken nach und landet stolz vor dir."
+    message: (name: string) => `${name} jagt einem Lichtfunken nach und landet stolz vor dir.`
   },
   pet: {
     animation: "waving",
@@ -60,12 +60,12 @@ export const ACTION_DETAILS = Object.freeze({
   sleep: {
     animation: "idle",
     label: "Schlafen",
-    message: "Asterion rollt sich zusammen und lässt die Sterne über sich wachen."
+    message: (name: string) => `${name} rollt sich zusammen und lässt die Sterne über sich wachen.`
   },
   wake: {
     animation: "waving",
     label: "Wecken",
-    message: "Asterion öffnet die Augen und begrüßt dich mit einem kleinen Funkeln."
+    message: (name: string) => `${name} öffnet die Augen und begrüßt dich mit einem kleinen Funkeln.`
   }
 });
 
@@ -73,7 +73,7 @@ export function clamp(value: number, minimum = 0, maximum = 100) {
   return Math.min(maximum, Math.max(minimum, Number.isFinite(value) ? value : minimum));
 }
 
-export function createInitialState(now = Date.now()): CompanionState {
+export function createInitialState(now = Date.now(), companionName = "Asterion"): CompanionState {
   return {
     schemaVersion: SCHEMA_VERSION,
     createdAt: now,
@@ -86,7 +86,7 @@ export function createInitialState(now = Date.now()): CompanionState {
     journal: [
       {
         at: now,
-        text: "Asterion ist geschlüpft. Ein ruhiger Sternenfunke begleitet dich von nun an."
+        text: `${companionName} ist geschlüpft. Ein ruhiger Sternenfunke begleitet dich von nun an.`
       }
     ]
   };
@@ -175,9 +175,14 @@ function addJournalEntry(state: CompanionState, text: string, now: number) {
   state.journal = [{ at: now, text }, ...(state.journal ?? [])].slice(0, 10);
 }
 
-export function applyCareAction(input: unknown, action: CareAction, now = Date.now()): CareResult {
+export function applyCareAction(
+  input: unknown,
+  action: CareAction,
+  now = Date.now(),
+  companionName = "Asterion"
+): CareResult {
   const state = advanceState(input, now);
-  let message = "Asterion beobachtet dich aufmerksam.";
+  let message = `${companionName} beobachtet dich aufmerksam.`;
   let animation = "idle";
   let xp = 0;
 
@@ -186,7 +191,9 @@ export function applyCareAction(input: unknown, action: CareAction, now = Date.n
     state.stats.satiety = clamp(before + (before > 90 ? 4 : 18));
     state.stats.joy = clamp(state.stats.joy + 2);
     state.stats.bond = clamp(state.stats.bond + 0.8);
-    message = before > 94 ? "Asterion ist satt und bewahrt die Sternenbeere für später auf." : ACTION_DETAILS.feed.message;
+    message = before > 94
+      ? `${companionName} ist satt und bewahrt die Sternenbeere für später auf.`
+      : ACTION_DETAILS.feed.message(companionName);
     animation = ACTION_DETAILS.feed.animation;
     xp = before > 94 ? 1 : 5;
   } else if (action === "play") {
@@ -194,7 +201,7 @@ export function applyCareAction(input: unknown, action: CareAction, now = Date.n
       return {
         state,
         animation: "idle",
-        message: "Asterion schläft gerade tief und friedlich.",
+        message: `${companionName} schläft gerade tief und friedlich.`,
         leveledUp: false,
         accepted: false
       };
@@ -203,7 +210,7 @@ export function applyCareAction(input: unknown, action: CareAction, now = Date.n
       return {
         state,
         animation: "waiting",
-        message: "Asterion wäre gern dabei, braucht aber erst etwas Schlaf.",
+        message: `${companionName} wäre gern dabei, braucht aber erst etwas Schlaf.`,
         leveledUp: false,
         accepted: false
       };
@@ -212,23 +219,23 @@ export function applyCareAction(input: unknown, action: CareAction, now = Date.n
     state.stats.satiety = clamp(state.stats.satiety - 3);
     state.stats.joy = clamp(state.stats.joy + 17);
     state.stats.bond = clamp(state.stats.bond + 2.2);
-    message = ACTION_DETAILS.play.message;
+    message = ACTION_DETAILS.play.message(companionName);
     animation = ACTION_DETAILS.play.animation;
     xp = 9;
   } else if (action === "pet") {
     state.stats.joy = clamp(state.stats.joy + 9);
     state.stats.bond = clamp(state.stats.bond + 2.8);
-    message = state.sleeping ? "Asterion brummt zufrieden im Schlaf." : ACTION_DETAILS.pet.message;
+    message = state.sleeping ? `${companionName} brummt zufrieden im Schlaf.` : ACTION_DETAILS.pet.message;
     animation = state.sleeping ? "idle" : ACTION_DETAILS.pet.animation;
     xp = 4;
   } else if (action === "sleep") {
     state.sleeping = true;
-    message = ACTION_DETAILS.sleep.message;
+    message = ACTION_DETAILS.sleep.message(companionName);
     animation = ACTION_DETAILS.sleep.animation;
     xp = 2;
   } else {
     state.sleeping = false;
-    message = ACTION_DETAILS.wake.message;
+    message = ACTION_DETAILS.wake.message(companionName);
     animation = ACTION_DETAILS.wake.animation;
     xp = 2;
   }
@@ -255,15 +262,15 @@ export function deriveMood(input: unknown): Mood {
   return "calm";
 }
 
-export function moodPresentation(mood: Mood) {
+export function moodPresentation(mood: Mood, companionName = "Asterion") {
   const presentations = {
-    sleeping: { label: "Schläft", animation: "idle", message: "Asterion träumt zwischen stillen Sternen." },
+    sleeping: { label: "Schläft", animation: "idle", message: `${companionName} träumt zwischen stillen Sternen.` },
     hungry: { label: "Hungrig", animation: "waiting", message: "Eine Sternenbeere wäre jetzt genau richtig." },
-    tired: { label: "Müde", animation: "failed", message: "Asterions Flügel werden langsam schwer." },
+    tired: { label: "Müde", animation: "failed", message: `${companionName} braucht langsam eine Pause.` },
     lonely: { label: "Sehnsüchtig", animation: "waiting", message: "Er rückt ein kleines Stück näher und wartet auf dich." },
-    radiant: { label: "Strahlend", animation: "waving", message: "Asterion leuchtet heute besonders hell." },
-    attentive: { label: "Aufmerksam", animation: "review", message: "Asterion beobachtet die Sterne und dich sehr genau." },
-    calm: { label: "Geborgen", animation: "idle", message: "Alles ist ruhig. Asterion bleibt einfach bei dir." }
+    radiant: { label: "Strahlend", animation: "waving", message: `${companionName} leuchtet heute besonders hell.` },
+    attentive: { label: "Aufmerksam", animation: "review", message: `${companionName} beobachtet die Sterne und dich sehr genau.` },
+    calm: { label: "Geborgen", animation: "idle", message: `Alles ist ruhig. ${companionName} bleibt einfach bei dir.` }
   };
   return presentations[mood];
 }

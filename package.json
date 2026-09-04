@@ -1,15 +1,15 @@
 {
   "name": "asterion-tamagotchi",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "private": true,
   "type": "module",
-  "description": "A multi-user, server-authoritative virtual companion starring Asterion.",
+  "description": "A multi-user, server-authoritative Tamagotchi service with four selectable companions.",
   "scripts": {
     "dev": "next dev",
     "build": "prisma generate && next build && node scripts/prepare-standalone.mjs",
     "start": "next start",
     "start:prod": "node .next/standalone/server.js",
-    "check": "tsc --noEmit",
+    "check": "prisma generate && tsc --noEmit",
     "test": "node --experimental-strip-types --test tests/*.test.mjs",
     "db:generate": "prisma generate",
     "db:validate": "prisma validate",

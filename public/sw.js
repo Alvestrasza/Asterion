@@ -1,4 +1,4 @@
-const CACHE_NAME = "asterion-static-v0.2.0";
+const CACHE_NAME = "asterion-static-v0.3.0";
 const STATIC_ASSETS = [
   "/offline.html",
   "/manifest.webmanifest",
@@ -8,7 +8,11 @@ const STATIC_ASSETS = [
   "/assets/animations/jumping.gif",
   "/assets/animations/failed.gif",
   "/assets/animations/waiting.gif",
-  "/assets/animations/review.gif"
+  "/assets/animations/review.gif",
+  "/assets/companions/asterion.png",
+  "/assets/companions/rabbit.png",
+  "/assets/companions/cat.png",
+  "/assets/companions/orc.png"
 ];
 
 self.addEventListener("install", (event) => {

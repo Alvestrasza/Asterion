@@ -13,6 +13,8 @@ The target platform requires:
 - a migration database role that owns the application schema
 - one Keycloak OIDC client and one required access assignment per environment
 
+For the pre-Keycloak private-network evaluation only, `deploy/internal/` provides a shared-user test profile. It binds Node.js to loopback, exposes a separate private-source Nginx listener, and shows a persistent warning. Never route external traffic to that listener.
+
 ## Initial provisioning
 
 1. Have the PostgreSQL administrator create the environment-specific database and roles using `deploy/postgresql/bootstrap.sql` as a reviewed template.
@@ -47,6 +49,8 @@ Application rollback is an atomic switch to the previous immutable release follo
 - Multi-node: an idempotency replay and simultaneous actions remain consistent across both nodes.
 
 Only the last two levels establish that the Tamagotchi service itself works.
+
+The temporary shared-user test can establish process, listener, readiness, care-action persistence, and cross-node state consistency. It cannot establish authentication or per-user isolation.
 
 ## Observability
 

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { logout } from "@/app/actions";
 import {
@@ -11,6 +12,12 @@ import {
   xpRequiredForLevel,
   type CareAction
 } from "@/lib/care-engine";
+import {
+  COMPANIONS,
+  companionAnimationAsset,
+  companionProfile,
+  type CompanionKind
+} from "@/lib/companions";
 import type { PetCommand, PetCommandResponse, PetSnapshot } from "@/lib/pet-contract";
 
 type PendingCare = {
@@ -104,14 +111,16 @@ function Stat({
 export function AsterionClient({
   initialPet,
   userId,
-  userName
+  userName,
+  internalTestMode
 }: {
   initialPet: PetSnapshot;
   userId: string;
   userName: string;
+  internalTestMode: boolean;
 }) {
   const [pet, setPet] = useState(initialPet);
-  const initialMood = moodPresentation(deriveMood(initialPet));
+  const initialMood = moodPresentation(deriveMood(initialPet), companionProfile(initialPet.kind).name);
   const [message, setMessage] = useState(initialMood.message);
   const [animation, setAnimation] = useState(initialMood.animation);
   const [animationKey, setAnimationKey] = useState(0);
@@ -139,7 +148,7 @@ export function AsterionClient({
     setMessage(nextMessage);
     setAnimationKey((value) => value + 1);
     transientTimer.current = setTimeout(() => {
-      const presentation = moodPresentation(deriveMood(nextPet));
+      const presentation = moodPresentation(deriveMood(nextPet), companionProfile(nextPet.kind).name);
       setAnimation(presentation.animation);
       setMessage(presentation.message);
     }, 3_400);
@@ -256,7 +265,7 @@ export function AsterionClient({
 
   async function runImmediate(command: PetCommand, successMessage: string) {
     if (busy || !navigator.onLine) {
-      showToast("Dafür braucht Asterion gerade eine Verbindung.");
+      showToast("Dafür braucht dein Begleiter gerade eine Verbindung.");
       return;
     }
 
@@ -268,7 +277,7 @@ export function AsterionClient({
       showToast(successMessage);
     } catch (error) {
       if (error instanceof CommandError && error.status === 401) window.location.assign("/login");
-      else showToast("Die Sternenchronik konnte nicht aktualisiert werden.");
+      else showToast("Die gemeinsame Chronik konnte nicht aktualisiert werden.");
     } finally {
       setBusy(false);
     }
@@ -282,10 +291,10 @@ export function AsterionClient({
     const url = URL.createObjectURL(payload);
     const anchor = document.createElement("a");
     anchor.href = url;
-    anchor.download = `asterion-erinnerung-${new Date().toISOString().slice(0, 10)}.json`;
+    anchor.download = `${pet.kind}-erinnerung-${new Date().toISOString().slice(0, 10)}.json`;
     anchor.click();
     URL.revokeObjectURL(url);
-    showToast("Asterions Erinnerung wurde gesichert.");
+    showToast(`${companionProfile(pet.kind).name}s Erinnerung wurde gesichert.`);
   }
 
   async function importSave(event: React.ChangeEvent<HTMLInputElement>) {
@@ -297,27 +306,38 @@ export function AsterionClient({
       const parsed = JSON.parse(await file.text()) as { pet?: unknown };
       await runImmediate(
         { requestId: crypto.randomUUID(), action: "restore", state: parsed.pet ?? parsed },
-        "Asterions Erinnerung wurde wiederhergestellt."
+        "Die Erinnerung deines Begleiters wurde wiederhergestellt."
       );
       settingsDialog.current?.close();
     } catch {
-      showToast("Diese Datei enthält keine gültige Asterion-Erinnerung.");
+      showToast("Diese Datei enthält keine gültige Begleiter-Erinnerung.");
     }
   }
 
   async function resetPet() {
+    const name = companionProfile(pet.kind).name;
     await runImmediate(
       { requestId: crypto.randomUUID(), action: "reset" },
-      "Asterion beginnt eine neue Chronik."
+      `${name} beginnt eine neue Chronik.`
     );
     confirmDialog.current?.close();
     settingsDialog.current?.close();
   }
 
-  const mood = moodPresentation(deriveMood(pet));
+  async function selectCompanion(kind: CompanionKind) {
+    if (kind === pet.kind) return;
+    const selected = COMPANIONS[kind];
+    await runImmediate(
+      { requestId: crypto.randomUUID(), action: "select", kind },
+      `${selected.name} begleitet dich jetzt.`
+    );
+  }
+
+  const companion = companionProfile(pet.kind);
+  const mood = moodPresentation(deriveMood(pet), companion.name);
   const requiredXp = xpRequiredForLevel(pet.level);
   const xpPercent = Math.min(100, (pet.xp / requiredXp) * 100);
-  const spriteSource = reducedMotion ? "/assets/spritesheet.webp" : `/assets/animations/${animation}.gif`;
+  const spriteSource = companionAnimationAsset(companion.kind, animation, reducedMotion);
   const syncLabel = busy
     ? "Wird gespeichert …"
     : !online
@@ -334,7 +354,7 @@ export function AsterionClient({
 
       <div className="app-shell">
         <header className="topbar">
-          <a className="brand" href="#companion" aria-label="Zu Asterion springen">
+          <a className="brand" href="#companion" aria-label="Zum Begleiter springen">
             <span className="brand-mark" aria-hidden="true">✦</span>
             <span><strong>ASTERION</strong><small>STERNENBEGLEITER</small></span>
           </a>
@@ -354,20 +374,29 @@ export function AsterionClient({
               </button>
             ) : null}
             <button className="icon-button" type="button" aria-label="Einstellungen öffnen" onClick={() => settingsDialog.current?.showModal()}>⚙</button>
-            <form action={logout}><button className="icon-button" type="submit" aria-label="Abmelden">↪</button></form>
+            {internalTestMode ? null : (
+              <form action={logout}><button className="icon-button" type="submit" aria-label="Abmelden">↪</button></form>
+            )}
           </div>
         </header>
+
+        {internalTestMode ? (
+          <aside className="test-mode-banner" role="status">
+            <strong>Interner Testmodus</strong>
+            <span>Alle Tester auf diesem Dienst teilen momentan denselben Spielstand. Vor einer externen Freigabe wird dieser Modus abgeschaltet.</span>
+          </aside>
+        ) : null}
 
         <main>
           <section className="hero" id="companion" aria-labelledby="pageTitle">
             <div className="hero-copy">
-              <p className="eyebrow">DEIN KLEINER HÜTER DER ZEIT</p>
-              <h1 id="pageTitle">Ein stiller Stern<br />bleibt bei dir.</h1>
+              <p className="eyebrow">{companion.tagline.toUpperCase()}</p>
+              <h1 id="pageTitle">{companion.introduction}</h1>
               <p className="hero-intro">
-                Kümmere dich um Asterion, sammle gemeinsame Augenblicke und lass eure Bindung wachsen.
+                Kümmere dich um {companion.name}, sammle gemeinsame Augenblicke und lass eure Bindung wachsen.
                 Eure Chronik folgt dir sicher von Gerät zu Gerät.
               </p>
-              <div className="identity-strip" aria-label="Asterions Entwicklung">
+              <div className="identity-strip" aria-label={`${companion.name}s Entwicklung`}>
                 <div><span>TAG</span><strong>{ageInDays(pet)}</strong></div>
                 <div><span>STUFE</span><strong>{pet.level}</strong></div>
                 <div className="bond-identity"><span>BINDUNG</span><strong>{bondTitle(pet.stats.bond)}</strong></div>
@@ -380,22 +409,25 @@ export function AsterionClient({
                 <div className="orbit orbit-outer" aria-hidden="true" />
                 <div className="orbit orbit-inner" aria-hidden="true" />
                 <div className="moon-glow" aria-hidden="true" />
-                <div
-                  key={animationKey}
-                  className={`asterion-sprite reacting${reducedMotion ? " static-sprite" : ""}`}
-                  role="img"
-                  aria-label="Asterion, ein kleiner goldener und azurblauer Sternendrache"
-                  style={{ backgroundImage: `url("${spriteSource}")` }}
-                />
+                <div key={animationKey} className={`pet-visual reacting reaction-${animation}`}>
+                  <Image
+                    src={spriteSource}
+                    alt={companion.ariaLabel}
+                    fill
+                    sizes="(max-width: 590px) 290px, 330px"
+                    priority
+                    unoptimized
+                  />
+                </div>
               </div>
               <div className="mood-chip"><span className="mood-dot" aria-hidden="true" /><span>{mood.label}</span></div>
             </div>
           </section>
 
-          <section className="care-grid" aria-label="Asterion versorgen">
+          <section className="care-grid" aria-label={`${companion.name} versorgen`}>
             <article className="panel status-panel">
               <div className="panel-heading">
-                <div><p className="eyebrow">WOHLBEFINDEN</p><h2>Wie es Asterion geht</h2></div>
+                <div><p className="eyebrow">WOHLBEFINDEN</p><h2>Wie es {companion.name} geht</h2></div>
                 <span className={`saved-state${online ? "" : " offline"}`}>{syncLabel}</span>
               </div>
               <div className="stats-list">
@@ -447,16 +479,38 @@ export function AsterionClient({
           </section>
         </main>
 
-        <footer><span>ASTERION · SERVER FIRST</span><span>Ein Konto. Eine Chronik. Auf all deinen Geräten.</span></footer>
+        <footer><span>ASTERION · SERVER FIRST</span><span>Ein Konto. Ein Begleiter. Eine Chronik auf all deinen Geräten.</span></footer>
       </div>
 
       <dialog className="settings-dialog" ref={settingsDialog} aria-labelledby="settingsTitle">
         <form method="dialog">
           <div className="dialog-heading">
-            <div><p className="eyebrow">EINSTELLUNGEN</p><h2 id="settingsTitle">Asterions Zuhause</h2></div>
+            <div><p className="eyebrow">EINSTELLUNGEN</p><h2 id="settingsTitle">Dein Sternengefährte</h2></div>
             <button className="icon-button" value="close" aria-label="Einstellungen schließen">×</button>
           </div>
-          <p className="dialog-copy">Asterions Zustand liegt geschützt in deinem Konto und wird zwischen deinen Geräten synchronisiert.</p>
+          <p className="dialog-copy">Der Zustand deines Begleiters liegt geschützt in deinem Konto und wird zwischen deinen Geräten synchronisiert.</p>
+          <fieldset className="companion-picker">
+            <legend>Begleiter wählen</legend>
+            <p>Beim Wechsel bleiben Werte, Stufe und Chronik erhalten.</p>
+            <div className="companion-options">
+              {Object.values(COMPANIONS).map((option) => (
+                <button
+                  className="companion-option"
+                  data-selected={option.kind === pet.kind}
+                  type="button"
+                  aria-pressed={option.kind === pet.kind}
+                  disabled={busy || !online}
+                  key={option.kind}
+                  onClick={() => void selectCompanion(option.kind)}
+                >
+                  <span className="companion-option-image">
+                    <Image src={option.stillAsset} alt="" fill sizes="72px" unoptimized />
+                  </span>
+                  <span><strong>{option.name}</strong><small>{option.species}</small></span>
+                </button>
+              ))}
+            </div>
+          </fieldset>
           <div className="settings-actions">
             <button className="settings-action" type="button" onClick={exportSave}><strong>Erinnerung sichern</strong><small>Spielstand als JSON herunterladen</small></button>
             <label className="settings-action import-label" htmlFor="importInput"><strong>Erinnerung wiederherstellen</strong><small>Einen lokalen oder früheren Spielstand übernehmen</small></label>
@@ -469,7 +523,7 @@ export function AsterionClient({
       <dialog className="confirm-dialog" ref={confirmDialog} aria-labelledby="confirmTitle">
         <span className="confirm-mark" aria-hidden="true">✦</span>
         <h2 id="confirmTitle">Wirklich neu beginnen?</h2>
-        <p>Damit werden Asterions Werte und eure bisherige Sternenchronik in deinem Konto zurückgesetzt.</p>
+        <p>Damit werden die Werte und die bisherige Sternenchronik deines Begleiters in deinem Konto zurückgesetzt.</p>
         <div className="confirm-actions">
           <button className="quiet-button" type="button" onClick={() => confirmDialog.current?.close()}>Abbrechen</button>
           <button className="danger-button" type="button" disabled={busy} onClick={() => void resetPet()}>Neu beginnen</button>

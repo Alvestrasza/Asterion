@@ -8,6 +8,7 @@ import {
   normalizeState,
   type CompanionState
 } from "@/lib/care-engine";
+import { companionProfile, isCompanionKind, type CompanionKind } from "@/lib/companions";
 import { prisma } from "@/lib/db";
 import type { PetCommand, PetCommandResponse, PetEventView, PetSnapshot } from "@/lib/pet-contract";
 
@@ -94,6 +95,7 @@ function snapshot(pet: Pet, events: PetEvent[]): PetSnapshot {
   return {
     ...state,
     id: pet.id,
+    kind: isCompanionKind(pet.kind) ? pet.kind : "asterion",
     version: pet.version,
     journal: events.map((event) => ({
       id: event.id,
@@ -138,16 +140,21 @@ async function ensurePet(tx: Prisma.TransactionClient, ownerId: string, now: Dat
   return pet;
 }
 
-async function persistState(tx: Prisma.TransactionClient, pet: Pet, state: CompanionState) {
+async function persistState(
+  tx: Prisma.TransactionClient,
+  pet: Pet,
+  state: CompanionState,
+  kind?: CompanionKind
+) {
   const updated = await tx.pet.updateMany({
     where: { id: pet.id, version: pet.version },
-    data: stateUpdate(state)
+    data: { ...stateUpdate(state), ...(kind ? { kind } : {}) }
   });
 
-  if (updated.count !== 1) throw new VersionConflict("Asterion changed on another node.");
+  if (updated.count !== 1) throw new VersionConflict("Companion changed on another node.");
 
   const persisted = await tx.pet.findUnique({ where: { id: pet.id } });
-  if (!persisted) throw new Error("Asterion disappeared while saving.");
+  if (!persisted) throw new Error("Companion disappeared while saving.");
   return persisted;
 }
 
@@ -179,26 +186,35 @@ export async function performPetCommand(ownerId: string, command: PetCommand): P
     let message: string;
     let animation: string;
     let accepted = true;
+    let nextKind: CompanionKind | undefined;
+    const currentCompanion = companionProfile(pet.kind);
 
-    if (command.action === "reset") {
-      state = createInitialState(now.getTime());
-      message = "Ein neuer Sternenfunke ist erwacht. Schön, dass du da bist.";
+    if (command.action === "select") {
+      const selected = companionProfile(command.kind);
+      nextKind = selected.kind;
+      message = command.kind === currentCompanion.kind
+        ? `${selected.name} bleibt an deiner Seite.`
+        : `${selected.name} begleitet dich jetzt. Eure gemeinsamen Werte und Erinnerungen bleiben erhalten.`;
+      animation = "waving";
+    } else if (command.action === "reset") {
+      state = createInitialState(now.getTime(), currentCompanion.name);
+      message = `Ein neuer Sternenfunke ist erwacht. ${currentCompanion.name} beginnt eine neue Chronik mit dir.`;
       animation = "waving";
       await tx.petEvent.deleteMany({ where: { petId: pet.id } });
     } else if (command.action === "restore") {
       state = normalizeState(command.state, now.getTime());
       state.lastUpdatedAt = now.getTime();
-      message = "Asterion erinnert sich wieder an eure gemeinsame Zeit.";
+      message = `${currentCompanion.name} erinnert sich wieder an eure gemeinsame Zeit.`;
       animation = "waving";
     } else {
-      const result = applyCareAction(state, command.action, now.getTime());
+      const result = applyCareAction(state, command.action, now.getTime(), currentCompanion.name);
       state = result.state;
       message = result.message;
       animation = result.animation;
       accepted = result.accepted;
     }
 
-    pet = await persistState(tx, pet, state);
+    pet = await persistState(tx, pet, state, nextKind);
     const event = await tx.petEvent.create({
       data: {
         petId: pet.id,

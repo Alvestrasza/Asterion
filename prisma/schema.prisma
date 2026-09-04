@@ -73,6 +73,7 @@ model Pet {
   id             String     @id @default(cuid())
   ownerId        String     @unique
   owner          User       @relation(fields: [ownerId], references: [id], onDelete: Cascade)
+  kind           String     @default("asterion") @db.VarChar(32)
   bornAt         DateTime   @default(now())
   lastAdvancedAt DateTime   @default(now())
   satiety        Float      @default(76)

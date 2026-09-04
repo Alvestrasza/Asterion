@@ -1,11 +1,12 @@
 # Asterion
 
-Asterion is a gentle, multi-user virtual companion built as an installable web application. Each authenticated user has one server-authoritative companion whose state follows them across devices.
+Asterion is a gentle, multi-user Tamagotchi service built as an installable web application. Each authenticated user has one active server-authoritative companion whose state follows them across devices.
 
 ## Features
 
 - Keycloak OpenID Connect authentication through Auth.js
 - PostgreSQL persistence with one isolated pet per user
+- Four selectable companions: Asterion, Liora the rabbit, Nyra the cat, and Brumo the young orc
 - Server-authoritative satiety, energy, joy, bond, age, and experience
 - Feed, play, pet, sleep, wake, restore, and confirmed reset interactions
 - Serializable transactions and idempotency keys for safe multi-node operation
@@ -14,6 +15,7 @@ Asterion is a gentle, multi-user virtual companion built as an installable web a
 - Offline action queue that retries with the original idempotency key
 - Local JSON export and legacy-save restore
 - Database-backed health endpoint at `/api/health`
+- Explicit private-network test mode with a visible shared-state warning
 
 ## Architecture
 
@@ -46,6 +48,8 @@ pnpm dev
 
 Open [http://127.0.0.1:3000](http://127.0.0.1:3000).
 
+For a temporary internal deployment before Keycloak is available, use the reviewed profile in [Internal test deployment](deploy/internal/README.md). It intentionally shares one test user and must never be exposed through an Internet-facing load balancer.
+
 ## Quality checks
 
 ```powershell
@@ -59,6 +63,7 @@ pnpm build
 ## Security boundaries
 
 - Production sign-in fails closed when `ASTERION_REQUIRED_ROLE` is unset.
+- `ASTERION_INTERNAL_TEST_MODE` defaults off and is permitted only on the isolated temporary listener.
 - Pet APIs derive the owner from the authenticated server session; callers cannot select another user.
 - State-changing requests require a same-origin browser request.
 - The service worker never caches authenticated pages, API responses, or session material.

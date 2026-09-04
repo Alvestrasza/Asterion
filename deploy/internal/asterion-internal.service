@@ -1,0 +1,29 @@
+[Unit]
+Description=Asterion Internal Test Service
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=webapps
+Group=www-data
+WorkingDirectory=/opt/sites/asterion-internal/current
+EnvironmentFile=/etc/asterion-internal/asterion.env
+ExecStart=/usr/bin/node /opt/sites/asterion-internal/current/server.js
+Restart=always
+RestartSec=10
+TimeoutStartSec=120
+SyslogIdentifier=asterion-internal
+
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectHome=true
+ProtectSystem=strict
+ReadWritePaths=-/opt/sites/asterion-internal/current/.next/cache
+CapabilityBoundingSet=
+AmbientCapabilities=
+LockPersonality=true
+MemoryDenyWriteExecute=false
+
+[Install]
+WantedBy=multi-user.target

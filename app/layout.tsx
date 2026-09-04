@@ -2,8 +2,8 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Asterion — Dein Sternenbegleiter",
-  description: "Asterion ist ein sanfter Sternendrachen-Begleiter, der dich auf jedem Gerät wiedererkennt.",
+  title: "Asterion — Deine Sternengefährten",
+  description: "Ein sanfter Tamagotchi-Webservice mit Asterion und drei weiteren Sternengefährten.",
   manifest: "/manifest.webmanifest",
   icons: {
     icon: "/assets/animations/idle.gif"

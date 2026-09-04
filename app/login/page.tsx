@@ -1,10 +1,13 @@
 import Image from "next/image";
 import { redirect } from "next/navigation";
 import { auth, signIn } from "@/auth";
+import { isInternalTestMode } from "@/lib/current-actor";
 
 export const dynamic = "force-dynamic";
 
 export default async function LoginPage() {
+  if (isInternalTestMode()) redirect("/");
+
   const session = await auth();
   if (session?.user?.id) redirect("/");
 
