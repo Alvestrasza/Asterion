@@ -8,6 +8,7 @@ All notable changes to Asterion are documented in this file.
 
 - Preserve the client-visible port through the internal Nginx proxy so same-origin companion actions work on the temporary test listener
 - Remove chroma-key fringe from Asterion's transparent companion artwork without changing its silhouette
+- Refresh the offline asset cache so repaired companion artwork reaches existing installations
 - Retry the internal Nginx health check during first activation and stop an orphaned service during rollback
 
 ## 0.4.0 - 2026-09-04
