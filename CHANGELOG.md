@@ -2,6 +2,15 @@
 
 All notable changes to Asterion are documented in this file.
 
+## Unreleased
+
+### Added
+
+- Reproducible second-workstation setup and Git handoff guide
+- Durable public-safe agent guidance for fresh Codex project sessions
+- Blender-to-GLB companion production and acceptance pipeline
+- Public-safe project status snapshot with verified and explicitly pending proof levels
+
 ## 0.4.1 - 2026-09-04
 
 ### Fixed

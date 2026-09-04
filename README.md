@@ -21,7 +21,17 @@ Asterion is a gentle, multi-user Tamagotchi service built as an installable web 
 
 The browser communicates only with the Next.js application. Auth.js uses Keycloak for identity and database sessions. Prisma stores pets and their event journal in a dedicated PostgreSQL database. The same build can run on multiple stateless web nodes because all mutable state is in PostgreSQL.
 
-See [Architecture](docs/ARCHITECTURE.md) and [Operations](docs/OPERATIONS.md) for the full design and rollout procedure.
+See [Project status](docs/PROJECT-STATUS.md), [Architecture](docs/ARCHITECTURE.md), and [Operations](docs/OPERATIONS.md) for the verified baseline, full design, and rollout procedure.
+
+## Continue on another workstation
+
+Use the reviewed [second-workstation guide](docs/SECOND-WORKSTATION.md) instead of copying a working directory. It covers the Codex local-project boundary, clean Git handoff, dependency reconstruction, private-file handling, Blender preparation, and acceptance checks.
+
+Durable agent instructions live in [AGENTS.md](AGENTS.md). They are intentionally tracked so a fresh Codex chat can recover the project's technical, security, documentation, and artwork rules from the repository.
+
+## 3D companion roadmap
+
+The planned Blender-to-GLB workflow is defined in [3D asset pipeline](docs/3D-ASSET-PIPELINE.md). The existing 2D presentation remains the default until each model passes identity, animation, mobile-performance, accessibility, fallback, and release checks.
 
 ## Local development
 
@@ -82,6 +92,7 @@ public/                 PWA shell and approved Asterion artwork
 tests/                  Deterministic domain tests
 deploy/                 Sanitized deployment templates
 docs/                   Architecture and operations guidance
+AGENTS.md               Durable project rules for Codex and contributors
 ```
 
 ## License
