@@ -2,7 +2,7 @@
 
 Asterion is a gentle, multi-user Tamagotchi service built as an installable web application. Each authenticated user has one active server-authoritative companion whose state follows them across devices.
 
-Version `0.5.0` delivers the website foundation for internal testing, not a public-service launch. The public introduction is at `/`; the existing care prototype has moved to `/care`. Its Keycloak integration and ownership model still require real multi-user acceptance. The internal test profile intentionally shares one test account. Consult the project status for separately verified deployment evidence.
+Version `0.5.2` delivers the website foundation and internal-browser fixes for internal testing, not a public-service launch. The public introduction is at `/`; the existing care prototype has moved to `/care`. Its Keycloak integration and ownership model still require real multi-user acceptance. The internal test profile intentionally shares one test account. Consult the project status for separately verified deployment evidence.
 
 ## Features
 

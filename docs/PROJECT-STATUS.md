@@ -1,10 +1,10 @@
 # Asterion project status
 
-Local website-foundation status: 2026-09-05
+Website-foundation and internal deployment status: 2026-09-05
 
-Deployment preflight: both internal nodes were rechecked on 2026-09-05 and still served the healthy `0.4.1` artifact. Installation of the new `0.5.0` website foundation is pending at this publication checkpoint.
+Both existing internal web nodes now serve version `0.5.2`, built from commit [`9163a78`](https://github.com/Alvestrasza/Asterion/commit/9163a78f5ffd2b2ebc252701d8d23e8c673c1d23). The same SHA-256-verified Linux artifact was installed on both nodes. The previous immutable `0.4.1` release is retained. No public cutover, database migration, Keycloak change, or firewall widening was performed.
 
-## Version 0.5.0 website foundation
+## Version 0.5.2 website foundation
 
 The first implementation slice for issues [#2](https://github.com/Alvestrasza/Asterion/issues/2) and [#5](https://github.com/Alvestrasza/Asterion/issues/5) adds:
 
@@ -14,9 +14,18 @@ The first implementation slice for issues [#2](https://github.com/Alvestrasza/As
 - a disabled login entry point when the complete Keycloak provider configuration is absent
 - localized loading/error messages and accessible, responsive public navigation
 
-Local browser checks covered all four public-page languages, persistence of a manual selection across reload and navigation, the unavailable-provider login state, anonymous care-route redirection, and the corrected 375-pixel mobile layout, with no browser-console errors. A frozen-lockfile installation, all 27 automated tests, `pnpm check`, and the Windows production build passed. The built standalone server passed eight isolated HTTP smoke cases with an unreachable placeholder database; a browser check also confirmed persisted language and matching metadata on that artifact. Linux artifact and deployment verification remain outstanding.
+The initial foundation checks covered all four public-page languages, persistence of a manual selection across reload and navigation, the unavailable-provider login state, anonymous care-route redirection, and the corrected 375-pixel mobile layout. For the final `0.5.2` application, frozen-lockfile installation, all 33 automated tests, `pnpm check`, and production builds passed on both Windows and Linux. The Linux standalone artifact passed eight isolated HTTP smoke cases with an unreachable placeholder database and shared-user mode disabled. [GitHub CI also passed](https://github.com/Alvestrasza/Asterion/actions/runs/33971829480).
 
-This slice has not been deployed and establishes no new PostgreSQL, Keycloak, multi-node, or per-user isolation acceptance. The care interface and persisted event messages remain German. See [Website foundation](WEBSITE-FOUNDATION.md) for the implementation boundary and remaining checks.
+### Current internal acceptance
+
+- Both service processes and their internal reverse-proxy listeners are healthy; the application health endpoints report a reachable database.
+- Both introduction pages display `v0.5.2` and both static-cache scripts identify the matching generation.
+- Real internal HTTP browser checks exercised navigation, persisted language selection, care, and opening/closing settings.
+- Feeding and petting saved successfully. The second node then displayed the same companion, interaction count, XP, and journal entries; API reads confirmed matching companion and event identifiers.
+- Fresh browser checks of the final care screen on both nodes had no console errors or warnings. The earlier HTTP request-ID failure and server/browser timestamp mismatch were reproduced and corrected in `0.5.1` and `0.5.2` respectively.
+- The original test companion and its history were preserved. Reset, save import, and companion replacement were not exercised during this acceptance.
+
+This is database-backed, cross-node **shared-test** acceptance, not Keycloak or per-user isolation acceptance. The care interface and persisted event messages remain German. The internal HTTP profile does not establish HTTPS-only browser capabilities such as PWA installation. See [Website foundation](WEBSITE-FOUNDATION.md) for the implementation boundary and remaining checks.
 
 Issue [#13](https://github.com/Alvestrasza/Asterion/issues/13) is deliberately deferred. No diary inspection, alerting, content-access hooks, or new operator visibility have been introduced. Future private-diary work retains the requirement for client-side encryption and must not silently introduce server-side plaintext access.
 

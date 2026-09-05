@@ -1,8 +1,8 @@
 # Website foundation
 
-Status: version `0.5.0` website-foundation release for internal testing, 2026-09-05.
+Status: version `0.5.2` website foundation and internal-browser corrections, 2026-09-05.
 
-This work begins issues [#2: public website](https://github.com/Alvestrasza/Asterion/issues/2) and [#5: localization](https://github.com/Alvestrasza/Asterion/issues/5). Neither issue is complete merely because the introduction is available. Application version `0.5.0` and its matching static-cache generation identify this slice; deployment evidence is recorded separately in [Project status](PROJECT-STATUS.md).
+This work begins issues [#2: public website](https://github.com/Alvestrasza/Asterion/issues/2) and [#5: localization](https://github.com/Alvestrasza/Asterion/issues/5). Neither issue is complete merely because the introduction is available. The foundation was introduced in `0.5.0`; application version `0.5.2` and its matching static-cache generation include the subsequent internal-browser fixes. Deployment evidence is recorded separately in [Project status](PROJECT-STATUS.md).
 
 ## Route and access contract
 
@@ -51,13 +51,19 @@ Local browser checks have exercised:
 - responsive presentation at a 375-pixel viewport, including the corrected overflow condition
 - no browser-console errors during these exercised flows
 
-A frozen-lockfile installation, all 27 automated tests, `pnpm check`, and `pnpm build` passed. The focused tests cover language negotiation, redirect allowlisting, cookie policy, provider-configuration presence, and catalog completeness. The built standalone server also passed eight isolated HTTP smoke cases: four supported language headers, unsupported-language fallback, saved preference priority, unavailable-provider login, and anonymous care redirection. A browser reload on the standalone server confirmed the persisted language, matching metadata, all eight gallery cards, and no console errors.
+A frozen-lockfile installation, all 33 automated tests, `pnpm check`, and `pnpm build` passed for `0.5.2` on both Windows and Linux. The focused tests cover language negotiation, redirect allowlisting, cookie policy, provider-configuration presence, catalog completeness, secure request IDs, and timezone-stable initial timestamps. The Linux standalone server also passed eight isolated HTTP smoke cases: four supported language headers, unsupported-language fallback, saved preference priority, unavailable-provider login, and anonymous care redirection. Earlier foundation browser checks confirmed persisted language, matching metadata, all eight gallery cards, and no console errors on the isolated standalone server.
 
 The read-only `scripts/check-public-pages.mjs` smoke check targets an isolated local production server with Keycloak and internal shared-user mode disabled and an unreachable placeholder database. It checks language negotiation, metadata/cache boundaries, unavailable login, and anonymous `/care` redirection. Its result must be recorded separately from browser interaction tests and real database-backed acceptance.
 
 Run the smoke check against an isolated production server with `node scripts/check-public-pages.mjs http://127.0.0.1:3000`, replacing only the loopback port as needed. It intentionally checks production cache headers and is not a development-server check. Windows build success is not a Linux deployment artifact or target-runtime acceptance.
 
-No application deployment, database migration, public cutover, or real Keycloak sign-in was performed as part of this local slice. Historical internal `0.4.1` evidence remains separate in [Project status](PROJECT-STATUS.md). A healthy public introduction is not evidence of database-backed care, session revocation, per-user isolation, or cross-node persistence.
+The `0.5.2` Linux artifact is deployed on both existing internal nodes. Fresh browser checks confirmed a saved care action, shared state observed through the second node, a working settings dialog, and no console errors on either final care page. No database migration, public cutover, or real Keycloak sign-in was performed. Current and historical evidence remain separate in [Project status](PROJECT-STATUS.md). Shared-user acceptance does not establish session revocation or per-user isolation.
+
+### Corrections discovered on internal HTTP
+
+The actual internal-browser check exposed a request-ID failure that loopback-only checks did not reproduce: `crypto.randomUUID` was absent. The helper now retains the native method where available and otherwise constructs a version-four UUID using `crypto.getRandomValues`; it fails closed if secure randomness is unavailable. Request IDs and existing idempotency checks remain intact. See the browser contracts for [randomUUID](https://developer.mozilla.org/en-US/docs/Web/API/Crypto/randomUUID) and [getRandomValues](https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues).
+
+The Linux server and browser also formatted journal timestamps in different timezones during initial rendering. The first label is now deterministic UTC text, followed by the browser's local timezone after hydration; the displayed companion age uses the snapshot timestamp. Stored event times and game rules are unchanged. This addresses the observed [React hydration mismatch](https://react.dev/errors/418) without suppressing warnings or forcing a server timezone on the user.
 
 ## Next slices and excluded work
 
