@@ -2,7 +2,7 @@
 
 All notable changes to Asterion are documented in this file.
 
-## Unreleased
+## 0.5.0 - 2026-09-05
 
 ### Added
 
@@ -10,13 +10,27 @@ All notable changes to Asterion are documented in this file.
 - Durable public-safe agent guidance for fresh Codex project sessions
 - Blender-to-GLB companion production and acceptance pipeline
 - Public-safe project status snapshot with verified and explicitly pending proof levels
+- Public Starfriends introduction with all eight companions and clearly separated available and planned features
+- German, English, French, and Spanish public/login message catalogs, browser-language negotiation, and a persistent manual language choice
+- Localized loading and error messages, labeled language controls, keyboard navigation, and responsive public-page layout
+- Website-foundation scope, route, verification, and deferred-work documentation for the first slice of issues #2 and #5
+
+### Changed
+
+- Move the existing authenticated care prototype to `/care` while keeping `/` independent of authentication and database queries
+- Preserve the internal shared-user warning and existing care authorization boundaries at the new route
+- Hide the Keycloak sign-in action when any required provider setting is missing or blank
+- Keep secure language-preference cookies in normal production while supporting the explicitly isolated internal HTTP test profile
+- Advance the public static cache generation and display the application version on the landing page
+
+The care interface and existing event messages are not yet localized. This is an internal-test release, not a public launch or live Keycloak acceptance. It does not implement the diary, social features, device API, or deferred issue #13. The existing low-resolution Asterion silhouette is unchanged. Deployment evidence is recorded separately in the project status.
 
 ## 0.4.1 - 2026-09-04
 
 ### Fixed
 
 - Preserve the client-visible port through the internal Nginx proxy so same-origin companion actions work on the temporary test listener
-- Remove chroma-key fringe from Asterion's transparent companion artwork without changing its silhouette
+- Remove the strong chroma-key fringe from Asterion's static companion PNG without changing its silhouette; this repair did not increase the image resolution or soften its binary-alpha edge
 - Refresh the offline asset cache so repaired companion artwork reaches existing installations
 - Retry the internal Nginx health check during first activation and stop an orphaned service during rollback
 

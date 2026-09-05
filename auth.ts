@@ -2,6 +2,7 @@ import NextAuth from "next-auth";
 import Keycloak from "next-auth/providers/keycloak";
 import { PrismaAdapter } from "@auth/prisma-adapter";
 import { prisma } from "@/lib/db";
+import { isKeycloakConfigured } from "@/lib/auth-config";
 
 type KeycloakProfile = {
   groups?: unknown;
@@ -40,7 +41,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
   adapter: PrismaAdapter(prisma),
   session: { strategy: "database" },
   providers:
-    process.env.AUTH_KEYCLOAK_ID && process.env.AUTH_KEYCLOAK_SECRET && process.env.AUTH_KEYCLOAK_ISSUER
+    isKeycloakConfigured()
       ? [
           Keycloak({
             clientId: process.env.AUTH_KEYCLOAK_ID,
