@@ -19,6 +19,7 @@ import {
   type CompanionKind
 } from "@/lib/companions";
 import type { PetCommand, PetCommandResponse, PetSnapshot } from "@/lib/pet-contract";
+import { createRequestId } from "@/lib/request-id";
 
 type PendingCare = {
   requestId: string;
@@ -219,9 +220,19 @@ export function AsterionClient({
     };
   }, [flushQueue, queueKey]);
 
+  function requestIdOrNotify() {
+    try {
+      return createRequestId();
+    } catch {
+      showToast("Dein Browser unterstützt keine sicheren Aktions-IDs. Bitte verwende einen aktuellen Browser.");
+      return null;
+    }
+  }
+
   async function handleCare(action: CareAction) {
     if (busy) return;
-    const requestId = crypto.randomUUID();
+    const requestId = requestIdOrNotify();
+    if (!requestId) return;
     const command = { requestId, action } satisfies PetCommand;
 
     if (navigator.onLine) {
@@ -304,8 +315,10 @@ export function AsterionClient({
 
     try {
       const parsed = JSON.parse(await file.text()) as { pet?: unknown };
+      const requestId = requestIdOrNotify();
+      if (!requestId) return;
       await runImmediate(
-        { requestId: crypto.randomUUID(), action: "restore", state: parsed.pet ?? parsed },
+        { requestId, action: "restore", state: parsed.pet ?? parsed },
         "Die Erinnerung deines Begleiters wurde wiederhergestellt."
       );
       settingsDialog.current?.close();
@@ -316,8 +329,10 @@ export function AsterionClient({
 
   async function resetPet() {
     const name = companionProfile(pet.kind).name;
+    const requestId = requestIdOrNotify();
+    if (!requestId) return;
     await runImmediate(
-      { requestId: crypto.randomUUID(), action: "reset" },
+      { requestId, action: "reset" },
       `${name} beginnt eine neue Chronik.`
     );
     confirmDialog.current?.close();
@@ -327,8 +342,10 @@ export function AsterionClient({
   async function selectCompanion(kind: CompanionKind) {
     if (kind === pet.kind) return;
     const selected = COMPANIONS[kind];
+    const requestId = requestIdOrNotify();
+    if (!requestId) return;
     await runImmediate(
-      { requestId: crypto.randomUUID(), action: "select", kind },
+      { requestId, action: "select", kind },
       `${selected.name} begleitet dich jetzt.`
     );
   }

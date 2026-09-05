@@ -2,6 +2,14 @@
 
 All notable changes to Asterion are documented in this file.
 
+## 0.5.1 - 2026-09-05
+
+### Fixed
+
+- Generate cryptographically random UUID request IDs when the internal HTTP browser does not expose `crypto.randomUUID`; care and settings mutations retain their existing idempotency contract
+- Show an actionable error instead of submitting a command when secure randomness is unavailable
+- Refresh the static cache generation for the corrected internal test release
+
 ## 0.5.0 - 2026-09-05
 
 ### Added

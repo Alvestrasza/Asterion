@@ -1,4 +1,4 @@
-const CACHE_NAME = "asterion-static-v0.5.0";
+const CACHE_NAME = "asterion-static-v0.5.1";
 const STATIC_ASSETS = [
   "/offline.html",
   "/manifest.webmanifest",
