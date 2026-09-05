@@ -20,6 +20,7 @@ import {
 } from "@/lib/companions";
 import type { PetCommand, PetCommandResponse, PetSnapshot } from "@/lib/pet-contract";
 import { createRequestId } from "@/lib/request-id";
+import { formatJournalTime } from "@/lib/journal-time";
 
 type PendingCare = {
   requestId: string;
@@ -131,6 +132,7 @@ export function AsterionClient({
   const [toast, setToast] = useState("");
   const [installPrompt, setInstallPrompt] = useState<InstallPromptEvent | null>(null);
   const [reducedMotion, setReducedMotion] = useState(false);
+  const [timeZone, setTimeZone] = useState<string>();
   const settingsDialog = useRef<HTMLDialogElement>(null);
   const confirmDialog = useRef<HTMLDialogElement>(null);
   const transientTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -180,6 +182,7 @@ export function AsterionClient({
   }, [queueKey, showToast, showTransient]);
 
   useEffect(() => {
+    setTimeZone(Intl.DateTimeFormat().resolvedOptions().timeZone);
     setOnline(navigator.onLine);
     setQueueCount(readQueue(queueKey).length);
 
@@ -414,7 +417,7 @@ export function AsterionClient({
                 Eure Chronik folgt dir sicher von Gerät zu Gerät.
               </p>
               <div className="identity-strip" aria-label={`${companion.name}s Entwicklung`}>
-                <div><span>TAG</span><strong>{ageInDays(pet)}</strong></div>
+                <div><span>TAG</span><strong>{ageInDays(pet, pet.lastUpdatedAt)}</strong></div>
                 <div><span>STUFE</span><strong>{pet.level}</strong></div>
                 <div className="bond-identity"><span>BINDUNG</span><strong>{bondTitle(pet.stats.bond)}</strong></div>
               </div>
@@ -486,7 +489,7 @@ export function AsterionClient({
                 {pet.journal.slice(0, 3).map((entry) => (
                   <li className="journal-entry" key={entry.id}>
                     <time dateTime={new Date(entry.at).toISOString()}>
-                      {new Intl.DateTimeFormat("de-DE", { day: "2-digit", month: "short", hour: "2-digit", minute: "2-digit" }).format(new Date(entry.at)).toUpperCase()}
+                      {formatJournalTime(entry.at, timeZone)}
                     </time>
                     <p>{entry.text}</p>
                   </li>

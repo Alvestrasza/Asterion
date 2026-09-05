@@ -1,6 +1,6 @@
 {
   "name": "asterion-tamagotchi",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "private": true,
   "type": "module",
   "description": "A multi-user, server-authoritative Tamagotchi service with eight selectable companions.",

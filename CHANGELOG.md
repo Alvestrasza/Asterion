@@ -2,6 +2,14 @@
 
 All notable changes to Asterion are documented in this file.
 
+## 0.5.2 - 2026-09-05
+
+### Fixed
+
+- Render deterministic initial journal timestamps before switching to the browser timezone after hydration, avoiding a server/browser timezone mismatch
+- Derive the displayed companion age from the authoritative snapshot time rather than separate server/browser clocks
+- Refresh the static cache generation for the internally verified presentation fix
+
 ## 0.5.1 - 2026-09-05
 
 ### Fixed
