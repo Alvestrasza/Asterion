@@ -1,0 +1,3872 @@
+{
+  "schema": "asterion-local-modular-companion-v1",
+  "version": "sculpt-v004",
+  "kind": "fairy",
+  "name": "Selya",
+  "source_sha256": "921DA956CC3D59A1E04CA353B160B92DFE735145709340947679AA3F75B0E5B6",
+  "model_sha256": "8A4C45664A42C145F84E514752A85F6A857A8698C0B4C46ADC8163A7D4F1F0E4",
+  "reference_sha256": "E22EA6A731DB9E432BB2E454DC0B847E7AD46829D52A871C3F2EDA4FD2AFAEF7",
+  "reference_input": "public/assets/companions/fairy.png",
+  "input_sha256": {
+    "assets/3d/source/fairy/sculpt-v003/fairy-sculpt-v003.blend": "C83B48755F611AB9F7164579C58CE37E61DC96BB3824029EE11463C5440B71FC",
+    "public/assets/3d/fairy/fairy-sculpt-v003.glb": "357B903EE358A4645A6E69FF53E260E2EF20A3DFB19739F6DB031C27A864C6C7",
+    "public/assets/companions/fairy.png": "E22EA6A731DB9E432BB2E454DC0B847E7AD46829D52A871C3F2EDA4FD2AFAEF7",
+    "assets/3d/source/companions/sculpt-v004/build.py": "C6FBCA99D1117722B07933B90795DBFFA37DC22B399ECD6B339EAFF3C063A6BD",
+    "assets/3d/source/companions/sculpt-v004/refinements.py": "6247CEA1AE30B56B6FD3D23DEDEF1DD99BCD8A7B9158AA0576340AA2B8F89BCF",
+    "assets/3d/source/companions/sculpt-v004/export_equipment.py": "5EDB676641BE58BDE353213F6DA4F7F7662B76A08F586D0E7DADA7006AF343CF",
+    "assets/3d/source/companions/sculpt-v001/common.py": "A6DF036A5B3F6FAA3C74740382998D829D45C9E2734D91A285F9369764C21F9E",
+    "assets/3d/source/asterion/sculpt-v002/validate_refinement.py": "8C541F26C2D2546FB142988D10F07EDF51C891D1C81F02065C7B62CE01F78EFD",
+    "assets/3d/source/asterion/sculpt-v003/build_head_study.py": "A3B22323201D30A3BD9459985F8F7741A44545010A84D27CC5912E1C8A85E0F2",
+    "assets/3d/source/asterion/sculpt-v001/build_sculpt.py": "9A81C430E8FD07CE520BBA554C78845A508F22E5FB89E524BF515D8BF8415621",
+    "assets/3d/source/asterion/sculpt-v001/rig_delivery.py": "8758D105E70AB5405F61A48A531154CC591EAC0D82B167788F1D0785A16CDFF0",
+    "assets/3d/source/asterion/sculpt-v004/export_equipment.py": "C805B4740463215AE5CC9D314D14966F2BDF91A00FB82D05054BE0BBB8ED930B",
+    "assets/3d/source/companions/sculpt-v004/folk.py": "50D3791A106E1F83FDCD7429F082A9085285CAB850C98D7AB75D4DFCD0CEA9EF"
+  },
+  "blender": "5.2.1 LTS",
+  "checks": {
+    "original_rest_rig_unchanged": true,
+    "original_constraints_drivers_unchanged": true,
+    "all_original_action_data_unchanged": true,
+    "original_frame_rate_unchanged": true,
+    "authored_eyes_survive_source_reopen": true,
+    "all_source_parts_classified_once": true,
+    "explicit_editable_equipment_groups": true,
+    "meaningful_geometry_refinement": true,
+    "base_clothing_present": true,
+    "two_character_meshes": true,
+    "exact_distinct_components": true,
+    "one_original_shared_skin": true,
+    "nine_original_clips": true,
+    "only_public_extras": true,
+    "skinned_triangle_primitives": true,
+    "under_40_primitives": true,
+    "within_species_triangle_budget": true,
+    "self_contained_no_projection": true,
+    "no_editor_stage": true,
+    "meshopt": true,
+    "within_species_byte_budget": true,
+    "finite_imported_geometry": true,
+    "valid_normalized_known_weights": true,
+    "bounded_importer_triangle_difference": true,
+    "nine_clips_match_historical_import": true,
+    "two_imported_components": true,
+    "imported_equipment_metadata": true,
+    "all_historical_and_builder_inputs_unchanged": true
+  },
+  "components": {
+    "body": {
+      "mesh": 1,
+      "skin": 0,
+      "triangles": 1172116,
+      "primitives": 16
+    },
+    "armor": {
+      "mesh": 0,
+      "skin": 0,
+      "triangles": 320850,
+      "primitives": 8
+    }
+  },
+  "triangles": 1492966,
+  "draw_calls": 24,
+  "materials": 20,
+  "bones": 12,
+  "clips": [
+    "idle",
+    "blink",
+    "happy",
+    "eat",
+    "play",
+    "pet_reaction",
+    "sleep",
+    "wake",
+    "walk"
+  ],
+  "compression_lossless": false,
+  "bytes": 15933476,
+  "geometry": {
+    "vertices": 789563,
+    "triangles": 1492960,
+    "nonfinite_vertices": 0,
+    "nonfinite_transforms": 0,
+    "unweighted_vertices": 0,
+    "invalid_weights": 0,
+    "unknown_weights": 0,
+    "over_four_weights": 0,
+    "max_influences": 1,
+    "bounds_min": [
+      -1.9609375,
+      -1.0224609375,
+      0.01611301675438881
+    ],
+    "bounds_max": [
+      1.9609375,
+      1.111328125,
+      4.41015625
+    ],
+    "span": [
+      3.921875,
+      2.1337890625,
+      4.394043233245611
+    ]
+  },
+  "triangle_count_evidence": {
+    "authored": 1492966,
+    "imported": 1492960,
+    "exact_equal": false,
+    "triangle_loss": 6,
+    "relative_loss": 4.0188457071359965e-06,
+    "maximum_allowed_loss": 29,
+    "relative_tolerance": 2e-05,
+    "passed": true,
+    "limit": "Count difference only; individual omitted triangle degeneracy is not proven by this check."
+  },
+  "changes": {
+    "notes": "Free copper waterfall curls replace straight hair strips and the low cap hem; coherent almond eye/socket/lid shape, warm cheek pigment and fitted layered botanical waist; complete mint/ivory dress and wings retained.",
+    "edited_objects": [
+      {
+        "name": "AST_Selya_sculpted_head",
+        "operation": "continuous_almond_orbit_and_closed_lid_recontour",
+        "max_displacement": 0.13061741933570392
+      },
+      {
+        "name": "AST_Selya_eye_R_orbital_skin",
+        "operation": "continuous_almond_orbit_and_closed_lid_recontour",
+        "max_displacement": 0.05106508298354129
+      },
+      {
+        "name": "AST_Selya_eye_R",
+        "operation": "continuous_almond_orbit_and_closed_lid_recontour",
+        "max_displacement": 0.03808754814448223
+      },
+      {
+        "name": "AST_Selya_eye_R_upper_lash",
+        "operation": "continuous_almond_orbit_and_closed_lid_recontour",
+        "max_displacement": 0.04421377645630509
+      },
+      {
+        "name": "AST_Selya_eye_R_lower_skin_lid",
+        "operation": "continuous_almond_orbit_and_closed_lid_recontour",
+        "max_displacement": 0.037994767694633946
+      },
+      {
+        "name": "AST_Selya_eye_R_soft_lash_wing",
+        "operation": "continuous_almond_orbit_and_closed_lid_recontour",
+        "max_displacement": 0.02398243940352085
+      },
+      {
+        "name": "AST_Selya_eye_R_light",
+        "operation": "continuous_almond_orbit_and_closed_lid_recontour",
+        "max_displacement": 0.015938834700689686
+      },
+      {
+        "name": "AST_Selya_eye_R_pin",
+        "operation": "continuous_almond_orbit_and_closed_lid_recontour",
+        "max_displacement": 0.011673042038938153
+      },
+      {
+        "name": "AST_Selya_eye_R_closed_lid",
+        "operation": "continuous_almond_orbit_and_closed_lid_recontour",
+        "max_displacement": 0.04159501595996584
+      },
+      {
+        "name": "AST_Selya_eye_R_closed_lash",
+        "operation": "continuous_almond_orbit_and_closed_lid_recontour",
+        "max_displacement": 0.029287965507837743
+      },
+      {
+        "name": "AST_Selya_eye_L_orbital_skin",
+        "operation": "continuous_almond_orbit_and_closed_lid_recontour",
+        "max_displacement": 0.05106571308117047
+      },
+      {
+        "name": "AST_Selya_eye_L",
+        "operation": "continuous_almond_orbit_and_closed_lid_recontour",
+        "max_displacement": 0.038087563817014836
+      },
+      {
+        "name": "AST_Selya_eye_L_upper_lash",
+        "operation": "continuous_almond_orbit_and_closed_lid_recontour",
+        "max_displacement": 0.04421390525189439
+      },
+      {
+        "name": "AST_Selya_eye_L_lower_skin_lid",
+        "operation": "continuous_almond_orbit_and_closed_lid_recontour",
+        "max_displacement": 0.03799481754341416
+      },
+      {
+        "name": "AST_Selya_eye_L_soft_lash_wing",
+        "operation": "continuous_almond_orbit_and_closed_lid_recontour",
+        "max_displacement": 0.023982524357724522
+      },
+      {
+        "name": "AST_Selya_eye_L_light",
+        "operation": "continuous_almond_orbit_and_closed_lid_recontour",
+        "max_displacement": 0.029302275785294096
+      },
+      {
+        "name": "AST_Selya_eye_L_pin",
+        "operation": "continuous_almond_orbit_and_closed_lid_recontour",
+        "max_displacement": 0.029148317000478485
+      },
+      {
+        "name": "AST_Selya_eye_L_closed_lid",
+        "operation": "continuous_almond_orbit_and_closed_lid_recontour",
+        "max_displacement": 0.04159503536805875
+      },
+      {
+        "name": "AST_Selya_eye_L_closed_lash",
+        "operation": "continuous_almond_orbit_and_closed_lid_recontour",
+        "max_displacement": 0.029288002711651107
+      },
+      {
+        "name": "AST_Selya_arched_brow_-1",
+        "operation": "continuous_almond_orbit_and_closed_lid_recontour",
+        "max_displacement": 0.042368526872544
+      },
+      {
+        "name": "AST_Selya_arched_brow_1",
+        "operation": "continuous_almond_orbit_and_closed_lid_recontour",
+        "max_displacement": 0.04236911572307678
+      },
+      {
+        "name": "AST_Selya_eye_L",
+        "operation": "radial_iris_depth_and_upper_shadow",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_eye_R",
+        "operation": "radial_iris_depth_and_upper_shadow",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_overlapping_crown_wave_00",
+        "operation": "replaced_by_guided_reference_hair_volume",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_overlapping_crown_wave_01",
+        "operation": "replaced_by_guided_reference_hair_volume",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_overlapping_crown_wave_02",
+        "operation": "replaced_by_guided_reference_hair_volume",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_overlapping_crown_wave_03",
+        "operation": "replaced_by_guided_reference_hair_volume",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_overlapping_crown_wave_04",
+        "operation": "replaced_by_guided_reference_hair_volume",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_overlapping_crown_wave_05",
+        "operation": "replaced_by_guided_reference_hair_volume",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_overlapping_crown_wave_06",
+        "operation": "replaced_by_guided_reference_hair_volume",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_overlapping_crown_wave_07",
+        "operation": "replaced_by_guided_reference_hair_volume",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_overlapping_crown_wave_08",
+        "operation": "replaced_by_guided_reference_hair_volume",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_flowing_face_wave_R0",
+        "operation": "replaced_by_guided_reference_hair_volume",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_flowing_face_wave_R1",
+        "operation": "replaced_by_guided_reference_hair_volume",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_integrated_lower_curl_R0",
+        "operation": "replaced_by_guided_reference_hair_volume",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_integrated_lower_curl_R1",
+        "operation": "replaced_by_guided_reference_hair_volume",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_flowing_face_wave_L0",
+        "operation": "replaced_by_guided_reference_hair_volume",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_flowing_face_wave_L1",
+        "operation": "replaced_by_guided_reference_hair_volume",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_integrated_lower_curl_L0",
+        "operation": "replaced_by_guided_reference_hair_volume",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_integrated_lower_curl_L1",
+        "operation": "replaced_by_guided_reference_hair_volume",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_scalp_fitted_swept_fringe",
+        "operation": "replaced_by_guided_reference_hair_volume",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_golden_fringe_inset",
+        "operation": "replaced_by_guided_reference_hair_volume",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_scalp_fitted_right_parting",
+        "operation": "replaced_by_guided_reference_hair_volume",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_continuous_crown_and_flowing_underhair",
+        "operation": "short_nape_foundation_beneath_free_curl_silhouette",
+        "max_displacement": 0.9195158142646197
+      },
+      {
+        "name": "AST_Selya_continuous_torso",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.022591871399213908
+      },
+      {
+        "name": "AST_Selya_neck",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.0010172467896523568
+      },
+      {
+        "name": "AST_Selya_fitted_mint_bodice",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.02279047476975916
+      },
+      {
+        "name": "AST_Selya_dress_tier_0_petal_00",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.013420972968425007
+      },
+      {
+        "name": "AST_Selya_dress_tier_0_petal_00_forged_edge",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.014259524916734899
+      },
+      {
+        "name": "AST_Selya_dress_tier_0_petal_00_midrib_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.013593512525706083
+      },
+      {
+        "name": "AST_Selya_dress_tier_0_petal_00_vein_1_0_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.001905223561702763
+      },
+      {
+        "name": "AST_Selya_dress_tier_0_petal_00_vein_1_0_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.0019057982027024913
+      },
+      {
+        "name": "AST_Selya_dress_tier_0_petal_00_vein_1_1_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 5.118382201055222e-05
+      },
+      {
+        "name": "AST_Selya_dress_tier_0_petal_00_vein_1_1_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 5.122126344067627e-05
+      },
+      {
+        "name": "AST_Selya_dress_tier_0_petal_01",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.013470950945505683
+      },
+      {
+        "name": "AST_Selya_dress_tier_0_petal_01_forged_edge",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.014311014980208696
+      },
+      {
+        "name": "AST_Selya_dress_tier_0_petal_01_midrib_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.013478799616391146
+      },
+      {
+        "name": "AST_Selya_dress_tier_0_petal_01_vein_1_0_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.002081781894515648
+      },
+      {
+        "name": "AST_Selya_dress_tier_0_petal_01_vein_1_0_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.0020824185693533595
+      },
+      {
+        "name": "AST_Selya_dress_tier_0_petal_01_vein_1_1_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 7.366617965593317e-05
+      },
+      {
+        "name": "AST_Selya_dress_tier_0_petal_01_vein_1_1_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 7.372892185683293e-05
+      },
+      {
+        "name": "AST_Selya_dress_tier_0_petal_02",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.013265636564390695
+      },
+      {
+        "name": "AST_Selya_dress_tier_0_petal_02_forged_edge",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.014094691767174735
+      },
+      {
+        "name": "AST_Selya_dress_tier_0_petal_02_midrib_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.01313307331606973
+      },
+      {
+        "name": "AST_Selya_dress_tier_0_petal_02_vein_1_0_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.002007258325154496
+      },
+      {
+        "name": "AST_Selya_dress_tier_0_petal_02_vein_1_0_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.0020078448236916153
+      },
+      {
+        "name": "AST_Selya_dress_tier_0_petal_02_vein_1_1_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 7.410223547265842e-05
+      },
+      {
+        "name": "AST_Selya_dress_tier_0_petal_02_vein_1_1_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 7.416830066179304e-05
+      },
+      {
+        "name": "AST_Selya_dress_tier_0_petal_02_vein_1_2_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 1.1004293794205311e-06
+      },
+      {
+        "name": "AST_Selya_dress_tier_0_petal_02_vein_1_2_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 1.1022171469434547e-06
+      },
+      {
+        "name": "AST_Selya_dress_tier_0_petal_03",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.012928320375256035
+      },
+      {
+        "name": "AST_Selya_dress_tier_0_petal_03_forged_edge",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.013743351318685945
+      },
+      {
+        "name": "AST_Selya_dress_tier_0_petal_03_midrib_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.012706753651157462
+      },
+      {
+        "name": "AST_Selya_dress_tier_0_petal_03_vein_1_0_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.0019881327234375144
+      },
+      {
+        "name": "AST_Selya_dress_tier_0_petal_03_vein_1_0_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.00198869032555084
+      },
+      {
+        "name": "AST_Selya_dress_tier_0_petal_03_vein_1_1_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 8.039754679858587e-05
+      },
+      {
+        "name": "AST_Selya_dress_tier_0_petal_03_vein_1_1_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 8.04678662339613e-05
+      },
+      {
+        "name": "AST_Selya_dress_tier_0_petal_03_vein_1_2_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 1.536663595288701e-06
+      },
+      {
+        "name": "AST_Selya_dress_tier_0_petal_03_vein_1_2_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 1.5391176308053121e-06
+      },
+      {
+        "name": "AST_Selya_dress_tier_0_petal_04",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.012596942282482352
+      },
+      {
+        "name": "AST_Selya_dress_tier_0_petal_04_forged_edge",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.01340511449297805
+      },
+      {
+        "name": "AST_Selya_dress_tier_0_petal_04_midrib_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.012389581534216782
+      },
+      {
+        "name": "AST_Selya_dress_tier_0_petal_04_vein_1_0_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.001937181204965902
+      },
+      {
+        "name": "AST_Selya_dress_tier_0_petal_04_vein_1_0_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.0019377611293948489
+      },
+      {
+        "name": "AST_Selya_dress_tier_0_petal_04_vein_1_1_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 6.347471846257685e-05
+      },
+      {
+        "name": "AST_Selya_dress_tier_0_petal_04_vein_1_1_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 6.352854159475784e-05
+      },
+      {
+        "name": "AST_Selya_dress_tier_0_petal_05",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.012337317894668041
+      },
+      {
+        "name": "AST_Selya_dress_tier_0_petal_05_forged_edge",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.013138455993943657
+      },
+      {
+        "name": "AST_Selya_dress_tier_0_petal_05_midrib_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.012252735800234678
+      },
+      {
+        "name": "AST_Selya_dress_tier_0_petal_05_vein_1_0_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.0018772996919935473
+      },
+      {
+        "name": "AST_Selya_dress_tier_0_petal_05_vein_1_0_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.0018778762342133066
+      },
+      {
+        "name": "AST_Selya_dress_tier_0_petal_05_vein_1_1_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 5.4686507924153615e-05
+      },
+      {
+        "name": "AST_Selya_dress_tier_0_petal_05_vein_1_1_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 5.4727596131534815e-05
+      },
+      {
+        "name": "AST_Selya_dress_tier_0_petal_06",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.012564180070541778
+      },
+      {
+        "name": "AST_Selya_dress_tier_0_petal_06_forged_edge",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.013367480658899658
+      },
+      {
+        "name": "AST_Selya_dress_tier_0_petal_06_midrib_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.01236246243229506
+      },
+      {
+        "name": "AST_Selya_dress_tier_0_petal_06_vein_1_0_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.0018623456665787783
+      },
+      {
+        "name": "AST_Selya_dress_tier_0_petal_06_vein_1_0_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.0018629262260044408
+      },
+      {
+        "name": "AST_Selya_dress_tier_0_petal_06_vein_1_1_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 6.0779246889703236e-05
+      },
+      {
+        "name": "AST_Selya_dress_tier_0_petal_06_vein_1_1_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 6.08162871146332e-05
+      },
+      {
+        "name": "AST_Selya_dress_tier_0_petal_07",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.012938262338527932
+      },
+      {
+        "name": "AST_Selya_dress_tier_0_petal_07_forged_edge",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.013755169335878377
+      },
+      {
+        "name": "AST_Selya_dress_tier_0_petal_07_midrib_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.012715180224449332
+      },
+      {
+        "name": "AST_Selya_dress_tier_0_petal_07_vein_1_0_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.001991708031167453
+      },
+      {
+        "name": "AST_Selya_dress_tier_0_petal_07_vein_1_0_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.0019923234416473748
+      },
+      {
+        "name": "AST_Selya_dress_tier_0_petal_07_vein_1_1_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 7.727467924078484e-05
+      },
+      {
+        "name": "AST_Selya_dress_tier_0_petal_07_vein_1_1_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 7.731684082652978e-05
+      },
+      {
+        "name": "AST_Selya_dress_tier_0_petal_07_vein_1_2_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 1.2991331391409726e-06
+      },
+      {
+        "name": "AST_Selya_dress_tier_0_petal_07_vein_1_2_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 1.300425298601825e-06
+      },
+      {
+        "name": "AST_Selya_dress_tier_0_petal_08",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.01329680737278738
+      },
+      {
+        "name": "AST_Selya_dress_tier_0_petal_08_forged_edge",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.014131110719523502
+      },
+      {
+        "name": "AST_Selya_dress_tier_0_petal_08_midrib_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.013152368712385936
+      },
+      {
+        "name": "AST_Selya_dress_tier_0_petal_08_vein_1_0_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.0021254083988644762
+      },
+      {
+        "name": "AST_Selya_dress_tier_0_petal_08_vein_1_0_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.0021260425509357426
+      },
+      {
+        "name": "AST_Selya_dress_tier_0_petal_08_vein_1_1_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 8.636574762747664e-05
+      },
+      {
+        "name": "AST_Selya_dress_tier_0_petal_08_vein_1_1_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 8.641527039535126e-05
+      },
+      {
+        "name": "AST_Selya_dress_tier_0_petal_08_vein_1_2_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 1.5545400297114138e-06
+      },
+      {
+        "name": "AST_Selya_dress_tier_0_petal_08_vein_1_2_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 1.5561917411497667e-06
+      },
+      {
+        "name": "AST_Selya_dress_tier_0_petal_09",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.013458181403380344
+      },
+      {
+        "name": "AST_Selya_dress_tier_0_petal_09_forged_edge",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.014296583262049035
+      },
+      {
+        "name": "AST_Selya_dress_tier_0_petal_09_midrib_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.013472463965044076
+      },
+      {
+        "name": "AST_Selya_dress_tier_0_petal_09_vein_1_0_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.0019928609022664893
+      },
+      {
+        "name": "AST_Selya_dress_tier_0_petal_09_vein_1_0_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.0019934598794083733
+      },
+      {
+        "name": "AST_Selya_dress_tier_0_petal_09_vein_1_1_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 6.462734823457609e-05
+      },
+      {
+        "name": "AST_Selya_dress_tier_0_petal_09_vein_1_1_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 6.466764594051972e-05
+      },
+      {
+        "name": "AST_Selya_dress_tier_1_petal_00",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.016949304517373233
+      },
+      {
+        "name": "AST_Selya_dress_tier_1_petal_00_forged_edge",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.017862204191953713
+      },
+      {
+        "name": "AST_Selya_dress_tier_1_petal_00_midrib_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.016686540252950594
+      },
+      {
+        "name": "AST_Selya_dress_tier_1_petal_00_vein_1_0_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.005404499915740064
+      },
+      {
+        "name": "AST_Selya_dress_tier_1_petal_00_vein_1_0_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.005405802689083712
+      },
+      {
+        "name": "AST_Selya_dress_tier_1_petal_00_vein_1_1_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.0005233266298687908
+      },
+      {
+        "name": "AST_Selya_dress_tier_1_petal_00_vein_1_1_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.0005236744050001739
+      },
+      {
+        "name": "AST_Selya_dress_tier_1_petal_00_vein_1_2_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 2.1704458323197395e-05
+      },
+      {
+        "name": "AST_Selya_dress_tier_1_petal_00_vein_1_2_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 2.1731015411198094e-05
+      },
+      {
+        "name": "AST_Selya_dress_tier_1_petal_01",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.0168709133669458
+      },
+      {
+        "name": "AST_Selya_dress_tier_1_petal_01_forged_edge",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.017778749610100016
+      },
+      {
+        "name": "AST_Selya_dress_tier_1_petal_01_midrib_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.016391467211081666
+      },
+      {
+        "name": "AST_Selya_dress_tier_1_petal_01_vein_1_0_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.005432058976623246
+      },
+      {
+        "name": "AST_Selya_dress_tier_1_petal_01_vein_1_0_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.0054333016354885
+      },
+      {
+        "name": "AST_Selya_dress_tier_1_petal_01_vein_1_1_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.0005851536788549422
+      },
+      {
+        "name": "AST_Selya_dress_tier_1_petal_01_vein_1_1_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.0005855778010762788
+      },
+      {
+        "name": "AST_Selya_dress_tier_1_petal_01_vein_1_2_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 3.248792433315153e-05
+      },
+      {
+        "name": "AST_Selya_dress_tier_1_petal_01_vein_1_2_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 3.2530695093642145e-05
+      },
+      {
+        "name": "AST_Selya_dress_tier_1_petal_02",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.0164687144392633
+      },
+      {
+        "name": "AST_Selya_dress_tier_1_petal_02_forged_edge",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.017360202805816776
+      },
+      {
+        "name": "AST_Selya_dress_tier_1_petal_02_midrib_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.015841849860171748
+      },
+      {
+        "name": "AST_Selya_dress_tier_1_petal_02_vein_1_0_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.005236155188328957
+      },
+      {
+        "name": "AST_Selya_dress_tier_1_petal_02_vein_1_0_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.005237268842545469
+      },
+      {
+        "name": "AST_Selya_dress_tier_1_petal_02_vein_1_1_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.0006004164001637083
+      },
+      {
+        "name": "AST_Selya_dress_tier_1_petal_02_vein_1_1_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.0006008538618703076
+      },
+      {
+        "name": "AST_Selya_dress_tier_1_petal_02_vein_1_2_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 4.114542314490889e-05
+      },
+      {
+        "name": "AST_Selya_dress_tier_1_petal_02_vein_1_2_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 4.1199531304085156e-05
+      },
+      {
+        "name": "AST_Selya_dress_tier_1_petal_03",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.01602147662630439
+      },
+      {
+        "name": "AST_Selya_dress_tier_1_petal_03_forged_edge",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.016902949162392086
+      },
+      {
+        "name": "AST_Selya_dress_tier_1_petal_03_midrib_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.01540935914563498
+      },
+      {
+        "name": "AST_Selya_dress_tier_1_petal_03_vein_1_0_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.00519213449920215
+      },
+      {
+        "name": "AST_Selya_dress_tier_1_petal_03_vein_1_0_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.005193293979655506
+      },
+      {
+        "name": "AST_Selya_dress_tier_1_petal_03_vein_1_1_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.0005631908531230975
+      },
+      {
+        "name": "AST_Selya_dress_tier_1_petal_03_vein_1_1_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.0005635885831942059
+      },
+      {
+        "name": "AST_Selya_dress_tier_1_petal_03_vein_1_2_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 3.180625231827195e-05
+      },
+      {
+        "name": "AST_Selya_dress_tier_1_petal_03_vein_1_2_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 3.1847170569090565e-05
+      },
+      {
+        "name": "AST_Selya_dress_tier_1_petal_04",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.01566761625579485
+      },
+      {
+        "name": "AST_Selya_dress_tier_1_petal_04_forged_edge",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.016543036539098714
+      },
+      {
+        "name": "AST_Selya_dress_tier_1_petal_04_midrib_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.0152245253155478
+      },
+      {
+        "name": "AST_Selya_dress_tier_1_petal_04_vein_1_0_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.005016977255500839
+      },
+      {
+        "name": "AST_Selya_dress_tier_1_petal_04_vein_1_0_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.00501820520720261
+      },
+      {
+        "name": "AST_Selya_dress_tier_1_petal_04_vein_1_1_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.00043545166953660823
+      },
+      {
+        "name": "AST_Selya_dress_tier_1_petal_04_vein_1_1_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.0004357379018458425
+      },
+      {
+        "name": "AST_Selya_dress_tier_1_petal_04_vein_1_2_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 1.2956368552264381e-05
+      },
+      {
+        "name": "AST_Selya_dress_tier_1_petal_04_vein_1_2_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 1.2972138090535296e-05
+      },
+      {
+        "name": "AST_Selya_dress_tier_1_petal_05",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.015895894763387552
+      },
+      {
+        "name": "AST_Selya_dress_tier_1_petal_05_forged_edge",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.016774154214450658
+      },
+      {
+        "name": "AST_Selya_dress_tier_1_petal_05_midrib_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.015311426880305385
+      },
+      {
+        "name": "AST_Selya_dress_tier_1_petal_05_vein_1_0_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.005137538375215846
+      },
+      {
+        "name": "AST_Selya_dress_tier_1_petal_05_vein_1_0_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.005138864526298404
+      },
+      {
+        "name": "AST_Selya_dress_tier_1_petal_05_vein_1_1_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.0005483569196840584
+      },
+      {
+        "name": "AST_Selya_dress_tier_1_petal_05_vein_1_1_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.0005486515617967087
+      },
+      {
+        "name": "AST_Selya_dress_tier_1_petal_05_vein_1_2_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 2.9793949595096302e-05
+      },
+      {
+        "name": "AST_Selya_dress_tier_1_petal_05_vein_1_2_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 2.9823103053898384e-05
+      },
+      {
+        "name": "AST_Selya_dress_tier_1_petal_06",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.016348015319798657
+      },
+      {
+        "name": "AST_Selya_dress_tier_1_petal_06_forged_edge",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.017236414528595163
+      },
+      {
+        "name": "AST_Selya_dress_tier_1_petal_06_midrib_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.01570813664520875
+      },
+      {
+        "name": "AST_Selya_dress_tier_1_petal_06_vein_1_0_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.005138614217248479
+      },
+      {
+        "name": "AST_Selya_dress_tier_1_petal_06_vein_1_0_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.0051399923497785745
+      },
+      {
+        "name": "AST_Selya_dress_tier_1_petal_06_vein_1_1_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.0005544396985136067
+      },
+      {
+        "name": "AST_Selya_dress_tier_1_petal_06_vein_1_1_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.000554698955916335
+      },
+      {
+        "name": "AST_Selya_dress_tier_1_petal_06_vein_1_2_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 3.228529496177475e-05
+      },
+      {
+        "name": "AST_Selya_dress_tier_1_petal_06_vein_1_2_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 3.231257824695443e-05
+      },
+      {
+        "name": "AST_Selya_dress_tier_1_petal_07",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.016811430217955444
+      },
+      {
+        "name": "AST_Selya_dress_tier_1_petal_07_forged_edge",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.017717948214533763
+      },
+      {
+        "name": "AST_Selya_dress_tier_1_petal_07_midrib_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.016286272601627013
+      },
+      {
+        "name": "AST_Selya_dress_tier_1_petal_07_vein_1_0_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.005558624726313298
+      },
+      {
+        "name": "AST_Selya_dress_tier_1_petal_07_vein_1_0_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.00556001921580294
+      },
+      {
+        "name": "AST_Selya_dress_tier_1_petal_07_vein_1_1_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.0006615237547815148
+      },
+      {
+        "name": "AST_Selya_dress_tier_1_petal_07_vein_1_1_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.0006618483633782126
+      },
+      {
+        "name": "AST_Selya_dress_tier_1_petal_07_vein_1_2_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 4.7163139733974834e-05
+      },
+      {
+        "name": "AST_Selya_dress_tier_1_petal_07_vein_1_2_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 4.720522625582572e-05
+      },
+      {
+        "name": "AST_Selya_dress_tier_1_petal_08",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.016960465342443495
+      },
+      {
+        "name": "AST_Selya_dress_tier_1_petal_08_forged_edge",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.01787336569021781
+      },
+      {
+        "name": "AST_Selya_dress_tier_1_petal_08_midrib_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.01663936875803854
+      },
+      {
+        "name": "AST_Selya_dress_tier_1_petal_08_vein_1_0_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.0053656129779196485
+      },
+      {
+        "name": "AST_Selya_dress_tier_1_petal_08_vein_1_0_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.005366949255719662
+      },
+      {
+        "name": "AST_Selya_dress_tier_1_petal_08_vein_1_1_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.000511540812730419
+      },
+      {
+        "name": "AST_Selya_dress_tier_1_petal_08_vein_1_1_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.0005118339252098228
+      },
+      {
+        "name": "AST_Selya_dress_tier_1_petal_08_vein_1_2_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 2.0405655986056028e-05
+      },
+      {
+        "name": "AST_Selya_dress_tier_1_petal_08_vein_1_2_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 2.0427244355800106e-05
+      },
+      {
+        "name": "AST_Selya_front_mint_heart",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.01587157258591565
+      },
+      {
+        "name": "AST_Selya_front_mint_heart_forged_edge",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.016603374023475757
+      },
+      {
+        "name": "AST_Selya_front_mint_heart_midrib_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.01679191139557947
+      },
+      {
+        "name": "AST_Selya_front_mint_heart_vein_1_0_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.011095142776611918
+      },
+      {
+        "name": "AST_Selya_front_mint_heart_vein_1_0_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.011098657247514037
+      },
+      {
+        "name": "AST_Selya_front_mint_heart_vein_1_1_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.005856236612142448
+      },
+      {
+        "name": "AST_Selya_front_mint_heart_vein_1_1_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.005860433365057483
+      },
+      {
+        "name": "AST_Selya_front_mint_heart_vein_1_2_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.0023526725795596525
+      },
+      {
+        "name": "AST_Selya_front_mint_heart_vein_1_2_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.002355542276259071
+      },
+      {
+        "name": "AST_Selya_front_mint_heart_vein_1_3_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.0007701819874304032
+      },
+      {
+        "name": "AST_Selya_front_mint_heart_vein_1_3_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.000771510844212711
+      },
+      {
+        "name": "AST_Selya_coral_bodice_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.026359064457845572
+      },
+      {
+        "name": "AST_Selya_coral_bodice_-1_forged_edge",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.027005960537785745
+      },
+      {
+        "name": "AST_Selya_coral_bodice_-1_midrib_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.022989463720793638
+      },
+      {
+        "name": "AST_Selya_coral_bodice_-1_vein_1_0_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.024025091055122034
+      },
+      {
+        "name": "AST_Selya_coral_bodice_-1_vein_1_0_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.02207316947718376
+      },
+      {
+        "name": "AST_Selya_coral_bodice_-1_vein_1_1_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.019564326403515925
+      },
+      {
+        "name": "AST_Selya_coral_bodice_-1_vein_1_1_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.01877678795933484
+      },
+      {
+        "name": "AST_Selya_coral_bodice_-1_vein_1_2_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.01463802735070851
+      },
+      {
+        "name": "AST_Selya_coral_bodice_-1_vein_1_2_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.01419455704893425
+      },
+      {
+        "name": "AST_Selya_coral_bodice_-1_vein_1_3_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.01011006944435635
+      },
+      {
+        "name": "AST_Selya_coral_bodice_-1_vein_1_3_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.009821552016921087
+      },
+      {
+        "name": "AST_Selya_coral_bodice_-1_vein_1_4_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.0066768014845072264
+      },
+      {
+        "name": "AST_Selya_coral_bodice_-1_vein_1_4_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.006481973722488854
+      },
+      {
+        "name": "AST_Selya_ivory_neckline_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.02122035849538535
+      },
+      {
+        "name": "AST_Selya_ivory_neckline_-1_forged_edge",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.021951846238491928
+      },
+      {
+        "name": "AST_Selya_ivory_neckline_-1_midrib_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.02140321903896715
+      },
+      {
+        "name": "AST_Selya_ivory_neckline_-1_vein_1_0_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.012126256230352362
+      },
+      {
+        "name": "AST_Selya_ivory_neckline_-1_vein_1_0_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.011834637353233436
+      },
+      {
+        "name": "AST_Selya_ivory_neckline_-1_vein_1_1_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.006133355396309193
+      },
+      {
+        "name": "AST_Selya_ivory_neckline_-1_vein_1_1_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.005969151999003085
+      },
+      {
+        "name": "AST_Selya_coral_bodice_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.026359064457845572
+      },
+      {
+        "name": "AST_Selya_coral_bodice_1_forged_edge",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.027008156354095973
+      },
+      {
+        "name": "AST_Selya_coral_bodice_1_midrib_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.022989463720793638
+      },
+      {
+        "name": "AST_Selya_coral_bodice_1_vein_1_0_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.022065762909143
+      },
+      {
+        "name": "AST_Selya_coral_bodice_1_vein_1_0_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.024038714465407483
+      },
+      {
+        "name": "AST_Selya_coral_bodice_1_vein_1_1_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.01876622662164684
+      },
+      {
+        "name": "AST_Selya_coral_bodice_1_vein_1_1_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.019603547840198195
+      },
+      {
+        "name": "AST_Selya_coral_bodice_1_vein_1_2_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.014189505673604543
+      },
+      {
+        "name": "AST_Selya_coral_bodice_1_vein_1_2_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.014686254784961354
+      },
+      {
+        "name": "AST_Selya_coral_bodice_1_vein_1_3_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.009823092595993302
+      },
+      {
+        "name": "AST_Selya_coral_bodice_1_vein_1_3_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.010122400963223137
+      },
+      {
+        "name": "AST_Selya_coral_bodice_1_vein_1_4_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.006489749656419718
+      },
+      {
+        "name": "AST_Selya_coral_bodice_1_vein_1_4_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.006671024388320525
+      },
+      {
+        "name": "AST_Selya_ivory_neckline_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.02122035849538535
+      },
+      {
+        "name": "AST_Selya_ivory_neckline_1_forged_edge",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.02195203148439983
+      },
+      {
+        "name": "AST_Selya_ivory_neckline_1_midrib_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.02140321903896715
+      },
+      {
+        "name": "AST_Selya_ivory_neckline_1_vein_1_0_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.01182015838862841
+      },
+      {
+        "name": "AST_Selya_ivory_neckline_1_vein_1_0_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.012126977921602741
+      },
+      {
+        "name": "AST_Selya_ivory_neckline_1_vein_1_1_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.00598904406050812
+      },
+      {
+        "name": "AST_Selya_ivory_neckline_1_vein_1_1_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.006132577252689789
+      },
+      {
+        "name": "AST_Selya_fitted_waist_belt",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.02517523093326498
+      },
+      {
+        "name": "AST_Selya_heart_waist_emerald",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.02509933112318879
+      },
+      {
+        "name": "AST_Selya_heart_waist_emerald_gold_bezel",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.02431900038622267
+      },
+      {
+        "name": "AST_Selya_waist_gold_calyx_0",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.022856315575242397
+      },
+      {
+        "name": "AST_Selya_waist_gold_calyx_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.018963448329345323
+      },
+      {
+        "name": "AST_Selya_waist_gold_calyx_2",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.018887958618994703
+      },
+      {
+        "name": "AST_Selya_waist_gold_calyx_3",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.018963448329345323
+      },
+      {
+        "name": "AST_Selya_waist_gold_calyx_4",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.022856315575242397
+      },
+      {
+        "name": "AST_Selya_neck_choker",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.0005302737123095312
+      },
+      {
+        "name": "AST_Selya_throat_emerald",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.0017023874429080155
+      },
+      {
+        "name": "AST_Selya_throat_emerald_gold_bezel",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.002222870986310327
+      },
+      {
+        "name": "AST_Selya_collar_leaf_-1_0",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.0005746647422403697
+      },
+      {
+        "name": "AST_Selya_collar_leaf_-1_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.0005653486369892466
+      },
+      {
+        "name": "AST_Selya_collar_leaf_1_0",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.0005746647422403697
+      },
+      {
+        "name": "AST_Selya_collar_leaf_1_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.0005653486369892466
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_00",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.020659975024529608
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_00_forged_edge",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.021638846723996852
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_00_midrib_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.019629146998703387
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_00_vein_1_0_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.013254782895338149
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_00_vein_1_0_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.013256344647650015
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_00_vein_1_1_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.004999983808077093
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_00_vein_1_1_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.005001493333263889
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_00_vein_1_2_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.0011015087620038244
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_00_vein_1_2_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.00110213103955721
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_00_vein_1_3_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.0001973092326816881
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_00_vein_1_3_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.00019747712132816777
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_01",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.02064017678683206
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_01_forged_edge",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.021611331293850785
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_01_midrib_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.01927653550909646
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_01_vein_1_0_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.012928900649405968
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_01_vein_1_0_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.01292987688898876
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_01_vein_1_1_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.005056459587758322
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_01_vein_1_1_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.005058066907489447
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_01_vein_1_2_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.0012624577630031546
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_01_vein_1_2_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.0012632380443680317
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_01_vein_1_3_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.0002923105974668293
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_01_vein_1_3_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.00029257467843834466
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_02",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.02031063265325487
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_02_forged_edge",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.021272135684708805
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_02_midrib_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.01871588528176733
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_02_vein_1_0_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.01292134418691369
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_02_vein_1_0_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.012921991085051977
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_02_vein_1_1_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.005487087869841028
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_02_vein_1_1_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.005488793403638122
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_02_vein_1_2_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.0016694328052369314
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_02_vein_1_2_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.0016704423368643052
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_02_vein_1_3_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.0005517845507695271
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_02_vein_1_3_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.0005522152143179158
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_03",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.019847564323152767
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_03_forged_edge",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.02080286088531502
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_03_midrib_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.01833046381793892
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_03_vein_1_0_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.012859474747206452
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_03_vein_1_0_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.01286040360383265
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_03_vein_1_1_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.005239462081032135
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_03_vein_1_1_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.005241115644240619
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_03_vein_1_2_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.0013694371365599678
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_03_vein_1_2_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.00137028162698115
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_03_vein_1_3_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.00033302694328494906
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_03_vein_1_3_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.00033331955742523363
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_04",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.019330320126238434
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_04_forged_edge",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.02027398023531099
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_04_midrib_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.018035017915447742
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_04_vein_1_0_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.012374958587682552
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_04_vein_1_0_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.012376432039176958
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_04_vein_1_1_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.004638875060922653
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_04_vein_1_1_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.004640287366930568
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_04_vein_1_2_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.0009898869416185747
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_04_vein_1_2_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.0009904478755980155
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_04_vein_1_3_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.00016622521330745456
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_04_vein_1_3_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.00016636847056677578
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_05",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.019715712073979125
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_05_forged_edge",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.020662682976398145
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_05_midrib_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.018123294855777926
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_05_vein_1_0_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.012401394311588466
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_05_vein_1_0_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.012403507143996443
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_05_vein_1_1_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.004995376981718497
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_05_vein_1_1_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.004996691762489213
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_05_vein_1_2_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.001330153064707425
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_05_vein_1_2_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.0013307253710120074
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_05_vein_1_3_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.00034587255933339
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_05_vein_1_3_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.00034609263190929317
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_06",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.020347856265871347
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_06_forged_edge",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.021312937989131687
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_06_midrib_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.01877418585518159
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_06_vein_1_0_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.01297244819114839
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_06_vein_1_0_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.01297473144279459
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_06_vein_1_1_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.0053895640897616255
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_06_vein_1_1_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.005390898008582113
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_06_vein_1_2_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.001531096001278723
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_06_vein_1_2_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.001531704638768851
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_06_vein_1_3_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.00044283012810043
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_06_vein_1_3_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.0004430886533851752
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_07",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.020772218704396724
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_07_forged_edge",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.02175295745837329
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_07_midrib_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.019450097333175313
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_07_vein_1_0_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.01355205855175029
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_07_vein_1_0_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.013554055941621554
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_07_vein_1_1_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.005657864229366068
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_07_vein_1_1_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.005659324850486431
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_07_vein_1_2_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.0015916049720133391
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_07_vein_1_2_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.0015923100478927635
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_07_vein_1_3_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.0004443227286598001
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_07_vein_1_3_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.0004446080973695278
+      },
+      {
+        "name": "AST_Selya_front_coral_drop",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.008200343548491288
+      },
+      {
+        "name": "AST_Selya_front_coral_drop_forged_edge",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.008869683884438114
+      },
+      {
+        "name": "AST_Selya_front_coral_drop_midrib_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.008293605677031989
+      },
+      {
+        "name": "AST_Selya_front_coral_drop_vein_1_0_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.002364222932074757
+      },
+      {
+        "name": "AST_Selya_front_coral_drop_vein_1_0_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.002365203934484131
+      },
+      {
+        "name": "AST_Selya_front_coral_drop_vein_1_1_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.0007458020529225715
+      },
+      {
+        "name": "AST_Selya_front_coral_drop_vein_1_1_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.0007464207972560808
+      },
+      {
+        "name": "AST_Selya_front_coral_drop_vein_1_2_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.00017896998667458648
+      },
+      {
+        "name": "AST_Selya_front_coral_drop_vein_1_2_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 0.00017920697901231125
+      },
+      {
+        "name": "AST_Selya_front_coral_drop_vein_1_3_-1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 3.652722393659142e-05
+      },
+      {
+        "name": "AST_Selya_front_coral_drop_vein_1_3_1",
+        "operation": "fitted_botanical_waist_with_attached_ornaments",
+        "max_displacement": 3.659335668700708e-05
+      },
+      {
+        "name": "AST_Selya_ear_concha_R",
+        "operation": "recessed_leaf_ear_concha",
+        "max_displacement": 0.019000000000000003
+      },
+      {
+        "name": "AST_Selya_ear_concha_L",
+        "operation": "recessed_leaf_ear_concha",
+        "max_displacement": 0.019000000000000003
+      },
+      {
+        "name": "AST_Selya_upper_wing_R",
+        "operation": "authored_pearl_and_mint_membrane_cells",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_lower_wing_R",
+        "operation": "authored_pearl_and_mint_membrane_cells",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_upper_wing_L",
+        "operation": "authored_pearl_and_mint_membrane_cells",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_lower_wing_L",
+        "operation": "authored_pearl_and_mint_membrane_cells",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_continuous_torso",
+        "operation": "reference_pigment_depth_and_cheek_tint",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_neck",
+        "operation": "reference_pigment_depth_and_cheek_tint",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_sculpted_head",
+        "operation": "reference_pigment_depth_and_cheek_tint",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_sculpted_ear_R",
+        "operation": "reference_pigment_depth_and_cheek_tint",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_ear_concha_R",
+        "operation": "reference_pigment_depth_and_cheek_tint",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_anatomical_leg_R",
+        "operation": "reference_pigment_depth_and_cheek_tint",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_distinct_toe_R0",
+        "operation": "reference_pigment_depth_and_cheek_tint",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_distinct_toe_R1",
+        "operation": "reference_pigment_depth_and_cheek_tint",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_distinct_toe_R2",
+        "operation": "reference_pigment_depth_and_cheek_tint",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_distinct_toe_R3",
+        "operation": "reference_pigment_depth_and_cheek_tint",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_anatomical_arm_hand_R",
+        "operation": "reference_pigment_depth_and_cheek_tint",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_sculpted_ear_L",
+        "operation": "reference_pigment_depth_and_cheek_tint",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_ear_concha_L",
+        "operation": "reference_pigment_depth_and_cheek_tint",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_anatomical_leg_L",
+        "operation": "reference_pigment_depth_and_cheek_tint",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_distinct_toe_L0",
+        "operation": "reference_pigment_depth_and_cheek_tint",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_distinct_toe_L1",
+        "operation": "reference_pigment_depth_and_cheek_tint",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_distinct_toe_L2",
+        "operation": "reference_pigment_depth_and_cheek_tint",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_distinct_toe_L3",
+        "operation": "reference_pigment_depth_and_cheek_tint",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_anatomical_arm_hand_L",
+        "operation": "reference_pigment_depth_and_cheek_tint",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_continuous_crown_and_flowing_underhair",
+        "operation": "reference_pigment_depth_and_cheek_tint",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_topknot_core",
+        "operation": "reference_pigment_depth_and_cheek_tint",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_wrapped_topknot_0",
+        "operation": "reference_pigment_depth_and_cheek_tint",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_wrapped_topknot_1",
+        "operation": "reference_pigment_depth_and_cheek_tint",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_wrapped_topknot_2",
+        "operation": "reference_pigment_depth_and_cheek_tint",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_wrapped_topknot_3",
+        "operation": "reference_pigment_depth_and_cheek_tint",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_wrapped_topknot_4",
+        "operation": "reference_pigment_depth_and_cheek_tint",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_fitted_mint_bodice",
+        "operation": "reference_pigment_depth_and_cheek_tint",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_dress_tier_0_petal_00",
+        "operation": "reference_pigment_depth_and_cheek_tint",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_dress_tier_0_petal_01",
+        "operation": "reference_pigment_depth_and_cheek_tint",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_dress_tier_0_petal_02",
+        "operation": "reference_pigment_depth_and_cheek_tint",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_dress_tier_0_petal_03",
+        "operation": "reference_pigment_depth_and_cheek_tint",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_dress_tier_0_petal_04",
+        "operation": "reference_pigment_depth_and_cheek_tint",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_dress_tier_0_petal_05",
+        "operation": "reference_pigment_depth_and_cheek_tint",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_dress_tier_0_petal_06",
+        "operation": "reference_pigment_depth_and_cheek_tint",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_dress_tier_0_petal_07",
+        "operation": "reference_pigment_depth_and_cheek_tint",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_dress_tier_0_petal_08",
+        "operation": "reference_pigment_depth_and_cheek_tint",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_dress_tier_0_petal_09",
+        "operation": "reference_pigment_depth_and_cheek_tint",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_front_mint_heart",
+        "operation": "reference_pigment_depth_and_cheek_tint",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_coral_bodice_-1",
+        "operation": "reference_pigment_depth_and_cheek_tint",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_coral_bodice_1",
+        "operation": "reference_pigment_depth_and_cheek_tint",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_00",
+        "operation": "reference_pigment_depth_and_cheek_tint",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_01",
+        "operation": "reference_pigment_depth_and_cheek_tint",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_02",
+        "operation": "reference_pigment_depth_and_cheek_tint",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_03",
+        "operation": "reference_pigment_depth_and_cheek_tint",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_04",
+        "operation": "reference_pigment_depth_and_cheek_tint",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_05",
+        "operation": "reference_pigment_depth_and_cheek_tint",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_06",
+        "operation": "reference_pigment_depth_and_cheek_tint",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_dress_tier_2_petal_07",
+        "operation": "reference_pigment_depth_and_cheek_tint",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_front_coral_drop",
+        "operation": "reference_pigment_depth_and_cheek_tint",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_shoulder_blossom_R_petal_0",
+        "operation": "reference_pigment_depth_and_cheek_tint",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_shoulder_blossom_R_petal_1",
+        "operation": "reference_pigment_depth_and_cheek_tint",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_shoulder_blossom_R_petal_2",
+        "operation": "reference_pigment_depth_and_cheek_tint",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_shoulder_blossom_R_petal_3",
+        "operation": "reference_pigment_depth_and_cheek_tint",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_shoulder_blossom_R_petal_4",
+        "operation": "reference_pigment_depth_and_cheek_tint",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_shoulder_blossom_R_sage_leaf_0",
+        "operation": "reference_pigment_depth_and_cheek_tint",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_shoulder_blossom_R_sage_leaf_1",
+        "operation": "reference_pigment_depth_and_cheek_tint",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_shoulder_blossom_R_sage_leaf_2",
+        "operation": "reference_pigment_depth_and_cheek_tint",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_shoulder_blossom_R_sage_leaf_3",
+        "operation": "reference_pigment_depth_and_cheek_tint",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_shoulder_blossom_L_petal_0",
+        "operation": "reference_pigment_depth_and_cheek_tint",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_shoulder_blossom_L_petal_1",
+        "operation": "reference_pigment_depth_and_cheek_tint",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_shoulder_blossom_L_petal_2",
+        "operation": "reference_pigment_depth_and_cheek_tint",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_shoulder_blossom_L_petal_3",
+        "operation": "reference_pigment_depth_and_cheek_tint",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_shoulder_blossom_L_petal_4",
+        "operation": "reference_pigment_depth_and_cheek_tint",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_shoulder_blossom_L_sage_leaf_0",
+        "operation": "reference_pigment_depth_and_cheek_tint",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_shoulder_blossom_L_sage_leaf_1",
+        "operation": "reference_pigment_depth_and_cheek_tint",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_shoulder_blossom_L_sage_leaf_2",
+        "operation": "reference_pigment_depth_and_cheek_tint",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_shoulder_blossom_L_sage_leaf_3",
+        "operation": "reference_pigment_depth_and_cheek_tint",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_wrist_leaf_R1",
+        "operation": "reference_pigment_depth_and_cheek_tint",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_ankle_flower_R0",
+        "operation": "reference_pigment_depth_and_cheek_tint",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_ankle_flower_R1",
+        "operation": "reference_pigment_depth_and_cheek_tint",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_ankle_flower_R2",
+        "operation": "reference_pigment_depth_and_cheek_tint",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_wrist_leaf_L1",
+        "operation": "reference_pigment_depth_and_cheek_tint",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_ankle_flower_L0",
+        "operation": "reference_pigment_depth_and_cheek_tint",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_ankle_flower_L1",
+        "operation": "reference_pigment_depth_and_cheek_tint",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_ankle_flower_L2",
+        "operation": "reference_pigment_depth_and_cheek_tint",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_coral_hair_blossom_petal_0",
+        "operation": "reference_pigment_depth_and_cheek_tint",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_coral_hair_blossom_petal_1",
+        "operation": "reference_pigment_depth_and_cheek_tint",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_coral_hair_blossom_petal_2",
+        "operation": "reference_pigment_depth_and_cheek_tint",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_coral_hair_blossom_petal_3",
+        "operation": "reference_pigment_depth_and_cheek_tint",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_coral_hair_blossom_petal_4",
+        "operation": "reference_pigment_depth_and_cheek_tint",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_coral_hair_blossom_petal_5",
+        "operation": "reference_pigment_depth_and_cheek_tint",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_coral_hair_blossom_petal_6",
+        "operation": "reference_pigment_depth_and_cheek_tint",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_coral_hair_blossom_sage_leaf_0",
+        "operation": "reference_pigment_depth_and_cheek_tint",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_coral_hair_blossom_sage_leaf_1",
+        "operation": "reference_pigment_depth_and_cheek_tint",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_coral_hair_blossom_sage_leaf_2",
+        "operation": "reference_pigment_depth_and_cheek_tint",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Selya_coral_hair_blossom_sage_leaf_3",
+        "operation": "reference_pigment_depth_and_cheek_tint",
+        "max_displacement": 0
+      }
+    ],
+    "added_base_clothing": [],
+    "body_joint_completion": {
+      "connectors": [],
+      "added_base_clothing": []
+    },
+    "replaced_hair_objects": [
+      "AST_Selya_overlapping_crown_wave_00",
+      "AST_Selya_overlapping_crown_wave_01",
+      "AST_Selya_overlapping_crown_wave_02",
+      "AST_Selya_overlapping_crown_wave_03",
+      "AST_Selya_overlapping_crown_wave_04",
+      "AST_Selya_overlapping_crown_wave_05",
+      "AST_Selya_overlapping_crown_wave_06",
+      "AST_Selya_overlapping_crown_wave_07",
+      "AST_Selya_overlapping_crown_wave_08",
+      "AST_Selya_flowing_face_wave_R0",
+      "AST_Selya_flowing_face_wave_R1",
+      "AST_Selya_integrated_lower_curl_R0",
+      "AST_Selya_integrated_lower_curl_R1",
+      "AST_Selya_flowing_face_wave_L0",
+      "AST_Selya_flowing_face_wave_L1",
+      "AST_Selya_integrated_lower_curl_L0",
+      "AST_Selya_integrated_lower_curl_L1",
+      "AST_Selya_scalp_fitted_swept_fringe",
+      "AST_Selya_golden_fringe_inset",
+      "AST_Selya_scalp_fitted_right_parting"
+    ],
+    "original_source_object_count": 1035,
+    "candidate_source_object_count": 1036,
+    "ocular_refinement": {
+      "orbital_vertical_scale": 0.84,
+      "outer_corner_rise": 0.026,
+      "original_blink_bone_and_pivot_unchanged": true
+    },
+    "original_source_rig_and_actions_modified": false,
+    "equipment_source_objects": [
+      "AST_Selya_topknot_collar",
+      "AST_Selya_coral_bodice_-1",
+      "AST_Selya_coral_bodice_-1_forged_edge",
+      "AST_Selya_coral_bodice_-1_midrib_1",
+      "AST_Selya_coral_bodice_-1_vein_1_0_-1",
+      "AST_Selya_coral_bodice_-1_vein_1_0_1",
+      "AST_Selya_coral_bodice_-1_vein_1_1_-1",
+      "AST_Selya_coral_bodice_-1_vein_1_1_1",
+      "AST_Selya_coral_bodice_-1_vein_1_2_-1",
+      "AST_Selya_coral_bodice_-1_vein_1_2_1",
+      "AST_Selya_coral_bodice_-1_vein_1_3_-1",
+      "AST_Selya_coral_bodice_-1_vein_1_3_1",
+      "AST_Selya_coral_bodice_-1_vein_1_4_-1",
+      "AST_Selya_coral_bodice_-1_vein_1_4_1",
+      "AST_Selya_ivory_neckline_-1",
+      "AST_Selya_ivory_neckline_-1_forged_edge",
+      "AST_Selya_ivory_neckline_-1_midrib_1",
+      "AST_Selya_ivory_neckline_-1_vein_1_0_-1",
+      "AST_Selya_ivory_neckline_-1_vein_1_0_1",
+      "AST_Selya_ivory_neckline_-1_vein_1_1_-1",
+      "AST_Selya_ivory_neckline_-1_vein_1_1_1",
+      "AST_Selya_coral_bodice_1",
+      "AST_Selya_coral_bodice_1_forged_edge",
+      "AST_Selya_coral_bodice_1_midrib_1",
+      "AST_Selya_coral_bodice_1_vein_1_0_-1",
+      "AST_Selya_coral_bodice_1_vein_1_0_1",
+      "AST_Selya_coral_bodice_1_vein_1_1_-1",
+      "AST_Selya_coral_bodice_1_vein_1_1_1",
+      "AST_Selya_coral_bodice_1_vein_1_2_-1",
+      "AST_Selya_coral_bodice_1_vein_1_2_1",
+      "AST_Selya_coral_bodice_1_vein_1_3_-1",
+      "AST_Selya_coral_bodice_1_vein_1_3_1",
+      "AST_Selya_coral_bodice_1_vein_1_4_-1",
+      "AST_Selya_coral_bodice_1_vein_1_4_1",
+      "AST_Selya_ivory_neckline_1",
+      "AST_Selya_ivory_neckline_1_forged_edge",
+      "AST_Selya_ivory_neckline_1_midrib_1",
+      "AST_Selya_ivory_neckline_1_vein_1_0_-1",
+      "AST_Selya_ivory_neckline_1_vein_1_0_1",
+      "AST_Selya_ivory_neckline_1_vein_1_1_-1",
+      "AST_Selya_ivory_neckline_1_vein_1_1_1",
+      "AST_Selya_fitted_waist_belt",
+      "AST_Selya_heart_waist_emerald",
+      "AST_Selya_heart_waist_emerald_gold_bezel",
+      "AST_Selya_waist_gold_calyx_0",
+      "AST_Selya_waist_gold_calyx_1",
+      "AST_Selya_waist_gold_calyx_2",
+      "AST_Selya_waist_gold_calyx_3",
+      "AST_Selya_waist_gold_calyx_4",
+      "AST_Selya_neck_choker",
+      "AST_Selya_throat_emerald",
+      "AST_Selya_throat_emerald_gold_bezel",
+      "AST_Selya_collar_leaf_-1_0",
+      "AST_Selya_collar_leaf_-1_1",
+      "AST_Selya_collar_leaf_1_0",
+      "AST_Selya_collar_leaf_1_1",
+      "AST_Selya_dress_tier_2_petal_00",
+      "AST_Selya_dress_tier_2_petal_00_forged_edge",
+      "AST_Selya_dress_tier_2_petal_00_midrib_1",
+      "AST_Selya_dress_tier_2_petal_00_vein_1_0_-1",
+      "AST_Selya_dress_tier_2_petal_00_vein_1_0_1",
+      "AST_Selya_dress_tier_2_petal_00_vein_1_1_-1",
+      "AST_Selya_dress_tier_2_petal_00_vein_1_1_1",
+      "AST_Selya_dress_tier_2_petal_00_vein_1_2_-1",
+      "AST_Selya_dress_tier_2_petal_00_vein_1_2_1",
+      "AST_Selya_dress_tier_2_petal_00_vein_1_3_-1",
+      "AST_Selya_dress_tier_2_petal_00_vein_1_3_1",
+      "AST_Selya_dress_tier_2_petal_01",
+      "AST_Selya_dress_tier_2_petal_01_forged_edge",
+      "AST_Selya_dress_tier_2_petal_01_midrib_1",
+      "AST_Selya_dress_tier_2_petal_01_vein_1_0_-1",
+      "AST_Selya_dress_tier_2_petal_01_vein_1_0_1",
+      "AST_Selya_dress_tier_2_petal_01_vein_1_1_-1",
+      "AST_Selya_dress_tier_2_petal_01_vein_1_1_1",
+      "AST_Selya_dress_tier_2_petal_01_vein_1_2_-1",
+      "AST_Selya_dress_tier_2_petal_01_vein_1_2_1",
+      "AST_Selya_dress_tier_2_petal_01_vein_1_3_-1",
+      "AST_Selya_dress_tier_2_petal_01_vein_1_3_1",
+      "AST_Selya_dress_tier_2_petal_02",
+      "AST_Selya_dress_tier_2_petal_02_forged_edge",
+      "AST_Selya_dress_tier_2_petal_02_midrib_1",
+      "AST_Selya_dress_tier_2_petal_02_vein_1_0_-1",
+      "AST_Selya_dress_tier_2_petal_02_vein_1_0_1",
+      "AST_Selya_dress_tier_2_petal_02_vein_1_1_-1",
+      "AST_Selya_dress_tier_2_petal_02_vein_1_1_1",
+      "AST_Selya_dress_tier_2_petal_02_vein_1_2_-1",
+      "AST_Selya_dress_tier_2_petal_02_vein_1_2_1",
+      "AST_Selya_dress_tier_2_petal_02_vein_1_3_-1",
+      "AST_Selya_dress_tier_2_petal_02_vein_1_3_1",
+      "AST_Selya_dress_tier_2_petal_03",
+      "AST_Selya_dress_tier_2_petal_03_forged_edge",
+      "AST_Selya_dress_tier_2_petal_03_midrib_1",
+      "AST_Selya_dress_tier_2_petal_03_vein_1_0_-1",
+      "AST_Selya_dress_tier_2_petal_03_vein_1_0_1",
+      "AST_Selya_dress_tier_2_petal_03_vein_1_1_-1",
+      "AST_Selya_dress_tier_2_petal_03_vein_1_1_1",
+      "AST_Selya_dress_tier_2_petal_03_vein_1_2_-1",
+      "AST_Selya_dress_tier_2_petal_03_vein_1_2_1",
+      "AST_Selya_dress_tier_2_petal_03_vein_1_3_-1",
+      "AST_Selya_dress_tier_2_petal_03_vein_1_3_1",
+      "AST_Selya_dress_tier_2_petal_04",
+      "AST_Selya_dress_tier_2_petal_04_forged_edge",
+      "AST_Selya_dress_tier_2_petal_04_midrib_1",
+      "AST_Selya_dress_tier_2_petal_04_vein_1_0_-1",
+      "AST_Selya_dress_tier_2_petal_04_vein_1_0_1",
+      "AST_Selya_dress_tier_2_petal_04_vein_1_1_-1",
+      "AST_Selya_dress_tier_2_petal_04_vein_1_1_1",
+      "AST_Selya_dress_tier_2_petal_04_vein_1_2_-1",
+      "AST_Selya_dress_tier_2_petal_04_vein_1_2_1",
+      "AST_Selya_dress_tier_2_petal_04_vein_1_3_-1",
+      "AST_Selya_dress_tier_2_petal_04_vein_1_3_1",
+      "AST_Selya_dress_tier_2_petal_05",
+      "AST_Selya_dress_tier_2_petal_05_forged_edge",
+      "AST_Selya_dress_tier_2_petal_05_midrib_1",
+      "AST_Selya_dress_tier_2_petal_05_vein_1_0_-1",
+      "AST_Selya_dress_tier_2_petal_05_vein_1_0_1",
+      "AST_Selya_dress_tier_2_petal_05_vein_1_1_-1",
+      "AST_Selya_dress_tier_2_petal_05_vein_1_1_1",
+      "AST_Selya_dress_tier_2_petal_05_vein_1_2_-1",
+      "AST_Selya_dress_tier_2_petal_05_vein_1_2_1",
+      "AST_Selya_dress_tier_2_petal_05_vein_1_3_-1",
+      "AST_Selya_dress_tier_2_petal_05_vein_1_3_1",
+      "AST_Selya_dress_tier_2_petal_06",
+      "AST_Selya_dress_tier_2_petal_06_forged_edge",
+      "AST_Selya_dress_tier_2_petal_06_midrib_1",
+      "AST_Selya_dress_tier_2_petal_06_vein_1_0_-1",
+      "AST_Selya_dress_tier_2_petal_06_vein_1_0_1",
+      "AST_Selya_dress_tier_2_petal_06_vein_1_1_-1",
+      "AST_Selya_dress_tier_2_petal_06_vein_1_1_1",
+      "AST_Selya_dress_tier_2_petal_06_vein_1_2_-1",
+      "AST_Selya_dress_tier_2_petal_06_vein_1_2_1",
+      "AST_Selya_dress_tier_2_petal_06_vein_1_3_-1",
+      "AST_Selya_dress_tier_2_petal_06_vein_1_3_1",
+      "AST_Selya_dress_tier_2_petal_07",
+      "AST_Selya_dress_tier_2_petal_07_forged_edge",
+      "AST_Selya_dress_tier_2_petal_07_midrib_1",
+      "AST_Selya_dress_tier_2_petal_07_vein_1_0_-1",
+      "AST_Selya_dress_tier_2_petal_07_vein_1_0_1",
+      "AST_Selya_dress_tier_2_petal_07_vein_1_1_-1",
+      "AST_Selya_dress_tier_2_petal_07_vein_1_1_1",
+      "AST_Selya_dress_tier_2_petal_07_vein_1_2_-1",
+      "AST_Selya_dress_tier_2_petal_07_vein_1_2_1",
+      "AST_Selya_dress_tier_2_petal_07_vein_1_3_-1",
+      "AST_Selya_dress_tier_2_petal_07_vein_1_3_1",
+      "AST_Selya_front_coral_drop",
+      "AST_Selya_front_coral_drop_forged_edge",
+      "AST_Selya_front_coral_drop_midrib_1",
+      "AST_Selya_front_coral_drop_vein_1_0_-1",
+      "AST_Selya_front_coral_drop_vein_1_0_1",
+      "AST_Selya_front_coral_drop_vein_1_1_-1",
+      "AST_Selya_front_coral_drop_vein_1_1_1",
+      "AST_Selya_front_coral_drop_vein_1_2_-1",
+      "AST_Selya_front_coral_drop_vein_1_2_1",
+      "AST_Selya_front_coral_drop_vein_1_3_-1",
+      "AST_Selya_front_coral_drop_vein_1_3_1",
+      "AST_Selya_shoulder_blossom_R_petal_0",
+      "AST_Selya_shoulder_blossom_R_petal_0_forged_edge",
+      "AST_Selya_shoulder_blossom_R_petal_0_midrib_1",
+      "AST_Selya_shoulder_blossom_R_petal_0_vein_1_0_-1",
+      "AST_Selya_shoulder_blossom_R_petal_0_vein_1_0_1",
+      "AST_Selya_shoulder_blossom_R_petal_1",
+      "AST_Selya_shoulder_blossom_R_petal_1_forged_edge",
+      "AST_Selya_shoulder_blossom_R_petal_1_midrib_1",
+      "AST_Selya_shoulder_blossom_R_petal_1_vein_1_0_-1",
+      "AST_Selya_shoulder_blossom_R_petal_1_vein_1_0_1",
+      "AST_Selya_shoulder_blossom_R_petal_2",
+      "AST_Selya_shoulder_blossom_R_petal_2_forged_edge",
+      "AST_Selya_shoulder_blossom_R_petal_2_midrib_1",
+      "AST_Selya_shoulder_blossom_R_petal_2_vein_1_0_-1",
+      "AST_Selya_shoulder_blossom_R_petal_2_vein_1_0_1",
+      "AST_Selya_shoulder_blossom_R_petal_3",
+      "AST_Selya_shoulder_blossom_R_petal_3_forged_edge",
+      "AST_Selya_shoulder_blossom_R_petal_3_midrib_1",
+      "AST_Selya_shoulder_blossom_R_petal_3_vein_1_0_-1",
+      "AST_Selya_shoulder_blossom_R_petal_3_vein_1_0_1",
+      "AST_Selya_shoulder_blossom_R_petal_4",
+      "AST_Selya_shoulder_blossom_R_petal_4_forged_edge",
+      "AST_Selya_shoulder_blossom_R_petal_4_midrib_1",
+      "AST_Selya_shoulder_blossom_R_petal_4_vein_1_0_-1",
+      "AST_Selya_shoulder_blossom_R_petal_4_vein_1_0_1",
+      "AST_Selya_shoulder_blossom_R_sage_leaf_0",
+      "AST_Selya_shoulder_blossom_R_sage_leaf_0_forged_edge",
+      "AST_Selya_shoulder_blossom_R_sage_leaf_0_midrib_1",
+      "AST_Selya_shoulder_blossom_R_sage_leaf_0_vein_1_0_-1",
+      "AST_Selya_shoulder_blossom_R_sage_leaf_0_vein_1_0_1",
+      "AST_Selya_shoulder_blossom_R_sage_leaf_1",
+      "AST_Selya_shoulder_blossom_R_sage_leaf_1_forged_edge",
+      "AST_Selya_shoulder_blossom_R_sage_leaf_1_midrib_1",
+      "AST_Selya_shoulder_blossom_R_sage_leaf_1_vein_1_0_-1",
+      "AST_Selya_shoulder_blossom_R_sage_leaf_1_vein_1_0_1",
+      "AST_Selya_shoulder_blossom_R_sage_leaf_2",
+      "AST_Selya_shoulder_blossom_R_sage_leaf_2_forged_edge",
+      "AST_Selya_shoulder_blossom_R_sage_leaf_2_midrib_1",
+      "AST_Selya_shoulder_blossom_R_sage_leaf_2_vein_1_0_-1",
+      "AST_Selya_shoulder_blossom_R_sage_leaf_2_vein_1_0_1",
+      "AST_Selya_shoulder_blossom_R_sage_leaf_3",
+      "AST_Selya_shoulder_blossom_R_sage_leaf_3_forged_edge",
+      "AST_Selya_shoulder_blossom_R_sage_leaf_3_midrib_1",
+      "AST_Selya_shoulder_blossom_R_sage_leaf_3_vein_1_0_-1",
+      "AST_Selya_shoulder_blossom_R_sage_leaf_3_vein_1_0_1",
+      "AST_Selya_shoulder_blossom_R_center",
+      "AST_Selya_shoulder_blossom_R_center_gold_bezel",
+      "AST_Selya_shoulder_blossom_L_petal_0",
+      "AST_Selya_shoulder_blossom_L_petal_0_forged_edge",
+      "AST_Selya_shoulder_blossom_L_petal_0_midrib_1",
+      "AST_Selya_shoulder_blossom_L_petal_0_vein_1_0_-1",
+      "AST_Selya_shoulder_blossom_L_petal_0_vein_1_0_1",
+      "AST_Selya_shoulder_blossom_L_petal_1",
+      "AST_Selya_shoulder_blossom_L_petal_1_forged_edge",
+      "AST_Selya_shoulder_blossom_L_petal_1_midrib_1",
+      "AST_Selya_shoulder_blossom_L_petal_1_vein_1_0_-1",
+      "AST_Selya_shoulder_blossom_L_petal_1_vein_1_0_1",
+      "AST_Selya_shoulder_blossom_L_petal_2",
+      "AST_Selya_shoulder_blossom_L_petal_2_forged_edge",
+      "AST_Selya_shoulder_blossom_L_petal_2_midrib_1",
+      "AST_Selya_shoulder_blossom_L_petal_2_vein_1_0_-1",
+      "AST_Selya_shoulder_blossom_L_petal_2_vein_1_0_1",
+      "AST_Selya_shoulder_blossom_L_petal_3",
+      "AST_Selya_shoulder_blossom_L_petal_3_forged_edge",
+      "AST_Selya_shoulder_blossom_L_petal_3_midrib_1",
+      "AST_Selya_shoulder_blossom_L_petal_3_vein_1_0_-1",
+      "AST_Selya_shoulder_blossom_L_petal_3_vein_1_0_1",
+      "AST_Selya_shoulder_blossom_L_petal_4",
+      "AST_Selya_shoulder_blossom_L_petal_4_forged_edge",
+      "AST_Selya_shoulder_blossom_L_petal_4_midrib_1",
+      "AST_Selya_shoulder_blossom_L_petal_4_vein_1_0_-1",
+      "AST_Selya_shoulder_blossom_L_petal_4_vein_1_0_1",
+      "AST_Selya_shoulder_blossom_L_sage_leaf_0",
+      "AST_Selya_shoulder_blossom_L_sage_leaf_0_forged_edge",
+      "AST_Selya_shoulder_blossom_L_sage_leaf_0_midrib_1",
+      "AST_Selya_shoulder_blossom_L_sage_leaf_0_vein_1_0_-1",
+      "AST_Selya_shoulder_blossom_L_sage_leaf_0_vein_1_0_1",
+      "AST_Selya_shoulder_blossom_L_sage_leaf_1",
+      "AST_Selya_shoulder_blossom_L_sage_leaf_1_forged_edge",
+      "AST_Selya_shoulder_blossom_L_sage_leaf_1_midrib_1",
+      "AST_Selya_shoulder_blossom_L_sage_leaf_1_vein_1_0_-1",
+      "AST_Selya_shoulder_blossom_L_sage_leaf_1_vein_1_0_1",
+      "AST_Selya_shoulder_blossom_L_sage_leaf_2",
+      "AST_Selya_shoulder_blossom_L_sage_leaf_2_forged_edge",
+      "AST_Selya_shoulder_blossom_L_sage_leaf_2_midrib_1",
+      "AST_Selya_shoulder_blossom_L_sage_leaf_2_vein_1_0_-1",
+      "AST_Selya_shoulder_blossom_L_sage_leaf_2_vein_1_0_1",
+      "AST_Selya_shoulder_blossom_L_sage_leaf_3",
+      "AST_Selya_shoulder_blossom_L_sage_leaf_3_forged_edge",
+      "AST_Selya_shoulder_blossom_L_sage_leaf_3_midrib_1",
+      "AST_Selya_shoulder_blossom_L_sage_leaf_3_vein_1_0_-1",
+      "AST_Selya_shoulder_blossom_L_sage_leaf_3_vein_1_0_1",
+      "AST_Selya_shoulder_blossom_L_center",
+      "AST_Selya_shoulder_blossom_L_center_gold_bezel",
+      "AST_Selya_wrist_cuff_R",
+      "AST_Selya_wrist_leaf_R0",
+      "AST_Selya_wrist_leaf_R1",
+      "AST_Selya_wrist_leaf_R1_forged_edge",
+      "AST_Selya_wrist_leaf_R1_midrib_1",
+      "AST_Selya_wrist_leaf_R1_vein_1_0_-1",
+      "AST_Selya_wrist_leaf_R1_vein_1_0_1",
+      "AST_Selya_wrist_leaf_R2",
+      "AST_Selya_ankle_band_R",
+      "AST_Selya_ankle_emerald_R",
+      "AST_Selya_ankle_emerald_R_gold_bezel",
+      "AST_Selya_ankle_flower_R0",
+      "AST_Selya_ankle_flower_R0_forged_edge",
+      "AST_Selya_ankle_flower_R0_midrib_1",
+      "AST_Selya_ankle_flower_R0_vein_1_0_-1",
+      "AST_Selya_ankle_flower_R0_vein_1_0_1",
+      "AST_Selya_ankle_flower_R1",
+      "AST_Selya_ankle_flower_R1_forged_edge",
+      "AST_Selya_ankle_flower_R1_midrib_1",
+      "AST_Selya_ankle_flower_R1_vein_1_0_-1",
+      "AST_Selya_ankle_flower_R1_vein_1_0_1",
+      "AST_Selya_ankle_flower_R2",
+      "AST_Selya_ankle_flower_R2_forged_edge",
+      "AST_Selya_ankle_flower_R2_midrib_1",
+      "AST_Selya_ankle_flower_R2_vein_1_0_-1",
+      "AST_Selya_ankle_flower_R2_vein_1_0_1",
+      "AST_Selya_wrist_cuff_L",
+      "AST_Selya_wrist_leaf_L0",
+      "AST_Selya_wrist_leaf_L1",
+      "AST_Selya_wrist_leaf_L1_forged_edge",
+      "AST_Selya_wrist_leaf_L1_midrib_1",
+      "AST_Selya_wrist_leaf_L1_vein_1_0_-1",
+      "AST_Selya_wrist_leaf_L1_vein_1_0_1",
+      "AST_Selya_wrist_leaf_L2",
+      "AST_Selya_ankle_band_L",
+      "AST_Selya_ankle_emerald_L",
+      "AST_Selya_ankle_emerald_L_gold_bezel",
+      "AST_Selya_ankle_flower_L0",
+      "AST_Selya_ankle_flower_L0_forged_edge",
+      "AST_Selya_ankle_flower_L0_midrib_1",
+      "AST_Selya_ankle_flower_L0_vein_1_0_-1",
+      "AST_Selya_ankle_flower_L0_vein_1_0_1",
+      "AST_Selya_ankle_flower_L1",
+      "AST_Selya_ankle_flower_L1_forged_edge",
+      "AST_Selya_ankle_flower_L1_midrib_1",
+      "AST_Selya_ankle_flower_L1_vein_1_0_-1",
+      "AST_Selya_ankle_flower_L1_vein_1_0_1",
+      "AST_Selya_ankle_flower_L2",
+      "AST_Selya_ankle_flower_L2_forged_edge",
+      "AST_Selya_ankle_flower_L2_midrib_1",
+      "AST_Selya_ankle_flower_L2_vein_1_0_-1",
+      "AST_Selya_ankle_flower_L2_vein_1_0_1",
+      "AST_Selya_coral_hair_blossom_petal_0",
+      "AST_Selya_coral_hair_blossom_petal_0_forged_edge",
+      "AST_Selya_coral_hair_blossom_petal_0_midrib_1",
+      "AST_Selya_coral_hair_blossom_petal_0_vein_1_0_-1",
+      "AST_Selya_coral_hair_blossom_petal_0_vein_1_0_1",
+      "AST_Selya_coral_hair_blossom_petal_1",
+      "AST_Selya_coral_hair_blossom_petal_1_forged_edge",
+      "AST_Selya_coral_hair_blossom_petal_1_midrib_1",
+      "AST_Selya_coral_hair_blossom_petal_1_vein_1_0_-1",
+      "AST_Selya_coral_hair_blossom_petal_1_vein_1_0_1",
+      "AST_Selya_coral_hair_blossom_petal_2",
+      "AST_Selya_coral_hair_blossom_petal_2_forged_edge",
+      "AST_Selya_coral_hair_blossom_petal_2_midrib_1",
+      "AST_Selya_coral_hair_blossom_petal_2_vein_1_0_-1",
+      "AST_Selya_coral_hair_blossom_petal_2_vein_1_0_1",
+      "AST_Selya_coral_hair_blossom_petal_3",
+      "AST_Selya_coral_hair_blossom_petal_3_forged_edge",
+      "AST_Selya_coral_hair_blossom_petal_3_midrib_1",
+      "AST_Selya_coral_hair_blossom_petal_3_vein_1_0_-1",
+      "AST_Selya_coral_hair_blossom_petal_3_vein_1_0_1",
+      "AST_Selya_coral_hair_blossom_petal_4",
+      "AST_Selya_coral_hair_blossom_petal_4_forged_edge",
+      "AST_Selya_coral_hair_blossom_petal_4_midrib_1",
+      "AST_Selya_coral_hair_blossom_petal_4_vein_1_0_-1",
+      "AST_Selya_coral_hair_blossom_petal_4_vein_1_0_1",
+      "AST_Selya_coral_hair_blossom_petal_5",
+      "AST_Selya_coral_hair_blossom_petal_5_forged_edge",
+      "AST_Selya_coral_hair_blossom_petal_5_midrib_1",
+      "AST_Selya_coral_hair_blossom_petal_5_vein_1_0_-1",
+      "AST_Selya_coral_hair_blossom_petal_5_vein_1_0_1",
+      "AST_Selya_coral_hair_blossom_petal_6",
+      "AST_Selya_coral_hair_blossom_petal_6_forged_edge",
+      "AST_Selya_coral_hair_blossom_petal_6_midrib_1",
+      "AST_Selya_coral_hair_blossom_petal_6_vein_1_0_-1",
+      "AST_Selya_coral_hair_blossom_petal_6_vein_1_0_1",
+      "AST_Selya_coral_hair_blossom_sage_leaf_0",
+      "AST_Selya_coral_hair_blossom_sage_leaf_0_forged_edge",
+      "AST_Selya_coral_hair_blossom_sage_leaf_0_midrib_1",
+      "AST_Selya_coral_hair_blossom_sage_leaf_0_vein_1_0_-1",
+      "AST_Selya_coral_hair_blossom_sage_leaf_0_vein_1_0_1",
+      "AST_Selya_coral_hair_blossom_sage_leaf_1",
+      "AST_Selya_coral_hair_blossom_sage_leaf_1_forged_edge",
+      "AST_Selya_coral_hair_blossom_sage_leaf_1_midrib_1",
+      "AST_Selya_coral_hair_blossom_sage_leaf_1_vein_1_0_-1",
+      "AST_Selya_coral_hair_blossom_sage_leaf_1_vein_1_0_1",
+      "AST_Selya_coral_hair_blossom_sage_leaf_2",
+      "AST_Selya_coral_hair_blossom_sage_leaf_2_forged_edge",
+      "AST_Selya_coral_hair_blossom_sage_leaf_2_midrib_1",
+      "AST_Selya_coral_hair_blossom_sage_leaf_2_vein_1_0_-1",
+      "AST_Selya_coral_hair_blossom_sage_leaf_2_vein_1_0_1",
+      "AST_Selya_coral_hair_blossom_sage_leaf_3",
+      "AST_Selya_coral_hair_blossom_sage_leaf_3_forged_edge",
+      "AST_Selya_coral_hair_blossom_sage_leaf_3_midrib_1",
+      "AST_Selya_coral_hair_blossom_sage_leaf_3_vein_1_0_-1",
+      "AST_Selya_coral_hair_blossom_sage_leaf_3_vein_1_0_1",
+      "AST_Selya_coral_hair_blossom_center",
+      "AST_Selya_coral_hair_blossom_center_gold_bezel",
+      "AST_Selya_sun_drop_earring_R_petal_0",
+      "AST_Selya_sun_drop_earring_R_petal_1",
+      "AST_Selya_sun_drop_earring_R_petal_2",
+      "AST_Selya_sun_drop_earring_R_petal_3",
+      "AST_Selya_sun_drop_earring_R_petal_4",
+      "AST_Selya_sun_drop_earring_R_petal_5",
+      "AST_Selya_sun_drop_earring_R_petal_6",
+      "AST_Selya_sun_drop_earring_R_center",
+      "AST_Selya_sun_drop_earring_R_center_gold_bezel",
+      "AST_Selya_sun_drop_earring_L_petal_0",
+      "AST_Selya_sun_drop_earring_L_petal_1",
+      "AST_Selya_sun_drop_earring_L_petal_2",
+      "AST_Selya_sun_drop_earring_L_petal_3",
+      "AST_Selya_sun_drop_earring_L_petal_4",
+      "AST_Selya_sun_drop_earring_L_petal_5",
+      "AST_Selya_sun_drop_earring_L_petal_6",
+      "AST_Selya_sun_drop_earring_L_center",
+      "AST_Selya_sun_drop_earring_L_center_gold_bezel"
+    ],
+    "body_source_objects": [
+      "AST_Selya_continuous_torso",
+      "AST_Selya_neck",
+      "AST_Selya_sculpted_head",
+      "AST_Selya_eye_R_orbital_skin",
+      "AST_Selya_eye_R",
+      "AST_Selya_eye_R_upper_lash",
+      "AST_Selya_eye_R_lower_skin_lid",
+      "AST_Selya_eye_R_soft_lash_wing",
+      "AST_Selya_eye_R_light",
+      "AST_Selya_eye_R_pin",
+      "AST_Selya_eye_R_closed_lid",
+      "AST_Selya_eye_R_closed_lash",
+      "AST_Selya_sculpted_ear_R",
+      "AST_Selya_ear_concha_R",
+      "AST_Selya_anatomical_leg_R",
+      "AST_Selya_distinct_toe_R0",
+      "AST_Selya_distinct_toe_R1",
+      "AST_Selya_distinct_toe_R2",
+      "AST_Selya_distinct_toe_R3",
+      "AST_Selya_anatomical_arm_hand_R",
+      "AST_Selya_eye_L_orbital_skin",
+      "AST_Selya_eye_L",
+      "AST_Selya_eye_L_upper_lash",
+      "AST_Selya_eye_L_lower_skin_lid",
+      "AST_Selya_eye_L_soft_lash_wing",
+      "AST_Selya_eye_L_light",
+      "AST_Selya_eye_L_pin",
+      "AST_Selya_eye_L_closed_lid",
+      "AST_Selya_eye_L_closed_lash",
+      "AST_Selya_sculpted_ear_L",
+      "AST_Selya_ear_concha_L",
+      "AST_Selya_anatomical_leg_L",
+      "AST_Selya_distinct_toe_L0",
+      "AST_Selya_distinct_toe_L1",
+      "AST_Selya_distinct_toe_L2",
+      "AST_Selya_distinct_toe_L3",
+      "AST_Selya_anatomical_arm_hand_L",
+      "AST_Selya_arched_brow_-1",
+      "AST_Selya_smile_-1",
+      "AST_Selya_nostril_-1",
+      "AST_Selya_arched_brow_1",
+      "AST_Selya_smile_1",
+      "AST_Selya_nostril_1",
+      "AST_Selya_continuous_crown_and_flowing_underhair",
+      "AST_Selya_topknot_core",
+      "AST_Selya_wrapped_topknot_0",
+      "AST_Selya_wrapped_topknot_1",
+      "AST_Selya_wrapped_topknot_2",
+      "AST_Selya_wrapped_topknot_3",
+      "AST_Selya_wrapped_topknot_4",
+      "AST_Selya_fitted_mint_bodice",
+      "AST_Selya_dress_tier_0_petal_00",
+      "AST_Selya_dress_tier_0_petal_00_forged_edge",
+      "AST_Selya_dress_tier_0_petal_00_midrib_1",
+      "AST_Selya_dress_tier_0_petal_00_vein_1_0_-1",
+      "AST_Selya_dress_tier_0_petal_00_vein_1_0_1",
+      "AST_Selya_dress_tier_0_petal_00_vein_1_1_-1",
+      "AST_Selya_dress_tier_0_petal_00_vein_1_1_1",
+      "AST_Selya_dress_tier_0_petal_00_vein_1_2_-1",
+      "AST_Selya_dress_tier_0_petal_00_vein_1_2_1",
+      "AST_Selya_dress_tier_0_petal_01",
+      "AST_Selya_dress_tier_0_petal_01_forged_edge",
+      "AST_Selya_dress_tier_0_petal_01_midrib_1",
+      "AST_Selya_dress_tier_0_petal_01_vein_1_0_-1",
+      "AST_Selya_dress_tier_0_petal_01_vein_1_0_1",
+      "AST_Selya_dress_tier_0_petal_01_vein_1_1_-1",
+      "AST_Selya_dress_tier_0_petal_01_vein_1_1_1",
+      "AST_Selya_dress_tier_0_petal_01_vein_1_2_-1",
+      "AST_Selya_dress_tier_0_petal_01_vein_1_2_1",
+      "AST_Selya_dress_tier_0_petal_02",
+      "AST_Selya_dress_tier_0_petal_02_forged_edge",
+      "AST_Selya_dress_tier_0_petal_02_midrib_1",
+      "AST_Selya_dress_tier_0_petal_02_vein_1_0_-1",
+      "AST_Selya_dress_tier_0_petal_02_vein_1_0_1",
+      "AST_Selya_dress_tier_0_petal_02_vein_1_1_-1",
+      "AST_Selya_dress_tier_0_petal_02_vein_1_1_1",
+      "AST_Selya_dress_tier_0_petal_02_vein_1_2_-1",
+      "AST_Selya_dress_tier_0_petal_02_vein_1_2_1",
+      "AST_Selya_dress_tier_0_petal_03",
+      "AST_Selya_dress_tier_0_petal_03_forged_edge",
+      "AST_Selya_dress_tier_0_petal_03_midrib_1",
+      "AST_Selya_dress_tier_0_petal_03_vein_1_0_-1",
+      "AST_Selya_dress_tier_0_petal_03_vein_1_0_1",
+      "AST_Selya_dress_tier_0_petal_03_vein_1_1_-1",
+      "AST_Selya_dress_tier_0_petal_03_vein_1_1_1",
+      "AST_Selya_dress_tier_0_petal_03_vein_1_2_-1",
+      "AST_Selya_dress_tier_0_petal_03_vein_1_2_1",
+      "AST_Selya_dress_tier_0_petal_04",
+      "AST_Selya_dress_tier_0_petal_04_forged_edge",
+      "AST_Selya_dress_tier_0_petal_04_midrib_1",
+      "AST_Selya_dress_tier_0_petal_04_vein_1_0_-1",
+      "AST_Selya_dress_tier_0_petal_04_vein_1_0_1",
+      "AST_Selya_dress_tier_0_petal_04_vein_1_1_-1",
+      "AST_Selya_dress_tier_0_petal_04_vein_1_1_1",
+      "AST_Selya_dress_tier_0_petal_04_vein_1_2_-1",
+      "AST_Selya_dress_tier_0_petal_04_vein_1_2_1",
+      "AST_Selya_dress_tier_0_petal_05",
+      "AST_Selya_dress_tier_0_petal_05_forged_edge",
+      "AST_Selya_dress_tier_0_petal_05_midrib_1",
+      "AST_Selya_dress_tier_0_petal_05_vein_1_0_-1",
+      "AST_Selya_dress_tier_0_petal_05_vein_1_0_1",
+      "AST_Selya_dress_tier_0_petal_05_vein_1_1_-1",
+      "AST_Selya_dress_tier_0_petal_05_vein_1_1_1",
+      "AST_Selya_dress_tier_0_petal_05_vein_1_2_-1",
+      "AST_Selya_dress_tier_0_petal_05_vein_1_2_1",
+      "AST_Selya_dress_tier_0_petal_06",
+      "AST_Selya_dress_tier_0_petal_06_forged_edge",
+      "AST_Selya_dress_tier_0_petal_06_midrib_1",
+      "AST_Selya_dress_tier_0_petal_06_vein_1_0_-1",
+      "AST_Selya_dress_tier_0_petal_06_vein_1_0_1",
+      "AST_Selya_dress_tier_0_petal_06_vein_1_1_-1",
+      "AST_Selya_dress_tier_0_petal_06_vein_1_1_1",
+      "AST_Selya_dress_tier_0_petal_06_vein_1_2_-1",
+      "AST_Selya_dress_tier_0_petal_06_vein_1_2_1",
+      "AST_Selya_dress_tier_0_petal_07",
+      "AST_Selya_dress_tier_0_petal_07_forged_edge",
+      "AST_Selya_dress_tier_0_petal_07_midrib_1",
+      "AST_Selya_dress_tier_0_petal_07_vein_1_0_-1",
+      "AST_Selya_dress_tier_0_petal_07_vein_1_0_1",
+      "AST_Selya_dress_tier_0_petal_07_vein_1_1_-1",
+      "AST_Selya_dress_tier_0_petal_07_vein_1_1_1",
+      "AST_Selya_dress_tier_0_petal_07_vein_1_2_-1",
+      "AST_Selya_dress_tier_0_petal_07_vein_1_2_1",
+      "AST_Selya_dress_tier_0_petal_08",
+      "AST_Selya_dress_tier_0_petal_08_forged_edge",
+      "AST_Selya_dress_tier_0_petal_08_midrib_1",
+      "AST_Selya_dress_tier_0_petal_08_vein_1_0_-1",
+      "AST_Selya_dress_tier_0_petal_08_vein_1_0_1",
+      "AST_Selya_dress_tier_0_petal_08_vein_1_1_-1",
+      "AST_Selya_dress_tier_0_petal_08_vein_1_1_1",
+      "AST_Selya_dress_tier_0_petal_08_vein_1_2_-1",
+      "AST_Selya_dress_tier_0_petal_08_vein_1_2_1",
+      "AST_Selya_dress_tier_0_petal_09",
+      "AST_Selya_dress_tier_0_petal_09_forged_edge",
+      "AST_Selya_dress_tier_0_petal_09_midrib_1",
+      "AST_Selya_dress_tier_0_petal_09_vein_1_0_-1",
+      "AST_Selya_dress_tier_0_petal_09_vein_1_0_1",
+      "AST_Selya_dress_tier_0_petal_09_vein_1_1_-1",
+      "AST_Selya_dress_tier_0_petal_09_vein_1_1_1",
+      "AST_Selya_dress_tier_0_petal_09_vein_1_2_-1",
+      "AST_Selya_dress_tier_0_petal_09_vein_1_2_1",
+      "AST_Selya_dress_tier_1_petal_00",
+      "AST_Selya_dress_tier_1_petal_00_forged_edge",
+      "AST_Selya_dress_tier_1_petal_00_midrib_1",
+      "AST_Selya_dress_tier_1_petal_00_vein_1_0_-1",
+      "AST_Selya_dress_tier_1_petal_00_vein_1_0_1",
+      "AST_Selya_dress_tier_1_petal_00_vein_1_1_-1",
+      "AST_Selya_dress_tier_1_petal_00_vein_1_1_1",
+      "AST_Selya_dress_tier_1_petal_00_vein_1_2_-1",
+      "AST_Selya_dress_tier_1_petal_00_vein_1_2_1",
+      "AST_Selya_dress_tier_1_petal_01",
+      "AST_Selya_dress_tier_1_petal_01_forged_edge",
+      "AST_Selya_dress_tier_1_petal_01_midrib_1",
+      "AST_Selya_dress_tier_1_petal_01_vein_1_0_-1",
+      "AST_Selya_dress_tier_1_petal_01_vein_1_0_1",
+      "AST_Selya_dress_tier_1_petal_01_vein_1_1_-1",
+      "AST_Selya_dress_tier_1_petal_01_vein_1_1_1",
+      "AST_Selya_dress_tier_1_petal_01_vein_1_2_-1",
+      "AST_Selya_dress_tier_1_petal_01_vein_1_2_1",
+      "AST_Selya_dress_tier_1_petal_02",
+      "AST_Selya_dress_tier_1_petal_02_forged_edge",
+      "AST_Selya_dress_tier_1_petal_02_midrib_1",
+      "AST_Selya_dress_tier_1_petal_02_vein_1_0_-1",
+      "AST_Selya_dress_tier_1_petal_02_vein_1_0_1",
+      "AST_Selya_dress_tier_1_petal_02_vein_1_1_-1",
+      "AST_Selya_dress_tier_1_petal_02_vein_1_1_1",
+      "AST_Selya_dress_tier_1_petal_02_vein_1_2_-1",
+      "AST_Selya_dress_tier_1_petal_02_vein_1_2_1",
+      "AST_Selya_dress_tier_1_petal_03",
+      "AST_Selya_dress_tier_1_petal_03_forged_edge",
+      "AST_Selya_dress_tier_1_petal_03_midrib_1",
+      "AST_Selya_dress_tier_1_petal_03_vein_1_0_-1",
+      "AST_Selya_dress_tier_1_petal_03_vein_1_0_1",
+      "AST_Selya_dress_tier_1_petal_03_vein_1_1_-1",
+      "AST_Selya_dress_tier_1_petal_03_vein_1_1_1",
+      "AST_Selya_dress_tier_1_petal_03_vein_1_2_-1",
+      "AST_Selya_dress_tier_1_petal_03_vein_1_2_1",
+      "AST_Selya_dress_tier_1_petal_04",
+      "AST_Selya_dress_tier_1_petal_04_forged_edge",
+      "AST_Selya_dress_tier_1_petal_04_midrib_1",
+      "AST_Selya_dress_tier_1_petal_04_vein_1_0_-1",
+      "AST_Selya_dress_tier_1_petal_04_vein_1_0_1",
+      "AST_Selya_dress_tier_1_petal_04_vein_1_1_-1",
+      "AST_Selya_dress_tier_1_petal_04_vein_1_1_1",
+      "AST_Selya_dress_tier_1_petal_04_vein_1_2_-1",
+      "AST_Selya_dress_tier_1_petal_04_vein_1_2_1",
+      "AST_Selya_dress_tier_1_petal_05",
+      "AST_Selya_dress_tier_1_petal_05_forged_edge",
+      "AST_Selya_dress_tier_1_petal_05_midrib_1",
+      "AST_Selya_dress_tier_1_petal_05_vein_1_0_-1",
+      "AST_Selya_dress_tier_1_petal_05_vein_1_0_1",
+      "AST_Selya_dress_tier_1_petal_05_vein_1_1_-1",
+      "AST_Selya_dress_tier_1_petal_05_vein_1_1_1",
+      "AST_Selya_dress_tier_1_petal_05_vein_1_2_-1",
+      "AST_Selya_dress_tier_1_petal_05_vein_1_2_1",
+      "AST_Selya_dress_tier_1_petal_06",
+      "AST_Selya_dress_tier_1_petal_06_forged_edge",
+      "AST_Selya_dress_tier_1_petal_06_midrib_1",
+      "AST_Selya_dress_tier_1_petal_06_vein_1_0_-1",
+      "AST_Selya_dress_tier_1_petal_06_vein_1_0_1",
+      "AST_Selya_dress_tier_1_petal_06_vein_1_1_-1",
+      "AST_Selya_dress_tier_1_petal_06_vein_1_1_1",
+      "AST_Selya_dress_tier_1_petal_06_vein_1_2_-1",
+      "AST_Selya_dress_tier_1_petal_06_vein_1_2_1",
+      "AST_Selya_dress_tier_1_petal_07",
+      "AST_Selya_dress_tier_1_petal_07_forged_edge",
+      "AST_Selya_dress_tier_1_petal_07_midrib_1",
+      "AST_Selya_dress_tier_1_petal_07_vein_1_0_-1",
+      "AST_Selya_dress_tier_1_petal_07_vein_1_0_1",
+      "AST_Selya_dress_tier_1_petal_07_vein_1_1_-1",
+      "AST_Selya_dress_tier_1_petal_07_vein_1_1_1",
+      "AST_Selya_dress_tier_1_petal_07_vein_1_2_-1",
+      "AST_Selya_dress_tier_1_petal_07_vein_1_2_1",
+      "AST_Selya_dress_tier_1_petal_08",
+      "AST_Selya_dress_tier_1_petal_08_forged_edge",
+      "AST_Selya_dress_tier_1_petal_08_midrib_1",
+      "AST_Selya_dress_tier_1_petal_08_vein_1_0_-1",
+      "AST_Selya_dress_tier_1_petal_08_vein_1_0_1",
+      "AST_Selya_dress_tier_1_petal_08_vein_1_1_-1",
+      "AST_Selya_dress_tier_1_petal_08_vein_1_1_1",
+      "AST_Selya_dress_tier_1_petal_08_vein_1_2_-1",
+      "AST_Selya_dress_tier_1_petal_08_vein_1_2_1",
+      "AST_Selya_front_mint_heart",
+      "AST_Selya_front_mint_heart_forged_edge",
+      "AST_Selya_front_mint_heart_midrib_1",
+      "AST_Selya_front_mint_heart_vein_1_0_-1",
+      "AST_Selya_front_mint_heart_vein_1_0_1",
+      "AST_Selya_front_mint_heart_vein_1_1_-1",
+      "AST_Selya_front_mint_heart_vein_1_1_1",
+      "AST_Selya_front_mint_heart_vein_1_2_-1",
+      "AST_Selya_front_mint_heart_vein_1_2_1",
+      "AST_Selya_front_mint_heart_vein_1_3_-1",
+      "AST_Selya_front_mint_heart_vein_1_3_1",
+      "AST_Selya_upper_wing_R",
+      "AST_Selya_upper_wing_R_forged_edge",
+      "AST_Selya_upper_wing_R_midrib_1",
+      "AST_Selya_upper_wing_R_vein_1_0_-1",
+      "AST_Selya_upper_wing_R_fine_branch_1_0_-1_0",
+      "AST_Selya_upper_wing_R_fine_branch_1_0_-1_1",
+      "AST_Selya_upper_wing_R_vein_1_0_1",
+      "AST_Selya_upper_wing_R_fine_branch_1_0_1_0",
+      "AST_Selya_upper_wing_R_fine_branch_1_0_1_1",
+      "AST_Selya_upper_wing_R_vein_1_1_-1",
+      "AST_Selya_upper_wing_R_fine_branch_1_1_-1_0",
+      "AST_Selya_upper_wing_R_fine_branch_1_1_-1_1",
+      "AST_Selya_upper_wing_R_vein_1_1_1",
+      "AST_Selya_upper_wing_R_fine_branch_1_1_1_0",
+      "AST_Selya_upper_wing_R_fine_branch_1_1_1_1",
+      "AST_Selya_upper_wing_R_vein_1_2_-1",
+      "AST_Selya_upper_wing_R_fine_branch_1_2_-1_0",
+      "AST_Selya_upper_wing_R_fine_branch_1_2_-1_1",
+      "AST_Selya_upper_wing_R_vein_1_2_1",
+      "AST_Selya_upper_wing_R_fine_branch_1_2_1_0",
+      "AST_Selya_upper_wing_R_fine_branch_1_2_1_1",
+      "AST_Selya_upper_wing_R_vein_1_3_-1",
+      "AST_Selya_upper_wing_R_fine_branch_1_3_-1_0",
+      "AST_Selya_upper_wing_R_fine_branch_1_3_-1_1",
+      "AST_Selya_upper_wing_R_vein_1_3_1",
+      "AST_Selya_upper_wing_R_fine_branch_1_3_1_0",
+      "AST_Selya_upper_wing_R_fine_branch_1_3_1_1",
+      "AST_Selya_upper_wing_R_vein_1_4_-1",
+      "AST_Selya_upper_wing_R_fine_branch_1_4_-1_0",
+      "AST_Selya_upper_wing_R_fine_branch_1_4_-1_1",
+      "AST_Selya_upper_wing_R_vein_1_4_1",
+      "AST_Selya_upper_wing_R_fine_branch_1_4_1_0",
+      "AST_Selya_upper_wing_R_fine_branch_1_4_1_1",
+      "AST_Selya_upper_wing_R_vein_1_5_-1",
+      "AST_Selya_upper_wing_R_fine_branch_1_5_-1_0",
+      "AST_Selya_upper_wing_R_fine_branch_1_5_-1_1",
+      "AST_Selya_upper_wing_R_vein_1_5_1",
+      "AST_Selya_upper_wing_R_fine_branch_1_5_1_0",
+      "AST_Selya_upper_wing_R_fine_branch_1_5_1_1",
+      "AST_Selya_upper_wing_R_vein_1_6_-1",
+      "AST_Selya_upper_wing_R_fine_branch_1_6_-1_0",
+      "AST_Selya_upper_wing_R_fine_branch_1_6_-1_1",
+      "AST_Selya_upper_wing_R_vein_1_6_1",
+      "AST_Selya_upper_wing_R_fine_branch_1_6_1_0",
+      "AST_Selya_upper_wing_R_fine_branch_1_6_1_1",
+      "AST_Selya_upper_wing_R_vein_1_7_-1",
+      "AST_Selya_upper_wing_R_fine_branch_1_7_-1_0",
+      "AST_Selya_upper_wing_R_fine_branch_1_7_-1_1",
+      "AST_Selya_upper_wing_R_vein_1_7_1",
+      "AST_Selya_upper_wing_R_fine_branch_1_7_1_0",
+      "AST_Selya_upper_wing_R_fine_branch_1_7_1_1",
+      "AST_Selya_upper_wing_R_vein_1_8_-1",
+      "AST_Selya_upper_wing_R_fine_branch_1_8_-1_0",
+      "AST_Selya_upper_wing_R_fine_branch_1_8_-1_1",
+      "AST_Selya_upper_wing_R_vein_1_8_1",
+      "AST_Selya_upper_wing_R_fine_branch_1_8_1_0",
+      "AST_Selya_upper_wing_R_fine_branch_1_8_1_1",
+      "AST_Selya_upper_wing_R_midrib_-1",
+      "AST_Selya_upper_wing_R_vein_-1_0_-1",
+      "AST_Selya_upper_wing_R_fine_branch_-1_0_-1_0",
+      "AST_Selya_upper_wing_R_fine_branch_-1_0_-1_1",
+      "AST_Selya_upper_wing_R_vein_-1_0_1",
+      "AST_Selya_upper_wing_R_fine_branch_-1_0_1_0",
+      "AST_Selya_upper_wing_R_fine_branch_-1_0_1_1",
+      "AST_Selya_upper_wing_R_vein_-1_1_-1",
+      "AST_Selya_upper_wing_R_fine_branch_-1_1_-1_0",
+      "AST_Selya_upper_wing_R_fine_branch_-1_1_-1_1",
+      "AST_Selya_upper_wing_R_vein_-1_1_1",
+      "AST_Selya_upper_wing_R_fine_branch_-1_1_1_0",
+      "AST_Selya_upper_wing_R_fine_branch_-1_1_1_1",
+      "AST_Selya_upper_wing_R_vein_-1_2_-1",
+      "AST_Selya_upper_wing_R_fine_branch_-1_2_-1_0",
+      "AST_Selya_upper_wing_R_fine_branch_-1_2_-1_1",
+      "AST_Selya_upper_wing_R_vein_-1_2_1",
+      "AST_Selya_upper_wing_R_fine_branch_-1_2_1_0",
+      "AST_Selya_upper_wing_R_fine_branch_-1_2_1_1",
+      "AST_Selya_upper_wing_R_vein_-1_3_-1",
+      "AST_Selya_upper_wing_R_fine_branch_-1_3_-1_0",
+      "AST_Selya_upper_wing_R_fine_branch_-1_3_-1_1",
+      "AST_Selya_upper_wing_R_vein_-1_3_1",
+      "AST_Selya_upper_wing_R_fine_branch_-1_3_1_0",
+      "AST_Selya_upper_wing_R_fine_branch_-1_3_1_1",
+      "AST_Selya_upper_wing_R_vein_-1_4_-1",
+      "AST_Selya_upper_wing_R_fine_branch_-1_4_-1_0",
+      "AST_Selya_upper_wing_R_fine_branch_-1_4_-1_1",
+      "AST_Selya_upper_wing_R_vein_-1_4_1",
+      "AST_Selya_upper_wing_R_fine_branch_-1_4_1_0",
+      "AST_Selya_upper_wing_R_fine_branch_-1_4_1_1",
+      "AST_Selya_upper_wing_R_vein_-1_5_-1",
+      "AST_Selya_upper_wing_R_fine_branch_-1_5_-1_0",
+      "AST_Selya_upper_wing_R_fine_branch_-1_5_-1_1",
+      "AST_Selya_upper_wing_R_vein_-1_5_1",
+      "AST_Selya_upper_wing_R_fine_branch_-1_5_1_0",
+      "AST_Selya_upper_wing_R_fine_branch_-1_5_1_1",
+      "AST_Selya_upper_wing_R_vein_-1_6_-1",
+      "AST_Selya_upper_wing_R_fine_branch_-1_6_-1_0",
+      "AST_Selya_upper_wing_R_fine_branch_-1_6_-1_1",
+      "AST_Selya_upper_wing_R_vein_-1_6_1",
+      "AST_Selya_upper_wing_R_fine_branch_-1_6_1_0",
+      "AST_Selya_upper_wing_R_fine_branch_-1_6_1_1",
+      "AST_Selya_upper_wing_R_vein_-1_7_-1",
+      "AST_Selya_upper_wing_R_fine_branch_-1_7_-1_0",
+      "AST_Selya_upper_wing_R_fine_branch_-1_7_-1_1",
+      "AST_Selya_upper_wing_R_vein_-1_7_1",
+      "AST_Selya_upper_wing_R_fine_branch_-1_7_1_0",
+      "AST_Selya_upper_wing_R_fine_branch_-1_7_1_1",
+      "AST_Selya_upper_wing_R_vein_-1_8_-1",
+      "AST_Selya_upper_wing_R_fine_branch_-1_8_-1_0",
+      "AST_Selya_upper_wing_R_fine_branch_-1_8_-1_1",
+      "AST_Selya_upper_wing_R_vein_-1_8_1",
+      "AST_Selya_upper_wing_R_fine_branch_-1_8_1_0",
+      "AST_Selya_upper_wing_R_fine_branch_-1_8_1_1",
+      "AST_Selya_lower_wing_R",
+      "AST_Selya_lower_wing_R_forged_edge",
+      "AST_Selya_lower_wing_R_midrib_1",
+      "AST_Selya_lower_wing_R_vein_1_0_-1",
+      "AST_Selya_lower_wing_R_fine_branch_1_0_-1_0",
+      "AST_Selya_lower_wing_R_fine_branch_1_0_-1_1",
+      "AST_Selya_lower_wing_R_vein_1_0_1",
+      "AST_Selya_lower_wing_R_fine_branch_1_0_1_0",
+      "AST_Selya_lower_wing_R_fine_branch_1_0_1_1",
+      "AST_Selya_lower_wing_R_vein_1_1_-1",
+      "AST_Selya_lower_wing_R_fine_branch_1_1_-1_0",
+      "AST_Selya_lower_wing_R_fine_branch_1_1_-1_1",
+      "AST_Selya_lower_wing_R_vein_1_1_1",
+      "AST_Selya_lower_wing_R_fine_branch_1_1_1_0",
+      "AST_Selya_lower_wing_R_fine_branch_1_1_1_1",
+      "AST_Selya_lower_wing_R_vein_1_2_-1",
+      "AST_Selya_lower_wing_R_fine_branch_1_2_-1_0",
+      "AST_Selya_lower_wing_R_fine_branch_1_2_-1_1",
+      "AST_Selya_lower_wing_R_vein_1_2_1",
+      "AST_Selya_lower_wing_R_fine_branch_1_2_1_0",
+      "AST_Selya_lower_wing_R_fine_branch_1_2_1_1",
+      "AST_Selya_lower_wing_R_vein_1_3_-1",
+      "AST_Selya_lower_wing_R_fine_branch_1_3_-1_0",
+      "AST_Selya_lower_wing_R_fine_branch_1_3_-1_1",
+      "AST_Selya_lower_wing_R_vein_1_3_1",
+      "AST_Selya_lower_wing_R_fine_branch_1_3_1_0",
+      "AST_Selya_lower_wing_R_fine_branch_1_3_1_1",
+      "AST_Selya_lower_wing_R_vein_1_4_-1",
+      "AST_Selya_lower_wing_R_fine_branch_1_4_-1_0",
+      "AST_Selya_lower_wing_R_fine_branch_1_4_-1_1",
+      "AST_Selya_lower_wing_R_vein_1_4_1",
+      "AST_Selya_lower_wing_R_fine_branch_1_4_1_0",
+      "AST_Selya_lower_wing_R_fine_branch_1_4_1_1",
+      "AST_Selya_lower_wing_R_vein_1_5_-1",
+      "AST_Selya_lower_wing_R_fine_branch_1_5_-1_0",
+      "AST_Selya_lower_wing_R_fine_branch_1_5_-1_1",
+      "AST_Selya_lower_wing_R_vein_1_5_1",
+      "AST_Selya_lower_wing_R_fine_branch_1_5_1_0",
+      "AST_Selya_lower_wing_R_fine_branch_1_5_1_1",
+      "AST_Selya_lower_wing_R_vein_1_6_-1",
+      "AST_Selya_lower_wing_R_fine_branch_1_6_-1_0",
+      "AST_Selya_lower_wing_R_fine_branch_1_6_-1_1",
+      "AST_Selya_lower_wing_R_vein_1_6_1",
+      "AST_Selya_lower_wing_R_fine_branch_1_6_1_0",
+      "AST_Selya_lower_wing_R_fine_branch_1_6_1_1",
+      "AST_Selya_lower_wing_R_midrib_-1",
+      "AST_Selya_lower_wing_R_vein_-1_0_-1",
+      "AST_Selya_lower_wing_R_fine_branch_-1_0_-1_0",
+      "AST_Selya_lower_wing_R_fine_branch_-1_0_-1_1",
+      "AST_Selya_lower_wing_R_vein_-1_0_1",
+      "AST_Selya_lower_wing_R_fine_branch_-1_0_1_0",
+      "AST_Selya_lower_wing_R_fine_branch_-1_0_1_1",
+      "AST_Selya_lower_wing_R_vein_-1_1_-1",
+      "AST_Selya_lower_wing_R_fine_branch_-1_1_-1_0",
+      "AST_Selya_lower_wing_R_fine_branch_-1_1_-1_1",
+      "AST_Selya_lower_wing_R_vein_-1_1_1",
+      "AST_Selya_lower_wing_R_fine_branch_-1_1_1_0",
+      "AST_Selya_lower_wing_R_fine_branch_-1_1_1_1",
+      "AST_Selya_lower_wing_R_vein_-1_2_-1",
+      "AST_Selya_lower_wing_R_fine_branch_-1_2_-1_0",
+      "AST_Selya_lower_wing_R_fine_branch_-1_2_-1_1",
+      "AST_Selya_lower_wing_R_vein_-1_2_1",
+      "AST_Selya_lower_wing_R_fine_branch_-1_2_1_0",
+      "AST_Selya_lower_wing_R_fine_branch_-1_2_1_1",
+      "AST_Selya_lower_wing_R_vein_-1_3_-1",
+      "AST_Selya_lower_wing_R_fine_branch_-1_3_-1_0",
+      "AST_Selya_lower_wing_R_fine_branch_-1_3_-1_1",
+      "AST_Selya_lower_wing_R_vein_-1_3_1",
+      "AST_Selya_lower_wing_R_fine_branch_-1_3_1_0",
+      "AST_Selya_lower_wing_R_fine_branch_-1_3_1_1",
+      "AST_Selya_lower_wing_R_vein_-1_4_-1",
+      "AST_Selya_lower_wing_R_fine_branch_-1_4_-1_0",
+      "AST_Selya_lower_wing_R_fine_branch_-1_4_-1_1",
+      "AST_Selya_lower_wing_R_vein_-1_4_1",
+      "AST_Selya_lower_wing_R_fine_branch_-1_4_1_0",
+      "AST_Selya_lower_wing_R_fine_branch_-1_4_1_1",
+      "AST_Selya_lower_wing_R_vein_-1_5_-1",
+      "AST_Selya_lower_wing_R_fine_branch_-1_5_-1_0",
+      "AST_Selya_lower_wing_R_fine_branch_-1_5_-1_1",
+      "AST_Selya_lower_wing_R_vein_-1_5_1",
+      "AST_Selya_lower_wing_R_fine_branch_-1_5_1_0",
+      "AST_Selya_lower_wing_R_fine_branch_-1_5_1_1",
+      "AST_Selya_lower_wing_R_vein_-1_6_-1",
+      "AST_Selya_lower_wing_R_fine_branch_-1_6_-1_0",
+      "AST_Selya_lower_wing_R_fine_branch_-1_6_-1_1",
+      "AST_Selya_lower_wing_R_vein_-1_6_1",
+      "AST_Selya_lower_wing_R_fine_branch_-1_6_1_0",
+      "AST_Selya_lower_wing_R_fine_branch_-1_6_1_1",
+      "AST_Selya_upper_wing_L",
+      "AST_Selya_upper_wing_L_forged_edge",
+      "AST_Selya_upper_wing_L_midrib_1",
+      "AST_Selya_upper_wing_L_vein_1_0_-1",
+      "AST_Selya_upper_wing_L_fine_branch_1_0_-1_0",
+      "AST_Selya_upper_wing_L_fine_branch_1_0_-1_1",
+      "AST_Selya_upper_wing_L_vein_1_0_1",
+      "AST_Selya_upper_wing_L_fine_branch_1_0_1_0",
+      "AST_Selya_upper_wing_L_fine_branch_1_0_1_1",
+      "AST_Selya_upper_wing_L_vein_1_1_-1",
+      "AST_Selya_upper_wing_L_fine_branch_1_1_-1_0",
+      "AST_Selya_upper_wing_L_fine_branch_1_1_-1_1",
+      "AST_Selya_upper_wing_L_vein_1_1_1",
+      "AST_Selya_upper_wing_L_fine_branch_1_1_1_0",
+      "AST_Selya_upper_wing_L_fine_branch_1_1_1_1",
+      "AST_Selya_upper_wing_L_vein_1_2_-1",
+      "AST_Selya_upper_wing_L_fine_branch_1_2_-1_0",
+      "AST_Selya_upper_wing_L_fine_branch_1_2_-1_1",
+      "AST_Selya_upper_wing_L_vein_1_2_1",
+      "AST_Selya_upper_wing_L_fine_branch_1_2_1_0",
+      "AST_Selya_upper_wing_L_fine_branch_1_2_1_1",
+      "AST_Selya_upper_wing_L_vein_1_3_-1",
+      "AST_Selya_upper_wing_L_fine_branch_1_3_-1_0",
+      "AST_Selya_upper_wing_L_fine_branch_1_3_-1_1",
+      "AST_Selya_upper_wing_L_vein_1_3_1",
+      "AST_Selya_upper_wing_L_fine_branch_1_3_1_0",
+      "AST_Selya_upper_wing_L_fine_branch_1_3_1_1",
+      "AST_Selya_upper_wing_L_vein_1_4_-1",
+      "AST_Selya_upper_wing_L_fine_branch_1_4_-1_0",
+      "AST_Selya_upper_wing_L_fine_branch_1_4_-1_1",
+      "AST_Selya_upper_wing_L_vein_1_4_1",
+      "AST_Selya_upper_wing_L_fine_branch_1_4_1_0",
+      "AST_Selya_upper_wing_L_fine_branch_1_4_1_1",
+      "AST_Selya_upper_wing_L_vein_1_5_-1",
+      "AST_Selya_upper_wing_L_fine_branch_1_5_-1_0",
+      "AST_Selya_upper_wing_L_fine_branch_1_5_-1_1",
+      "AST_Selya_upper_wing_L_vein_1_5_1",
+      "AST_Selya_upper_wing_L_fine_branch_1_5_1_0",
+      "AST_Selya_upper_wing_L_fine_branch_1_5_1_1",
+      "AST_Selya_upper_wing_L_vein_1_6_-1",
+      "AST_Selya_upper_wing_L_fine_branch_1_6_-1_0",
+      "AST_Selya_upper_wing_L_fine_branch_1_6_-1_1",
+      "AST_Selya_upper_wing_L_vein_1_6_1",
+      "AST_Selya_upper_wing_L_fine_branch_1_6_1_0",
+      "AST_Selya_upper_wing_L_fine_branch_1_6_1_1",
+      "AST_Selya_upper_wing_L_vein_1_7_-1",
+      "AST_Selya_upper_wing_L_fine_branch_1_7_-1_0",
+      "AST_Selya_upper_wing_L_fine_branch_1_7_-1_1",
+      "AST_Selya_upper_wing_L_vein_1_7_1",
+      "AST_Selya_upper_wing_L_fine_branch_1_7_1_0",
+      "AST_Selya_upper_wing_L_fine_branch_1_7_1_1",
+      "AST_Selya_upper_wing_L_vein_1_8_-1",
+      "AST_Selya_upper_wing_L_fine_branch_1_8_-1_0",
+      "AST_Selya_upper_wing_L_fine_branch_1_8_-1_1",
+      "AST_Selya_upper_wing_L_vein_1_8_1",
+      "AST_Selya_upper_wing_L_fine_branch_1_8_1_0",
+      "AST_Selya_upper_wing_L_fine_branch_1_8_1_1",
+      "AST_Selya_upper_wing_L_midrib_-1",
+      "AST_Selya_upper_wing_L_vein_-1_0_-1",
+      "AST_Selya_upper_wing_L_fine_branch_-1_0_-1_0",
+      "AST_Selya_upper_wing_L_fine_branch_-1_0_-1_1",
+      "AST_Selya_upper_wing_L_vein_-1_0_1",
+      "AST_Selya_upper_wing_L_fine_branch_-1_0_1_0",
+      "AST_Selya_upper_wing_L_fine_branch_-1_0_1_1",
+      "AST_Selya_upper_wing_L_vein_-1_1_-1",
+      "AST_Selya_upper_wing_L_fine_branch_-1_1_-1_0",
+      "AST_Selya_upper_wing_L_fine_branch_-1_1_-1_1",
+      "AST_Selya_upper_wing_L_vein_-1_1_1",
+      "AST_Selya_upper_wing_L_fine_branch_-1_1_1_0",
+      "AST_Selya_upper_wing_L_fine_branch_-1_1_1_1",
+      "AST_Selya_upper_wing_L_vein_-1_2_-1",
+      "AST_Selya_upper_wing_L_fine_branch_-1_2_-1_0",
+      "AST_Selya_upper_wing_L_fine_branch_-1_2_-1_1",
+      "AST_Selya_upper_wing_L_vein_-1_2_1",
+      "AST_Selya_upper_wing_L_fine_branch_-1_2_1_0",
+      "AST_Selya_upper_wing_L_fine_branch_-1_2_1_1",
+      "AST_Selya_upper_wing_L_vein_-1_3_-1",
+      "AST_Selya_upper_wing_L_fine_branch_-1_3_-1_0",
+      "AST_Selya_upper_wing_L_fine_branch_-1_3_-1_1",
+      "AST_Selya_upper_wing_L_vein_-1_3_1",
+      "AST_Selya_upper_wing_L_fine_branch_-1_3_1_0",
+      "AST_Selya_upper_wing_L_fine_branch_-1_3_1_1",
+      "AST_Selya_upper_wing_L_vein_-1_4_-1",
+      "AST_Selya_upper_wing_L_fine_branch_-1_4_-1_0",
+      "AST_Selya_upper_wing_L_fine_branch_-1_4_-1_1",
+      "AST_Selya_upper_wing_L_vein_-1_4_1",
+      "AST_Selya_upper_wing_L_fine_branch_-1_4_1_0",
+      "AST_Selya_upper_wing_L_fine_branch_-1_4_1_1",
+      "AST_Selya_upper_wing_L_vein_-1_5_-1",
+      "AST_Selya_upper_wing_L_fine_branch_-1_5_-1_0",
+      "AST_Selya_upper_wing_L_fine_branch_-1_5_-1_1",
+      "AST_Selya_upper_wing_L_vein_-1_5_1",
+      "AST_Selya_upper_wing_L_fine_branch_-1_5_1_0",
+      "AST_Selya_upper_wing_L_fine_branch_-1_5_1_1",
+      "AST_Selya_upper_wing_L_vein_-1_6_-1",
+      "AST_Selya_upper_wing_L_fine_branch_-1_6_-1_0",
+      "AST_Selya_upper_wing_L_fine_branch_-1_6_-1_1",
+      "AST_Selya_upper_wing_L_vein_-1_6_1",
+      "AST_Selya_upper_wing_L_fine_branch_-1_6_1_0",
+      "AST_Selya_upper_wing_L_fine_branch_-1_6_1_1",
+      "AST_Selya_upper_wing_L_vein_-1_7_-1",
+      "AST_Selya_upper_wing_L_fine_branch_-1_7_-1_0",
+      "AST_Selya_upper_wing_L_fine_branch_-1_7_-1_1",
+      "AST_Selya_upper_wing_L_vein_-1_7_1",
+      "AST_Selya_upper_wing_L_fine_branch_-1_7_1_0",
+      "AST_Selya_upper_wing_L_fine_branch_-1_7_1_1",
+      "AST_Selya_upper_wing_L_vein_-1_8_-1",
+      "AST_Selya_upper_wing_L_fine_branch_-1_8_-1_0",
+      "AST_Selya_upper_wing_L_fine_branch_-1_8_-1_1",
+      "AST_Selya_upper_wing_L_vein_-1_8_1",
+      "AST_Selya_upper_wing_L_fine_branch_-1_8_1_0",
+      "AST_Selya_upper_wing_L_fine_branch_-1_8_1_1",
+      "AST_Selya_lower_wing_L",
+      "AST_Selya_lower_wing_L_forged_edge",
+      "AST_Selya_lower_wing_L_midrib_1",
+      "AST_Selya_lower_wing_L_vein_1_0_-1",
+      "AST_Selya_lower_wing_L_fine_branch_1_0_-1_0",
+      "AST_Selya_lower_wing_L_fine_branch_1_0_-1_1",
+      "AST_Selya_lower_wing_L_vein_1_0_1",
+      "AST_Selya_lower_wing_L_fine_branch_1_0_1_0",
+      "AST_Selya_lower_wing_L_fine_branch_1_0_1_1",
+      "AST_Selya_lower_wing_L_vein_1_1_-1",
+      "AST_Selya_lower_wing_L_fine_branch_1_1_-1_0",
+      "AST_Selya_lower_wing_L_fine_branch_1_1_-1_1",
+      "AST_Selya_lower_wing_L_vein_1_1_1",
+      "AST_Selya_lower_wing_L_fine_branch_1_1_1_0",
+      "AST_Selya_lower_wing_L_fine_branch_1_1_1_1",
+      "AST_Selya_lower_wing_L_vein_1_2_-1",
+      "AST_Selya_lower_wing_L_fine_branch_1_2_-1_0",
+      "AST_Selya_lower_wing_L_fine_branch_1_2_-1_1",
+      "AST_Selya_lower_wing_L_vein_1_2_1",
+      "AST_Selya_lower_wing_L_fine_branch_1_2_1_0",
+      "AST_Selya_lower_wing_L_fine_branch_1_2_1_1",
+      "AST_Selya_lower_wing_L_vein_1_3_-1",
+      "AST_Selya_lower_wing_L_fine_branch_1_3_-1_0",
+      "AST_Selya_lower_wing_L_fine_branch_1_3_-1_1",
+      "AST_Selya_lower_wing_L_vein_1_3_1",
+      "AST_Selya_lower_wing_L_fine_branch_1_3_1_0",
+      "AST_Selya_lower_wing_L_fine_branch_1_3_1_1",
+      "AST_Selya_lower_wing_L_vein_1_4_-1",
+      "AST_Selya_lower_wing_L_fine_branch_1_4_-1_0",
+      "AST_Selya_lower_wing_L_fine_branch_1_4_-1_1",
+      "AST_Selya_lower_wing_L_vein_1_4_1",
+      "AST_Selya_lower_wing_L_fine_branch_1_4_1_0",
+      "AST_Selya_lower_wing_L_fine_branch_1_4_1_1",
+      "AST_Selya_lower_wing_L_vein_1_5_-1",
+      "AST_Selya_lower_wing_L_fine_branch_1_5_-1_0",
+      "AST_Selya_lower_wing_L_fine_branch_1_5_-1_1",
+      "AST_Selya_lower_wing_L_vein_1_5_1",
+      "AST_Selya_lower_wing_L_fine_branch_1_5_1_0",
+      "AST_Selya_lower_wing_L_fine_branch_1_5_1_1",
+      "AST_Selya_lower_wing_L_vein_1_6_-1",
+      "AST_Selya_lower_wing_L_fine_branch_1_6_-1_0",
+      "AST_Selya_lower_wing_L_fine_branch_1_6_-1_1",
+      "AST_Selya_lower_wing_L_vein_1_6_1",
+      "AST_Selya_lower_wing_L_fine_branch_1_6_1_0",
+      "AST_Selya_lower_wing_L_fine_branch_1_6_1_1",
+      "AST_Selya_lower_wing_L_midrib_-1",
+      "AST_Selya_lower_wing_L_vein_-1_0_-1",
+      "AST_Selya_lower_wing_L_fine_branch_-1_0_-1_0",
+      "AST_Selya_lower_wing_L_fine_branch_-1_0_-1_1",
+      "AST_Selya_lower_wing_L_vein_-1_0_1",
+      "AST_Selya_lower_wing_L_fine_branch_-1_0_1_0",
+      "AST_Selya_lower_wing_L_fine_branch_-1_0_1_1",
+      "AST_Selya_lower_wing_L_vein_-1_1_-1",
+      "AST_Selya_lower_wing_L_fine_branch_-1_1_-1_0",
+      "AST_Selya_lower_wing_L_fine_branch_-1_1_-1_1",
+      "AST_Selya_lower_wing_L_vein_-1_1_1",
+      "AST_Selya_lower_wing_L_fine_branch_-1_1_1_0",
+      "AST_Selya_lower_wing_L_fine_branch_-1_1_1_1",
+      "AST_Selya_lower_wing_L_vein_-1_2_-1",
+      "AST_Selya_lower_wing_L_fine_branch_-1_2_-1_0",
+      "AST_Selya_lower_wing_L_fine_branch_-1_2_-1_1",
+      "AST_Selya_lower_wing_L_vein_-1_2_1",
+      "AST_Selya_lower_wing_L_fine_branch_-1_2_1_0",
+      "AST_Selya_lower_wing_L_fine_branch_-1_2_1_1",
+      "AST_Selya_lower_wing_L_vein_-1_3_-1",
+      "AST_Selya_lower_wing_L_fine_branch_-1_3_-1_0",
+      "AST_Selya_lower_wing_L_fine_branch_-1_3_-1_1",
+      "AST_Selya_lower_wing_L_vein_-1_3_1",
+      "AST_Selya_lower_wing_L_fine_branch_-1_3_1_0",
+      "AST_Selya_lower_wing_L_fine_branch_-1_3_1_1",
+      "AST_Selya_lower_wing_L_vein_-1_4_-1",
+      "AST_Selya_lower_wing_L_fine_branch_-1_4_-1_0",
+      "AST_Selya_lower_wing_L_fine_branch_-1_4_-1_1",
+      "AST_Selya_lower_wing_L_vein_-1_4_1",
+      "AST_Selya_lower_wing_L_fine_branch_-1_4_1_0",
+      "AST_Selya_lower_wing_L_fine_branch_-1_4_1_1",
+      "AST_Selya_lower_wing_L_vein_-1_5_-1",
+      "AST_Selya_lower_wing_L_fine_branch_-1_5_-1_0",
+      "AST_Selya_lower_wing_L_fine_branch_-1_5_-1_1",
+      "AST_Selya_lower_wing_L_vein_-1_5_1",
+      "AST_Selya_lower_wing_L_fine_branch_-1_5_1_0",
+      "AST_Selya_lower_wing_L_fine_branch_-1_5_1_1",
+      "AST_Selya_lower_wing_L_vein_-1_6_-1",
+      "AST_Selya_lower_wing_L_fine_branch_-1_6_-1_0",
+      "AST_Selya_lower_wing_L_fine_branch_-1_6_-1_1",
+      "AST_Selya_lower_wing_L_vein_-1_6_1",
+      "AST_Selya_lower_wing_L_fine_branch_-1_6_1_0",
+      "AST_Selya_lower_wing_L_fine_branch_-1_6_1_1",
+      "AST_Selya_sandal_sole_R",
+      "AST_Selya_surface_fitted_sandal_strap_R0",
+      "AST_Selya_surface_fitted_sandal_strap_R1",
+      "AST_Selya_sandal_sole_L",
+      "AST_Selya_surface_fitted_sandal_strap_L0",
+      "AST_Selya_surface_fitted_sandal_strap_L1",
+      "AST_Selya_v4_copper_waterfall_curl_00",
+      "AST_Selya_v4_copper_waterfall_curl_01",
+      "AST_Selya_v4_copper_waterfall_curl_02",
+      "AST_Selya_v4_copper_waterfall_curl_03",
+      "AST_Selya_v4_copper_waterfall_curl_04",
+      "AST_Selya_v4_copper_waterfall_curl_05",
+      "AST_Selya_v4_copper_waterfall_curl_06",
+      "AST_Selya_v4_copper_waterfall_curl_07",
+      "AST_Selya_v4_copper_waterfall_curl_08",
+      "AST_Selya_v4_copper_waterfall_curl_09",
+      "AST_Selya_v4_copper_waterfall_curl_10",
+      "AST_Selya_v4_copper_waterfall_curl_11",
+      "AST_Selya_v4_copper_waterfall_curl_12",
+      "AST_Selya_v4_copper_waterfall_curl_13",
+      "AST_Selya_v4_copper_waterfall_curl_14",
+      "AST_Selya_v4_face_framing_copper_spiral_00",
+      "AST_Selya_v4_face_framing_copper_spiral_01",
+      "AST_Selya_v4_face_framing_copper_spiral_02",
+      "AST_Selya_v4_face_framing_copper_spiral_03",
+      "AST_Selya_v4_face_framing_copper_spiral_04",
+      "AST_Selya_v4_face_framing_copper_spiral_05"
+    ]
+  },
+  "original_rig": {
+    "rest_sha256": "ACAEEFA0442A62006A89A68666079F6C4F73E7ED4DBF9E34C863F54ADA2B57FC",
+    "behavior_sha256": "315C620A2874DBB6BE75F58C7E31EDA2B0B74A214B45FF4C1651692AF75931C7",
+    "bones": 12,
+    "fps": 30,
+    "fps_base": 1.0,
+    "actions": {
+      "blink": {
+        "sha256": "F5A360D4FDE71D8E9791C5DB6354C57DC9F3A335D0510DDAC6AC026176C42FDC",
+        "curve_count": 108,
+        "key_count": 1080,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          19.0
+        ]
+      },
+      "eat": {
+        "sha256": "8ECEE05DA4467B8D941E1F1FF28372AD81F5D35159A66EBE2B231FCAEB096AF6",
+        "curve_count": 108,
+        "key_count": 4968,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          91.0
+        ]
+      },
+      "happy": {
+        "sha256": "88C12EEF2A8041CB89967E115ADBD11CC3B393B6A7DF4756B8452F2B9305934B",
+        "curve_count": 108,
+        "key_count": 3348,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          61.0
+        ]
+      },
+      "idle": {
+        "sha256": "89E13B7DE30E7DBD46A7E6ADED3D4C06E7D04E816F85298FEA418B59D348C607",
+        "curve_count": 108,
+        "key_count": 6588,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          121.0
+        ]
+      },
+      "pet_reaction": {
+        "sha256": "2BEB1D5C80C94BB4BB740695A29816E21BD4A478B6548ED4016B941BDEF00165",
+        "curve_count": 108,
+        "key_count": 4212,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          76.0
+        ]
+      },
+      "play": {
+        "sha256": "A87BB43E19DBA4B8A06DF7D37AF7CC8B3CED797530DA91D4D4C54CD818617E66",
+        "curve_count": 108,
+        "key_count": 4428,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          81.0
+        ]
+      },
+      "sleep": {
+        "sha256": "7FE82E7E0BE2131F22F337F6BBCF51C58A27C694745ECBE9F5A8274017756E4B",
+        "curve_count": 108,
+        "key_count": 6588,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          121.0
+        ]
+      },
+      "wake": {
+        "sha256": "26045BA9CF738E829E4953072D99BF05998B8FA9DA6587C4D06C5A2BC003327E",
+        "curve_count": 108,
+        "key_count": 3348,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          61.0
+        ]
+      },
+      "walk": {
+        "sha256": "D092FD2C426227A6C51C577D44D35D27C3CDF878D4362B5BCA0F881423459E5E",
+        "curve_count": 108,
+        "key_count": 2700,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          49.0
+        ]
+      }
+    }
+  },
+  "candidate_rig": {
+    "rest_sha256": "ACAEEFA0442A62006A89A68666079F6C4F73E7ED4DBF9E34C863F54ADA2B57FC",
+    "behavior_sha256": "315C620A2874DBB6BE75F58C7E31EDA2B0B74A214B45FF4C1651692AF75931C7",
+    "bones": 12,
+    "fps": 30,
+    "fps_base": 1.0,
+    "actions": {
+      "blink": {
+        "sha256": "F5A360D4FDE71D8E9791C5DB6354C57DC9F3A335D0510DDAC6AC026176C42FDC",
+        "curve_count": 108,
+        "key_count": 1080,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          19.0
+        ]
+      },
+      "eat": {
+        "sha256": "8ECEE05DA4467B8D941E1F1FF28372AD81F5D35159A66EBE2B231FCAEB096AF6",
+        "curve_count": 108,
+        "key_count": 4968,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          91.0
+        ]
+      },
+      "happy": {
+        "sha256": "88C12EEF2A8041CB89967E115ADBD11CC3B393B6A7DF4756B8452F2B9305934B",
+        "curve_count": 108,
+        "key_count": 3348,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          61.0
+        ]
+      },
+      "idle": {
+        "sha256": "89E13B7DE30E7DBD46A7E6ADED3D4C06E7D04E816F85298FEA418B59D348C607",
+        "curve_count": 108,
+        "key_count": 6588,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          121.0
+        ]
+      },
+      "pet_reaction": {
+        "sha256": "2BEB1D5C80C94BB4BB740695A29816E21BD4A478B6548ED4016B941BDEF00165",
+        "curve_count": 108,
+        "key_count": 4212,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          76.0
+        ]
+      },
+      "play": {
+        "sha256": "A87BB43E19DBA4B8A06DF7D37AF7CC8B3CED797530DA91D4D4C54CD818617E66",
+        "curve_count": 108,
+        "key_count": 4428,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          81.0
+        ]
+      },
+      "sleep": {
+        "sha256": "7FE82E7E0BE2131F22F337F6BBCF51C58A27C694745ECBE9F5A8274017756E4B",
+        "curve_count": 108,
+        "key_count": 6588,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          121.0
+        ]
+      },
+      "wake": {
+        "sha256": "26045BA9CF738E829E4953072D99BF05998B8FA9DA6587C4D06C5A2BC003327E",
+        "curve_count": 108,
+        "key_count": 3348,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          61.0
+        ]
+      },
+      "walk": {
+        "sha256": "D092FD2C426227A6C51C577D44D35D27C3CDF878D4362B5BCA0F881423459E5E",
+        "curve_count": 108,
+        "key_count": 2700,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          49.0
+        ]
+      }
+    }
+  },
+  "motion_comparison": {
+    "idle": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "blink": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "happy": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "eat": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "play": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "pet_reaction": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "sleep": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "wake": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "walk": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    }
+  },
+  "source_views": {
+    "hero": {
+      "file": "assets/3d/reference/fairy/sculpt-v004/source/fairy-hero.png",
+      "sha256": "470916C17FACD88CBC5BE51DD3BE270F124A023232D4666702E42896688E6FF4"
+    },
+    "front": {
+      "file": "assets/3d/reference/fairy/sculpt-v004/source/fairy-front.png",
+      "sha256": "D26D52F36A91FE5F0B7640561A0DB496A87865CBE2590A2ECD191BC83C5499BA"
+    },
+    "side": {
+      "file": "assets/3d/reference/fairy/sculpt-v004/source/fairy-side.png",
+      "sha256": "BA2A6174920F6479D525B15DDA3AC5EE9869F53D831F070395907EA2D724F963"
+    },
+    "rear": {
+      "file": "assets/3d/reference/fairy/sculpt-v004/source/fairy-rear.png",
+      "sha256": "63F2CBC78CE4B32A3980CB6023BFCCA4E64005BFE907435118C54DEC6DFFD46C"
+    },
+    "body-hero": {
+      "file": "assets/3d/reference/fairy/sculpt-v004/source/fairy-body-hero.png",
+      "sha256": "ECF66B876C0D2744C3C85F65A000427FF702DC5C41864F474510D7949FB5B3A8"
+    },
+    "body-side": {
+      "file": "assets/3d/reference/fairy/sculpt-v004/source/fairy-body-side.png",
+      "sha256": "F849F9A9D2ADDF36B1E89F580030A6A19ED683FCAD797678CBFAC7A3002CDE41"
+    }
+  },
+  "import_views": {
+    "hero": {
+      "file": "assets/3d/reference/fairy/sculpt-v004/import/fairy-hero.png",
+      "sha256": "6FC6A18AA7507DB14EA084577E12FE915558D73EB3FD411249F9C1971DCDFABD"
+    },
+    "rear": {
+      "file": "assets/3d/reference/fairy/sculpt-v004/import/fairy-rear.png",
+      "sha256": "09D6139CA2E410257DEBE8DD7DD10A5E544654670C2667BA57BA2F693FA2F656"
+    },
+    "body-hero": {
+      "file": "assets/3d/reference/fairy/sculpt-v004/import/fairy-body-hero.png",
+      "sha256": "4774FA12E6633BCFF6D95ACF2FF704E9DCBEFDFA68E14DB41059A6B52858225B"
+    },
+    "blink": {
+      "file": "assets/3d/reference/fairy/sculpt-v004/import/fairy-blink.png",
+      "sha256": "DA5913F962AC1133660BE48582CC90C16DCEB064A45E7505E746FD895CF16D08"
+    }
+  },
+  "hair_evidence": null,
+  "passed": true,
+  "human_likeness_accepted": false,
+  "mobile_performance_accepted": false,
+  "paid_provider_used": false,
+  "projection_used": false,
+  "ocular_geometry_intentionally_refined": true,
+  "package_status": "Local hash-checked Blender delivery; no game-dev canonical receipt.",
+  "animation_limit": "Original source curves, keys, handles, rest rig and drivers compared exactly. Fresh GLBs compared at nine normalized times per clip with 2e-4 skin-matrix tolerance. Not a collision or gait acceptance.",
+  "likeness_limit": "Original approved artwork retained. Primary forms intentionally refined; unseen surfaces inferred. No exact 1:1 or human acceptance claim."
+}

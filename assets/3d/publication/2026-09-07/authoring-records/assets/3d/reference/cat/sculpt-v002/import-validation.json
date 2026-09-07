@@ -1,0 +1,279 @@
+{
+  "asset": "public/assets/3d/cat/cat-sculpt-v002.glb",
+  "sha256": "B97818FB5E2D2F726C702BA153F439E4F2B6568B4BBD3FAFB029057F609EA50E",
+  "master_sha256": "27E489A3841EF6EF9D4E822470EC20E0D3C0888288D474417CA05748F2254E57",
+  "blender": "5.2.1 LTS",
+  "bytes": 16469864,
+  "reopened_master_meshes": 185,
+  "reopened_master_clips": [
+    "blink",
+    "eat",
+    "happy",
+    "idle",
+    "pet_reaction",
+    "play",
+    "sleep",
+    "wake",
+    "walk"
+  ],
+  "vertices": 687595,
+  "triangles": 1367847,
+  "bones": 13,
+  "materials": 13,
+  "draw_calls": 13,
+  "span": [
+    2.281250238418579,
+    4.966796875,
+    3.695801019668579
+  ],
+  "weighted_groups": {
+    "leg.FR": 43763,
+    "body": 183878,
+    "leg.HR": 59886,
+    "neck": 36886,
+    "leg.FL": 43763,
+    "leg.HL": 59886,
+    "head": 299635,
+    "lid.R": 9184,
+    "lid.L": 9184,
+    "ear.R": 11296,
+    "ear.L": 11296,
+    "tail": 37888
+  },
+  "animation_samples": {
+    "idle": [
+      {
+        "frame": 1,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 31,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 61,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 91,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 121,
+        "finite_bone_matrices": true
+      }
+    ],
+    "blink": [
+      {
+        "frame": 1,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 5,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 10,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 14,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 19,
+        "finite_bone_matrices": true
+      }
+    ],
+    "happy": [
+      {
+        "frame": 1,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 16,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 31,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 46,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 61,
+        "finite_bone_matrices": true
+      }
+    ],
+    "eat": [
+      {
+        "frame": 1,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 23,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 46,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 68,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 91,
+        "finite_bone_matrices": true
+      }
+    ],
+    "play": [
+      {
+        "frame": 1,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 21,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 41,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 61,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 81,
+        "finite_bone_matrices": true
+      }
+    ],
+    "pet_reaction": [
+      {
+        "frame": 1,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 20,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 38,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 57,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 76,
+        "finite_bone_matrices": true
+      }
+    ],
+    "sleep": [
+      {
+        "frame": 1,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 31,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 61,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 91,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 121,
+        "finite_bone_matrices": true
+      }
+    ],
+    "wake": [
+      {
+        "frame": 1,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 16,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 31,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 46,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 61,
+        "finite_bone_matrices": true
+      }
+    ],
+    "walk": [
+      {
+        "frame": 1,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 13,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 25,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 37,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 49,
+        "finite_bone_matrices": true
+      }
+    ]
+  },
+  "included_meshes": [
+    "asterion_sculpt_delivery"
+  ],
+  "excluded_armature_visualization_helpers": [
+    "Icosphere"
+  ],
+  "checks": {
+    "reopened_master_nine_clips": true,
+    "master_separate_editable_parts": true,
+    "one_authored_mesh": true,
+    "one_imported_skin": true,
+    "nine_authored_clips": true,
+    "nine_imported_clips": true,
+    "no_scene_cameras": true,
+    "no_scene_lights": true,
+    "no_image_projection": true,
+    "self_contained": true,
+    "volumetric_xyz": true,
+    "finite_vertices": true,
+    "all_vertices_weighted": true,
+    "normalized_weights": true,
+    "known_bones": true,
+    "maximum_four_weights": true,
+    "finite_nine_animation_samples": true,
+    "both_moving_eyelids": true,
+    "nonempty_mesh": true
+  },
+  "passed": true,
+  "renders": {
+    "hero": "assets/3d/reference/cat/sculpt-v002/import-review/cat-sculpt-hero.png",
+    "rear": "assets/3d/reference/cat/sculpt-v002/import-review/cat-sculpt-rear.png",
+    "blink": "assets/3d/reference/cat/sculpt-v002/import-review/cat-blink-sculpt-front.png"
+  },
+  "human_likeness_accepted": false,
+  "mobile_performance_accepted": false,
+  "animation_limit": "Gentle stylized presentation gestures; no biomechanical gait simulation."
+}

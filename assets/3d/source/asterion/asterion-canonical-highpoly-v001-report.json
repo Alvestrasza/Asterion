@@ -1,0 +1,105 @@
+{
+  "asset": "asterion-canonical-highpoly-v001",
+  "version": "1.0.0",
+  "canonical": {
+    "path": "public/assets/companions/asterion.png",
+    "sha256": "8F074029DAAEF3024753A54DDDADA288AAACD76631D7E7AE626FAC62250FE59F",
+    "visible_side": "direct UV projection; no generative reinterpretation",
+    "inferred": [
+      "depth",
+      "opposite side",
+      "deformation",
+      "motion"
+    ]
+  },
+  "mesh": {
+    "source_width": 192,
+    "source_height": 208,
+    "grid_width": 768,
+    "grid_height": 832,
+    "active_cells": 333392,
+    "shell_vertices": 680716,
+    "shell_quads": 681296,
+    "shell_triangles": 1362592,
+    "boundary_quads": 14512
+  },
+  "skinning": {
+    "deform_groups": 15,
+    "weight_assignments": 2217452,
+    "max_influences": 4
+  },
+  "bones": 18,
+  "actions": {
+    "idle": {
+      "frame_start": 1,
+      "frame_end": 80,
+      "loop": true
+    },
+    "blink": {
+      "frame_start": 1,
+      "frame_end": 20,
+      "loop": true
+    },
+    "happy": {
+      "frame_start": 1,
+      "frame_end": 48,
+      "loop": false
+    },
+    "eat": {
+      "frame_start": 1,
+      "frame_end": 60,
+      "loop": false
+    },
+    "play": {
+      "frame_start": 1,
+      "frame_end": 56,
+      "loop": false
+    },
+    "pet_reaction": {
+      "frame_start": 1,
+      "frame_end": 48,
+      "loop": false
+    },
+    "sleep": {
+      "frame_start": 1,
+      "frame_end": 80,
+      "loop": true
+    },
+    "wake": {
+      "frame_start": 1,
+      "frame_end": 48,
+      "loop": false
+    },
+    "walk": {
+      "frame_start": 1,
+      "frame_end": 41,
+      "loop": true
+    }
+  },
+  "outputs": {
+    "blend": "assets/3d/source/asterion/asterion-canonical-highpoly-v001.blend",
+    "blend_sha256": "29949D16C1B1328D56B04C87A05F4493324986365FDA9591060DE217B8B92CDF",
+    "glb": "public/assets/3d/asterion/asterion-canonical-highpoly-v001.glb",
+    "glb_sha256": "50D3505C3FE5FA1DA7535C2989DFDE245E007EB80D47BE10E0A99005E26F071F",
+    "renders": {
+      "canonical-side": "assets/3d/reference/asterion/canonical-v001/asterion-canonical-highpoly-v001-canonical-side.png",
+      "hero": "assets/3d/reference/asterion/canonical-v001/asterion-canonical-highpoly-v001-hero.png",
+      "front": null,
+      "rear-three-quarter": null,
+      "blink": "assets/3d/reference/asterion/canonical-v001/asterion-canonical-highpoly-v001-blink.png",
+      "happy": null,
+      "sleep": null,
+      "walk": null,
+      "canonical-registration": null
+    }
+  },
+  "blender": "5.2.1 LTS",
+  "publication_amendment": {
+    "id": "metadata-clean-2026-09-07",
+    "record": "assets/3d/publication/2026-09-07/amendment.json",
+    "original_document_sha256": "E125575A03E2B164BF5946736A56811003C78A539F9A1E22ABAC49ED69B4A68A",
+    "authoring_record": null,
+    "authoring_record_status": "private-original-retained-not-published",
+    "notice": "Metadata-only publication derivative, not a rerun of the historical builder or validator. File digest and size bindings identify publication copies; all measured geometry, materials, rig, action, motion and acceptance evidence remains historical and unchanged. Consult the original authoring record and amendment binding log."
+  }
+}

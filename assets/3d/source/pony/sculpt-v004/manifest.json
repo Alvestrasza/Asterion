@@ -1,0 +1,125 @@
+{
+  "schema": "asterion-local-modular-companion-v1",
+  "kind": "pony",
+  "name": "Caelo",
+  "version": "sculpt-v004",
+  "source_sha256": "93FAA32D529E27590E131A087744BAFB9A20C3D5E24B1E8596123AB8536588EB",
+  "model_sha256": "ED7911A8433E4C2F35BAFB987120CAFC99E87361FA4E2E3F10E0AD85F42A2784",
+  "reference_sha256": "9D059157FECF1C2905F9C1EB56A460AA45995DDD8B924C1E854827C73EFFD118",
+  "triangles": 1102592,
+  "bytes": 12310924,
+  "bones": 13,
+  "clips": [
+    "idle",
+    "blink",
+    "happy",
+    "eat",
+    "play",
+    "pet_reaction",
+    "sleep",
+    "wake",
+    "walk"
+  ],
+  "draw_calls": 18,
+  "materials": 18,
+  "components": {
+    "body": {
+      "mesh": 1,
+      "skin": 0,
+      "triangles": 1048060,
+      "primitives": 11
+    },
+    "armor": {
+      "mesh": 0,
+      "skin": 0,
+      "triangles": 54532,
+      "primitives": 7
+    }
+  },
+  "blender": "5.2.1 LTS",
+  "human_likeness_accepted": false,
+  "mobile_performance_accepted": false,
+  "projection_used": false,
+  "paid_provider_used": false,
+  "package_status": "Local hash-checked Blender delivery; no game-dev canonical receipt.",
+  "animation_limit": "Original source curves, keys, handles, rest rig and drivers compared exactly. Fresh GLBs compared at nine normalized times per clip with 2e-4 skin-matrix tolerance. Not a collision or gait acceptance.",
+  "likeness_limit": "Original approved artwork retained. Primary forms intentionally refined; unseen surfaces inferred. No exact 1:1 or human acceptance claim.",
+  "compression_lossless": false,
+  "source": "assets/3d/source/pony/sculpt-v004/pony-sculpt-v004.blend",
+  "model": "public/assets/3d/pony/pony-sculpt-v004.glb",
+  "reference": "assets/3d/reference/pony/sculpt-v004/original.png",
+  "validation": "assets/3d/reference/pony/sculpt-v004/validation.json",
+  "validation_sha256": "5EC899FE39F9EB47ED04C9B00D6EE98E144F64CA90E037152F0ED08F27C06C08",
+  "fresh_import_passed": true,
+  "animations_unchanged": true,
+  "equipment_separate": true,
+  "input_sha256": {
+    "assets/3d/source/pony/sculpt-v003/pony-sculpt-v003.blend": "B247D67119C0B021E1E63C4D7771029343AAB8F72ABD5F63D93A304D896F4DDA",
+    "public/assets/3d/pony/pony-sculpt-v003.glb": "4A8B118119537DC1B7E1C4A4D043E04279B60D091CDB11123341A6A34320A5BB",
+    "public/assets/companions/pony.png": "9D059157FECF1C2905F9C1EB56A460AA45995DDD8B924C1E854827C73EFFD118",
+    "assets/3d/source/companions/sculpt-v004/build.py": "C6FBCA99D1117722B07933B90795DBFFA37DC22B399ECD6B339EAFF3C063A6BD",
+    "assets/3d/source/companions/sculpt-v004/refinements.py": "6247CEA1AE30B56B6FD3D23DEDEF1DD99BCD8A7B9158AA0576340AA2B8F89BCF",
+    "assets/3d/source/companions/sculpt-v004/export_equipment.py": "5EDB676641BE58BDE353213F6DA4F7F7662B76A08F586D0E7DADA7006AF343CF",
+    "assets/3d/source/companions/sculpt-v001/common.py": "A6DF036A5B3F6FAA3C74740382998D829D45C9E2734D91A285F9369764C21F9E",
+    "assets/3d/source/asterion/sculpt-v002/validate_refinement.py": "8C541F26C2D2546FB142988D10F07EDF51C891D1C81F02065C7B62CE01F78EFD",
+    "assets/3d/source/asterion/sculpt-v003/build_head_study.py": "A3B22323201D30A3BD9459985F8F7741A44545010A84D27CC5912E1C8A85E0F2",
+    "assets/3d/source/asterion/sculpt-v001/build_sculpt.py": "9A81C430E8FD07CE520BBA554C78845A508F22E5FB89E524BF515D8BF8415621",
+    "assets/3d/source/asterion/sculpt-v001/rig_delivery.py": "8758D105E70AB5405F61A48A531154CC591EAC0D82B167788F1D0785A16CDFF0",
+    "assets/3d/source/asterion/sculpt-v004/export_equipment.py": "C805B4740463215AE5CC9D314D14966F2BDF91A00FB82D05054BE0BBB8ED930B",
+    "assets/3d/source/companions/sculpt-v004/equine_lapine.py": "8783AA44FB7987CD3D0E244C2B0B524B17DFF63B8D725F30CE4E3D7B69957016"
+  },
+  "renders": {
+    "hero": {
+      "file": "assets/3d/reference/pony/sculpt-v004/source/pony-hero.png",
+      "sha256": "B1F232B57ECFDA8606CCD6B49560DBB921FA3A5118CBFED1540134B04D3B7CF0"
+    },
+    "front": {
+      "file": "assets/3d/reference/pony/sculpt-v004/source/pony-front.png",
+      "sha256": "9C9F570CB67134BDE0BCAC90E858847D9192A3805D5591269B0C5C80464F6A9B"
+    },
+    "side": {
+      "file": "assets/3d/reference/pony/sculpt-v004/source/pony-side.png",
+      "sha256": "3F2355996D25F9E90BE069E7DB7C83E66574A8C5B9391895ADC0B67F73F8619E"
+    },
+    "rear": {
+      "file": "assets/3d/reference/pony/sculpt-v004/source/pony-rear.png",
+      "sha256": "DD69FA821A84470A5F14F5A1CED35C870DD60F5B436487D7974CCFD52A4DC0AE"
+    },
+    "body-hero": {
+      "file": "assets/3d/reference/pony/sculpt-v004/source/pony-body-hero.png",
+      "sha256": "00D1A52D60C1996FEF56AF54F7C08EE6ABE5D48D1C161B06782206E905267C96"
+    },
+    "body-side": {
+      "file": "assets/3d/reference/pony/sculpt-v004/source/pony-body-side.png",
+      "sha256": "B4777144CEDB80FDFEFB3C2378AFE03DBCEA02AD79E104AB46554D926134FDCB"
+    }
+  },
+  "import_renders": {
+    "hero": {
+      "file": "assets/3d/reference/pony/sculpt-v004/import/pony-hero.png",
+      "sha256": "4C9EFEED424A6AD87D873824CA116FEE270D31030F5D783570909F42639FF519"
+    },
+    "rear": {
+      "file": "assets/3d/reference/pony/sculpt-v004/import/pony-rear.png",
+      "sha256": "700C83B59E49F562F10BC9D6B4D5DFCE48CCDBF70BC5BF571426F4C60F3A7C30"
+    },
+    "body-hero": {
+      "file": "assets/3d/reference/pony/sculpt-v004/import/pony-body-hero.png",
+      "sha256": "E194EF756C5F193C58105952EEA209FC6A1330E3C1275A73C6FC5E6D82489313"
+    },
+    "blink": {
+      "file": "assets/3d/reference/pony/sculpt-v004/import/pony-blink.png",
+      "sha256": "E621E470ECAEE00FEA445530F9D50F10C24DC13B684B8C59BA3B5B8EE315F16B"
+    }
+  },
+  "notes": "Rebuilt diagonally rolled cloud-blue forelock, layered neck crescents and full S-shaped tail; coherently tapered eyes/socket/lids with deeper blue irises and warm muzzle planes. Original rig, action curves and detachable outfit retained.",
+  "edited_objects": 21,
+  "publication_amendment": {
+    "id": "metadata-clean-2026-09-07",
+    "record": "assets/3d/publication/2026-09-07/amendment.json",
+    "original_document_sha256": "3DF1117F3A79BB6D56581428BC62FBBB65C1B8DCADEA0B215FB4C16E5BB2BE92",
+    "authoring_record": "assets/3d/publication/2026-09-07/authoring-records/assets/3d/source/pony/sculpt-v004/manifest.json",
+    "authoring_record_status": "exact-public-safe-original",
+    "notice": "Metadata-only publication derivative, not a rerun of the historical builder or validator. File digest and size bindings identify publication copies; all measured geometry, materials, rig, action, motion and acceptance evidence remains historical and unchanged. Consult the original authoring record and amendment binding log."
+  }
+}

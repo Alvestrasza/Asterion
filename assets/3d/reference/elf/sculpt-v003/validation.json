@@ -1,0 +1,1332 @@
+{
+  "schema": "asterion-local-modular-companion-v1",
+  "version": "sculpt-v003",
+  "kind": "elf",
+  "name": "Aelira",
+  "source_sha256": "0A4B62740ED88E062C309CBD86F6B25B1152EF47A651A3783E3131F7F8D8C726",
+  "model_sha256": "36BDDB043D5BF285D044B304689D40CB6C048C4C3CF9C36BB4B5BAD2B9276FBE",
+  "reference_sha256": "DE8904FAF12031561B752E3A4590F09A2E9BA5E763804F7D83156CF414ECA417",
+  "input_sha256": {
+    "assets/3d/source/elf/sculpt-v002/elf-sculpt-v002.blend": "FEF3CAEE99FE3ED7FDA7A38FD9CDDB4F99D69D2CF187A999C347F5C24D7CFF77",
+    "public/assets/3d/elf/elf-sculpt-v002.glb": "ABDC383BE0FFB1F480092B3203A161CF9867E96AFFE3D3E16D7261DDF12DF6CA",
+    "public/assets/companions/elf.png": "DE8904FAF12031561B752E3A4590F09A2E9BA5E763804F7D83156CF414ECA417",
+    "assets/3d/source/companions/sculpt-v003/build.py": "D29DC488FAF8CB4CB51C81291A9B21102E74832209991D90B23DEF4DA12D5763",
+    "assets/3d/source/companions/sculpt-v003/refinements.py": "82AE8D392CCCF12EA231BD66A0244BDA073739AA4C0B3103DE7DD8DDDA1FBEBA",
+    "assets/3d/source/companions/sculpt-v003/export_equipment.py": "B12B82828199ED109E2764A69BA10A8036D79B62331FA8082C9EF4BEBFC1FB2D",
+    "assets/3d/source/companions/sculpt-v001/common.py": "A6DF036A5B3F6FAA3C74740382998D829D45C9E2734D91A285F9369764C21F9E",
+    "assets/3d/source/asterion/sculpt-v002/validate_refinement.py": "8C541F26C2D2546FB142988D10F07EDF51C891D1C81F02065C7B62CE01F78EFD",
+    "assets/3d/source/asterion/sculpt-v003/build_head_study.py": "A3B22323201D30A3BD9459985F8F7741A44545010A84D27CC5912E1C8A85E0F2",
+    "assets/3d/source/asterion/sculpt-v001/build_sculpt.py": "9A81C430E8FD07CE520BBA554C78845A508F22E5FB89E524BF515D8BF8415621",
+    "assets/3d/source/asterion/sculpt-v001/rig_delivery.py": "8758D105E70AB5405F61A48A531154CC591EAC0D82B167788F1D0785A16CDFF0",
+    "assets/3d/source/asterion/sculpt-v004/export_equipment.py": "C805B4740463215AE5CC9D314D14966F2BDF91A00FB82D05054BE0BBB8ED930B"
+  },
+  "blender": "5.2.1 LTS",
+  "checks": {
+    "original_rest_rig_unchanged": true,
+    "original_constraints_drivers_unchanged": true,
+    "all_original_action_data_unchanged": true,
+    "original_frame_rate_unchanged": true,
+    "original_eye_geometry_colors_weights_unchanged": true,
+    "all_source_parts_classified_once": true,
+    "explicit_editable_equipment_groups": true,
+    "meaningful_geometry_refinement": true,
+    "base_clothing_present": true,
+    "two_character_meshes": true,
+    "exact_distinct_components": true,
+    "one_original_shared_skin": true,
+    "nine_original_clips": true,
+    "only_public_extras": true,
+    "skinned_triangle_primitives": true,
+    "under_40_primitives": true,
+    "under_two_million_triangles": true,
+    "self_contained_no_projection": true,
+    "no_editor_stage": true,
+    "meshopt": true,
+    "under_25_mb": true,
+    "finite_imported_geometry": true,
+    "valid_normalized_known_weights": true,
+    "bounded_importer_triangle_difference": true,
+    "nine_clips_match_historical_import": true,
+    "two_imported_components": true,
+    "imported_equipment_metadata": true,
+    "all_historical_and_builder_inputs_unchanged": true
+  },
+  "components": {
+    "body": {
+      "mesh": 1,
+      "skin": 0,
+      "triangles": 1351238,
+      "primitives": 20
+    },
+    "armor": {
+      "mesh": 0,
+      "skin": 0,
+      "triangles": 168100,
+      "primitives": 8
+    }
+  },
+  "triangles": 1519338,
+  "draw_calls": 28,
+  "materials": 24,
+  "bones": 10,
+  "clips": [
+    "idle",
+    "blink",
+    "happy",
+    "eat",
+    "play",
+    "pet_reaction",
+    "sleep",
+    "wake",
+    "walk"
+  ],
+  "compression_lossless": false,
+  "bytes": 15906780,
+  "geometry": {
+    "vertices": 767233,
+    "triangles": 1519337,
+    "nonfinite_vertices": 0,
+    "nonfinite_transforms": 0,
+    "unweighted_vertices": 0,
+    "invalid_weights": 0,
+    "unknown_weights": 0,
+    "over_four_weights": 0,
+    "max_influences": 1,
+    "bounds_min": [
+      -0.955078125,
+      -0.5703125,
+      -0.0009764897404238582
+    ],
+    "bounds_max": [
+      0.955078125,
+      0.60400390625,
+      3.6875
+    ],
+    "span": [
+      1.91015625,
+      1.17431640625,
+      3.688476489740424
+    ]
+  },
+  "triangle_count_evidence": {
+    "authored": 1519338,
+    "imported": 1519337,
+    "exact_equal": false,
+    "triangle_loss": 1,
+    "relative_loss": 6.581813921589534e-07,
+    "maximum_allowed_loss": 30,
+    "relative_tolerance": 2e-05,
+    "passed": true,
+    "limit": "Count difference only; individual omitted triangle degeneracy is not proven by this check."
+  },
+  "changes": {
+    "notes": "Layered green hair and braid relief; gently relaxed cape folds with attached embroidery; opaque tunic, trousers and boots retained.",
+    "edited_objects": [
+      {
+        "name": "AST_Aelira_v2_parted_crown_-1_0",
+        "vertices": 2124,
+        "max_displacement": 0.0186880128977423,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Aelira_v2_parted_crown_-1_1",
+        "vertices": 2124,
+        "max_displacement": 0.017010169834180206,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Aelira_v2_parted_crown_-1_2",
+        "vertices": 2124,
+        "max_displacement": 0.018688026247505523,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Aelira_v2_parted_crown_-1_3",
+        "vertices": 2124,
+        "max_displacement": 0.017010151955120307,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Aelira_v2_swept_hairline_-1",
+        "vertices": 2440,
+        "max_displacement": 0.016463872681363335,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Aelira_v2_face_framing_curl_-1",
+        "vertices": 4004,
+        "max_displacement": 0.009909097757646522,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Aelira_v2_secondary_curl_-1",
+        "vertices": 2556,
+        "max_displacement": 0.0068480909788656555,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Aelira_v2_parted_crown_1_0",
+        "vertices": 2124,
+        "max_displacement": 0.018688028303028948,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Aelira_v2_parted_crown_1_1",
+        "vertices": 2124,
+        "max_displacement": 0.017010159964915797,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Aelira_v2_parted_crown_1_2",
+        "vertices": 2124,
+        "max_displacement": 0.018688043221143202,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Aelira_v2_parted_crown_1_3",
+        "vertices": 2124,
+        "max_displacement": 0.017010149974628325,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Aelira_v2_swept_hairline_1",
+        "vertices": 2440,
+        "max_displacement": 0.01646385897766539,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Aelira_v2_face_framing_curl_1",
+        "vertices": 4004,
+        "max_displacement": 0.009909100327197625,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Aelira_v2_secondary_curl_1",
+        "vertices": 2556,
+        "max_displacement": 0.006848093146324485,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Aelira_v2_back_swept_lock_0",
+        "vertices": 2124,
+        "max_displacement": 0.014568222407223158,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Aelira_v2_back_swept_lock_1",
+        "vertices": 2124,
+        "max_displacement": 0.014568219980583465,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Aelira_v2_back_swept_lock_2",
+        "vertices": 2124,
+        "max_displacement": 0.014568217427047662,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Aelira_v2_back_swept_lock_3",
+        "vertices": 2124,
+        "max_displacement": 0.014568218862904877,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Aelira_v2_back_swept_lock_4",
+        "vertices": 2124,
+        "max_displacement": 0.014568220172567835,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Aelira_v2_back_swept_lock_5",
+        "vertices": 2124,
+        "max_displacement": 0.014568219643615102,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Aelira_v2_back_swept_lock_6",
+        "vertices": 2124,
+        "max_displacement": 0.01456822128265069,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Aelira_v2_back_swept_lock_7",
+        "vertices": 2124,
+        "max_displacement": 0.014568219921760404,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Aelira_v2_back_swept_lock_8",
+        "vertices": 2124,
+        "max_displacement": 0.014568220429032292,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Aelira_v2_back_swept_lock_9",
+        "vertices": 2124,
+        "max_displacement": 0.0145682218134856,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Aelira_v2_interwoven_plait_0",
+        "vertices": 10440,
+        "max_displacement": 0.008207347325635599,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Aelira_v2_interwoven_plait_1",
+        "vertices": 10440,
+        "max_displacement": 0.008229661908170614,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Aelira_v2_interwoven_plait_2",
+        "vertices": 10440,
+        "max_displacement": 0.008273216177101078,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Aelira_v2_braid_tassel_0",
+        "vertices": 1316,
+        "max_displacement": 0.0021566294686637478,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Aelira_v2_braid_tassel_1",
+        "vertices": 1316,
+        "max_displacement": 0.0021566318438398517,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Aelira_v2_braid_tassel_2",
+        "vertices": 1316,
+        "max_displacement": 0.002156630533743487,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Aelira_v2_braid_tassel_3",
+        "vertices": 1316,
+        "max_displacement": 0.00215663147947842,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Aelira_v2_braid_tassel_4",
+        "vertices": 1316,
+        "max_displacement": 0.002156631761367166,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Aelira_v2_braid_tassel_5",
+        "vertices": 1316,
+        "max_displacement": 0.002156629836745484,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Aelira_v2_full_folded_forest_cape",
+        "operation": "coherent cloth-family relief including attached edging",
+        "max_displacement": 0.017999999920951804
+      },
+      {
+        "name": "AST_Aelira_v2_cape_gold_selvedge_-1",
+        "operation": "coherent cloth-family relief including attached edging",
+        "max_displacement": 0.017729822222097583
+      },
+      {
+        "name": "AST_Aelira_v2_cape_margin_vine_-1",
+        "operation": "coherent cloth-family relief including attached edging",
+        "max_displacement": 0.017999999584659337
+      },
+      {
+        "name": "AST_Aelira_v2_cape_margin_leaf_-1_0",
+        "operation": "coherent cloth-family relief including attached edging",
+        "max_displacement": 0.001588783054570983
+      },
+      {
+        "name": "AST_Aelira_v2_cape_margin_leaf_-1_1",
+        "operation": "coherent cloth-family relief including attached edging",
+        "max_displacement": 0.0025495674402436913
+      },
+      {
+        "name": "AST_Aelira_v2_cape_margin_leaf_-1_2",
+        "operation": "coherent cloth-family relief including attached edging",
+        "max_displacement": 0.0036219833641422255
+      },
+      {
+        "name": "AST_Aelira_v2_cape_margin_leaf_-1_3",
+        "operation": "coherent cloth-family relief including attached edging",
+        "max_displacement": 0.004756341685904469
+      },
+      {
+        "name": "AST_Aelira_v2_cape_margin_leaf_-1_4",
+        "operation": "coherent cloth-family relief including attached edging",
+        "max_displacement": 0.0059211335617093686
+      },
+      {
+        "name": "AST_Aelira_v2_cape_margin_leaf_-1_5",
+        "operation": "coherent cloth-family relief including attached edging",
+        "max_displacement": 0.007103770464881802
+      },
+      {
+        "name": "AST_Aelira_v2_cape_margin_leaf_-1_6",
+        "operation": "coherent cloth-family relief including attached edging",
+        "max_displacement": 0.008301364406120754
+      },
+      {
+        "name": "AST_Aelira_v2_cape_margin_leaf_-1_7",
+        "operation": "coherent cloth-family relief including attached edging",
+        "max_displacement": 0.009520110705609167
+      },
+      {
+        "name": "AST_Aelira_v2_cape_margin_leaf_-1_8",
+        "operation": "coherent cloth-family relief including attached edging",
+        "max_displacement": 0.010766009944862006
+      },
+      {
+        "name": "AST_Aelira_v2_cape_margin_leaf_-1_9",
+        "operation": "coherent cloth-family relief including attached edging",
+        "max_displacement": 0.012036906216714726
+      },
+      {
+        "name": "AST_Aelira_v2_cape_margin_leaf_-1_10",
+        "operation": "coherent cloth-family relief including attached edging",
+        "max_displacement": 0.013323689085572535
+      },
+      {
+        "name": "AST_Aelira_v2_cape_margin_leaf_-1_11",
+        "operation": "coherent cloth-family relief including attached edging",
+        "max_displacement": 0.014599850872132461
+      },
+      {
+        "name": "AST_Aelira_v2_cape_margin_leaf_-1_12",
+        "operation": "coherent cloth-family relief including attached edging",
+        "max_displacement": 0.01584942707492846
+      },
+      {
+        "name": "AST_Aelira_v2_cape_margin_leaf_-1_13",
+        "operation": "coherent cloth-family relief including attached edging",
+        "max_displacement": 0.017073312968333733
+      },
+      {
+        "name": "AST_Aelira_v2_cape_margin_leaf_-1_14",
+        "operation": "coherent cloth-family relief including attached edging",
+        "max_displacement": 0.017999998627016383
+      },
+      {
+        "name": "AST_Aelira_v2_cape_margin_leaf_-1_15",
+        "operation": "coherent cloth-family relief including attached edging",
+        "max_displacement": 0.01799999959457166
+      },
+      {
+        "name": "AST_Aelira_v2_cape_gold_selvedge_1",
+        "operation": "coherent cloth-family relief including attached edging",
+        "max_displacement": 0.017377352586244635
+      },
+      {
+        "name": "AST_Aelira_v2_cape_margin_vine_1",
+        "operation": "coherent cloth-family relief including attached edging",
+        "max_displacement": 0.01635704587543514
+      },
+      {
+        "name": "AST_Aelira_v2_cape_margin_leaf_1_0",
+        "operation": "coherent cloth-family relief including attached edging",
+        "max_displacement": 0.001471299347201277
+      },
+      {
+        "name": "AST_Aelira_v2_cape_margin_leaf_1_1",
+        "operation": "coherent cloth-family relief including attached edging",
+        "max_displacement": 0.0007852093423876411
+      },
+      {
+        "name": "AST_Aelira_v2_cape_margin_leaf_1_2",
+        "operation": "coherent cloth-family relief including attached edging",
+        "max_displacement": 0.0028251312649885257
+      },
+      {
+        "name": "AST_Aelira_v2_cape_margin_leaf_1_3",
+        "operation": "coherent cloth-family relief including attached edging",
+        "max_displacement": 0.005422680959352451
+      },
+      {
+        "name": "AST_Aelira_v2_cape_margin_leaf_1_4",
+        "operation": "coherent cloth-family relief including attached edging",
+        "max_displacement": 0.007418196911424042
+      },
+      {
+        "name": "AST_Aelira_v2_cape_margin_leaf_1_5",
+        "operation": "coherent cloth-family relief including attached edging",
+        "max_displacement": 0.008194549346809965
+      },
+      {
+        "name": "AST_Aelira_v2_cape_margin_leaf_1_6",
+        "operation": "coherent cloth-family relief including attached edging",
+        "max_displacement": 0.007895861546482696
+      },
+      {
+        "name": "AST_Aelira_v2_cape_margin_leaf_1_7",
+        "operation": "coherent cloth-family relief including attached edging",
+        "max_displacement": 0.006238510566392727
+      },
+      {
+        "name": "AST_Aelira_v2_cape_margin_leaf_1_8",
+        "operation": "coherent cloth-family relief including attached edging",
+        "max_displacement": 0.0027732408097779077
+      },
+      {
+        "name": "AST_Aelira_v2_cape_margin_leaf_1_9",
+        "operation": "coherent cloth-family relief including attached edging",
+        "max_displacement": 0.005482291008173563
+      },
+      {
+        "name": "AST_Aelira_v2_cape_margin_leaf_1_10",
+        "operation": "coherent cloth-family relief including attached edging",
+        "max_displacement": 0.010682010241338545
+      },
+      {
+        "name": "AST_Aelira_v2_cape_margin_leaf_1_11",
+        "operation": "coherent cloth-family relief including attached edging",
+        "max_displacement": 0.014598420688402204
+      },
+      {
+        "name": "AST_Aelira_v2_cape_margin_leaf_1_12",
+        "operation": "coherent cloth-family relief including attached edging",
+        "max_displacement": 0.016272496195174693
+      },
+      {
+        "name": "AST_Aelira_v2_cape_margin_leaf_1_13",
+        "operation": "coherent cloth-family relief including attached edging",
+        "max_displacement": 0.01584619973181549
+      },
+      {
+        "name": "AST_Aelira_v2_cape_margin_leaf_1_14",
+        "operation": "coherent cloth-family relief including attached edging",
+        "max_displacement": 0.013628460172110448
+      },
+      {
+        "name": "AST_Aelira_v2_cape_margin_leaf_1_15",
+        "operation": "coherent cloth-family relief including attached edging",
+        "max_displacement": 0.008491397773178184
+      },
+      {
+        "name": "AST_Aelira_v2_cape_embroidered_hem",
+        "operation": "coherent cloth-family relief including attached edging",
+        "max_displacement": 0.017999998177023913
+      },
+      {
+        "name": "AST_Aelira_v2_cape_hem_leaf_0",
+        "operation": "coherent cloth-family relief including attached edging",
+        "max_displacement": 0.01797442823776448
+      },
+      {
+        "name": "AST_Aelira_v2_cape_hem_leaf_1",
+        "operation": "coherent cloth-family relief including attached edging",
+        "max_displacement": 0.01675091903171759
+      },
+      {
+        "name": "AST_Aelira_v2_cape_hem_leaf_2",
+        "operation": "coherent cloth-family relief including attached edging",
+        "max_displacement": 0.012604852811456096
+      },
+      {
+        "name": "AST_Aelira_v2_cape_hem_leaf_3",
+        "operation": "coherent cloth-family relief including attached edging",
+        "max_displacement": 0.01594304094491561
+      },
+      {
+        "name": "AST_Aelira_v2_cape_hem_leaf_4",
+        "operation": "coherent cloth-family relief including attached edging",
+        "max_displacement": 0.01799999993025947
+      },
+      {
+        "name": "AST_Aelira_v2_cape_hem_leaf_5",
+        "operation": "coherent cloth-family relief including attached edging",
+        "max_displacement": 0.012117383536714488
+      },
+      {
+        "name": "AST_Aelira_v2_cape_hem_leaf_6",
+        "operation": "coherent cloth-family relief including attached edging",
+        "max_displacement": 0.00713140263501244
+      },
+      {
+        "name": "AST_Aelira_v2_cape_hem_leaf_7",
+        "operation": "coherent cloth-family relief including attached edging",
+        "max_displacement": 0.017610571123892305
+      },
+      {
+        "name": "AST_Aelira_v2_cape_hem_leaf_8",
+        "operation": "coherent cloth-family relief including attached edging",
+        "max_displacement": 0.016850145886666223
+      },
+      {
+        "name": "AST_Aelira_v2_cape_hem_leaf_9",
+        "operation": "coherent cloth-family relief including attached edging",
+        "max_displacement": 0.006349441366336861
+      },
+      {
+        "name": "AST_Aelira_v2_cape_hem_leaf_10",
+        "operation": "coherent cloth-family relief including attached edging",
+        "max_displacement": 0.015693622305273602
+      },
+      {
+        "name": "AST_Aelira_v2_cape_hem_leaf_11",
+        "operation": "coherent cloth-family relief including attached edging",
+        "max_displacement": 0.016900448904112353
+      },
+      {
+        "name": "AST_Aelira_v2_cape_hem_leaf_12",
+        "operation": "coherent cloth-family relief including attached edging",
+        "max_displacement": 0.012602367509074064
+      },
+      {
+        "name": "AST_Aelira_v2_cape_hem_leaf_13",
+        "operation": "coherent cloth-family relief including attached edging",
+        "max_displacement": 0.01788772191437782
+      },
+      {
+        "name": "AST_Aelira_v2_cape_hem_leaf_14",
+        "operation": "coherent cloth-family relief including attached edging",
+        "max_displacement": 0.005571525331117044
+      },
+      {
+        "name": "AST_Aelira_v2_cape_hem_leaf_15",
+        "operation": "coherent cloth-family relief including attached edging",
+        "max_displacement": 0.017933835869244352
+      },
+      {
+        "name": "AST_Aelira_v2_cape_hem_leaf_16",
+        "operation": "coherent cloth-family relief including attached edging",
+        "max_displacement": 0.013784245658989114
+      },
+      {
+        "name": "AST_Aelira_v2_cape_hem_leaf_17",
+        "operation": "coherent cloth-family relief including attached edging",
+        "max_displacement": 0.014682034281628509
+      },
+      {
+        "name": "AST_Aelira_v2_cape_hem_leaf_18",
+        "operation": "coherent cloth-family relief including attached edging",
+        "max_displacement": 0.017113303379156952
+      },
+      {
+        "name": "AST_Aelira_v2_cape_hem_leaf_19",
+        "operation": "coherent cloth-family relief including attached edging",
+        "max_displacement": 0.004798855430835691
+      },
+      {
+        "name": "AST_Aelira_v2_cape_hem_leaf_20",
+        "operation": "coherent cloth-family relief including attached edging",
+        "max_displacement": 0.017091532991591107
+      },
+      {
+        "name": "AST_Aelira_v2_cape_hem_leaf_21",
+        "operation": "coherent cloth-family relief including attached edging",
+        "max_displacement": 0.017518754738204134
+      },
+      {
+        "name": "AST_Aelira_v2_cape_hem_leaf_22",
+        "operation": "coherent cloth-family relief including attached edging",
+        "max_displacement": 0.01534537922458104
+      },
+      {
+        "name": "AST_Aelira_v2_cape_hem_leaf_23",
+        "operation": "coherent cloth-family relief including attached edging",
+        "max_displacement": 0.014231147125933569
+      },
+      {
+        "name": "AST_Aelira_v2_cape_hem_leaf_24",
+        "operation": "coherent cloth-family relief including attached edging",
+        "max_displacement": 0.009010639248997004
+      },
+      {
+        "name": "AST_Aelira_v2_cape_hem_leaf_25",
+        "operation": "coherent cloth-family relief including attached edging",
+        "max_displacement": 0.004350494674560779
+      },
+      {
+        "name": "AST_Aelira_v2_cape_hem_leaf_26",
+        "operation": "coherent cloth-family relief including attached edging",
+        "max_displacement": 0.008798022185659046
+      },
+      {
+        "name": "AST_Aelira_v2_cape_hem_leaf_27",
+        "operation": "coherent cloth-family relief including attached edging",
+        "max_displacement": 0.008434472543594477
+      }
+    ],
+    "added_base_clothing": [],
+    "equipment_source_objects": [
+      "AST_Aelira_leaf_vambrace_R",
+      "AST_Aelira_bracer_gilt_R0.04",
+      "AST_Aelira_bracer_gilt_R0.57",
+      "AST_Aelira_leaf_vambrace_L",
+      "AST_Aelira_bracer_gilt_L0.04",
+      "AST_Aelira_bracer_gilt_L0.57",
+      "AST_Aelira_wide_leather_belt",
+      "AST_Aelira_belt_gilt_stitch_1.475",
+      "AST_Aelira_belt_gilt_stitch_1.6",
+      "AST_Aelira_v2_braid_engraved_tie_1.83",
+      "AST_Aelira_v2_braid_engraved_tie_1.877",
+      "AST_Aelira_v2_full_folded_forest_cape",
+      "AST_Aelira_v2_cape_gold_selvedge_-1",
+      "AST_Aelira_v2_cape_margin_vine_-1",
+      "AST_Aelira_v2_cape_margin_leaf_-1_0",
+      "AST_Aelira_v2_cape_margin_leaf_-1_1",
+      "AST_Aelira_v2_cape_margin_leaf_-1_2",
+      "AST_Aelira_v2_cape_margin_leaf_-1_3",
+      "AST_Aelira_v2_cape_margin_leaf_-1_4",
+      "AST_Aelira_v2_cape_margin_leaf_-1_5",
+      "AST_Aelira_v2_cape_margin_leaf_-1_6",
+      "AST_Aelira_v2_cape_margin_leaf_-1_7",
+      "AST_Aelira_v2_cape_margin_leaf_-1_8",
+      "AST_Aelira_v2_cape_margin_leaf_-1_9",
+      "AST_Aelira_v2_cape_margin_leaf_-1_10",
+      "AST_Aelira_v2_cape_margin_leaf_-1_11",
+      "AST_Aelira_v2_cape_margin_leaf_-1_12",
+      "AST_Aelira_v2_cape_margin_leaf_-1_13",
+      "AST_Aelira_v2_cape_margin_leaf_-1_14",
+      "AST_Aelira_v2_cape_margin_leaf_-1_15",
+      "AST_Aelira_v2_cape_gold_selvedge_1",
+      "AST_Aelira_v2_cape_margin_vine_1",
+      "AST_Aelira_v2_cape_margin_leaf_1_0",
+      "AST_Aelira_v2_cape_margin_leaf_1_1",
+      "AST_Aelira_v2_cape_margin_leaf_1_2",
+      "AST_Aelira_v2_cape_margin_leaf_1_3",
+      "AST_Aelira_v2_cape_margin_leaf_1_4",
+      "AST_Aelira_v2_cape_margin_leaf_1_5",
+      "AST_Aelira_v2_cape_margin_leaf_1_6",
+      "AST_Aelira_v2_cape_margin_leaf_1_7",
+      "AST_Aelira_v2_cape_margin_leaf_1_8",
+      "AST_Aelira_v2_cape_margin_leaf_1_9",
+      "AST_Aelira_v2_cape_margin_leaf_1_10",
+      "AST_Aelira_v2_cape_margin_leaf_1_11",
+      "AST_Aelira_v2_cape_margin_leaf_1_12",
+      "AST_Aelira_v2_cape_margin_leaf_1_13",
+      "AST_Aelira_v2_cape_margin_leaf_1_14",
+      "AST_Aelira_v2_cape_margin_leaf_1_15",
+      "AST_Aelira_v2_connected_cloak_mantle",
+      "AST_Aelira_v2_mantle_gold_edge",
+      "AST_Aelira_v2_cape_embroidered_hem",
+      "AST_Aelira_v2_cape_hem_leaf_0",
+      "AST_Aelira_v2_cape_hem_leaf_1",
+      "AST_Aelira_v2_cape_hem_leaf_2",
+      "AST_Aelira_v2_cape_hem_leaf_3",
+      "AST_Aelira_v2_cape_hem_leaf_4",
+      "AST_Aelira_v2_cape_hem_leaf_5",
+      "AST_Aelira_v2_cape_hem_leaf_6",
+      "AST_Aelira_v2_cape_hem_leaf_7",
+      "AST_Aelira_v2_cape_hem_leaf_8",
+      "AST_Aelira_v2_cape_hem_leaf_9",
+      "AST_Aelira_v2_cape_hem_leaf_10",
+      "AST_Aelira_v2_cape_hem_leaf_11",
+      "AST_Aelira_v2_cape_hem_leaf_12",
+      "AST_Aelira_v2_cape_hem_leaf_13",
+      "AST_Aelira_v2_cape_hem_leaf_14",
+      "AST_Aelira_v2_cape_hem_leaf_15",
+      "AST_Aelira_v2_cape_hem_leaf_16",
+      "AST_Aelira_v2_cape_hem_leaf_17",
+      "AST_Aelira_v2_cape_hem_leaf_18",
+      "AST_Aelira_v2_cape_hem_leaf_19",
+      "AST_Aelira_v2_cape_hem_leaf_20",
+      "AST_Aelira_v2_cape_hem_leaf_21",
+      "AST_Aelira_v2_cape_hem_leaf_22",
+      "AST_Aelira_v2_cape_hem_leaf_23",
+      "AST_Aelira_v2_cape_hem_leaf_24",
+      "AST_Aelira_v2_cape_hem_leaf_25",
+      "AST_Aelira_v2_cape_hem_leaf_26",
+      "AST_Aelira_v2_cape_hem_leaf_27",
+      "AST_Aelira_v2_cuff_gold_stitch_R0.08",
+      "AST_Aelira_v2_cuff_gold_stitch_R0.94",
+      "AST_Aelira_v2_fitted_boot_strap_R0",
+      "AST_Aelira_v2_boot_buckle_R0_cut_setting",
+      "AST_Aelira_v2_boot_buckle_R0_metal_bezel",
+      "AST_Aelira_v2_fitted_boot_strap_R1",
+      "AST_Aelira_v2_boot_buckle_R1_cut_setting",
+      "AST_Aelira_v2_boot_buckle_R1_metal_bezel",
+      "AST_Aelira_v2_cuff_leaf_R_vine_stitch",
+      "AST_Aelira_v2_cuff_leaf_R_embroidered_leaf_4",
+      "AST_Aelira_v2_cuff_gold_stitch_L0.08",
+      "AST_Aelira_v2_cuff_gold_stitch_L0.94",
+      "AST_Aelira_v2_fitted_boot_strap_L0",
+      "AST_Aelira_v2_boot_buckle_L0_cut_setting",
+      "AST_Aelira_v2_boot_buckle_L0_metal_bezel",
+      "AST_Aelira_v2_fitted_boot_strap_L1",
+      "AST_Aelira_v2_boot_buckle_L1_cut_setting",
+      "AST_Aelira_v2_boot_buckle_L1_metal_bezel",
+      "AST_Aelira_v2_cuff_leaf_L_vine_stitch",
+      "AST_Aelira_v2_cuff_leaf_L_embroidered_leaf_4",
+      "AST_Aelira_v2_vambrace_laurel_-1_vine_stitch",
+      "AST_Aelira_v2_vambrace_laurel_-1_embroidered_leaf_0",
+      "AST_Aelira_v2_vambrace_laurel_-1_embroidered_leaf_1",
+      "AST_Aelira_v2_vambrace_laurel_-1_embroidered_leaf_2",
+      "AST_Aelira_v2_vambrace_laurel_-1_embroidered_leaf_3",
+      "AST_Aelira_v2_vambrace_laurel_-1_embroidered_leaf_4",
+      "AST_Aelira_v2_vambrace_laurel_-1_embroidered_leaf_5",
+      "AST_Aelira_v2_vambrace_laurel_1_vine_stitch",
+      "AST_Aelira_v2_vambrace_laurel_1_embroidered_leaf_0",
+      "AST_Aelira_v2_vambrace_laurel_1_embroidered_leaf_1",
+      "AST_Aelira_v2_vambrace_laurel_1_embroidered_leaf_2",
+      "AST_Aelira_v2_vambrace_laurel_1_embroidered_leaf_3",
+      "AST_Aelira_v2_vambrace_laurel_1_embroidered_leaf_4",
+      "AST_Aelira_v2_vambrace_laurel_1_embroidered_leaf_5",
+      "AST_Aelira_v2_cloak_clasp_cut_setting",
+      "AST_Aelira_v2_cloak_clasp_metal_bezel",
+      "AST_Aelira_v2_cloak_leaf_star",
+      "AST_Aelira_v2_belt_clasp_cut_setting",
+      "AST_Aelira_v2_belt_clasp_metal_bezel",
+      "AST_Aelira_v2_belt_leaf_star"
+    ],
+    "body_source_objects": [
+      "AST_Aelira_neck",
+      "AST_Aelira_cream_tunic",
+      "AST_Aelira_forest_v_neck_insert",
+      "AST_Aelira_forest_v_neck_insert_bound_edge",
+      "AST_Aelira_soft_cream_sleeve_R",
+      "AST_Aelira_forest_trouser_R",
+      "AST_Aelira_shaped_boot_R",
+      "AST_Aelira_boot_integrated_sole_R",
+      "AST_Aelira_soft_cream_sleeve_L",
+      "AST_Aelira_forest_trouser_L",
+      "AST_Aelira_shaped_boot_L",
+      "AST_Aelira_boot_integrated_sole_L",
+      "AST_Aelira_center_tabard",
+      "AST_Aelira_center_tabard_bound_edge",
+      "AST_Aelira_v2_refined_head",
+      "AST_Aelira_v2_eye_R_orbital_skin",
+      "AST_Aelira_v2_eye_R",
+      "AST_Aelira_v2_eye_R_upper_lash",
+      "AST_Aelira_v2_eye_R_lower_lid",
+      "AST_Aelira_v2_eye_R_lash_wing",
+      "AST_Aelira_v2_eye_R_catchlight",
+      "AST_Aelira_v2_eye_R_pinlight",
+      "AST_Aelira_v2_eye_R_closed_lid",
+      "AST_Aelira_v2_eye_R_sleep_lash",
+      "AST_Aelira_v2_leaf_ear_R",
+      "AST_Aelira_v2_leaf_ear_R_concha",
+      "AST_Aelira_v2_leaf_ear_R_antihelix",
+      "AST_Aelira_v2_brow_R",
+      "AST_Aelira_v2_nostril_R",
+      "AST_Aelira_v2_eye_L_orbital_skin",
+      "AST_Aelira_v2_eye_L",
+      "AST_Aelira_v2_eye_L_upper_lash",
+      "AST_Aelira_v2_eye_L_lower_lid",
+      "AST_Aelira_v2_eye_L_lash_wing",
+      "AST_Aelira_v2_eye_L_catchlight",
+      "AST_Aelira_v2_eye_L_pinlight",
+      "AST_Aelira_v2_eye_L_closed_lid",
+      "AST_Aelira_v2_eye_L_sleep_lash",
+      "AST_Aelira_v2_leaf_ear_L",
+      "AST_Aelira_v2_leaf_ear_L_concha",
+      "AST_Aelira_v2_leaf_ear_L_antihelix",
+      "AST_Aelira_v2_brow_L",
+      "AST_Aelira_v2_nostril_L",
+      "AST_Aelira_v2_warm_smile",
+      "AST_Aelira_v2_lower_lip",
+      "AST_Aelira_v2_sculpted_hair_cap",
+      "AST_Aelira_v2_parted_crown_-1_0",
+      "AST_Aelira_v2_parted_crown_-1_1",
+      "AST_Aelira_v2_parted_crown_-1_2",
+      "AST_Aelira_v2_parted_crown_-1_3",
+      "AST_Aelira_v2_swept_hairline_-1",
+      "AST_Aelira_v2_face_framing_curl_-1",
+      "AST_Aelira_v2_secondary_curl_-1",
+      "AST_Aelira_v2_parted_crown_1_0",
+      "AST_Aelira_v2_parted_crown_1_1",
+      "AST_Aelira_v2_parted_crown_1_2",
+      "AST_Aelira_v2_parted_crown_1_3",
+      "AST_Aelira_v2_swept_hairline_1",
+      "AST_Aelira_v2_face_framing_curl_1",
+      "AST_Aelira_v2_secondary_curl_1",
+      "AST_Aelira_v2_back_swept_lock_0",
+      "AST_Aelira_v2_back_swept_lock_1",
+      "AST_Aelira_v2_back_swept_lock_2",
+      "AST_Aelira_v2_back_swept_lock_3",
+      "AST_Aelira_v2_back_swept_lock_4",
+      "AST_Aelira_v2_back_swept_lock_5",
+      "AST_Aelira_v2_back_swept_lock_6",
+      "AST_Aelira_v2_back_swept_lock_7",
+      "AST_Aelira_v2_back_swept_lock_8",
+      "AST_Aelira_v2_back_swept_lock_9",
+      "AST_Aelira_v2_interwoven_plait_0",
+      "AST_Aelira_v2_interwoven_plait_1",
+      "AST_Aelira_v2_interwoven_plait_2",
+      "AST_Aelira_v2_braid_tassel_0",
+      "AST_Aelira_v2_braid_tassel_1",
+      "AST_Aelira_v2_braid_tassel_2",
+      "AST_Aelira_v2_braid_tassel_3",
+      "AST_Aelira_v2_braid_tassel_4",
+      "AST_Aelira_v2_braid_tassel_5",
+      "AST_Aelira_v2_tailored_split_skirt_-1",
+      "AST_Aelira_v2_skirt_leather_binding_-1",
+      "AST_Aelira_v2_skirt_fine_gold_edge_-1",
+      "AST_Aelira_v2_tailored_split_skirt_1",
+      "AST_Aelira_v2_skirt_leather_binding_1",
+      "AST_Aelira_v2_skirt_fine_gold_edge_1",
+      "AST_Aelira_v2_shaped_hand_-1",
+      "AST_Aelira_v2_knuckle_crease_-10",
+      "AST_Aelira_v2_knuckle_crease_-11",
+      "AST_Aelira_v2_knuckle_crease_-12",
+      "AST_Aelira_v2_knuckle_crease_-13",
+      "AST_Aelira_v2_shaped_cream_boot_cuff_R",
+      "AST_Aelira_v2_toecap_stitch_R",
+      "AST_Aelira_v2_shaped_hand_1",
+      "AST_Aelira_v2_knuckle_crease_10",
+      "AST_Aelira_v2_knuckle_crease_11",
+      "AST_Aelira_v2_knuckle_crease_12",
+      "AST_Aelira_v2_knuckle_crease_13",
+      "AST_Aelira_v2_shaped_cream_boot_cuff_L",
+      "AST_Aelira_v2_toecap_stitch_L",
+      "AST_Aelira_v2_bodice_vine_-1_vine_stitch",
+      "AST_Aelira_v2_bodice_vine_-1_embroidered_leaf_0",
+      "AST_Aelira_v2_bodice_vine_-1_embroidered_leaf_1",
+      "AST_Aelira_v2_bodice_vine_-1_embroidered_leaf_2",
+      "AST_Aelira_v2_bodice_vine_-1_embroidered_leaf_3",
+      "AST_Aelira_v2_bodice_vine_-1_embroidered_leaf_4",
+      "AST_Aelira_v2_bodice_vine_-1_embroidered_leaf_5",
+      "AST_Aelira_v2_bodice_vine_-1_embroidered_leaf_6",
+      "AST_Aelira_v2_bodice_vine_-1_embroidered_leaf_7",
+      "AST_Aelira_v2_skirt_vine_-1_vine_stitch",
+      "AST_Aelira_v2_skirt_vine_-1_embroidered_leaf_0",
+      "AST_Aelira_v2_skirt_vine_-1_embroidered_leaf_1",
+      "AST_Aelira_v2_skirt_vine_-1_embroidered_leaf_2",
+      "AST_Aelira_v2_skirt_vine_-1_embroidered_leaf_3",
+      "AST_Aelira_v2_skirt_vine_-1_embroidered_leaf_4",
+      "AST_Aelira_v2_skirt_vine_-1_embroidered_leaf_5",
+      "AST_Aelira_v2_skirt_vine_-1_embroidered_leaf_6",
+      "AST_Aelira_v2_skirt_vine_-1_embroidered_leaf_7",
+      "AST_Aelira_v2_sleeve_vine_-1_vine_stitch",
+      "AST_Aelira_v2_sleeve_vine_-1_embroidered_leaf_0",
+      "AST_Aelira_v2_sleeve_vine_-1_embroidered_leaf_1",
+      "AST_Aelira_v2_sleeve_vine_-1_embroidered_leaf_2",
+      "AST_Aelira_v2_sleeve_vine_-1_embroidered_leaf_3",
+      "AST_Aelira_v2_sleeve_vine_-1_embroidered_leaf_4",
+      "AST_Aelira_v2_sleeve_vine_-1_embroidered_leaf_5",
+      "AST_Aelira_v2_bodice_vine_1_vine_stitch",
+      "AST_Aelira_v2_bodice_vine_1_embroidered_leaf_0",
+      "AST_Aelira_v2_bodice_vine_1_embroidered_leaf_1",
+      "AST_Aelira_v2_bodice_vine_1_embroidered_leaf_2",
+      "AST_Aelira_v2_bodice_vine_1_embroidered_leaf_3",
+      "AST_Aelira_v2_bodice_vine_1_embroidered_leaf_4",
+      "AST_Aelira_v2_bodice_vine_1_embroidered_leaf_5",
+      "AST_Aelira_v2_bodice_vine_1_embroidered_leaf_6",
+      "AST_Aelira_v2_bodice_vine_1_embroidered_leaf_7",
+      "AST_Aelira_v2_skirt_vine_1_vine_stitch",
+      "AST_Aelira_v2_skirt_vine_1_embroidered_leaf_0",
+      "AST_Aelira_v2_skirt_vine_1_embroidered_leaf_1",
+      "AST_Aelira_v2_skirt_vine_1_embroidered_leaf_2",
+      "AST_Aelira_v2_skirt_vine_1_embroidered_leaf_3",
+      "AST_Aelira_v2_skirt_vine_1_embroidered_leaf_4",
+      "AST_Aelira_v2_skirt_vine_1_embroidered_leaf_5",
+      "AST_Aelira_v2_skirt_vine_1_embroidered_leaf_6",
+      "AST_Aelira_v2_skirt_vine_1_embroidered_leaf_7",
+      "AST_Aelira_v2_sleeve_vine_1_vine_stitch",
+      "AST_Aelira_v2_sleeve_vine_1_embroidered_leaf_0",
+      "AST_Aelira_v2_sleeve_vine_1_embroidered_leaf_1",
+      "AST_Aelira_v2_sleeve_vine_1_embroidered_leaf_2",
+      "AST_Aelira_v2_sleeve_vine_1_embroidered_leaf_3",
+      "AST_Aelira_v2_sleeve_vine_1_embroidered_leaf_4",
+      "AST_Aelira_v2_sleeve_vine_1_embroidered_leaf_5",
+      "AST_Aelira_v2_tabard_gold_laurel_vine_stitch",
+      "AST_Aelira_v2_tabard_gold_laurel_embroidered_leaf_0",
+      "AST_Aelira_v2_tabard_gold_laurel_embroidered_leaf_1",
+      "AST_Aelira_v2_tabard_gold_laurel_embroidered_leaf_2",
+      "AST_Aelira_v2_tabard_gold_laurel_embroidered_leaf_3",
+      "AST_Aelira_v2_tabard_gold_laurel_embroidered_leaf_4",
+      "AST_Aelira_v2_tabard_gold_laurel_embroidered_leaf_5",
+      "AST_Aelira_v2_tabard_gold_laurel_embroidered_leaf_6",
+      "AST_Aelira_v2_tabard_gold_laurel_embroidered_leaf_7",
+      "AST_Aelira_v2_tabard_gold_laurel_embroidered_leaf_8",
+      "AST_Aelira_v2_tabard_gold_laurel_embroidered_leaf_9",
+      "AST_Aelira_v2_tabard_gold_laurel_embroidered_leaf_10"
+    ]
+  },
+  "original_rig": {
+    "rest_sha256": "F89FA9CB9FEB8A488BABDE8FED3F84FDC17AB7D63051FF4113ABF55A1A37B0FB",
+    "behavior_sha256": "C548BAA88EDC1E08A41DF0DB71E04395FCA37EA11C23D17E1383E26C93F9BD59",
+    "bones": 10,
+    "fps": 30,
+    "fps_base": 1.0,
+    "actions": {
+      "blink": {
+        "sha256": "9D6805668F7E51F8B5906C974159EE0ED81473F3CAF5E7910662BBB578291622",
+        "curve_count": 90,
+        "key_count": 900,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          19.0
+        ]
+      },
+      "eat": {
+        "sha256": "A4FC2EFE0561581ABBD4098DFFC22A7FA370DA961818CAF375DEC46203329D73",
+        "curve_count": 90,
+        "key_count": 4140,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          91.0
+        ]
+      },
+      "happy": {
+        "sha256": "B24D844191CDD5358EE2E45162D5A07EF7F0BAC85C3095E6AB6DA67E1A491789",
+        "curve_count": 90,
+        "key_count": 2790,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          61.0
+        ]
+      },
+      "idle": {
+        "sha256": "1BB02DF595F866EECCCC336A0374431B7815A440060189059F2751AEAFBFAB01",
+        "curve_count": 90,
+        "key_count": 5490,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          121.0
+        ]
+      },
+      "pet_reaction": {
+        "sha256": "8A24FD363C2AB2B9026BB1906A6B4E856B1A0519DFD6A7038543ADF2DB9AA8C4",
+        "curve_count": 90,
+        "key_count": 3510,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          76.0
+        ]
+      },
+      "play": {
+        "sha256": "7AA8DF0F79E6E77F91471395FDBD82F4D8B0D0553906A4FE41F3DA080DEF5973",
+        "curve_count": 90,
+        "key_count": 3690,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          81.0
+        ]
+      },
+      "sleep": {
+        "sha256": "C5945FE350F72609F6FC3F3CEA6DB880D561E1CCFB6C72C93CEC312F55B8D3E1",
+        "curve_count": 90,
+        "key_count": 5490,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          121.0
+        ]
+      },
+      "wake": {
+        "sha256": "0661D69CB2AFFA51C2B5A1EF640AF0FA82B5A585577C6D43EB04953B720881AD",
+        "curve_count": 90,
+        "key_count": 2790,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          61.0
+        ]
+      },
+      "walk": {
+        "sha256": "4EBAF99E87FCD7B76BCE8DDEFE3802E55DC27C82060E457579EA7CBCCC1FE8E4",
+        "curve_count": 90,
+        "key_count": 2250,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          49.0
+        ]
+      }
+    }
+  },
+  "candidate_rig": {
+    "rest_sha256": "F89FA9CB9FEB8A488BABDE8FED3F84FDC17AB7D63051FF4113ABF55A1A37B0FB",
+    "behavior_sha256": "C548BAA88EDC1E08A41DF0DB71E04395FCA37EA11C23D17E1383E26C93F9BD59",
+    "bones": 10,
+    "fps": 30,
+    "fps_base": 1.0,
+    "actions": {
+      "blink": {
+        "sha256": "9D6805668F7E51F8B5906C974159EE0ED81473F3CAF5E7910662BBB578291622",
+        "curve_count": 90,
+        "key_count": 900,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          19.0
+        ]
+      },
+      "eat": {
+        "sha256": "A4FC2EFE0561581ABBD4098DFFC22A7FA370DA961818CAF375DEC46203329D73",
+        "curve_count": 90,
+        "key_count": 4140,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          91.0
+        ]
+      },
+      "happy": {
+        "sha256": "B24D844191CDD5358EE2E45162D5A07EF7F0BAC85C3095E6AB6DA67E1A491789",
+        "curve_count": 90,
+        "key_count": 2790,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          61.0
+        ]
+      },
+      "idle": {
+        "sha256": "1BB02DF595F866EECCCC336A0374431B7815A440060189059F2751AEAFBFAB01",
+        "curve_count": 90,
+        "key_count": 5490,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          121.0
+        ]
+      },
+      "pet_reaction": {
+        "sha256": "8A24FD363C2AB2B9026BB1906A6B4E856B1A0519DFD6A7038543ADF2DB9AA8C4",
+        "curve_count": 90,
+        "key_count": 3510,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          76.0
+        ]
+      },
+      "play": {
+        "sha256": "7AA8DF0F79E6E77F91471395FDBD82F4D8B0D0553906A4FE41F3DA080DEF5973",
+        "curve_count": 90,
+        "key_count": 3690,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          81.0
+        ]
+      },
+      "sleep": {
+        "sha256": "C5945FE350F72609F6FC3F3CEA6DB880D561E1CCFB6C72C93CEC312F55B8D3E1",
+        "curve_count": 90,
+        "key_count": 5490,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          121.0
+        ]
+      },
+      "wake": {
+        "sha256": "0661D69CB2AFFA51C2B5A1EF640AF0FA82B5A585577C6D43EB04953B720881AD",
+        "curve_count": 90,
+        "key_count": 2790,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          61.0
+        ]
+      },
+      "walk": {
+        "sha256": "4EBAF99E87FCD7B76BCE8DDEFE3802E55DC27C82060E457579EA7CBCCC1FE8E4",
+        "curve_count": 90,
+        "key_count": 2250,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          49.0
+        ]
+      }
+    }
+  },
+  "motion_comparison": {
+    "idle": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "blink": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "happy": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "eat": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "play": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "pet_reaction": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "sleep": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "wake": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "walk": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    }
+  },
+  "source_views": {
+    "hero": {
+      "file": "assets/3d/reference/elf/sculpt-v003/source/elf-hero.png",
+      "sha256": "C75ACF5301FCCDAF7616C8CCC2A26E855609EE1FBD3332EBB516E23954CF5718"
+    },
+    "front": {
+      "file": "assets/3d/reference/elf/sculpt-v003/source/elf-front.png",
+      "sha256": "FD4DFC807DA02D3B4E80A832ED68920041CD597589324C2521695F4DA4391F1A"
+    },
+    "side": {
+      "file": "assets/3d/reference/elf/sculpt-v003/source/elf-side.png",
+      "sha256": "C12CD5AC9E1ABC4930FDF30AA9655CCDC0B53AFFB7538138B2E39B870B9807FF"
+    },
+    "rear": {
+      "file": "assets/3d/reference/elf/sculpt-v003/source/elf-rear.png",
+      "sha256": "EC1F874FA952124AF0B8433D444A0A62DD65425A462D4EAC40CF073B75FF0461"
+    },
+    "body-hero": {
+      "file": "assets/3d/reference/elf/sculpt-v003/source/elf-body-hero.png",
+      "sha256": "FF44A2B7D57C4B845D16DF03D2EDF5838C13D4DC60727981161A04C205F5A16B"
+    },
+    "body-side": {
+      "file": "assets/3d/reference/elf/sculpt-v003/source/elf-body-side.png",
+      "sha256": "9F2BFBECE640AD52C25A7F08C88C02B4DB7A5EF067B05779D65A9CD68CD5B498"
+    }
+  },
+  "import_views": {
+    "hero": {
+      "file": "assets/3d/reference/elf/sculpt-v003/import/elf-hero.png",
+      "sha256": "58E87B002D1A93EF6C342277FD2C60055AE0078CC3B23D43A4434B145E992A5E"
+    },
+    "rear": {
+      "file": "assets/3d/reference/elf/sculpt-v003/import/elf-rear.png",
+      "sha256": "75D78775985C2E559F315245A9CF7C3FE38620C5BD242DD9C53AE5C44927CD72"
+    },
+    "body-hero": {
+      "file": "assets/3d/reference/elf/sculpt-v003/import/elf-body-hero.png",
+      "sha256": "BC6AE1AB3725EB51E7C8E22DD8C2E841C32EDCE7DFE0C28E91A690B3AE695474"
+    },
+    "blink": {
+      "file": "assets/3d/reference/elf/sculpt-v003/import/elf-blink.png",
+      "sha256": "7FF8368B3277B7A212B4E3F1A43AE81C1A34E8F51FF672F1D0ACB604D8E23D56"
+    }
+  },
+  "passed": true,
+  "human_likeness_accepted": false,
+  "mobile_performance_accepted": false,
+  "paid_provider_used": false,
+  "projection_used": false,
+  "package_status": "Local hash-checked Blender delivery; no game-dev canonical receipt.",
+  "animation_limit": "Original source curves, keys, handles, rest rig and drivers compared exactly. Fresh GLBs compared at nine normalized times per clip with 2e-4 skin-matrix tolerance. Not a collision or gait acceptance.",
+  "likeness_limit": "Approved single-view reference retained. Hidden surfaces inferred; no exact 1:1 claim.",
+  "publication_amendment": {
+    "id": "metadata-clean-2026-09-07",
+    "record": "assets/3d/publication/2026-09-07/amendment.json",
+    "original_document_sha256": "41BD8BD761F87F71DEB6E094BE1462B467D809A23F3E2D1609A581D903A0502C",
+    "authoring_record": "assets/3d/publication/2026-09-07/authoring-records/assets/3d/reference/elf/sculpt-v003/validation.json",
+    "authoring_record_status": "exact-public-safe-original",
+    "notice": "Metadata-only publication derivative, not a rerun of the historical builder or validator. File digest and size bindings identify publication copies; all measured geometry, materials, rig, action, motion and acceptance evidence remains historical and unchanged. Consult the original authoring record and amendment binding log."
+  }
+}

@@ -1,0 +1,207 @@
+{
+  "schema": "asterion-face-only-v1",
+  "kind": "cat",
+  "name": "Nyra",
+  "version": "sculpt-v005",
+  "source_sha256": "7923560E3174AAA7262713EF8A3FE4196968735B07A54A74BE0EF6ED9C82B89F",
+  "model_sha256": "C036971EE8BF6CED92E27C0D5604F49D7B240349ABC1DD17D67B4B22D102EFE3",
+  "reference_sha256": "C996F1500869602E32B24047F8D1A6FAB6018CE87514AA22F017A09480EAEFED",
+  "triangles": 1511978,
+  "bytes": 18383140,
+  "bones": 13,
+  "clips": [
+    "idle",
+    "blink",
+    "happy",
+    "eat",
+    "play",
+    "pet_reaction",
+    "sleep",
+    "wake",
+    "walk"
+  ],
+  "draw_calls": 14,
+  "materials": 14,
+  "components": {
+    "body": {
+      "mesh": 1,
+      "skin": 0,
+      "triangles": 1463026,
+      "primitives": 8
+    },
+    "armor": {
+      "mesh": 0,
+      "skin": 0,
+      "triangles": 48952,
+      "primitives": 6
+    }
+  },
+  "blender": "5.2.1 LTS",
+  "human_likeness_accepted": false,
+  "mobile_performance_accepted": false,
+  "projection_used": false,
+  "paid_provider_used": false,
+  "package_status": "Local hash-checked Blender delivery; no game-dev canonical receipt.",
+  "animation_limit": "Original full action/rest/driver RNA unchanged; nine fresh GLB skin-matrix samples per clip. Original center-scale lids retained; no anatomical closure or collision-free motion claim.",
+  "likeness_limit": "Face-only sculpt interpreted from unchanged original artwork. Hidden angles inferred. Not a 100-percent likeness or human identity acceptance claim.",
+  "compression_lossless": false,
+  "source": "assets/3d/source/cat/sculpt-v005/cat-sculpt-v005.blend",
+  "model": "public/assets/3d/cat/cat-sculpt-v005.glb",
+  "reference": "assets/3d/reference/cat/sculpt-v005/original.png",
+  "validation": "assets/3d/reference/cat/sculpt-v005/validation.json",
+  "validation_sha256": "F23BF3A061F29AF1313398FDA72940BE9298C2D1C6718F66E7916D1E789EF31D",
+  "input_sha256": {
+    "assets/3d/source/cat/sculpt-v004/cat-sculpt-v004.blend": "F81EB0BA2C6BBE3050EFC2FFB910CA2D8CC5355D20F6A9B6CBA95C5E856095FA",
+    "public/assets/3d/cat/cat-sculpt-v004.glb": "5AF9E37CF5B488B302E1871606A2BC96BBA266C19CBD2BCFA806B0E3089622D5",
+    "public/assets/companions/cat.png": "C996F1500869602E32B24047F8D1A6FAB6018CE87514AA22F017A09480EAEFED",
+    "assets/3d/source/companions/sculpt-v001/common.py": "A6DF036A5B3F6FAA3C74740382998D829D45C9E2734D91A285F9369764C21F9E",
+    "assets/3d/source/asterion/sculpt-v001/build_sculpt.py": "9A81C430E8FD07CE520BBA554C78845A508F22E5FB89E524BF515D8BF8415621",
+    "assets/3d/source/asterion/sculpt-v001/rig_delivery.py": "8758D105E70AB5405F61A48A531154CC591EAC0D82B167788F1D0785A16CDFF0",
+    "assets/3d/source/asterion/sculpt-v002/validate_refinement.py": "8C541F26C2D2546FB142988D10F07EDF51C891D1C81F02065C7B62CE01F78EFD",
+    "assets/3d/source/asterion/sculpt-v003/build_head_study.py": "A3B22323201D30A3BD9459985F8F7741A44545010A84D27CC5912E1C8A85E0F2",
+    "assets/3d/source/asterion/sculpt-v004/export_equipment.py": "C805B4740463215AE5CC9D314D14966F2BDF91A00FB82D05054BE0BBB8ED930B",
+    "assets/3d/source/companions/sculpt-v004/build.py": "C6FBCA99D1117722B07933B90795DBFFA37DC22B399ECD6B339EAFF3C063A6BD",
+    "assets/3d/source/companions/sculpt-v004/refinements.py": "6247CEA1AE30B56B6FD3D23DEDEF1DD99BCD8A7B9158AA0576340AA2B8F89BCF",
+    "assets/3d/source/companions/sculpt-v004/export_equipment.py": "5EDB676641BE58BDE353213F6DA4F7F7662B76A08F586D0E7DADA7006AF343CF",
+    "assets/3d/source/cat/sculpt-v002/nyra_detail.py": "5DC1C07EAE70AE7C635D4C7026263D8D715EAE097EAD4904299B81D4405BC27B",
+    "assets/3d/source/companions/sculpt-v005/build.py": "2CD3C4D70E953C8BDBDDD01157745474A213968016F12BC3494BE8FD99C793BE",
+    "assets/3d/source/companions/sculpt-v005/contract.py": "F6829E7B890BA3B1108700B847CBB2C4CD532042233BD8049CC26B3A8522984E",
+    "assets/3d/source/companions/sculpt-v005/guards.py": "C98E5A25B553C56D016324F1AADE2669BEA28F3B2E73F5D883A74EBAEB599EF4",
+    "assets/3d/source/companions/sculpt-v005/feline_canine_faces.py": "E7063109E9EC68D995913009A55FB7EF4C229C353CB4750D6B74345F976D2E59"
+  },
+  "renders": {
+    "face-hero": {
+      "file": "assets/3d/reference/cat/sculpt-v005/source/cat-face-hero.png",
+      "sha256": "83F0E1F972AB2D94485E0EDD7D2AF2853323FDABE6A843EC3C75497EBAB94F52",
+      "clip": "idle",
+      "frame": 1
+    },
+    "face-front": {
+      "file": "assets/3d/reference/cat/sculpt-v005/source/cat-face-front.png",
+      "sha256": "FCE961CACD552B3D0FDA3E680293E45549CE367FFA29B510252C21046A9797FB",
+      "clip": "idle",
+      "frame": 1
+    },
+    "face-side": {
+      "file": "assets/3d/reference/cat/sculpt-v005/source/cat-face-side.png",
+      "sha256": "00D5857E237CC595FF9FD2970EBA21FAA87EDF08938E98BA8106D65E200311AC",
+      "clip": "idle",
+      "frame": 1
+    },
+    "blink-early": {
+      "file": "assets/3d/reference/cat/sculpt-v005/source/cat-blink-early.png",
+      "sha256": "C144DAE2D80B6FD7C38C4960939AB0226E4E31D6C435C7FCE5CBF714034789AB",
+      "clip": "blink",
+      "frame": 5
+    },
+    "blink-partial": {
+      "file": "assets/3d/reference/cat/sculpt-v005/source/cat-blink-partial.png",
+      "sha256": "841430AB349BD75A9AC6B92F7B20089097460F14621E2659F695E047277CB1E5",
+      "clip": "blink",
+      "frame": 7
+    },
+    "blink-closed": {
+      "file": "assets/3d/reference/cat/sculpt-v005/source/cat-blink-closed.png",
+      "sha256": "FA2B85EC9E7D5015559EE900832EB4F14865425CB3D369204C89B2497D48972A",
+      "clip": "blink",
+      "frame": 10
+    },
+    "hero": {
+      "file": "assets/3d/reference/cat/sculpt-v005/source/cat-hero.png",
+      "sha256": "612B3A76E530EE107AAD8E314495E6AFE4BE0AB0F3820AEED62C65EE7D76D678",
+      "clip": "idle",
+      "frame": 1
+    },
+    "rear": {
+      "file": "assets/3d/reference/cat/sculpt-v005/source/cat-rear.png",
+      "sha256": "23C7EAD55B4FFDF03BC82B5E9CBB1C8C691DDC32594C3CC610F2474DB5FDCDD5",
+      "clip": "idle",
+      "frame": 1
+    },
+    "body-hero": {
+      "file": "assets/3d/reference/cat/sculpt-v005/source/cat-body-hero.png",
+      "sha256": "E71E2BD3EF920743D7943F46A2FDC3763939BC2CB1BBB005B4F7EF4869C6CFC7",
+      "clip": "idle",
+      "frame": 1
+    }
+  },
+  "import_renders": {
+    "face-hero": {
+      "file": "assets/3d/reference/cat/sculpt-v005/import/cat-face-hero.png",
+      "sha256": "FC877FB794CE7E71E7A8FEAA330087886725242F5B46A26DE8264BE64E260C27",
+      "clip": "idle",
+      "frame": 1
+    },
+    "face-front": {
+      "file": "assets/3d/reference/cat/sculpt-v005/import/cat-face-front.png",
+      "sha256": "5E2188BAF9CAEE93CDB2B64AD53B64FD152F308AED8E64C3D202DE1583D5861C",
+      "clip": "idle",
+      "frame": 1
+    },
+    "face-side": {
+      "file": "assets/3d/reference/cat/sculpt-v005/import/cat-face-side.png",
+      "sha256": "FCE34F2FE16DC5EED18F18D9F01DF338A99459097AA9573CC7E222FE587E5B2C",
+      "clip": "idle",
+      "frame": 1
+    },
+    "blink-early": {
+      "file": "assets/3d/reference/cat/sculpt-v005/import/cat-blink-early.png",
+      "sha256": "ECA893FEF8C569D42B0D1D34FDB353D98B35441E5596B0598E3AA4E92E0B5B59",
+      "clip": "blink",
+      "frame": 5
+    },
+    "blink-partial": {
+      "file": "assets/3d/reference/cat/sculpt-v005/import/cat-blink-partial.png",
+      "sha256": "AB54444E590F71DA4FA2D8C30D85016AD1BECF6430B3411572C521299021B176",
+      "clip": "blink",
+      "frame": 7
+    },
+    "blink-closed": {
+      "file": "assets/3d/reference/cat/sculpt-v005/import/cat-blink-closed.png",
+      "sha256": "028C3E1F2AC3EB67A9F656E9687C1AE724351A87FD4088B5CEB0A15C7B8BB825",
+      "clip": "blink",
+      "frame": 10
+    },
+    "hero": {
+      "file": "assets/3d/reference/cat/sculpt-v005/import/cat-hero.png",
+      "sha256": "B3F3FE16207864D81932BA76D4B542F517352AD0A81154BC8C3CEC499F9FCACA",
+      "clip": "idle",
+      "frame": 1
+    },
+    "body-hero": {
+      "file": "assets/3d/reference/cat/sculpt-v005/import/cat-body-hero.png",
+      "sha256": "363AA7B97F140401E7B81831D6EB84A63912D089D95F8F34D833293C4A6584CB",
+      "clip": "idle",
+      "frame": 1
+    }
+  },
+  "baseline_renders": {
+    "face-hero": {
+      "file": "assets/3d/reference/cat/sculpt-v005/baseline/cat-face-hero.png",
+      "sha256": "B1F424870F889B99DCF028925EFB495C7F0AAA99A3B57E77609FD9378109DECC",
+      "clip": "idle",
+      "frame": 1
+    },
+    "face-front": {
+      "file": "assets/3d/reference/cat/sculpt-v005/baseline/cat-face-front.png",
+      "sha256": "1DCC58AA254B51F99F746C643E9F51E534AEAE1B531D49E3D070340236EEDCB7",
+      "clip": "idle",
+      "frame": 1
+    },
+    "face-side": {
+      "file": "assets/3d/reference/cat/sculpt-v005/baseline/cat-face-side.png",
+      "sha256": "2B22CE4DA118A758413ADFF7FE109774F2A8AF0593C341F3A045C8BE7A23237F",
+      "clip": "idle",
+      "frame": 1
+    }
+  },
+  "face_scope_only": true,
+  "nonface_unchanged": true,
+  "animations_unchanged": true,
+  "equipment_separate": true,
+  "fresh_import_passed": true,
+  "notes": "Face-only integrated orbital curvature, larger dark pupils, connected whisker pads and softened facial fur.",
+  "edited_objects": 50,
+  "protected_object_count": 196,
+  "protected_material_count": 7
+}

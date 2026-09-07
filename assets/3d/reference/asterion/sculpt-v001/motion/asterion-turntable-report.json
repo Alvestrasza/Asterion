@@ -1,0 +1,135 @@
+{
+  "source_blend": "assets/3d/source/asterion/sculpt-v001/asterion-sculpt-v001.blend",
+  "source_sha256": "FB4E6F396699C1E5B0CB51790DC3BE81C7A35545BD104F6D49988A24AE114CEA",
+  "blender": "5.2.1 LTS",
+  "animation": {
+    "source_idle_action": "idle",
+    "source_idle_frame_range": [
+      1,
+      121
+    ],
+    "source_blink_action": "blink",
+    "preview_blink_frames": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "preview_action": "asterion_movie_preview",
+    "bone_count": 22
+  },
+  "camera": {
+    "orbit_degrees": 360,
+    "target": [
+      0,
+      0.25,
+      2.880000114440918
+    ],
+    "radius": 14.5,
+    "height": 5.2,
+    "ortho_scale": 6.900000095367432
+  },
+  "stage": "existing_master_studio",
+  "render": {
+    "engine": "CYCLES",
+    "device": "OPTIX",
+    "note": null,
+    "samples": 24,
+    "resolution": [
+      720,
+      720
+    ],
+    "frames": 96,
+    "fps": 24,
+    "duration_seconds": 4
+  },
+  "media_format": "H264_MPEG4",
+  "fallback": null,
+  "master_saved_or_overwritten": false,
+  "completed": true,
+  "movie": {
+    "path": "assets/3d/reference/asterion/sculpt-v001/motion/asterion-turntable.mp4",
+    "bytes": 764089,
+    "sha256": "3C81C1512D5608669F67E3D7F60A49A86057E985C38395AE889392125995FC41"
+  },
+  "movie_validation": {
+    "decoded_size": [
+      720,
+      720
+    ],
+    "decoded_frames": 96,
+    "decoded_fps": 24,
+    "passed": true
+  },
+  "representative_stills": [
+    {
+      "frame": 1,
+      "path": "assets/3d/reference/asterion/sculpt-v001/motion/asterion-turntable-stills/frame_0001.png",
+      "source": "decoded_H264_movie"
+    },
+    {
+      "frame": 13,
+      "path": "assets/3d/reference/asterion/sculpt-v001/motion/asterion-turntable-stills/frame_0013.png",
+      "source": "decoded_H264_movie"
+    },
+    {
+      "frame": 24,
+      "path": "assets/3d/reference/asterion/sculpt-v001/motion/asterion-turntable-stills/frame_0024.png",
+      "source": "decoded_H264_movie"
+    },
+    {
+      "frame": 48,
+      "path": "assets/3d/reference/asterion/sculpt-v001/motion/asterion-turntable-stills/frame_0048.png",
+      "source": "decoded_H264_movie"
+    },
+    {
+      "frame": 72,
+      "path": "assets/3d/reference/asterion/sculpt-v001/motion/asterion-turntable-stills/frame_0072.png",
+      "source": "decoded_H264_movie"
+    },
+    {
+      "frame": 96,
+      "path": "assets/3d/reference/asterion/sculpt-v001/motion/asterion-turntable-stills/frame_0096.png",
+      "source": "decoded_H264_movie"
+    }
+  ],
+  "elapsed_seconds": 125.03,
+  "visual_review": {
+    "source": "Decoded H264 movie stills",
+    "inspected_frames": [
+      1,
+      13,
+      24,
+      48,
+      72,
+      96
+    ],
+    "full_360_volume_visible": true,
+    "tail_inlays_follow_tail_surface_in_reviewed_views": true,
+    "no_detached_tail_rods_in_reviewed_views": true,
+    "no_major_deformation_collapse_in_reviewed_frames": true,
+    "near_eye_closed_at_blink_peak": true,
+    "remaining_observation": "A very small pale inner-corner seam remains on the far eye at peak blink."
+  },
+  "path_base": "repository_root",
+  "publication_amendment": {
+    "id": "metadata-clean-2026-09-07",
+    "record": "assets/3d/publication/2026-09-07/amendment.json",
+    "original_document_sha256": "524CCD5CF268E30C715F6E8FDE3315DB617A165B337C6BAA155598B2B4AB8B9D",
+    "authoring_record": "assets/3d/publication/2026-09-07/authoring-records/assets/3d/reference/asterion/sculpt-v001/motion/asterion-turntable-report.json",
+    "authoring_record_status": "exact-public-safe-original",
+    "notice": "Metadata-only publication derivative, not a rerun of the historical builder or validator. File digest and size bindings identify publication copies; all measured geometry, materials, rig, action, motion and acceptance evidence remains historical and unchanged. Consult the original authoring record and amendment binding log."
+  }
+}

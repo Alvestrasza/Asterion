@@ -1,0 +1,1522 @@
+{
+  "schema": "asterion-local-modular-companion-v1",
+  "version": "sculpt-v003",
+  "kind": "rabbit",
+  "name": "Liora",
+  "source_sha256": "9CB6C1C5B9FD5D8F2C97A5FC4B0B1CBF0FDC753639E423E98F0720823D31D7E6",
+  "model_sha256": "315EC6312FF1A7361BD4277801D88661E2B1B4B6B280C589E63EADF0B18A2C26",
+  "reference_sha256": "26CD3B4BEFF8FE37488F860C3847BD78B9455102CB3FDF5C36BCBD98AF74F95D",
+  "input_sha256": {
+    "assets/3d/source/rabbit/sculpt-v002/rabbit-sculpt-v002.blend": "D6ED849A0528157E60D98D15E349D4630D5344C777B51BCFAE36F7D0508085C1",
+    "public/assets/3d/rabbit/rabbit-sculpt-v002.glb": "2C0F4479A9FAF1004812BFF5AF878A975A08C108D4CA0F034942AA87FAAFFB25",
+    "public/assets/companions/rabbit.png": "26CD3B4BEFF8FE37488F860C3847BD78B9455102CB3FDF5C36BCBD98AF74F95D",
+    "assets/3d/source/companions/sculpt-v003/build.py": "D29DC488FAF8CB4CB51C81291A9B21102E74832209991D90B23DEF4DA12D5763",
+    "assets/3d/source/companions/sculpt-v003/refinements.py": "82AE8D392CCCF12EA231BD66A0244BDA073739AA4C0B3103DE7DD8DDDA1FBEBA",
+    "assets/3d/source/companions/sculpt-v003/export_equipment.py": "B12B82828199ED109E2764A69BA10A8036D79B62331FA8082C9EF4BEBFC1FB2D",
+    "assets/3d/source/companions/sculpt-v001/common.py": "A6DF036A5B3F6FAA3C74740382998D829D45C9E2734D91A285F9369764C21F9E",
+    "assets/3d/source/asterion/sculpt-v002/validate_refinement.py": "8C541F26C2D2546FB142988D10F07EDF51C891D1C81F02065C7B62CE01F78EFD",
+    "assets/3d/source/asterion/sculpt-v003/build_head_study.py": "A3B22323201D30A3BD9459985F8F7741A44545010A84D27CC5912E1C8A85E0F2",
+    "assets/3d/source/asterion/sculpt-v001/build_sculpt.py": "9A81C430E8FD07CE520BBA554C78845A508F22E5FB89E524BF515D8BF8415621",
+    "assets/3d/source/asterion/sculpt-v001/rig_delivery.py": "8758D105E70AB5405F61A48A531154CC591EAC0D82B167788F1D0785A16CDFF0",
+    "assets/3d/source/asterion/sculpt-v004/export_equipment.py": "C805B4740463215AE5CC9D314D14966F2BDF91A00FB82D05054BE0BBB8ED930B"
+  },
+  "blender": "5.2.1 LTS",
+  "checks": {
+    "original_rest_rig_unchanged": true,
+    "original_constraints_drivers_unchanged": true,
+    "all_original_action_data_unchanged": true,
+    "original_frame_rate_unchanged": true,
+    "original_eye_geometry_colors_weights_unchanged": true,
+    "all_source_parts_classified_once": true,
+    "explicit_editable_equipment_groups": true,
+    "meaningful_geometry_refinement": true,
+    "base_clothing_present": true,
+    "two_character_meshes": true,
+    "exact_distinct_components": true,
+    "one_original_shared_skin": true,
+    "nine_original_clips": true,
+    "only_public_extras": true,
+    "skinned_triangle_primitives": true,
+    "under_40_primitives": true,
+    "under_two_million_triangles": true,
+    "self_contained_no_projection": true,
+    "no_editor_stage": true,
+    "meshopt": true,
+    "under_25_mb": true,
+    "finite_imported_geometry": true,
+    "valid_normalized_known_weights": true,
+    "bounded_importer_triangle_difference": true,
+    "nine_clips_match_historical_import": true,
+    "two_imported_components": true,
+    "imported_equipment_metadata": true,
+    "all_historical_and_builder_inputs_unchanged": true
+  },
+  "components": {
+    "body": {
+      "mesh": 1,
+      "skin": 0,
+      "triangles": 1265946,
+      "primitives": 10
+    },
+    "armor": {
+      "mesh": 0,
+      "skin": 0,
+      "triangles": 59540,
+      "primitives": 11
+    }
+  },
+  "triangles": 1325486,
+  "draw_calls": 21,
+  "materials": 21,
+  "bones": 13,
+  "clips": [
+    "idle",
+    "blink",
+    "happy",
+    "eat",
+    "play",
+    "pet_reaction",
+    "sleep",
+    "wake",
+    "walk"
+  ],
+  "compression_lossless": false,
+  "bytes": 15669680,
+  "geometry": {
+    "vertices": 673472,
+    "triangles": 1325465,
+    "nonfinite_vertices": 0,
+    "nonfinite_transforms": 0,
+    "unweighted_vertices": 0,
+    "invalid_weights": 0,
+    "unknown_weights": 0,
+    "over_four_weights": 0,
+    "max_influences": 2,
+    "bounds_min": [
+      -0.984375,
+      -1.6875001192092896,
+      -0.01318345032632351
+    ],
+    "bounds_max": [
+      1.033203125,
+      1.96484375,
+      4.828125
+    ],
+    "span": [
+      2.017578125,
+      3.6523438692092896,
+      4.8413084503263235
+    ]
+  },
+  "triangle_count_evidence": {
+    "authored": 1325486,
+    "imported": 1325465,
+    "exact_equal": false,
+    "triangle_loss": 21,
+    "relative_loss": 1.5843245420924852e-05,
+    "maximum_allowed_loss": 26,
+    "relative_tolerance": 2e-05,
+    "passed": true,
+    "limit": "Count difference only; individual omitted triangle degeneracy is not proven by this check."
+  },
+  "changes": {
+    "notes": "Shorter, plumper cheek fans with softer overlapping tips and directional cream-fur relief.",
+    "edited_objects": [
+      {
+        "name": "AST_Liora_fur_cheek_R_00",
+        "vertices": 2122,
+        "max_displacement": 0.07649054391935042,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0.17
+      },
+      {
+        "name": "AST_Liora_fur_cheek_R_soft_split_00_0",
+        "vertices": 1150,
+        "max_displacement": 0.08040404776223911,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0.17
+      },
+      {
+        "name": "AST_Liora_fur_cheek_R_soft_split_00_1",
+        "vertices": 1150,
+        "max_displacement": 0.07030874981627123,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0.17
+      },
+      {
+        "name": "AST_Liora_fur_cheek_R_01",
+        "vertices": 2122,
+        "max_displacement": 0.0840083862445296,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0.17
+      },
+      {
+        "name": "AST_Liora_fur_cheek_R_soft_split_01_0",
+        "vertices": 1150,
+        "max_displacement": 0.08749896903796865,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0.17
+      },
+      {
+        "name": "AST_Liora_fur_cheek_R_soft_split_01_1",
+        "vertices": 1150,
+        "max_displacement": 0.07807016573430063,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0.17
+      },
+      {
+        "name": "AST_Liora_fur_cheek_R_02",
+        "vertices": 2122,
+        "max_displacement": 0.08817314757123634,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0.17
+      },
+      {
+        "name": "AST_Liora_fur_cheek_R_soft_split_02_0",
+        "vertices": 1150,
+        "max_displacement": 0.0919784947784965,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0.17
+      },
+      {
+        "name": "AST_Liora_fur_cheek_R_soft_split_02_1",
+        "vertices": 1150,
+        "max_displacement": 0.08176476515328596,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0.17
+      },
+      {
+        "name": "AST_Liora_fur_cheek_R_03",
+        "vertices": 2122,
+        "max_displacement": 0.08482794815852865,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0.17
+      },
+      {
+        "name": "AST_Liora_fur_cheek_R_soft_split_03_0",
+        "vertices": 1150,
+        "max_displacement": 0.08798642008439156,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0.17
+      },
+      {
+        "name": "AST_Liora_fur_cheek_R_soft_split_03_1",
+        "vertices": 1150,
+        "max_displacement": 0.0792531399353216,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0.17
+      },
+      {
+        "name": "AST_Liora_fur_cheek_R_04",
+        "vertices": 2122,
+        "max_displacement": 0.0771818615888724,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0.17
+      },
+      {
+        "name": "AST_Liora_fur_cheek_R_soft_split_04_0",
+        "vertices": 1150,
+        "max_displacement": 0.0804920777466715,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0.17
+      },
+      {
+        "name": "AST_Liora_fur_cheek_R_soft_split_04_1",
+        "vertices": 1150,
+        "max_displacement": 0.07168092479985563,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0.17
+      },
+      {
+        "name": "AST_Liora_fur_jaw_R_00",
+        "vertices": 1038,
+        "max_displacement": 0.0023972729489530917,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Liora_fur_jaw_R_01",
+        "vertices": 1038,
+        "max_displacement": 0.0023972736824701426,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Liora_fur_cheek_L_00",
+        "vertices": 2122,
+        "max_displacement": 0.0764905490026991,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0.17
+      },
+      {
+        "name": "AST_Liora_fur_cheek_L_soft_split_00_0",
+        "vertices": 1150,
+        "max_displacement": 0.08047561107913292,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0.17
+      },
+      {
+        "name": "AST_Liora_fur_cheek_L_soft_split_00_1",
+        "vertices": 1150,
+        "max_displacement": 0.07022558132854564,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0.17
+      },
+      {
+        "name": "AST_Liora_fur_cheek_L_01",
+        "vertices": 2122,
+        "max_displacement": 0.08400837593024255,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0.17
+      },
+      {
+        "name": "AST_Liora_fur_cheek_L_soft_split_01_0",
+        "vertices": 1150,
+        "max_displacement": 0.08744112852928508,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0.17
+      },
+      {
+        "name": "AST_Liora_fur_cheek_L_soft_split_01_1",
+        "vertices": 1150,
+        "max_displacement": 0.07813776638422475,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0.17
+      },
+      {
+        "name": "AST_Liora_fur_cheek_L_02",
+        "vertices": 2122,
+        "max_displacement": 0.08817314795678913,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0.17
+      },
+      {
+        "name": "AST_Liora_fur_cheek_L_soft_split_02_0",
+        "vertices": 1150,
+        "max_displacement": 0.09202363244739373,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0.17
+      },
+      {
+        "name": "AST_Liora_fur_cheek_L_soft_split_02_1",
+        "vertices": 1150,
+        "max_displacement": 0.08171364122837689,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0.17
+      },
+      {
+        "name": "AST_Liora_fur_cheek_L_03",
+        "vertices": 2122,
+        "max_displacement": 0.08482795109028825,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0.17
+      },
+      {
+        "name": "AST_Liora_fur_cheek_L_soft_split_03_0",
+        "vertices": 1150,
+        "max_displacement": 0.08790244756694386,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0.17
+      },
+      {
+        "name": "AST_Liora_fur_cheek_L_soft_split_03_1",
+        "vertices": 1150,
+        "max_displacement": 0.07935278285134496,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0.17
+      },
+      {
+        "name": "AST_Liora_fur_cheek_L_04",
+        "vertices": 2122,
+        "max_displacement": 0.07718187855653386,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0.17
+      },
+      {
+        "name": "AST_Liora_fur_cheek_L_soft_split_04_0",
+        "vertices": 1150,
+        "max_displacement": 0.08055388019663216,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0.17
+      },
+      {
+        "name": "AST_Liora_fur_cheek_L_soft_split_04_1",
+        "vertices": 1150,
+        "max_displacement": 0.07160689811011843,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0.17
+      },
+      {
+        "name": "AST_Liora_fur_jaw_L_00",
+        "vertices": 1038,
+        "max_displacement": 0.0023972716322289535,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Liora_fur_jaw_L_01",
+        "vertices": 1038,
+        "max_displacement": 0.0023972761639787714,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Liora_fur_forehead_00",
+        "vertices": 1314,
+        "max_displacement": 0.0032671114110322,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Liora_fur_forehead_01",
+        "vertices": 1314,
+        "max_displacement": 0.003267115411099118,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Liora_fur_forehead_02",
+        "vertices": 1314,
+        "max_displacement": 0.0032671146547157697,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Liora_fur_forehead_03",
+        "vertices": 1314,
+        "max_displacement": 0.00326710974773981,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Liora_fur_forehead_04",
+        "vertices": 1314,
+        "max_displacement": 0.0032671137263610996,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Liora_fur_inner_ear_brush_R_0",
+        "vertices": 1378,
+        "max_displacement": 0.002940057673471302,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Liora_fur_inner_ear_brush_R_1",
+        "vertices": 1378,
+        "max_displacement": 0.002722273668215837,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Liora_fur_inner_ear_brush_R_2",
+        "vertices": 1378,
+        "max_displacement": 0.0025044905660308358,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Liora_fur_inner_ear_brush_L_0",
+        "vertices": 1378,
+        "max_displacement": 0.0029400566520319206,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Liora_fur_inner_ear_brush_L_1",
+        "vertices": 1378,
+        "max_displacement": 0.0027222741637855756,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Liora_fur_inner_ear_brush_L_2",
+        "vertices": 1378,
+        "max_displacement": 0.002504490791693389,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Liora_fur_bib_0_0",
+        "vertices": 1378,
+        "max_displacement": 0.0034300643390501066,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Liora_fur_bib_0_1",
+        "vertices": 1378,
+        "max_displacement": 0.0034300654631083437,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Liora_fur_bib_0_2",
+        "vertices": 1378,
+        "max_displacement": 0.0034300648266265424,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Liora_fur_bib_0_3",
+        "vertices": 1378,
+        "max_displacement": 0.003430064749930345,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Liora_fur_bib_0_4",
+        "vertices": 1378,
+        "max_displacement": 0.003430064842797092,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Liora_fur_bib_1_0",
+        "vertices": 1378,
+        "max_displacement": 0.0034300644049180076,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Liora_fur_bib_1_1",
+        "vertices": 1378,
+        "max_displacement": 0.0034300648749224145,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Liora_fur_bib_1_2",
+        "vertices": 1378,
+        "max_displacement": 0.0034300647051498287,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Liora_fur_bib_1_3",
+        "vertices": 1378,
+        "max_displacement": 0.0034300646052866394,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Liora_fur_short_coat_R_00",
+        "vertices": 794,
+        "max_displacement": 0.002016168664310605,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Liora_fur_short_coat_R_01",
+        "vertices": 794,
+        "max_displacement": 0.002016171465465355,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Liora_fur_short_coat_R_02",
+        "vertices": 794,
+        "max_displacement": 0.002016169931895908,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Liora_fur_short_coat_R_03",
+        "vertices": 794,
+        "max_displacement": 0.0020161697917713216,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Liora_fur_short_coat_R_04",
+        "vertices": 794,
+        "max_displacement": 0.0020161714063430054,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Liora_fur_short_coat_R_05",
+        "vertices": 794,
+        "max_displacement": 0.002016169331677864,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Liora_fur_short_coat_R_06",
+        "vertices": 794,
+        "max_displacement": 0.0020161697673882106,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Liora_fur_short_coat_R_07",
+        "vertices": 794,
+        "max_displacement": 0.0020161719630077484,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Liora_fur_short_coat_L_00",
+        "vertices": 794,
+        "max_displacement": 0.002016170545311109,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Liora_fur_short_coat_L_01",
+        "vertices": 794,
+        "max_displacement": 0.0020161719745425935,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Liora_fur_short_coat_L_02",
+        "vertices": 794,
+        "max_displacement": 0.002016172298865756,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Liora_fur_short_coat_L_03",
+        "vertices": 794,
+        "max_displacement": 0.002016172170846436,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Liora_fur_short_coat_L_04",
+        "vertices": 794,
+        "max_displacement": 0.0020161721680057843,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Liora_fur_short_coat_L_05",
+        "vertices": 794,
+        "max_displacement": 0.00201617315823911,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Liora_fur_short_coat_L_06",
+        "vertices": 794,
+        "max_displacement": 0.0020161709851510335,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Liora_fur_short_coat_L_07",
+        "vertices": 794,
+        "max_displacement": 0.0020161692629626048,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Liora_fur_cotton_spiral_wisp_00",
+        "vertices": 2442,
+        "max_displacement": 0.00822602215617835,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Liora_fur_cotton_spiral_wisp_01",
+        "vertices": 2442,
+        "max_displacement": 0.008884373502697255,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Liora_fur_cotton_spiral_wisp_02",
+        "vertices": 2442,
+        "max_displacement": 0.007561286934905246,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Liora_fur_cotton_spiral_wisp_03",
+        "vertices": 2442,
+        "max_displacement": 0.008238843749966715,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Liora_fur_cotton_spiral_wisp_04",
+        "vertices": 2442,
+        "max_displacement": 0.008877806729465731,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Liora_fur_cotton_spiral_wisp_05",
+        "vertices": 2442,
+        "max_displacement": 0.0075550994529472995,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Liora_fur_cotton_spiral_wisp_06",
+        "vertices": 2442,
+        "max_displacement": 0.00825166398417775,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Liora_fur_cotton_spiral_wisp_07",
+        "vertices": 2442,
+        "max_displacement": 0.008871052341114918,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Liora_fur_cotton_spiral_wisp_08",
+        "vertices": 2442,
+        "max_displacement": 0.00754909193855655,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Liora_fur_cotton_spiral_wisp_09",
+        "vertices": 2442,
+        "max_displacement": 0.008264479804863962,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Liora_fur_cotton_spiral_wisp_10",
+        "vertices": 2442,
+        "max_displacement": 0.008864118354428659,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Liora_fur_cotton_spiral_wisp_11",
+        "vertices": 2442,
+        "max_displacement": 0.0075432848425472055,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Liora_fur_cotton_spiral_wisp_12",
+        "vertices": 2442,
+        "max_displacement": 0.008277278578072938,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Liora_fur_cotton_spiral_wisp_13",
+        "vertices": 2442,
+        "max_displacement": 0.008857007081761448,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Liora_fur_cotton_spiral_wisp_14",
+        "vertices": 2442,
+        "max_displacement": 0.007537667734872922,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Liora_fur_cotton_spiral_wisp_15",
+        "vertices": 2442,
+        "max_displacement": 0.00829006801359786,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Liora_fur_cotton_spiral_wisp_16",
+        "vertices": 2442,
+        "max_displacement": 0.00884971079480973,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Liora_fur_cotton_spiral_wisp_17",
+        "vertices": 2442,
+        "max_displacement": 0.007532243847618178,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Liora_fur_cotton_spiral_wisp_18",
+        "vertices": 2442,
+        "max_displacement": 0.008302835315910853,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Liora_fur_cotton_spiral_wisp_19",
+        "vertices": 2442,
+        "max_displacement": 0.008842248496640701,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Liora_fur_cotton_spiral_wisp_20",
+        "vertices": 2442,
+        "max_displacement": 0.007527009184691421,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Liora_fur_cotton_spiral_wisp_21",
+        "vertices": 2442,
+        "max_displacement": 0.008315579591454804,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Liora_fur_cotton_spiral_wisp_22",
+        "vertices": 2442,
+        "max_displacement": 0.008834607015408297,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Liora_fur_cotton_spiral_wisp_23",
+        "vertices": 2442,
+        "max_displacement": 0.007521980805404178,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Liora_fur_cotton_spiral_wisp_24",
+        "vertices": 2442,
+        "max_displacement": 0.008328311157617918,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Liora_fur_cotton_spiral_wisp_25",
+        "vertices": 2442,
+        "max_displacement": 0.00882678766624052,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Liora_fur_cotton_spiral_wisp_26",
+        "vertices": 2442,
+        "max_displacement": 0.007517149107413471,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Liora_fur_cotton_spiral_wisp_27",
+        "vertices": 2442,
+        "max_displacement": 0.008341003030331208,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Liora_fur_cotton_spiral_wisp_28",
+        "vertices": 2442,
+        "max_displacement": 0.008818806798814112,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Liora_fur_cotton_spiral_wisp_29",
+        "vertices": 2442,
+        "max_displacement": 0.007512518302741752,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Liora_fur_cotton_spiral_wisp_30",
+        "vertices": 2442,
+        "max_displacement": 0.008353663787803625,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Liora_fur_cotton_spiral_wisp_31",
+        "vertices": 2442,
+        "max_displacement": 0.008810648261746866,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Liora_fur_cotton_spiral_wisp_32",
+        "vertices": 2442,
+        "max_displacement": 0.007508090388104543,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Liora_fur_cotton_spiral_wisp_33",
+        "vertices": 2442,
+        "max_displacement": 0.008366285268661774,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Liora_fur_cotton_spiral_wisp_34",
+        "vertices": 2442,
+        "max_displacement": 0.008802331793674211,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Liora_fur_cotton_spiral_wisp_35",
+        "vertices": 2442,
+        "max_displacement": 0.0075038640739427676,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Liora_fur_cotton_spiral_wisp_36",
+        "vertices": 2442,
+        "max_displacement": 0.008378873624873483,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Liora_fur_cotton_spiral_wisp_37",
+        "vertices": 2442,
+        "max_displacement": 0.00879385352681259,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Liora_fur_cotton_spiral_wisp_38",
+        "vertices": 2442,
+        "max_displacement": 0.007499840101683142,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Liora_fur_cotton_spiral_wisp_39",
+        "vertices": 2442,
+        "max_displacement": 0.008391414845715086,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Liora_fur_cotton_spiral_wisp_40",
+        "vertices": 2442,
+        "max_displacement": 0.00878521558246074,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Liora_fur_cotton_spiral_wisp_41",
+        "vertices": 2442,
+        "max_displacement": 0.007496027833431352,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Liora_fur_cotton_spiral_wisp_42",
+        "vertices": 2442,
+        "max_displacement": 0.008403908571830014,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Liora_fur_cotton_spiral_wisp_43",
+        "vertices": 2442,
+        "max_displacement": 0.008776415133616256,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Liora_fur_cotton_spiral_wisp_44",
+        "vertices": 2442,
+        "max_displacement": 0.007492409645757178,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Liora_fur_cotton_spiral_wisp_45",
+        "vertices": 2442,
+        "max_displacement": 0.008416352494849089,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Liora_fur_cotton_spiral_wisp_46",
+        "vertices": 2442,
+        "max_displacement": 0.008767456850195615,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Liora_fur_cotton_spiral_wisp_47",
+        "vertices": 2442,
+        "max_displacement": 0.00748901276987432,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Liora_fur_cotton_upper_flutter_L",
+        "vertices": 1698,
+        "max_displacement": 0.004086712669248505,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Liora_fur_cotton_upper_flutter_R",
+        "vertices": 1698,
+        "max_displacement": 0.0038687542406948957,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      }
+    ],
+    "added_base_clothing": [],
+    "equipment_source_objects": [
+      "AST_liora_v2_rose_ear_guard_R-1",
+      "AST_liora_v2_ear_guard_blade_R0",
+      "AST_liora_v2_ear_guard_blade_R1",
+      "AST_liora_v2_ear_guard_blade_R2",
+      "AST_liora_v2_rose_ear_guard_R1",
+      "AST_liora_v2_rose_ear_guard_L-1",
+      "AST_liora_v2_rose_ear_guard_L1",
+      "AST_liora_v2_ear_guard_blade_L0",
+      "AST_liora_v2_ear_guard_blade_L1",
+      "AST_liora_v2_ear_guard_blade_L2",
+      "AST_liora_v2_open_forehead_diamond",
+      "AST_liora_v2_forehead_upper_spark",
+      "AST_liora_v2_delicate_temple_star_L",
+      "AST_liora_v2_delicate_temple_star_R",
+      "AST_liora_v2_fitted_lavender_shoulder_L",
+      "AST_liora_v2_curved_lavender_saddle_L",
+      "AST_liora_v2_shoulder_rose_spark_L",
+      "AST_liora_v2_shoulder_lilac_spark_L",
+      "AST_liora_v2_haunch_rose_star_L",
+      "AST_liora_v2_fitted_lavender_shoulder_R",
+      "AST_liora_v2_curved_lavender_saddle_R",
+      "AST_liora_v2_shoulder_rose_spark_R",
+      "AST_liora_v2_shoulder_lilac_spark_R",
+      "AST_liora_v2_haunch_rose_star_R",
+      "AST_liora_v2_rose_body_girth",
+      "AST_liora_v2_long_breast_pendant_rose_bezel",
+      "AST_liora_v2_long_breast_pendant_lilac_crystal",
+      "AST_liora_v2_upper_diamond_connector_rose_bezel",
+      "AST_liora_v2_upper_diamond_connector_lilac_crystal",
+      "AST_liora_v2_continuous_rose_neck_harness",
+      "AST_liora_v2_double_angular_fore_cuff_L_0",
+      "AST_liora_v2_double_angular_fore_cuff_L_1",
+      "AST_liora_v2_open_fore_cuff_diamond_L",
+      "AST_liora_v2_double_angular_fore_cuff_R_0",
+      "AST_liora_v2_double_angular_fore_cuff_R_1",
+      "AST_liora_v2_open_fore_cuff_diamond_R"
+    ],
+    "body_source_objects": [
+      "AST_liora_v2_body",
+      "AST_liora_v2_head",
+      "AST_liora_v2_cupped_ear_R",
+      "AST_liora_v2_lavender_ear_bowl_R",
+      "AST_liora_v2_cupped_ear_L",
+      "AST_liora_v2_lavender_ear_bowl_L",
+      "AST_Liora_fur_cheek_R_00",
+      "AST_Liora_fur_cheek_R_soft_split_00_0",
+      "AST_Liora_fur_cheek_R_soft_split_00_1",
+      "AST_Liora_fur_cheek_R_01",
+      "AST_Liora_fur_cheek_R_soft_split_01_0",
+      "AST_Liora_fur_cheek_R_soft_split_01_1",
+      "AST_Liora_fur_cheek_R_02",
+      "AST_Liora_fur_cheek_R_soft_split_02_0",
+      "AST_Liora_fur_cheek_R_soft_split_02_1",
+      "AST_Liora_fur_cheek_R_03",
+      "AST_Liora_fur_cheek_R_soft_split_03_0",
+      "AST_Liora_fur_cheek_R_soft_split_03_1",
+      "AST_Liora_fur_cheek_R_04",
+      "AST_Liora_fur_cheek_R_soft_split_04_0",
+      "AST_Liora_fur_cheek_R_soft_split_04_1",
+      "AST_Liora_fur_jaw_R_00",
+      "AST_Liora_fur_jaw_R_01",
+      "AST_Liora_fur_cheek_L_00",
+      "AST_Liora_fur_cheek_L_soft_split_00_0",
+      "AST_Liora_fur_cheek_L_soft_split_00_1",
+      "AST_Liora_fur_cheek_L_01",
+      "AST_Liora_fur_cheek_L_soft_split_01_0",
+      "AST_Liora_fur_cheek_L_soft_split_01_1",
+      "AST_Liora_fur_cheek_L_02",
+      "AST_Liora_fur_cheek_L_soft_split_02_0",
+      "AST_Liora_fur_cheek_L_soft_split_02_1",
+      "AST_Liora_fur_cheek_L_03",
+      "AST_Liora_fur_cheek_L_soft_split_03_0",
+      "AST_Liora_fur_cheek_L_soft_split_03_1",
+      "AST_Liora_fur_cheek_L_04",
+      "AST_Liora_fur_cheek_L_soft_split_04_0",
+      "AST_Liora_fur_cheek_L_soft_split_04_1",
+      "AST_Liora_fur_jaw_L_00",
+      "AST_Liora_fur_jaw_L_01",
+      "AST_Liora_fur_forehead_00",
+      "AST_Liora_fur_forehead_01",
+      "AST_Liora_fur_forehead_02",
+      "AST_Liora_fur_forehead_03",
+      "AST_Liora_fur_forehead_04",
+      "AST_Liora_fur_inner_ear_brush_R_0",
+      "AST_Liora_fur_inner_ear_brush_R_1",
+      "AST_Liora_fur_inner_ear_brush_R_2",
+      "AST_Liora_fur_inner_ear_brush_L_0",
+      "AST_Liora_fur_inner_ear_brush_L_1",
+      "AST_Liora_fur_inner_ear_brush_L_2",
+      "AST_Liora_fur_bib_0_0",
+      "AST_Liora_fur_bib_0_1",
+      "AST_Liora_fur_bib_0_2",
+      "AST_Liora_fur_bib_0_3",
+      "AST_Liora_fur_bib_0_4",
+      "AST_Liora_fur_bib_1_0",
+      "AST_Liora_fur_bib_1_1",
+      "AST_Liora_fur_bib_1_2",
+      "AST_Liora_fur_bib_1_3",
+      "AST_Liora_fur_short_coat_R_00",
+      "AST_Liora_fur_short_coat_R_01",
+      "AST_Liora_fur_short_coat_R_02",
+      "AST_Liora_fur_short_coat_R_03",
+      "AST_Liora_fur_short_coat_R_04",
+      "AST_Liora_fur_short_coat_R_05",
+      "AST_Liora_fur_short_coat_R_06",
+      "AST_Liora_fur_short_coat_R_07",
+      "AST_Liora_fur_short_coat_L_00",
+      "AST_Liora_fur_short_coat_L_01",
+      "AST_Liora_fur_short_coat_L_02",
+      "AST_Liora_fur_short_coat_L_03",
+      "AST_Liora_fur_short_coat_L_04",
+      "AST_Liora_fur_short_coat_L_05",
+      "AST_Liora_fur_short_coat_L_06",
+      "AST_Liora_fur_short_coat_L_07",
+      "AST_Liora_fur_cotton_tail_core",
+      "AST_Liora_fur_cotton_spiral_wisp_00",
+      "AST_Liora_fur_cotton_spiral_wisp_01",
+      "AST_Liora_fur_cotton_spiral_wisp_02",
+      "AST_Liora_fur_cotton_spiral_wisp_03",
+      "AST_Liora_fur_cotton_spiral_wisp_04",
+      "AST_Liora_fur_cotton_spiral_wisp_05",
+      "AST_Liora_fur_cotton_spiral_wisp_06",
+      "AST_Liora_fur_cotton_spiral_wisp_07",
+      "AST_Liora_fur_cotton_spiral_wisp_08",
+      "AST_Liora_fur_cotton_spiral_wisp_09",
+      "AST_Liora_fur_cotton_spiral_wisp_10",
+      "AST_Liora_fur_cotton_spiral_wisp_11",
+      "AST_Liora_fur_cotton_spiral_wisp_12",
+      "AST_Liora_fur_cotton_spiral_wisp_13",
+      "AST_Liora_fur_cotton_spiral_wisp_14",
+      "AST_Liora_fur_cotton_spiral_wisp_15",
+      "AST_Liora_fur_cotton_spiral_wisp_16",
+      "AST_Liora_fur_cotton_spiral_wisp_17",
+      "AST_Liora_fur_cotton_spiral_wisp_18",
+      "AST_Liora_fur_cotton_spiral_wisp_19",
+      "AST_Liora_fur_cotton_spiral_wisp_20",
+      "AST_Liora_fur_cotton_spiral_wisp_21",
+      "AST_Liora_fur_cotton_spiral_wisp_22",
+      "AST_Liora_fur_cotton_spiral_wisp_23",
+      "AST_Liora_fur_cotton_spiral_wisp_24",
+      "AST_Liora_fur_cotton_spiral_wisp_25",
+      "AST_Liora_fur_cotton_spiral_wisp_26",
+      "AST_Liora_fur_cotton_spiral_wisp_27",
+      "AST_Liora_fur_cotton_spiral_wisp_28",
+      "AST_Liora_fur_cotton_spiral_wisp_29",
+      "AST_Liora_fur_cotton_spiral_wisp_30",
+      "AST_Liora_fur_cotton_spiral_wisp_31",
+      "AST_Liora_fur_cotton_spiral_wisp_32",
+      "AST_Liora_fur_cotton_spiral_wisp_33",
+      "AST_Liora_fur_cotton_spiral_wisp_34",
+      "AST_Liora_fur_cotton_spiral_wisp_35",
+      "AST_Liora_fur_cotton_spiral_wisp_36",
+      "AST_Liora_fur_cotton_spiral_wisp_37",
+      "AST_Liora_fur_cotton_spiral_wisp_38",
+      "AST_Liora_fur_cotton_spiral_wisp_39",
+      "AST_Liora_fur_cotton_spiral_wisp_40",
+      "AST_Liora_fur_cotton_spiral_wisp_41",
+      "AST_Liora_fur_cotton_spiral_wisp_42",
+      "AST_Liora_fur_cotton_spiral_wisp_43",
+      "AST_Liora_fur_cotton_spiral_wisp_44",
+      "AST_Liora_fur_cotton_spiral_wisp_45",
+      "AST_Liora_fur_cotton_spiral_wisp_46",
+      "AST_Liora_fur_cotton_spiral_wisp_47",
+      "AST_Liora_fur_cotton_upper_flutter_L",
+      "AST_Liora_fur_cotton_upper_flutter_R",
+      "AST_liora_v2_eye_R_sculpted_orbital_skin",
+      "AST_liora_v2_eye_R",
+      "AST_liora_v2_eye_R_tapered_upper_lid",
+      "AST_liora_v2_eye_R_lower_lid",
+      "AST_liora_v2_eye_R_lash_wing",
+      "AST_liora_v2_eye_R_catchlight",
+      "AST_liora_v2_eye_R_pinlight",
+      "AST_liora_v2_eye_R_closed_lid",
+      "AST_liora_v2_eye_R_closed_lash",
+      "AST_liora_v2_eye_L_sculpted_orbital_skin",
+      "AST_liora_v2_eye_L",
+      "AST_liora_v2_eye_L_tapered_upper_lid",
+      "AST_liora_v2_eye_L_lower_lid",
+      "AST_liora_v2_eye_L_lash_wing",
+      "AST_liora_v2_eye_L_catchlight",
+      "AST_liora_v2_eye_L_pinlight",
+      "AST_liora_v2_eye_L_closed_lid",
+      "AST_liora_v2_eye_L_closed_lash",
+      "AST_liora_v2_soft_rose_nose",
+      "AST_liora_v2_philtrum",
+      "AST_liora_v2_gentle_smile_-1",
+      "AST_liora_v2_whisker_pore_-1_0",
+      "AST_liora_v2_whisker_pore_-1_1",
+      "AST_liora_v2_whisker_pore_-1_2",
+      "AST_liora_v2_gentle_smile_1",
+      "AST_liora_v2_whisker_pore_1_0",
+      "AST_liora_v2_whisker_pore_1_1",
+      "AST_liora_v2_whisker_pore_1_2",
+      "AST_liora_v2_toe_crease_F-1-0.075",
+      "AST_liora_v2_toe_crease_F-10.075",
+      "AST_liora_v2_toe_crease_H-1-0.075",
+      "AST_liora_v2_toe_crease_H-10.075",
+      "AST_liora_v2_toe_crease_F1-0.075",
+      "AST_liora_v2_toe_crease_F10.075",
+      "AST_liora_v2_toe_crease_H1-0.075",
+      "AST_liora_v2_toe_crease_H10.075"
+    ]
+  },
+  "original_rig": {
+    "rest_sha256": "82C3E8DAB8AB4C2CC58195DFA445C8E8CB89B82D1A3731E4D366CE9AC47A8A3A",
+    "behavior_sha256": "37E2CB7157322B1B022EDA60C976DC4F934B2866BB43D2B7C6645C19C4A16C75",
+    "bones": 13,
+    "fps": 30,
+    "fps_base": 1.0,
+    "actions": {
+      "blink": {
+        "sha256": "AB6E6DF4DD4B43A8D6BE3569F9AF4B77E456818F40BBA69033EC0FB2C7489846",
+        "curve_count": 117,
+        "key_count": 1170,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          19.0
+        ]
+      },
+      "eat": {
+        "sha256": "E4508D090AB857715E8D1611949F970A7333A0EE55013F739C17C0476B050F36",
+        "curve_count": 117,
+        "key_count": 5382,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          91.0
+        ]
+      },
+      "happy": {
+        "sha256": "13CF20C4C6A146B2F88DA6BD0CFD14F6EC1F767D28FFBF9DF3E6F9FBF033A213",
+        "curve_count": 117,
+        "key_count": 3627,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          61.0
+        ]
+      },
+      "idle": {
+        "sha256": "A240D6BBF1444FFA54AFEB80ABABFA3AA14B739B41F52289393FA3067D2DFF13",
+        "curve_count": 117,
+        "key_count": 7137,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          121.0
+        ]
+      },
+      "pet_reaction": {
+        "sha256": "4E899373AA1FC31B0A07364991110E95D17E4158EBE1B83BB00BBC78A532FC21",
+        "curve_count": 117,
+        "key_count": 4563,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          76.0
+        ]
+      },
+      "play": {
+        "sha256": "D91B39E250AA0B5FC2F3B78EFC5E170E23E9066C598FA99B703DF025CE1BDAE1",
+        "curve_count": 117,
+        "key_count": 4797,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          81.0
+        ]
+      },
+      "sleep": {
+        "sha256": "B1DCFD518CB501C0C69249317CE2EBDDDDE28761FCFE26755AFF712E776E806B",
+        "curve_count": 117,
+        "key_count": 7137,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          121.0
+        ]
+      },
+      "wake": {
+        "sha256": "621ECBBD42886481500335BF854A02F69C6E56EEDC8A8D03B7DD787FE322C62A",
+        "curve_count": 117,
+        "key_count": 3627,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          61.0
+        ]
+      },
+      "walk": {
+        "sha256": "E70843FEAC80B2BC471FCDA0E3783729CB28E40C060C6097CD5664C56396E7D3",
+        "curve_count": 117,
+        "key_count": 2925,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          49.0
+        ]
+      }
+    }
+  },
+  "candidate_rig": {
+    "rest_sha256": "82C3E8DAB8AB4C2CC58195DFA445C8E8CB89B82D1A3731E4D366CE9AC47A8A3A",
+    "behavior_sha256": "37E2CB7157322B1B022EDA60C976DC4F934B2866BB43D2B7C6645C19C4A16C75",
+    "bones": 13,
+    "fps": 30,
+    "fps_base": 1.0,
+    "actions": {
+      "blink": {
+        "sha256": "AB6E6DF4DD4B43A8D6BE3569F9AF4B77E456818F40BBA69033EC0FB2C7489846",
+        "curve_count": 117,
+        "key_count": 1170,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          19.0
+        ]
+      },
+      "eat": {
+        "sha256": "E4508D090AB857715E8D1611949F970A7333A0EE55013F739C17C0476B050F36",
+        "curve_count": 117,
+        "key_count": 5382,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          91.0
+        ]
+      },
+      "happy": {
+        "sha256": "13CF20C4C6A146B2F88DA6BD0CFD14F6EC1F767D28FFBF9DF3E6F9FBF033A213",
+        "curve_count": 117,
+        "key_count": 3627,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          61.0
+        ]
+      },
+      "idle": {
+        "sha256": "A240D6BBF1444FFA54AFEB80ABABFA3AA14B739B41F52289393FA3067D2DFF13",
+        "curve_count": 117,
+        "key_count": 7137,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          121.0
+        ]
+      },
+      "pet_reaction": {
+        "sha256": "4E899373AA1FC31B0A07364991110E95D17E4158EBE1B83BB00BBC78A532FC21",
+        "curve_count": 117,
+        "key_count": 4563,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          76.0
+        ]
+      },
+      "play": {
+        "sha256": "D91B39E250AA0B5FC2F3B78EFC5E170E23E9066C598FA99B703DF025CE1BDAE1",
+        "curve_count": 117,
+        "key_count": 4797,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          81.0
+        ]
+      },
+      "sleep": {
+        "sha256": "B1DCFD518CB501C0C69249317CE2EBDDDDE28761FCFE26755AFF712E776E806B",
+        "curve_count": 117,
+        "key_count": 7137,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          121.0
+        ]
+      },
+      "wake": {
+        "sha256": "621ECBBD42886481500335BF854A02F69C6E56EEDC8A8D03B7DD787FE322C62A",
+        "curve_count": 117,
+        "key_count": 3627,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          61.0
+        ]
+      },
+      "walk": {
+        "sha256": "E70843FEAC80B2BC471FCDA0E3783729CB28E40C060C6097CD5664C56396E7D3",
+        "curve_count": 117,
+        "key_count": 2925,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          49.0
+        ]
+      }
+    }
+  },
+  "motion_comparison": {
+    "idle": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "blink": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "happy": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "eat": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "play": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "pet_reaction": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "sleep": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "wake": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "walk": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    }
+  },
+  "source_views": {
+    "hero": {
+      "file": "assets/3d/reference/rabbit/sculpt-v003/source/rabbit-hero.png",
+      "sha256": "D11A3CF80DEFB580B12DB4A0E155069A113171AFC62EBE71041F396FE9915AE8"
+    },
+    "front": {
+      "file": "assets/3d/reference/rabbit/sculpt-v003/source/rabbit-front.png",
+      "sha256": "B8E08E1E38A534785406FF95C94B903C5B6414BC3030CD0BED796D9AD964884D"
+    },
+    "side": {
+      "file": "assets/3d/reference/rabbit/sculpt-v003/source/rabbit-side.png",
+      "sha256": "6286749EBEEB90038D6B775D6F37076D77798E6C48425CC5497BD6E721CB81F2"
+    },
+    "rear": {
+      "file": "assets/3d/reference/rabbit/sculpt-v003/source/rabbit-rear.png",
+      "sha256": "7D7EE8FECAD35941EB40EF8B390536BFB620A16A06D13D7DF65060B064DF34A5"
+    },
+    "body-hero": {
+      "file": "assets/3d/reference/rabbit/sculpt-v003/source/rabbit-body-hero.png",
+      "sha256": "9FF38D0544A64DA02D5036D63CE2752B56E9661D0836C6B2FE8A6F6B2E70E417"
+    },
+    "body-side": {
+      "file": "assets/3d/reference/rabbit/sculpt-v003/source/rabbit-body-side.png",
+      "sha256": "3542FE391653E2E8299558A32671D171CE2912DBABB08215A759C298211DAACA"
+    }
+  },
+  "import_views": {
+    "hero": {
+      "file": "assets/3d/reference/rabbit/sculpt-v003/import/rabbit-hero.png",
+      "sha256": "973EC1C385BDE5CC1CA5770399ED086F217CE97A05F8B1EACA76B92DFC4FD30D"
+    },
+    "rear": {
+      "file": "assets/3d/reference/rabbit/sculpt-v003/import/rabbit-rear.png",
+      "sha256": "CFFFD939EC7DB7174A95A15B4381FE1E0035D6A6AA136FC25562D28DE1703659"
+    },
+    "body-hero": {
+      "file": "assets/3d/reference/rabbit/sculpt-v003/import/rabbit-body-hero.png",
+      "sha256": "A42329771B681ECF99BDE2A9C7C4BED9F2CDA65A46E5A37706ED9035BB175C1D"
+    },
+    "blink": {
+      "file": "assets/3d/reference/rabbit/sculpt-v003/import/rabbit-blink.png",
+      "sha256": "1D5F75D85EE52FFAE3723E2127B6EE688E8E8B6E93B5DDCAA20C3AAC1A5F8C37"
+    }
+  },
+  "passed": true,
+  "human_likeness_accepted": false,
+  "mobile_performance_accepted": false,
+  "paid_provider_used": false,
+  "projection_used": false,
+  "package_status": "Local hash-checked Blender delivery; no game-dev canonical receipt.",
+  "animation_limit": "Original source curves, keys, handles, rest rig and drivers compared exactly. Fresh GLBs compared at nine normalized times per clip with 2e-4 skin-matrix tolerance. Not a collision or gait acceptance.",
+  "likeness_limit": "Approved single-view reference retained. Hidden surfaces inferred; no exact 1:1 claim."
+}

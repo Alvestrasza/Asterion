@@ -1,0 +1,2663 @@
+{
+  "schema": "asterion-local-modular-companion-v1",
+  "version": "sculpt-v004",
+  "kind": "cat",
+  "name": "Nyra",
+  "source_sha256": "F81EB0BA2C6BBE3050EFC2FFB910CA2D8CC5355D20F6A9B6CBA95C5E856095FA",
+  "model_sha256": "5AF9E37CF5B488B302E1871606A2BC96BBA266C19CBD2BCFA806B0E3089622D5",
+  "reference_sha256": "C996F1500869602E32B24047F8D1A6FAB6018CE87514AA22F017A09480EAEFED",
+  "reference_input": "public/assets/companions/cat.png",
+  "input_sha256": {
+    "assets/3d/source/cat/sculpt-v003/cat-sculpt-v003.blend": "7A5A01725D890ED558760BAAA77825B0761FD4018F0E30518A6D8FA3F29969D2",
+    "public/assets/3d/cat/cat-sculpt-v003.glb": "87233485054F6E958F2C2BB4A7ED509EDB3E814A8994BBBC7F4F3BFAC615E50F",
+    "public/assets/companions/cat.png": "C996F1500869602E32B24047F8D1A6FAB6018CE87514AA22F017A09480EAEFED",
+    "assets/3d/source/companions/sculpt-v004/build.py": "C6FBCA99D1117722B07933B90795DBFFA37DC22B399ECD6B339EAFF3C063A6BD",
+    "assets/3d/source/companions/sculpt-v004/refinements.py": "6247CEA1AE30B56B6FD3D23DEDEF1DD99BCD8A7B9158AA0576340AA2B8F89BCF",
+    "assets/3d/source/companions/sculpt-v004/export_equipment.py": "5EDB676641BE58BDE353213F6DA4F7F7662B76A08F586D0E7DADA7006AF343CF",
+    "assets/3d/source/companions/sculpt-v001/common.py": "A6DF036A5B3F6FAA3C74740382998D829D45C9E2734D91A285F9369764C21F9E",
+    "assets/3d/source/asterion/sculpt-v002/validate_refinement.py": "8C541F26C2D2546FB142988D10F07EDF51C891D1C81F02065C7B62CE01F78EFD",
+    "assets/3d/source/asterion/sculpt-v003/build_head_study.py": "A3B22323201D30A3BD9459985F8F7741A44545010A84D27CC5912E1C8A85E0F2",
+    "assets/3d/source/asterion/sculpt-v001/build_sculpt.py": "9A81C430E8FD07CE520BBA554C78845A508F22E5FB89E524BF515D8BF8415621",
+    "assets/3d/source/asterion/sculpt-v001/rig_delivery.py": "8758D105E70AB5405F61A48A531154CC591EAC0D82B167788F1D0785A16CDFF0",
+    "assets/3d/source/asterion/sculpt-v004/export_equipment.py": "C805B4740463215AE5CC9D314D14966F2BDF91A00FB82D05054BE0BBB8ED930B",
+    "assets/3d/source/companions/sculpt-v004/feline_canine.py": "1F975802D9AC64B7785E0A8EBEC81C6D9C37C3D8FDD59103D07E08285FE96A2E",
+    "assets/3d/source/cat/sculpt-v002/nyra_detail.py": "5DC1C07EAE70AE7C635D4C7026263D8D715EAE097EAD4904299B81D4405BC27B"
+  },
+  "blender": "5.2.1 LTS",
+  "checks": {
+    "original_rest_rig_unchanged": true,
+    "original_constraints_drivers_unchanged": true,
+    "all_original_action_data_unchanged": true,
+    "original_frame_rate_unchanged": true,
+    "authored_eyes_survive_source_reopen": true,
+    "all_source_parts_classified_once": true,
+    "explicit_editable_equipment_groups": true,
+    "meaningful_geometry_refinement": true,
+    "base_clothing_present": true,
+    "two_character_meshes": true,
+    "exact_distinct_components": true,
+    "one_original_shared_skin": true,
+    "nine_original_clips": true,
+    "only_public_extras": true,
+    "skinned_triangle_primitives": true,
+    "under_40_primitives": true,
+    "within_species_triangle_budget": true,
+    "self_contained_no_projection": true,
+    "no_editor_stage": true,
+    "meshopt": true,
+    "within_species_byte_budget": true,
+    "finite_imported_geometry": true,
+    "valid_normalized_known_weights": true,
+    "bounded_importer_triangle_difference": true,
+    "nine_clips_match_historical_import": true,
+    "two_imported_components": true,
+    "imported_equipment_metadata": true,
+    "all_historical_and_builder_inputs_unchanged": true
+  },
+  "components": {
+    "body": {
+      "mesh": 1,
+      "skin": 0,
+      "triangles": 1463026,
+      "primitives": 7
+    },
+    "armor": {
+      "mesh": 0,
+      "skin": 0,
+      "triangles": 48952,
+      "primitives": 6
+    }
+  },
+  "triangles": 1511978,
+  "draw_calls": 13,
+  "materials": 13,
+  "bones": 13,
+  "clips": [
+    "idle",
+    "blink",
+    "happy",
+    "eat",
+    "play",
+    "pet_reaction",
+    "sleep",
+    "wake",
+    "walk"
+  ],
+  "compression_lossless": false,
+  "bytes": 18389340,
+  "geometry": {
+    "vertices": 759765,
+    "triangles": 1511976,
+    "nonfinite_vertices": 0,
+    "nonfinite_transforms": 0,
+    "unweighted_vertices": 0,
+    "invalid_weights": 0,
+    "unknown_weights": 0,
+    "over_four_weights": 0,
+    "max_influences": 2,
+    "bounds_min": [
+      -1.0878907442092896,
+      -1.7382811307907104,
+      -0.006347879767417908
+    ],
+    "bounds_max": [
+      1.0878907442092896,
+      3.390625,
+      3.880859136581421
+    ],
+    "span": [
+      2.175781488418579,
+      5.1289061307907104,
+      3.887207016348839
+    ]
+  },
+  "triangle_count_evidence": {
+    "authored": 1511978,
+    "imported": 1511976,
+    "exact_equal": false,
+    "triangle_loss": 2,
+    "relative_loss": 1.322770569413047e-06,
+    "maximum_allowed_loss": 30,
+    "relative_tolerance": 2e-05,
+    "passed": true,
+    "limit": "Count difference only; individual omitted triangle degeneracy is not proven by this check."
+  },
+  "changes": {
+    "notes": "Swept silver flame crest, triangular ears, tapered feline eye surround and full S-plume.",
+    "edited_objects": [
+      {
+        "name": "AST_nyra_v2_head",
+        "operation": "Coherent expressive orbital shaping including original blink lid",
+        "max_displacement": 0.06040648191311959
+      },
+      {
+        "name": "AST_nyra_v2_eye_R_skin_annulus",
+        "operation": "Coherent expressive orbital shaping including original blink lid",
+        "max_displacement": 0.0526768721510944
+      },
+      {
+        "name": "AST_nyra_v2_eye_R",
+        "operation": "Coherent expressive orbital shaping including original blink lid",
+        "max_displacement": 0.04381206304557539
+      },
+      {
+        "name": "AST_nyra_v2_eye_R_upper_lid",
+        "operation": "Coherent expressive orbital shaping including original blink lid",
+        "max_displacement": 0.047969938781553534
+      },
+      {
+        "name": "AST_nyra_v2_eye_R_lower_lid",
+        "operation": "Coherent expressive orbital shaping including original blink lid",
+        "max_displacement": 0.04087794028230096
+      },
+      {
+        "name": "AST_nyra_v2_eye_R_lash_wing",
+        "operation": "Coherent expressive orbital shaping including original blink lid",
+        "max_displacement": 0.02331782812769223
+      },
+      {
+        "name": "AST_nyra_v2_eye_R_catchlight",
+        "operation": "Coherent expressive orbital shaping including original blink lid",
+        "max_displacement": 0.018956427008602894
+      },
+      {
+        "name": "AST_nyra_v2_eye_R_pinlight",
+        "operation": "Coherent expressive orbital shaping including original blink lid",
+        "max_displacement": 0.017598739088119597
+      },
+      {
+        "name": "AST_nyra_v2_eye_R_closed_lid",
+        "operation": "Coherent expressive orbital shaping including original blink lid",
+        "max_displacement": 0.04444143868243966
+      },
+      {
+        "name": "AST_nyra_v2_eye_R_closed_lash",
+        "operation": "Coherent expressive orbital shaping including original blink lid",
+        "max_displacement": 0.025593347167968794
+      },
+      {
+        "name": "AST_nyra_v2_eye_L_skin_annulus",
+        "operation": "Coherent expressive orbital shaping including original blink lid",
+        "max_displacement": 0.052677026905251445
+      },
+      {
+        "name": "AST_nyra_v2_eye_L",
+        "operation": "Coherent expressive orbital shaping including original blink lid",
+        "max_displacement": 0.043812354574852996
+      },
+      {
+        "name": "AST_nyra_v2_eye_L_upper_lid",
+        "operation": "Coherent expressive orbital shaping including original blink lid",
+        "max_displacement": 0.04797021145250069
+      },
+      {
+        "name": "AST_nyra_v2_eye_L_lower_lid",
+        "operation": "Coherent expressive orbital shaping including original blink lid",
+        "max_displacement": 0.04087764193979515
+      },
+      {
+        "name": "AST_nyra_v2_eye_L_lash_wing",
+        "operation": "Coherent expressive orbital shaping including original blink lid",
+        "max_displacement": 0.02331752771974971
+      },
+      {
+        "name": "AST_nyra_v2_eye_L_catchlight",
+        "operation": "Coherent expressive orbital shaping including original blink lid",
+        "max_displacement": 0.03255183316007049
+      },
+      {
+        "name": "AST_nyra_v2_eye_L_pinlight",
+        "operation": "Coherent expressive orbital shaping including original blink lid",
+        "max_displacement": 0.03219429074052149
+      },
+      {
+        "name": "AST_nyra_v2_eye_L_closed_lid",
+        "operation": "Coherent expressive orbital shaping including original blink lid",
+        "max_displacement": 0.044441887557873816
+      },
+      {
+        "name": "AST_nyra_v2_eye_L_closed_lash",
+        "operation": "Coherent expressive orbital shaping including original blink lid",
+        "max_displacement": 0.02559308252334569
+      },
+      {
+        "name": "AST_nyra_v2_silver_crest_0",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_nyra_v2_crest_undercoat_0",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_nyra_v2_silver_crest_1",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_nyra_v2_crest_undercoat_1",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_nyra_v2_silver_crest_2",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_nyra_v2_crest_undercoat_2",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_nyra_v2_silver_crest_3",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_nyra_v2_crest_undercoat_3",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_nyra_v2_silver_crest_4",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_nyra_v2_crest_undercoat_4",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_nyra_v2_silver_crest_5",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_nyra_v2_crest_undercoat_5",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_nyra_v2_silver_crest_6",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_nyra_v2_crest_undercoat_6",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_nyra_v2_ear_inner_brush_L0",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_nyra_v2_ear_inner_brush_L1",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_nyra_v2_ear_inner_brush_L2",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_nyra_v2_ear_inner_brush_R0",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_nyra_v2_ear_inner_brush_R1",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_nyra_v2_ear_inner_brush_R2",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_nyra_v2_continuous_plume_tail",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_nyra_v2_plume_edge_bundle_L0",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_nyra_v2_plume_edge_bundle_L1",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_nyra_v2_plume_edge_bundle_L2",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_nyra_v2_plume_edge_bundle_L3",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_nyra_v2_plume_edge_bundle_R0",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_nyra_v2_plume_edge_bundle_R1",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_nyra_v2_plume_edge_bundle_R2",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_nyra_v2_plume_edge_bundle_R3",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_nyra_v2_tail_copper_sweep_L0",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_nyra_v2_tail_copper_sweep_L1",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_nyra_v2_tail_copper_sweep_R0",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_nyra_v2_tail_copper_sweep_R1",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_nyra_v2_cupped_rust_ear_R",
+        "operation": "Triangular feline ear outline with sharper tapered tip",
+        "max_displacement": 0.10343247892456534
+      },
+      {
+        "name": "AST_nyra_v2_cupped_rust_ear_L",
+        "operation": "Triangular feline ear outline with sharper tapered tip",
+        "max_displacement": 0.10343247892456534
+      },
+      {
+        "name": "AST_nyra_v2_cheek_fan_L0",
+        "operation": "Rearward curved cheek flow, preserving embedded roots",
+        "max_displacement": 0.05851424254698506
+      },
+      {
+        "name": "AST_nyra_v2_cheek_fan_L1",
+        "operation": "Rearward curved cheek flow, preserving embedded roots",
+        "max_displacement": 0.08508557812776689
+      },
+      {
+        "name": "AST_nyra_v2_cheek_split_L1",
+        "operation": "Rearward curved cheek flow, preserving embedded roots",
+        "max_displacement": 0.09692383849926109
+      },
+      {
+        "name": "AST_nyra_v2_cheek_fan_L2",
+        "operation": "Rearward curved cheek flow, preserving embedded roots",
+        "max_displacement": 0.07122089306883281
+      },
+      {
+        "name": "AST_nyra_v2_cheek_fan_L3",
+        "operation": "Rearward curved cheek flow, preserving embedded roots",
+        "max_displacement": 0.09533048617745286
+      },
+      {
+        "name": "AST_nyra_v2_cheek_split_L3",
+        "operation": "Rearward curved cheek flow, preserving embedded roots",
+        "max_displacement": 0.09848857801796103
+      },
+      {
+        "name": "AST_nyra_v2_cheek_fan_L4",
+        "operation": "Rearward curved cheek flow, preserving embedded roots",
+        "max_displacement": 0.06930791341125948
+      },
+      {
+        "name": "AST_nyra_v2_cheek_fan_L5",
+        "operation": "Rearward curved cheek flow, preserving embedded roots",
+        "max_displacement": 0.07799866857959944
+      },
+      {
+        "name": "AST_nyra_v2_cheek_split_L5",
+        "operation": "Rearward curved cheek flow, preserving embedded roots",
+        "max_displacement": 0.09057151854034844
+      },
+      {
+        "name": "AST_nyra_v2_cheek_fan_L6",
+        "operation": "Rearward curved cheek flow, preserving embedded roots",
+        "max_displacement": 0.050158304314139895
+      },
+      {
+        "name": "AST_nyra_v2_outer_dark_ruff_L0",
+        "operation": "Rearward curved cheek flow, preserving embedded roots",
+        "max_displacement": 0.04891944936573724
+      },
+      {
+        "name": "AST_nyra_v2_outer_dark_ruff_L1",
+        "operation": "Rearward curved cheek flow, preserving embedded roots",
+        "max_displacement": 0.057795561678606874
+      },
+      {
+        "name": "AST_nyra_v2_outer_dark_ruff_L2",
+        "operation": "Rearward curved cheek flow, preserving embedded roots",
+        "max_displacement": 0.03834640193406091
+      },
+      {
+        "name": "AST_nyra_v2_outer_dark_ruff_L3",
+        "operation": "Rearward curved cheek flow, preserving embedded roots",
+        "max_displacement": 0.03390144074702433
+      },
+      {
+        "name": "AST_nyra_v2_outer_dark_ruff_L4",
+        "operation": "Rearward curved cheek flow, preserving embedded roots",
+        "max_displacement": 0.0
+      },
+      {
+        "name": "AST_nyra_v2_outer_dark_ruff_L5",
+        "operation": "Rearward curved cheek flow, preserving embedded roots",
+        "max_displacement": 0.0
+      },
+      {
+        "name": "AST_nyra_v2_cheek_fan_R0",
+        "operation": "Rearward curved cheek flow, preserving embedded roots",
+        "max_displacement": 0.058675164248471016
+      },
+      {
+        "name": "AST_nyra_v2_cheek_fan_R1",
+        "operation": "Rearward curved cheek flow, preserving embedded roots",
+        "max_displacement": 0.08489724176705837
+      },
+      {
+        "name": "AST_nyra_v2_cheek_split_R1",
+        "operation": "Rearward curved cheek flow, preserving embedded roots",
+        "max_displacement": 0.09692383849926109
+      },
+      {
+        "name": "AST_nyra_v2_cheek_fan_R2",
+        "operation": "Rearward curved cheek flow, preserving embedded roots",
+        "max_displacement": 0.07124350869509712
+      },
+      {
+        "name": "AST_nyra_v2_cheek_fan_R3",
+        "operation": "Rearward curved cheek flow, preserving embedded roots",
+        "max_displacement": 0.09518968519213084
+      },
+      {
+        "name": "AST_nyra_v2_cheek_split_R3",
+        "operation": "Rearward curved cheek flow, preserving embedded roots",
+        "max_displacement": 0.09848857801796103
+      },
+      {
+        "name": "AST_nyra_v2_cheek_fan_R4",
+        "operation": "Rearward curved cheek flow, preserving embedded roots",
+        "max_displacement": 0.06931409198274383
+      },
+      {
+        "name": "AST_nyra_v2_cheek_fan_R5",
+        "operation": "Rearward curved cheek flow, preserving embedded roots",
+        "max_displacement": 0.07796164117851867
+      },
+      {
+        "name": "AST_nyra_v2_cheek_split_R5",
+        "operation": "Rearward curved cheek flow, preserving embedded roots",
+        "max_displacement": 0.09057151854034844
+      },
+      {
+        "name": "AST_nyra_v2_cheek_fan_R6",
+        "operation": "Rearward curved cheek flow, preserving embedded roots",
+        "max_displacement": 0.05043896702451072
+      },
+      {
+        "name": "AST_nyra_v2_outer_dark_ruff_R0",
+        "operation": "Rearward curved cheek flow, preserving embedded roots",
+        "max_displacement": 0.048919757560514386
+      },
+      {
+        "name": "AST_nyra_v2_outer_dark_ruff_R1",
+        "operation": "Rearward curved cheek flow, preserving embedded roots",
+        "max_displacement": 0.0577953855673056
+      },
+      {
+        "name": "AST_nyra_v2_outer_dark_ruff_R2",
+        "operation": "Rearward curved cheek flow, preserving embedded roots",
+        "max_displacement": 0.03834653401753681
+      },
+      {
+        "name": "AST_nyra_v2_outer_dark_ruff_R3",
+        "operation": "Rearward curved cheek flow, preserving embedded roots",
+        "max_displacement": 0.03390004653255637
+      },
+      {
+        "name": "AST_nyra_v2_outer_dark_ruff_R4",
+        "operation": "Rearward curved cheek flow, preserving embedded roots",
+        "max_displacement": 0.0
+      },
+      {
+        "name": "AST_nyra_v2_outer_dark_ruff_R5",
+        "operation": "Rearward curved cheek flow, preserving embedded roots",
+        "max_displacement": 0.0
+      },
+      {
+        "name": "AST_nyra_v2_triangular_copper_nose",
+        "operation": "Smaller softly rounded feline nose",
+        "max_displacement": 0.03851040926035075
+      },
+      {
+        "name": "AST_nyra_v4_silver_flame_0",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.5072357058525085,
+            -1.2435897588729858,
+            2.9799797534942627
+          ],
+          [
+            -0.18989774584770203,
+            -0.24989227950572968,
+            3.5800912380218506
+          ]
+        ]
+      },
+      {
+        "name": "AST_nyra_v4_silver_flame_1",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.2696041464805603,
+            -1.3008307218551636,
+            2.9899749755859375
+          ],
+          [
+            0.20027151703834534,
+            -0.02988606132566929,
+            3.880113363265991
+          ]
+        ]
+      },
+      {
+        "name": "AST_nyra_v4_silver_flame_2",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.04829103499650955,
+            -1.2804938554763794,
+            3.0099780559539795
+          ],
+          [
+            0.5802494883537292,
+            0.010102308355271816,
+            3.6501190662384033
+          ]
+        ]
+      },
+      {
+        "name": "AST_nyra_v4_silver_flame_3",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.19236025214195251,
+            -1.141424536705017,
+            2.9999818801879883
+          ],
+          [
+            0.7702035307884216,
+            0.03009107895195484,
+            3.420109272003174
+          ]
+        ]
+      },
+      {
+        "name": "AST_nyra_v4_silver_flame_4",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.6005756258964539,
+            -1.0424015522003174,
+            2.869983196258545
+          ],
+          [
+            -0.3398885130882263,
+            0.040092431008815765,
+            3.4700913429260254
+          ]
+        ]
+      },
+      {
+        "name": "AST_nyra_v4_silver_flame_5",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.12369784712791443,
+            -0.7842174768447876,
+            2.999980926513672
+          ],
+          [
+            0.410208523273468,
+            0.160088449716568,
+            3.6101155281066895
+          ]
+        ]
+      },
+      {
+        "name": "AST_nyra_v4_silver_flame_6",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.38499584794044495,
+            -0.6836369037628174,
+            2.9399821758270264
+          ],
+          [
+            -0.04981371760368347,
+            0.30009353160858154,
+            3.460097312927246
+          ]
+        ]
+      },
+      {
+        "name": "AST_nyra_v4_silver_ear_brush_R0",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.8000422716140747,
+            -0.680056631565094,
+            2.934847593307495
+          ],
+          [
+            -0.6036940813064575,
+            -0.5929732918739319,
+            3.0750679969787598
+          ]
+        ]
+      },
+      {
+        "name": "AST_nyra_v4_silver_ear_brush_R1",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.8500422835350037,
+            -0.680056631565094,
+            2.9968478679656982
+          ],
+          [
+            -0.653694212436676,
+            -0.5929732918739319,
+            3.137068033218384
+          ]
+        ]
+      },
+      {
+        "name": "AST_nyra_v4_silver_ear_brush_R2",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.9000422358512878,
+            -0.680056631565094,
+            3.0588479042053223
+          ],
+          [
+            -0.7036941647529602,
+            -0.5929732918739319,
+            3.1990678310394287
+          ]
+        ]
+      },
+      {
+        "name": "AST_nyra_v4_silver_ear_brush_R3",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.9500422477722168,
+            -0.680056631565094,
+            3.120847463607788
+          ],
+          [
+            -0.7536942362785339,
+            -0.5929732918739319,
+            3.2610678672790527
+          ]
+        ]
+      },
+      {
+        "name": "AST_nyra_v4_silver_ear_brush_R4",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -1.000042200088501,
+            -0.680056631565094,
+            3.182847499847412
+          ],
+          [
+            -0.8036931753158569,
+            -0.5929732918739319,
+            3.3230679035186768
+          ]
+        ]
+      },
+      {
+        "name": "AST_nyra_v4_silver_ear_brush_L0",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.6038280129432678,
+            -0.680056631565094,
+            2.934175729751587
+          ],
+          [
+            0.8000422716140747,
+            -0.5929732918739319,
+            3.0750679969787598
+          ]
+        ]
+      },
+      {
+        "name": "AST_nyra_v4_silver_ear_brush_L1",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.6538280844688416,
+            -0.680056631565094,
+            2.99617600440979
+          ],
+          [
+            0.8500422835350037,
+            -0.5929732918739319,
+            3.137068033218384
+          ]
+        ]
+      },
+      {
+        "name": "AST_nyra_v4_silver_ear_brush_L2",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.7038280367851257,
+            -0.680056631565094,
+            3.058176040649414
+          ],
+          [
+            0.9000422358512878,
+            -0.5929732918739319,
+            3.1990678310394287
+          ]
+        ]
+      },
+      {
+        "name": "AST_nyra_v4_silver_ear_brush_L3",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.7538281083106995,
+            -0.680056631565094,
+            3.12017560005188
+          ],
+          [
+            0.9500422477722168,
+            -0.5929732918739319,
+            3.2610678672790527
+          ]
+        ]
+      },
+      {
+        "name": "AST_nyra_v4_silver_ear_brush_L4",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.8038270473480225,
+            -0.680056631565094,
+            3.182175636291504
+          ],
+          [
+            1.000042200088501,
+            -0.5929732918739319,
+            3.3230679035186768
+          ]
+        ]
+      },
+      {
+        "name": "AST_nyra_v4_sculpted_s_plume",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.23037488758563995,
+            0.9587685465812683,
+            1.092659592628479
+          ],
+          [
+            0.4877569079399109,
+            3.3901941776275635,
+            2.9056396484375
+          ]
+        ]
+      },
+      {
+        "name": "AST_nyra_v4_plume_surface_flow_0_0",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.1549633890390396,
+            1.5315395593643188,
+            1.2132920026779175
+          ],
+          [
+            0.37973126769065857,
+            2.4881534576416016,
+            2.234142303466797
+          ]
+        ]
+      },
+      {
+        "name": "AST_nyra_v4_plume_surface_flow_0_1",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.2676442265510559,
+            2.014427661895752,
+            1.6276053190231323
+          ],
+          [
+            0.40951722860336304,
+            2.646709680557251,
+            2.2825183868408203
+          ]
+        ]
+      },
+      {
+        "name": "AST_nyra_v4_plume_surface_flow_0_2",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.3245893716812134,
+            2.349733829498291,
+            2.0553863048553467
+          ],
+          [
+            0.3693213164806366,
+            2.798206329345703,
+            2.263254165649414
+          ]
+        ]
+      },
+      {
+        "name": "AST_nyra_v4_plume_surface_flow_0_3",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.2974565923213959,
+            2.5277252197265625,
+            2.027315616607666
+          ],
+          [
+            0.39037540555000305,
+            2.8955798149108887,
+            2.301220178604126
+          ]
+        ]
+      },
+      {
+        "name": "AST_nyra_v4_plume_surface_flow_0_4",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.27134791016578674,
+            2.609739303588867,
+            1.9622056484222412
+          ],
+          [
+            0.3707728981971741,
+            2.917036533355713,
+            2.2908623218536377
+          ]
+        ]
+      },
+      {
+        "name": "AST_nyra_v4_plume_surface_flow_0_5",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.21544921398162842,
+            2.7476420402526855,
+            1.7893319129943848
+          ],
+          [
+            0.3416900932788849,
+            2.9328529834747314,
+            2.218449831008911
+          ]
+        ]
+      },
+      {
+        "name": "AST_nyra_v4_plume_surface_flow_0_6",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.11687090992927551,
+            2.7948999404907227,
+            1.4200462102890015
+          ],
+          [
+            0.28503429889678955,
+            2.9475820064544678,
+            2.0116689205169678
+          ]
+        ]
+      },
+      {
+        "name": "AST_nyra_v4_plume_surface_flow_0_7",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.060641273856163025,
+            2.758528470993042,
+            1.103318691253662
+          ],
+          [
+            0.2201320379972458,
+            3.069746255874634,
+            1.8199893236160278
+          ]
+        ]
+      },
+      {
+        "name": "AST_nyra_v4_plume_surface_flow_1_0",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.2775454819202423,
+            1.481856107711792,
+            1.307424783706665
+          ],
+          [
+            0.47586318850517273,
+            2.4563286304473877,
+            2.380439043045044
+          ]
+        ]
+      },
+      {
+        "name": "AST_nyra_v4_plume_surface_flow_1_1",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.35560354590415955,
+            1.8063372373580933,
+            1.5853570699691772
+          ],
+          [
+            0.49013450741767883,
+            2.586672306060791,
+            2.4003818035125732
+          ]
+        ]
+      },
+      {
+        "name": "AST_nyra_v4_plume_surface_flow_1_2",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.41052868962287903,
+            2.139582395553589,
+            1.9851821660995483
+          ],
+          [
+            0.49572160840034485,
+            2.729832887649536,
+            2.4216365814208984
+          ]
+        ]
+      },
+      {
+        "name": "AST_nyra_v4_plume_surface_flow_1_3",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.3899162709712982,
+            2.45296049118042,
+            2.168318510055542
+          ],
+          [
+            0.4710569977760315,
+            2.918771505355835,
+            2.425419569015503
+          ]
+        ]
+      },
+      {
+        "name": "AST_nyra_v4_plume_surface_flow_1_4",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.3165760636329651,
+            2.686884641647339,
+            1.881960153579712
+          ],
+          [
+            0.42910465598106384,
+            3.01613712310791,
+            2.376643419265747
+          ]
+        ]
+      },
+      {
+        "name": "AST_nyra_v4_plume_surface_flow_1_5",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.2155623435974121,
+            2.8747966289520264,
+            1.5421723127365112
+          ],
+          [
+            0.39102303981781006,
+            3.0421879291534424,
+            2.2095468044281006
+          ]
+        ]
+      },
+      {
+        "name": "AST_nyra_v4_plume_surface_flow_1_6",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.14944115281105042,
+            2.8500900268554688,
+            1.2598317861557007
+          ],
+          [
+            0.3378889858722687,
+            3.0383200645446777,
+            2.0076334476470947
+          ]
+        ]
+      },
+      {
+        "name": "AST_nyra_v4_plume_surface_flow_1_7",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.13324002921581268,
+            2.8216683864593506,
+            1.1661595106124878
+          ],
+          [
+            0.28693655133247375,
+            3.0252976417541504,
+            1.8435029983520508
+          ]
+        ]
+      },
+      {
+        "name": "AST_nyra_v4_plume_surface_flow_2_0",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.2973252236843109,
+            1.4087955951690674,
+            1.377936601638794
+          ],
+          [
+            0.4904443919658661,
+            2.204561471939087,
+            2.3074755668640137
+          ]
+        ]
+      },
+      {
+        "name": "AST_nyra_v4_plume_surface_flow_2_1",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.3994736075401306,
+            1.7950849533081055,
+            1.7503516674041748
+          ],
+          [
+            0.510174572467804,
+            2.55031418800354,
+            2.521606683731079
+          ]
+        ]
+      },
+      {
+        "name": "AST_nyra_v4_plume_surface_flow_2_2",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.4386883080005646,
+            2.1489417552948,
+            2.1950795650482178
+          ],
+          [
+            0.512680172920227,
+            2.8905372619628906,
+            2.553455352783203
+          ]
+        ]
+      },
+      {
+        "name": "AST_nyra_v4_plume_surface_flow_2_3",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.3907548189163208,
+            2.4202632904052734,
+            2.0532331466674805
+          ],
+          [
+            0.48721081018447876,
+            3.115959405899048,
+            2.5451431274414062
+          ]
+        ]
+      },
+      {
+        "name": "AST_nyra_v4_plume_surface_flow_2_4",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.3270092308521271,
+            2.670203924179077,
+            1.8090189695358276
+          ],
+          [
+            0.4548949897289276,
+            3.14286470413208,
+            2.502798318862915
+          ]
+        ]
+      },
+      {
+        "name": "AST_nyra_v4_plume_surface_flow_2_5",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.26944878697395325,
+            2.8914954662323,
+            1.610505223274231
+          ],
+          [
+            0.42741572856903076,
+            3.1659679412841797,
+            2.359536647796631
+          ]
+        ]
+      },
+      {
+        "name": "AST_nyra_v4_plume_surface_flow_2_6",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.2042289823293686,
+            2.9698586463928223,
+            1.3983489274978638
+          ],
+          [
+            0.37655192613601685,
+            3.1606807708740234,
+            2.0667271614074707
+          ]
+        ]
+      },
+      {
+        "name": "AST_nyra_v4_plume_surface_flow_2_7",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.16041423380374908,
+            2.9261109828948975,
+            1.2649481296539307
+          ],
+          [
+            0.2971658706665039,
+            3.1297574043273926,
+            1.7792198657989502
+          ]
+        ]
+      },
+      {
+        "name": "AST_nyra_v4_plume_surface_flow_3_0",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.2848874032497406,
+            1.4019120931625366,
+            1.4935498237609863
+          ],
+          [
+            0.4617336690425873,
+            2.158278465270996,
+            2.515882968902588
+          ]
+        ]
+      },
+      {
+        "name": "AST_nyra_v4_plume_surface_flow_3_1",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.35557085275650024,
+            1.629706621170044,
+            1.7460674047470093
+          ],
+          [
+            0.4895005226135254,
+            2.6755685806274414,
+            2.7046754360198975
+          ]
+        ]
+      },
+      {
+        "name": "AST_nyra_v4_plume_surface_flow_3_2",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.3897957503795624,
+            1.9209908246994019,
+            2.1358683109283447
+          ],
+          [
+            0.496364563703537,
+            3.037670850753784,
+            2.735403537750244
+          ]
+        ]
+      },
+      {
+        "name": "AST_nyra_v4_plume_surface_flow_3_3",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.3510514497756958,
+            2.2710039615631104,
+            2.2026329040527344
+          ],
+          [
+            0.4737304747104645,
+            3.250236988067627,
+            2.726522922515869
+          ]
+        ]
+      },
+      {
+        "name": "AST_nyra_v4_plume_surface_flow_3_4",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.2841443121433258,
+            2.7640974521636963,
+            1.884291648864746
+          ],
+          [
+            0.4290558099746704,
+            3.3067383766174316,
+            2.6540684700012207
+          ]
+        ]
+      },
+      {
+        "name": "AST_nyra_v4_plume_surface_flow_3_5",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.20765197277069092,
+            3.100855827331543,
+            1.6001849174499512
+          ],
+          [
+            0.39287909865379333,
+            3.340545177459717,
+            2.3860862255096436
+          ]
+        ]
+      },
+      {
+        "name": "AST_nyra_v4_plume_surface_flow_3_6",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.13152563571929932,
+            3.076042413711548,
+            1.3589287996292114
+          ],
+          [
+            0.32671919465065,
+            3.3196983337402344,
+            2.0558745861053467
+          ]
+        ]
+      },
+      {
+        "name": "AST_nyra_v4_plume_surface_flow_3_7",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.10325317829847336,
+            3.063960075378418,
+            1.3060052394866943
+          ],
+          [
+            0.24563241004943848,
+            3.248936653137207,
+            1.786073923110962
+          ]
+        ]
+      },
+      {
+        "name": "AST_nyra_v4_plume_surface_flow_4_0",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.13758651912212372,
+            1.3570730686187744,
+            1.589631199836731
+          ],
+          [
+            -0.03246378153562546,
+            2.186866044998169,
+            2.7025935649871826
+          ]
+        ]
+      },
+      {
+        "name": "AST_nyra_v4_plume_surface_flow_4_1",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.10024409741163254,
+            1.606461763381958,
+            1.9375725984573364
+          ],
+          [
+            -0.0017440004739910364,
+            2.6787381172180176,
+            2.809030771255493
+          ]
+        ]
+      },
+      {
+        "name": "AST_nyra_v4_plume_surface_flow_4_2",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.12784792482852936,
+            1.904066801071167,
+            2.378783702850342
+          ],
+          [
+            0.008436521515250206,
+            2.9875152111053467,
+            2.8471951484680176
+          ]
+        ]
+      },
+      {
+        "name": "AST_nyra_v4_plume_surface_flow_4_3",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.14551317691802979,
+            2.28930926322937,
+            2.3233399391174316
+          ],
+          [
+            -0.01820921152830124,
+            3.187938690185547,
+            2.842108964920044
+          ]
+        ]
+      },
+      {
+        "name": "AST_nyra_v4_plume_surface_flow_4_4",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.1685640811920166,
+            2.7062344551086426,
+            1.9918361902236938
+          ],
+          [
+            -0.050298381596803665,
+            3.263784408569336,
+            2.774545431137085
+          ]
+        ]
+      },
+      {
+        "name": "AST_nyra_v4_plume_surface_flow_4_5",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.19509710371494293,
+            3.0400941371917725,
+            1.6349378824234009
+          ],
+          [
+            -0.07579280436038971,
+            3.3114993572235107,
+            2.5502772331237793
+          ]
+        ]
+      },
+      {
+        "name": "AST_nyra_v4_plume_surface_flow_4_6",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.2050548940896988,
+            3.012843370437622,
+            1.3617846965789795
+          ],
+          [
+            -0.10764870792627335,
+            3.30389404296875,
+            2.1907944679260254
+          ]
+        ]
+      },
+      {
+        "name": "AST_nyra_v4_plume_surface_flow_4_7",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.20719224214553833,
+            2.9883382320404053,
+            1.2556082010269165
+          ],
+          [
+            -0.12688441574573517,
+            3.2388813495635986,
+            1.827795147895813
+          ]
+        ]
+      },
+      {
+        "name": "AST_nyra_v4_plume_surface_flow_5_0",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.22495585680007935,
+            1.4629501104354858,
+            1.535053014755249
+          ],
+          [
+            -0.15901504456996918,
+            2.2173378467559814,
+            2.4451584815979004
+          ]
+        ]
+      },
+      {
+        "name": "AST_nyra_v4_plume_surface_flow_5_1",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.19221103191375732,
+            1.703896403312683,
+            1.8085988759994507
+          ],
+          [
+            -0.14079447090625763,
+            2.446085214614868,
+            2.5797178745269775
+          ]
+        ]
+      },
+      {
+        "name": "AST_nyra_v4_plume_surface_flow_5_2",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.1966046839952469,
+            1.9635072946548462,
+            2.1477627754211426
+          ],
+          [
+            -0.12589848041534424,
+            2.7674598693847656,
+            2.631277322769165
+          ]
+        ]
+      },
+      {
+        "name": "AST_nyra_v4_plume_surface_flow_5_3",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.20953743159770966,
+            2.286195993423462,
+            2.171010971069336
+          ],
+          [
+            -0.13410916924476624,
+            3.0597846508026123,
+            2.6477861404418945
+          ]
+        ]
+      },
+      {
+        "name": "AST_nyra_v4_plume_surface_flow_5_4",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.21817295253276825,
+            2.678898334503174,
+            1.86222243309021
+          ],
+          [
+            -0.15127389132976532,
+            3.1223032474517822,
+            2.5852503776550293
+          ]
+        ]
+      },
+      {
+        "name": "AST_nyra_v4_plume_surface_flow_5_5",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.22067737579345703,
+            2.976969003677368,
+            1.5656554698944092
+          ],
+          [
+            -0.16248151659965515,
+            3.161571502685547,
+            2.3350327014923096
+          ]
+        ]
+      },
+      {
+        "name": "AST_nyra_v4_plume_surface_flow_5_6",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.22219456732273102,
+            2.9314804077148438,
+            1.3767589330673218
+          ],
+          [
+            -0.16600246727466583,
+            3.156956434249878,
+            2.0777130126953125
+          ]
+        ]
+      },
+      {
+        "name": "AST_nyra_v4_plume_surface_flow_5_7",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.21854481101036072,
+            2.9077088832855225,
+            1.2532804012298584
+          ],
+          [
+            -0.16864900290966034,
+            3.1314940452575684,
+            1.8642066717147827
+          ]
+        ]
+      },
+      {
+        "name": "AST_nyra_v4_plume_surface_flow_6_0",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.23505592346191406,
+            1.4416351318359375,
+            1.3435161113739014
+          ],
+          [
+            -0.13629533350467682,
+            2.328752279281616,
+            2.2269253730773926
+          ]
+        ]
+      },
+      {
+        "name": "AST_nyra_v4_plume_surface_flow_6_1",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.1708623170852661,
+            1.8856614828109741,
+            1.718565821647644
+          ],
+          [
+            -0.12404510378837585,
+            2.5818932056427,
+            2.3961589336395264
+          ]
+        ]
+      },
+      {
+        "name": "AST_nyra_v4_plume_surface_flow_6_2",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.1672787070274353,
+            2.2330780029296875,
+            2.153167247772217
+          ],
+          [
+            -0.11282819509506226,
+            2.852005958557129,
+            2.4210479259490967
+          ]
+        ]
+      },
+      {
+        "name": "AST_nyra_v4_plume_surface_flow_6_3",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.17985884845256805,
+            2.4640395641326904,
+            2.062448263168335
+          ],
+          [
+            -0.10938085615634918,
+            2.9682388305664062,
+            2.4463558197021484
+          ]
+        ]
+      },
+      {
+        "name": "AST_nyra_v4_plume_surface_flow_6_4",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.1904907524585724,
+            2.625417709350586,
+            1.979309320449829
+          ],
+          [
+            -0.11268803477287292,
+            2.9873082637786865,
+            2.42144775390625
+          ]
+        ]
+      },
+      {
+        "name": "AST_nyra_v4_plume_surface_flow_6_5",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.19944386184215546,
+            2.806983709335327,
+            1.8208367824554443
+          ],
+          [
+            -0.11833838373422623,
+            3.0184037685394287,
+            2.311250686645508
+          ]
+        ]
+      },
+      {
+        "name": "AST_nyra_v4_plume_surface_flow_6_6",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.2009762078523636,
+            2.8828272819519043,
+            1.5165783166885376
+          ],
+          [
+            -0.1308799535036087,
+            3.039212703704834,
+            2.0967044830322266
+          ]
+        ]
+      },
+      {
+        "name": "AST_nyra_v4_plume_surface_flow_6_7",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.20711398124694824,
+            2.835697650909424,
+            1.1735082864761353
+          ],
+          [
+            -0.13678783178329468,
+            3.039264678955078,
+            1.8846632242202759
+          ]
+        ]
+      },
+      {
+        "name": "AST_nyra_v4_plume_surface_flow_7_0",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.14182958006858826,
+            1.620535135269165,
+            1.28844153881073
+          ],
+          [
+            -0.012146348133683205,
+            2.5327587127685547,
+            2.2563302516937256
+          ]
+        ]
+      },
+      {
+        "name": "AST_nyra_v4_plume_surface_flow_7_1",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.062452059239149094,
+            1.9834102392196655,
+            1.612001895904541
+          ],
+          [
+            -0.03032020665705204,
+            2.581871509552002,
+            2.262373924255371
+          ]
+        ]
+      },
+      {
+        "name": "AST_nyra_v4_plume_surface_flow_7_2",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.05864056944847107,
+            2.260068893432617,
+            1.942233920097351
+          ],
+          [
+            -0.02840973436832428,
+            2.6688241958618164,
+            2.2629611492156982
+          ]
+        ]
+      },
+      {
+        "name": "AST_nyra_v4_plume_surface_flow_7_3",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.07538343966007233,
+            2.5038223266601562,
+            2.147420883178711
+          ],
+          [
+            -0.03278100863099098,
+            2.796084403991699,
+            2.2801380157470703
+          ]
+        ]
+      },
+      {
+        "name": "AST_nyra_v4_plume_surface_flow_7_4",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.12519477307796478,
+            2.5967302322387695,
+            2.001347303390503
+          ],
+          [
+            -0.021025164052844048,
+            2.905038356781006,
+            2.310850143432617
+          ]
+        ]
+      },
+      {
+        "name": "AST_nyra_v4_plume_surface_flow_7_5",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.14911235868930817,
+            2.803600549697876,
+            1.6793795824050903
+          ],
+          [
+            -0.04138730466365814,
+            2.9385552406311035,
+            2.18900728225708
+          ]
+        ]
+      },
+      {
+        "name": "AST_nyra_v4_plume_surface_flow_7_6",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.15383149683475494,
+            2.795724868774414,
+            1.2252683639526367
+          ],
+          [
+            -0.0627061054110527,
+            2.9603190422058105,
+            2.0303120613098145
+          ]
+        ]
+      },
+      {
+        "name": "AST_nyra_v4_plume_surface_flow_7_7",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.1681317836046219,
+            2.7737183570861816,
+            1.1110963821411133
+          ],
+          [
+            -0.0709330216050148,
+            3.0743930339813232,
+            1.8740994930267334
+          ]
+        ]
+      },
+      {
+        "name": "AST_nyra_v4_tail_copper_flame_L0",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.4234974682331085,
+            2.0938103199005127,
+            2.2822694778442383
+          ],
+          [
+            0.5039730668067932,
+            2.8830502033233643,
+            2.5559535026550293
+          ]
+        ]
+      },
+      {
+        "name": "AST_nyra_v4_tail_copper_flame_L1",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.39604517817497253,
+            2.376415967941284,
+            2.1078197956085205
+          ],
+          [
+            0.49985918402671814,
+            3.055699348449707,
+            2.6079986095428467
+          ]
+        ]
+      },
+      {
+        "name": "AST_nyra_v4_tail_copper_flame_R0",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.18236054480075836,
+            2.1503405570983887,
+            2.2627012729644775
+          ],
+          [
+            -0.13646990060806274,
+            2.793933868408203,
+            2.488152027130127
+          ]
+        ]
+      },
+      {
+        "name": "AST_nyra_v4_tail_copper_flame_R1",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.18843188881874084,
+            2.38731050491333,
+            2.100145101547241
+          ],
+          [
+            -0.14227811992168427,
+            2.9444048404693604,
+            2.538419485092163
+          ]
+        ]
+      }
+    ],
+    "added_base_clothing": [],
+    "added_sculpt_objects": [
+      "AST_nyra_v4_silver_flame_0",
+      "AST_nyra_v4_silver_flame_1",
+      "AST_nyra_v4_silver_flame_2",
+      "AST_nyra_v4_silver_flame_3",
+      "AST_nyra_v4_silver_flame_4",
+      "AST_nyra_v4_silver_flame_5",
+      "AST_nyra_v4_silver_flame_6",
+      "AST_nyra_v4_silver_ear_brush_R0",
+      "AST_nyra_v4_silver_ear_brush_R1",
+      "AST_nyra_v4_silver_ear_brush_R2",
+      "AST_nyra_v4_silver_ear_brush_R3",
+      "AST_nyra_v4_silver_ear_brush_R4",
+      "AST_nyra_v4_silver_ear_brush_L0",
+      "AST_nyra_v4_silver_ear_brush_L1",
+      "AST_nyra_v4_silver_ear_brush_L2",
+      "AST_nyra_v4_silver_ear_brush_L3",
+      "AST_nyra_v4_silver_ear_brush_L4",
+      "AST_nyra_v4_sculpted_s_plume",
+      "AST_nyra_v4_plume_surface_flow_0_0",
+      "AST_nyra_v4_plume_surface_flow_0_1",
+      "AST_nyra_v4_plume_surface_flow_0_2",
+      "AST_nyra_v4_plume_surface_flow_0_3",
+      "AST_nyra_v4_plume_surface_flow_0_4",
+      "AST_nyra_v4_plume_surface_flow_0_5",
+      "AST_nyra_v4_plume_surface_flow_0_6",
+      "AST_nyra_v4_plume_surface_flow_0_7",
+      "AST_nyra_v4_plume_surface_flow_1_0",
+      "AST_nyra_v4_plume_surface_flow_1_1",
+      "AST_nyra_v4_plume_surface_flow_1_2",
+      "AST_nyra_v4_plume_surface_flow_1_3",
+      "AST_nyra_v4_plume_surface_flow_1_4",
+      "AST_nyra_v4_plume_surface_flow_1_5",
+      "AST_nyra_v4_plume_surface_flow_1_6",
+      "AST_nyra_v4_plume_surface_flow_1_7",
+      "AST_nyra_v4_plume_surface_flow_2_0",
+      "AST_nyra_v4_plume_surface_flow_2_1",
+      "AST_nyra_v4_plume_surface_flow_2_2",
+      "AST_nyra_v4_plume_surface_flow_2_3",
+      "AST_nyra_v4_plume_surface_flow_2_4",
+      "AST_nyra_v4_plume_surface_flow_2_5",
+      "AST_nyra_v4_plume_surface_flow_2_6",
+      "AST_nyra_v4_plume_surface_flow_2_7",
+      "AST_nyra_v4_plume_surface_flow_3_0",
+      "AST_nyra_v4_plume_surface_flow_3_1",
+      "AST_nyra_v4_plume_surface_flow_3_2",
+      "AST_nyra_v4_plume_surface_flow_3_3",
+      "AST_nyra_v4_plume_surface_flow_3_4",
+      "AST_nyra_v4_plume_surface_flow_3_5",
+      "AST_nyra_v4_plume_surface_flow_3_6",
+      "AST_nyra_v4_plume_surface_flow_3_7",
+      "AST_nyra_v4_plume_surface_flow_4_0",
+      "AST_nyra_v4_plume_surface_flow_4_1",
+      "AST_nyra_v4_plume_surface_flow_4_2",
+      "AST_nyra_v4_plume_surface_flow_4_3",
+      "AST_nyra_v4_plume_surface_flow_4_4",
+      "AST_nyra_v4_plume_surface_flow_4_5",
+      "AST_nyra_v4_plume_surface_flow_4_6",
+      "AST_nyra_v4_plume_surface_flow_4_7",
+      "AST_nyra_v4_plume_surface_flow_5_0",
+      "AST_nyra_v4_plume_surface_flow_5_1",
+      "AST_nyra_v4_plume_surface_flow_5_2",
+      "AST_nyra_v4_plume_surface_flow_5_3",
+      "AST_nyra_v4_plume_surface_flow_5_4",
+      "AST_nyra_v4_plume_surface_flow_5_5",
+      "AST_nyra_v4_plume_surface_flow_5_6",
+      "AST_nyra_v4_plume_surface_flow_5_7",
+      "AST_nyra_v4_plume_surface_flow_6_0",
+      "AST_nyra_v4_plume_surface_flow_6_1",
+      "AST_nyra_v4_plume_surface_flow_6_2",
+      "AST_nyra_v4_plume_surface_flow_6_3",
+      "AST_nyra_v4_plume_surface_flow_6_4",
+      "AST_nyra_v4_plume_surface_flow_6_5",
+      "AST_nyra_v4_plume_surface_flow_6_6",
+      "AST_nyra_v4_plume_surface_flow_6_7",
+      "AST_nyra_v4_plume_surface_flow_7_0",
+      "AST_nyra_v4_plume_surface_flow_7_1",
+      "AST_nyra_v4_plume_surface_flow_7_2",
+      "AST_nyra_v4_plume_surface_flow_7_3",
+      "AST_nyra_v4_plume_surface_flow_7_4",
+      "AST_nyra_v4_plume_surface_flow_7_5",
+      "AST_nyra_v4_plume_surface_flow_7_6",
+      "AST_nyra_v4_plume_surface_flow_7_7",
+      "AST_nyra_v4_tail_copper_flame_L0",
+      "AST_nyra_v4_tail_copper_flame_L1",
+      "AST_nyra_v4_tail_copper_flame_R0",
+      "AST_nyra_v4_tail_copper_flame_R1"
+    ],
+    "material_edits": [
+      {
+        "name": "AST_nyra_v2_body",
+        "operation": "Baked directional painterly coat color",
+        "maximum_linear_color_difference": 0.014127194026941674
+      },
+      {
+        "name": "AST_nyra_v2_head",
+        "operation": "Baked directional painterly coat color",
+        "maximum_linear_color_difference": 0.013928997371983477
+      },
+      {
+        "name": "AST_nyra_v2_eye_R_skin_annulus",
+        "operation": "Baked directional painterly coat color",
+        "maximum_linear_color_difference": 0.011786531526736931
+      },
+      {
+        "name": "AST_nyra_v2_eye_R_closed_lid",
+        "operation": "Baked directional painterly coat color",
+        "maximum_linear_color_difference": 0.011813751906618326
+      },
+      {
+        "name": "AST_nyra_v2_eye_L_skin_annulus",
+        "operation": "Baked directional painterly coat color",
+        "maximum_linear_color_difference": 0.011813920701092752
+      },
+      {
+        "name": "AST_nyra_v2_eye_L_closed_lid",
+        "operation": "Baked directional painterly coat color",
+        "maximum_linear_color_difference": 0.012336268496192175
+      }
+    ],
+    "pendant_clearance": null,
+    "dependency_paths": [
+      "assets/3d/source/cat/sculpt-v002/nyra_detail.py"
+    ],
+    "ocular_revision": "Coherently reshaped orbital surfaces and closed lids; original actions unchanged.",
+    "likeness_limit": "Single-view hidden surfaces inferred; artistic reconstruction, not exact 1:1 identity.",
+    "equipment_source_objects": [
+      "AST_nyra_v2_fitted_teal_shoulder_L",
+      "AST_nyra_v2_shoulder_copper_star_L",
+      "AST_nyra_v2_shoulder_teal_star_L",
+      "AST_nyra_v2_copper_brow_L",
+      "AST_nyra_v2_haunch_double_crescent_L0",
+      "AST_nyra_v2_haunch_double_crescent_L1",
+      "AST_nyra_v2_hip_spark_L",
+      "AST_nyra_v2_angular_cuff_FL",
+      "AST_nyra_v2_cuff_diamond_FL",
+      "AST_nyra_v2_rounded_copper_toe_FL-1",
+      "AST_nyra_v2_rounded_copper_toe_FL0",
+      "AST_nyra_v2_rounded_copper_toe_FL1",
+      "AST_nyra_v2_angular_cuff_HL",
+      "AST_nyra_v2_cuff_diamond_HL",
+      "AST_nyra_v2_rounded_copper_toe_HL-1",
+      "AST_nyra_v2_rounded_copper_toe_HL0",
+      "AST_nyra_v2_rounded_copper_toe_HL1",
+      "AST_nyra_v2_fitted_teal_shoulder_R",
+      "AST_nyra_v2_shoulder_copper_star_R",
+      "AST_nyra_v2_shoulder_teal_star_R",
+      "AST_nyra_v2_copper_brow_R",
+      "AST_nyra_v2_haunch_double_crescent_R0",
+      "AST_nyra_v2_haunch_double_crescent_R1",
+      "AST_nyra_v2_hip_spark_R",
+      "AST_nyra_v2_angular_cuff_FR",
+      "AST_nyra_v2_cuff_diamond_FR",
+      "AST_nyra_v2_rounded_copper_toe_FR-1",
+      "AST_nyra_v2_rounded_copper_toe_FR0",
+      "AST_nyra_v2_rounded_copper_toe_FR1",
+      "AST_nyra_v2_angular_cuff_HR",
+      "AST_nyra_v2_cuff_diamond_HR",
+      "AST_nyra_v2_rounded_copper_toe_HR-1",
+      "AST_nyra_v2_rounded_copper_toe_HR0",
+      "AST_nyra_v2_rounded_copper_toe_HR1",
+      "AST_nyra_v2_forehead_copper_star",
+      "AST_nyra_v2_emerald_chest_frame",
+      "AST_nyra_v2_emerald_chest_crystal",
+      "AST_nyra_v2_upper_emerald_diamond_frame",
+      "AST_nyra_v2_upper_emerald_diamond_crystal",
+      "AST_nyra_v2_continuous_copper_collar",
+      "AST_nyra_v2_lower_pendant_flame_L",
+      "AST_nyra_v2_lower_pendant_flame_R",
+      "AST_nyra_v4_tail_copper_flame_L0",
+      "AST_nyra_v4_tail_copper_flame_L1",
+      "AST_nyra_v4_tail_copper_flame_R0",
+      "AST_nyra_v4_tail_copper_flame_R1"
+    ],
+    "body_source_objects": [
+      "AST_nyra_v2_body",
+      "AST_nyra_v2_head",
+      "AST_nyra_v2_eye_R_skin_annulus",
+      "AST_nyra_v2_eye_R",
+      "AST_nyra_v2_eye_R_upper_lid",
+      "AST_nyra_v2_eye_R_lower_lid",
+      "AST_nyra_v2_eye_R_lash_wing",
+      "AST_nyra_v2_eye_R_catchlight",
+      "AST_nyra_v2_eye_R_pinlight",
+      "AST_nyra_v2_eye_R_closed_lid",
+      "AST_nyra_v2_eye_R_closed_lash",
+      "AST_nyra_v2_eye_L_skin_annulus",
+      "AST_nyra_v2_eye_L",
+      "AST_nyra_v2_eye_L_upper_lid",
+      "AST_nyra_v2_eye_L_lower_lid",
+      "AST_nyra_v2_eye_L_lash_wing",
+      "AST_nyra_v2_eye_L_catchlight",
+      "AST_nyra_v2_eye_L_pinlight",
+      "AST_nyra_v2_eye_L_closed_lid",
+      "AST_nyra_v2_eye_L_closed_lash",
+      "AST_nyra_v2_cupped_rust_ear_R",
+      "AST_nyra_v2_cupped_rust_ear_L",
+      "AST_nyra_v2_cheek_fan_L0",
+      "AST_nyra_v2_cheek_fan_L1",
+      "AST_nyra_v2_cheek_split_L1",
+      "AST_nyra_v2_cheek_fan_L2",
+      "AST_nyra_v2_cheek_fan_L3",
+      "AST_nyra_v2_cheek_split_L3",
+      "AST_nyra_v2_cheek_fan_L4",
+      "AST_nyra_v2_cheek_fan_L5",
+      "AST_nyra_v2_cheek_split_L5",
+      "AST_nyra_v2_cheek_fan_L6",
+      "AST_nyra_v2_outer_dark_ruff_L0",
+      "AST_nyra_v2_outer_dark_ruff_L1",
+      "AST_nyra_v2_outer_dark_ruff_L2",
+      "AST_nyra_v2_outer_dark_ruff_L3",
+      "AST_nyra_v2_outer_dark_ruff_L4",
+      "AST_nyra_v2_outer_dark_ruff_L5",
+      "AST_nyra_v2_haunch_coat_L00",
+      "AST_nyra_v2_haunch_coat_L01",
+      "AST_nyra_v2_haunch_coat_L02",
+      "AST_nyra_v2_haunch_coat_L03",
+      "AST_nyra_v2_haunch_coat_L10",
+      "AST_nyra_v2_haunch_coat_L11",
+      "AST_nyra_v2_haunch_coat_L12",
+      "AST_nyra_v2_haunch_coat_L13",
+      "AST_nyra_v2_haunch_coat_L20",
+      "AST_nyra_v2_haunch_coat_L21",
+      "AST_nyra_v2_haunch_coat_L22",
+      "AST_nyra_v2_haunch_coat_L23",
+      "AST_nyra_v2_cheek_fan_R0",
+      "AST_nyra_v2_cheek_fan_R1",
+      "AST_nyra_v2_cheek_split_R1",
+      "AST_nyra_v2_cheek_fan_R2",
+      "AST_nyra_v2_cheek_fan_R3",
+      "AST_nyra_v2_cheek_split_R3",
+      "AST_nyra_v2_cheek_fan_R4",
+      "AST_nyra_v2_cheek_fan_R5",
+      "AST_nyra_v2_cheek_split_R5",
+      "AST_nyra_v2_cheek_fan_R6",
+      "AST_nyra_v2_outer_dark_ruff_R0",
+      "AST_nyra_v2_outer_dark_ruff_R1",
+      "AST_nyra_v2_outer_dark_ruff_R2",
+      "AST_nyra_v2_outer_dark_ruff_R3",
+      "AST_nyra_v2_outer_dark_ruff_R4",
+      "AST_nyra_v2_outer_dark_ruff_R5",
+      "AST_nyra_v2_haunch_coat_R00",
+      "AST_nyra_v2_haunch_coat_R01",
+      "AST_nyra_v2_haunch_coat_R02",
+      "AST_nyra_v2_haunch_coat_R03",
+      "AST_nyra_v2_haunch_coat_R10",
+      "AST_nyra_v2_haunch_coat_R11",
+      "AST_nyra_v2_haunch_coat_R12",
+      "AST_nyra_v2_haunch_coat_R13",
+      "AST_nyra_v2_haunch_coat_R20",
+      "AST_nyra_v2_haunch_coat_R21",
+      "AST_nyra_v2_haunch_coat_R22",
+      "AST_nyra_v2_haunch_coat_R23",
+      "AST_nyra_v2_nape_bundle_00",
+      "AST_nyra_v2_nape_bundle_01",
+      "AST_nyra_v2_nape_bundle_02",
+      "AST_nyra_v2_nape_bundle_03",
+      "AST_nyra_v2_nape_bundle_04",
+      "AST_nyra_v2_nape_bundle_10",
+      "AST_nyra_v2_nape_bundle_11",
+      "AST_nyra_v2_nape_bundle_12",
+      "AST_nyra_v2_nape_bundle_13",
+      "AST_nyra_v2_nape_bundle_14",
+      "AST_nyra_v2_nape_bundle_20",
+      "AST_nyra_v2_nape_bundle_21",
+      "AST_nyra_v2_nape_bundle_22",
+      "AST_nyra_v2_nape_bundle_23",
+      "AST_nyra_v2_nape_bundle_24",
+      "AST_nyra_v2_dark_bib_00",
+      "AST_nyra_v2_dark_bib_01",
+      "AST_nyra_v2_dark_bib_02",
+      "AST_nyra_v2_dark_bib_03",
+      "AST_nyra_v2_dark_bib_04",
+      "AST_nyra_v2_dark_bib_05",
+      "AST_nyra_v2_dark_bib_06",
+      "AST_nyra_v2_dark_bib_10",
+      "AST_nyra_v2_dark_bib_11",
+      "AST_nyra_v2_dark_bib_12",
+      "AST_nyra_v2_dark_bib_13",
+      "AST_nyra_v2_dark_bib_14",
+      "AST_nyra_v2_dark_bib_15",
+      "AST_nyra_v2_dark_bib_16",
+      "AST_nyra_v2_triangular_copper_nose",
+      "AST_nyra_v2_smile_L",
+      "AST_nyra_v2_smile_R",
+      "AST_nyra_v4_silver_flame_0",
+      "AST_nyra_v4_silver_flame_1",
+      "AST_nyra_v4_silver_flame_2",
+      "AST_nyra_v4_silver_flame_3",
+      "AST_nyra_v4_silver_flame_4",
+      "AST_nyra_v4_silver_flame_5",
+      "AST_nyra_v4_silver_flame_6",
+      "AST_nyra_v4_silver_ear_brush_R0",
+      "AST_nyra_v4_silver_ear_brush_R1",
+      "AST_nyra_v4_silver_ear_brush_R2",
+      "AST_nyra_v4_silver_ear_brush_R3",
+      "AST_nyra_v4_silver_ear_brush_R4",
+      "AST_nyra_v4_silver_ear_brush_L0",
+      "AST_nyra_v4_silver_ear_brush_L1",
+      "AST_nyra_v4_silver_ear_brush_L2",
+      "AST_nyra_v4_silver_ear_brush_L3",
+      "AST_nyra_v4_silver_ear_brush_L4",
+      "AST_nyra_v4_sculpted_s_plume",
+      "AST_nyra_v4_plume_surface_flow_0_0",
+      "AST_nyra_v4_plume_surface_flow_0_1",
+      "AST_nyra_v4_plume_surface_flow_0_2",
+      "AST_nyra_v4_plume_surface_flow_0_3",
+      "AST_nyra_v4_plume_surface_flow_0_4",
+      "AST_nyra_v4_plume_surface_flow_0_5",
+      "AST_nyra_v4_plume_surface_flow_0_6",
+      "AST_nyra_v4_plume_surface_flow_0_7",
+      "AST_nyra_v4_plume_surface_flow_1_0",
+      "AST_nyra_v4_plume_surface_flow_1_1",
+      "AST_nyra_v4_plume_surface_flow_1_2",
+      "AST_nyra_v4_plume_surface_flow_1_3",
+      "AST_nyra_v4_plume_surface_flow_1_4",
+      "AST_nyra_v4_plume_surface_flow_1_5",
+      "AST_nyra_v4_plume_surface_flow_1_6",
+      "AST_nyra_v4_plume_surface_flow_1_7",
+      "AST_nyra_v4_plume_surface_flow_2_0",
+      "AST_nyra_v4_plume_surface_flow_2_1",
+      "AST_nyra_v4_plume_surface_flow_2_2",
+      "AST_nyra_v4_plume_surface_flow_2_3",
+      "AST_nyra_v4_plume_surface_flow_2_4",
+      "AST_nyra_v4_plume_surface_flow_2_5",
+      "AST_nyra_v4_plume_surface_flow_2_6",
+      "AST_nyra_v4_plume_surface_flow_2_7",
+      "AST_nyra_v4_plume_surface_flow_3_0",
+      "AST_nyra_v4_plume_surface_flow_3_1",
+      "AST_nyra_v4_plume_surface_flow_3_2",
+      "AST_nyra_v4_plume_surface_flow_3_3",
+      "AST_nyra_v4_plume_surface_flow_3_4",
+      "AST_nyra_v4_plume_surface_flow_3_5",
+      "AST_nyra_v4_plume_surface_flow_3_6",
+      "AST_nyra_v4_plume_surface_flow_3_7",
+      "AST_nyra_v4_plume_surface_flow_4_0",
+      "AST_nyra_v4_plume_surface_flow_4_1",
+      "AST_nyra_v4_plume_surface_flow_4_2",
+      "AST_nyra_v4_plume_surface_flow_4_3",
+      "AST_nyra_v4_plume_surface_flow_4_4",
+      "AST_nyra_v4_plume_surface_flow_4_5",
+      "AST_nyra_v4_plume_surface_flow_4_6",
+      "AST_nyra_v4_plume_surface_flow_4_7",
+      "AST_nyra_v4_plume_surface_flow_5_0",
+      "AST_nyra_v4_plume_surface_flow_5_1",
+      "AST_nyra_v4_plume_surface_flow_5_2",
+      "AST_nyra_v4_plume_surface_flow_5_3",
+      "AST_nyra_v4_plume_surface_flow_5_4",
+      "AST_nyra_v4_plume_surface_flow_5_5",
+      "AST_nyra_v4_plume_surface_flow_5_6",
+      "AST_nyra_v4_plume_surface_flow_5_7",
+      "AST_nyra_v4_plume_surface_flow_6_0",
+      "AST_nyra_v4_plume_surface_flow_6_1",
+      "AST_nyra_v4_plume_surface_flow_6_2",
+      "AST_nyra_v4_plume_surface_flow_6_3",
+      "AST_nyra_v4_plume_surface_flow_6_4",
+      "AST_nyra_v4_plume_surface_flow_6_5",
+      "AST_nyra_v4_plume_surface_flow_6_6",
+      "AST_nyra_v4_plume_surface_flow_6_7",
+      "AST_nyra_v4_plume_surface_flow_7_0",
+      "AST_nyra_v4_plume_surface_flow_7_1",
+      "AST_nyra_v4_plume_surface_flow_7_2",
+      "AST_nyra_v4_plume_surface_flow_7_3",
+      "AST_nyra_v4_plume_surface_flow_7_4",
+      "AST_nyra_v4_plume_surface_flow_7_5",
+      "AST_nyra_v4_plume_surface_flow_7_6",
+      "AST_nyra_v4_plume_surface_flow_7_7"
+    ]
+  },
+  "original_rig": {
+    "rest_sha256": "831FE95C97E252E6DA88F801FCE88147999CC5D14C327589D0B995F2A0F1031C",
+    "behavior_sha256": "37E2CB7157322B1B022EDA60C976DC4F934B2866BB43D2B7C6645C19C4A16C75",
+    "bones": 13,
+    "fps": 30,
+    "fps_base": 1.0,
+    "actions": {
+      "blink": {
+        "sha256": "53D90AD797C3149C1F887CBAF6F5222C36B82564E3422FEC198FE27F8864DCC4",
+        "curve_count": 117,
+        "key_count": 1170,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          19.0
+        ]
+      },
+      "eat": {
+        "sha256": "15735E2CC974B9F7C94E4B9F8C3AEE83E59E83DAFE2F8A083A2F3D05DB7A76AC",
+        "curve_count": 117,
+        "key_count": 5382,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          91.0
+        ]
+      },
+      "happy": {
+        "sha256": "DF5B2F8021FBB35F170DFE0FC6D045B9DCB681FD418AE4681D9F053DD50F54A3",
+        "curve_count": 117,
+        "key_count": 3627,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          61.0
+        ]
+      },
+      "idle": {
+        "sha256": "FE58E57D7DCFAD53A63F33E498D98B79F3530F638B5D2C603B3A76B013D8793A",
+        "curve_count": 117,
+        "key_count": 7137,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          121.0
+        ]
+      },
+      "pet_reaction": {
+        "sha256": "97259C22555C196331BAB7CCB2AE82D9F9E66E061A29994EFD2001DC7802563A",
+        "curve_count": 117,
+        "key_count": 4563,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          76.0
+        ]
+      },
+      "play": {
+        "sha256": "EF1FC15872649E931595A62896CB4D740F6100DBBAE28C4CC85367466DB52895",
+        "curve_count": 117,
+        "key_count": 4797,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          81.0
+        ]
+      },
+      "sleep": {
+        "sha256": "B720F672BCB3D0661BF3217D4248098ADA04FEE6280AB398E0E3E65D57297B0B",
+        "curve_count": 117,
+        "key_count": 7137,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          121.0
+        ]
+      },
+      "wake": {
+        "sha256": "5502BEF1AE28D5A16D201229C41412C916898AB0EAA0234786E0365E6C73153D",
+        "curve_count": 117,
+        "key_count": 3627,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          61.0
+        ]
+      },
+      "walk": {
+        "sha256": "13FCE1E35359EB2D10E00BE348E4444A7C7F3DF0F931FE17367EAAABE98853A0",
+        "curve_count": 117,
+        "key_count": 2925,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          49.0
+        ]
+      }
+    }
+  },
+  "candidate_rig": {
+    "rest_sha256": "831FE95C97E252E6DA88F801FCE88147999CC5D14C327589D0B995F2A0F1031C",
+    "behavior_sha256": "37E2CB7157322B1B022EDA60C976DC4F934B2866BB43D2B7C6645C19C4A16C75",
+    "bones": 13,
+    "fps": 30,
+    "fps_base": 1.0,
+    "actions": {
+      "blink": {
+        "sha256": "53D90AD797C3149C1F887CBAF6F5222C36B82564E3422FEC198FE27F8864DCC4",
+        "curve_count": 117,
+        "key_count": 1170,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          19.0
+        ]
+      },
+      "eat": {
+        "sha256": "15735E2CC974B9F7C94E4B9F8C3AEE83E59E83DAFE2F8A083A2F3D05DB7A76AC",
+        "curve_count": 117,
+        "key_count": 5382,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          91.0
+        ]
+      },
+      "happy": {
+        "sha256": "DF5B2F8021FBB35F170DFE0FC6D045B9DCB681FD418AE4681D9F053DD50F54A3",
+        "curve_count": 117,
+        "key_count": 3627,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          61.0
+        ]
+      },
+      "idle": {
+        "sha256": "FE58E57D7DCFAD53A63F33E498D98B79F3530F638B5D2C603B3A76B013D8793A",
+        "curve_count": 117,
+        "key_count": 7137,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          121.0
+        ]
+      },
+      "pet_reaction": {
+        "sha256": "97259C22555C196331BAB7CCB2AE82D9F9E66E061A29994EFD2001DC7802563A",
+        "curve_count": 117,
+        "key_count": 4563,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          76.0
+        ]
+      },
+      "play": {
+        "sha256": "EF1FC15872649E931595A62896CB4D740F6100DBBAE28C4CC85367466DB52895",
+        "curve_count": 117,
+        "key_count": 4797,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          81.0
+        ]
+      },
+      "sleep": {
+        "sha256": "B720F672BCB3D0661BF3217D4248098ADA04FEE6280AB398E0E3E65D57297B0B",
+        "curve_count": 117,
+        "key_count": 7137,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          121.0
+        ]
+      },
+      "wake": {
+        "sha256": "5502BEF1AE28D5A16D201229C41412C916898AB0EAA0234786E0365E6C73153D",
+        "curve_count": 117,
+        "key_count": 3627,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          61.0
+        ]
+      },
+      "walk": {
+        "sha256": "13FCE1E35359EB2D10E00BE348E4444A7C7F3DF0F931FE17367EAAABE98853A0",
+        "curve_count": 117,
+        "key_count": 2925,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          49.0
+        ]
+      }
+    }
+  },
+  "motion_comparison": {
+    "idle": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "blink": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "happy": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "eat": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "play": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "pet_reaction": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "sleep": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "wake": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "walk": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    }
+  },
+  "source_views": {
+    "hero": {
+      "file": "assets/3d/reference/cat/sculpt-v004/source/cat-hero.png",
+      "sha256": "AC0DA41E13FC0C01ACF754387999D14ABA586631A76A972A1C3BE8151813C465"
+    },
+    "front": {
+      "file": "assets/3d/reference/cat/sculpt-v004/source/cat-front.png",
+      "sha256": "656A9CC29F5E1AFC4E8B384D429BFAA824FCCD26E756DB4A0D9E1BB61C7594A2"
+    },
+    "side": {
+      "file": "assets/3d/reference/cat/sculpt-v004/source/cat-side.png",
+      "sha256": "7E0F0C4D03D3898C8F17BE585E0CE37C5462F2F77DF5021EE1A65F02D5564EB8"
+    },
+    "rear": {
+      "file": "assets/3d/reference/cat/sculpt-v004/source/cat-rear.png",
+      "sha256": "A3CC246E0E894C8C475000ACB1C71604173241D9E01F0F85BAFA78BC6D97CC56"
+    },
+    "body-hero": {
+      "file": "assets/3d/reference/cat/sculpt-v004/source/cat-body-hero.png",
+      "sha256": "71868DA3D4679C6AD9B30B104391CDCBFC8040A30AF26F40E12DD2108A8FE0A7"
+    },
+    "body-side": {
+      "file": "assets/3d/reference/cat/sculpt-v004/source/cat-body-side.png",
+      "sha256": "593348F0CB641B4274AB605929F459890BBD687E31D768BE1E005CFBA1FBFC08"
+    }
+  },
+  "import_views": {
+    "hero": {
+      "file": "assets/3d/reference/cat/sculpt-v004/import/cat-hero.png",
+      "sha256": "0C556E37F785331484295C7BC7090C3C72CFFE95E813C7CF103786D9D75A0CF0"
+    },
+    "rear": {
+      "file": "assets/3d/reference/cat/sculpt-v004/import/cat-rear.png",
+      "sha256": "43E7623DBD3CCBF4C415D776FDBA2A2317F7146F98583083BA6D15F9AD7AC24E"
+    },
+    "body-hero": {
+      "file": "assets/3d/reference/cat/sculpt-v004/import/cat-body-hero.png",
+      "sha256": "9535B5002925D1D185DE7139118456374F4CA7B66A9A8CDAEA722550C77AC842"
+    },
+    "blink": {
+      "file": "assets/3d/reference/cat/sculpt-v004/import/cat-blink.png",
+      "sha256": "4E15E196EA0145D170C2199F13B0FD3502F44586AD6E66BDE0DE18D084425E2F"
+    }
+  },
+  "hair_evidence": null,
+  "passed": true,
+  "human_likeness_accepted": false,
+  "mobile_performance_accepted": false,
+  "paid_provider_used": false,
+  "projection_used": false,
+  "ocular_geometry_intentionally_refined": true,
+  "package_status": "Local hash-checked Blender delivery; no game-dev canonical receipt.",
+  "animation_limit": "Original source curves, keys, handles, rest rig and drivers compared exactly. Fresh GLBs compared at nine normalized times per clip with 2e-4 skin-matrix tolerance. Not a collision or gait acceptance.",
+  "likeness_limit": "Original approved artwork retained. Primary forms intentionally refined; unseen surfaces inferred. No exact 1:1 or human acceptance claim."
+}

@@ -1,0 +1,65 @@
+{
+  "schema": "asterion-local-companion-sculpt-v1",
+  "kind": "orc",
+  "name": "Brumo",
+  "version": "sculpt-v001",
+  "source": "assets/3d/source/orc/sculpt-v001/orc-sculpt-v001.blend",
+  "model": "public/assets/3d/orc/orc-sculpt-v001.glb",
+  "reference": "assets/3d/reference/orc/sculpt-v001/original.png",
+  "source_sha256": "7EF9F93EE3C871844A6BFF095EC61053E70F93057FA260209C50FEEB89BE7439",
+  "model_sha256": "E5828EF176535523FEA8EFFCEE54F7F840655B828CDD4EF792F01DD517C5E2DC",
+  "reference_sha256": "55FB8AD6273C92AC99A165B0BC4E6C9C56F86C9780F5D39CAEAD7C138C905B35",
+  "bytes": 4399264,
+  "triangles": 553418,
+  "vertices": 282271,
+  "bones": 10,
+  "materials": 18,
+  "draw_calls": 18,
+  "clips": [
+    "idle",
+    "blink",
+    "happy",
+    "eat",
+    "play",
+    "pet_reaction",
+    "sleep",
+    "wake",
+    "walk"
+  ],
+  "editable_source_meshes": 171,
+  "blender": "5.2.1 LTS",
+  "renders": {
+    "hero": "assets/3d/reference/orc/sculpt-v001/orc-sculpt-hero.png",
+    "front": "assets/3d/reference/orc/sculpt-v001/orc-sculpt-front.png",
+    "side": "assets/3d/reference/orc/sculpt-v001/orc-sculpt-side.png",
+    "rear": "assets/3d/reference/orc/sculpt-v001/orc-sculpt-rear.png"
+  },
+  "fresh_import_passed": true,
+  "human_likeness_accepted": false,
+  "mobile_performance_accepted": false,
+  "projection_used": false,
+  "paid_provider_used": false,
+  "provenance": "Modeled locally from existing project single-view artwork. Hidden views are inferred.",
+  "animation_limit": "Gentle stylized presentation gestures; no biomechanical gait simulation.",
+  "package_status": "Local manually validated delivery; no canonical game-dev CLI receipt.",
+  "builder": "assets/3d/source/companions/sculpt-v001/build_collection.py",
+  "builder_sha256": {
+    "assets/3d/source/companions/sculpt-v001/build_collection.py": "3FD79EC45D0A921A5EF95B4A79B766B85A0A1C77B7217A5CB726CA7FD3F68844",
+    "assets/3d/source/companions/sculpt-v001/common.py": "A6DF036A5B3F6FAA3C74740382998D829D45C9E2734D91A285F9369764C21F9E",
+    "assets/3d/source/companions/sculpt-v001/humanoids.py": "9264D27B44C6616F53D4E77A67130E54A824559491D46341C25049EC8EF0C425",
+    "assets/3d/source/asterion/sculpt-v001/build_sculpt.py": "9A81C430E8FD07CE520BBA554C78845A508F22E5FB89E524BF515D8BF8415621",
+    "assets/3d/source/asterion/sculpt-v001/rig_delivery.py": "8758D105E70AB5405F61A48A531154CC591EAC0D82B167788F1D0785A16CDFF0"
+  },
+  "notes": [
+    "Olive skin, amber eyes, broad smiling face, small ivory tusks, aubergine swept topknot, bronze-edged armor, leather and fur.",
+    "Distinct sculpted humanoid anatomy. Hidden garment backs and neutral stance are inferred from the single canonical portrait."
+  ],
+  "publication_amendment": {
+    "id": "metadata-clean-2026-09-07",
+    "record": "assets/3d/publication/2026-09-07/amendment.json",
+    "original_document_sha256": "7CE908C7060050F1AA3C426E1D9F151701D80780E8C76BD06EC7DB26C826870A",
+    "authoring_record": "assets/3d/publication/2026-09-07/authoring-records/assets/3d/source/orc/sculpt-v001/manifest.json",
+    "authoring_record_status": "exact-public-safe-original",
+    "notice": "Metadata-only publication derivative, not a rerun of the historical builder or validator. File digest and size bindings identify publication copies; all measured geometry, materials, rig, action, motion and acceptance evidence remains historical and unchanged. Consult the original authoring record and amendment binding log."
+  }
+}

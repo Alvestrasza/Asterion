@@ -1,0 +1,18 @@
+{
+  "reference_sha256": "fe91a72f21a139cb4443e7bde99498fc7af7d07b8784a5f4a0b48cc37a141aec",
+  "geometry_method": "Fully volumetric sculpted anatomy with modeled horns, mane, scales, armor and eyes; no projected reference image.",
+  "stats": {
+    "objects": 241,
+    "vertices": 769383,
+    "triangles": 1496672
+  },
+  "renders": {
+    "hero": "assets/3d/reference/asterion/sculpt-v001/asterion-sculpt-hero.png",
+    "front": "assets/3d/reference/asterion/sculpt-v001/asterion-sculpt-front.png",
+    "side": "assets/3d/reference/asterion/sculpt-v001/asterion-sculpt-side.png",
+    "rear": "assets/3d/reference/asterion/sculpt-v001/asterion-sculpt-rear.png",
+    "face": "assets/3d/reference/asterion/sculpt-v001/asterion-sculpt-face.png"
+  },
+  "blend": "assets/3d/source/asterion/sculpt-v001/asterion-sculpt-v001.blend",
+  "path_base": "repository_root"
+}

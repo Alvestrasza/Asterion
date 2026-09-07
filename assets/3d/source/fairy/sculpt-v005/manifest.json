@@ -1,0 +1,214 @@
+{
+  "schema": "asterion-face-only-v1",
+  "kind": "fairy",
+  "name": "Selya",
+  "version": "sculpt-v005",
+  "source_sha256": "AD28B1761DC6AE6F4ED1FA7E5E1717CFF1A4C264FF964E4CD57EBE332198BDC4",
+  "model_sha256": "A4EA39634CE10D80DD6827CA3FB599534BE7A00BDCB6CAC4D6EEB4EE1F207161",
+  "reference_sha256": "E22EA6A731DB9E432BB2E454DC0B847E7AD46829D52A871C3F2EDA4FD2AFAEF7",
+  "triangles": 1492966,
+  "bytes": 15979024,
+  "bones": 12,
+  "clips": [
+    "idle",
+    "blink",
+    "happy",
+    "eat",
+    "play",
+    "pet_reaction",
+    "sleep",
+    "wake",
+    "walk"
+  ],
+  "draw_calls": 25,
+  "materials": 21,
+  "components": {
+    "body": {
+      "mesh": 1,
+      "skin": 0,
+      "triangles": 1172116,
+      "primitives": 17
+    },
+    "armor": {
+      "mesh": 0,
+      "skin": 0,
+      "triangles": 320850,
+      "primitives": 8
+    }
+  },
+  "blender": "5.2.1 LTS",
+  "human_likeness_accepted": false,
+  "mobile_performance_accepted": false,
+  "projection_used": false,
+  "paid_provider_used": false,
+  "package_status": "Local hash-checked Blender delivery; no game-dev canonical receipt.",
+  "animation_limit": "Original full action/rest/driver RNA unchanged; nine fresh GLB skin-matrix samples per clip. Original center-scale lids retained; no anatomical closure or collision-free motion claim.",
+  "likeness_limit": "Face-only sculpt interpreted from unchanged original artwork. Hidden angles inferred. Not a 100-percent likeness or human identity acceptance claim.",
+  "compression_lossless": false,
+  "source": "assets/3d/source/fairy/sculpt-v005/fairy-sculpt-v005.blend",
+  "model": "public/assets/3d/fairy/fairy-sculpt-v005.glb",
+  "reference": "assets/3d/reference/fairy/sculpt-v005/original.png",
+  "validation": "assets/3d/reference/fairy/sculpt-v005/validation.json",
+  "validation_sha256": "E3A687CF1825C65E1A4FD0EB9514FD249E252AD053F4B5D2ACC152DD9B14C9E3",
+  "input_sha256": {
+    "assets/3d/source/fairy/sculpt-v004/fairy-sculpt-v004.blend": "A6B54FEE917B29F64CA92B7DC48097BAB51461CE9358F0EB5C3DCEF289F0BEE6",
+    "public/assets/3d/fairy/fairy-sculpt-v004.glb": "8A4C45664A42C145F84E514752A85F6A857A8698C0B4C46ADC8163A7D4F1F0E4",
+    "public/assets/companions/fairy.png": "E22EA6A731DB9E432BB2E454DC0B847E7AD46829D52A871C3F2EDA4FD2AFAEF7",
+    "assets/3d/source/companions/sculpt-v001/common.py": "A6DF036A5B3F6FAA3C74740382998D829D45C9E2734D91A285F9369764C21F9E",
+    "assets/3d/source/asterion/sculpt-v001/build_sculpt.py": "9A81C430E8FD07CE520BBA554C78845A508F22E5FB89E524BF515D8BF8415621",
+    "assets/3d/source/asterion/sculpt-v001/rig_delivery.py": "8758D105E70AB5405F61A48A531154CC591EAC0D82B167788F1D0785A16CDFF0",
+    "assets/3d/source/asterion/sculpt-v002/validate_refinement.py": "8C541F26C2D2546FB142988D10F07EDF51C891D1C81F02065C7B62CE01F78EFD",
+    "assets/3d/source/asterion/sculpt-v003/build_head_study.py": "A3B22323201D30A3BD9459985F8F7741A44545010A84D27CC5912E1C8A85E0F2",
+    "assets/3d/source/asterion/sculpt-v004/export_equipment.py": "C805B4740463215AE5CC9D314D14966F2BDF91A00FB82D05054BE0BBB8ED930B",
+    "assets/3d/source/companions/sculpt-v004/build.py": "C6FBCA99D1117722B07933B90795DBFFA37DC22B399ECD6B339EAFF3C063A6BD",
+    "assets/3d/source/companions/sculpt-v004/refinements.py": "6247CEA1AE30B56B6FD3D23DEDEF1DD99BCD8A7B9158AA0576340AA2B8F89BCF",
+    "assets/3d/source/companions/sculpt-v004/export_equipment.py": "5EDB676641BE58BDE353213F6DA4F7F7662B76A08F586D0E7DADA7006AF343CF",
+    "assets/3d/source/companions/sculpt-v005/build.py": "2CD3C4D70E953C8BDBDDD01157745474A213968016F12BC3494BE8FD99C793BE",
+    "assets/3d/source/companions/sculpt-v005/contract.py": "F6829E7B890BA3B1108700B847CBB2C4CD532042233BD8049CC26B3A8522984E",
+    "assets/3d/source/companions/sculpt-v005/guards.py": "C98E5A25B553C56D016324F1AADE2669BEA28F3B2E73F5D883A74EBAEB599EF4",
+    "assets/3d/source/companions/sculpt-v005/folk_faces.py": "26BB92F8C85328CC8FBA0DA15BAACE4F8B0047AE5A00917FCD872204154A257A"
+  },
+  "renders": {
+    "face-hero": {
+      "file": "assets/3d/reference/fairy/sculpt-v005/source/fairy-face-hero.png",
+      "sha256": "312242D5E84AD4D1B45052FB8124CD9ADA57B7BE40EC53EFC4F3C3AD55F1CCA3",
+      "clip": "idle",
+      "frame": 1
+    },
+    "face-front": {
+      "file": "assets/3d/reference/fairy/sculpt-v005/source/fairy-face-front.png",
+      "sha256": "80FA46B5C271A93AD47DFC58C4E98E2EB13C0B44A5EC21C73513325E20DF057E",
+      "clip": "idle",
+      "frame": 1
+    },
+    "face-side": {
+      "file": "assets/3d/reference/fairy/sculpt-v005/source/fairy-face-side.png",
+      "sha256": "BFC5497AB020BD82A13B7ED4A0B0BF2D77E7EE1DF350FFEE205CA9DE7E1A354A",
+      "clip": "idle",
+      "frame": 1
+    },
+    "blink-early": {
+      "file": "assets/3d/reference/fairy/sculpt-v005/source/fairy-blink-early.png",
+      "sha256": "CD4FEB3913C11891990964FA0AAFDD0326134DA8150FDB75348E324D6E53A9E2",
+      "clip": "blink",
+      "frame": 5
+    },
+    "blink-partial": {
+      "file": "assets/3d/reference/fairy/sculpt-v005/source/fairy-blink-partial.png",
+      "sha256": "D5FDC549A9D68C07D1A5E1D4EF2B458BD97B531A62FEBD1239203BB532773119",
+      "clip": "blink",
+      "frame": 7
+    },
+    "blink-closed": {
+      "file": "assets/3d/reference/fairy/sculpt-v005/source/fairy-blink-closed.png",
+      "sha256": "05DAA3BFFDFE29BB7C57BF5BA6B3BB174F9AD03D84FCA4903EC765F9E026ED93",
+      "clip": "blink",
+      "frame": 10
+    },
+    "hero": {
+      "file": "assets/3d/reference/fairy/sculpt-v005/source/fairy-hero.png",
+      "sha256": "7F34EF22EAFA88978724ECC0B8B02FBA1DCFCE169169DF9737AF8D0D5D5464D6",
+      "clip": "idle",
+      "frame": 1
+    },
+    "rear": {
+      "file": "assets/3d/reference/fairy/sculpt-v005/source/fairy-rear.png",
+      "sha256": "987F4D145D1F26AC42D4F45EFC1F99C0B8B5F7302A0A4C8E3ABC1CA473D76067",
+      "clip": "idle",
+      "frame": 1
+    },
+    "body-hero": {
+      "file": "assets/3d/reference/fairy/sculpt-v005/source/fairy-body-hero.png",
+      "sha256": "800D0BC904BDE5D255C5A9DB9B93468E147486BC9025C12E2AFA1E029EE7AF5D",
+      "clip": "idle",
+      "frame": 1
+    }
+  },
+  "import_renders": {
+    "face-hero": {
+      "file": "assets/3d/reference/fairy/sculpt-v005/import/fairy-face-hero.png",
+      "sha256": "D164902CF470FAFCB961AEFE01C0E33FC62CE95857764725488D13CF0723FC0A",
+      "clip": "idle",
+      "frame": 1
+    },
+    "face-front": {
+      "file": "assets/3d/reference/fairy/sculpt-v005/import/fairy-face-front.png",
+      "sha256": "C15635C550E6B80036E87D4BD170F1182EB57F6B3E4F73B7493613AD08AEDDA8",
+      "clip": "idle",
+      "frame": 1
+    },
+    "face-side": {
+      "file": "assets/3d/reference/fairy/sculpt-v005/import/fairy-face-side.png",
+      "sha256": "1B013E664D5FBD4A92731AE005A57B3F0996990671F3C643921401DDF4148D56",
+      "clip": "idle",
+      "frame": 1
+    },
+    "blink-early": {
+      "file": "assets/3d/reference/fairy/sculpt-v005/import/fairy-blink-early.png",
+      "sha256": "7D4FD74DDC10C2E11F51768ECE56233FE119F35E46D04EEBDA08D88E65CE65E2",
+      "clip": "blink",
+      "frame": 5
+    },
+    "blink-partial": {
+      "file": "assets/3d/reference/fairy/sculpt-v005/import/fairy-blink-partial.png",
+      "sha256": "B4F57D6A36AC2C5C15FD672F85DEC3924EC456BF17E09C92EF077DF222800C6B",
+      "clip": "blink",
+      "frame": 7
+    },
+    "blink-closed": {
+      "file": "assets/3d/reference/fairy/sculpt-v005/import/fairy-blink-closed.png",
+      "sha256": "87E3647A9CF9F41D4BFBC34A92138350AE421A1254B0893BB8363A7EB092544E",
+      "clip": "blink",
+      "frame": 10
+    },
+    "hero": {
+      "file": "assets/3d/reference/fairy/sculpt-v005/import/fairy-hero.png",
+      "sha256": "5DCF52CC3E97BC90B12424CCFC299796F5AED01BB064E5633AF48F191883AE27",
+      "clip": "idle",
+      "frame": 1
+    },
+    "body-hero": {
+      "file": "assets/3d/reference/fairy/sculpt-v005/import/fairy-body-hero.png",
+      "sha256": "B417FBB520F8E259ACB456F4C920BE4E158F7221517989BF14E8FCE5870F9FE2",
+      "clip": "idle",
+      "frame": 1
+    }
+  },
+  "baseline_renders": {
+    "face-hero": {
+      "file": "assets/3d/reference/fairy/sculpt-v005/baseline/fairy-face-hero.png",
+      "sha256": "9E1F90EF6C6E25EFC6BF58ACDBC2057CAFD4340A37FAA47DF58320F6F72CBB7A",
+      "clip": "idle",
+      "frame": 1
+    },
+    "face-front": {
+      "file": "assets/3d/reference/fairy/sculpt-v005/baseline/fairy-face-front.png",
+      "sha256": "0E07A16BA0522F4DE0352CFEA99CEF70AEC4C66DEB9C9A747488E8E299D9C6E7",
+      "clip": "idle",
+      "frame": 1
+    },
+    "face-side": {
+      "file": "assets/3d/reference/fairy/sculpt-v005/baseline/fairy-face-side.png",
+      "sha256": "144C1170CDA89F7A4506E8FA29DAD225FE51E9FDB4CF1E6ADBA8DA0CB95F5C69",
+      "clip": "idle",
+      "frame": 1
+    }
+  },
+  "face_scope_only": true,
+  "nonface_unchanged": true,
+  "animations_unchanged": true,
+  "equipment_separate": true,
+  "fresh_import_passed": true,
+  "notes": "Facial-only sculpt, coherent pivot-fixed ocular arches, deeper broad irises and pupils, isolated warm skin value fields. Original body, joint shells, hair, ears, outfit and every action retained.",
+  "edited_objects": 81,
+  "protected_object_count": 1011,
+  "protected_material_count": 13,
+  "publication_amendment": {
+    "id": "metadata-clean-2026-09-07",
+    "record": "assets/3d/publication/2026-09-07/amendment.json",
+    "original_document_sha256": "A704C3007ABF9D8D009ACBB61AEDB30BECA77096D572C81A8DD379C1CFDE8133",
+    "authoring_record": "assets/3d/publication/2026-09-07/authoring-records/assets/3d/source/fairy/sculpt-v005/manifest.json",
+    "authoring_record_status": "exact-public-safe-original",
+    "notice": "Metadata-only publication derivative, not a rerun of the historical builder or validator. File digest and size bindings identify publication copies; all measured geometry, materials, rig, action, motion and acceptance evidence remains historical and unchanged. Consult the original authoring record and amendment binding log."
+  }
+}

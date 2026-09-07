@@ -1,0 +1,63 @@
+{
+  "schema": "asterion-local-companion-sculpt-v1",
+  "kind": "pony",
+  "name": "Caelo",
+  "version": "sculpt-v002",
+  "source": "assets/3d/source/pony/sculpt-v002/pony-sculpt-v002.blend",
+  "model": "public/assets/3d/pony/pony-sculpt-v002.glb",
+  "reference": "assets/3d/reference/pony/sculpt-v002/original.png",
+  "source_sha256": "EEA0A5E90849567838D69E906EEBA45F175B48132C28D5E589CA4A7EE86D0847",
+  "model_sha256": "8ACBEFF75EE53A76D1FEC1798A61232957A142A1E4B7E68BCE5B277786B61153",
+  "reference_sha256": "9D059157FECF1C2905F9C1EB56A460AA45995DDD8B924C1E854827C73EFFD118",
+  "bytes": 13351072,
+  "triangles": 1203008,
+  "vertices": 616151,
+  "bones": 13,
+  "materials": 17,
+  "draw_calls": 17,
+  "clips": [
+    "idle",
+    "blink",
+    "happy",
+    "eat",
+    "play",
+    "pet_reaction",
+    "sleep",
+    "wake",
+    "walk"
+  ],
+  "editable_source_meshes": 166,
+  "blender": "5.2.1 LTS",
+  "renders": {
+    "hero": "assets/3d/reference/pony/sculpt-v002/pony-sculpt-hero.png",
+    "front": "assets/3d/reference/pony/sculpt-v002/pony-sculpt-front.png",
+    "side": "assets/3d/reference/pony/sculpt-v002/pony-sculpt-side.png",
+    "rear": "assets/3d/reference/pony/sculpt-v002/pony-sculpt-rear.png"
+  },
+  "fresh_import_passed": true,
+  "sampled_motion_passed": true,
+  "human_likeness_accepted": false,
+  "mobile_performance_accepted": false,
+  "projection_used": false,
+  "paid_provider_used": false,
+  "provenance": "Locally modeled from unchanged pony.png. Hidden views inferred; source and historical v001 preserved.",
+  "animation_limit": "Gentle stylized presentation gestures; no biomechanical gait simulation.",
+  "package_status": "Local hash-checked delivery, not a game-dev CLI canonical receipt.",
+  "builder": "assets/3d/source/pony/sculpt-v002/build.py",
+  "builder_sha256": {
+    "assets/3d/source/pony/sculpt-v002/anatomy.py": "51EFC8A16DAD230F24862E83CDFC17A6B4590A492D360A887EA2E36728861DE8",
+    "assets/3d/source/pony/sculpt-v002/build.py": "B2260DC4BFE7BA6CE7CBAD1E70BA7BB3E34DE2357F6E85C2AAEEFEC2811C7EA6",
+    "assets/3d/source/pony/sculpt-v002/deliver.py": "3CF22E74632E7D89914DF02D3E773600BF7ABE33264C274855324DC14E3FE193",
+    "assets/3d/source/pony/sculpt-v002/hair.py": "FC4526C38A7ED3DAD8A6C65D48BCBB9A49B2A7F4514D6942AE61F4FB228FD82E",
+    "assets/3d/source/pony/sculpt-v002/inspect_motion.py": "911FC62FAE7856B042CDE46A6E34A0C75F7EE7C476C34A6919E1B5E185232646",
+    "assets/3d/source/pony/sculpt-v002/ornaments.py": "C8DEFD4D8CA8AFE0B5B62FCC0B6504BAC820229BF16B812E9B712ABA7D9E2049",
+    "assets/3d/source/companions/sculpt-v001/common.py": "A6DF036A5B3F6FAA3C74740382998D829D45C9E2734D91A285F9369764C21F9E",
+    "assets/3d/source/asterion/sculpt-v001/build_sculpt.py": "9A81C430E8FD07CE520BBA554C78845A508F22E5FB89E524BF515D8BF8415621",
+    "assets/3d/source/asterion/sculpt-v001/rig_delivery.py": "8758D105E70AB5405F61A48A531154CC591EAC0D82B167788F1D0785A16CDFF0"
+  },
+  "notes": [
+    "Reference-led v002: elongated sculpted eyelids, recessed nostrils, refined muzzle, cupped ears, shaped limbs and feathered hooves.",
+    "Flowing modeled curls and architectural star tack replace the simplified v001 surfaces.",
+    "Original single-view artwork is unchanged. Unseen surfaces remain inferred."
+  ]
+}

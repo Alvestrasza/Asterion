@@ -1,0 +1,65 @@
+{
+  "schema": "asterion-local-companion-sculpt-v1",
+  "kind": "cat",
+  "name": "Nyra",
+  "version": "sculpt-v001",
+  "source": "assets/3d/source/cat/sculpt-v001/cat-sculpt-v001.blend",
+  "model": "public/assets/3d/cat/cat-sculpt-v001.glb",
+  "reference": "assets/3d/reference/cat/sculpt-v001/original.png",
+  "source_sha256": "539AB76C278339268E5BF1A18DE9A301F166B8DD2F3B197CBD753B5053724A02",
+  "model_sha256": "582E73708426DB15BC7CF34B2D36BDDE5F828D9297D4527BB08BED9C1E3255E8",
+  "reference_sha256": "C996F1500869602E32B24047F8D1A6FAB6018CE87514AA22F017A09480EAEFED",
+  "bytes": 6099384,
+  "triangles": 752024,
+  "vertices": 380078,
+  "bones": 13,
+  "materials": 16,
+  "draw_calls": 16,
+  "clips": [
+    "idle",
+    "blink",
+    "happy",
+    "eat",
+    "play",
+    "pet_reaction",
+    "sleep",
+    "wake",
+    "walk"
+  ],
+  "editable_source_meshes": 202,
+  "blender": "5.2.1 LTS",
+  "renders": {
+    "hero": "assets/3d/reference/cat/sculpt-v001/cat-sculpt-hero.png",
+    "front": "assets/3d/reference/cat/sculpt-v001/cat-sculpt-front.png",
+    "side": "assets/3d/reference/cat/sculpt-v001/cat-sculpt-side.png",
+    "rear": "assets/3d/reference/cat/sculpt-v001/cat-sculpt-rear.png"
+  },
+  "fresh_import_passed": true,
+  "human_likeness_accepted": false,
+  "mobile_performance_accepted": false,
+  "projection_used": false,
+  "paid_provider_used": false,
+  "provenance": "Modeled locally from existing project single-view artwork. Hidden views are inferred.",
+  "animation_limit": "Gentle stylized presentation gestures; no biomechanical gait simulation.",
+  "package_status": "Local manually validated delivery; no canonical game-dev CLI receipt.",
+  "builder": "assets/3d/source/companions/sculpt-v001/build_collection.py",
+  "builder_sha256": {
+    "assets/3d/source/companions/sculpt-v001/build_collection.py": "3FD79EC45D0A921A5EF95B4A79B766B85A0A1C77B7217A5CB726CA7FD3F68844",
+    "assets/3d/source/companions/sculpt-v001/common.py": "A6DF036A5B3F6FAA3C74740382998D829D45C9E2734D91A285F9369764C21F9E",
+    "assets/3d/source/companions/sculpt-v001/woodland.py": "D7BBD2ECF612DF09E88A179AAA3F1F71A983EA66DDFAC6D27733B5139977EA7C",
+    "assets/3d/source/asterion/sculpt-v001/build_sculpt.py": "9A81C430E8FD07CE520BBA554C78845A508F22E5FB89E524BF515D8BF8415621",
+    "assets/3d/source/asterion/sculpt-v001/rig_delivery.py": "8758D105E70AB5405F61A48A531154CC591EAC0D82B167788F1D0785A16CDFF0"
+  },
+  "notes": [
+    "Charcoal cat with emerald eyes, silver swept crown/cheeks/plume tail, rust ear bowls and copper/teal ceremonial armor.",
+    "Single-view hidden anatomy is inferred; the tail is a real curled volume, not a portrait relief."
+  ],
+  "publication_amendment": {
+    "id": "metadata-clean-2026-09-07",
+    "record": "assets/3d/publication/2026-09-07/amendment.json",
+    "original_document_sha256": "3F8076BAFB2C115FCFD6E3BDA70DC2B62388E6FC3383D47298110B4CEF8242BA",
+    "authoring_record": "assets/3d/publication/2026-09-07/authoring-records/assets/3d/source/cat/sculpt-v001/manifest.json",
+    "authoring_record_status": "exact-public-safe-original",
+    "notice": "Metadata-only publication derivative, not a rerun of the historical builder or validator. File digest and size bindings identify publication copies; all measured geometry, materials, rig, action, motion and acceptance evidence remains historical and unchanged. Consult the original authoring record and amendment binding log."
+  }
+}

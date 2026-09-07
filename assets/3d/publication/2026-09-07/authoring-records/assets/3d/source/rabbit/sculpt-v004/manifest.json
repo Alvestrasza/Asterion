@@ -1,0 +1,117 @@
+{
+  "schema": "asterion-local-modular-companion-v1",
+  "kind": "rabbit",
+  "name": "Liora",
+  "version": "sculpt-v004",
+  "source_sha256": "8099836E4700092CA915E1275C7A6E0D2B0EDE32EEA857C5841464960A486455",
+  "model_sha256": "952B8D9CF7E02929A41DF8C39178609510A64BAD0FEDC87005B66CBAC168C69A",
+  "reference_sha256": "26CD3B4BEFF8FE37488F860C3847BD78B9455102CB3FDF5C36BCBD98AF74F95D",
+  "triangles": 1848286,
+  "bytes": 22700696,
+  "bones": 13,
+  "clips": [
+    "idle",
+    "blink",
+    "happy",
+    "eat",
+    "play",
+    "pet_reaction",
+    "sleep",
+    "wake",
+    "walk"
+  ],
+  "draw_calls": 22,
+  "materials": 22,
+  "components": {
+    "body": {
+      "mesh": 1,
+      "skin": 0,
+      "triangles": 1788746,
+      "primitives": 11
+    },
+    "armor": {
+      "mesh": 0,
+      "skin": 0,
+      "triangles": 59540,
+      "primitives": 11
+    }
+  },
+  "blender": "5.2.1 LTS",
+  "human_likeness_accepted": false,
+  "mobile_performance_accepted": false,
+  "projection_used": false,
+  "paid_provider_used": false,
+  "package_status": "Local hash-checked Blender delivery; no game-dev canonical receipt.",
+  "animation_limit": "Original source curves, keys, handles, rest rig and drivers compared exactly. Fresh GLBs compared at nine normalized times per clip with 2e-4 skin-matrix tolerance. Not a collision or gait acceptance.",
+  "likeness_limit": "Original approved artwork retained. Primary forms intentionally refined; unseen surfaces inferred. No exact 1:1 or human acceptance claim.",
+  "compression_lossless": false,
+  "source": "assets/3d/source/rabbit/sculpt-v004/rabbit-sculpt-v004.blend",
+  "model": "public/assets/3d/rabbit/rabbit-sculpt-v004.glb",
+  "reference": "assets/3d/reference/rabbit/sculpt-v004/original.png",
+  "validation": "assets/3d/reference/rabbit/sculpt-v004/validation.json",
+  "validation_sha256": "2C1E3A50043B639647B0C41D065F62C4EB6090CB5B7EB9ABFE27E782E716CBC0",
+  "fresh_import_passed": true,
+  "animations_unchanged": true,
+  "equipment_separate": true,
+  "input_sha256": {
+    "assets/3d/source/rabbit/sculpt-v003/rabbit-sculpt-v003.blend": "9CB6C1C5B9FD5D8F2C97A5FC4B0B1CBF0FDC753639E423E98F0720823D31D7E6",
+    "public/assets/3d/rabbit/rabbit-sculpt-v003.glb": "315EC6312FF1A7361BD4277801D88661E2B1B4B6B280C589E63EADF0B18A2C26",
+    "public/assets/companions/rabbit.png": "26CD3B4BEFF8FE37488F860C3847BD78B9455102CB3FDF5C36BCBD98AF74F95D",
+    "assets/3d/source/companions/sculpt-v004/build.py": "C6FBCA99D1117722B07933B90795DBFFA37DC22B399ECD6B339EAFF3C063A6BD",
+    "assets/3d/source/companions/sculpt-v004/refinements.py": "6247CEA1AE30B56B6FD3D23DEDEF1DD99BCD8A7B9158AA0576340AA2B8F89BCF",
+    "assets/3d/source/companions/sculpt-v004/export_equipment.py": "5EDB676641BE58BDE353213F6DA4F7F7662B76A08F586D0E7DADA7006AF343CF",
+    "assets/3d/source/companions/sculpt-v001/common.py": "A6DF036A5B3F6FAA3C74740382998D829D45C9E2734D91A285F9369764C21F9E",
+    "assets/3d/source/asterion/sculpt-v002/validate_refinement.py": "8C541F26C2D2546FB142988D10F07EDF51C891D1C81F02065C7B62CE01F78EFD",
+    "assets/3d/source/asterion/sculpt-v003/build_head_study.py": "A3B22323201D30A3BD9459985F8F7741A44545010A84D27CC5912E1C8A85E0F2",
+    "assets/3d/source/asterion/sculpt-v001/build_sculpt.py": "9A81C430E8FD07CE520BBA554C78845A508F22E5FB89E524BF515D8BF8415621",
+    "assets/3d/source/asterion/sculpt-v001/rig_delivery.py": "8758D105E70AB5405F61A48A531154CC591EAC0D82B167788F1D0785A16CDFF0",
+    "assets/3d/source/asterion/sculpt-v004/export_equipment.py": "C805B4740463215AE5CC9D314D14966F2BDF91A00FB82D05054BE0BBB8ED930B",
+    "assets/3d/source/companions/sculpt-v004/equine_lapine.py": "8783AA44FB7987CD3D0E244C2B0B524B17DFF63B8D725F30CE4E3D7B69957016"
+  },
+  "renders": {
+    "hero": {
+      "file": "assets/3d/reference/rabbit/sculpt-v004/source/rabbit-hero.png",
+      "sha256": "943C096C3373A17CE6ABB2C3277E60BDDA6EF21E74A2081C5FD4945884E251E7"
+    },
+    "front": {
+      "file": "assets/3d/reference/rabbit/sculpt-v004/source/rabbit-front.png",
+      "sha256": "BFEF92638EEDB04E73F56410218FE9C152CDE916C52DC4858F15511DFAD670FA"
+    },
+    "side": {
+      "file": "assets/3d/reference/rabbit/sculpt-v004/source/rabbit-side.png",
+      "sha256": "1475C333359DBB27A5D2B1D31A5A47862E599AD35C91A2AA91314D00B4397593"
+    },
+    "rear": {
+      "file": "assets/3d/reference/rabbit/sculpt-v004/source/rabbit-rear.png",
+      "sha256": "5F087B5065DF7EC92DCE3D18B28B6FF44D89B2FEA387C39838EBE81BAEFB13BC"
+    },
+    "body-hero": {
+      "file": "assets/3d/reference/rabbit/sculpt-v004/source/rabbit-body-hero.png",
+      "sha256": "1442682EC1BAD6144931AF1C873A833429D1F051F8D515C6DA96DC0FC013C45C"
+    },
+    "body-side": {
+      "file": "assets/3d/reference/rabbit/sculpt-v004/source/rabbit-body-side.png",
+      "sha256": "E06E8615D718C15F3F85E6877BF70CF03837E6A234BFA19D68E489AB5CF79746"
+    }
+  },
+  "import_renders": {
+    "hero": {
+      "file": "assets/3d/reference/rabbit/sculpt-v004/import/rabbit-hero.png",
+      "sha256": "22C1E00157389FBFEA2ABA06F75E44A9EF152687A7B90EB52C46E84FB177BAAD"
+    },
+    "rear": {
+      "file": "assets/3d/reference/rabbit/sculpt-v004/import/rabbit-rear.png",
+      "sha256": "783D4C9F2A075D9E0F7CE314B043193AD4F0C9D604FA5A54148AED091BD14795"
+    },
+    "body-hero": {
+      "file": "assets/3d/reference/rabbit/sculpt-v004/import/rabbit-body-hero.png",
+      "sha256": "60B639ED00682AEA8B97B1069E7F8FC2BDACB85757F9B37F9B03BECDC92C3732"
+    },
+    "blink": {
+      "file": "assets/3d/reference/rabbit/sculpt-v004/import/rabbit-blink.png",
+      "sha256": "8557CB47CE5A9270066AC62944A7B5CB2D6866AA929B5E0465B8DCD039E448CE"
+    }
+  },
+  "notes": "Outward swept guarded ears and fuller haunch; rebuilt overlapping cream cheek cushions and swept cotton-tail plume. Coherently tapered eyes/socket/lids and lavender-blue iris palette. Original rig, action curves and detachable outfit retained.",
+  "edited_objects": 63
+}

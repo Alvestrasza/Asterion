@@ -1,0 +1,1702 @@
+{
+  "schema": "asterion-face-only-v1",
+  "kind": "orc",
+  "name": "Brumo",
+  "version": "sculpt-v005",
+  "source_sha256": "A78BC5FC6B18B247A8412D669D4E04785EBCAF533D6127AFB9EE664109063953",
+  "model_sha256": "6D5D385A96DDF02F761E57F51E09905CC340EB2C5849D8690A07E7992492AF64",
+  "reference_input": "public/assets/companions/orc.png",
+  "reference_sha256": "55FB8AD6273C92AC99A165B0BC4E6C9C56F86C9780F5D39CAEAD7C138C905B35",
+  "input_sha256": {
+    "assets/3d/source/orc/sculpt-v004/orc-sculpt-v004.blend": "5E7AE585DCDC3F278603F3B93EDC8EA9FC555F1B4982BEFE4A84CC04E8B5D30C",
+    "public/assets/3d/orc/orc-sculpt-v004.glb": "C62C96117A29A7B4EC1CB5856DD05AE4F68D5552A17769F491F4DB6E70F0FA8F",
+    "public/assets/companions/orc.png": "55FB8AD6273C92AC99A165B0BC4E6C9C56F86C9780F5D39CAEAD7C138C905B35",
+    "assets/3d/source/companions/sculpt-v001/common.py": "A6DF036A5B3F6FAA3C74740382998D829D45C9E2734D91A285F9369764C21F9E",
+    "assets/3d/source/asterion/sculpt-v001/build_sculpt.py": "9A81C430E8FD07CE520BBA554C78845A508F22E5FB89E524BF515D8BF8415621",
+    "assets/3d/source/asterion/sculpt-v001/rig_delivery.py": "8758D105E70AB5405F61A48A531154CC591EAC0D82B167788F1D0785A16CDFF0",
+    "assets/3d/source/asterion/sculpt-v002/validate_refinement.py": "8C541F26C2D2546FB142988D10F07EDF51C891D1C81F02065C7B62CE01F78EFD",
+    "assets/3d/source/asterion/sculpt-v003/build_head_study.py": "A3B22323201D30A3BD9459985F8F7741A44545010A84D27CC5912E1C8A85E0F2",
+    "assets/3d/source/asterion/sculpt-v004/export_equipment.py": "C805B4740463215AE5CC9D314D14966F2BDF91A00FB82D05054BE0BBB8ED930B",
+    "assets/3d/source/companions/sculpt-v004/build.py": "C6FBCA99D1117722B07933B90795DBFFA37DC22B399ECD6B339EAFF3C063A6BD",
+    "assets/3d/source/companions/sculpt-v004/refinements.py": "6247CEA1AE30B56B6FD3D23DEDEF1DD99BCD8A7B9158AA0576340AA2B8F89BCF",
+    "assets/3d/source/companions/sculpt-v004/export_equipment.py": "5EDB676641BE58BDE353213F6DA4F7F7662B76A08F586D0E7DADA7006AF343CF",
+    "assets/3d/source/companions/sculpt-v005/build.py": "2CD3C4D70E953C8BDBDDD01157745474A213968016F12BC3494BE8FD99C793BE",
+    "assets/3d/source/companions/sculpt-v005/contract.py": "F6829E7B890BA3B1108700B847CBB2C4CD532042233BD8049CC26B3A8522984E",
+    "assets/3d/source/companions/sculpt-v005/guards.py": "C98E5A25B553C56D016324F1AADE2669BEA28F3B2E73F5D883A74EBAEB599EF4",
+    "assets/3d/source/companions/sculpt-v005/folk_faces.py": "26BB92F8C85328CC8FBA0DA15BAACE4F8B0047AE5A00917FCD872204154A257A"
+  },
+  "blender": "5.2.1 LTS",
+  "components": {
+    "body": {
+      "mesh": 1,
+      "skin": 0,
+      "triangles": 988910,
+      "primitives": 18
+    },
+    "armor": {
+      "mesh": 0,
+      "skin": 0,
+      "triangles": 368004,
+      "primitives": 10
+    }
+  },
+  "triangles": 1356914,
+  "draw_calls": 28,
+  "materials": 27,
+  "bones": 10,
+  "clips": [
+    "idle",
+    "blink",
+    "happy",
+    "eat",
+    "play",
+    "pet_reaction",
+    "sleep",
+    "wake",
+    "walk"
+  ],
+  "compression_lossless": false,
+  "bytes": 14363536,
+  "geometry": {
+    "vertices": 687772,
+    "triangles": 1356911,
+    "nonfinite_vertices": 0,
+    "nonfinite_transforms": 0,
+    "unweighted_vertices": 0,
+    "invalid_weights": 0,
+    "unknown_weights": 0,
+    "over_four_weights": 0,
+    "max_influences": 2,
+    "bounds_min": [
+      -1.0898443460464478,
+      -0.693359375,
+      0.004882614593952894
+    ],
+    "bounds_max": [
+      1.0898443460464478,
+      0.724609375,
+      4.019531726837158
+    ],
+    "span": [
+      2.1796886920928955,
+      1.41796875,
+      4.014649112243205
+    ]
+  },
+  "triangle_count_evidence": {
+    "authored": 1356914,
+    "imported": 1356911,
+    "exact_equal": false,
+    "triangle_loss": 3,
+    "relative_loss": 2.2108991432028854e-06,
+    "maximum_allowed_loss": 27,
+    "relative_tolerance": 2e-05,
+    "passed": true,
+    "limit": "Count difference only; individual omitted triangle degeneracy is not proven by this check."
+  },
+  "changes": {
+    "edited_objects": [
+      {
+        "name": "AST_Brumo_v2_head",
+        "operation": "pivot_fixed_continuous_arch_and_socket_corner_shape",
+        "max_displacement": 0.03267910826818321
+      },
+      {
+        "name": "AST_Brumo_v2_head",
+        "operation": "species_specific_cheek_chin_nose_and_lip_support",
+        "max_displacement": 0.03370799258597209
+      },
+      {
+        "name": "AST_Brumo_v2_head",
+        "operation": "isolated_face_material_and_reference_value_structure",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Brumo_v2_eye_R_orbital_skin",
+        "operation": "pivot_fixed_continuous_arch_and_socket_corner_shape",
+        "max_displacement": 0.017899159517512864
+      },
+      {
+        "name": "AST_Brumo_v2_eye_R_orbital_skin",
+        "operation": "curved_eye_and_inner_orbit_with_fixed_skull_join_and_lid_pivot",
+        "max_displacement": 0.10945720406396175
+      },
+      {
+        "name": "AST_Brumo_v2_eye_R_orbital_skin",
+        "operation": "isolated_face_material_and_reference_value_structure",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Brumo_v2_eye_R",
+        "operation": "pivot_fixed_continuous_arch_and_socket_corner_shape",
+        "max_displacement": 0.013929098045691202
+      },
+      {
+        "name": "AST_Brumo_v2_eye_R",
+        "operation": "curved_eye_and_inner_orbit_with_fixed_skull_join_and_lid_pivot",
+        "max_displacement": 0.11086106102817206
+      },
+      {
+        "name": "AST_Brumo_v2_eye_R",
+        "operation": "isolated_face_material_and_reference_value_structure",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Brumo_v2_eye_R_upper_lash",
+        "operation": "pivot_fixed_continuous_arch_and_socket_corner_shape",
+        "max_displacement": 0.01610951116921555
+      },
+      {
+        "name": "AST_Brumo_v2_eye_R_upper_lash",
+        "operation": "curved_eye_and_inner_orbit_with_fixed_skull_join_and_lid_pivot",
+        "max_displacement": 0.07767754553226358
+      },
+      {
+        "name": "AST_Brumo_v2_eye_R_upper_lash",
+        "operation": "tapered_upper_arch_and_slim_lower_lid_margin",
+        "max_displacement": 0.0036745372807898955
+      },
+      {
+        "name": "AST_Brumo_v2_eye_R_upper_lash",
+        "operation": "isolated_face_material_and_reference_value_structure",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Brumo_v2_eye_R_lower_lid",
+        "operation": "pivot_fixed_continuous_arch_and_socket_corner_shape",
+        "max_displacement": 0.014167816658848587
+      },
+      {
+        "name": "AST_Brumo_v2_eye_R_lower_lid",
+        "operation": "curved_eye_and_inner_orbit_with_fixed_skull_join_and_lid_pivot",
+        "max_displacement": 0.11734608437912764
+      },
+      {
+        "name": "AST_Brumo_v2_eye_R_lower_lid",
+        "operation": "tapered_upper_arch_and_slim_lower_lid_margin",
+        "max_displacement": 0.005257895714318064
+      },
+      {
+        "name": "AST_Brumo_v2_eye_R_lower_lid",
+        "operation": "isolated_face_material_and_reference_value_structure",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Brumo_v2_eye_R_lash_wing",
+        "operation": "pivot_fixed_continuous_arch_and_socket_corner_shape",
+        "max_displacement": 0.006973041199625829
+      },
+      {
+        "name": "AST_Brumo_v2_eye_R_lash_wing",
+        "operation": "curved_eye_and_inner_orbit_with_fixed_skull_join_and_lid_pivot",
+        "max_displacement": 0.09066676564274867
+      },
+      {
+        "name": "AST_Brumo_v2_eye_R_lash_wing",
+        "operation": "isolated_face_material_and_reference_value_structure",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Brumo_v2_eye_R_catchlight",
+        "operation": "pivot_fixed_continuous_arch_and_socket_corner_shape",
+        "max_displacement": 0.0023704614636010923
+      },
+      {
+        "name": "AST_Brumo_v2_eye_R_catchlight",
+        "operation": "curved_eye_and_inner_orbit_with_fixed_skull_join_and_lid_pivot",
+        "max_displacement": 0.0543722903288848
+      },
+      {
+        "name": "AST_Brumo_v2_eye_R_catchlight",
+        "operation": "isolated_face_material_and_reference_value_structure",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Brumo_v2_eye_R_pinlight",
+        "operation": "pivot_fixed_continuous_arch_and_socket_corner_shape",
+        "max_displacement": 0.0018986793619326647
+      },
+      {
+        "name": "AST_Brumo_v2_eye_R_pinlight",
+        "operation": "curved_eye_and_inner_orbit_with_fixed_skull_join_and_lid_pivot",
+        "max_displacement": 0.038761997974565365
+      },
+      {
+        "name": "AST_Brumo_v2_eye_R_pinlight",
+        "operation": "isolated_face_material_and_reference_value_structure",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Brumo_v2_eye_R_closed_lid",
+        "operation": "pivot_fixed_continuous_arch_and_socket_corner_shape",
+        "max_displacement": 0.01521502634614702
+      },
+      {
+        "name": "AST_Brumo_v2_eye_R_closed_lid",
+        "operation": "curved_eye_and_inner_orbit_with_fixed_skull_join_and_lid_pivot",
+        "max_displacement": 0.11987000819016602
+      },
+      {
+        "name": "AST_Brumo_v2_eye_R_closed_lid",
+        "operation": "isolated_face_material_and_reference_value_structure",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Brumo_v2_eye_R_sleep_lash",
+        "operation": "pivot_fixed_continuous_arch_and_socket_corner_shape",
+        "max_displacement": 0.0077750802673612895
+      },
+      {
+        "name": "AST_Brumo_v2_eye_R_sleep_lash",
+        "operation": "curved_eye_and_inner_orbit_with_fixed_skull_join_and_lid_pivot",
+        "max_displacement": 0.03542090371805551
+      },
+      {
+        "name": "AST_Brumo_v2_eye_R_sleep_lash",
+        "operation": "isolated_face_material_and_reference_value_structure",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Brumo_v2_expressive_brow_R",
+        "operation": "pivot_fixed_continuous_arch_and_socket_corner_shape",
+        "max_displacement": 0.029726180318403905
+      },
+      {
+        "name": "AST_Brumo_v2_expressive_brow_R",
+        "operation": "isolated_face_material_and_reference_value_structure",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Brumo_v2_upturned_tusk_R",
+        "operation": "species_specific_cheek_chin_nose_and_lip_support",
+        "max_displacement": 0.022839815353567258
+      },
+      {
+        "name": "AST_Brumo_v2_upturned_tusk_R",
+        "operation": "shorter_broader_friendly_ivory_tusk",
+        "max_displacement": 0.0437427943096319
+      },
+      {
+        "name": "AST_Brumo_v2_upturned_tusk_R",
+        "operation": "isolated_face_material_and_reference_value_structure",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Brumo_v2_nostril_R",
+        "operation": "species_specific_cheek_chin_nose_and_lip_support",
+        "max_displacement": 0.024435293624566132
+      },
+      {
+        "name": "AST_Brumo_v2_nostril_R",
+        "operation": "isolated_face_material_and_reference_value_structure",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Brumo_v2_eye_L_orbital_skin",
+        "operation": "pivot_fixed_continuous_arch_and_socket_corner_shape",
+        "max_displacement": 0.017900171612056148
+      },
+      {
+        "name": "AST_Brumo_v2_eye_L_orbital_skin",
+        "operation": "curved_eye_and_inner_orbit_with_fixed_skull_join_and_lid_pivot",
+        "max_displacement": 0.10946751429491974
+      },
+      {
+        "name": "AST_Brumo_v2_eye_L_orbital_skin",
+        "operation": "isolated_face_material_and_reference_value_structure",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Brumo_v2_eye_L",
+        "operation": "pivot_fixed_continuous_arch_and_socket_corner_shape",
+        "max_displacement": 0.013929099354279106
+      },
+      {
+        "name": "AST_Brumo_v2_eye_L",
+        "operation": "curved_eye_and_inner_orbit_with_fixed_skull_join_and_lid_pivot",
+        "max_displacement": 0.11087153549373341
+      },
+      {
+        "name": "AST_Brumo_v2_eye_L",
+        "operation": "isolated_face_material_and_reference_value_structure",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Brumo_v2_eye_L_upper_lash",
+        "operation": "pivot_fixed_continuous_arch_and_socket_corner_shape",
+        "max_displacement": 0.01610952537030519
+      },
+      {
+        "name": "AST_Brumo_v2_eye_L_upper_lash",
+        "operation": "curved_eye_and_inner_orbit_with_fixed_skull_join_and_lid_pivot",
+        "max_displacement": 0.07767279642687475
+      },
+      {
+        "name": "AST_Brumo_v2_eye_L_upper_lash",
+        "operation": "tapered_upper_arch_and_slim_lower_lid_margin",
+        "max_displacement": 0.0036744691876337146
+      },
+      {
+        "name": "AST_Brumo_v2_eye_L_upper_lash",
+        "operation": "isolated_face_material_and_reference_value_structure",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Brumo_v2_eye_L_lower_lid",
+        "operation": "pivot_fixed_continuous_arch_and_socket_corner_shape",
+        "max_displacement": 0.014167814454793426
+      },
+      {
+        "name": "AST_Brumo_v2_eye_L_lower_lid",
+        "operation": "curved_eye_and_inner_orbit_with_fixed_skull_join_and_lid_pivot",
+        "max_displacement": 0.11735757219068677
+      },
+      {
+        "name": "AST_Brumo_v2_eye_L_lower_lid",
+        "operation": "tapered_upper_arch_and_slim_lower_lid_margin",
+        "max_displacement": 0.005258106090106976
+      },
+      {
+        "name": "AST_Brumo_v2_eye_L_lower_lid",
+        "operation": "isolated_face_material_and_reference_value_structure",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Brumo_v2_eye_L_lash_wing",
+        "operation": "pivot_fixed_continuous_arch_and_socket_corner_shape",
+        "max_displacement": 0.006973041619693809
+      },
+      {
+        "name": "AST_Brumo_v2_eye_L_lash_wing",
+        "operation": "curved_eye_and_inner_orbit_with_fixed_skull_join_and_lid_pivot",
+        "max_displacement": 0.09065485780835425
+      },
+      {
+        "name": "AST_Brumo_v2_eye_L_lash_wing",
+        "operation": "isolated_face_material_and_reference_value_structure",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Brumo_v2_eye_L_catchlight",
+        "operation": "pivot_fixed_continuous_arch_and_socket_corner_shape",
+        "max_displacement": 0.006077392238411861
+      },
+      {
+        "name": "AST_Brumo_v2_eye_L_catchlight",
+        "operation": "curved_eye_and_inner_orbit_with_fixed_skull_join_and_lid_pivot",
+        "max_displacement": 0.038930722060186496
+      },
+      {
+        "name": "AST_Brumo_v2_eye_L_catchlight",
+        "operation": "isolated_face_material_and_reference_value_structure",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Brumo_v2_eye_L_pinlight",
+        "operation": "pivot_fixed_continuous_arch_and_socket_corner_shape",
+        "max_displacement": 0.005380454197891904
+      },
+      {
+        "name": "AST_Brumo_v2_eye_L_pinlight",
+        "operation": "curved_eye_and_inner_orbit_with_fixed_skull_join_and_lid_pivot",
+        "max_displacement": 0.026905600339511282
+      },
+      {
+        "name": "AST_Brumo_v2_eye_L_pinlight",
+        "operation": "isolated_face_material_and_reference_value_structure",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Brumo_v2_eye_L_closed_lid",
+        "operation": "pivot_fixed_continuous_arch_and_socket_corner_shape",
+        "max_displacement": 0.01521502771475225
+      },
+      {
+        "name": "AST_Brumo_v2_eye_L_closed_lid",
+        "operation": "curved_eye_and_inner_orbit_with_fixed_skull_join_and_lid_pivot",
+        "max_displacement": 0.11988182256505597
+      },
+      {
+        "name": "AST_Brumo_v2_eye_L_closed_lid",
+        "operation": "isolated_face_material_and_reference_value_structure",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Brumo_v2_eye_L_sleep_lash",
+        "operation": "pivot_fixed_continuous_arch_and_socket_corner_shape",
+        "max_displacement": 0.007775123928658534
+      },
+      {
+        "name": "AST_Brumo_v2_eye_L_sleep_lash",
+        "operation": "curved_eye_and_inner_orbit_with_fixed_skull_join_and_lid_pivot",
+        "max_displacement": 0.03541177456052269
+      },
+      {
+        "name": "AST_Brumo_v2_eye_L_sleep_lash",
+        "operation": "isolated_face_material_and_reference_value_structure",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Brumo_v2_expressive_brow_L",
+        "operation": "pivot_fixed_continuous_arch_and_socket_corner_shape",
+        "max_displacement": 0.02972682657290715
+      },
+      {
+        "name": "AST_Brumo_v2_expressive_brow_L",
+        "operation": "isolated_face_material_and_reference_value_structure",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Brumo_v2_upturned_tusk_L",
+        "operation": "species_specific_cheek_chin_nose_and_lip_support",
+        "max_displacement": 0.022839815353567258
+      },
+      {
+        "name": "AST_Brumo_v2_upturned_tusk_L",
+        "operation": "shorter_broader_friendly_ivory_tusk",
+        "max_displacement": 0.0437427943096319
+      },
+      {
+        "name": "AST_Brumo_v2_upturned_tusk_L",
+        "operation": "isolated_face_material_and_reference_value_structure",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Brumo_v2_nostril_L",
+        "operation": "species_specific_cheek_chin_nose_and_lip_support",
+        "max_displacement": 0.024436104666424548
+      },
+      {
+        "name": "AST_Brumo_v2_nostril_L",
+        "operation": "isolated_face_material_and_reference_value_structure",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Brumo_v2_gentle_smile",
+        "operation": "species_specific_cheek_chin_nose_and_lip_support",
+        "max_displacement": 0.02362394161398773
+      },
+      {
+        "name": "AST_Brumo_v2_gentle_smile",
+        "operation": "gently_raised_smile_corners_beside_short_tusks",
+        "max_displacement": 0.032393854437843914
+      },
+      {
+        "name": "AST_Brumo_v2_gentle_smile",
+        "operation": "isolated_face_material_and_reference_value_structure",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Brumo_v2_eye_R_orbital_skin",
+        "operation": "orbital_outer_root_embedded_in_actual_facial_surface",
+        "max_displacement": 0.0203246364873755
+      },
+      {
+        "name": "AST_Brumo_v2_expressive_brow_R",
+        "operation": "brow_roots_seated_on_actual_facial_skin",
+        "max_displacement": 0.15534908483177423
+      },
+      {
+        "name": "AST_Brumo_v2_nostril_R",
+        "operation": "subtle_mouth_and_nostril_relief_seated_on_facial_skin",
+        "max_displacement": 0.02590728855133062
+      },
+      {
+        "name": "AST_Brumo_v2_eye_L_orbital_skin",
+        "operation": "orbital_outer_root_embedded_in_actual_facial_surface",
+        "max_displacement": 0.02032004040669955
+      },
+      {
+        "name": "AST_Brumo_v2_expressive_brow_L",
+        "operation": "brow_roots_seated_on_actual_facial_skin",
+        "max_displacement": 0.15535003850609064
+      },
+      {
+        "name": "AST_Brumo_v2_nostril_L",
+        "operation": "subtle_mouth_and_nostril_relief_seated_on_facial_skin",
+        "max_displacement": 0.025968562126159722
+      },
+      {
+        "name": "AST_Brumo_v2_gentle_smile",
+        "operation": "subtle_mouth_and_nostril_relief_seated_on_facial_skin",
+        "max_displacement": 0.019601566708025014
+      }
+    ],
+    "face_objects": [
+      "AST_Brumo_v2_expressive_brow_L",
+      "AST_Brumo_v2_expressive_brow_R",
+      "AST_Brumo_v2_eye_L",
+      "AST_Brumo_v2_eye_L_catchlight",
+      "AST_Brumo_v2_eye_L_closed_lid",
+      "AST_Brumo_v2_eye_L_lash_wing",
+      "AST_Brumo_v2_eye_L_lower_lid",
+      "AST_Brumo_v2_eye_L_orbital_skin",
+      "AST_Brumo_v2_eye_L_pinlight",
+      "AST_Brumo_v2_eye_L_sleep_lash",
+      "AST_Brumo_v2_eye_L_upper_lash",
+      "AST_Brumo_v2_eye_R",
+      "AST_Brumo_v2_eye_R_catchlight",
+      "AST_Brumo_v2_eye_R_closed_lid",
+      "AST_Brumo_v2_eye_R_lash_wing",
+      "AST_Brumo_v2_eye_R_lower_lid",
+      "AST_Brumo_v2_eye_R_orbital_skin",
+      "AST_Brumo_v2_eye_R_pinlight",
+      "AST_Brumo_v2_eye_R_sleep_lash",
+      "AST_Brumo_v2_eye_R_upper_lash",
+      "AST_Brumo_v2_gentle_smile",
+      "AST_Brumo_v2_head",
+      "AST_Brumo_v2_nostril_L",
+      "AST_Brumo_v2_nostril_R",
+      "AST_Brumo_v2_upturned_tusk_L",
+      "AST_Brumo_v2_upturned_tusk_R"
+    ],
+    "removed_face_objects": [],
+    "added_base_clothing": [],
+    "face_frame": {
+      "center": [
+        0,
+        -0.28,
+        2.74
+      ],
+      "span": [
+        1.43,
+        0.94,
+        1.22
+      ]
+    },
+    "face_material_copies": 9,
+    "iris_design": [
+      {
+        "name": "AST_Brumo_v2_eye_L",
+        "pupil_half_width_fraction": 0.46,
+        "pupil_half_height_fraction": 0.6,
+        "iris_half_width_fraction": 0.83,
+        "iris_half_height_fraction": 0.98
+      },
+      {
+        "name": "AST_Brumo_v2_eye_R",
+        "pupil_half_width_fraction": 0.46,
+        "pupil_half_height_fraction": 0.6,
+        "iris_half_width_fraction": 0.83,
+        "iris_half_height_fraction": 0.98
+      }
+    ],
+    "orbital_surface_fit": {
+      "L": {
+        "coefficients": [
+          0.04102495458082295,
+          0.512053332840677,
+          0.3938457998711782,
+          -1.3858172127638542,
+          1.1899688535254624
+        ],
+        "edge_rms_before": 0.05891437781648893,
+        "edge_rms_after": 0.01148753870023653
+      },
+      "R": {
+        "coefficients": [
+          -0.041067170475292056,
+          0.5120191248835425,
+          0.39404865181735055,
+          -1.3855468264063184,
+          -1.1896866705784828
+        ],
+        "edge_rms_before": 0.05891358388801652,
+        "edge_rms_after": 0.011494823504807971
+      }
+    },
+    "original_lid_scale_pivots_unchanged": true,
+    "notes": "Facial-only sculpt, coherent pivot-fixed ocular arches, deeper broad irises and pupils, isolated warm skin value fields. Original body, joint shells, hair, ears, outfit and every action retained.",
+    "body_source_objects": [
+      "AST_Brumo_padded_torso",
+      "AST_Brumo_neck",
+      "AST_Brumo_collar_rim",
+      "AST_Brumo_strong_arm_R",
+      "AST_Brumo_hand_R_sculpted_hand",
+      "AST_Brumo_leg_R",
+      "AST_Brumo_foot_sculpt_R",
+      "AST_Brumo_toenail_R0",
+      "AST_Brumo_toenail_R1",
+      "AST_Brumo_toenail_R2",
+      "AST_Brumo_toenail_R3",
+      "AST_Brumo_strong_arm_L",
+      "AST_Brumo_hand_L_sculpted_hand",
+      "AST_Brumo_leg_L",
+      "AST_Brumo_foot_sculpt_L",
+      "AST_Brumo_toenail_L0",
+      "AST_Brumo_toenail_L1",
+      "AST_Brumo_toenail_L2",
+      "AST_Brumo_toenail_L3",
+      "AST_Brumo_v2_head",
+      "AST_Brumo_v2_eye_R_orbital_skin",
+      "AST_Brumo_v2_eye_R",
+      "AST_Brumo_v2_eye_R_upper_lash",
+      "AST_Brumo_v2_eye_R_lower_lid",
+      "AST_Brumo_v2_eye_R_lash_wing",
+      "AST_Brumo_v2_eye_R_catchlight",
+      "AST_Brumo_v2_eye_R_pinlight",
+      "AST_Brumo_v2_eye_R_closed_lid",
+      "AST_Brumo_v2_eye_R_sleep_lash",
+      "AST_Brumo_v2_cupped_ear_R",
+      "AST_Brumo_v2_cupped_ear_R_concha",
+      "AST_Brumo_v2_cupped_ear_R_antihelix",
+      "AST_Brumo_v2_expressive_brow_R",
+      "AST_Brumo_v2_upturned_tusk_R",
+      "AST_Brumo_v2_nostril_R",
+      "AST_Brumo_v2_eye_L_orbital_skin",
+      "AST_Brumo_v2_eye_L",
+      "AST_Brumo_v2_eye_L_upper_lash",
+      "AST_Brumo_v2_eye_L_lower_lid",
+      "AST_Brumo_v2_eye_L_lash_wing",
+      "AST_Brumo_v2_eye_L_catchlight",
+      "AST_Brumo_v2_eye_L_pinlight",
+      "AST_Brumo_v2_eye_L_closed_lid",
+      "AST_Brumo_v2_eye_L_sleep_lash",
+      "AST_Brumo_v2_cupped_ear_L",
+      "AST_Brumo_v2_cupped_ear_L_concha",
+      "AST_Brumo_v2_cupped_ear_L_antihelix",
+      "AST_Brumo_v2_expressive_brow_L",
+      "AST_Brumo_v2_upturned_tusk_L",
+      "AST_Brumo_v2_nostril_L",
+      "AST_Brumo_v2_gentle_smile",
+      "AST_Brumo_v2_sculpted_hair_cap",
+      "AST_Brumo_v2_closed_crown_underhair",
+      "AST_Brumo_v2_side_swept_lock_-1_0",
+      "AST_Brumo_v2_side_swept_lock_-1_1",
+      "AST_Brumo_v2_side_swept_lock_-1_2",
+      "AST_Brumo_v2_side_swept_lock_-1_3",
+      "AST_Brumo_v2_side_swept_lock_-1_4",
+      "AST_Brumo_v2_side_swept_lock_-1_5",
+      "AST_Brumo_v2_temple_lock_-10",
+      "AST_Brumo_v2_temple_lock_-11",
+      "AST_Brumo_v2_temple_lock_-12",
+      "AST_Brumo_v2_side_swept_lock_1_0",
+      "AST_Brumo_v2_side_swept_lock_1_1",
+      "AST_Brumo_v2_side_swept_lock_1_2",
+      "AST_Brumo_v2_side_swept_lock_1_3",
+      "AST_Brumo_v2_side_swept_lock_1_4",
+      "AST_Brumo_v2_side_swept_lock_1_5",
+      "AST_Brumo_v2_temple_lock_10",
+      "AST_Brumo_v2_temple_lock_11",
+      "AST_Brumo_v2_temple_lock_12",
+      "AST_Brumo_v2_nape_lock_0",
+      "AST_Brumo_v2_nape_lock_1",
+      "AST_Brumo_v2_nape_lock_2",
+      "AST_Brumo_v2_nape_lock_3",
+      "AST_Brumo_v2_nape_lock_4",
+      "AST_Brumo_v2_nape_lock_5",
+      "AST_Brumo_v2_nape_lock_6",
+      "AST_Brumo_v2_nape_lock_7",
+      "AST_Brumo_v2_nape_lock_8",
+      "AST_Brumo_v2_nape_lock_9",
+      "AST_Brumo_v2_nape_lock_10",
+      "AST_Brumo_v2_topknot_root_bundle",
+      "AST_Brumo_v2_topknot_plume_0",
+      "AST_Brumo_v2_topknot_plume_1",
+      "AST_Brumo_v2_topknot_plume_2",
+      "AST_Brumo_v2_topknot_plume_3",
+      "AST_Brumo_v2_topknot_plume_4",
+      "AST_Brumo_v2_topknot_plume_5",
+      "AST_Brumo_v2_topknot_plume_6",
+      "AST_Brumo_v3_base_under_tunic",
+      "AST_Brumo_v3_base_shorts",
+      "AST_Brumo_v4_rising_plum_quiff_00",
+      "AST_Brumo_v4_rising_plum_quiff_01",
+      "AST_Brumo_v4_rising_plum_quiff_02",
+      "AST_Brumo_v4_rising_plum_quiff_03",
+      "AST_Brumo_v4_rising_plum_quiff_04",
+      "AST_Brumo_v4_rising_plum_quiff_05",
+      "AST_Brumo_v4_gathered_crown_00",
+      "AST_Brumo_v4_gathered_crown_01",
+      "AST_Brumo_v4_gathered_crown_02",
+      "AST_Brumo_v4_gathered_crown_03",
+      "AST_Brumo_v4_gathered_crown_04",
+      "AST_Brumo_v4_gathered_crown_05",
+      "AST_Brumo_v4_gathered_crown_06",
+      "AST_Brumo_v4_closed_deltoid_L",
+      "AST_Brumo_v4_closed_wrist_L",
+      "AST_Brumo_v4_closed_ankle_L",
+      "AST_Brumo_v4_closed_deltoid_R",
+      "AST_Brumo_v4_closed_wrist_R",
+      "AST_Brumo_v4_closed_ankle_R"
+    ],
+    "equipment_source_objects": [
+      "AST_Brumo_fitted_aubergine_cuirass",
+      "AST_Brumo_cuirass_hem",
+      "AST_Brumo_leather_bracer_R",
+      "AST_Brumo_bracer_bottom_rim_R",
+      "AST_Brumo_boot_gaiter_R",
+      "AST_Brumo_boot_ankle_edge_R",
+      "AST_Brumo_boot_buckle_R_cut_setting",
+      "AST_Brumo_boot_buckle_R_metal_bezel",
+      "AST_Brumo_leather_bracer_L",
+      "AST_Brumo_bracer_bottom_rim_L",
+      "AST_Brumo_boot_gaiter_L",
+      "AST_Brumo_boot_ankle_edge_L",
+      "AST_Brumo_boot_buckle_L_cut_setting",
+      "AST_Brumo_boot_buckle_L_metal_bezel",
+      "AST_Brumo_layered_leather_belt",
+      "AST_Brumo_belt_seam_1.075",
+      "AST_Brumo_belt_seam_1.14",
+      "AST_Brumo_belt_seam_1.195",
+      "AST_Brumo_long_front_tabard",
+      "AST_Brumo_long_front_tabard_bound_edge",
+      "AST_Brumo_back_tabard",
+      "AST_Brumo_back_tabard_bound_edge",
+      "AST_Brumo_v2_topknot_forged_binding",
+      "AST_Brumo_v2_forged_pauldron_R",
+      "AST_Brumo_v2_pauldron_broad_forged_border_R",
+      "AST_Brumo_v2_pauldron_rivet_R0",
+      "AST_Brumo_v2_pauldron_rivet_R1",
+      "AST_Brumo_v2_pauldron_rivet_R2",
+      "AST_Brumo_v2_pauldron_star_R_cut_setting",
+      "AST_Brumo_v2_pauldron_star_R_metal_bezel",
+      "AST_Brumo_v2_pauldron_star_R_four_cut_star",
+      "AST_Brumo_v2_wrist_fur_R0",
+      "AST_Brumo_v2_wrist_fur_R1",
+      "AST_Brumo_v2_wrist_fur_R2",
+      "AST_Brumo_v2_wrist_fur_R3",
+      "AST_Brumo_v2_wrist_fur_R4",
+      "AST_Brumo_v2_wrist_fur_R5",
+      "AST_Brumo_v2_wrist_fur_R6",
+      "AST_Brumo_v2_wrist_fur_R7",
+      "AST_Brumo_v2_wrist_fur_R8",
+      "AST_Brumo_v2_wrist_fur_R9",
+      "AST_Brumo_v2_wrist_fur_R10",
+      "AST_Brumo_v2_wrist_fur_R11",
+      "AST_Brumo_v2_wrist_fur_R12",
+      "AST_Brumo_v2_wrist_fur_R13",
+      "AST_Brumo_v2_wrist_fur_R14",
+      "AST_Brumo_v2_wrist_fur_R15",
+      "AST_Brumo_v2_boot_fur_R0",
+      "AST_Brumo_v2_boot_fur_R1",
+      "AST_Brumo_v2_boot_fur_R2",
+      "AST_Brumo_v2_boot_fur_R3",
+      "AST_Brumo_v2_boot_fur_R4",
+      "AST_Brumo_v2_boot_fur_R5",
+      "AST_Brumo_v2_boot_fur_R6",
+      "AST_Brumo_v2_boot_fur_R7",
+      "AST_Brumo_v2_boot_fur_R8",
+      "AST_Brumo_v2_boot_fur_R9",
+      "AST_Brumo_v2_boot_fur_R10",
+      "AST_Brumo_v2_boot_fur_R11",
+      "AST_Brumo_v2_boot_fur_R12",
+      "AST_Brumo_v2_boot_fur_R13",
+      "AST_Brumo_v2_boot_fur_R14",
+      "AST_Brumo_v2_boot_fur_R15",
+      "AST_Brumo_v2_curved_hip_lamella_R",
+      "AST_Brumo_v2_hip_lamella_border_R",
+      "AST_Brumo_v2_forged_pauldron_L",
+      "AST_Brumo_v2_pauldron_broad_forged_border_L",
+      "AST_Brumo_v2_pauldron_rivet_L0",
+      "AST_Brumo_v2_pauldron_rivet_L1",
+      "AST_Brumo_v2_pauldron_rivet_L2",
+      "AST_Brumo_v2_pauldron_star_L_cut_setting",
+      "AST_Brumo_v2_pauldron_star_L_metal_bezel",
+      "AST_Brumo_v2_pauldron_star_L_four_cut_star",
+      "AST_Brumo_v2_wrist_fur_L0",
+      "AST_Brumo_v2_wrist_fur_L1",
+      "AST_Brumo_v2_wrist_fur_L2",
+      "AST_Brumo_v2_wrist_fur_L3",
+      "AST_Brumo_v2_wrist_fur_L4",
+      "AST_Brumo_v2_wrist_fur_L5",
+      "AST_Brumo_v2_wrist_fur_L6",
+      "AST_Brumo_v2_wrist_fur_L7",
+      "AST_Brumo_v2_wrist_fur_L8",
+      "AST_Brumo_v2_wrist_fur_L9",
+      "AST_Brumo_v2_wrist_fur_L10",
+      "AST_Brumo_v2_wrist_fur_L11",
+      "AST_Brumo_v2_wrist_fur_L12",
+      "AST_Brumo_v2_wrist_fur_L13",
+      "AST_Brumo_v2_wrist_fur_L14",
+      "AST_Brumo_v2_wrist_fur_L15",
+      "AST_Brumo_v2_boot_fur_L0",
+      "AST_Brumo_v2_boot_fur_L1",
+      "AST_Brumo_v2_boot_fur_L2",
+      "AST_Brumo_v2_boot_fur_L3",
+      "AST_Brumo_v2_boot_fur_L4",
+      "AST_Brumo_v2_boot_fur_L5",
+      "AST_Brumo_v2_boot_fur_L6",
+      "AST_Brumo_v2_boot_fur_L7",
+      "AST_Brumo_v2_boot_fur_L8",
+      "AST_Brumo_v2_boot_fur_L9",
+      "AST_Brumo_v2_boot_fur_L10",
+      "AST_Brumo_v2_boot_fur_L11",
+      "AST_Brumo_v2_boot_fur_L12",
+      "AST_Brumo_v2_boot_fur_L13",
+      "AST_Brumo_v2_boot_fur_L14",
+      "AST_Brumo_v2_boot_fur_L15",
+      "AST_Brumo_v2_curved_hip_lamella_L",
+      "AST_Brumo_v2_hip_lamella_border_L",
+      "AST_Brumo_v2_fitted_cross_harness_-1",
+      "AST_Brumo_v2_harness_stitch_-11.92",
+      "AST_Brumo_v2_harness_stitch_-11.77",
+      "AST_Brumo_v2_fitted_cross_harness_1",
+      "AST_Brumo_v2_harness_stitch_11.92",
+      "AST_Brumo_v2_harness_stitch_11.77",
+      "AST_Brumo_v2_chest_star_cut_setting",
+      "AST_Brumo_v2_chest_star_metal_bezel",
+      "AST_Brumo_v2_chest_star_four_cut_star",
+      "AST_Brumo_v2_belt_star_cut_setting",
+      "AST_Brumo_v2_belt_star_metal_bezel",
+      "AST_Brumo_v2_belt_star_four_cut_star"
+    ]
+  },
+  "face_scope": {
+    "checks": {
+      "explicit_face_only_allowlist": true,
+      "all_unedited_source_objects_retained": true,
+      "nonface_geometry_unchanged": true,
+      "nonface_materials_unchanged": true,
+      "original_lid_pivots_unchanged": true,
+      "meaningful_face_geometry_refinement": true
+    },
+    "protected_geometry_sha256": {
+      "AST_Brumo_back_tabard": "B4617611B106B655895C3BC1F557A95FAD0484BF82E9AA5024EF2E93DCFAE760",
+      "AST_Brumo_back_tabard_bound_edge": "C9EA954B0C0D6975A31536F671868B92C27CA40A3492A07AF498EB48753BCCC7",
+      "AST_Brumo_belt_seam_1.075": "D29467F71B364B46700498F62AC547CCFBB0872E1D92A0D92A1D1E565ACE193C",
+      "AST_Brumo_belt_seam_1.14": "CB42DD741223520B02692762FDDC60D15BC606FF42E14EA29E97507BB388BC21",
+      "AST_Brumo_belt_seam_1.195": "43FEC316ADAB6CA79DC81178A49ADF8D678A3CC6129635C535A27DE1D50A7D3E",
+      "AST_Brumo_boot_ankle_edge_L": "D2D33AE223E60F792BD79CFFE0F22A1AD66C8C8DECD4F66B032B38598D346DFD",
+      "AST_Brumo_boot_ankle_edge_R": "583FB69E32D15FFDF46B6EA7D9CE56C2317968CD1C12EA715D5DE9EB3EC20E30",
+      "AST_Brumo_boot_buckle_L_cut_setting": "F8949A98423281B13F07FD0686896892700234470A5F56041B2DE627C6B6E53B",
+      "AST_Brumo_boot_buckle_L_metal_bezel": "463BED0960594BD53CD998E74AA5E0307123C5540FAA3795109511E83A11C4B4",
+      "AST_Brumo_boot_buckle_R_cut_setting": "6960175B4F95C4802E995B8AAC91FAFF801E237A78817B7B6C06AC33E78D78CB",
+      "AST_Brumo_boot_buckle_R_metal_bezel": "BE297418C0826A2F8B19AAE2DD6B3FFBABF259B134BAF5ACC562FF20498F178A",
+      "AST_Brumo_boot_gaiter_L": "40C3A0206EC83E6E703FEE6AAC2D911EB50233225889FCECD81C24FA8713D9DB",
+      "AST_Brumo_boot_gaiter_R": "74D2FA56A3529E04FAA1A42D2A9F6F9A833714B4293C8F5EE8ADAC2E97D7299F",
+      "AST_Brumo_bracer_bottom_rim_L": "C90636B7F6185199DAB6A1EB4C90712A290F74F8520399B2396DFBCF37CEDB4B",
+      "AST_Brumo_bracer_bottom_rim_R": "2D06CE9A7EFB8884565E272634ABEEEF152446AF6B0F9EAD6809B8EADEE23B2E",
+      "AST_Brumo_collar_rim": "1911FF094B09842ADAA7B6E3D3C946304063FCB4E7183CD5D03B73B66E323210",
+      "AST_Brumo_cuirass_hem": "87A8CE43CFDF7B8D8AC8511FFD114BDFCB8B4AF11B7A58B0D5BB60E7FAC0B79F",
+      "AST_Brumo_fitted_aubergine_cuirass": "3C63A8F44577D2490AB665C6563A2D6182461FC07E696F3ABEA10B0A4A4C2AB1",
+      "AST_Brumo_foot_sculpt_L": "D7B9985802D4B9BB250AD73938BCAABA461FE3BE2AFFAC14F8DF8E471D7C59B6",
+      "AST_Brumo_foot_sculpt_R": "7867AFCAA15C1E9F19AC8496F7D428EC25C3156C71B7027B2284F5CD76218A91",
+      "AST_Brumo_hand_L_sculpted_hand": "043A8AAF8EE2A97F42E7F1001B730F8178387CA67C5DFB1AB1858540C19228E7",
+      "AST_Brumo_hand_R_sculpted_hand": "C7854B878C89317ED4D53E858FA1969B45CE9B53FADC68D906CEAC076DA9C3F5",
+      "AST_Brumo_layered_leather_belt": "E1FB13D219B1D6ED75B3E7FF56BA3F617844CF5FACD8A57A68297D580E469549",
+      "AST_Brumo_leather_bracer_L": "73B83F499C102284C34887EABBDB576869A3353920DE945E0AB57CF7909D57C0",
+      "AST_Brumo_leather_bracer_R": "8B783F7DCC55886E12A22E434212027A680DC7416025BD0F8FC1D5BE43854E0A",
+      "AST_Brumo_leg_L": "A35BDA89B0D82FA86AB2C2F89614CF44A042ABA52D156D19521383A7E75749F1",
+      "AST_Brumo_leg_R": "E54906C9936919B3DE379AB854469F0AF60EE57C8073E2733FE9387614217D28",
+      "AST_Brumo_long_front_tabard": "D5DFEDB74550D25D8A51A28CB0A97FCDF33EDDDC8DCFA0A902E35A70DB619BB2",
+      "AST_Brumo_long_front_tabard_bound_edge": "B584C7E338E13B7D4F54AC623DCCD2FF2A888804EC7B823E9770E894F336F2C6",
+      "AST_Brumo_neck": "320C1D7A42521C1AE2A1272C117E9FE07FFB06FBBF18B2CD44CF88B5A3C9814E",
+      "AST_Brumo_padded_torso": "503978A1CC2E5E43947BE9263B00419A8045803F62D3E2A4241DECB5841E6E9D",
+      "AST_Brumo_strong_arm_L": "E28500B97D5D2AEB00C01F824D79D737D0C62C33C0F406900F40A9B94660AD82",
+      "AST_Brumo_strong_arm_R": "F7A37943BBBA02AC0EEB8607225C98DBA56452F35B0628479E33EAE3BA3E0018",
+      "AST_Brumo_toenail_L0": "286009A73E92EB8C0840178CA3DF6990BF0F66428CDF5E1AF1DB30BBC4D71CC8",
+      "AST_Brumo_toenail_L1": "F30629374A59BB9A5FDA19E52CB25433519C91AEF2313B047855BC0CEAB4B35D",
+      "AST_Brumo_toenail_L2": "404A36766855953491A287B5A95B947ACE037E6C97E6FAF4531A7043D7E72B8E",
+      "AST_Brumo_toenail_L3": "0FED2F04633E45AD5C0BFD25EBE1C103BD2D1F9C1638F047AFF675697E9A2315",
+      "AST_Brumo_toenail_R0": "1A55630FEB9F78A3248CA004BE2A6D52EFA20AE9F210BA4E204A6EC76ACB4F4E",
+      "AST_Brumo_toenail_R1": "357470D76F6047E3ED58510E93F318AFE4B72105E824B37554A2641BB6E109D8",
+      "AST_Brumo_toenail_R2": "461915E3626D37195281173F195389907610C39781B2E942FC5BDF30C447EC13",
+      "AST_Brumo_toenail_R3": "615F4AE120FD52302B7359BED92C7829F3AD7F232EB38B2C0808D738AC59BF8F",
+      "AST_Brumo_v2_belt_star_cut_setting": "3D3E45300E79CF1DA158C91BC6A02FE2C00DB174461306BAC6A05E93746CA282",
+      "AST_Brumo_v2_belt_star_four_cut_star": "40EDE92129D8EF8FBD04A19A99E4FADFDF0B5778FA96BDF64EC2217EF9A11E5E",
+      "AST_Brumo_v2_belt_star_metal_bezel": "878D29A22D98917810CB77AB93B5E66C0A025E14954C4E2726179A7DA703511D",
+      "AST_Brumo_v2_boot_fur_L0": "0E0303DF163F175F77411CE155226D0E3760F39B9CCC87A8866BB3194FF18A70",
+      "AST_Brumo_v2_boot_fur_L1": "DA8756F92E9FC2B803DA52DA7C6604E22106529C03478DB202D46082E2EE6F91",
+      "AST_Brumo_v2_boot_fur_L10": "3D4875E5D44D1DE827199AE063D3324E4D474ADA1F9F403A09795A66C62CA5E3",
+      "AST_Brumo_v2_boot_fur_L11": "3FA5AD91FB04495928017C2A5BB2176EFDC11F904A3CCA0B1F5C85FD05C360F6",
+      "AST_Brumo_v2_boot_fur_L12": "970D094882311B9DB9CC28C63388ABAE2EC91EA96422FA1F62A2D5838E388F52",
+      "AST_Brumo_v2_boot_fur_L13": "47B89AD28E24DEFD00DDFA73EAC3F8C9CB9EC7C446120723A2A05F0D7782CFB0",
+      "AST_Brumo_v2_boot_fur_L14": "0900281D1022B71CC2242516F83EB0113AEC3AA0836051B7B52E5C96FA410520",
+      "AST_Brumo_v2_boot_fur_L15": "FB179DD8179DE969A328E7E19291FF2C0A8CD1AD8F93393D5ABE6E5F487E1E17",
+      "AST_Brumo_v2_boot_fur_L2": "C4C55E29C55D150BAA6F133477BDE507FFD3ECBDD0CBE9F0A3AEB588BA576599",
+      "AST_Brumo_v2_boot_fur_L3": "5AF0E326D7AE4A0077478EF78DA36E78018DFBA57D79BFDEB330854BBA020D2D",
+      "AST_Brumo_v2_boot_fur_L4": "864261DC15C2E47101AC4B075CF2F5064834880960EAD9B8E973B9FCBB9F9BF7",
+      "AST_Brumo_v2_boot_fur_L5": "84A1E676E242F67331C378A780DE58C61F1DE55B1917272F623B766593CF14B4",
+      "AST_Brumo_v2_boot_fur_L6": "8BF49DF1351C47F97C25CD2A935BA4507DB76382879055CF9F7E8F580C4B2EA0",
+      "AST_Brumo_v2_boot_fur_L7": "534A642CA6C8F9876B9E6569F5CFF4AE9EF18505436CB2225E20D0624ADD7BA4",
+      "AST_Brumo_v2_boot_fur_L8": "45753FFE8429E2BCBAA81B385E8A61C12D3DDCAF9FCC81502E7A4D22E9696EF7",
+      "AST_Brumo_v2_boot_fur_L9": "024C2614AEC008455D0C4A8378D1A079A3A9D7D02A1B14521472B1B18A7C32BF",
+      "AST_Brumo_v2_boot_fur_R0": "3BBE8F78BAD2C2997FF5A2B276367344C316D458AD7FDBACA2821FA19937E82D",
+      "AST_Brumo_v2_boot_fur_R1": "5D332F8FE8E4C97DFAC0970498C7FDC56990ADE6CD96D85ACBDF28C36D66F5B4",
+      "AST_Brumo_v2_boot_fur_R10": "3C5B1E5C8D589EF003FD195C5A641249A99C19A521ADAB670378F30AFBAD88FB",
+      "AST_Brumo_v2_boot_fur_R11": "BB125A65588D242B6B2E2686CEECCB992DB2FFE2DE6F2F1B8CCD9F0A00C93C38",
+      "AST_Brumo_v2_boot_fur_R12": "8B1AB172FB0D1B1F432F32909726021D09B70E887811350316333B298A60E51C",
+      "AST_Brumo_v2_boot_fur_R13": "2E1E53EF8FFEAF05B1B227489AE5034B8FEA0ED94E8B6F2A9AD3D34785FEE9A1",
+      "AST_Brumo_v2_boot_fur_R14": "414F2D0DD7DE1BE6756E4871B539AB45101772B23477E47BEFB00DA07AC828FA",
+      "AST_Brumo_v2_boot_fur_R15": "78AF463E225DC573B13C42B606B0145F599663E9CEBDC0C4102BEEC75C8F4776",
+      "AST_Brumo_v2_boot_fur_R2": "54CF46ADEA566B3CFF0F470C50F871654ABF020EE768E5ED83485BD1FBD801E2",
+      "AST_Brumo_v2_boot_fur_R3": "C480762D38D40CD2E739C92BDCBFC4F31C204F1FE76F554C5C08905B930B4097",
+      "AST_Brumo_v2_boot_fur_R4": "0132DFF1DF00B70B300A839A8EEAD80F24A799A205F84BB98F7C9F3A275EFC78",
+      "AST_Brumo_v2_boot_fur_R5": "3B3575E16DDEF9EE6E5D56959866FF56C997DF1A1B3622ED10C561908E1F7F72",
+      "AST_Brumo_v2_boot_fur_R6": "5C46F7AD25CE0B917AD0F56E3C8FEE3832E5C5FE79EFBBDCAECA695D7E4ACD8C",
+      "AST_Brumo_v2_boot_fur_R7": "18C01193EEB6CC574EC483C2137FCEA1B80FE98BACE08B80F5B6E2D3DBBB8572",
+      "AST_Brumo_v2_boot_fur_R8": "7A12E38D367A9C05EA5FF055776FD651231D4A6746623F419B770361D6324249",
+      "AST_Brumo_v2_boot_fur_R9": "40FDD4A1CFC86DF3A88C17C9424AF7495EE0741AAD100FD4B7B25D56D1580EC2",
+      "AST_Brumo_v2_chest_star_cut_setting": "05C43227F6E6BC5741C81EAE87ABFA97F3758F00FE2FBC8E737365AE6262024C",
+      "AST_Brumo_v2_chest_star_four_cut_star": "C197B3D1A341D8DBB85223D634970BFB85C467A1735AB203AA84E084727E125D",
+      "AST_Brumo_v2_chest_star_metal_bezel": "F01A677DBEE86F679A28E803022134D6616D4E3B5C9EC5A74D5FD37D8D79C609",
+      "AST_Brumo_v2_closed_crown_underhair": "F12A2F0BAFEB12A3C6F41C93C3C5367E8DB22DD498AC61687D8550EA1D4E9800",
+      "AST_Brumo_v2_cupped_ear_L": "CD8AAD3E8769523AA5AE40B271C27EF029172B3938AC2A70205B944155CA6D67",
+      "AST_Brumo_v2_cupped_ear_L_antihelix": "4418785C7432612DEF99804D70588A49DD8EB68EA0B2158CD5F7E3CB59BAA38E",
+      "AST_Brumo_v2_cupped_ear_L_concha": "A27D241C22811C6A18267EF8DD27104E2EC4DBC609842CFAA67641CA2F334C6B",
+      "AST_Brumo_v2_cupped_ear_R": "CF3FBAABC64DEE3BAA25C69974BB82406C94BF69D5B85822188BC6B656E5AD90",
+      "AST_Brumo_v2_cupped_ear_R_antihelix": "D12804662ECE80DEEF873A46BC044E0DB4A87C66544EF614D01EA26884B788EC",
+      "AST_Brumo_v2_cupped_ear_R_concha": "9B36AFB8E116DC2C8677DF130C46672D5A84AC4FAB879110410DBC8149E7D5E3",
+      "AST_Brumo_v2_curved_hip_lamella_L": "466B0578E6A7D803CD64C16E83041ADFFDB636A0F9B119CB7240249E827E3EA3",
+      "AST_Brumo_v2_curved_hip_lamella_R": "8D2E4782ADC3AD4084475420BF8C9689D8340996247FA12D61F28913EDA9ACE9",
+      "AST_Brumo_v2_fitted_cross_harness_-1": "F979EF870FC938855EBD52904268804683A9FD1D8AB68B60E0ECBBEDA7ABE4A3",
+      "AST_Brumo_v2_fitted_cross_harness_1": "9EB2268AA138C3B965B0209BB30568879904ACD6A6121F5E3C744EBDF122933C",
+      "AST_Brumo_v2_forged_pauldron_L": "DE2C16C4E7ED11D225207E55FCED4990143EC9B4005045EEB4D563F0FE534550",
+      "AST_Brumo_v2_forged_pauldron_R": "CA981716EAF5E0E96EBE6406177208350BF59164D95A4D9BC319F13DB234A666",
+      "AST_Brumo_v2_harness_stitch_-11.77": "19BA245CA67673AD9F82D1843791B813195F74EF9727450B1566CA4C2423B646",
+      "AST_Brumo_v2_harness_stitch_-11.92": "795D29C7C29D037C7ADA271EAE370FD871356AA4370492F74B0B53234CC79220",
+      "AST_Brumo_v2_harness_stitch_11.77": "E11A3098AF943E4BEE5199AF3C513902615D9E0C3F42CB8B33C3D15CCF120126",
+      "AST_Brumo_v2_harness_stitch_11.92": "ACC7971F736CB0A260A173444E7C4EE8A33921EBD2ABB644E9AA94A7ED7FBDB3",
+      "AST_Brumo_v2_hip_lamella_border_L": "C6C70373BCDC458AD7014DD2D662AE910AF291D176FC735D3C0A0EE59E6619C0",
+      "AST_Brumo_v2_hip_lamella_border_R": "77A9A853CBF5F0303808BFE649BCD8780A52DBED4FFD24E9D45A758E085CDF7E",
+      "AST_Brumo_v2_nape_lock_0": "D46EC8C67688923EFB02587050ABB4E0B2F76A94ABAE69CE5D836C3C9AF2970F",
+      "AST_Brumo_v2_nape_lock_1": "4BAD305E68D8037B141AA4B90A83B8F34F1E4FDCFB78884A72290FBA2BD0BF2E",
+      "AST_Brumo_v2_nape_lock_10": "4E867983BEEDF50870E4053D13DE57DA8D82A09DCAB138E3552E1727F838BBFB",
+      "AST_Brumo_v2_nape_lock_2": "8AACC9AB47C13D10435F07BE1F4CF8CE85666F4BF1D7DA570CEF6FD35145695D",
+      "AST_Brumo_v2_nape_lock_3": "494BE2FAEE7B7A21AE65E6667886BBCE0AEBA09DC4A076526E1BDD3730CA46D8",
+      "AST_Brumo_v2_nape_lock_4": "E4A1CAE79DA9D11C9BFD751BEE3B5997650A3A1FDC57CABD73DCB7219962015E",
+      "AST_Brumo_v2_nape_lock_5": "153D2B2F365C898A1528C3D62A414A3E6AA16F2C9AD88E7605E5EC446F8F852C",
+      "AST_Brumo_v2_nape_lock_6": "1FF8B53098409C364428263B4ECA219606D27044F495891DA20152912EE6136F",
+      "AST_Brumo_v2_nape_lock_7": "A4923827E46F6466D440E258D1DE5CA2DBA8F56DCE2F4EC6817FB5653840F0F4",
+      "AST_Brumo_v2_nape_lock_8": "8D0BED2039B5E8EAA6D96FC2A707727D27D34839111B609C90BBBE1E4B1C93B4",
+      "AST_Brumo_v2_nape_lock_9": "2D77A3FB828770DF05EACEDF9A594FA666B16E826F4626ED975D542D6DE1EE8D",
+      "AST_Brumo_v2_pauldron_broad_forged_border_L": "5FA314461988A092B4F90446F88B44C0017B435B8E46EBFD56AC37A40AFE00EE",
+      "AST_Brumo_v2_pauldron_broad_forged_border_R": "E622B3F24CB802ED93A8A0B6130D0F6FEF10DF3A1483E9EF8655751003FBDA6E",
+      "AST_Brumo_v2_pauldron_rivet_L0": "876311333EF62954B4C45E4E8362E9ED2946AE9756436FA12ED20BA235982ADE",
+      "AST_Brumo_v2_pauldron_rivet_L1": "3F5E40758D69D2FFB6301DA89771D7C39AE5D8F8D44C6BA0051FDA02221D0E52",
+      "AST_Brumo_v2_pauldron_rivet_L2": "A3F73496ACD6B302D7466AD043AFAD1113FEEBB84FC96783104F8ECB001E42E3",
+      "AST_Brumo_v2_pauldron_rivet_R0": "D9DB377E11ABAF4B8BD0A82693B7C4D431ED97640ACFF506FC357333D674BD78",
+      "AST_Brumo_v2_pauldron_rivet_R1": "1EE3B1D308AFF66E88283E1FECE1E50C7F39256650C729D0DBA8130FA2D437A1",
+      "AST_Brumo_v2_pauldron_rivet_R2": "1D78118D62E1310C10B69CDBFD0351AACFBBB79715C1BBB0EC372E10A3A8CC40",
+      "AST_Brumo_v2_pauldron_star_L_cut_setting": "B38CCD80190E09F34FB2C053322A78758629B7B528508D23A1E1BC7A333C583F",
+      "AST_Brumo_v2_pauldron_star_L_four_cut_star": "6283CFD94D175834DF75E6342CBE81687114105789DF1FCC35BF12353E82FF8E",
+      "AST_Brumo_v2_pauldron_star_L_metal_bezel": "50FD15B0D710F478FF05196D7DCA49DB1C128AD9DC8371F177BEF53878B8F353",
+      "AST_Brumo_v2_pauldron_star_R_cut_setting": "0ECF71739817362E77501271C59E918CB0F11DBEF89246D9EEAFCD16B6CB2936",
+      "AST_Brumo_v2_pauldron_star_R_four_cut_star": "28E235FCBD4C149A18318D0835E58078DF920944007D5BFAC1AC85BAFF963BFA",
+      "AST_Brumo_v2_pauldron_star_R_metal_bezel": "5C1985006BC8A24CAF95908CB9911386CBDE0A8E78B7013D651A36DC99A3C1A5",
+      "AST_Brumo_v2_sculpted_hair_cap": "E1D51F6DB806EEBFA7C803035853776828CB3370AF8B9B519F692C26135EE473",
+      "AST_Brumo_v2_side_swept_lock_-1_0": "F19EFEE0EBD1D23545EA13E5E3D4D9D50DA058A3CE9042863CD457F6F57CE839",
+      "AST_Brumo_v2_side_swept_lock_-1_1": "63E17CE4ABABDF3AD81D610054065F3AA1BA66117D8EB6067C6354705E924808",
+      "AST_Brumo_v2_side_swept_lock_-1_2": "6A6F577D4790C9EE8D82845F1D6C1D8B4AAD82C9B181E3BF482A916D6897C555",
+      "AST_Brumo_v2_side_swept_lock_-1_3": "D0A88C96A8D0BA492AC802995A6A434DF12946DBB8D67897F99FCE2AC4F92A0C",
+      "AST_Brumo_v2_side_swept_lock_-1_4": "ABFD74DAED1B5B86FAC9DFF05A42D5FEE958561A3F1DE45C602E0AC603AB877C",
+      "AST_Brumo_v2_side_swept_lock_-1_5": "20D5ACC1CF70CF8B1D6814DA96B8B4D23F9EF9F036A784318E4D7BCF370FF788",
+      "AST_Brumo_v2_side_swept_lock_1_0": "194DC24D626C844A8C3D3FA04CF642F063720F28FE4466A597D411FCC9F43B69",
+      "AST_Brumo_v2_side_swept_lock_1_1": "6B54EBD1CBA63044C0AB6592604C824996B1164EC865F523DC00900647DF9A01",
+      "AST_Brumo_v2_side_swept_lock_1_2": "3DEB7B817ECAD061EDDA7F75D99D96796653213820243B6BBBA05ACB8BD25D30",
+      "AST_Brumo_v2_side_swept_lock_1_3": "401E3CA266A35029367E18013D762BFF2A56A1FF0E200E439FD69BE1A9A1310F",
+      "AST_Brumo_v2_side_swept_lock_1_4": "AA309597C72234CDD428F021A1A2672D377E1315BAE8490BE66CAA24DE68535E",
+      "AST_Brumo_v2_side_swept_lock_1_5": "72E8B605005316420935CB01BA63303B3642691B6E645185A0FD013074C0708C",
+      "AST_Brumo_v2_temple_lock_-10": "9053EA4D96AF649FA38F604E8793B44A9B6AD41A7A85931C41D5D9CEFB889757",
+      "AST_Brumo_v2_temple_lock_-11": "8C0F6DE5ACDE37B6CDD9D31A40ED66DFAFB821A81FD869714E642B30D2FE2E71",
+      "AST_Brumo_v2_temple_lock_-12": "E98ED3E6DE047F91AB8AAA955F8FAA4C128FF6A48B45D39D307CE8A95D1B9C3F",
+      "AST_Brumo_v2_temple_lock_10": "F86A9B5481318EA1127D69C813F30B024C94DBC7F2F4868904D32F459BFBFFC1",
+      "AST_Brumo_v2_temple_lock_11": "84826C2A284740A6F3E795D5D3E990C36797149C27F1E416C1D19CE9A5B4B634",
+      "AST_Brumo_v2_temple_lock_12": "49F8F35DC9334D017F78954BA365DEDB3EC8527541385664FB64770CC6EEB1D6",
+      "AST_Brumo_v2_topknot_forged_binding": "553D7A12BCF614E0096D3FEBE49BB6B6AF6460A434F0816A4F291D216639DFDF",
+      "AST_Brumo_v2_topknot_plume_0": "F82BCA77BC293264D6D2954D9C6B86E6FF01EC84C987DD7DF6CAB20C95A913D1",
+      "AST_Brumo_v2_topknot_plume_1": "A4C5A6BEACD6B6AC66450B609B3EBB50A6B15B9DB6673E3A3E32571FA17E3658",
+      "AST_Brumo_v2_topknot_plume_2": "B411F5F83584EBF6DBB4D36622AD8D094BC7FB72AB2316C50BF61C8C27544822",
+      "AST_Brumo_v2_topknot_plume_3": "7C37B869798049B1BD4C47DBF686A50E6BF2C2C70413AF139B221A802923EE8A",
+      "AST_Brumo_v2_topknot_plume_4": "AC17F5D073E460BB3CBF002EC8DEF8708CD67763520BF4EC868AB0A78046D454",
+      "AST_Brumo_v2_topknot_plume_5": "6BD14411F42BAAE4FAADC3B1FC938839A2423DB3AC84BBD3598AB8906E09AF99",
+      "AST_Brumo_v2_topknot_plume_6": "B5DE7CFF4E2DC4ADA5122D1CCB8BC00A8CE9396EC50C68C9EBF8954AA9CA6C01",
+      "AST_Brumo_v2_topknot_root_bundle": "4E564E3F9A77381133B800107C3130A5E998749ABC1B82379C5C48AFCD0D0F52",
+      "AST_Brumo_v2_wrist_fur_L0": "32B029E80F37324AFE5330A03DD36DFC13CE71C92509B036DCDBB307E0B8161C",
+      "AST_Brumo_v2_wrist_fur_L1": "06D81B2F308130F7667397E61AB8BFDCDE84F7D0CADA9CA4E9157CE84A16E808",
+      "AST_Brumo_v2_wrist_fur_L10": "F50AB97C89019AD8BF7373DA12173AE6B0D526E7571E12FB9FCAFEE256C835DB",
+      "AST_Brumo_v2_wrist_fur_L11": "4A914677E1816B5993BB5708B5A7478F50FA7F275B76EEF8928C575B876F7169",
+      "AST_Brumo_v2_wrist_fur_L12": "6E5A06AE96060DAD5A72BCA644417E975B04A399FAA81E092FF7DE5C28850DD2",
+      "AST_Brumo_v2_wrist_fur_L13": "78D29933CEEB3556D3DDA69816E8D12843239FC3607D25538D4C796F4EBC5A45",
+      "AST_Brumo_v2_wrist_fur_L14": "573B040E54F4EA810A0559F5884F75B2E4C74324BC8D341F161A927B9A591029",
+      "AST_Brumo_v2_wrist_fur_L15": "20F5EFEC85A016D635DEB7BB465594AA967F5ED6EE2A506288AB1B4D22778ADA",
+      "AST_Brumo_v2_wrist_fur_L2": "07772719742EDB47B755122EE3118A98DBE2023686DE5815070CF139DDB0C40F",
+      "AST_Brumo_v2_wrist_fur_L3": "D7660DF495B7FAFD31CAE8FE67940FA82190831C7F6C53E16BCE54EEFFE83442",
+      "AST_Brumo_v2_wrist_fur_L4": "771FAD7D356723B925E49DABCE9675DEC5CCD1B83D5C73459AFD01674E084390",
+      "AST_Brumo_v2_wrist_fur_L5": "7A145BF75B25641332BD368EF93A40DB3BE5B9A27225B1404F798833A258FB51",
+      "AST_Brumo_v2_wrist_fur_L6": "AAFA5CDE4F4AB387078AC9E830494CA4FFFAC73CF5FABAF6F2FA390548BA30B5",
+      "AST_Brumo_v2_wrist_fur_L7": "201050132419BF3FB6C3D43F5A71B13BF5FF9097F8EA306075579E4F6C52F1F9",
+      "AST_Brumo_v2_wrist_fur_L8": "5A3FCE553F26DA8DFDE2C7E7BE7D201DFF71ADB0138B284768E4920E6A8E4B65",
+      "AST_Brumo_v2_wrist_fur_L9": "34A0E8E5AB52D8A73452A2D28D3B66432D49678440FD17B0D10CB428D1DB4698",
+      "AST_Brumo_v2_wrist_fur_R0": "5A5F1EEDD8802ADEBEF4558CC074E9A4339EA42662D3322F92DC3A2F8AF0EDD6",
+      "AST_Brumo_v2_wrist_fur_R1": "9B54C3169509A4B6BDE450602AA72D8D7B904598E42F200923D788187E545AFB",
+      "AST_Brumo_v2_wrist_fur_R10": "7749AEB2B6AC58E22BFCCAC2DFBB61B62936B05D9F0CDA5CB5C5141F8361A029",
+      "AST_Brumo_v2_wrist_fur_R11": "97BE4E0B92486D3913E7CBF9C2E67CFCDD822BEF2E6877049E06A98124ACBAE1",
+      "AST_Brumo_v2_wrist_fur_R12": "8D6B1FA9E22524BD77E4D764108186D24BA9706363B9EDAE7772F3154647B922",
+      "AST_Brumo_v2_wrist_fur_R13": "D44522A348775E0348EFD0B95F7CBA0A08E3EC9FC2EF831B2D14D7719627E04C",
+      "AST_Brumo_v2_wrist_fur_R14": "89B93A465CA38448236769818CE1DE60848651591D45D6D6B57DFF1EB191F22E",
+      "AST_Brumo_v2_wrist_fur_R15": "0500B33875B881B8D2CB2607A3CFF543D8E2E4422D36B84BCE1E6AD7D00E24B3",
+      "AST_Brumo_v2_wrist_fur_R2": "5AC5F527BD0702452928FD9AD5AF68E53D3194B80B23A2B262A706690DD8D986",
+      "AST_Brumo_v2_wrist_fur_R3": "F2F111638FED82188067D7436522C6AA21763EF22C69C65A603AC82267ECDFD4",
+      "AST_Brumo_v2_wrist_fur_R4": "7B12AE951939CAF909710D9A40A8D2D7D14F89D0DEB780BFBB1EE4EBF6E437E1",
+      "AST_Brumo_v2_wrist_fur_R5": "610118F6E50D252B6030DB499633CFD584F01378BE2C82C275FDD77A87129DD9",
+      "AST_Brumo_v2_wrist_fur_R6": "A04130DB51154EAD89EF0082381D7A8A68635DBEC767999C594926E0ECA25018",
+      "AST_Brumo_v2_wrist_fur_R7": "987C0F81D0D34613EA4E8D684C57AE3C5A0E1E8AA2952650329EAA11E43B12C6",
+      "AST_Brumo_v2_wrist_fur_R8": "B84378D1747B99049C0864718EE69D170230169AFFB05C978889F58AE4A51F58",
+      "AST_Brumo_v2_wrist_fur_R9": "40C6AFD60B8440D606E562BEA52EF6235F19E32F0757EA9006D590B55F7C8EA3",
+      "AST_Brumo_v3_base_shorts": "6BB4BEB42BE45403DB5FF7A62005A6085160A9D2A439E401F35298AD2EF6B94D",
+      "AST_Brumo_v3_base_under_tunic": "8A277BE37375AC99FC10E0F22EC49E15019A081350EB1FB6E2AAD7F2A04BE80F",
+      "AST_Brumo_v4_closed_ankle_L": "03BCCA1AE024EC84B01E3174380565CAEE435991D59BED693D0FEDC4A237F0E4",
+      "AST_Brumo_v4_closed_ankle_R": "18B239046BF8C0BEDEEC9D88CADFC2910C10C328DEDAD9664B31F326778EAD79",
+      "AST_Brumo_v4_closed_deltoid_L": "49B8E410A2550BB51992FD1CE27204CB2412E77E3400C5C0B33064B49EF42369",
+      "AST_Brumo_v4_closed_deltoid_R": "7CE83238C0251F988B491384EB7AAC12C2D87C19C8D654F45D1F01F2E1298F4F",
+      "AST_Brumo_v4_closed_wrist_L": "47E3A502C7905A022F1917CAC9B569AA43D07E284AC36B792EF26B7D234AB3A6",
+      "AST_Brumo_v4_closed_wrist_R": "BAFBC332784F2C77E32D6AA03E66D6839E534082B503FB4B9470888283BFA142",
+      "AST_Brumo_v4_gathered_crown_00": "ACD75F8812E016D53B55DD07729BAF7BF0C743365E7E4C77D686D3252ADFF1CF",
+      "AST_Brumo_v4_gathered_crown_01": "A7FE49C5540A987A361C53A4558D697FEC37B260C747A0AACAF5A492FA153D56",
+      "AST_Brumo_v4_gathered_crown_02": "75B42FB585BE60315AFDFEAA7F3587E69C851F83B75D80ED3565BAE091217846",
+      "AST_Brumo_v4_gathered_crown_03": "3DE722653ABE84C8E10FC489A49EE212A062B1B4FB82F444975882DAB5236B15",
+      "AST_Brumo_v4_gathered_crown_04": "9EA2A12D97AFE3BFFE8FA27DC7643139D6D0341B6611ADE00E2A42C2E5E99A87",
+      "AST_Brumo_v4_gathered_crown_05": "5375DB3F3FE88ABF346B45B948D34A5A9370CCF0ED486C82D0FCC0C55C689B3C",
+      "AST_Brumo_v4_gathered_crown_06": "89F714A9B890BDA15BB6CBA32272C54597C884C4A78DAF60F353B3A170CD42FE",
+      "AST_Brumo_v4_rising_plum_quiff_00": "58F59F6862B0E11163E33B174836E35B21BD683E99BEF0D7FE112C0B78396CC8",
+      "AST_Brumo_v4_rising_plum_quiff_01": "962608462FC91F625E0649F27C04C5D7BA94083E6D6F90F0C0053B60EBBDFAA4",
+      "AST_Brumo_v4_rising_plum_quiff_02": "73D831FC5A6EB7B56B21A5838585022F8E40A79A74C9F0D543932DEB941BE798",
+      "AST_Brumo_v4_rising_plum_quiff_03": "D3A1A869AD6633C1ED7C6918B75C5949C9A5FDFD09F7F7ED0A5EFB1ECC47F254",
+      "AST_Brumo_v4_rising_plum_quiff_04": "DC200032045A21215CD2B728BDA15009A2989D8D1DAD1CC633F8C51080615478",
+      "AST_Brumo_v4_rising_plum_quiff_05": "B8D1537F6DF18A8C85FEF94E3523ACD788BE7DF331DF754155B2CCAD65A07894"
+    },
+    "protected_material_sha256": {
+      "AST_Brumo_v4_directional_hair_pigment": "5A0E4B12BCF52CF3E9A84BC5737B103B1ACE0983A11A911DE9D8B027E2D87655",
+      "AST_br_nail": "F76EB49A1F0D70EE7ABDF384F377BBF7330493F2A39A997146FD6600B707E2DC",
+      "AST_br_seam": "D7E545244D9A37C724DABD872876366BA5DCC015F08253F55DC3916013638B60",
+      "AST_brumo_v2_br_armor": "F3F627E26D275B6F2713807143B67BA02193C325DF2797A16F8C69F8614D1E63",
+      "AST_brumo_v2_br_armor_hi": "F77261CD67EFFEF3A4C7C0ED732171DA1DE23F367DA993674958423EDA997F5F",
+      "AST_brumo_v2_br_gold": "407BC8575383C560E636C149777CCFACEEB35684AF7D90BA3DB63F331ED5D300",
+      "AST_brumo_v2_br_gold_hi": "09B45CF0C4E127D8E54D07A5D660BED5D4578EA448DB004057645DEDF7C09A31",
+      "AST_brumo_v2_br_hair": "36B771663702571341A7897F3D4E0B2DDDA32E7D5CFC0365CC5B7BEE5EF3496C",
+      "AST_brumo_v2_br_inner": "9852AC67B3067D03F864E423CC1C126BC84182F66569E689C42C0956340FC808",
+      "AST_brumo_v2_br_leather": "AAE28A6E6C86A62A0C916D65E0A60A6EE2A67515A0069D0390D091FEFF5B0557",
+      "Brumo_v3_base_cloth": "05EB31A4573E7CCF5E2F3DE547DCA427D9A8E00871D3B108C495B13F022E6BC1",
+      "br_fur_scored_color": "2370CB2FDCD3C1E03FA642EF63A31997BBEE3D91046C46F0F833AD2568466E4B",
+      "br_hair_hi_scored_color": "B071304DF890A28E990FB67CBD5E1059BA0AFE84360C82BD57F45B037E7746A9",
+      "br_hair_scored_color": "725ADE8687F1F751299D616FA82A02E80B59FA21195431FA7E5A0F6ED3FD0037",
+      "br_v2_cloth_field": "A103E249DE617CAC418A0F4ACF3F035A1110532F29A5F413CA569A12A02381BD",
+      "br_v2_leather_field": "B9A8AA832DE32133724AF4869C55F939C82B2DC93BBC085A11765E67294DC604",
+      "br_v2_plate_colors": "03E893410164E69C74D2E06FA0361DB7FE715899A456ACEC68669336BDDE20C5",
+      "br_v2_skin_field": "6C7FC64F059FA42A757551E83A591162F4C541500B9536D87D1D930D4DF2C186"
+    },
+    "original_face_geometry_sha256": {
+      "AST_Brumo_v2_expressive_brow_L": "40CE26A864E6AEBD85040947D472A766A75E69CE4416230C124B910A1015937A",
+      "AST_Brumo_v2_expressive_brow_R": "9D32E1E65B53B905D46D5D67242EF49130774C6E2C3BC7CA44DA88A13ADC19BA",
+      "AST_Brumo_v2_eye_L": "AF19B5BA918FC1D4F3A63890A5D48B4849606D323469D6BE817A8AFBD52064D9",
+      "AST_Brumo_v2_eye_L_catchlight": "8868F23ABA143782EF49488C8E17BED85274DD73633162D499DA61314ABFA63D",
+      "AST_Brumo_v2_eye_L_closed_lid": "6EAF6EFD8E73216FCE6286A5EA0F15BA72AD6219C8245FD9C250CDF95263E1BD",
+      "AST_Brumo_v2_eye_L_lash_wing": "A9C333A22AADEF031F766792206EA5CA0452130D011A77246CB6B25DB363723F",
+      "AST_Brumo_v2_eye_L_lower_lid": "5413455457A4C95A1EE43D2A3FCBDFA3C7B6739F18D6CEC5D87019D4295ED67C",
+      "AST_Brumo_v2_eye_L_orbital_skin": "E48B3CA8118B4070BC7D5993D0FA286EADBC6F768BA3741F098EE0B95607693C",
+      "AST_Brumo_v2_eye_L_pinlight": "430E7BAB019ED04F65B05B709F5F3F398A4E59EBD5F30B1A06D511CEFC791B01",
+      "AST_Brumo_v2_eye_L_sleep_lash": "F83DBAE9F2C1962563602C60A19C4966FDDF80EEB8E397C7E0568C16220B6E55",
+      "AST_Brumo_v2_eye_L_upper_lash": "DBD4F8E29708210736118FDC762526803829333A56809F92AB9C84399CC17624",
+      "AST_Brumo_v2_eye_R": "D0A66F524DD067B865FBA88CE8CDA914CAA54A5DEBE6C28AF99DAD4FC4EDBCC8",
+      "AST_Brumo_v2_eye_R_catchlight": "74001255623DEA1FB0FA7D55F0014F6DFC2C4F2BBE49E57DC0149EAFEF6767E5",
+      "AST_Brumo_v2_eye_R_closed_lid": "F3F9484E53F3AEA6C15650434C4EEF6927FD17A811996ECCD7D49C6EF651E8B7",
+      "AST_Brumo_v2_eye_R_lash_wing": "11A1DF641684F37FCA4B0981FB4E0E227D8A2696B1664B5C8622B397CABEF439",
+      "AST_Brumo_v2_eye_R_lower_lid": "410EC9433B3793B1E8AF47E23706A555A2E95CF6DB50F6FA5806EF1CF5800351",
+      "AST_Brumo_v2_eye_R_orbital_skin": "7B246D8865F351F3501420110445AC2AE2BCC4020346025BA9EF719BA5855D9B",
+      "AST_Brumo_v2_eye_R_pinlight": "E7DBABA16ECD0A6E692DE0B5313B8E8DB6006A3C979F2565D895EC28F0ADCD34",
+      "AST_Brumo_v2_eye_R_sleep_lash": "1DF168A5337A26D54C8AE098A92F4CA59A68144A70E6A902B420A79DBEDCD099",
+      "AST_Brumo_v2_eye_R_upper_lash": "18D594565F53C95A06CC82E03B04E3303660A215BCB43A9668663ADAA8FE44AC",
+      "AST_Brumo_v2_gentle_smile": "B3EB5DFECA97D9F40D2C44B9720738AC1E081EB9CFDAB0639B3C93184F49DEC7",
+      "AST_Brumo_v2_head": "D6106E8C917EDE6C5D9D4FC06225135308AD7A064402D87EE2B10B833DB3A57C",
+      "AST_Brumo_v2_nostril_L": "C176F66A9B5482A9CDEABE6E15F77895A71062623F2A9E711BCD7C7A7637D86A",
+      "AST_Brumo_v2_nostril_R": "38BE6B2DF2732EE0EFE48AB6E37A53AA30995F6963DDA03DCCBDBE2C44737282",
+      "AST_Brumo_v2_upturned_tusk_L": "4E603D91EC97326EDA528F3F64542F1AFBFED9E329B0C287C15323C62DE1A567",
+      "AST_Brumo_v2_upturned_tusk_R": "64507B9A484BB633161976BC2132EEF59FC6215F4FF975CD008F5C3B5CE3FB2F"
+    },
+    "candidate_face_geometry_sha256": {
+      "AST_Brumo_v2_expressive_brow_L": "60C88BF7B04B964A4F6B3EE48515E7E6319F6C53E3B24CA95DF416647F838B2E",
+      "AST_Brumo_v2_expressive_brow_R": "586C1403F0662C6309DBFBF4F4072906F4A73459A3CE89C89F511BD0E3494FC7",
+      "AST_Brumo_v2_eye_L": "4B9CDABBBA119E4951989CF91283A91BCF0D92EE0F53B7B4DEC239BFF7A7533E",
+      "AST_Brumo_v2_eye_L_catchlight": "3FD5C158469B8151FC2749BE45D51ABB500AF861B2C7C10181008EE0F0A035FA",
+      "AST_Brumo_v2_eye_L_closed_lid": "745F83FB28A39D39EE5E75F816E5C79134002D44F90FA1292E8A3A02341183D7",
+      "AST_Brumo_v2_eye_L_lash_wing": "4AF0A5ECB2C75B97AD342C4B0D6BFBEC080EF128B0E53C588B29BC0D4144F719",
+      "AST_Brumo_v2_eye_L_lower_lid": "1E8694D5B6E85FD07BF776DB29D0F63A33FF89975C48A0C5AA8F7C7944092A13",
+      "AST_Brumo_v2_eye_L_orbital_skin": "D78BB39B4751A8191552D9C2B9368AC2CDD0A37AA5FE43AFDC233ECF26193A88",
+      "AST_Brumo_v2_eye_L_pinlight": "66A68BF2E04C33E48926A4A8B89E67A87B6B84F2D5FBF4F591F33BCEE3232440",
+      "AST_Brumo_v2_eye_L_sleep_lash": "AD8348CAE6E735F44D6848E759077DB70CA37F0D97C971C8A30DA437F962C016",
+      "AST_Brumo_v2_eye_L_upper_lash": "1E2AECE60456A044C0E658E5ED00AF345AB61C88EB7E70737602A2D0CD9803CF",
+      "AST_Brumo_v2_eye_R": "B056433EDAAA7A6E7B7D5387CFA2C195A66E5123413E2A618E4E5C80F075F742",
+      "AST_Brumo_v2_eye_R_catchlight": "A1710FBCFCE9D84F1035E413BA35053D5D9A823C6CCCBCBD071D4B71D5EF1FA5",
+      "AST_Brumo_v2_eye_R_closed_lid": "84B96B4C31B8A7ED84057418C12DB71A45363FB519A28D80924EDFE5CEB61261",
+      "AST_Brumo_v2_eye_R_lash_wing": "461DB219A9501CF24073EC54C66E1CF3B2A49B918F9BF2AA71C88FF1EFDC0224",
+      "AST_Brumo_v2_eye_R_lower_lid": "4FEC044936309A51E3858224461F01E8C89483B38BC38D5A4968EC549FE094FB",
+      "AST_Brumo_v2_eye_R_orbital_skin": "8F8B9F75B7EB97CDADC925B35E25298C77FDE70BD543F70B2668808AE26D0C2F",
+      "AST_Brumo_v2_eye_R_pinlight": "1048540841558B5A741128F4BCD0AF7146B28B63F4DA2B8B534EDCB0A5CE9978",
+      "AST_Brumo_v2_eye_R_sleep_lash": "607298241ECCD88276BE9F1C7A91D65F2D5D1A238F781BDA4D03870F162D9FF4",
+      "AST_Brumo_v2_eye_R_upper_lash": "DA031FC28B551957F654EB543250A33F5A42BCEC859C1D2310D5514CA0AFED36",
+      "AST_Brumo_v2_gentle_smile": "3A5D39E2B6DBF1273361BC4E876C088B47EE77C8C8EA1EB368AA87EBA23E6926",
+      "AST_Brumo_v2_head": "8CC5B697B6A8CB3363EE898AEC88CE081338863DA48E5ED766DBCA3CCE559FF7",
+      "AST_Brumo_v2_nostril_L": "7E953369BC10A1B4B3C1C111BE83A907A92EF567D3D4503A04EC32AFFCA50F29",
+      "AST_Brumo_v2_nostril_R": "999B95871EF6C0CCFDC76462CF2C04AC8D7962455A93569DBE84FBF2DEBB78FA",
+      "AST_Brumo_v2_upturned_tusk_L": "730CADE9A662DD2DF5A06C34EE3511873E9091D377C108CEAF2946611043C582",
+      "AST_Brumo_v2_upturned_tusk_R": "305A945CBB49E49AE9C8A36B5DDD638E5136DC9D85D14C74D5E7435CFE244B94"
+    },
+    "original_lid_pivots": {
+      "AST_Brumo_v2_eye_R_closed_lid": [
+        -0.2638173997402191,
+        -0.48480379581451416,
+        2.789161205291748
+      ],
+      "AST_Brumo_v2_eye_R_sleep_lash": [
+        -0.2638173997402191,
+        -0.48480379581451416,
+        2.789161205291748
+      ],
+      "AST_Brumo_v2_eye_L_closed_lid": [
+        0.2638168931007385,
+        -0.48480165004730225,
+        2.789161205291748
+      ],
+      "AST_Brumo_v2_eye_L_sleep_lash": [
+        0.2638168931007385,
+        -0.48480165004730225,
+        2.789161205291748
+      ]
+    },
+    "candidate_lid_pivots": {
+      "AST_Brumo_v2_eye_R_closed_lid": [
+        -0.2638173997402191,
+        -0.48480379581451416,
+        2.789161205291748
+      ],
+      "AST_Brumo_v2_eye_R_sleep_lash": [
+        -0.2638173997402191,
+        -0.48480379581451416,
+        2.789161205291748
+      ],
+      "AST_Brumo_v2_eye_L_closed_lid": [
+        0.2638168931007385,
+        -0.48480165004730225,
+        2.789161205291748
+      ],
+      "AST_Brumo_v2_eye_L_sleep_lash": [
+        0.2638168931007385,
+        -0.48480165004730225,
+        2.789161205291748
+      ]
+    },
+    "protected_object_count": 204,
+    "protected_material_count": 18,
+    "invalid_face_objects": []
+  },
+  "original_rig": {
+    "rest_sha256": "BC7AD939603324AA0BBE19FDA31BC534EE2AB3804DB8413AC4DF72DC1AB46973",
+    "behavior_sha256": "C548BAA88EDC1E08A41DF0DB71E04395FCA37EA11C23D17E1383E26C93F9BD59",
+    "bones": 10,
+    "fps": 30,
+    "fps_base": 1.0,
+    "actions": {
+      "blink": {
+        "sha256": "07957EDB06CD9C13B91B8A9152F96C01212CDF0FB806F8DDDA4C2FB756A05B6A",
+        "curve_count": 90,
+        "key_count": 900,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          19.0
+        ]
+      },
+      "eat": {
+        "sha256": "5AAD91B3C0C85A70E86B985897C1D07327ED06E71167090A2FF7C5CD0C45737D",
+        "curve_count": 90,
+        "key_count": 4140,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          91.0
+        ]
+      },
+      "happy": {
+        "sha256": "E9A0E30AE9EEA62C34AE2E669663459D7E63D71EC4AB9886F5AC905AA055434B",
+        "curve_count": 90,
+        "key_count": 2790,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          61.0
+        ]
+      },
+      "idle": {
+        "sha256": "5FCFB60C06A07361002613839F81029FFA3FCE84593CC0AF7752AA43F79C9905",
+        "curve_count": 90,
+        "key_count": 5490,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          121.0
+        ]
+      },
+      "pet_reaction": {
+        "sha256": "9025278C0599645450363F3292BFEB34C4B826B985B094C2BA6B2116C3369CF2",
+        "curve_count": 90,
+        "key_count": 3510,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          76.0
+        ]
+      },
+      "play": {
+        "sha256": "A742637891FBE0AB9C7E912BD3B70C81A237183D2A9B5EFA3BCE8EC145D60CB8",
+        "curve_count": 90,
+        "key_count": 3690,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          81.0
+        ]
+      },
+      "sleep": {
+        "sha256": "46DD093896197F20F9854DFCE8469C79790C396500A1F8C2C6F9312EAB540909",
+        "curve_count": 90,
+        "key_count": 5490,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          121.0
+        ]
+      },
+      "wake": {
+        "sha256": "E5C7AF96A064BFDE4C736823C836695809E67CD9269CE2DCF58BEB42E600E44F",
+        "curve_count": 90,
+        "key_count": 2790,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          61.0
+        ]
+      },
+      "walk": {
+        "sha256": "1EA82EDB6A2F3658CC4ED92EF3A583B52E4386505329E47957AA1846002E683A",
+        "curve_count": 90,
+        "key_count": 2250,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          49.0
+        ]
+      }
+    }
+  },
+  "candidate_rig": {
+    "rest_sha256": "BC7AD939603324AA0BBE19FDA31BC534EE2AB3804DB8413AC4DF72DC1AB46973",
+    "behavior_sha256": "C548BAA88EDC1E08A41DF0DB71E04395FCA37EA11C23D17E1383E26C93F9BD59",
+    "bones": 10,
+    "fps": 30,
+    "fps_base": 1.0,
+    "actions": {
+      "blink": {
+        "sha256": "07957EDB06CD9C13B91B8A9152F96C01212CDF0FB806F8DDDA4C2FB756A05B6A",
+        "curve_count": 90,
+        "key_count": 900,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          19.0
+        ]
+      },
+      "eat": {
+        "sha256": "5AAD91B3C0C85A70E86B985897C1D07327ED06E71167090A2FF7C5CD0C45737D",
+        "curve_count": 90,
+        "key_count": 4140,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          91.0
+        ]
+      },
+      "happy": {
+        "sha256": "E9A0E30AE9EEA62C34AE2E669663459D7E63D71EC4AB9886F5AC905AA055434B",
+        "curve_count": 90,
+        "key_count": 2790,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          61.0
+        ]
+      },
+      "idle": {
+        "sha256": "5FCFB60C06A07361002613839F81029FFA3FCE84593CC0AF7752AA43F79C9905",
+        "curve_count": 90,
+        "key_count": 5490,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          121.0
+        ]
+      },
+      "pet_reaction": {
+        "sha256": "9025278C0599645450363F3292BFEB34C4B826B985B094C2BA6B2116C3369CF2",
+        "curve_count": 90,
+        "key_count": 3510,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          76.0
+        ]
+      },
+      "play": {
+        "sha256": "A742637891FBE0AB9C7E912BD3B70C81A237183D2A9B5EFA3BCE8EC145D60CB8",
+        "curve_count": 90,
+        "key_count": 3690,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          81.0
+        ]
+      },
+      "sleep": {
+        "sha256": "46DD093896197F20F9854DFCE8469C79790C396500A1F8C2C6F9312EAB540909",
+        "curve_count": 90,
+        "key_count": 5490,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          121.0
+        ]
+      },
+      "wake": {
+        "sha256": "E5C7AF96A064BFDE4C736823C836695809E67CD9269CE2DCF58BEB42E600E44F",
+        "curve_count": 90,
+        "key_count": 2790,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          61.0
+        ]
+      },
+      "walk": {
+        "sha256": "1EA82EDB6A2F3658CC4ED92EF3A583B52E4386505329E47957AA1846002E683A",
+        "curve_count": 90,
+        "key_count": 2250,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          49.0
+        ]
+      }
+    }
+  },
+  "motion_comparison": {
+    "idle": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "blink": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "happy": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "eat": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "play": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "pet_reaction": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "sleep": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "wake": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "walk": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    }
+  },
+  "source_blink_samples": [
+    {
+      "frame": 1,
+      "evaluated_vertices": 216521,
+      "nonfinite_coordinates": 0
+    },
+    {
+      "frame": 5,
+      "evaluated_vertices": 216521,
+      "nonfinite_coordinates": 0
+    },
+    {
+      "frame": 7,
+      "evaluated_vertices": 216521,
+      "nonfinite_coordinates": 0
+    },
+    {
+      "frame": 8,
+      "evaluated_vertices": 216521,
+      "nonfinite_coordinates": 0
+    },
+    {
+      "frame": 9,
+      "evaluated_vertices": 216521,
+      "nonfinite_coordinates": 0
+    },
+    {
+      "frame": 10,
+      "evaluated_vertices": 216521,
+      "nonfinite_coordinates": 0
+    },
+    {
+      "frame": 12,
+      "evaluated_vertices": 216521,
+      "nonfinite_coordinates": 0
+    },
+    {
+      "frame": 16,
+      "evaluated_vertices": 216521,
+      "nonfinite_coordinates": 0
+    },
+    {
+      "frame": 24,
+      "evaluated_vertices": 216521,
+      "nonfinite_coordinates": 0
+    }
+  ],
+  "source_views": {
+    "face-hero": {
+      "file": "assets/3d/reference/orc/sculpt-v005/source/orc-face-hero.png",
+      "sha256": "B2B54EFDA034033C93BAD0064FAEEC669D4F7140CD544BDDA40EF1374080BEAA",
+      "clip": "idle",
+      "frame": 1
+    },
+    "face-front": {
+      "file": "assets/3d/reference/orc/sculpt-v005/source/orc-face-front.png",
+      "sha256": "9D9BF5EDAF07D34EAA1BE38CE18F191E1F965682DE887D02289501152A16DFA0",
+      "clip": "idle",
+      "frame": 1
+    },
+    "face-side": {
+      "file": "assets/3d/reference/orc/sculpt-v005/source/orc-face-side.png",
+      "sha256": "708650DA4CAD9295135365A3BF6DC5A4510FD09C727244C6E6845C05882A0BC1",
+      "clip": "idle",
+      "frame": 1
+    },
+    "blink-early": {
+      "file": "assets/3d/reference/orc/sculpt-v005/source/orc-blink-early.png",
+      "sha256": "31985C77927D95DB3F73F75DB5B37F38C941ADFCE507B311455CDB7FD8105C06",
+      "clip": "blink",
+      "frame": 5
+    },
+    "blink-partial": {
+      "file": "assets/3d/reference/orc/sculpt-v005/source/orc-blink-partial.png",
+      "sha256": "6896008C265BCF14B73231B01112CE645C86DC70565590871B621CEE8DA18CFA",
+      "clip": "blink",
+      "frame": 7
+    },
+    "blink-closed": {
+      "file": "assets/3d/reference/orc/sculpt-v005/source/orc-blink-closed.png",
+      "sha256": "5F8A698F48B8B62808666EC99407E001D256DA565FA944D361B5DA16BF9D4D90",
+      "clip": "blink",
+      "frame": 10
+    },
+    "hero": {
+      "file": "assets/3d/reference/orc/sculpt-v005/source/orc-hero.png",
+      "sha256": "70FC5A04ED7DE72A681D09C3C4E25D5D9CD56A957A972470A02BF902018B5C2E",
+      "clip": "idle",
+      "frame": 1
+    },
+    "rear": {
+      "file": "assets/3d/reference/orc/sculpt-v005/source/orc-rear.png",
+      "sha256": "9C3B9E8F64FEDB49C38F35FE6818EADFCAE2541839AD198DB9F606C5F0DF802E",
+      "clip": "idle",
+      "frame": 1
+    },
+    "body-hero": {
+      "file": "assets/3d/reference/orc/sculpt-v005/source/orc-body-hero.png",
+      "sha256": "C5987B4A6FE6F09085CC1720B5722CFA7C52660ACE066D2A0AA1467296E1B243",
+      "clip": "idle",
+      "frame": 1
+    }
+  },
+  "import_views": {
+    "face-hero": {
+      "file": "assets/3d/reference/orc/sculpt-v005/import/orc-face-hero.png",
+      "sha256": "56F445E7DBCFB6464C1669547ECC15B28325C1D5582001DB5959D5F4688B2FBF",
+      "clip": "idle",
+      "frame": 1
+    },
+    "face-front": {
+      "file": "assets/3d/reference/orc/sculpt-v005/import/orc-face-front.png",
+      "sha256": "8AC5826BEFE64B0E72F8EBDC31B57CB3C0E10A99DC9F4ABF0E3C38CF2EA3F9C2",
+      "clip": "idle",
+      "frame": 1
+    },
+    "face-side": {
+      "file": "assets/3d/reference/orc/sculpt-v005/import/orc-face-side.png",
+      "sha256": "BC47201EA6BFC8A53ED6D3682D1C6B5DBA7E17A98BFAA2E26D62EE400DA694B3",
+      "clip": "idle",
+      "frame": 1
+    },
+    "blink-early": {
+      "file": "assets/3d/reference/orc/sculpt-v005/import/orc-blink-early.png",
+      "sha256": "F951DC805229C209B22BA554200D4702828D94A0B1CD2316431801C0A8CF9BB1",
+      "clip": "blink",
+      "frame": 5
+    },
+    "blink-partial": {
+      "file": "assets/3d/reference/orc/sculpt-v005/import/orc-blink-partial.png",
+      "sha256": "5E62F1437B2997D30919FEB3D71755C88F4ED056DAE27CF57DB54C46CC21C8D4",
+      "clip": "blink",
+      "frame": 7
+    },
+    "blink-closed": {
+      "file": "assets/3d/reference/orc/sculpt-v005/import/orc-blink-closed.png",
+      "sha256": "67FB46163C13673E1095850D3E1658DB5C55028181C15895A3363DF9BFFB45D7",
+      "clip": "blink",
+      "frame": 10
+    },
+    "hero": {
+      "file": "assets/3d/reference/orc/sculpt-v005/import/orc-hero.png",
+      "sha256": "E2CD8F651F6370BC6D243B6A5DBAA7A7E5052BB0FFE3AA2B1CD5321D71D1612F",
+      "clip": "idle",
+      "frame": 1
+    },
+    "body-hero": {
+      "file": "assets/3d/reference/orc/sculpt-v005/import/orc-body-hero.png",
+      "sha256": "A4CCC5B9C32BECA1163CF27B5D6C9DE6EDF4195F18DD2D84B69795D3F88168BA",
+      "clip": "idle",
+      "frame": 1
+    }
+  },
+  "baseline_views": {
+    "face-hero": {
+      "file": "assets/3d/reference/orc/sculpt-v005/baseline/orc-face-hero.png",
+      "sha256": "5FA878DD40CAAC082DBE40B23A71D9A710327882F23F959E55ED38862CD6D2D0",
+      "clip": "idle",
+      "frame": 1
+    },
+    "face-front": {
+      "file": "assets/3d/reference/orc/sculpt-v005/baseline/orc-face-front.png",
+      "sha256": "43C1F38962EFA3B345E5A0ACD499F96AD4CE85C86371458D2491685D4D4ACDC1",
+      "clip": "idle",
+      "frame": 1
+    },
+    "face-side": {
+      "file": "assets/3d/reference/orc/sculpt-v005/baseline/orc-face-side.png",
+      "sha256": "0CAF70096DB8200A2828A339B077DB81C5FD95953FF6594CC6BC443EBA9899A0",
+      "clip": "idle",
+      "frame": 1
+    }
+  },
+  "hair_evidence": null,
+  "checks": {
+    "original_rest_rig_unchanged": true,
+    "original_constraints_drivers_unchanged": true,
+    "all_original_action_data_unchanged": true,
+    "original_frame_rate_unchanged": true,
+    "explicit_face_only_allowlist": true,
+    "all_unedited_source_objects_retained": true,
+    "nonface_geometry_unchanged": true,
+    "nonface_materials_unchanged": true,
+    "original_lid_pivots_unchanged": true,
+    "meaningful_face_geometry_refinement": true,
+    "face_geometry_survives_source_reopen": true,
+    "all_protected_geometry_survives_source_reopen": true,
+    "all_protected_materials_survive_source_reopen": true,
+    "finite_evaluated_partial_blinks": true,
+    "two_character_meshes": true,
+    "exact_distinct_components": true,
+    "one_original_shared_skin": true,
+    "nine_original_clips": true,
+    "only_public_extras": true,
+    "skinned_triangle_primitives": true,
+    "under_40_primitives": true,
+    "within_species_triangle_budget": true,
+    "self_contained_no_projection": true,
+    "no_editor_stage": true,
+    "meshopt": true,
+    "within_species_byte_budget": true,
+    "finite_imported_geometry": true,
+    "valid_normalized_known_weights": true,
+    "bounded_importer_triangle_difference": true,
+    "nine_clips_match_historical_import": true,
+    "two_imported_components": true,
+    "imported_equipment_metadata": true,
+    "six_facial_views_present": true,
+    "all_historical_and_builder_inputs_unchanged": true
+  },
+  "passed": true,
+  "human_likeness_accepted": false,
+  "mobile_performance_accepted": false,
+  "paid_provider_used": false,
+  "projection_used": false,
+  "nonface_unchanged": true,
+  "package_status": "Local hash-checked Blender delivery; no game-dev canonical receipt.",
+  "animation_limit": "Original full action/rest/driver RNA unchanged; nine fresh GLB skin-matrix samples per clip. Original center-scale lids retained; no anatomical closure or collision-free motion claim.",
+  "likeness_limit": "Face-only sculpt interpreted from unchanged original artwork. Hidden angles inferred. Not a 100-percent likeness or human identity acceptance claim."
+}

@@ -1,0 +1,271 @@
+{
+  "sha256": "39397C3BFEFFC5A6E001F1982F8B0586266D471793D268F14716F82883080CF7",
+  "blender": "5.2.1 LTS",
+  "bytes": 7240932,
+  "reopened_master_meshes": 233,
+  "reopened_master_clips": [
+    "blink",
+    "eat",
+    "happy",
+    "idle",
+    "pet_reaction",
+    "play",
+    "sleep",
+    "wake",
+    "walk"
+  ],
+  "vertices": 454834,
+  "triangles": 893720,
+  "bones": 13,
+  "materials": 14,
+  "draw_calls": 14,
+  "span": [
+    2.750000238418579,
+    4.2578125,
+    3.440429210662842
+  ],
+  "weighted_groups": {
+    "body": 139385,
+    "head": 166485,
+    "lid.L": 4992,
+    "lid.R": 4992,
+    "ear.L": 6300,
+    "leg.FL": 28710,
+    "leg.HL": 32698,
+    "ear.R": 6300,
+    "leg.FR": 28710,
+    "leg.HR": 32698,
+    "tail": 3564
+  },
+  "animation_samples": {
+    "idle": [
+      {
+        "frame": 1,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 31,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 61,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 91,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 121,
+        "finite_bone_matrices": true
+      }
+    ],
+    "blink": [
+      {
+        "frame": 1,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 5,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 10,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 14,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 19,
+        "finite_bone_matrices": true
+      }
+    ],
+    "happy": [
+      {
+        "frame": 1,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 16,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 31,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 46,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 61,
+        "finite_bone_matrices": true
+      }
+    ],
+    "eat": [
+      {
+        "frame": 1,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 23,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 46,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 68,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 91,
+        "finite_bone_matrices": true
+      }
+    ],
+    "play": [
+      {
+        "frame": 1,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 21,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 41,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 61,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 81,
+        "finite_bone_matrices": true
+      }
+    ],
+    "pet_reaction": [
+      {
+        "frame": 1,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 20,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 38,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 57,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 76,
+        "finite_bone_matrices": true
+      }
+    ],
+    "sleep": [
+      {
+        "frame": 1,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 31,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 61,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 91,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 121,
+        "finite_bone_matrices": true
+      }
+    ],
+    "wake": [
+      {
+        "frame": 1,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 16,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 31,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 46,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 61,
+        "finite_bone_matrices": true
+      }
+    ],
+    "walk": [
+      {
+        "frame": 1,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 13,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 25,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 37,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 49,
+        "finite_bone_matrices": true
+      }
+    ]
+  },
+  "checks": {
+    "reopened_master_nine_clips": true,
+    "master_separate_editable_parts": true,
+    "one_authored_mesh": true,
+    "one_imported_skin": true,
+    "nine_authored_clips": true,
+    "nine_imported_clips": true,
+    "no_scene_cameras": true,
+    "no_scene_lights": true,
+    "no_image_projection": true,
+    "self_contained": true,
+    "volumetric_xyz": true,
+    "finite_vertices": true,
+    "all_vertices_weighted": true,
+    "normalized_weights": true,
+    "known_bones": true,
+    "maximum_four_weights": true,
+    "finite_nine_animation_samples": true,
+    "both_moving_eyelids": true,
+    "nonempty_mesh": true
+  },
+  "passed": true,
+  "human_likeness_accepted": false,
+  "mobile_performance_accepted": false,
+  "animation_limit": "Gentle stylized presentation gestures; no biomechanical gait simulation.",
+  "asset": "public/assets/3d/dog/dog-sculpt-v001.glb",
+  "renders": {
+    "hero": "assets/3d/reference/dog/sculpt-v001/import-review/dog-sculpt-hero.png",
+    "rear": "assets/3d/reference/dog/sculpt-v001/import-review/dog-sculpt-rear.png",
+    "blink": "assets/3d/reference/dog/sculpt-v001/import-review/dog-blink-sculpt-front.png"
+  }
+}

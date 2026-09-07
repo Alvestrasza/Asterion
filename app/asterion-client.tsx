@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { logout } from "@/app/actions";
+import { AsterionModel } from "@/app/asterion-model";
 import {
   ageInDays,
   applyCareAction,
@@ -18,9 +19,16 @@ import {
   companionProfile,
   type CompanionKind
 } from "@/lib/companions";
+import {
+  asterionClipForCareAction,
+  asterionClipForPresentation,
+  companion3DModelAsset
+} from "@/lib/companion-3d";
 import type { PetCommand, PetCommandResponse, PetSnapshot } from "@/lib/pet-contract";
 import { createRequestId } from "@/lib/request-id";
 import { formatJournalTime } from "@/lib/journal-time";
+
+const ASTERION_3D_ENABLED = process.env.NEXT_PUBLIC_ASTERION_3D_ENABLED === "true";
 
 type PendingCare = {
   requestId: string;
@@ -125,6 +133,9 @@ export function AsterionClient({
   const initialMood = moodPresentation(deriveMood(initialPet), companionProfile(initialPet.kind).name);
   const [message, setMessage] = useState(initialMood.message);
   const [animation, setAnimation] = useState(initialMood.animation);
+  const [modelClip, setModelClip] = useState(() =>
+    asterionClipForPresentation(initialMood.animation, initialPet.sleeping)
+  );
   const [animationKey, setAnimationKey] = useState(0);
   const [busy, setBusy] = useState(false);
   const [online, setOnline] = useState(true);
@@ -145,14 +156,25 @@ export function AsterionClient({
     toastTimer.current = setTimeout(() => setToast(""), 2_800);
   }, []);
 
-  const showTransient = useCallback((nextPet: PetSnapshot, nextAnimation: string, nextMessage: string) => {
+  const showTransient = useCallback((
+    nextPet: PetSnapshot,
+    nextAnimation: string,
+    nextMessage: string,
+    careAction?: CareAction
+  ) => {
     if (transientTimer.current) clearTimeout(transientTimer.current);
     setAnimation(nextAnimation);
+    setModelClip(
+      careAction
+        ? asterionClipForCareAction(careAction)
+        : asterionClipForPresentation(nextAnimation, nextPet.sleeping)
+    );
     setMessage(nextMessage);
     setAnimationKey((value) => value + 1);
     transientTimer.current = setTimeout(() => {
       const presentation = moodPresentation(deriveMood(nextPet), companionProfile(nextPet.kind).name);
       setAnimation(presentation.animation);
+      setModelClip(asterionClipForPresentation(presentation.animation, nextPet.sleeping));
       setMessage(presentation.message);
     }, 3_400);
   }, []);
@@ -168,7 +190,12 @@ export function AsterionClient({
         const command = remaining[0];
         const result = await postCommand({ requestId: command.requestId, action: command.action });
         setPet(result.pet);
-        showTransient(result.pet, result.feedback.animation, result.feedback.message);
+        showTransient(
+          result.pet,
+          result.feedback.animation,
+          result.feedback.message,
+          result.feedback.accepted ? command.action : undefined
+        );
         remaining = remaining.slice(1);
         writeQueue(queueKey, remaining);
         setQueueCount(remaining.length);
@@ -243,7 +270,12 @@ export function AsterionClient({
       try {
         const result = await postCommand(command);
         setPet(result.pet);
-        showTransient(result.pet, result.feedback.animation, result.feedback.message);
+        showTransient(
+          result.pet,
+          result.feedback.animation,
+          result.feedback.message,
+          result.feedback.accepted ? action : undefined
+        );
         return;
       } catch (error) {
         if (error instanceof CommandError && error.status < 500) {
@@ -274,7 +306,12 @@ export function AsterionClient({
       ].slice(0, 10)
     };
     setPet(optimisticPet);
-    showTransient(optimisticPet, optimistic.animation, `${optimistic.message} Wird synchronisiert, sobald du wieder online bist.`);
+    showTransient(
+      optimisticPet,
+      optimistic.animation,
+      `${optimistic.message} Wird synchronisiert, sobald du wieder online bist.`,
+      optimistic.accepted ? action : undefined
+    );
   }
 
   async function runImmediate(command: PetCommand, successMessage: string) {
@@ -358,6 +395,7 @@ export function AsterionClient({
   const requiredXp = xpRequiredForLevel(pet.level);
   const xpPercent = Math.min(100, (pet.xp / requiredXp) * 100);
   const spriteSource = companionAnimationAsset(companion.kind, animation, reducedMotion);
+  const modelAsset = companion3DModelAsset(companion.kind);
   const syncLabel = busy
     ? "Wird gespeichert …"
     : !online
@@ -429,15 +467,30 @@ export function AsterionClient({
                 <div className="orbit orbit-outer" aria-hidden="true" />
                 <div className="orbit orbit-inner" aria-hidden="true" />
                 <div className="moon-glow" aria-hidden="true" />
-                <div key={animationKey} className={`pet-visual reacting reaction-${animation}`}>
-                  <Image
-                    src={spriteSource}
-                    alt={companion.ariaLabel}
-                    fill
-                    sizes="(max-width: 590px) 290px, 330px"
-                    priority
-                    unoptimized
-                  />
+                <div
+                  key={modelAsset && ASTERION_3D_ENABLED ? "asterion-3d" : animationKey}
+                  className={`pet-visual reacting reaction-${animation}`}
+                >
+                  {modelAsset && ASTERION_3D_ENABLED ? (
+                    <AsterionModel
+                      alt={companion.ariaLabel}
+                      clip={modelClip}
+                      enabled
+                      fallbackSrc={spriteSource}
+                      modelAsset={modelAsset}
+                      reducedMotion={reducedMotion}
+                      replayKey={animationKey}
+                    />
+                  ) : (
+                    <Image
+                      src={spriteSource}
+                      alt={companion.ariaLabel}
+                      fill
+                      sizes="(max-width: 590px) 290px, 330px"
+                      priority
+                      unoptimized
+                    />
+                  )}
                 </div>
               </div>
               <div className="mood-chip"><span className="mood-dot" aria-hidden="true" /><span>{mood.label}</span></div>

@@ -1,0 +1,33 @@
+{
+  "canonical": "public/assets/companions/asterion.png",
+  "canonical_sha256": "8F074029DAAEF3024753A54DDDADA288AAACD76631D7E7AE626FAC62250FE59F",
+  "render": null,
+  "render_sha256": "7A0D69DE140FFD1CE8B629DE7BE35F74C7CE4013C9657B47754184CC34F277A2",
+  "canvas": [
+    192,
+    208
+  ],
+  "canonical_mask_pixels": 20837,
+  "render_mask_pixels": 20837,
+  "alpha_iou_at_127": 1.0,
+  "binary_silhouette_mismatch_pixels": 0,
+  "opaque_rgb_mae_255": 6.006631374359131,
+  "opaque_rgb_psnr_db": 27.0916908500713,
+  "alpha_mae_255": 4.998247146606445,
+  "comparison": "assets/3d/reference/asterion/canonical-v001/asterion-canonical-highpoly-v001-likeness-comparison.png",
+  "checks": {
+    "same_canvas": true,
+    "exact_binary_silhouette": true,
+    "opaque_rgb_mae_under_8": true
+  },
+  "passed": true,
+  "note": "RGB differences are bounded render/color-pipeline rounding; geometry mask is exact at the canonical threshold.",
+  "publication_amendment": {
+    "id": "metadata-clean-2026-09-07",
+    "record": "assets/3d/publication/2026-09-07/amendment.json",
+    "original_document_sha256": "3C9F2C1CFA0A797D4220AC5DF5FA18FE0A598309F7528C1969C40CAA6DB42064",
+    "authoring_record": null,
+    "authoring_record_status": "private-original-retained-not-published",
+    "notice": "Metadata-only publication derivative, not a rerun of the historical builder or validator. File digest and size bindings identify publication copies; all measured geometry, materials, rig, action, motion and acceptance evidence remains historical and unchanged. Consult the original authoring record and amendment binding log."
+  }
+}

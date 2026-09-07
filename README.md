@@ -34,9 +34,23 @@ Use the reviewed [second-workstation guide](docs/SECOND-WORKSTATION.md) instead 
 
 Durable agent instructions live in [AGENTS.md](AGENTS.md). They are intentionally tracked so a fresh Codex chat can recover the project's technical, security, documentation, and artwork rules from the repository.
 
-## 3D companion roadmap
+## Volumetric Asterion sculpt
 
-The planned Blender-to-GLB workflow is defined in [3D asset pipeline](docs/3D-ASSET-PIPELINE.md). The existing 2D presentation remains the default until each model passes identity, animation, mobile-performance, accessibility, fallback, and release checks.
+The current 3D preview uses `sculpt-v006`: a face-only refinement with broader deep-blue eyes, fitted orbital transitions, softer cheeks, a rounded nose and curved lip arcs. Body and armor retain their separate meshes, unchanged 22-bone rig and nine original actions. The preview offers an armor visibility toggle; this does not implement an inventory or reward system. The editable master is `assets/3d/source/asterion/sculpt-v006/asterion-sculpt-v006.blend`; the browser export is `public/assets/3d/asterion/asterion-sculpt-v006.glb`. See the [v006 source guide](assets/3d/source/asterion/sculpt-v006/README.md). Nonfacial geometry and materials, including crown, ears, body and static native tail hair, remain unchanged from the [v005 likeness round](assets/3d/source/asterion/sculpt-v005/README.md). Head hair remains omitted. The [v004 modular revision](assets/3d/source/asterion/sculpt-v004/README.md), [v003 head study](assets/3d/source/asterion/sculpt-v003/README.md) and complete approximately five-million-triangle [v002 refinement](assets/3d/source/asterion/sculpt-v002/README.md) remain preserved unchanged.
+
+The previous reconstruction from the 192×208 portrait was a relief shell and was rejected by the user. It is retained as a historical checkpoint, not as the current 3D design authority. The new sculpt targets the supplied turnaround without claiming exact 1:1 identity. See the [3D asset pipeline](docs/3D-ASSET-PIPELINE.md) and [source notes](assets/3d/source/asterion/README.md) for provenance and validation boundaries.
+
+`NEXT_PUBLIC_ASTERION_3D_ENABLED` remains off by default. The existing 2D presentation remains the loading, error, unsupported-WebGL, and reduced-motion fallback. Representative mobile performance has not been accepted. The opt-in `/3d-preview` review provides front, side, rear, and three-quarter cameras, free orbit, and animation controls.
+
+The seven other pets use the face-refined `sculpt-v005` figures: Liora,
+Nyra, Brumo, Caelo, Selya, Fenn, and Aelira. Eyes, lid transitions, cheeks,
+nose and mouth receive species-specific edits; nonfacial parts are unchanged. Each has an editable
+Blender master, a separate body/outfit GLB and nine unchanged presentation clips. The preview remembers
+outfit visibility independently for each pet. Base clothing remains visible;
+this does not implement outfit rewards or an inventory. See the
+[collection source guide](assets/3d/source/companions/sculpt-v005/README.md),
+[original/previous/current face comparisons](assets/3d/reference/companions/sculpt-v005/REVIEW.md) and
+[figure index](assets/3d/COMPANION-FIGURES.md) for files and acceptance boundaries.
 
 ## Local development
 

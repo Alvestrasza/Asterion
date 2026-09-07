@@ -2,6 +2,25 @@
 
 All notable changes to Asterion are documented in this file.
 
+## Unreleased
+
+### Added
+
+- Eight opt-in volumetric 3D companions with editable Blender masters, GLB exports, unchanged approved references and retained historical revisions
+- Reference-led face refinements: Asterion `sculpt-v006`, other companions `sculpt-v005`, with original / previous / new comparison sheets and hash-bound evidence
+- A local `/3d-preview` with companion selection, fixed views, original nine clips, removable outer outfits and a static reduced-motion fallback
+- Independent source, motion, equipment, exported-geometry, receipt and gallery regression checks
+- Git LFS checkout in CI and byte-preserving rules for hash-bound asset builders and metadata
+- Metadata-clean publication copies with preserved originals, explicit historical-receipt amendments, pixel/scene equivalence guards and clean-clone verification
+
+### Changed
+
+- Connect the optional 3D presentation to existing care feedback without changing server authority, ownership, secure request IDs or journal hydration
+- Preserve the 2D default, original animation curves, and separate body/outfit contract; defer mobile-performance, final likeness and anatomical blink acceptance
+
+This source update preserves the `0.5.2` website and locale foundation. It is not
+a deployment, public launch, new authentication acceptance or versioned release.
+
 ## 0.5.2 - 2026-09-05
 
 ### Fixed

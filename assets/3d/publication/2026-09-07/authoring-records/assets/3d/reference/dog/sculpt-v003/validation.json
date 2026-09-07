@@ -1,0 +1,1547 @@
+{
+  "schema": "asterion-local-modular-companion-v1",
+  "version": "sculpt-v003",
+  "kind": "dog",
+  "name": "Fenn",
+  "source_sha256": "9606D351F43EEB56C749A9EBFD6312BDED95AAC3D119AB2D407CC268EE33D5F5",
+  "model_sha256": "2F912F11E2D332516888216EA2893AA761431AC9C7C0B340E9415558B8895362",
+  "reference_sha256": "1F94ED0A55E8718D7C891421B310932BB00D0022BB10D15D76281C440351171C",
+  "input_sha256": {
+    "assets/3d/source/dog/sculpt-v002/dog-sculpt-v002.blend": "2A0ECF194DF7CBD4F31C3D08838D72F78E6FA27C47F25F1DCCD9CD663E70E6D6",
+    "public/assets/3d/dog/dog-sculpt-v002.glb": "F3A7B2C03E4B8C3F8CE9DDFB1D9406470C55FE9F405AB0F03B33AB2F4F2EC1D6",
+    "public/assets/companions/dog.png": "1F94ED0A55E8718D7C891421B310932BB00D0022BB10D15D76281C440351171C",
+    "assets/3d/source/companions/sculpt-v003/build.py": "D29DC488FAF8CB4CB51C81291A9B21102E74832209991D90B23DEF4DA12D5763",
+    "assets/3d/source/companions/sculpt-v003/refinements.py": "82AE8D392CCCF12EA231BD66A0244BDA073739AA4C0B3103DE7DD8DDDA1FBEBA",
+    "assets/3d/source/companions/sculpt-v003/export_equipment.py": "B12B82828199ED109E2764A69BA10A8036D79B62331FA8082C9EF4BEBFC1FB2D",
+    "assets/3d/source/companions/sculpt-v001/common.py": "A6DF036A5B3F6FAA3C74740382998D829D45C9E2734D91A285F9369764C21F9E",
+    "assets/3d/source/asterion/sculpt-v002/validate_refinement.py": "8C541F26C2D2546FB142988D10F07EDF51C891D1C81F02065C7B62CE01F78EFD",
+    "assets/3d/source/asterion/sculpt-v003/build_head_study.py": "A3B22323201D30A3BD9459985F8F7741A44545010A84D27CC5912E1C8A85E0F2",
+    "assets/3d/source/asterion/sculpt-v001/build_sculpt.py": "9A81C430E8FD07CE520BBA554C78845A508F22E5FB89E524BF515D8BF8415621",
+    "assets/3d/source/asterion/sculpt-v001/rig_delivery.py": "8758D105E70AB5405F61A48A531154CC591EAC0D82B167788F1D0785A16CDFF0",
+    "assets/3d/source/asterion/sculpt-v004/export_equipment.py": "C805B4740463215AE5CC9D314D14966F2BDF91A00FB82D05054BE0BBB8ED930B"
+  },
+  "blender": "5.2.1 LTS",
+  "checks": {
+    "original_rest_rig_unchanged": true,
+    "original_constraints_drivers_unchanged": true,
+    "all_original_action_data_unchanged": true,
+    "original_frame_rate_unchanged": true,
+    "original_eye_geometry_colors_weights_unchanged": true,
+    "all_source_parts_classified_once": true,
+    "explicit_editable_equipment_groups": true,
+    "meaningful_geometry_refinement": true,
+    "base_clothing_present": true,
+    "two_character_meshes": true,
+    "exact_distinct_components": true,
+    "one_original_shared_skin": true,
+    "nine_original_clips": true,
+    "only_public_extras": true,
+    "skinned_triangle_primitives": true,
+    "under_40_primitives": true,
+    "under_two_million_triangles": true,
+    "self_contained_no_projection": true,
+    "no_editor_stage": true,
+    "meshopt": true,
+    "under_25_mb": true,
+    "finite_imported_geometry": true,
+    "valid_normalized_known_weights": true,
+    "bounded_importer_triangle_difference": true,
+    "nine_clips_match_historical_import": true,
+    "two_imported_components": true,
+    "imported_equipment_metadata": true,
+    "all_historical_and_builder_inputs_unchanged": true
+  },
+  "components": {
+    "body": {
+      "mesh": 1,
+      "skin": 0,
+      "triangles": 1301332,
+      "primitives": 8
+    },
+    "armor": {
+      "mesh": 0,
+      "skin": 0,
+      "triangles": 24140,
+      "primitives": 3
+    }
+  },
+  "triangles": 1325472,
+  "draw_calls": 11,
+  "materials": 11,
+  "bones": 13,
+  "clips": [
+    "idle",
+    "blink",
+    "happy",
+    "eat",
+    "play",
+    "pet_reaction",
+    "sleep",
+    "wake",
+    "walk"
+  ],
+  "compression_lossless": false,
+  "bytes": 16023840,
+  "geometry": {
+    "vertices": 665293,
+    "triangles": 1325462,
+    "nonfinite_vertices": 0,
+    "nonfinite_transforms": 0,
+    "unweighted_vertices": 0,
+    "invalid_weights": 0,
+    "unknown_weights": 0,
+    "over_four_weights": 0,
+    "max_influences": 2,
+    "bounds_min": [
+      -1.41015625,
+      -1.7851561307907104,
+      -0.012206927873194218
+    ],
+    "bounds_max": [
+      1.4160157442092896,
+      2.359375,
+      3.193359136581421
+    ],
+    "span": [
+      2.8261719942092896,
+      4.1445311307907104,
+      3.205566064454615
+    ]
+  },
+  "triangle_count_evidence": {
+    "authored": 1325472,
+    "imported": 1325462,
+    "exact_equal": false,
+    "triangle_loss": 10,
+    "relative_loss": 7.544482267448879e-06,
+    "maximum_allowed_loss": 26,
+    "relative_tolerance": 2e-05,
+    "passed": true,
+    "limit": "Count difference only; individual omitted triangle degeneracy is not proven by this check."
+  },
+  "changes": {
+    "notes": "Plush, directional ear and bib tufts; shorter smile seated on the actual muzzle; natural cream moons retained.",
+    "edited_objects": [
+      {
+        "name": "AST_fenn_v2_ear_flow_L0_0",
+        "vertices": 1094,
+        "max_displacement": 0.005610150198003734,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_flow_L0_1",
+        "vertices": 1094,
+        "max_displacement": 0.005195939750819365,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_flow_L0_2",
+        "vertices": 1094,
+        "max_displacement": 0.004334345878482829,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_flow_L0_3",
+        "vertices": 1094,
+        "max_displacement": 0.002530080514401412,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_flow_L1_0",
+        "vertices": 1094,
+        "max_displacement": 0.005195924682191897,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_flow_L1_1",
+        "vertices": 1094,
+        "max_displacement": 0.004334351124294647,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_flow_L1_2",
+        "vertices": 1094,
+        "max_displacement": 0.003817644687466342,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_flow_L1_3",
+        "vertices": 1094,
+        "max_displacement": 0.0034718537041877337,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_flow_L2_0",
+        "vertices": 1094,
+        "max_displacement": 0.0043343461920901305,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_flow_L2_1",
+        "vertices": 1094,
+        "max_displacement": 0.003817647149597248,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_flow_L2_2",
+        "vertices": 1094,
+        "max_displacement": 0.0041204784608035,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_flow_L2_3",
+        "vertices": 1094,
+        "max_displacement": 0.004964703597114969,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_flow_L3_0",
+        "vertices": 1094,
+        "max_displacement": 0.003817648494299801,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_flow_L3_1",
+        "vertices": 1094,
+        "max_displacement": 0.004120468378731386,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_flow_L3_2",
+        "vertices": 1094,
+        "max_displacement": 0.004964708811117431,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_flow_L3_3",
+        "vertices": 1094,
+        "max_displacement": 0.005359215930601468,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_flow_L4_0",
+        "vertices": 1094,
+        "max_displacement": 0.0041204657443266205,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_flow_L4_1",
+        "vertices": 1094,
+        "max_displacement": 0.00496470303817053,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_flow_L4_2",
+        "vertices": 1094,
+        "max_displacement": 0.005574262744377611,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_flow_L4_3",
+        "vertices": 1094,
+        "max_displacement": 0.0053883931358768514,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_root_wisp_L0",
+        "vertices": 1442,
+        "max_displacement": 0.004461378127531484,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_root_wisp_L1",
+        "vertices": 1442,
+        "max_displacement": 0.004461375941710398,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_root_wisp_L2",
+        "vertices": 1442,
+        "max_displacement": 0.004461390886316054,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_root_wisp_L3",
+        "vertices": 1442,
+        "max_displacement": 0.004461391102616778,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_flow_R0_0",
+        "vertices": 1094,
+        "max_displacement": 0.0023587428954314647,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_flow_R0_1",
+        "vertices": 1094,
+        "max_displacement": 0.005195936506073182,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_flow_R0_2",
+        "vertices": 1094,
+        "max_displacement": 0.0043343384652648,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_flow_R0_3",
+        "vertices": 1094,
+        "max_displacement": 0.0038176565542383358,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_flow_R1_0",
+        "vertices": 1094,
+        "max_displacement": 0.0035975083753338475,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_flow_R1_1",
+        "vertices": 1094,
+        "max_displacement": 0.004334343326624845,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_flow_R1_2",
+        "vertices": 1094,
+        "max_displacement": 0.0038176437010838025,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_flow_R1_3",
+        "vertices": 1094,
+        "max_displacement": 0.004120475303181646,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_flow_R2_0",
+        "vertices": 1094,
+        "max_displacement": 0.00433434233433807,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_flow_R2_1",
+        "vertices": 1094,
+        "max_displacement": 0.003817655422150431,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_flow_R2_2",
+        "vertices": 1094,
+        "max_displacement": 0.004120474848447137,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_flow_R2_3",
+        "vertices": 1094,
+        "max_displacement": 0.004964702578966459,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_flow_R3_0",
+        "vertices": 1094,
+        "max_displacement": 0.00381765146445643,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_flow_R3_1",
+        "vertices": 1094,
+        "max_displacement": 0.00412047187125102,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_flow_R3_2",
+        "vertices": 1094,
+        "max_displacement": 0.004964705829590017,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_flow_R3_3",
+        "vertices": 1094,
+        "max_displacement": 0.005335555269262635,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_flow_R4_0",
+        "vertices": 1094,
+        "max_displacement": 0.004120470160592229,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_flow_R4_1",
+        "vertices": 1094,
+        "max_displacement": 0.004964716249194115,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_flow_R4_2",
+        "vertices": 1094,
+        "max_displacement": 0.005574265804306175,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_flow_R4_3",
+        "vertices": 1094,
+        "max_displacement": 0.005388393860725592,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_root_wisp_R0",
+        "vertices": 1442,
+        "max_displacement": 0.004461392112028749,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_root_wisp_R1",
+        "vertices": 1442,
+        "max_displacement": 0.0044614001255593606,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_root_wisp_R2",
+        "vertices": 1442,
+        "max_displacement": 0.004461405342014977,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_root_wisp_R3",
+        "vertices": 1442,
+        "max_displacement": 0.0044613740766367435,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_cheek_fluff_L0",
+        "vertices": 1442,
+        "max_displacement": 0.005166953156270897,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_cheek_fluff_L1",
+        "vertices": 1442,
+        "max_displacement": 0.004912027626834004,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_cheek_fluff_L2",
+        "vertices": 1442,
+        "max_displacement": 0.0064552230269903825,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_cheek_fluff_L3",
+        "vertices": 1442,
+        "max_displacement": 0.004177010020568513,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_cheek_fluff_L4",
+        "vertices": 1442,
+        "max_displacement": 0.005811004666823275,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_cheek_fluff_L5",
+        "vertices": 1442,
+        "max_displacement": 0.00435922673670595,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_cheek_fluff_L6",
+        "vertices": 1442,
+        "max_displacement": 0.005166953976727166,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_haunch_flow_L0_0",
+        "vertices": 746,
+        "max_displacement": 0.0030738620904617216,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_haunch_flow_L0_4",
+        "vertices": 746,
+        "max_displacement": 0.0030738613485953967,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_haunch_flow_L1_0",
+        "vertices": 746,
+        "max_displacement": 0.0030738577457056493,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_haunch_flow_L2_0",
+        "vertices": 746,
+        "max_displacement": 0.00307386009753164,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_haunch_flow_L2_1",
+        "vertices": 746,
+        "max_displacement": 0.003456470011770797,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_leg_fluff_FL0",
+        "vertices": 746,
+        "max_displacement": 0.00020687376800549565,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_leg_fluff_FL1",
+        "vertices": 746,
+        "max_displacement": 0.0005612647903907103,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_leg_fluff_FL2",
+        "vertices": 746,
+        "max_displacement": 0.0008689688018372508,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_leg_fluff_FL3",
+        "vertices": 746,
+        "max_displacement": 0.0029476068214986887,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_leg_fluff_HL0",
+        "vertices": 746,
+        "max_displacement": 0.002947610228750554,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_leg_fluff_HL1",
+        "vertices": 746,
+        "max_displacement": 0.0029476082930511996,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_leg_fluff_HL2",
+        "vertices": 746,
+        "max_displacement": 0.002947612264946578,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_leg_fluff_HL3",
+        "vertices": 746,
+        "max_displacement": 0.002947613893630023,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_cheek_fluff_R0",
+        "vertices": 1442,
+        "max_displacement": 0.005166961649086265,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_cheek_fluff_R1",
+        "vertices": 1442,
+        "max_displacement": 0.004892595759743074,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_cheek_fluff_R2",
+        "vertices": 1442,
+        "max_displacement": 0.006455220712764585,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_cheek_fluff_R3",
+        "vertices": 1442,
+        "max_displacement": 0.004179955114091482,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_cheek_fluff_R4",
+        "vertices": 1442,
+        "max_displacement": 0.00581101306916927,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_cheek_fluff_R5",
+        "vertices": 1442,
+        "max_displacement": 0.004362042887138974,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_cheek_fluff_R6",
+        "vertices": 1442,
+        "max_displacement": 0.005166960061831829,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_haunch_flow_R0_0",
+        "vertices": 746,
+        "max_displacement": 0.003073858303389512,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_haunch_flow_R0_4",
+        "vertices": 746,
+        "max_displacement": 0.0030738569191173988,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_haunch_flow_R1_0",
+        "vertices": 746,
+        "max_displacement": 0.0030738570304931784,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_haunch_flow_R2_0",
+        "vertices": 746,
+        "max_displacement": 0.003073856335894197,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_haunch_flow_R2_1",
+        "vertices": 746,
+        "max_displacement": 0.003456470451904965,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_leg_fluff_FR0",
+        "vertices": 746,
+        "max_displacement": 0.00020762297097575322,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_leg_fluff_FR1",
+        "vertices": 746,
+        "max_displacement": 0.0005654708312524137,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_leg_fluff_FR2",
+        "vertices": 746,
+        "max_displacement": 0.0008756270027824041,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_leg_fluff_FR3",
+        "vertices": 746,
+        "max_displacement": 0.0029476109998442857,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_leg_fluff_HR0",
+        "vertices": 746,
+        "max_displacement": 0.0029476126316725854,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_leg_fluff_HR1",
+        "vertices": 746,
+        "max_displacement": 0.002947611358044498,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_leg_fluff_HR2",
+        "vertices": 746,
+        "max_displacement": 0.002947607727150343,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_leg_fluff_HR3",
+        "vertices": 746,
+        "max_displacement": 0.002947609621321901,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_crown_flick_0",
+        "vertices": 1982,
+        "max_displacement": 0.005171625715655008,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_crown_flick_1",
+        "vertices": 1982,
+        "max_displacement": 0.006072510517118586,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_crown_flick_2",
+        "vertices": 1982,
+        "max_displacement": 0.006973890790929462,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_crown_flick_3",
+        "vertices": 1982,
+        "max_displacement": 0.005171621998664104,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_crown_flick_4",
+        "vertices": 1982,
+        "max_displacement": 0.006072510103060393,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_crown_flick_5",
+        "vertices": 1982,
+        "max_displacement": 0.0069738892568516056,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_crown_flick_6",
+        "vertices": 1982,
+        "max_displacement": 0.005171622838041593,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_crown_flick_7",
+        "vertices": 1982,
+        "max_displacement": 0.006072509235885479,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_crown_flick_8",
+        "vertices": 1982,
+        "max_displacement": 0.00697388631566661,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_nape_flow_00",
+        "vertices": 1038,
+        "max_displacement": 0.006699446314216619,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_nape_flow_01",
+        "vertices": 1038,
+        "max_displacement": 0.0066994467367578825,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_nape_flow_02",
+        "vertices": 1038,
+        "max_displacement": 0.0066994468215069046,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_nape_flow_03",
+        "vertices": 1038,
+        "max_displacement": 0.006699446017248595,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_nape_flow_04",
+        "vertices": 1038,
+        "max_displacement": 0.0066994465903234095,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_nape_flow_10",
+        "vertices": 1038,
+        "max_displacement": 0.00669944530333465,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_nape_flow_11",
+        "vertices": 1038,
+        "max_displacement": 0.0066994466647388,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_nape_flow_12",
+        "vertices": 1038,
+        "max_displacement": 0.006699446825206074,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_nape_flow_13",
+        "vertices": 1038,
+        "max_displacement": 0.006699447186179397,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_nape_flow_14",
+        "vertices": 1038,
+        "max_displacement": 0.006699446374931255,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_cream_bib_0_0",
+        "vertices": 1766,
+        "max_displacement": 0.00510574390104849,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_cream_bib_0_1",
+        "vertices": 1766,
+        "max_displacement": 0.005685108745305766,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_cream_bib_0_7",
+        "vertices": 1766,
+        "max_displacement": 0.0056851096167232,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_cream_bib_0_8",
+        "vertices": 1766,
+        "max_displacement": 0.006264674924879254,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_cream_bib_1_0",
+        "vertices": 1766,
+        "max_displacement": 0.005105746530955543,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_cream_bib_1_1",
+        "vertices": 1766,
+        "max_displacement": 0.005685111589273348,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_cream_bib_1_7",
+        "vertices": 1766,
+        "max_displacement": 0.005685109492888899,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_cream_bib_1_8",
+        "vertices": 1766,
+        "max_displacement": 0.00626467948066637,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_cream_bib_2_0",
+        "vertices": 1766,
+        "max_displacement": 0.005105743964231609,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_cream_bib_2_1",
+        "vertices": 1766,
+        "max_displacement": 0.005685108907158357,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_cream_bib_2_2",
+        "vertices": 1766,
+        "max_displacement": 0.006264672774990706,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_cream_bib_2_3",
+        "vertices": 1766,
+        "max_displacement": 0.005105744354775762,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_cream_bib_2_4",
+        "vertices": 1766,
+        "max_displacement": 0.005685108004964653,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_cream_bib_2_5",
+        "vertices": 1766,
+        "max_displacement": 0.0062646758211150205,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_cream_bib_2_6",
+        "vertices": 1766,
+        "max_displacement": 0.005105747703632708,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_fenn_v2_gentle_smile_L",
+        "operation": "shorter surface-seated smile",
+        "width_factor": 0.78
+      },
+      {
+        "name": "AST_fenn_v2_gentle_smile_R",
+        "operation": "shorter surface-seated smile",
+        "width_factor": 0.78
+      }
+    ],
+    "added_base_clothing": [],
+    "equipment_source_objects": [
+      "AST_fenn_v2_navy_star_collar",
+      "AST_fenn_v2_collar_gold_edge_0",
+      "AST_fenn_v2_collar_gold_edge_1",
+      "AST_fenn_v2_collar_star_0",
+      "AST_fenn_v2_collar_star_1",
+      "AST_fenn_v2_collar_star_2",
+      "AST_fenn_v2_collar_star_3",
+      "AST_fenn_v2_collar_star_4",
+      "AST_fenn_v2_collar_star_5",
+      "AST_fenn_v2_collar_star_6",
+      "AST_fenn_v2_collar_star_7",
+      "AST_fenn_v2_collar_star_8",
+      "AST_fenn_v2_collar_star_9",
+      "AST_fenn_v2_collar_star_10",
+      "AST_fenn_v2_forehead_long_star",
+      "AST_fenn_v2_forehead_nested_star",
+      "AST_fenn_v2_cheek_spark_L0",
+      "AST_fenn_v2_cheek_spark_L1",
+      "AST_fenn_v2_ankle_gold_spark_FL",
+      "AST_fenn_v2_ankle_gold_spark_HL",
+      "AST_fenn_v2_cheek_spark_R0",
+      "AST_fenn_v2_cheek_spark_R1",
+      "AST_fenn_v2_ankle_gold_spark_FR",
+      "AST_fenn_v2_ankle_gold_spark_HR",
+      "AST_fenn_v2_navy_celestial_medallion",
+      "AST_fenn_v2_medallion_gold_bezel",
+      "AST_fenn_v2_medallion_inner_engraving",
+      "AST_fenn_v2_medallion_polar_star",
+      "AST_fenn_v2_medallion_moon",
+      "AST_fenn_v2_medallion_lower_point",
+      "AST_fenn_v2_medallion_suspension_loop",
+      "AST_fenn_v2_collar_hanging_tab"
+    ],
+    "body_source_objects": [
+      "AST_fenn_v2_body",
+      "AST_fenn_v2_head",
+      "AST_fenn_v2_eye_R_skin_annulus",
+      "AST_fenn_v2_eye_R",
+      "AST_fenn_v2_eye_R_upper_lid",
+      "AST_fenn_v2_eye_R_lower_lid",
+      "AST_fenn_v2_eye_R_lash_wing",
+      "AST_fenn_v2_eye_R_catchlight",
+      "AST_fenn_v2_eye_R_pinlight",
+      "AST_fenn_v2_eye_R_closed_lid",
+      "AST_fenn_v2_eye_R_closed_lash",
+      "AST_fenn_v2_eye_L_skin_annulus",
+      "AST_fenn_v2_eye_L",
+      "AST_fenn_v2_eye_L_upper_lid",
+      "AST_fenn_v2_eye_L_lower_lid",
+      "AST_fenn_v2_eye_L_lash_wing",
+      "AST_fenn_v2_eye_L_catchlight",
+      "AST_fenn_v2_eye_L_pinlight",
+      "AST_fenn_v2_eye_L_closed_lid",
+      "AST_fenn_v2_eye_L_closed_lash",
+      "AST_fenn_v2_plush_floppy_ear_L",
+      "AST_fenn_v2_ear_flow_L0_0",
+      "AST_fenn_v2_ear_flow_L0_1",
+      "AST_fenn_v2_ear_flow_L0_2",
+      "AST_fenn_v2_ear_flow_L0_3",
+      "AST_fenn_v2_ear_flow_L1_0",
+      "AST_fenn_v2_ear_flow_L1_1",
+      "AST_fenn_v2_ear_flow_L1_2",
+      "AST_fenn_v2_ear_flow_L1_3",
+      "AST_fenn_v2_ear_flow_L2_0",
+      "AST_fenn_v2_ear_flow_L2_1",
+      "AST_fenn_v2_ear_flow_L2_2",
+      "AST_fenn_v2_ear_flow_L2_3",
+      "AST_fenn_v2_ear_flow_L3_0",
+      "AST_fenn_v2_ear_flow_L3_1",
+      "AST_fenn_v2_ear_flow_L3_2",
+      "AST_fenn_v2_ear_flow_L3_3",
+      "AST_fenn_v2_ear_flow_L4_0",
+      "AST_fenn_v2_ear_flow_L4_1",
+      "AST_fenn_v2_ear_flow_L4_2",
+      "AST_fenn_v2_ear_flow_L4_3",
+      "AST_fenn_v2_ear_root_wisp_L0",
+      "AST_fenn_v2_ear_root_wisp_L1",
+      "AST_fenn_v2_ear_root_wisp_L2",
+      "AST_fenn_v2_ear_root_wisp_L3",
+      "AST_fenn_v2_plush_floppy_ear_R",
+      "AST_fenn_v2_ear_flow_R0_0",
+      "AST_fenn_v2_ear_flow_R0_1",
+      "AST_fenn_v2_ear_flow_R0_2",
+      "AST_fenn_v2_ear_flow_R0_3",
+      "AST_fenn_v2_ear_flow_R1_0",
+      "AST_fenn_v2_ear_flow_R1_1",
+      "AST_fenn_v2_ear_flow_R1_2",
+      "AST_fenn_v2_ear_flow_R1_3",
+      "AST_fenn_v2_ear_flow_R2_0",
+      "AST_fenn_v2_ear_flow_R2_1",
+      "AST_fenn_v2_ear_flow_R2_2",
+      "AST_fenn_v2_ear_flow_R2_3",
+      "AST_fenn_v2_ear_flow_R3_0",
+      "AST_fenn_v2_ear_flow_R3_1",
+      "AST_fenn_v2_ear_flow_R3_2",
+      "AST_fenn_v2_ear_flow_R3_3",
+      "AST_fenn_v2_ear_flow_R4_0",
+      "AST_fenn_v2_ear_flow_R4_1",
+      "AST_fenn_v2_ear_flow_R4_2",
+      "AST_fenn_v2_ear_flow_R4_3",
+      "AST_fenn_v2_ear_root_wisp_R0",
+      "AST_fenn_v2_ear_root_wisp_R1",
+      "AST_fenn_v2_ear_root_wisp_R2",
+      "AST_fenn_v2_ear_root_wisp_R3",
+      "AST_fenn_v2_cream_brow_L0",
+      "AST_fenn_v2_cream_brow_L1",
+      "AST_fenn_v2_cream_brow_L2",
+      "AST_fenn_v2_cream_brow_L3",
+      "AST_fenn_v2_cream_brow_L4",
+      "AST_fenn_v2_cheek_fluff_L0",
+      "AST_fenn_v2_cheek_fluff_L1",
+      "AST_fenn_v2_cheek_fluff_L2",
+      "AST_fenn_v2_cheek_fluff_L3",
+      "AST_fenn_v2_cheek_fluff_L4",
+      "AST_fenn_v2_cheek_fluff_L5",
+      "AST_fenn_v2_cheek_fluff_L6",
+      "AST_fenn_v2_haunch_flow_L0_0",
+      "AST_fenn_v2_haunch_flow_L0_4",
+      "AST_fenn_v2_haunch_flow_L1_0",
+      "AST_fenn_v2_haunch_flow_L2_0",
+      "AST_fenn_v2_haunch_flow_L2_1",
+      "AST_fenn_v2_leg_fluff_FL0",
+      "AST_fenn_v2_leg_fluff_FL1",
+      "AST_fenn_v2_leg_fluff_FL2",
+      "AST_fenn_v2_leg_fluff_FL3",
+      "AST_fenn_v2_leg_fluff_HL0",
+      "AST_fenn_v2_leg_fluff_HL1",
+      "AST_fenn_v2_leg_fluff_HL2",
+      "AST_fenn_v2_leg_fluff_HL3",
+      "AST_fenn_v2_cream_brow_R0",
+      "AST_fenn_v2_cream_brow_R1",
+      "AST_fenn_v2_cream_brow_R2",
+      "AST_fenn_v2_cream_brow_R3",
+      "AST_fenn_v2_cream_brow_R4",
+      "AST_fenn_v2_cheek_fluff_R0",
+      "AST_fenn_v2_cheek_fluff_R1",
+      "AST_fenn_v2_cheek_fluff_R2",
+      "AST_fenn_v2_cheek_fluff_R3",
+      "AST_fenn_v2_cheek_fluff_R4",
+      "AST_fenn_v2_cheek_fluff_R5",
+      "AST_fenn_v2_cheek_fluff_R6",
+      "AST_fenn_v2_haunch_flow_R0_0",
+      "AST_fenn_v2_haunch_flow_R0_4",
+      "AST_fenn_v2_haunch_flow_R1_0",
+      "AST_fenn_v2_haunch_flow_R2_0",
+      "AST_fenn_v2_haunch_flow_R2_1",
+      "AST_fenn_v2_leg_fluff_FR0",
+      "AST_fenn_v2_leg_fluff_FR1",
+      "AST_fenn_v2_leg_fluff_FR2",
+      "AST_fenn_v2_leg_fluff_FR3",
+      "AST_fenn_v2_leg_fluff_HR0",
+      "AST_fenn_v2_leg_fluff_HR1",
+      "AST_fenn_v2_leg_fluff_HR2",
+      "AST_fenn_v2_leg_fluff_HR3",
+      "AST_fenn_v2_crown_flick_0",
+      "AST_fenn_v2_crown_flick_1",
+      "AST_fenn_v2_crown_flick_2",
+      "AST_fenn_v2_crown_flick_3",
+      "AST_fenn_v2_crown_flick_4",
+      "AST_fenn_v2_crown_flick_5",
+      "AST_fenn_v2_crown_flick_6",
+      "AST_fenn_v2_crown_flick_7",
+      "AST_fenn_v2_crown_flick_8",
+      "AST_fenn_v2_nape_flow_00",
+      "AST_fenn_v2_nape_flow_01",
+      "AST_fenn_v2_nape_flow_02",
+      "AST_fenn_v2_nape_flow_03",
+      "AST_fenn_v2_nape_flow_04",
+      "AST_fenn_v2_nape_flow_10",
+      "AST_fenn_v2_nape_flow_11",
+      "AST_fenn_v2_nape_flow_12",
+      "AST_fenn_v2_nape_flow_13",
+      "AST_fenn_v2_nape_flow_14",
+      "AST_fenn_v2_cream_bib_0_0",
+      "AST_fenn_v2_cream_bib_0_1",
+      "AST_fenn_v2_cream_bib_0_7",
+      "AST_fenn_v2_cream_bib_0_8",
+      "AST_fenn_v2_cream_bib_1_0",
+      "AST_fenn_v2_cream_bib_1_1",
+      "AST_fenn_v2_cream_bib_1_7",
+      "AST_fenn_v2_cream_bib_1_8",
+      "AST_fenn_v2_cream_bib_2_0",
+      "AST_fenn_v2_cream_bib_2_1",
+      "AST_fenn_v2_cream_bib_2_2",
+      "AST_fenn_v2_cream_bib_2_3",
+      "AST_fenn_v2_cream_bib_2_4",
+      "AST_fenn_v2_cream_bib_2_5",
+      "AST_fenn_v2_cream_bib_2_6",
+      "AST_fenn_v2_shoulder_cream_crescent_L",
+      "AST_fenn_v2_shoulder_cream_spark_L",
+      "AST_fenn_v2_haunch_cream_crescent_L",
+      "AST_fenn_v2_haunch_cream_spark_L",
+      "AST_fenn_v2_shoulder_cream_crescent_R",
+      "AST_fenn_v2_shoulder_cream_spark_R",
+      "AST_fenn_v2_haunch_cream_crescent_R",
+      "AST_fenn_v2_haunch_cream_spark_R",
+      "AST_fenn_v2_full_curled_tail",
+      "AST_fenn_v2_soft_triangular_nose",
+      "AST_fenn_v2_nostril_L",
+      "AST_fenn_v2_gentle_smile_L",
+      "AST_fenn_v2_nostril_R",
+      "AST_fenn_v2_gentle_smile_R"
+    ]
+  },
+  "original_rig": {
+    "rest_sha256": "90E4064824CBB8FA5F1DD303E66DFC754A51649B99205008A28CC6F5BC6FCD09",
+    "behavior_sha256": "37E2CB7157322B1B022EDA60C976DC4F934B2866BB43D2B7C6645C19C4A16C75",
+    "bones": 13,
+    "fps": 30,
+    "fps_base": 1.0,
+    "actions": {
+      "blink": {
+        "sha256": "9FA2EB14EA62F7EC0DC80D32DDF9816BF6B8522AB2BF439F07CBAFDCAB384F14",
+        "curve_count": 117,
+        "key_count": 1170,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          19.0
+        ]
+      },
+      "eat": {
+        "sha256": "5A0B248055EB630841BFC46A0CD8706AF59E4F8876139A7C8E0AF5572B317E43",
+        "curve_count": 117,
+        "key_count": 5382,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          91.0
+        ]
+      },
+      "happy": {
+        "sha256": "9CC4503D9B41571253FC4A2FB1249DF586280AA88011B697DBE3985988EEA537",
+        "curve_count": 117,
+        "key_count": 3627,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          61.0
+        ]
+      },
+      "idle": {
+        "sha256": "C71613B29B7C10CE7485631886DA5A50AF8E16A336851314E62B42F05BC497AF",
+        "curve_count": 117,
+        "key_count": 7137,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          121.0
+        ]
+      },
+      "pet_reaction": {
+        "sha256": "DD868DD509F6244B01EEE99BC815B3C2144C74B3415274A9CA056A9083509B0C",
+        "curve_count": 117,
+        "key_count": 4563,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          76.0
+        ]
+      },
+      "play": {
+        "sha256": "229AFEED1D4A74F14DC300D3BC6819B0D9125BD2275683BD05A39AED8E1B1995",
+        "curve_count": 117,
+        "key_count": 4797,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          81.0
+        ]
+      },
+      "sleep": {
+        "sha256": "02C7526DF3CBC7986579F96B3BEDA0CA43AB5A23E6CCC0C65A36BED65C9A2F00",
+        "curve_count": 117,
+        "key_count": 7137,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          121.0
+        ]
+      },
+      "wake": {
+        "sha256": "EFA6765F07776B42589B87F61D5F8632D80B15B6D7DB354D6B653B959AFCE62D",
+        "curve_count": 117,
+        "key_count": 3627,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          61.0
+        ]
+      },
+      "walk": {
+        "sha256": "B4DD7575C14C6EB1101EF9EFE7432DA8D57A0C03E593DC9C10D3FA1F54CEC979",
+        "curve_count": 117,
+        "key_count": 2925,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          49.0
+        ]
+      }
+    }
+  },
+  "candidate_rig": {
+    "rest_sha256": "90E4064824CBB8FA5F1DD303E66DFC754A51649B99205008A28CC6F5BC6FCD09",
+    "behavior_sha256": "37E2CB7157322B1B022EDA60C976DC4F934B2866BB43D2B7C6645C19C4A16C75",
+    "bones": 13,
+    "fps": 30,
+    "fps_base": 1.0,
+    "actions": {
+      "blink": {
+        "sha256": "9FA2EB14EA62F7EC0DC80D32DDF9816BF6B8522AB2BF439F07CBAFDCAB384F14",
+        "curve_count": 117,
+        "key_count": 1170,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          19.0
+        ]
+      },
+      "eat": {
+        "sha256": "5A0B248055EB630841BFC46A0CD8706AF59E4F8876139A7C8E0AF5572B317E43",
+        "curve_count": 117,
+        "key_count": 5382,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          91.0
+        ]
+      },
+      "happy": {
+        "sha256": "9CC4503D9B41571253FC4A2FB1249DF586280AA88011B697DBE3985988EEA537",
+        "curve_count": 117,
+        "key_count": 3627,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          61.0
+        ]
+      },
+      "idle": {
+        "sha256": "C71613B29B7C10CE7485631886DA5A50AF8E16A336851314E62B42F05BC497AF",
+        "curve_count": 117,
+        "key_count": 7137,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          121.0
+        ]
+      },
+      "pet_reaction": {
+        "sha256": "DD868DD509F6244B01EEE99BC815B3C2144C74B3415274A9CA056A9083509B0C",
+        "curve_count": 117,
+        "key_count": 4563,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          76.0
+        ]
+      },
+      "play": {
+        "sha256": "229AFEED1D4A74F14DC300D3BC6819B0D9125BD2275683BD05A39AED8E1B1995",
+        "curve_count": 117,
+        "key_count": 4797,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          81.0
+        ]
+      },
+      "sleep": {
+        "sha256": "02C7526DF3CBC7986579F96B3BEDA0CA43AB5A23E6CCC0C65A36BED65C9A2F00",
+        "curve_count": 117,
+        "key_count": 7137,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          121.0
+        ]
+      },
+      "wake": {
+        "sha256": "EFA6765F07776B42589B87F61D5F8632D80B15B6D7DB354D6B653B959AFCE62D",
+        "curve_count": 117,
+        "key_count": 3627,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          61.0
+        ]
+      },
+      "walk": {
+        "sha256": "B4DD7575C14C6EB1101EF9EFE7432DA8D57A0C03E593DC9C10D3FA1F54CEC979",
+        "curve_count": 117,
+        "key_count": 2925,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          49.0
+        ]
+      }
+    }
+  },
+  "motion_comparison": {
+    "idle": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "blink": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "happy": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "eat": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "play": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "pet_reaction": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "sleep": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "wake": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "walk": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    }
+  },
+  "source_views": {
+    "hero": {
+      "file": "assets/3d/reference/dog/sculpt-v003/source/dog-hero.png",
+      "sha256": "EC8081296D389425A82B0C7DBEDFCEED507147AFA8EA915E742AE16C80BDF125"
+    },
+    "front": {
+      "file": "assets/3d/reference/dog/sculpt-v003/source/dog-front.png",
+      "sha256": "929088A0AFCB3F428A639EE4AF49C5AA9DEA2C9125DD5EE71A73B95637566F00"
+    },
+    "side": {
+      "file": "assets/3d/reference/dog/sculpt-v003/source/dog-side.png",
+      "sha256": "233DAF44E7BE79E45F1DB9E4A83857F369F81C71F6D2CDE919A47E87FB07ECAC"
+    },
+    "rear": {
+      "file": "assets/3d/reference/dog/sculpt-v003/source/dog-rear.png",
+      "sha256": "A1D94835275B1BFBD4EB9C2B6E7E83F1212F58A9B2DFA84CF6E91A926BE9BA8D"
+    },
+    "body-hero": {
+      "file": "assets/3d/reference/dog/sculpt-v003/source/dog-body-hero.png",
+      "sha256": "37E96B0126A250653E49442DDE1B1057913156152DB20C313AF1B2B8F16ADA6C"
+    },
+    "body-side": {
+      "file": "assets/3d/reference/dog/sculpt-v003/source/dog-body-side.png",
+      "sha256": "2540AA0F7820B8BB669090BBCDE9E9503B0ED0FAAA714AC85DEBCC4DFC355224"
+    }
+  },
+  "import_views": {
+    "hero": {
+      "file": "assets/3d/reference/dog/sculpt-v003/import/dog-hero.png",
+      "sha256": "ABD18915536A1829B0661A1C84756C5D816CC93E04F61D8E31D950F45241C00C"
+    },
+    "rear": {
+      "file": "assets/3d/reference/dog/sculpt-v003/import/dog-rear.png",
+      "sha256": "F001A062E185E984D5088F14DC0A81A71F8F75FBBFFBEE67556DA43AF2DBA3A8"
+    },
+    "body-hero": {
+      "file": "assets/3d/reference/dog/sculpt-v003/import/dog-body-hero.png",
+      "sha256": "83131A373AF5D38FA2FDD13B00DF9A2DB3D629E479351CED45643449BE36DC27"
+    },
+    "blink": {
+      "file": "assets/3d/reference/dog/sculpt-v003/import/dog-blink.png",
+      "sha256": "0E957BB7750BE09D99C50DAAD98317A8D2FE90B976BDFD53262EF4CD78AA8F5F"
+    }
+  },
+  "passed": true,
+  "human_likeness_accepted": false,
+  "mobile_performance_accepted": false,
+  "paid_provider_used": false,
+  "projection_used": false,
+  "package_status": "Local hash-checked Blender delivery; no game-dev canonical receipt.",
+  "animation_limit": "Original source curves, keys, handles, rest rig and drivers compared exactly. Fresh GLBs compared at nine normalized times per clip with 2e-4 skin-matrix tolerance. Not a collision or gait acceptance.",
+  "likeness_limit": "Approved single-view reference retained. Hidden surfaces inferred; no exact 1:1 claim."
+}

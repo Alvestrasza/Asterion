@@ -1,0 +1,193 @@
+{
+  "schema": "asterion-companion-review-gallery-v1",
+  "gallery": "assets/3d/reference/companions/sculpt-v003/companions-gallery.jpg",
+  "sha256": "674706052D68408D3E2EC4AAB3C2FB57B18A48A034564A82DA56C38BA3674425",
+  "figures": [
+    {
+      "kind": "pony",
+      "manifest": "assets/3d/source/pony/sculpt-v003/manifest.json",
+      "manifest_sha256": "8050D3917610F0BE6F6D3A88B46D255082CAFAFAF6DDC2585A57F4B1BD5A805C",
+      "source_images": {
+        "hero": {
+          "file": "assets/3d/reference/pony/sculpt-v003/import/pony-hero.png",
+          "sha256": "810DE9F0AFC295E001AF2CBD3032495409E87F11150612AF34DB19059D32ECE8"
+        },
+        "rear": {
+          "file": "assets/3d/reference/pony/sculpt-v003/import/pony-rear.png",
+          "sha256": "33F5ACD94A4724638C0BF831870B8A52DC777C05E9C15D668792EC94797D255E"
+        },
+        "body-hero": {
+          "file": "assets/3d/reference/pony/sculpt-v003/import/pony-body-hero.png",
+          "sha256": "F8583E4838E33D9A600257A40FDE1DD9A82DE6024DD0FAE8078F3B072C2076B4"
+        },
+        "blink": {
+          "file": "assets/3d/reference/pony/sculpt-v003/import/pony-blink.png",
+          "sha256": "C71345E31AB1E1EA490D593F841AEBE94DCD5C5C32C0B0A818020F20669128A2"
+        }
+      },
+      "triangles": 1203008,
+      "bytes": 13507336
+    },
+    {
+      "kind": "rabbit",
+      "manifest": "assets/3d/source/rabbit/sculpt-v003/manifest.json",
+      "manifest_sha256": "77D944554625DA842B82EFA747CC134BDEF67660F6EAC5A1D9432CD141902148",
+      "source_images": {
+        "hero": {
+          "file": "assets/3d/reference/rabbit/sculpt-v003/import/rabbit-hero.png",
+          "sha256": "973EC1C385BDE5CC1CA5770399ED086F217CE97A05F8B1EACA76B92DFC4FD30D"
+        },
+        "rear": {
+          "file": "assets/3d/reference/rabbit/sculpt-v003/import/rabbit-rear.png",
+          "sha256": "CFFFD939EC7DB7174A95A15B4381FE1E0035D6A6AA136FC25562D28DE1703659"
+        },
+        "body-hero": {
+          "file": "assets/3d/reference/rabbit/sculpt-v003/import/rabbit-body-hero.png",
+          "sha256": "A42329771B681ECF99BDE2A9C7C4BED9F2CDA65A46E5A37706ED9035BB175C1D"
+        },
+        "blink": {
+          "file": "assets/3d/reference/rabbit/sculpt-v003/import/rabbit-blink.png",
+          "sha256": "1D5F75D85EE52FFAE3723E2127B6EE688E8E8B6E93B5DDCAA20C3AAC1A5F8C37"
+        }
+      },
+      "triangles": 1325486,
+      "bytes": 15669680
+    },
+    {
+      "kind": "cat",
+      "manifest": "assets/3d/source/cat/sculpt-v003/manifest.json",
+      "manifest_sha256": "66F24DF51D54503A037348AB790E51E5B8449C7310154DB47B412F8D55EED1CE",
+      "source_images": {
+        "hero": {
+          "file": "assets/3d/reference/cat/sculpt-v003/import/cat-hero.png",
+          "sha256": "45DF44345DA40127D4DA40E56258E131E5E50B33908E7AFEF1E1E383F993978E"
+        },
+        "rear": {
+          "file": "assets/3d/reference/cat/sculpt-v003/import/cat-rear.png",
+          "sha256": "0C12797B766350961AB74A0731027E492B7F13EC865FB7FC22863167D71CFB65"
+        },
+        "body-hero": {
+          "file": "assets/3d/reference/cat/sculpt-v003/import/cat-body-hero.png",
+          "sha256": "11D0A3D4467B6527E22DC89CFED6DC9E8A0E689042912A9494D05E3DA3C352F7"
+        },
+        "blink": {
+          "file": "assets/3d/reference/cat/sculpt-v003/import/cat-blink.png",
+          "sha256": "5889198B8E6722BEE38B424AB8BB2671B3F8F6CA6AFA9660D72925C4923802C1"
+        }
+      },
+      "triangles": 1367850,
+      "bytes": 16524384
+    },
+    {
+      "kind": "dog",
+      "manifest": "assets/3d/source/dog/sculpt-v003/manifest.json",
+      "manifest_sha256": "309575F9A11BCAB1F771AC499C534283003742D7A36F06956446A0C228AAC120",
+      "source_images": {
+        "hero": {
+          "file": "assets/3d/reference/dog/sculpt-v003/import/dog-hero.png",
+          "sha256": "ABD18915536A1829B0661A1C84756C5D816CC93E04F61D8E31D950F45241C00C"
+        },
+        "rear": {
+          "file": "assets/3d/reference/dog/sculpt-v003/import/dog-rear.png",
+          "sha256": "F001A062E185E984D5088F14DC0A81A71F8F75FBBFFBEE67556DA43AF2DBA3A8"
+        },
+        "body-hero": {
+          "file": "assets/3d/reference/dog/sculpt-v003/import/dog-body-hero.png",
+          "sha256": "83131A373AF5D38FA2FDD13B00DF9A2DB3D629E479351CED45643449BE36DC27"
+        },
+        "blink": {
+          "file": "assets/3d/reference/dog/sculpt-v003/import/dog-blink.png",
+          "sha256": "0E957BB7750BE09D99C50DAAD98317A8D2FE90B976BDFD53262EF4CD78AA8F5F"
+        }
+      },
+      "triangles": 1325472,
+      "bytes": 16023840
+    },
+    {
+      "kind": "orc",
+      "manifest": "assets/3d/source/orc/sculpt-v003/manifest.json",
+      "manifest_sha256": "C008131E6989703E90C564FC54E6B81A4D44D8A89A40DCD7E142B2726C365946",
+      "source_images": {
+        "hero": {
+          "file": "assets/3d/reference/orc/sculpt-v003/import/orc-hero.png",
+          "sha256": "144AA0446898B17FE90469208E751597ACDCDD83ACE66B65ECA104F951E8A392"
+        },
+        "rear": {
+          "file": "assets/3d/reference/orc/sculpt-v003/import/orc-rear.png",
+          "sha256": "EFF8ACF02EF1D67F122AD93EE524DF343F0AE25ED8501AC3F5D4C866C0B6A241"
+        },
+        "body-hero": {
+          "file": "assets/3d/reference/orc/sculpt-v003/import/orc-body-hero.png",
+          "sha256": "8064030461ED8100C80FCC324DF5451F48A160813A83D321810224DB44EAD4FF"
+        },
+        "blink": {
+          "file": "assets/3d/reference/orc/sculpt-v003/import/orc-blink.png",
+          "sha256": "7773E62FBA96293573A285BAF760DE999CA6ADC80B1CA3B8D0505368ABFEE537"
+        }
+      },
+      "triangles": 1320470,
+      "bytes": 13846740
+    },
+    {
+      "kind": "fairy",
+      "manifest": "assets/3d/source/fairy/sculpt-v003/manifest.json",
+      "manifest_sha256": "AD8AD0C77C5949815CA9E65B362CAF5FAE3A0FAFA561F44A59958D7FDD349B3E",
+      "source_images": {
+        "hero": {
+          "file": "assets/3d/reference/fairy/sculpt-v003/import/fairy-hero.png",
+          "sha256": "7010F59CF92908550E534592DF8143BCE3C8A15FD439C70BB3EB49583AFA0D15"
+        },
+        "rear": {
+          "file": "assets/3d/reference/fairy/sculpt-v003/import/fairy-rear.png",
+          "sha256": "82EE2E44FFFA5DB0FF8F6D5F9ACD00AE5D0CC5927E1823989F9634C1FCBD9B72"
+        },
+        "body-hero": {
+          "file": "assets/3d/reference/fairy/sculpt-v003/import/fairy-body-hero.png",
+          "sha256": "64ECEB6953A2F4F5EEC8B4A2BA950B2596CCC38DF7AC59E8B5C84F995DA4A1A2"
+        },
+        "blink": {
+          "file": "assets/3d/reference/fairy/sculpt-v003/import/fairy-blink.png",
+          "sha256": "AAFFD36AA9D36A4688CC3411A4133DE88B1C82B86A7005E9040CB6A083FFC45F"
+        }
+      },
+      "triangles": 1427002,
+      "bytes": 15043192
+    },
+    {
+      "kind": "elf",
+      "manifest": "assets/3d/source/elf/sculpt-v003/manifest.json",
+      "manifest_sha256": "85303931336A48196796AA81104D55F030C118B585958DF48007FE59DA7EC3FF",
+      "source_images": {
+        "hero": {
+          "file": "assets/3d/reference/elf/sculpt-v003/import/elf-hero.png",
+          "sha256": "58E87B002D1A93EF6C342277FD2C60055AE0078CC3B23D43A4434B145E992A5E"
+        },
+        "rear": {
+          "file": "assets/3d/reference/elf/sculpt-v003/import/elf-rear.png",
+          "sha256": "75D78775985C2E559F315245A9CF7C3FE38620C5BD242DD9C53AE5C44927CD72"
+        },
+        "body-hero": {
+          "file": "assets/3d/reference/elf/sculpt-v003/import/elf-body-hero.png",
+          "sha256": "BC6AE1AB3725EB51E7C8E22DD8C2E841C32EDCE7DFE0C28E91A690B3AE695474"
+        },
+        "blink": {
+          "file": "assets/3d/reference/elf/sculpt-v003/import/elf-blink.png",
+          "sha256": "7FF8368B3277B7A212B4E3F1A43AE81C1A34E8F51FF672F1D0ACB604D8E23D56"
+        }
+      },
+      "triangles": 1519338,
+      "bytes": 15906780
+    }
+  ],
+  "source_images_modified": false,
+  "shared_physical_scale": false,
+  "assembly_script_sha256": "688DBC2B070902BE3735EE03BA7C8ECB8CCBEA09944778F2FCF54E0262B6FA68",
+  "publication_amendment": {
+    "id": "metadata-clean-2026-09-07",
+    "record": "assets/3d/publication/2026-09-07/amendment.json",
+    "original_document_sha256": "AD0CBF13234A446E3790649B785373E15511DFEC82FA39A7B3127D1C8017DE20",
+    "authoring_record": "assets/3d/publication/2026-09-07/authoring-records/assets/3d/reference/companions/sculpt-v003/gallery-manifest.json",
+    "authoring_record_status": "exact-public-safe-original",
+    "notice": "Metadata-only publication derivative, not a rerun of the historical builder or validator. File digest and size bindings identify publication copies; all measured geometry, materials, rig, action, motion and acceptance evidence remains historical and unchanged. Consult the original authoring record and amendment binding log."
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "schema": "asterion-local-modular-companion-v1",
+  "kind": "elf",
+  "name": "Aelira",
+  "version": "sculpt-v003",
+  "source_sha256": "7354FC5F06F3145E935E9256285D3D6DBC41D44261DAA0354022C094CA1F792C",
+  "model_sha256": "36BDDB043D5BF285D044B304689D40CB6C048C4C3CF9C36BB4B5BAD2B9276FBE",
+  "reference_sha256": "DE8904FAF12031561B752E3A4590F09A2E9BA5E763804F7D83156CF414ECA417",
+  "triangles": 1519338,
+  "bytes": 15906780,
+  "bones": 10,
+  "clips": [
+    "idle",
+    "blink",
+    "happy",
+    "eat",
+    "play",
+    "pet_reaction",
+    "sleep",
+    "wake",
+    "walk"
+  ],
+  "draw_calls": 28,
+  "materials": 24,
+  "components": {
+    "body": {
+      "mesh": 1,
+      "skin": 0,
+      "triangles": 1351238,
+      "primitives": 20
+    },
+    "armor": {
+      "mesh": 0,
+      "skin": 0,
+      "triangles": 168100,
+      "primitives": 8
+    }
+  },
+  "blender": "5.2.1 LTS",
+  "human_likeness_accepted": false,
+  "mobile_performance_accepted": false,
+  "projection_used": false,
+  "paid_provider_used": false,
+  "package_status": "Local hash-checked Blender delivery; no game-dev canonical receipt.",
+  "animation_limit": "Original source curves, keys, handles, rest rig and drivers compared exactly. Fresh GLBs compared at nine normalized times per clip with 2e-4 skin-matrix tolerance. Not a collision or gait acceptance.",
+  "likeness_limit": "Approved single-view reference retained. Hidden surfaces inferred; no exact 1:1 claim.",
+  "compression_lossless": false,
+  "source": "assets/3d/source/elf/sculpt-v003/elf-sculpt-v003.blend",
+  "model": "public/assets/3d/elf/elf-sculpt-v003.glb",
+  "reference": "assets/3d/reference/elf/sculpt-v003/original.png",
+  "validation": "assets/3d/reference/elf/sculpt-v003/validation.json",
+  "validation_sha256": "41BD8BD761F87F71DEB6E094BE1462B467D809A23F3E2D1609A581D903A0502C",
+  "fresh_import_passed": true,
+  "animations_unchanged": true,
+  "equipment_separate": true,
+  "input_sha256": {
+    "assets/3d/source/elf/sculpt-v002/elf-sculpt-v002.blend": "E45842FD44B451041A7D2BF5A696D68DB4431AF981FF4C2172C524D856F0A84E",
+    "public/assets/3d/elf/elf-sculpt-v002.glb": "ABDC383BE0FFB1F480092B3203A161CF9867E96AFFE3D3E16D7261DDF12DF6CA",
+    "public/assets/companions/elf.png": "DE8904FAF12031561B752E3A4590F09A2E9BA5E763804F7D83156CF414ECA417",
+    "assets/3d/source/companions/sculpt-v003/build.py": "D29DC488FAF8CB4CB51C81291A9B21102E74832209991D90B23DEF4DA12D5763",
+    "assets/3d/source/companions/sculpt-v003/refinements.py": "82AE8D392CCCF12EA231BD66A0244BDA073739AA4C0B3103DE7DD8DDDA1FBEBA",
+    "assets/3d/source/companions/sculpt-v003/export_equipment.py": "B12B82828199ED109E2764A69BA10A8036D79B62331FA8082C9EF4BEBFC1FB2D",
+    "assets/3d/source/companions/sculpt-v001/common.py": "A6DF036A5B3F6FAA3C74740382998D829D45C9E2734D91A285F9369764C21F9E",
+    "assets/3d/source/asterion/sculpt-v002/validate_refinement.py": "8C541F26C2D2546FB142988D10F07EDF51C891D1C81F02065C7B62CE01F78EFD",
+    "assets/3d/source/asterion/sculpt-v003/build_head_study.py": "A3B22323201D30A3BD9459985F8F7741A44545010A84D27CC5912E1C8A85E0F2",
+    "assets/3d/source/asterion/sculpt-v001/build_sculpt.py": "9A81C430E8FD07CE520BBA554C78845A508F22E5FB89E524BF515D8BF8415621",
+    "assets/3d/source/asterion/sculpt-v001/rig_delivery.py": "8758D105E70AB5405F61A48A531154CC591EAC0D82B167788F1D0785A16CDFF0",
+    "assets/3d/source/asterion/sculpt-v004/export_equipment.py": "C805B4740463215AE5CC9D314D14966F2BDF91A00FB82D05054BE0BBB8ED930B"
+  },
+  "renders": {
+    "hero": {
+      "file": "assets/3d/reference/elf/sculpt-v003/source/elf-hero.png",
+      "sha256": "7FCACE2E62EBA74864F8F8E8AB9FF0AE9F1E454CBADC895230ED904CFD6114F8"
+    },
+    "front": {
+      "file": "assets/3d/reference/elf/sculpt-v003/source/elf-front.png",
+      "sha256": "55F6A6EF65A704EB4AE0293534F5EAE96F973176E3FCF53A932FBDAA4F1D7406"
+    },
+    "side": {
+      "file": "assets/3d/reference/elf/sculpt-v003/source/elf-side.png",
+      "sha256": "D74E80E9E7C0BB7C605BA4576E5A55FF84F3E261C2B9A3742F7201A2B401EB9D"
+    },
+    "rear": {
+      "file": "assets/3d/reference/elf/sculpt-v003/source/elf-rear.png",
+      "sha256": "D24DF8C55DF46D5A095ACB5922D82DC0C768E217382AFD994C3CE53755C64896"
+    },
+    "body-hero": {
+      "file": "assets/3d/reference/elf/sculpt-v003/source/elf-body-hero.png",
+      "sha256": "3B549113EFF18D00807E04C0405E6D4E28125F4234D9918C19AD3AF068F12327"
+    },
+    "body-side": {
+      "file": "assets/3d/reference/elf/sculpt-v003/source/elf-body-side.png",
+      "sha256": "F2E04587918C2947D7D7DE5836E9B337B86F6059E51E86ED62C2720BBB323EE3"
+    }
+  },
+  "import_renders": {
+    "hero": {
+      "file": "assets/3d/reference/elf/sculpt-v003/import/elf-hero.png",
+      "sha256": "58E87B002D1A93EF6C342277FD2C60055AE0078CC3B23D43A4434B145E992A5E"
+    },
+    "rear": {
+      "file": "assets/3d/reference/elf/sculpt-v003/import/elf-rear.png",
+      "sha256": "75D78775985C2E559F315245A9CF7C3FE38620C5BD242DD9C53AE5C44927CD72"
+    },
+    "body-hero": {
+      "file": "assets/3d/reference/elf/sculpt-v003/import/elf-body-hero.png",
+      "sha256": "BC6AE1AB3725EB51E7C8E22DD8C2E841C32EDCE7DFE0C28E91A690B3AE695474"
+    },
+    "blink": {
+      "file": "assets/3d/reference/elf/sculpt-v003/import/elf-blink.png",
+      "sha256": "7FF8368B3277B7A212B4E3F1A43AE81C1A34E8F51FF672F1D0ACB604D8E23D56"
+    }
+  },
+  "notes": "Layered green hair and braid relief; gently relaxed cape folds with attached embroidery; opaque tunic, trousers and boots retained.",
+  "edited_objects": 99
+}

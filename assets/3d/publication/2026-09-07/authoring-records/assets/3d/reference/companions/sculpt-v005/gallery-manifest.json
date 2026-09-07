@@ -1,0 +1,211 @@
+{
+  "schema": "asterion-face-comparison-v1",
+  "gallery": "assets/3d/reference/companions/sculpt-v005/face-comparison.jpg",
+  "sha256": "E6DEA3B51F64E407DCC1AA922D379C82EE045A536EA29BDF339208DD6F8D0447",
+  "figures": [
+    {
+      "kind": "asterion",
+      "manifest": "assets/3d/source/asterion/sculpt-v006/manifest.json",
+      "manifest_sha256": "43964B73B51C80F30E9423DC06C5F2BC4B449D73128064D77BB0E911DFF46362",
+      "reference": "assets/3d/reference/asterion/sculpt-v006/original.png",
+      "reference_sha256": "FE91A72F21A139CB4443E7BDE99498FC7AF7D07B8784A5F4A0B48CC37A141AEC",
+      "reference_crop": [
+        1280,
+        235,
+        1600,
+        455
+      ],
+      "previous": "assets/3d/reference/asterion/sculpt-v006/baseline/asterion-face-hero.png",
+      "previous_sha256": "D5F3BA8F261A7E3097047C438AF6CCB9F799077BAA981269D937FDBE0FBA9B6D",
+      "current": "assets/3d/reference/asterion/sculpt-v006/import/asterion-face-hero.png",
+      "current_sha256": "16F0AC38C0EB48B5A26BFA141831B3E4196F5271D7452B15A9ED944CB26324B3",
+      "render_crop": [
+        150,
+        340,
+        1060,
+        970
+      ],
+      "comparison": "assets/3d/reference/companions/sculpt-v005/asterion-face-comparison.jpg",
+      "comparison_sha256": "3D06810304E94EBB515EAD5B61AC98DE1076768BE01AA86B3520CD6C45894CF3"
+    },
+    {
+      "kind": "pony",
+      "manifest": "assets/3d/source/pony/sculpt-v005/manifest.json",
+      "manifest_sha256": "7D22044420F95C322F2507F083866CC3849543DEBD5F93801E0FBC6EFC98AC2A",
+      "reference": "assets/3d/reference/pony/sculpt-v005/original.png",
+      "reference_sha256": "9D059157FECF1C2905F9C1EB56A460AA45995DDD8B924C1E854827C73EFFD118",
+      "reference_crop": [
+        280,
+        320,
+        680,
+        670
+      ],
+      "previous": "assets/3d/reference/pony/sculpt-v005/baseline/pony-face-hero.png",
+      "previous_sha256": "EA988FC8BABBC8BE586799CE2A3791F9BD47E3422110789F2F27397EB9EFC1BD",
+      "current": "assets/3d/reference/pony/sculpt-v005/import/pony-face-hero.png",
+      "current_sha256": "2AED8BBFAF2DFFAB673576E52C7C62B00442D2EB1CEB065F155308AAC37DD68D",
+      "render_crop": [
+        200,
+        380,
+        1010,
+        1030
+      ],
+      "comparison": "assets/3d/reference/companions/sculpt-v005/pony-face-comparison.jpg",
+      "comparison_sha256": "7872BD6474319CCDA389FBD383D3A3DEA0F38AB706FF0DA0B3122397D666488F"
+    },
+    {
+      "kind": "rabbit",
+      "manifest": "assets/3d/source/rabbit/sculpt-v005/manifest.json",
+      "manifest_sha256": "A84FFFD31ABB99896484BB27F756AD03509451CF3AC7BC6D4915193B63B67F13",
+      "reference": "assets/3d/reference/rabbit/sculpt-v005/original.png",
+      "reference_sha256": "26CD3B4BEFF8FE37488F860C3847BD78B9455102CB3FDF5C36BCBD98AF74F95D",
+      "reference_crop": [
+        265,
+        455,
+        735,
+        785
+      ],
+      "previous": "assets/3d/reference/rabbit/sculpt-v005/baseline/rabbit-face-hero.png",
+      "previous_sha256": "AC544D6B33CFDFE79D06429C16F7D5B1C1F5AF423817AC70803A40E795BC5772",
+      "current": "assets/3d/reference/rabbit/sculpt-v005/import/rabbit-face-hero.png",
+      "current_sha256": "629B2822266A2FB1B935A1E29785BDC94DB63E37640673A8140C9C0759C780F7",
+      "render_crop": [
+        190,
+        320,
+        1140,
+        1050
+      ],
+      "comparison": "assets/3d/reference/companions/sculpt-v005/rabbit-face-comparison.jpg",
+      "comparison_sha256": "55CF50216E3F7771FBDCC4F880BECD8DAB53E612342C8422B24A4C6494B58344"
+    },
+    {
+      "kind": "cat",
+      "manifest": "assets/3d/source/cat/sculpt-v005/manifest.json",
+      "manifest_sha256": "405F1A9ED3112A726027A22E2E2A5C7377CE4A7EE3E5AD7FF5E56CF04B922555",
+      "reference": "assets/3d/reference/cat/sculpt-v005/original.png",
+      "reference_sha256": "C996F1500869602E32B24047F8D1A6FAB6018CE87514AA22F017A09480EAEFED",
+      "reference_crop": [
+        185,
+        390,
+        725,
+        755
+      ],
+      "previous": "assets/3d/reference/cat/sculpt-v005/baseline/cat-face-hero.png",
+      "previous_sha256": "B1F424870F889B99DCF028925EFB495C7F0AAA99A3B57E77609FD9378109DECC",
+      "current": "assets/3d/reference/cat/sculpt-v005/import/cat-face-hero.png",
+      "current_sha256": "FC877FB794CE7E71E7A8FEAA330087886725242F5B46A26DE8264BE64E260C27",
+      "render_crop": [
+        170,
+        390,
+        1130,
+        1090
+      ],
+      "comparison": "assets/3d/reference/companions/sculpt-v005/cat-face-comparison.jpg",
+      "comparison_sha256": "2A2F728FE8C8A5C6F7ED095E00ACFCA168EDCE592E8E9EE746E749FF6B601F93"
+    },
+    {
+      "kind": "dog",
+      "manifest": "assets/3d/source/dog/sculpt-v005/manifest.json",
+      "manifest_sha256": "5BF8609486A40BC80DFD1F1F517B053786D2B0B956BE88A2765504BEBA18BB6B",
+      "reference": "assets/3d/reference/dog/sculpt-v005/original.png",
+      "reference_sha256": "1F94ED0A55E8718D7C891421B310932BB00D0022BB10D15D76281C440351171C",
+      "reference_crop": [
+        245,
+        310,
+        800,
+        690
+      ],
+      "previous": "assets/3d/reference/dog/sculpt-v005/baseline/dog-face-hero.png",
+      "previous_sha256": "5A1FD6EE4D0E322F12EBF37206E26F5C99848EF404691AA6B64F44DA308744A1",
+      "current": "assets/3d/reference/dog/sculpt-v005/import/dog-face-hero.png",
+      "current_sha256": "51AB848ADF7B32C93FA81416C757D2EA04424BDC78DFB06CA818D3A925172657",
+      "render_crop": [
+        190,
+        320,
+        1060,
+        1060
+      ],
+      "comparison": "assets/3d/reference/companions/sculpt-v005/dog-face-comparison.jpg",
+      "comparison_sha256": "C962BEDD903AB94B34676E96192353F642E5818F271F6FB0399C523416C3A5B4"
+    },
+    {
+      "kind": "orc",
+      "manifest": "assets/3d/source/orc/sculpt-v005/manifest.json",
+      "manifest_sha256": "EF265E59ABD0F4CE2CA3C11AB8BBBE725B593395A9387D0AAE42B484C6500F12",
+      "reference": "assets/3d/reference/orc/sculpt-v005/original.png",
+      "reference_sha256": "55FB8AD6273C92AC99A165B0BC4E6C9C56F86C9780F5D39CAEAD7C138C905B35",
+      "reference_crop": [
+        310,
+        290,
+        905,
+        670
+      ],
+      "previous": "assets/3d/reference/orc/sculpt-v005/baseline/orc-face-hero.png",
+      "previous_sha256": "5FA878DD40CAAC082DBE40B23A71D9A710327882F23F959E55ED38862CD6D2D0",
+      "current": "assets/3d/reference/orc/sculpt-v005/import/orc-face-hero.png",
+      "current_sha256": "56F445E7DBCFB6464C1669547ECC15B28325C1D5582001DB5959D5F4688B2FBF",
+      "render_crop": [
+        60,
+        160,
+        1140,
+        1050
+      ],
+      "comparison": "assets/3d/reference/companions/sculpt-v005/orc-face-comparison.jpg",
+      "comparison_sha256": "C97C9E996B42559779E172066ECCF3EC104CAC8CF8DD9ECC708D44334F622AFD"
+    },
+    {
+      "kind": "fairy",
+      "manifest": "assets/3d/source/fairy/sculpt-v005/manifest.json",
+      "manifest_sha256": "A704C3007ABF9D8D009ACBB61AEDB30BECA77096D572C81A8DD379C1CFDE8133",
+      "reference": "assets/3d/reference/fairy/sculpt-v005/original.png",
+      "reference_sha256": "E22EA6A731DB9E432BB2E454DC0B847E7AD46829D52A871C3F2EDA4FD2AFAEF7",
+      "reference_crop": [
+        405,
+        285,
+        785,
+        560
+      ],
+      "previous": "assets/3d/reference/fairy/sculpt-v005/baseline/fairy-face-hero.png",
+      "previous_sha256": "9E1F90EF6C6E25EFC6BF58ACDBC2057CAFD4340A37FAA47DF58320F6F72CBB7A",
+      "current": "assets/3d/reference/fairy/sculpt-v005/import/fairy-face-hero.png",
+      "current_sha256": "D164902CF470FAFCB961AEFE01C0E33FC62CE95857764725488D13CF0723FC0A",
+      "render_crop": [
+        100,
+        190,
+        1120,
+        1050
+      ],
+      "comparison": "assets/3d/reference/companions/sculpt-v005/fairy-face-comparison.jpg",
+      "comparison_sha256": "C6824ADCF1C1AAA768004A6AADB97D6E96C52C4FAE164573ED2997807CF3C598"
+    },
+    {
+      "kind": "elf",
+      "manifest": "assets/3d/source/elf/sculpt-v005/manifest.json",
+      "manifest_sha256": "6FD13304A05165B2F1E13E04BB852657E2BEDA7DA8D4B64ADD4D34D6B73A12B6",
+      "reference": "assets/3d/reference/elf/sculpt-v005/original.png",
+      "reference_sha256": "DE8904FAF12031561B752E3A4590F09A2E9BA5E763804F7D83156CF414ECA417",
+      "reference_crop": [
+        450,
+        165,
+        815,
+        440
+      ],
+      "previous": "assets/3d/reference/elf/sculpt-v005/baseline/elf-face-hero.png",
+      "previous_sha256": "73A194AA5222530F219A09DB5650EBF8B3F102DC6A4916DE85E26A04ACAEF32A",
+      "current": "assets/3d/reference/elf/sculpt-v005/import/elf-face-hero.png",
+      "current_sha256": "CEAC6D4928DEF8DA29C5201B489D7A348353ACE754AFFEDCCD1842B3DD3B64EB",
+      "render_crop": [
+        100,
+        190,
+        1120,
+        1050
+      ],
+      "comparison": "assets/3d/reference/companions/sculpt-v005/elf-face-comparison.jpg",
+      "comparison_sha256": "35C4806BB1F229D07E6BBEA9579002FCD9DB7122539FFA51794746F0DC0D8377"
+    }
+  ],
+  "source_files_modified": false,
+  "independent_framing": true,
+  "likeness_accepted": false,
+  "assembly_script_sha256": "07E841B228E084B245E31A58DB9986D4F4F2CDB45A331C7E75787FDC950E3B63"
+}

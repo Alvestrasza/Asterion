@@ -1,0 +1,1081 @@
+{
+  "schema": "asterion-local-modular-companion-v1",
+  "version": "sculpt-v004",
+  "kind": "rabbit",
+  "name": "Liora",
+  "source_sha256": "8099836E4700092CA915E1275C7A6E0D2B0EDE32EEA857C5841464960A486455",
+  "model_sha256": "952B8D9CF7E02929A41DF8C39178609510A64BAD0FEDC87005B66CBAC168C69A",
+  "reference_sha256": "26CD3B4BEFF8FE37488F860C3847BD78B9455102CB3FDF5C36BCBD98AF74F95D",
+  "reference_input": "public/assets/companions/rabbit.png",
+  "input_sha256": {
+    "assets/3d/source/rabbit/sculpt-v003/rabbit-sculpt-v003.blend": "9CB6C1C5B9FD5D8F2C97A5FC4B0B1CBF0FDC753639E423E98F0720823D31D7E6",
+    "public/assets/3d/rabbit/rabbit-sculpt-v003.glb": "315EC6312FF1A7361BD4277801D88661E2B1B4B6B280C589E63EADF0B18A2C26",
+    "public/assets/companions/rabbit.png": "26CD3B4BEFF8FE37488F860C3847BD78B9455102CB3FDF5C36BCBD98AF74F95D",
+    "assets/3d/source/companions/sculpt-v004/build.py": "C6FBCA99D1117722B07933B90795DBFFA37DC22B399ECD6B339EAFF3C063A6BD",
+    "assets/3d/source/companions/sculpt-v004/refinements.py": "6247CEA1AE30B56B6FD3D23DEDEF1DD99BCD8A7B9158AA0576340AA2B8F89BCF",
+    "assets/3d/source/companions/sculpt-v004/export_equipment.py": "5EDB676641BE58BDE353213F6DA4F7F7662B76A08F586D0E7DADA7006AF343CF",
+    "assets/3d/source/companions/sculpt-v001/common.py": "A6DF036A5B3F6FAA3C74740382998D829D45C9E2734D91A285F9369764C21F9E",
+    "assets/3d/source/asterion/sculpt-v002/validate_refinement.py": "8C541F26C2D2546FB142988D10F07EDF51C891D1C81F02065C7B62CE01F78EFD",
+    "assets/3d/source/asterion/sculpt-v003/build_head_study.py": "A3B22323201D30A3BD9459985F8F7741A44545010A84D27CC5912E1C8A85E0F2",
+    "assets/3d/source/asterion/sculpt-v001/build_sculpt.py": "9A81C430E8FD07CE520BBA554C78845A508F22E5FB89E524BF515D8BF8415621",
+    "assets/3d/source/asterion/sculpt-v001/rig_delivery.py": "8758D105E70AB5405F61A48A531154CC591EAC0D82B167788F1D0785A16CDFF0",
+    "assets/3d/source/asterion/sculpt-v004/export_equipment.py": "C805B4740463215AE5CC9D314D14966F2BDF91A00FB82D05054BE0BBB8ED930B",
+    "assets/3d/source/companions/sculpt-v004/equine_lapine.py": "8783AA44FB7987CD3D0E244C2B0B524B17DFF63B8D725F30CE4E3D7B69957016"
+  },
+  "blender": "5.2.1 LTS",
+  "checks": {
+    "original_rest_rig_unchanged": true,
+    "original_constraints_drivers_unchanged": true,
+    "all_original_action_data_unchanged": true,
+    "original_frame_rate_unchanged": true,
+    "authored_eyes_survive_source_reopen": true,
+    "all_source_parts_classified_once": true,
+    "explicit_editable_equipment_groups": true,
+    "meaningful_geometry_refinement": true,
+    "base_clothing_present": true,
+    "two_character_meshes": true,
+    "exact_distinct_components": true,
+    "one_original_shared_skin": true,
+    "nine_original_clips": true,
+    "only_public_extras": true,
+    "skinned_triangle_primitives": true,
+    "under_40_primitives": true,
+    "within_species_triangle_budget": true,
+    "self_contained_no_projection": true,
+    "no_editor_stage": true,
+    "meshopt": true,
+    "within_species_byte_budget": true,
+    "finite_imported_geometry": true,
+    "valid_normalized_known_weights": true,
+    "bounded_importer_triangle_difference": true,
+    "nine_clips_match_historical_import": true,
+    "two_imported_components": true,
+    "imported_equipment_metadata": true,
+    "all_historical_and_builder_inputs_unchanged": true
+  },
+  "components": {
+    "body": {
+      "mesh": 1,
+      "skin": 0,
+      "triangles": 1788746,
+      "primitives": 11
+    },
+    "armor": {
+      "mesh": 0,
+      "skin": 0,
+      "triangles": 59540,
+      "primitives": 11
+    }
+  },
+  "triangles": 1848286,
+  "draw_calls": 22,
+  "materials": 22,
+  "bones": 13,
+  "clips": [
+    "idle",
+    "blink",
+    "happy",
+    "eat",
+    "play",
+    "pet_reaction",
+    "sleep",
+    "wake",
+    "walk"
+  ],
+  "compression_lossless": false,
+  "bytes": 22700696,
+  "geometry": {
+    "vertices": 934726,
+    "triangles": 1848266,
+    "nonfinite_vertices": 0,
+    "nonfinite_transforms": 0,
+    "unweighted_vertices": 0,
+    "invalid_weights": 0,
+    "unknown_weights": 0,
+    "over_four_weights": 0,
+    "max_influences": 2,
+    "bounds_min": [
+      -1.1992186307907104,
+      -1.6875001192092896,
+      -0.01318345032632351
+    ],
+    "bounds_max": [
+      1.22265625,
+      2.046875,
+      4.828125
+    ],
+    "span": [
+      2.4218748807907104,
+      3.7343751192092896,
+      4.8413084503263235
+    ]
+  },
+  "triangle_count_evidence": {
+    "authored": 1848286,
+    "imported": 1848266,
+    "exact_equal": false,
+    "triangle_loss": 20,
+    "relative_loss": 1.0820836169294146e-05,
+    "maximum_allowed_loss": 36,
+    "relative_tolerance": 2e-05,
+    "passed": true,
+    "limit": "Count difference only; individual omitted triangle degeneracy is not proven by this check."
+  },
+  "changes": {
+    "notes": "Outward swept guarded ears and fuller haunch; rebuilt overlapping cream cheek cushions and swept cotton-tail plume. Coherently tapered eyes/socket/lids and lavender-blue iris palette. Original rig, action curves and detachable outfit retained.",
+    "edited_objects": [
+      {
+        "name": "AST_liora_v2_head",
+        "operation": "Coherent tapered orbital field across eye, lash, movable lid and supporting skull",
+        "vertices": 139245,
+        "max_displacement": 0.143628459883751
+      },
+      {
+        "name": "AST_liora_v2_eye_R_sculpted_orbital_skin",
+        "operation": "Coherent tapered orbital field across eye, lash, movable lid and supporting skull",
+        "vertices": 2080,
+        "max_displacement": 0.043718831746415575
+      },
+      {
+        "name": "AST_liora_v2_eye_R",
+        "operation": "Coherent tapered orbital field across eye, lash, movable lid and supporting skull",
+        "vertices": 10400,
+        "max_displacement": 0.03326472333808668
+      },
+      {
+        "name": "AST_liora_v2_eye_R_tapered_upper_lid",
+        "operation": "Coherent tapered orbital field across eye, lash, movable lid and supporting skull",
+        "vertices": 1780,
+        "max_displacement": 0.039337874272485474
+      },
+      {
+        "name": "AST_liora_v2_eye_R_lower_lid",
+        "operation": "Coherent tapered orbital field across eye, lash, movable lid and supporting skull",
+        "vertices": 1780,
+        "max_displacement": 0.03535669422276454
+      },
+      {
+        "name": "AST_liora_v2_eye_R_lash_wing",
+        "operation": "Coherent tapered orbital field across eye, lash, movable lid and supporting skull",
+        "vertices": 660,
+        "max_displacement": 0.027268837532333712
+      },
+      {
+        "name": "AST_liora_v2_eye_R_catchlight",
+        "operation": "Coherent tapered orbital field across eye, lash, movable lid and supporting skull",
+        "vertices": 385,
+        "max_displacement": 0.01113365668389761
+      },
+      {
+        "name": "AST_liora_v2_eye_R_pinlight",
+        "operation": "Coherent tapered orbital field across eye, lash, movable lid and supporting skull",
+        "vertices": 385,
+        "max_displacement": 0.01084915867068461
+      },
+      {
+        "name": "AST_liora_v2_eye_R_closed_lid",
+        "operation": "Coherent tapered orbital field across eye, lash, movable lid and supporting skull",
+        "vertices": 10400,
+        "max_displacement": 0.036954546356235386
+      },
+      {
+        "name": "AST_liora_v2_eye_R_closed_lash",
+        "operation": "Coherent tapered orbital field across eye, lash, movable lid and supporting skull",
+        "vertices": 1040,
+        "max_displacement": 0.019082024875102802
+      },
+      {
+        "name": "AST_liora_v2_eye_L_sculpted_orbital_skin",
+        "operation": "Coherent tapered orbital field across eye, lash, movable lid and supporting skull",
+        "vertices": 2080,
+        "max_displacement": 0.04371874793901685
+      },
+      {
+        "name": "AST_liora_v2_eye_L",
+        "operation": "Coherent tapered orbital field across eye, lash, movable lid and supporting skull",
+        "vertices": 10400,
+        "max_displacement": 0.03326472333808668
+      },
+      {
+        "name": "AST_liora_v2_eye_L_tapered_upper_lid",
+        "operation": "Coherent tapered orbital field across eye, lash, movable lid and supporting skull",
+        "vertices": 1780,
+        "max_displacement": 0.03933786896591075
+      },
+      {
+        "name": "AST_liora_v2_eye_L_lower_lid",
+        "operation": "Coherent tapered orbital field across eye, lash, movable lid and supporting skull",
+        "vertices": 1780,
+        "max_displacement": 0.035356684476681534
+      },
+      {
+        "name": "AST_liora_v2_eye_L_lash_wing",
+        "operation": "Coherent tapered orbital field across eye, lash, movable lid and supporting skull",
+        "vertices": 660,
+        "max_displacement": 0.027268834639875072
+      },
+      {
+        "name": "AST_liora_v2_eye_L_catchlight",
+        "operation": "Coherent tapered orbital field across eye, lash, movable lid and supporting skull",
+        "vertices": 385,
+        "max_displacement": 0.02128821666068607
+      },
+      {
+        "name": "AST_liora_v2_eye_L_pinlight",
+        "operation": "Coherent tapered orbital field across eye, lash, movable lid and supporting skull",
+        "vertices": 385,
+        "max_displacement": 0.019521036293898758
+      },
+      {
+        "name": "AST_liora_v2_eye_L_closed_lid",
+        "operation": "Coherent tapered orbital field across eye, lash, movable lid and supporting skull",
+        "vertices": 10400,
+        "max_displacement": 0.036954546356235386
+      },
+      {
+        "name": "AST_liora_v2_eye_L_closed_lash",
+        "operation": "Coherent tapered orbital field across eye, lash, movable lid and supporting skull",
+        "vertices": 1040,
+        "max_displacement": 0.01908204746254484
+      },
+      {
+        "name": "AST_liora_v2_body",
+        "operation": "Fuller round rabbit haunch; local field includes fitted outfit at that surface",
+        "vertices": 184010,
+        "max_displacement": 0.09499999979420459
+      },
+      {
+        "name": "AST_liora_v2_cupped_ear_R",
+        "operation": "Outward-swept ear silhouette, including its detachable guard and ear-base brush",
+        "vertices": 7954,
+        "max_displacement": 0.34365680554879174
+      },
+      {
+        "name": "AST_liora_v2_lavender_ear_bowl_R",
+        "operation": "Outward-swept ear silhouette, including its detachable guard and ear-base brush",
+        "vertices": 7178,
+        "max_displacement": 0.33368586338774575
+      },
+      {
+        "name": "AST_liora_v2_cupped_ear_L",
+        "operation": "Outward-swept ear silhouette, including its detachable guard and ear-base brush",
+        "vertices": 7954,
+        "max_displacement": 0.3369604707319885
+      },
+      {
+        "name": "AST_liora_v2_lavender_ear_bowl_L",
+        "operation": "Outward-swept ear silhouette, including its detachable guard and ear-base brush",
+        "vertices": 7178,
+        "max_displacement": 0.3169416144995949
+      },
+      {
+        "name": "AST_Liora_fur_inner_ear_brush_R_0",
+        "operation": "Outward-swept ear silhouette, including its detachable guard and ear-base brush",
+        "vertices": 1378,
+        "max_displacement": 0.03641683413537567
+      },
+      {
+        "name": "AST_Liora_fur_inner_ear_brush_R_1",
+        "operation": "Outward-swept ear silhouette, including its detachable guard and ear-base brush",
+        "vertices": 1378,
+        "max_displacement": 0.04348871815847707
+      },
+      {
+        "name": "AST_Liora_fur_inner_ear_brush_R_2",
+        "operation": "Outward-swept ear silhouette, including its detachable guard and ear-base brush",
+        "vertices": 1378,
+        "max_displacement": 0.05081757493634572
+      },
+      {
+        "name": "AST_Liora_fur_inner_ear_brush_L_0",
+        "operation": "Outward-swept ear silhouette, including its detachable guard and ear-base brush",
+        "vertices": 1378,
+        "max_displacement": 0.03640495471612804
+      },
+      {
+        "name": "AST_Liora_fur_inner_ear_brush_L_1",
+        "operation": "Outward-swept ear silhouette, including its detachable guard and ear-base brush",
+        "vertices": 1378,
+        "max_displacement": 0.04344918997366782
+      },
+      {
+        "name": "AST_Liora_fur_inner_ear_brush_L_2",
+        "operation": "Outward-swept ear silhouette, including its detachable guard and ear-base brush",
+        "vertices": 1378,
+        "max_displacement": 0.05074256503287915
+      },
+      {
+        "name": "AST_Liora_fur_short_coat_R_00",
+        "operation": "Fuller round rabbit haunch; local field includes fitted outfit at that surface",
+        "vertices": 794,
+        "max_displacement": 3.700999107014713e-06
+      },
+      {
+        "name": "AST_Liora_fur_short_coat_R_01",
+        "operation": "Fuller round rabbit haunch; local field includes fitted outfit at that surface",
+        "vertices": 794,
+        "max_displacement": 0.014297884985788656
+      },
+      {
+        "name": "AST_Liora_fur_short_coat_R_02",
+        "operation": "Fuller round rabbit haunch; local field includes fitted outfit at that surface",
+        "vertices": 794,
+        "max_displacement": 0.07374481656723741
+      },
+      {
+        "name": "AST_Liora_fur_short_coat_R_03",
+        "operation": "Fuller round rabbit haunch; local field includes fitted outfit at that surface",
+        "vertices": 794,
+        "max_displacement": 0.08666679451901504
+      },
+      {
+        "name": "AST_Liora_fur_short_coat_R_04",
+        "operation": "Fuller round rabbit haunch; local field includes fitted outfit at that surface",
+        "vertices": 794,
+        "max_displacement": 0.09100204021363856
+      },
+      {
+        "name": "AST_Liora_fur_short_coat_R_05",
+        "operation": "Fuller round rabbit haunch; local field includes fitted outfit at that surface",
+        "vertices": 794,
+        "max_displacement": 0.09490002257434527
+      },
+      {
+        "name": "AST_Liora_fur_short_coat_R_06",
+        "operation": "Fuller round rabbit haunch; local field includes fitted outfit at that surface",
+        "vertices": 794,
+        "max_displacement": 0.08920949295882907
+      },
+      {
+        "name": "AST_Liora_fur_short_coat_L_00",
+        "operation": "Fuller round rabbit haunch; local field includes fitted outfit at that surface",
+        "vertices": 794,
+        "max_displacement": 3.6484697615302153e-06
+      },
+      {
+        "name": "AST_Liora_fur_short_coat_L_01",
+        "operation": "Fuller round rabbit haunch; local field includes fitted outfit at that surface",
+        "vertices": 794,
+        "max_displacement": 0.014182543397917469
+      },
+      {
+        "name": "AST_Liora_fur_short_coat_L_02",
+        "operation": "Fuller round rabbit haunch; local field includes fitted outfit at that surface",
+        "vertices": 794,
+        "max_displacement": 0.07374656333682761
+      },
+      {
+        "name": "AST_Liora_fur_short_coat_L_03",
+        "operation": "Fuller round rabbit haunch; local field includes fitted outfit at that surface",
+        "vertices": 794,
+        "max_displacement": 0.0866671801892609
+      },
+      {
+        "name": "AST_Liora_fur_short_coat_L_04",
+        "operation": "Fuller round rabbit haunch; local field includes fitted outfit at that surface",
+        "vertices": 794,
+        "max_displacement": 0.09097375937623653
+      },
+      {
+        "name": "AST_Liora_fur_short_coat_L_05",
+        "operation": "Fuller round rabbit haunch; local field includes fitted outfit at that surface",
+        "vertices": 794,
+        "max_displacement": 0.0949001920821021
+      },
+      {
+        "name": "AST_Liora_fur_short_coat_L_06",
+        "operation": "Fuller round rabbit haunch; local field includes fitted outfit at that surface",
+        "vertices": 794,
+        "max_displacement": 0.08926922677884286
+      },
+      {
+        "name": "AST_liora_v2_toe_crease_H-1-0.075",
+        "operation": "Fuller round rabbit haunch; local field includes fitted outfit at that surface",
+        "vertices": 300,
+        "max_displacement": 0.04825825024220387
+      },
+      {
+        "name": "AST_liora_v2_toe_crease_H-10.075",
+        "operation": "Fuller round rabbit haunch; local field includes fitted outfit at that surface",
+        "vertices": 300,
+        "max_displacement": 0.020526680925276042
+      },
+      {
+        "name": "AST_liora_v2_toe_crease_H1-0.075",
+        "operation": "Fuller round rabbit haunch; local field includes fitted outfit at that surface",
+        "vertices": 300,
+        "max_displacement": 0.020566177817543385
+      },
+      {
+        "name": "AST_liora_v2_toe_crease_H10.075",
+        "operation": "Fuller round rabbit haunch; local field includes fitted outfit at that surface",
+        "vertices": 300,
+        "max_displacement": 0.04823948718178839
+      },
+      {
+        "name": "AST_liora_v2_rose_ear_guard_R-1",
+        "operation": "Outward-swept ear silhouette, including its detachable guard and ear-base brush",
+        "vertices": 970,
+        "max_displacement": 0.34365680554879174
+      },
+      {
+        "name": "AST_liora_v2_ear_guard_blade_R0",
+        "operation": "Outward-swept ear silhouette, including its detachable guard and ear-base brush",
+        "vertices": 740,
+        "max_displacement": 0.06747925226740338
+      },
+      {
+        "name": "AST_liora_v2_ear_guard_blade_R1",
+        "operation": "Outward-swept ear silhouette, including its detachable guard and ear-base brush",
+        "vertices": 740,
+        "max_displacement": 0.09742532746656914
+      },
+      {
+        "name": "AST_liora_v2_ear_guard_blade_R2",
+        "operation": "Outward-swept ear silhouette, including its detachable guard and ear-base brush",
+        "vertices": 740,
+        "max_displacement": 0.13041914012436664
+      },
+      {
+        "name": "AST_liora_v2_rose_ear_guard_R1",
+        "operation": "Outward-swept ear silhouette, including its detachable guard and ear-base brush",
+        "vertices": 970,
+        "max_displacement": 0.34365680554879174
+      },
+      {
+        "name": "AST_liora_v2_rose_ear_guard_L-1",
+        "operation": "Outward-swept ear silhouette, including its detachable guard and ear-base brush",
+        "vertices": 970,
+        "max_displacement": 0.33369169491766004
+      },
+      {
+        "name": "AST_liora_v2_rose_ear_guard_L1",
+        "operation": "Outward-swept ear silhouette, including its detachable guard and ear-base brush",
+        "vertices": 970,
+        "max_displacement": 0.33115876408612005
+      },
+      {
+        "name": "AST_liora_v2_ear_guard_blade_L0",
+        "operation": "Outward-swept ear silhouette, including its detachable guard and ear-base brush",
+        "vertices": 740,
+        "max_displacement": 0.06349329359450193
+      },
+      {
+        "name": "AST_liora_v2_ear_guard_blade_L1",
+        "operation": "Outward-swept ear silhouette, including its detachable guard and ear-base brush",
+        "vertices": 740,
+        "max_displacement": 0.09183487273120898
+      },
+      {
+        "name": "AST_liora_v2_ear_guard_blade_L2",
+        "operation": "Outward-swept ear silhouette, including its detachable guard and ear-base brush",
+        "vertices": 740,
+        "max_displacement": 0.12312208792737911
+      },
+      {
+        "name": "AST_liora_v2_curved_lavender_saddle_L",
+        "operation": "Fuller round rabbit haunch; local field includes fitted outfit at that surface",
+        "vertices": 3746,
+        "max_displacement": 0.0648721990931892
+      },
+      {
+        "name": "AST_liora_v2_haunch_rose_star_L",
+        "operation": "Fuller round rabbit haunch; local field includes fitted outfit at that surface",
+        "vertices": 10,
+        "max_displacement": 0.08463368177291541
+      },
+      {
+        "name": "AST_liora_v2_curved_lavender_saddle_R",
+        "operation": "Fuller round rabbit haunch; local field includes fitted outfit at that surface",
+        "vertices": 3746,
+        "max_displacement": 0.06487525336424416
+      },
+      {
+        "name": "AST_liora_v2_haunch_rose_star_R",
+        "operation": "Fuller round rabbit haunch; local field includes fitted outfit at that surface",
+        "vertices": 10,
+        "max_displacement": 0.08464835898115619
+      },
+      {
+        "name": "AST_liora_v2_rose_body_girth",
+        "operation": "Fuller round rabbit haunch; local field includes fitted outfit at that surface",
+        "vertices": 864,
+        "max_displacement": 0.00588197431120796
+      }
+    ],
+    "added_base_clothing": [],
+    "replaced_source_objects": [
+      "AST_Liora_fur_cheek_R_00",
+      "AST_Liora_fur_cheek_R_soft_split_00_0",
+      "AST_Liora_fur_cheek_R_soft_split_00_1",
+      "AST_Liora_fur_cheek_R_01",
+      "AST_Liora_fur_cheek_R_soft_split_01_0",
+      "AST_Liora_fur_cheek_R_soft_split_01_1",
+      "AST_Liora_fur_cheek_R_02",
+      "AST_Liora_fur_cheek_R_soft_split_02_0",
+      "AST_Liora_fur_cheek_R_soft_split_02_1",
+      "AST_Liora_fur_cheek_R_03",
+      "AST_Liora_fur_cheek_R_soft_split_03_0",
+      "AST_Liora_fur_cheek_R_soft_split_03_1",
+      "AST_Liora_fur_cheek_R_04",
+      "AST_Liora_fur_cheek_R_soft_split_04_0",
+      "AST_Liora_fur_cheek_R_soft_split_04_1",
+      "AST_Liora_fur_cheek_L_00",
+      "AST_Liora_fur_cheek_L_soft_split_00_0",
+      "AST_Liora_fur_cheek_L_soft_split_00_1",
+      "AST_Liora_fur_cheek_L_01",
+      "AST_Liora_fur_cheek_L_soft_split_01_0",
+      "AST_Liora_fur_cheek_L_soft_split_01_1",
+      "AST_Liora_fur_cheek_L_02",
+      "AST_Liora_fur_cheek_L_soft_split_02_0",
+      "AST_Liora_fur_cheek_L_soft_split_02_1",
+      "AST_Liora_fur_cheek_L_03",
+      "AST_Liora_fur_cheek_L_soft_split_03_0",
+      "AST_Liora_fur_cheek_L_soft_split_03_1",
+      "AST_Liora_fur_cheek_L_04",
+      "AST_Liora_fur_cheek_L_soft_split_04_0",
+      "AST_Liora_fur_cheek_L_soft_split_04_1",
+      "AST_Liora_fur_forehead_00",
+      "AST_Liora_fur_forehead_01",
+      "AST_Liora_fur_forehead_02",
+      "AST_Liora_fur_forehead_03",
+      "AST_Liora_fur_forehead_04",
+      "AST_Liora_fur_cotton_spiral_wisp_00",
+      "AST_Liora_fur_cotton_spiral_wisp_01",
+      "AST_Liora_fur_cotton_spiral_wisp_02",
+      "AST_Liora_fur_cotton_spiral_wisp_03",
+      "AST_Liora_fur_cotton_spiral_wisp_04",
+      "AST_Liora_fur_cotton_spiral_wisp_05",
+      "AST_Liora_fur_cotton_spiral_wisp_06",
+      "AST_Liora_fur_cotton_spiral_wisp_07",
+      "AST_Liora_fur_cotton_spiral_wisp_08",
+      "AST_Liora_fur_cotton_spiral_wisp_09",
+      "AST_Liora_fur_cotton_spiral_wisp_10",
+      "AST_Liora_fur_cotton_spiral_wisp_11",
+      "AST_Liora_fur_cotton_spiral_wisp_12",
+      "AST_Liora_fur_cotton_spiral_wisp_13",
+      "AST_Liora_fur_cotton_spiral_wisp_14",
+      "AST_Liora_fur_cotton_spiral_wisp_15",
+      "AST_Liora_fur_cotton_spiral_wisp_16",
+      "AST_Liora_fur_cotton_spiral_wisp_17",
+      "AST_Liora_fur_cotton_spiral_wisp_18",
+      "AST_Liora_fur_cotton_spiral_wisp_19",
+      "AST_Liora_fur_cotton_spiral_wisp_20",
+      "AST_Liora_fur_cotton_spiral_wisp_21",
+      "AST_Liora_fur_cotton_spiral_wisp_22",
+      "AST_Liora_fur_cotton_spiral_wisp_23",
+      "AST_Liora_fur_cotton_spiral_wisp_24",
+      "AST_Liora_fur_cotton_spiral_wisp_25",
+      "AST_Liora_fur_cotton_spiral_wisp_26",
+      "AST_Liora_fur_cotton_spiral_wisp_27",
+      "AST_Liora_fur_cotton_spiral_wisp_28",
+      "AST_Liora_fur_cotton_spiral_wisp_29",
+      "AST_Liora_fur_cotton_spiral_wisp_30",
+      "AST_Liora_fur_cotton_spiral_wisp_31",
+      "AST_Liora_fur_cotton_spiral_wisp_32",
+      "AST_Liora_fur_cotton_spiral_wisp_33",
+      "AST_Liora_fur_cotton_spiral_wisp_34",
+      "AST_Liora_fur_cotton_spiral_wisp_35",
+      "AST_Liora_fur_cotton_spiral_wisp_36",
+      "AST_Liora_fur_cotton_spiral_wisp_37",
+      "AST_Liora_fur_cotton_spiral_wisp_38",
+      "AST_Liora_fur_cotton_spiral_wisp_39",
+      "AST_Liora_fur_cotton_spiral_wisp_40",
+      "AST_Liora_fur_cotton_spiral_wisp_41",
+      "AST_Liora_fur_cotton_spiral_wisp_42",
+      "AST_Liora_fur_cotton_spiral_wisp_43",
+      "AST_Liora_fur_cotton_spiral_wisp_44",
+      "AST_Liora_fur_cotton_spiral_wisp_45",
+      "AST_Liora_fur_cotton_spiral_wisp_46",
+      "AST_Liora_fur_cotton_spiral_wisp_47",
+      "AST_Liora_fur_cotton_upper_flutter_L",
+      "AST_Liora_fur_cotton_upper_flutter_R",
+      "AST_Liora_fur_cotton_tail_core"
+    ],
+    "new_sculpture_objects": [
+      "AST_Liora_v4_continuous_cheek_fluff_L",
+      "AST_Liora_v4_crown_sweep_L",
+      "AST_Liora_v4_continuous_cheek_fluff_R",
+      "AST_Liora_v4_crown_sweep_R",
+      "AST_Liora_v4_continuous_cotton_plush"
+    ],
+    "repainted_head_surfaces": 1,
+    "ocular_change": "Coherent eye, eyelid, lash and skull field; original bone centers and actions retained.",
+    "likeness_limit": "Single-view reference does not establish hidden geometry. Authored closer likeness, not exact 1:1 acceptance.",
+    "equipment_source_objects": [
+      "AST_liora_v2_rose_ear_guard_R-1",
+      "AST_liora_v2_ear_guard_blade_R0",
+      "AST_liora_v2_ear_guard_blade_R1",
+      "AST_liora_v2_ear_guard_blade_R2",
+      "AST_liora_v2_rose_ear_guard_R1",
+      "AST_liora_v2_rose_ear_guard_L-1",
+      "AST_liora_v2_rose_ear_guard_L1",
+      "AST_liora_v2_ear_guard_blade_L0",
+      "AST_liora_v2_ear_guard_blade_L1",
+      "AST_liora_v2_ear_guard_blade_L2",
+      "AST_liora_v2_open_forehead_diamond",
+      "AST_liora_v2_forehead_upper_spark",
+      "AST_liora_v2_delicate_temple_star_L",
+      "AST_liora_v2_delicate_temple_star_R",
+      "AST_liora_v2_fitted_lavender_shoulder_L",
+      "AST_liora_v2_curved_lavender_saddle_L",
+      "AST_liora_v2_shoulder_rose_spark_L",
+      "AST_liora_v2_shoulder_lilac_spark_L",
+      "AST_liora_v2_haunch_rose_star_L",
+      "AST_liora_v2_fitted_lavender_shoulder_R",
+      "AST_liora_v2_curved_lavender_saddle_R",
+      "AST_liora_v2_shoulder_rose_spark_R",
+      "AST_liora_v2_shoulder_lilac_spark_R",
+      "AST_liora_v2_haunch_rose_star_R",
+      "AST_liora_v2_rose_body_girth",
+      "AST_liora_v2_long_breast_pendant_rose_bezel",
+      "AST_liora_v2_long_breast_pendant_lilac_crystal",
+      "AST_liora_v2_upper_diamond_connector_rose_bezel",
+      "AST_liora_v2_upper_diamond_connector_lilac_crystal",
+      "AST_liora_v2_continuous_rose_neck_harness",
+      "AST_liora_v2_double_angular_fore_cuff_L_0",
+      "AST_liora_v2_double_angular_fore_cuff_L_1",
+      "AST_liora_v2_open_fore_cuff_diamond_L",
+      "AST_liora_v2_double_angular_fore_cuff_R_0",
+      "AST_liora_v2_double_angular_fore_cuff_R_1",
+      "AST_liora_v2_open_fore_cuff_diamond_R"
+    ],
+    "body_source_objects": [
+      "AST_liora_v2_body",
+      "AST_liora_v2_head",
+      "AST_liora_v2_cupped_ear_R",
+      "AST_liora_v2_lavender_ear_bowl_R",
+      "AST_liora_v2_cupped_ear_L",
+      "AST_liora_v2_lavender_ear_bowl_L",
+      "AST_Liora_fur_jaw_R_00",
+      "AST_Liora_fur_jaw_R_01",
+      "AST_Liora_fur_jaw_L_00",
+      "AST_Liora_fur_jaw_L_01",
+      "AST_Liora_fur_inner_ear_brush_R_0",
+      "AST_Liora_fur_inner_ear_brush_R_1",
+      "AST_Liora_fur_inner_ear_brush_R_2",
+      "AST_Liora_fur_inner_ear_brush_L_0",
+      "AST_Liora_fur_inner_ear_brush_L_1",
+      "AST_Liora_fur_inner_ear_brush_L_2",
+      "AST_Liora_fur_bib_0_0",
+      "AST_Liora_fur_bib_0_1",
+      "AST_Liora_fur_bib_0_2",
+      "AST_Liora_fur_bib_0_3",
+      "AST_Liora_fur_bib_0_4",
+      "AST_Liora_fur_bib_1_0",
+      "AST_Liora_fur_bib_1_1",
+      "AST_Liora_fur_bib_1_2",
+      "AST_Liora_fur_bib_1_3",
+      "AST_Liora_fur_short_coat_R_00",
+      "AST_Liora_fur_short_coat_R_01",
+      "AST_Liora_fur_short_coat_R_02",
+      "AST_Liora_fur_short_coat_R_03",
+      "AST_Liora_fur_short_coat_R_04",
+      "AST_Liora_fur_short_coat_R_05",
+      "AST_Liora_fur_short_coat_R_06",
+      "AST_Liora_fur_short_coat_R_07",
+      "AST_Liora_fur_short_coat_L_00",
+      "AST_Liora_fur_short_coat_L_01",
+      "AST_Liora_fur_short_coat_L_02",
+      "AST_Liora_fur_short_coat_L_03",
+      "AST_Liora_fur_short_coat_L_04",
+      "AST_Liora_fur_short_coat_L_05",
+      "AST_Liora_fur_short_coat_L_06",
+      "AST_Liora_fur_short_coat_L_07",
+      "AST_Liora_v4_continuous_cotton_plush",
+      "AST_liora_v2_eye_R_sculpted_orbital_skin",
+      "AST_liora_v2_eye_R",
+      "AST_liora_v2_eye_R_tapered_upper_lid",
+      "AST_liora_v2_eye_R_lower_lid",
+      "AST_liora_v2_eye_R_lash_wing",
+      "AST_liora_v2_eye_R_catchlight",
+      "AST_liora_v2_eye_R_pinlight",
+      "AST_liora_v2_eye_R_closed_lid",
+      "AST_liora_v2_eye_R_closed_lash",
+      "AST_liora_v2_eye_L_sculpted_orbital_skin",
+      "AST_liora_v2_eye_L",
+      "AST_liora_v2_eye_L_tapered_upper_lid",
+      "AST_liora_v2_eye_L_lower_lid",
+      "AST_liora_v2_eye_L_lash_wing",
+      "AST_liora_v2_eye_L_catchlight",
+      "AST_liora_v2_eye_L_pinlight",
+      "AST_liora_v2_eye_L_closed_lid",
+      "AST_liora_v2_eye_L_closed_lash",
+      "AST_liora_v2_soft_rose_nose",
+      "AST_liora_v2_philtrum",
+      "AST_liora_v2_gentle_smile_-1",
+      "AST_liora_v2_whisker_pore_-1_0",
+      "AST_liora_v2_whisker_pore_-1_1",
+      "AST_liora_v2_whisker_pore_-1_2",
+      "AST_liora_v2_gentle_smile_1",
+      "AST_liora_v2_whisker_pore_1_0",
+      "AST_liora_v2_whisker_pore_1_1",
+      "AST_liora_v2_whisker_pore_1_2",
+      "AST_liora_v2_toe_crease_F-1-0.075",
+      "AST_liora_v2_toe_crease_F-10.075",
+      "AST_liora_v2_toe_crease_H-1-0.075",
+      "AST_liora_v2_toe_crease_H-10.075",
+      "AST_liora_v2_toe_crease_F1-0.075",
+      "AST_liora_v2_toe_crease_F10.075",
+      "AST_liora_v2_toe_crease_H1-0.075",
+      "AST_liora_v2_toe_crease_H10.075",
+      "AST_Liora_v4_continuous_cheek_fluff_L",
+      "AST_Liora_v4_crown_sweep_L",
+      "AST_Liora_v4_continuous_cheek_fluff_R",
+      "AST_Liora_v4_crown_sweep_R"
+    ]
+  },
+  "original_rig": {
+    "rest_sha256": "82C3E8DAB8AB4C2CC58195DFA445C8E8CB89B82D1A3731E4D366CE9AC47A8A3A",
+    "behavior_sha256": "37E2CB7157322B1B022EDA60C976DC4F934B2866BB43D2B7C6645C19C4A16C75",
+    "bones": 13,
+    "fps": 30,
+    "fps_base": 1.0,
+    "actions": {
+      "blink": {
+        "sha256": "AB6E6DF4DD4B43A8D6BE3569F9AF4B77E456818F40BBA69033EC0FB2C7489846",
+        "curve_count": 117,
+        "key_count": 1170,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          19.0
+        ]
+      },
+      "eat": {
+        "sha256": "E4508D090AB857715E8D1611949F970A7333A0EE55013F739C17C0476B050F36",
+        "curve_count": 117,
+        "key_count": 5382,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          91.0
+        ]
+      },
+      "happy": {
+        "sha256": "13CF20C4C6A146B2F88DA6BD0CFD14F6EC1F767D28FFBF9DF3E6F9FBF033A213",
+        "curve_count": 117,
+        "key_count": 3627,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          61.0
+        ]
+      },
+      "idle": {
+        "sha256": "A240D6BBF1444FFA54AFEB80ABABFA3AA14B739B41F52289393FA3067D2DFF13",
+        "curve_count": 117,
+        "key_count": 7137,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          121.0
+        ]
+      },
+      "pet_reaction": {
+        "sha256": "4E899373AA1FC31B0A07364991110E95D17E4158EBE1B83BB00BBC78A532FC21",
+        "curve_count": 117,
+        "key_count": 4563,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          76.0
+        ]
+      },
+      "play": {
+        "sha256": "D91B39E250AA0B5FC2F3B78EFC5E170E23E9066C598FA99B703DF025CE1BDAE1",
+        "curve_count": 117,
+        "key_count": 4797,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          81.0
+        ]
+      },
+      "sleep": {
+        "sha256": "B1DCFD518CB501C0C69249317CE2EBDDDDE28761FCFE26755AFF712E776E806B",
+        "curve_count": 117,
+        "key_count": 7137,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          121.0
+        ]
+      },
+      "wake": {
+        "sha256": "621ECBBD42886481500335BF854A02F69C6E56EEDC8A8D03B7DD787FE322C62A",
+        "curve_count": 117,
+        "key_count": 3627,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          61.0
+        ]
+      },
+      "walk": {
+        "sha256": "E70843FEAC80B2BC471FCDA0E3783729CB28E40C060C6097CD5664C56396E7D3",
+        "curve_count": 117,
+        "key_count": 2925,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          49.0
+        ]
+      }
+    }
+  },
+  "candidate_rig": {
+    "rest_sha256": "82C3E8DAB8AB4C2CC58195DFA445C8E8CB89B82D1A3731E4D366CE9AC47A8A3A",
+    "behavior_sha256": "37E2CB7157322B1B022EDA60C976DC4F934B2866BB43D2B7C6645C19C4A16C75",
+    "bones": 13,
+    "fps": 30,
+    "fps_base": 1.0,
+    "actions": {
+      "blink": {
+        "sha256": "AB6E6DF4DD4B43A8D6BE3569F9AF4B77E456818F40BBA69033EC0FB2C7489846",
+        "curve_count": 117,
+        "key_count": 1170,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          19.0
+        ]
+      },
+      "eat": {
+        "sha256": "E4508D090AB857715E8D1611949F970A7333A0EE55013F739C17C0476B050F36",
+        "curve_count": 117,
+        "key_count": 5382,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          91.0
+        ]
+      },
+      "happy": {
+        "sha256": "13CF20C4C6A146B2F88DA6BD0CFD14F6EC1F767D28FFBF9DF3E6F9FBF033A213",
+        "curve_count": 117,
+        "key_count": 3627,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          61.0
+        ]
+      },
+      "idle": {
+        "sha256": "A240D6BBF1444FFA54AFEB80ABABFA3AA14B739B41F52289393FA3067D2DFF13",
+        "curve_count": 117,
+        "key_count": 7137,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          121.0
+        ]
+      },
+      "pet_reaction": {
+        "sha256": "4E899373AA1FC31B0A07364991110E95D17E4158EBE1B83BB00BBC78A532FC21",
+        "curve_count": 117,
+        "key_count": 4563,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          76.0
+        ]
+      },
+      "play": {
+        "sha256": "D91B39E250AA0B5FC2F3B78EFC5E170E23E9066C598FA99B703DF025CE1BDAE1",
+        "curve_count": 117,
+        "key_count": 4797,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          81.0
+        ]
+      },
+      "sleep": {
+        "sha256": "B1DCFD518CB501C0C69249317CE2EBDDDDE28761FCFE26755AFF712E776E806B",
+        "curve_count": 117,
+        "key_count": 7137,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          121.0
+        ]
+      },
+      "wake": {
+        "sha256": "621ECBBD42886481500335BF854A02F69C6E56EEDC8A8D03B7DD787FE322C62A",
+        "curve_count": 117,
+        "key_count": 3627,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          61.0
+        ]
+      },
+      "walk": {
+        "sha256": "E70843FEAC80B2BC471FCDA0E3783729CB28E40C060C6097CD5664C56396E7D3",
+        "curve_count": 117,
+        "key_count": 2925,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          49.0
+        ]
+      }
+    }
+  },
+  "motion_comparison": {
+    "idle": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "blink": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "happy": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "eat": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "play": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "pet_reaction": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "sleep": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "wake": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "walk": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    }
+  },
+  "source_views": {
+    "hero": {
+      "file": "assets/3d/reference/rabbit/sculpt-v004/source/rabbit-hero.png",
+      "sha256": "943C096C3373A17CE6ABB2C3277E60BDDA6EF21E74A2081C5FD4945884E251E7"
+    },
+    "front": {
+      "file": "assets/3d/reference/rabbit/sculpt-v004/source/rabbit-front.png",
+      "sha256": "BFEF92638EEDB04E73F56410218FE9C152CDE916C52DC4858F15511DFAD670FA"
+    },
+    "side": {
+      "file": "assets/3d/reference/rabbit/sculpt-v004/source/rabbit-side.png",
+      "sha256": "1475C333359DBB27A5D2B1D31A5A47862E599AD35C91A2AA91314D00B4397593"
+    },
+    "rear": {
+      "file": "assets/3d/reference/rabbit/sculpt-v004/source/rabbit-rear.png",
+      "sha256": "5F087B5065DF7EC92DCE3D18B28B6FF44D89B2FEA387C39838EBE81BAEFB13BC"
+    },
+    "body-hero": {
+      "file": "assets/3d/reference/rabbit/sculpt-v004/source/rabbit-body-hero.png",
+      "sha256": "1442682EC1BAD6144931AF1C873A833429D1F051F8D515C6DA96DC0FC013C45C"
+    },
+    "body-side": {
+      "file": "assets/3d/reference/rabbit/sculpt-v004/source/rabbit-body-side.png",
+      "sha256": "E06E8615D718C15F3F85E6877BF70CF03837E6A234BFA19D68E489AB5CF79746"
+    }
+  },
+  "import_views": {
+    "hero": {
+      "file": "assets/3d/reference/rabbit/sculpt-v004/import/rabbit-hero.png",
+      "sha256": "22C1E00157389FBFEA2ABA06F75E44A9EF152687A7B90EB52C46E84FB177BAAD"
+    },
+    "rear": {
+      "file": "assets/3d/reference/rabbit/sculpt-v004/import/rabbit-rear.png",
+      "sha256": "783D4C9F2A075D9E0F7CE314B043193AD4F0C9D604FA5A54148AED091BD14795"
+    },
+    "body-hero": {
+      "file": "assets/3d/reference/rabbit/sculpt-v004/import/rabbit-body-hero.png",
+      "sha256": "60B639ED00682AEA8B97B1069E7F8FC2BDACB85757F9B37F9B03BECDC92C3732"
+    },
+    "blink": {
+      "file": "assets/3d/reference/rabbit/sculpt-v004/import/rabbit-blink.png",
+      "sha256": "8557CB47CE5A9270066AC62944A7B5CB2D6866AA929B5E0465B8DCD039E448CE"
+    }
+  },
+  "hair_evidence": null,
+  "passed": true,
+  "human_likeness_accepted": false,
+  "mobile_performance_accepted": false,
+  "paid_provider_used": false,
+  "projection_used": false,
+  "ocular_geometry_intentionally_refined": true,
+  "package_status": "Local hash-checked Blender delivery; no game-dev canonical receipt.",
+  "animation_limit": "Original source curves, keys, handles, rest rig and drivers compared exactly. Fresh GLBs compared at nine normalized times per clip with 2e-4 skin-matrix tolerance. Not a collision or gait acceptance.",
+  "likeness_limit": "Original approved artwork retained. Primary forms intentionally refined; unseen surfaces inferred. No exact 1:1 or human acceptance claim."
+}

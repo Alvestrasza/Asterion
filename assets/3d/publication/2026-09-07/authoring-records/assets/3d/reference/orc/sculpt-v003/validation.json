@@ -1,0 +1,1100 @@
+{
+  "schema": "asterion-local-modular-companion-v1",
+  "version": "sculpt-v003",
+  "kind": "orc",
+  "name": "Brumo",
+  "source_sha256": "46AA657C4777841F00FBB41C07E8250EDE17D962BBAF1ACC1645D8808E067F2A",
+  "model_sha256": "50E1CF4C5FDC0110A1CDB3177DC01C94CF3F95A1553E7FFE78843433909D392A",
+  "reference_sha256": "55FB8AD6273C92AC99A165B0BC4E6C9C56F86C9780F5D39CAEAD7C138C905B35",
+  "input_sha256": {
+    "assets/3d/source/orc/sculpt-v002/orc-sculpt-v002.blend": "367E8D14E1F1D1AE1F361F61065BF751C94E9432AD323862EC052F12F3EC868A",
+    "public/assets/3d/orc/orc-sculpt-v002.glb": "413DF6B9A5EAAC09CF124F6069E3D0679DCFC5FD38A04E35505C39EE9090A5F1",
+    "public/assets/companions/orc.png": "55FB8AD6273C92AC99A165B0BC4E6C9C56F86C9780F5D39CAEAD7C138C905B35",
+    "assets/3d/source/companions/sculpt-v003/build.py": "D29DC488FAF8CB4CB51C81291A9B21102E74832209991D90B23DEF4DA12D5763",
+    "assets/3d/source/companions/sculpt-v003/refinements.py": "82AE8D392CCCF12EA231BD66A0244BDA073739AA4C0B3103DE7DD8DDDA1FBEBA",
+    "assets/3d/source/companions/sculpt-v003/export_equipment.py": "B12B82828199ED109E2764A69BA10A8036D79B62331FA8082C9EF4BEBFC1FB2D",
+    "assets/3d/source/companions/sculpt-v001/common.py": "A6DF036A5B3F6FAA3C74740382998D829D45C9E2734D91A285F9369764C21F9E",
+    "assets/3d/source/asterion/sculpt-v002/validate_refinement.py": "8C541F26C2D2546FB142988D10F07EDF51C891D1C81F02065C7B62CE01F78EFD",
+    "assets/3d/source/asterion/sculpt-v003/build_head_study.py": "A3B22323201D30A3BD9459985F8F7741A44545010A84D27CC5912E1C8A85E0F2",
+    "assets/3d/source/asterion/sculpt-v001/build_sculpt.py": "9A81C430E8FD07CE520BBA554C78845A508F22E5FB89E524BF515D8BF8415621",
+    "assets/3d/source/asterion/sculpt-v001/rig_delivery.py": "8758D105E70AB5405F61A48A531154CC591EAC0D82B167788F1D0785A16CDFF0",
+    "assets/3d/source/asterion/sculpt-v004/export_equipment.py": "C805B4740463215AE5CC9D314D14966F2BDF91A00FB82D05054BE0BBB8ED930B"
+  },
+  "blender": "5.2.1 LTS",
+  "checks": {
+    "original_rest_rig_unchanged": true,
+    "original_constraints_drivers_unchanged": true,
+    "all_original_action_data_unchanged": true,
+    "original_frame_rate_unchanged": true,
+    "original_eye_geometry_colors_weights_unchanged": true,
+    "all_source_parts_classified_once": true,
+    "explicit_editable_equipment_groups": true,
+    "meaningful_geometry_refinement": true,
+    "base_clothing_present": true,
+    "two_character_meshes": true,
+    "exact_distinct_components": true,
+    "one_original_shared_skin": true,
+    "nine_original_clips": true,
+    "only_public_extras": true,
+    "skinned_triangle_primitives": true,
+    "under_40_primitives": true,
+    "under_two_million_triangles": true,
+    "self_contained_no_projection": true,
+    "no_editor_stage": true,
+    "meshopt": true,
+    "under_25_mb": true,
+    "finite_imported_geometry": true,
+    "valid_normalized_known_weights": true,
+    "bounded_importer_triangle_difference": true,
+    "nine_clips_match_historical_import": true,
+    "two_imported_components": true,
+    "imported_equipment_metadata": true,
+    "all_historical_and_builder_inputs_unchanged": true
+  },
+  "components": {
+    "body": {
+      "mesh": 1,
+      "skin": 0,
+      "triangles": 952466,
+      "primitives": 13
+    },
+    "armor": {
+      "mesh": 0,
+      "skin": 0,
+      "triangles": 368004,
+      "primitives": 10
+    }
+  },
+  "triangles": 1320470,
+  "draw_calls": 23,
+  "materials": 22,
+  "bones": 10,
+  "clips": [
+    "idle",
+    "blink",
+    "happy",
+    "eat",
+    "play",
+    "pet_reaction",
+    "sleep",
+    "wake",
+    "walk"
+  ],
+  "compression_lossless": false,
+  "bytes": 13846740,
+  "geometry": {
+    "vertices": 668888,
+    "triangles": 1320468,
+    "nonfinite_vertices": 0,
+    "nonfinite_transforms": 0,
+    "unweighted_vertices": 0,
+    "invalid_weights": 0,
+    "unknown_weights": 0,
+    "over_four_weights": 0,
+    "max_influences": 1,
+    "bounds_min": [
+      -1.044921875,
+      -0.7109375,
+      0.005615039262920618
+    ],
+    "bounds_max": [
+      1.044921875,
+      0.724609375,
+      4.019531726837158
+    ],
+    "span": [
+      2.08984375,
+      1.435546875,
+      4.013916687574238
+    ]
+  },
+  "triangle_count_evidence": {
+    "authored": 1320470,
+    "imported": 1320468,
+    "exact_equal": false,
+    "triangle_loss": 2,
+    "relative_loss": 1.5146122214060145e-06,
+    "maximum_allowed_loss": 26,
+    "relative_tolerance": 2e-05,
+    "passed": true,
+    "limit": "Count difference only; individual omitted triangle degeneracy is not proven by this check."
+  },
+  "changes": {
+    "notes": "Scored, shaded plum hair; separate forged/leather outfit above a complete opaque plum under-tunic and shorts.",
+    "edited_objects": [
+      {
+        "name": "AST_Brumo_v2_low_crown_gather_0",
+        "vertices": 1908,
+        "max_displacement": 0.014563062523771734,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Brumo_v2_low_crown_gather_1",
+        "vertices": 1908,
+        "max_displacement": 0.014563062931513625,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Brumo_v2_low_crown_gather_2",
+        "vertices": 1908,
+        "max_displacement": 0.014563063120304627,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Brumo_v2_low_crown_gather_3",
+        "vertices": 1908,
+        "max_displacement": 0.01456306298757224,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Brumo_v2_low_crown_gather_4",
+        "vertices": 1908,
+        "max_displacement": 0.014563062875879653,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Brumo_v2_low_crown_gather_5",
+        "vertices": 1908,
+        "max_displacement": 0.014563063449388697,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Brumo_v2_low_crown_gather_6",
+        "vertices": 1908,
+        "max_displacement": 0.014563064452221622,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Brumo_v2_low_crown_gather_7",
+        "vertices": 1908,
+        "max_displacement": 0.014563062763677975,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Brumo_v2_low_crown_gather_8",
+        "vertices": 1908,
+        "max_displacement": 0.014563062932864251,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Brumo_v2_low_crown_gather_9",
+        "vertices": 1908,
+        "max_displacement": 0.014563062901692469,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Brumo_v2_low_crown_gather_10",
+        "vertices": 1908,
+        "max_displacement": 0.014563059554251967,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Brumo_v2_front_swept_lock_0",
+        "vertices": 3312,
+        "max_displacement": 0.022637930006865096,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Brumo_v2_front_swept_lock_1",
+        "vertices": 3312,
+        "max_displacement": 0.020303078198954598,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Brumo_v2_front_swept_lock_2",
+        "vertices": 3312,
+        "max_displacement": 0.018570388167723516,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Brumo_v2_front_swept_lock_3",
+        "vertices": 3312,
+        "max_displacement": 0.021351270675696737,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Brumo_v2_front_swept_lock_4",
+        "vertices": 3312,
+        "max_displacement": 0.02236775215477083,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Brumo_v2_front_swept_lock_5",
+        "vertices": 3312,
+        "max_displacement": 0.01932461087915974,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Brumo_v2_front_swept_lock_6",
+        "vertices": 3312,
+        "max_displacement": 0.019092508460015447,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Brumo_v2_side_swept_lock_-1_0",
+        "vertices": 2440,
+        "max_displacement": 0.013537800030610364,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Brumo_v2_side_swept_lock_-1_1",
+        "vertices": 2440,
+        "max_displacement": 0.012893847670388717,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Brumo_v2_side_swept_lock_-1_2",
+        "vertices": 2440,
+        "max_displacement": 0.012250908457633028,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Brumo_v2_side_swept_lock_-1_3",
+        "vertices": 2440,
+        "max_displacement": 0.01353782342469553,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Brumo_v2_side_swept_lock_-1_4",
+        "vertices": 2440,
+        "max_displacement": 0.01289385491287079,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Brumo_v2_side_swept_lock_-1_5",
+        "vertices": 2440,
+        "max_displacement": 0.012250916732526885,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Brumo_v2_temple_lock_-10",
+        "vertices": 1568,
+        "max_displacement": 0.012143910823636429,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Brumo_v2_temple_lock_-11",
+        "vertices": 1568,
+        "max_displacement": 0.012143917198294316,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Brumo_v2_temple_lock_-12",
+        "vertices": 1568,
+        "max_displacement": 0.012143903902716077,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Brumo_v2_side_swept_lock_1_0",
+        "vertices": 2440,
+        "max_displacement": 0.013537807997358984,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Brumo_v2_side_swept_lock_1_1",
+        "vertices": 2440,
+        "max_displacement": 0.01289383322346615,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Brumo_v2_side_swept_lock_1_2",
+        "vertices": 2440,
+        "max_displacement": 0.012250915965581944,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Brumo_v2_side_swept_lock_1_3",
+        "vertices": 2440,
+        "max_displacement": 0.013537808716952395,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Brumo_v2_side_swept_lock_1_4",
+        "vertices": 2440,
+        "max_displacement": 0.012893862447422641,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Brumo_v2_side_swept_lock_1_5",
+        "vertices": 2440,
+        "max_displacement": 0.012250921584381536,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Brumo_v2_temple_lock_10",
+        "vertices": 1568,
+        "max_displacement": 0.012143912604033337,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Brumo_v2_temple_lock_11",
+        "vertices": 1568,
+        "max_displacement": 0.012143914124470896,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Brumo_v2_temple_lock_12",
+        "vertices": 1568,
+        "max_displacement": 0.01214390493720499,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Brumo_v2_nape_lock_0",
+        "vertices": 2052,
+        "max_displacement": 0.01762608259498842,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Brumo_v2_nape_lock_1",
+        "vertices": 2052,
+        "max_displacement": 0.017626081840047086,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Brumo_v2_nape_lock_2",
+        "vertices": 2052,
+        "max_displacement": 0.017626080990974784,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Brumo_v2_nape_lock_3",
+        "vertices": 2052,
+        "max_displacement": 0.017626082585640454,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Brumo_v2_nape_lock_4",
+        "vertices": 2052,
+        "max_displacement": 0.01762607980031082,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Brumo_v2_nape_lock_5",
+        "vertices": 2052,
+        "max_displacement": 0.01762608244918426,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Brumo_v2_nape_lock_6",
+        "vertices": 2052,
+        "max_displacement": 0.017626083985379907,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Brumo_v2_nape_lock_7",
+        "vertices": 2052,
+        "max_displacement": 0.01762608348199897,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Brumo_v2_nape_lock_8",
+        "vertices": 2052,
+        "max_displacement": 0.017626082600360676,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Brumo_v2_nape_lock_9",
+        "vertices": 2052,
+        "max_displacement": 0.017626081094088333,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Brumo_v2_nape_lock_10",
+        "vertices": 2052,
+        "max_displacement": 0.017626082781301834,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Brumo_v2_topknot_root_bundle",
+        "vertices": 1188,
+        "max_displacement": 0.022324759559120236,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Brumo_v2_topknot_plume_0",
+        "vertices": 3312,
+        "max_displacement": 0.015388580984430333,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Brumo_v2_topknot_plume_1",
+        "vertices": 3312,
+        "max_displacement": 0.015388574808780479,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Brumo_v2_topknot_plume_2",
+        "vertices": 3312,
+        "max_displacement": 0.01538857755773959,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Brumo_v2_topknot_plume_3",
+        "vertices": 3312,
+        "max_displacement": 0.01538857210079803,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Brumo_v2_topknot_plume_4",
+        "vertices": 3312,
+        "max_displacement": 0.015388575154402336,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Brumo_v2_topknot_plume_5",
+        "vertices": 3312,
+        "max_displacement": 0.015388576641901932,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Brumo_v2_topknot_plume_6",
+        "vertices": 3312,
+        "max_displacement": 0.01538857826158177,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      }
+    ],
+    "added_base_clothing": [
+      "AST_Brumo_v3_base_under_tunic",
+      "AST_Brumo_v3_base_shorts"
+    ],
+    "equipment_source_objects": [
+      "AST_Brumo_fitted_aubergine_cuirass",
+      "AST_Brumo_cuirass_hem",
+      "AST_Brumo_leather_bracer_R",
+      "AST_Brumo_bracer_bottom_rim_R",
+      "AST_Brumo_boot_gaiter_R",
+      "AST_Brumo_boot_ankle_edge_R",
+      "AST_Brumo_boot_buckle_R_cut_setting",
+      "AST_Brumo_boot_buckle_R_metal_bezel",
+      "AST_Brumo_leather_bracer_L",
+      "AST_Brumo_bracer_bottom_rim_L",
+      "AST_Brumo_boot_gaiter_L",
+      "AST_Brumo_boot_ankle_edge_L",
+      "AST_Brumo_boot_buckle_L_cut_setting",
+      "AST_Brumo_boot_buckle_L_metal_bezel",
+      "AST_Brumo_layered_leather_belt",
+      "AST_Brumo_belt_seam_1.075",
+      "AST_Brumo_belt_seam_1.14",
+      "AST_Brumo_belt_seam_1.195",
+      "AST_Brumo_long_front_tabard",
+      "AST_Brumo_long_front_tabard_bound_edge",
+      "AST_Brumo_back_tabard",
+      "AST_Brumo_back_tabard_bound_edge",
+      "AST_Brumo_v2_topknot_forged_binding",
+      "AST_Brumo_v2_forged_pauldron_R",
+      "AST_Brumo_v2_pauldron_broad_forged_border_R",
+      "AST_Brumo_v2_pauldron_rivet_R0",
+      "AST_Brumo_v2_pauldron_rivet_R1",
+      "AST_Brumo_v2_pauldron_rivet_R2",
+      "AST_Brumo_v2_pauldron_star_R_cut_setting",
+      "AST_Brumo_v2_pauldron_star_R_metal_bezel",
+      "AST_Brumo_v2_pauldron_star_R_four_cut_star",
+      "AST_Brumo_v2_wrist_fur_R0",
+      "AST_Brumo_v2_wrist_fur_R1",
+      "AST_Brumo_v2_wrist_fur_R2",
+      "AST_Brumo_v2_wrist_fur_R3",
+      "AST_Brumo_v2_wrist_fur_R4",
+      "AST_Brumo_v2_wrist_fur_R5",
+      "AST_Brumo_v2_wrist_fur_R6",
+      "AST_Brumo_v2_wrist_fur_R7",
+      "AST_Brumo_v2_wrist_fur_R8",
+      "AST_Brumo_v2_wrist_fur_R9",
+      "AST_Brumo_v2_wrist_fur_R10",
+      "AST_Brumo_v2_wrist_fur_R11",
+      "AST_Brumo_v2_wrist_fur_R12",
+      "AST_Brumo_v2_wrist_fur_R13",
+      "AST_Brumo_v2_wrist_fur_R14",
+      "AST_Brumo_v2_wrist_fur_R15",
+      "AST_Brumo_v2_boot_fur_R0",
+      "AST_Brumo_v2_boot_fur_R1",
+      "AST_Brumo_v2_boot_fur_R2",
+      "AST_Brumo_v2_boot_fur_R3",
+      "AST_Brumo_v2_boot_fur_R4",
+      "AST_Brumo_v2_boot_fur_R5",
+      "AST_Brumo_v2_boot_fur_R6",
+      "AST_Brumo_v2_boot_fur_R7",
+      "AST_Brumo_v2_boot_fur_R8",
+      "AST_Brumo_v2_boot_fur_R9",
+      "AST_Brumo_v2_boot_fur_R10",
+      "AST_Brumo_v2_boot_fur_R11",
+      "AST_Brumo_v2_boot_fur_R12",
+      "AST_Brumo_v2_boot_fur_R13",
+      "AST_Brumo_v2_boot_fur_R14",
+      "AST_Brumo_v2_boot_fur_R15",
+      "AST_Brumo_v2_curved_hip_lamella_R",
+      "AST_Brumo_v2_hip_lamella_border_R",
+      "AST_Brumo_v2_forged_pauldron_L",
+      "AST_Brumo_v2_pauldron_broad_forged_border_L",
+      "AST_Brumo_v2_pauldron_rivet_L0",
+      "AST_Brumo_v2_pauldron_rivet_L1",
+      "AST_Brumo_v2_pauldron_rivet_L2",
+      "AST_Brumo_v2_pauldron_star_L_cut_setting",
+      "AST_Brumo_v2_pauldron_star_L_metal_bezel",
+      "AST_Brumo_v2_pauldron_star_L_four_cut_star",
+      "AST_Brumo_v2_wrist_fur_L0",
+      "AST_Brumo_v2_wrist_fur_L1",
+      "AST_Brumo_v2_wrist_fur_L2",
+      "AST_Brumo_v2_wrist_fur_L3",
+      "AST_Brumo_v2_wrist_fur_L4",
+      "AST_Brumo_v2_wrist_fur_L5",
+      "AST_Brumo_v2_wrist_fur_L6",
+      "AST_Brumo_v2_wrist_fur_L7",
+      "AST_Brumo_v2_wrist_fur_L8",
+      "AST_Brumo_v2_wrist_fur_L9",
+      "AST_Brumo_v2_wrist_fur_L10",
+      "AST_Brumo_v2_wrist_fur_L11",
+      "AST_Brumo_v2_wrist_fur_L12",
+      "AST_Brumo_v2_wrist_fur_L13",
+      "AST_Brumo_v2_wrist_fur_L14",
+      "AST_Brumo_v2_wrist_fur_L15",
+      "AST_Brumo_v2_boot_fur_L0",
+      "AST_Brumo_v2_boot_fur_L1",
+      "AST_Brumo_v2_boot_fur_L2",
+      "AST_Brumo_v2_boot_fur_L3",
+      "AST_Brumo_v2_boot_fur_L4",
+      "AST_Brumo_v2_boot_fur_L5",
+      "AST_Brumo_v2_boot_fur_L6",
+      "AST_Brumo_v2_boot_fur_L7",
+      "AST_Brumo_v2_boot_fur_L8",
+      "AST_Brumo_v2_boot_fur_L9",
+      "AST_Brumo_v2_boot_fur_L10",
+      "AST_Brumo_v2_boot_fur_L11",
+      "AST_Brumo_v2_boot_fur_L12",
+      "AST_Brumo_v2_boot_fur_L13",
+      "AST_Brumo_v2_boot_fur_L14",
+      "AST_Brumo_v2_boot_fur_L15",
+      "AST_Brumo_v2_curved_hip_lamella_L",
+      "AST_Brumo_v2_hip_lamella_border_L",
+      "AST_Brumo_v2_fitted_cross_harness_-1",
+      "AST_Brumo_v2_harness_stitch_-11.92",
+      "AST_Brumo_v2_harness_stitch_-11.77",
+      "AST_Brumo_v2_fitted_cross_harness_1",
+      "AST_Brumo_v2_harness_stitch_11.92",
+      "AST_Brumo_v2_harness_stitch_11.77",
+      "AST_Brumo_v2_chest_star_cut_setting",
+      "AST_Brumo_v2_chest_star_metal_bezel",
+      "AST_Brumo_v2_chest_star_four_cut_star",
+      "AST_Brumo_v2_belt_star_cut_setting",
+      "AST_Brumo_v2_belt_star_metal_bezel",
+      "AST_Brumo_v2_belt_star_four_cut_star"
+    ],
+    "body_source_objects": [
+      "AST_Brumo_padded_torso",
+      "AST_Brumo_neck",
+      "AST_Brumo_collar_rim",
+      "AST_Brumo_strong_arm_R",
+      "AST_Brumo_hand_R_sculpted_hand",
+      "AST_Brumo_leg_R",
+      "AST_Brumo_foot_sculpt_R",
+      "AST_Brumo_toenail_R0",
+      "AST_Brumo_toenail_R1",
+      "AST_Brumo_toenail_R2",
+      "AST_Brumo_toenail_R3",
+      "AST_Brumo_strong_arm_L",
+      "AST_Brumo_hand_L_sculpted_hand",
+      "AST_Brumo_leg_L",
+      "AST_Brumo_foot_sculpt_L",
+      "AST_Brumo_toenail_L0",
+      "AST_Brumo_toenail_L1",
+      "AST_Brumo_toenail_L2",
+      "AST_Brumo_toenail_L3",
+      "AST_Brumo_v2_head",
+      "AST_Brumo_v2_eye_R_orbital_skin",
+      "AST_Brumo_v2_eye_R",
+      "AST_Brumo_v2_eye_R_upper_lash",
+      "AST_Brumo_v2_eye_R_lower_lid",
+      "AST_Brumo_v2_eye_R_lash_wing",
+      "AST_Brumo_v2_eye_R_catchlight",
+      "AST_Brumo_v2_eye_R_pinlight",
+      "AST_Brumo_v2_eye_R_closed_lid",
+      "AST_Brumo_v2_eye_R_sleep_lash",
+      "AST_Brumo_v2_cupped_ear_R",
+      "AST_Brumo_v2_cupped_ear_R_concha",
+      "AST_Brumo_v2_cupped_ear_R_antihelix",
+      "AST_Brumo_v2_expressive_brow_R",
+      "AST_Brumo_v2_upturned_tusk_R",
+      "AST_Brumo_v2_nostril_R",
+      "AST_Brumo_v2_eye_L_orbital_skin",
+      "AST_Brumo_v2_eye_L",
+      "AST_Brumo_v2_eye_L_upper_lash",
+      "AST_Brumo_v2_eye_L_lower_lid",
+      "AST_Brumo_v2_eye_L_lash_wing",
+      "AST_Brumo_v2_eye_L_catchlight",
+      "AST_Brumo_v2_eye_L_pinlight",
+      "AST_Brumo_v2_eye_L_closed_lid",
+      "AST_Brumo_v2_eye_L_sleep_lash",
+      "AST_Brumo_v2_cupped_ear_L",
+      "AST_Brumo_v2_cupped_ear_L_concha",
+      "AST_Brumo_v2_cupped_ear_L_antihelix",
+      "AST_Brumo_v2_expressive_brow_L",
+      "AST_Brumo_v2_upturned_tusk_L",
+      "AST_Brumo_v2_nostril_L",
+      "AST_Brumo_v2_gentle_smile",
+      "AST_Brumo_v2_sculpted_hair_cap",
+      "AST_Brumo_v2_closed_crown_underhair",
+      "AST_Brumo_v2_low_crown_gather_0",
+      "AST_Brumo_v2_low_crown_gather_1",
+      "AST_Brumo_v2_low_crown_gather_2",
+      "AST_Brumo_v2_low_crown_gather_3",
+      "AST_Brumo_v2_low_crown_gather_4",
+      "AST_Brumo_v2_low_crown_gather_5",
+      "AST_Brumo_v2_low_crown_gather_6",
+      "AST_Brumo_v2_low_crown_gather_7",
+      "AST_Brumo_v2_low_crown_gather_8",
+      "AST_Brumo_v2_low_crown_gather_9",
+      "AST_Brumo_v2_low_crown_gather_10",
+      "AST_Brumo_v2_front_swept_lock_0",
+      "AST_Brumo_v2_front_swept_lock_1",
+      "AST_Brumo_v2_front_swept_lock_2",
+      "AST_Brumo_v2_front_swept_lock_3",
+      "AST_Brumo_v2_front_swept_lock_4",
+      "AST_Brumo_v2_front_swept_lock_5",
+      "AST_Brumo_v2_front_swept_lock_6",
+      "AST_Brumo_v2_side_swept_lock_-1_0",
+      "AST_Brumo_v2_side_swept_lock_-1_1",
+      "AST_Brumo_v2_side_swept_lock_-1_2",
+      "AST_Brumo_v2_side_swept_lock_-1_3",
+      "AST_Brumo_v2_side_swept_lock_-1_4",
+      "AST_Brumo_v2_side_swept_lock_-1_5",
+      "AST_Brumo_v2_temple_lock_-10",
+      "AST_Brumo_v2_temple_lock_-11",
+      "AST_Brumo_v2_temple_lock_-12",
+      "AST_Brumo_v2_side_swept_lock_1_0",
+      "AST_Brumo_v2_side_swept_lock_1_1",
+      "AST_Brumo_v2_side_swept_lock_1_2",
+      "AST_Brumo_v2_side_swept_lock_1_3",
+      "AST_Brumo_v2_side_swept_lock_1_4",
+      "AST_Brumo_v2_side_swept_lock_1_5",
+      "AST_Brumo_v2_temple_lock_10",
+      "AST_Brumo_v2_temple_lock_11",
+      "AST_Brumo_v2_temple_lock_12",
+      "AST_Brumo_v2_nape_lock_0",
+      "AST_Brumo_v2_nape_lock_1",
+      "AST_Brumo_v2_nape_lock_2",
+      "AST_Brumo_v2_nape_lock_3",
+      "AST_Brumo_v2_nape_lock_4",
+      "AST_Brumo_v2_nape_lock_5",
+      "AST_Brumo_v2_nape_lock_6",
+      "AST_Brumo_v2_nape_lock_7",
+      "AST_Brumo_v2_nape_lock_8",
+      "AST_Brumo_v2_nape_lock_9",
+      "AST_Brumo_v2_nape_lock_10",
+      "AST_Brumo_v2_topknot_root_bundle",
+      "AST_Brumo_v2_topknot_plume_0",
+      "AST_Brumo_v2_topknot_plume_1",
+      "AST_Brumo_v2_topknot_plume_2",
+      "AST_Brumo_v2_topknot_plume_3",
+      "AST_Brumo_v2_topknot_plume_4",
+      "AST_Brumo_v2_topknot_plume_5",
+      "AST_Brumo_v2_topknot_plume_6",
+      "AST_Brumo_v3_base_under_tunic",
+      "AST_Brumo_v3_base_shorts"
+    ]
+  },
+  "original_rig": {
+    "rest_sha256": "BC7AD939603324AA0BBE19FDA31BC534EE2AB3804DB8413AC4DF72DC1AB46973",
+    "behavior_sha256": "C548BAA88EDC1E08A41DF0DB71E04395FCA37EA11C23D17E1383E26C93F9BD59",
+    "bones": 10,
+    "fps": 30,
+    "fps_base": 1.0,
+    "actions": {
+      "blink": {
+        "sha256": "07957EDB06CD9C13B91B8A9152F96C01212CDF0FB806F8DDDA4C2FB756A05B6A",
+        "curve_count": 90,
+        "key_count": 900,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          19.0
+        ]
+      },
+      "eat": {
+        "sha256": "5AAD91B3C0C85A70E86B985897C1D07327ED06E71167090A2FF7C5CD0C45737D",
+        "curve_count": 90,
+        "key_count": 4140,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          91.0
+        ]
+      },
+      "happy": {
+        "sha256": "E9A0E30AE9EEA62C34AE2E669663459D7E63D71EC4AB9886F5AC905AA055434B",
+        "curve_count": 90,
+        "key_count": 2790,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          61.0
+        ]
+      },
+      "idle": {
+        "sha256": "5FCFB60C06A07361002613839F81029FFA3FCE84593CC0AF7752AA43F79C9905",
+        "curve_count": 90,
+        "key_count": 5490,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          121.0
+        ]
+      },
+      "pet_reaction": {
+        "sha256": "9025278C0599645450363F3292BFEB34C4B826B985B094C2BA6B2116C3369CF2",
+        "curve_count": 90,
+        "key_count": 3510,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          76.0
+        ]
+      },
+      "play": {
+        "sha256": "A742637891FBE0AB9C7E912BD3B70C81A237183D2A9B5EFA3BCE8EC145D60CB8",
+        "curve_count": 90,
+        "key_count": 3690,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          81.0
+        ]
+      },
+      "sleep": {
+        "sha256": "46DD093896197F20F9854DFCE8469C79790C396500A1F8C2C6F9312EAB540909",
+        "curve_count": 90,
+        "key_count": 5490,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          121.0
+        ]
+      },
+      "wake": {
+        "sha256": "E5C7AF96A064BFDE4C736823C836695809E67CD9269CE2DCF58BEB42E600E44F",
+        "curve_count": 90,
+        "key_count": 2790,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          61.0
+        ]
+      },
+      "walk": {
+        "sha256": "1EA82EDB6A2F3658CC4ED92EF3A583B52E4386505329E47957AA1846002E683A",
+        "curve_count": 90,
+        "key_count": 2250,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          49.0
+        ]
+      }
+    }
+  },
+  "candidate_rig": {
+    "rest_sha256": "BC7AD939603324AA0BBE19FDA31BC534EE2AB3804DB8413AC4DF72DC1AB46973",
+    "behavior_sha256": "C548BAA88EDC1E08A41DF0DB71E04395FCA37EA11C23D17E1383E26C93F9BD59",
+    "bones": 10,
+    "fps": 30,
+    "fps_base": 1.0,
+    "actions": {
+      "blink": {
+        "sha256": "07957EDB06CD9C13B91B8A9152F96C01212CDF0FB806F8DDDA4C2FB756A05B6A",
+        "curve_count": 90,
+        "key_count": 900,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          19.0
+        ]
+      },
+      "eat": {
+        "sha256": "5AAD91B3C0C85A70E86B985897C1D07327ED06E71167090A2FF7C5CD0C45737D",
+        "curve_count": 90,
+        "key_count": 4140,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          91.0
+        ]
+      },
+      "happy": {
+        "sha256": "E9A0E30AE9EEA62C34AE2E669663459D7E63D71EC4AB9886F5AC905AA055434B",
+        "curve_count": 90,
+        "key_count": 2790,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          61.0
+        ]
+      },
+      "idle": {
+        "sha256": "5FCFB60C06A07361002613839F81029FFA3FCE84593CC0AF7752AA43F79C9905",
+        "curve_count": 90,
+        "key_count": 5490,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          121.0
+        ]
+      },
+      "pet_reaction": {
+        "sha256": "9025278C0599645450363F3292BFEB34C4B826B985B094C2BA6B2116C3369CF2",
+        "curve_count": 90,
+        "key_count": 3510,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          76.0
+        ]
+      },
+      "play": {
+        "sha256": "A742637891FBE0AB9C7E912BD3B70C81A237183D2A9B5EFA3BCE8EC145D60CB8",
+        "curve_count": 90,
+        "key_count": 3690,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          81.0
+        ]
+      },
+      "sleep": {
+        "sha256": "46DD093896197F20F9854DFCE8469C79790C396500A1F8C2C6F9312EAB540909",
+        "curve_count": 90,
+        "key_count": 5490,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          121.0
+        ]
+      },
+      "wake": {
+        "sha256": "E5C7AF96A064BFDE4C736823C836695809E67CD9269CE2DCF58BEB42E600E44F",
+        "curve_count": 90,
+        "key_count": 2790,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          61.0
+        ]
+      },
+      "walk": {
+        "sha256": "1EA82EDB6A2F3658CC4ED92EF3A583B52E4386505329E47957AA1846002E683A",
+        "curve_count": 90,
+        "key_count": 2250,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          49.0
+        ]
+      }
+    }
+  },
+  "motion_comparison": {
+    "idle": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "blink": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "happy": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "eat": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "play": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "pet_reaction": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "sleep": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "wake": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "walk": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    }
+  },
+  "source_views": {
+    "hero": {
+      "file": "assets/3d/reference/orc/sculpt-v003/source/orc-hero.png",
+      "sha256": "14A083AEE5FAA78E37C8EA89A2591C8F32B0EE83B27E41143D79473C4FB802F7"
+    },
+    "front": {
+      "file": "assets/3d/reference/orc/sculpt-v003/source/orc-front.png",
+      "sha256": "170136E1015ADD9ED46399E55AA9AEAACAAEF170BE78AB1AB07410D16119D98C"
+    },
+    "side": {
+      "file": "assets/3d/reference/orc/sculpt-v003/source/orc-side.png",
+      "sha256": "B99F7D7372FB5C6A1BA8D2641A3818FDC42615DF2FBDBA947044A3AC714A8E48"
+    },
+    "rear": {
+      "file": "assets/3d/reference/orc/sculpt-v003/source/orc-rear.png",
+      "sha256": "2CB79386EE3D89FEFAF8B0D97B7CD3F737839E2A04E22D73658E8A358C6D68DB"
+    },
+    "body-hero": {
+      "file": "assets/3d/reference/orc/sculpt-v003/source/orc-body-hero.png",
+      "sha256": "60CCA78B549C87CA244CF1D55668B5C431A3B8DB96CE52D89BD837DD38B41202"
+    },
+    "body-side": {
+      "file": "assets/3d/reference/orc/sculpt-v003/source/orc-body-side.png",
+      "sha256": "61A53F18BF1A005BEACE229F317ACB48EDFE8178F96565E3F31E073E8C1769C0"
+    }
+  },
+  "import_views": {
+    "hero": {
+      "file": "assets/3d/reference/orc/sculpt-v003/import/orc-hero.png",
+      "sha256": "144AA0446898B17FE90469208E751597ACDCDD83ACE66B65ECA104F951E8A392"
+    },
+    "rear": {
+      "file": "assets/3d/reference/orc/sculpt-v003/import/orc-rear.png",
+      "sha256": "EFF8ACF02EF1D67F122AD93EE524DF343F0AE25ED8501AC3F5D4C866C0B6A241"
+    },
+    "body-hero": {
+      "file": "assets/3d/reference/orc/sculpt-v003/import/orc-body-hero.png",
+      "sha256": "8064030461ED8100C80FCC324DF5451F48A160813A83D321810224DB44EAD4FF"
+    },
+    "blink": {
+      "file": "assets/3d/reference/orc/sculpt-v003/import/orc-blink.png",
+      "sha256": "7773E62FBA96293573A285BAF760DE999CA6ADC80B1CA3B8D0505368ABFEE537"
+    }
+  },
+  "passed": true,
+  "human_likeness_accepted": false,
+  "mobile_performance_accepted": false,
+  "paid_provider_used": false,
+  "projection_used": false,
+  "package_status": "Local hash-checked Blender delivery; no game-dev canonical receipt.",
+  "animation_limit": "Original source curves, keys, handles, rest rig and drivers compared exactly. Fresh GLBs compared at nine normalized times per clip with 2e-4 skin-matrix tolerance. Not a collision or gait acceptance.",
+  "likeness_limit": "Approved single-view reference retained. Hidden surfaces inferred; no exact 1:1 claim."
+}

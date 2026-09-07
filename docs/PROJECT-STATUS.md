@@ -75,15 +75,67 @@ The current Asterion portrait is still only 192 by 208 pixels and uses binary al
 
 Real endpoints, addresses, credentials, keys, certificates, and host inventories remain outside this public repository.
 
+## Local 3D collection: 2026-09-06
+
+The opt-in 3D preview now includes all eight volumetric companions. Its current
+face-only round selects Asterion `sculpt-v006` and the other seven figures'
+`sculpt-v005` deliveries. Editable Blender masters, browser GLBs, unchanged
+approved references, historical versions, reproducible builders and
+hash-bound validation evidence are included. See the
+[figure index](../assets/3d/COMPANION-FIGURES.md) and
+[original / previous / new face comparisons](../assets/3d/reference/companions/sculpt-v005/REVIEW.md).
+
+Faces were refined without reauthoring original animation curves or changing
+the preceding body, hair, ears, crown or outfit. Body and outfit remain
+independently visible on one shared skin. Asterion's head mane remains omitted
+at the user's request; the static native tail groom is preserved.
+
+The 3D-workstation checks and their limits are recorded in the face review.
+The feature flag remains off by default. These are high-poly desktop review
+assets, not 100-percent likeness or mobile-production acceptance. This source
+publication does not update the separately deployed internal application,
+authentication, infrastructure or release acceptance described above.
+
+## Metadata-only 3D publication: 2026-09-07
+
+The publication copies cover 45 editable Blender masters, 246 PNG previews and
+two historical GLBs. Original working files are retained byte-for-byte in a
+private recovery snapshot, outside Git. Personal and workstation paths are
+removed from the distribution copies, including unreachable bytes after the
+end of two explicitly identified Blender metadata strings.
+
+All 45 final masters passed a fresh Blender reopen and complete stored-data
+fingerprint comparison. A separate full-decompression scan found no remaining
+private-path or credential-pattern findings. The PNG copies retain identical
+decoded pixels and alpha; the two historical GLBs retain identical binary
+chunks and all JSON semantics except their explicitly documented path fields.
+The eight currently selected browser GLBs are byte-identical to the accepted
+face-round deliveries.
+
+The [publication amendment](../assets/3d/publication/2026-09-07/README.md)
+distinguishes immutable authoring evidence from metadata-only distribution
+copies. File hashes are rebound transparently; historical geometry, rig,
+animation, likeness and acceptance measurements are not presented as rerun.
+This does not enable 3D by default, deploy the website, or establish mobile,
+exact-likeness, authentication or infrastructure acceptance.
+
+Fresh local verification passed: frozen-lockfile installation, all 178 Node
+tests, TypeScript checking and a Windows production build. The same 178 tests
+also passed in a separately assembled publication copy. Additional checks
+passed 22 Blender semantic regressions and 14 final-provenance regressions.
+Browser runtime checks loaded Asterion and Liora, exercised separate outfit
+visibility and verified the static 2D fallback for reduced motion. These checks
+do not claim a new pixel-based visual comparison or deployed-service acceptance.
+
 ## Pending product work
 
 - Complete localization of the care interface and event presentation without rewriting historical event content indiscriminately.
 - Continue issue #3 with admission, authenticated-session enforcement, account-switch handling, and real ownership-isolation tests; then build issue #4 administration and Keycloak permission synchronization on that foundation.
 - Continue the remaining product issues in dependency order, retaining issue #13 as an explicitly deferred design consideration rather than an implemented monitoring feature.
-- Establish the Blender-based 3D pipeline described in `docs/3D-ASSET-PIPELINE.md`.
-- Build and approve the Asterion 3D vertical slice.
-- Add a lazy-loaded WebGL presentation with a resilient 2D fallback.
-- Extend the accepted pipeline to the remaining companions.
+- Continue visual likeness review of all eight 3D companions against their approved references.
+- Refine eyelid/animation topology in a separately authorized animation round; current clips remain preserved.
+- Measure representative mobile performance and prepare optimized delivery derivatives before enabling 3D by default.
+- Retain the implemented lazy-loaded WebGL preview and resilient 2D fallback while the remaining 3D acceptance gates are open.
 
 ## Workstation handoff
 

@@ -1,0 +1,632 @@
+{
+  "schema": "asterion-v004-equipment-independent-validation-v1",
+  "source": "assets/3d/source/asterion/sculpt-v004/asterion-sculpt-v004.blend",
+  "model": "public/assets/3d/asterion/asterion-sculpt-v004.glb",
+  "source_sha256": "93F216A7C867199EC6A33620ACE8EDEA202E4A954142C032CBA9D86B02B46DC2",
+  "model_sha256": "CF14A6363C19B8C1B599C5C89181A63B31296CC97B72A0299C0230D9C81DF6CF",
+  "baseline_source": "assets/3d/source/asterion/sculpt-v003/asterion-sculpt-v003.blend",
+  "baseline_model": "public/assets/3d/asterion/asterion-sculpt-v003.glb",
+  "baseline_source_sha256": "FD2EC8503E393F68306C93D82DDAC59E9C6377EAEE7070C70CDBDA9D67DBFD77",
+  "baseline_model_sha256": "A2923D851CA53F8983EA5BCCD71C160D6381244C058B0429ACF797FD524A3DE1",
+  "dependency_sha256": {
+    "assets/3d/source/asterion/sculpt-v004/validate_v004.py": "A371C4ED775E754FDFCFD66458650F369AAE21B4F2B53F7E200F3591F5EB3B71",
+    "assets/3d/source/asterion/sculpt-v004/export_equipment.py": "C805B4740463215AE5CC9D314D14966F2BDF91A00FB82D05054BE0BBB8ED930B",
+    "assets/3d/source/asterion/sculpt-v002/validate_refinement.py": "8C541F26C2D2546FB142988D10F07EDF51C891D1C81F02065C7B62CE01F78EFD",
+    "assets/3d/source/asterion/sculpt-v003/build_head_study.py": "A3B22323201D30A3BD9459985F8F7741A44545010A84D27CC5912E1C8A85E0F2",
+    "assets/3d/source/asterion/sculpt-v001/build_sculpt.py": "9A81C430E8FD07CE520BBA554C78845A508F22E5FB89E524BF515D8BF8415621"
+  },
+  "blender": "5.2.1 LTS",
+  "bytes": 40099324,
+  "triangles": 3049212,
+  "geometry": {
+    "vertices": 1584221,
+    "triangles": 3049212,
+    "nonfinite_vertices": 0,
+    "nonfinite_transforms": 0,
+    "unweighted_vertices": 0,
+    "invalid_weights": 0,
+    "unknown_weights": 0,
+    "over_four_weights": 0,
+    "max_influences": 4,
+    "bounds_min": [
+      -1.4999998807907104,
+      -2.011719226837158,
+      0.02538999542593956
+    ],
+    "bounds_max": [
+      1.4999998807907104,
+      3.2304680347442627,
+      5.80078125
+    ],
+    "span": [
+      2.999999761581421,
+      5.242187261581421,
+      5.77539125457406
+    ]
+  },
+  "triangle_count_evidence": {
+    "authored": 3049212,
+    "imported": 3049212,
+    "exact_equal": true,
+    "triangle_loss": 0,
+    "relative_loss": 0.0,
+    "maximum_allowed_loss": 60,
+    "relative_tolerance": 2e-05,
+    "passed": true,
+    "limit": "Count difference only; individual omitted triangle degeneracy is not proven by this check."
+  },
+  "components": {
+    "body": {
+      "node": 23,
+      "name": "asterion_body",
+      "mesh": 1,
+      "skin": 0,
+      "extras": {
+        "asterion_component": "body",
+        "asterion_rig": "asterion-rig-v1"
+      },
+      "triangles": 2985588,
+      "material_primitives": 14,
+      "materials": [
+        "AST_navy",
+        "AST_gold_light",
+        "AST_scale_dark",
+        "AST_Eye_living_azure",
+        "AST_white",
+        "AST_gold",
+        "AST_belly",
+        "AST_armor",
+        "AST_gold_dark",
+        "AST_scale",
+        "AST_groom_v002_ivory",
+        "AST_groom_v002_light",
+        "AST_groom_v002_depth",
+        "AST_black"
+      ]
+    },
+    "armor": {
+      "node": 22,
+      "name": "asterion_armor",
+      "mesh": 0,
+      "skin": 0,
+      "extras": {
+        "asterion_component": "armor",
+        "asterion_rig": "asterion-rig-v1",
+        "asterion_equipment_slot": "outfit",
+        "asterion_equipment_id": "ceremonial-gold-v1"
+      },
+      "triangles": 63624,
+      "material_primitives": 9,
+      "materials": [
+        "AST_gold_light",
+        "AST_gold",
+        "AST_gold_dark",
+        "AST_Armor_Blue_Inlay",
+        "AST_armor",
+        "AST_black",
+        "AST_gem",
+        "AST_gem_light",
+        "AST_gem_dark"
+      ]
+    }
+  },
+  "imported_components": {
+    "body": {
+      "object": "asterion_body",
+      "geometry": {
+        "vertices": 1541985,
+        "triangles": 2985588,
+        "nonfinite_vertices": 0,
+        "nonfinite_transforms": 0,
+        "unweighted_vertices": 0,
+        "invalid_weights": 0,
+        "unknown_weights": 0,
+        "over_four_weights": 0,
+        "max_influences": 4,
+        "bounds_min": [
+          -1.4999998807907104,
+          -2.011719226837158,
+          0.02538999542593956
+        ],
+        "bounds_max": [
+          1.4999998807907104,
+          3.2304680347442627,
+          5.80078125
+        ],
+        "span": [
+          2.999999761581421,
+          5.242187261581421,
+          5.77539125457406
+        ]
+      },
+      "materials": [
+        "AST_navy",
+        "AST_gold_light",
+        "AST_scale_dark",
+        "AST_Eye_living_azure",
+        "AST_white",
+        "AST_gold",
+        "AST_belly",
+        "AST_armor",
+        "AST_gold_dark",
+        "AST_scale",
+        "AST_groom_v002_ivory",
+        "AST_groom_v002_light",
+        "AST_groom_v002_depth",
+        "AST_black"
+      ],
+      "extras": {
+        "asterion_component": "body",
+        "asterion_rig": "asterion-rig-v1"
+      }
+    },
+    "armor": {
+      "object": "asterion_armor",
+      "geometry": {
+        "vertices": 42236,
+        "triangles": 63624,
+        "nonfinite_vertices": 0,
+        "nonfinite_transforms": 0,
+        "unweighted_vertices": 0,
+        "invalid_weights": 0,
+        "unknown_weights": 0,
+        "over_four_weights": 0,
+        "max_influences": 4,
+        "bounds_min": [
+          -1.1367186307907104,
+          -1.819336175918579,
+          0.5356440544128418
+        ],
+        "bounds_max": [
+          1.1367186307907104,
+          3.023437023162842,
+          4.2890625
+        ],
+        "span": [
+          2.273437261581421,
+          4.842773199081421,
+          3.753418445587158
+        ]
+      },
+      "materials": [
+        "AST_gold_light",
+        "AST_gold",
+        "AST_gold_dark",
+        "AST_Armor_Blue_Inlay",
+        "AST_armor",
+        "AST_black",
+        "AST_gem",
+        "AST_gem_light",
+        "AST_gem_dark"
+      ],
+      "extras": {
+        "asterion_component": "armor",
+        "asterion_rig": "asterion-rig-v1",
+        "asterion_equipment_slot": "outfit",
+        "asterion_equipment_id": "ceremonial-gold-v1"
+      }
+    }
+  },
+  "source_partition": {
+    "body": [
+      "AST_Dragon_Ear_Swept_Gold_Inlay_L",
+      "AST_Dragon_Ear_Swept_Gold_Inlay_R",
+      "AST_Dragon_Leaf_Ear_L",
+      "AST_Dragon_Leaf_Ear_R",
+      "AST_Groom_v002_tail_export",
+      "AST_Sculpted_body",
+      "AST_Sculpted_head",
+      "AST_Sculpted_tail",
+      "AST_body_scale_sculpt",
+      "AST_cheek_scale_L0",
+      "AST_cheek_scale_L1",
+      "AST_cheek_scale_L2",
+      "AST_cheek_scale_R0",
+      "AST_cheek_scale_R1",
+      "AST_cheek_scale_R2",
+      "AST_closed_eyelid.L",
+      "AST_closed_eyelid.R",
+      "AST_eye_catchlight.L",
+      "AST_eye_catchlight.R",
+      "AST_eye_pinlight.L",
+      "AST_eye_pinlight.R",
+      "AST_fitted_back_shield_0",
+      "AST_fitted_back_shield_1",
+      "AST_fitted_back_shield_2",
+      "AST_fitted_back_shield_3",
+      "AST_fitted_back_shield_4",
+      "AST_fitted_back_shield_5",
+      "AST_fitted_back_shield_6",
+      "AST_fitted_back_shield_7",
+      "AST_fitted_back_shield_8",
+      "AST_fitted_back_shield_9",
+      "AST_fitted_nape_shield_0",
+      "AST_fitted_nape_shield_1",
+      "AST_fitted_nape_shield_10",
+      "AST_fitted_nape_shield_2",
+      "AST_fitted_nape_shield_3",
+      "AST_fitted_nape_shield_4",
+      "AST_fitted_nape_shield_5",
+      "AST_fitted_nape_shield_6",
+      "AST_fitted_nape_shield_7",
+      "AST_fitted_nape_shield_8",
+      "AST_fitted_nape_shield_9",
+      "AST_fore_gold_claw_L0",
+      "AST_fore_gold_claw_L1",
+      "AST_fore_gold_claw_L2",
+      "AST_fore_gold_claw_L3",
+      "AST_fore_gold_claw_R0",
+      "AST_fore_gold_claw_R1",
+      "AST_fore_gold_claw_R2",
+      "AST_fore_gold_claw_R3",
+      "AST_forehead_lance_0",
+      "AST_forehead_lance_1",
+      "AST_forehead_lance_2",
+      "AST_forehead_lance_3",
+      "AST_forehead_lance_4",
+      "AST_forehead_lance_5",
+      "AST_gold_temple.L",
+      "AST_gold_temple.R",
+      "AST_great_horn.L",
+      "AST_great_horn.R",
+      "AST_head_scale_sculpt",
+      "AST_hind_gold_claw_L0",
+      "AST_hind_gold_claw_L1",
+      "AST_hind_gold_claw_L2",
+      "AST_hind_gold_claw_L3",
+      "AST_hind_gold_claw_R0",
+      "AST_hind_gold_claw_R1",
+      "AST_hind_gold_claw_R2",
+      "AST_hind_gold_claw_R3",
+      "AST_inner_horn.L",
+      "AST_inner_horn.R",
+      "AST_living_eye.L",
+      "AST_living_eye.R",
+      "AST_lower_eyelid.L",
+      "AST_lower_eyelid.R",
+      "AST_orbital_socket.L",
+      "AST_orbital_socket.R",
+      "AST_rounded_mouth.L",
+      "AST_rounded_mouth.R",
+      "AST_rounded_nose",
+      "AST_rounded_nostril.L",
+      "AST_rounded_nostril.R",
+      "AST_tail_scale_sculpt",
+      "AST_temple_overlapping_lamellae",
+      "AST_throat_plate_0",
+      "AST_throat_plate_1",
+      "AST_throat_plate_2",
+      "AST_throat_plate_3",
+      "AST_throat_plate_4",
+      "AST_throat_plate_5",
+      "AST_throat_plate_6",
+      "AST_upper_brow.L",
+      "AST_upper_brow.R"
+    ],
+    "armor": [
+      "AST_Back_Collar_Gold_Rim_L",
+      "AST_Back_Collar_Gold_Rim_R",
+      "AST_Chest_Crown_Arm_L",
+      "AST_Chest_Crown_Arm_R",
+      "AST_Chest_Crown_Diamond",
+      "AST_Chest_Crown_Diamond_Inset",
+      "AST_Chest_Faceted_Azure_Crystal",
+      "AST_Chest_Gem_Shadow_Well",
+      "AST_Chest_Lower_Inset_Chevron_L",
+      "AST_Chest_Lower_Inset_Chevron_R",
+      "AST_Chest_Lower_Sculpted_Flame_L",
+      "AST_Chest_Lower_Sculpted_Flame_R",
+      "AST_Chest_Neck_Connector_L",
+      "AST_Chest_Neck_Connector_R",
+      "AST_Chest_Pendant_Backplate",
+      "AST_Chest_Raised_Hexagonal_Gold_Setting",
+      "AST_Curved_Ceremonial_Shoulder_Shield_L",
+      "AST_Curved_Ceremonial_Shoulder_Shield_R",
+      "AST_Fitted_Navy_Breast_Shield",
+      "AST_Fore_Cuff_Diamond_Ink_Inset_L",
+      "AST_Fore_Cuff_Diamond_Ink_Inset_R",
+      "AST_Fore_Cuff_Diamond_L",
+      "AST_Fore_Cuff_Diamond_Light_Spine_L",
+      "AST_Fore_Cuff_Diamond_Light_Spine_R",
+      "AST_Fore_Cuff_Diamond_R",
+      "AST_Fore_Cuff_Outer_Spur_L",
+      "AST_Fore_Cuff_Outer_Spur_R",
+      "AST_Fore_Sculpted_Gold_Cuff_L",
+      "AST_Fore_Sculpted_Gold_Cuff_R",
+      "AST_Haunch_Four_Point_Star_L",
+      "AST_Haunch_Four_Point_Star_R",
+      "AST_Haunch_Gold_Crescent_L",
+      "AST_Haunch_Gold_Crescent_R",
+      "AST_Haunch_Inner_Gold_Crescent_L",
+      "AST_Haunch_Inner_Gold_Crescent_R",
+      "AST_Hind_Cuff_Diamond_Ink_Inset_L",
+      "AST_Hind_Cuff_Diamond_Ink_Inset_R",
+      "AST_Hind_Cuff_Diamond_L",
+      "AST_Hind_Cuff_Diamond_Light_Spine_L",
+      "AST_Hind_Cuff_Diamond_Light_Spine_R",
+      "AST_Hind_Cuff_Diamond_R",
+      "AST_Hind_Cuff_Outer_Spur_L",
+      "AST_Hind_Cuff_Outer_Spur_R",
+      "AST_Hind_Sculpted_Gold_Cuff_L",
+      "AST_Hind_Sculpted_Gold_Cuff_R",
+      "AST_Shoulder_Enamel_Blue_Chevron_L",
+      "AST_Shoulder_Enamel_Blue_Chevron_R",
+      "AST_Shoulder_Four_Point_Gold_Star_L",
+      "AST_Shoulder_Four_Point_Gold_Star_R",
+      "AST_forehead_diadem_-1",
+      "AST_forehead_diadem_1",
+      "AST_shoulder_enamel_lamellae_L",
+      "AST_shoulder_enamel_lamellae_R",
+      "AST_tail_gold_inlay_-1",
+      "AST_tail_gold_inlay_1"
+    ]
+  },
+  "native_groom": {
+    "native_objects": [
+      {
+        "name": "AST_Groom_v002_tail_native",
+        "group": "tail",
+        "type": "CURVES",
+        "physics": [],
+        "strands": 3582,
+        "points": 50148,
+        "finite_points_radii": true,
+        "valid_offsets": true,
+        "nonnegative_nonzero_radii": true,
+        "finite_transform": true,
+        "passed": true
+      }
+    ],
+    "native_strands": 3582,
+    "native_points": 50148,
+    "export_meshes": 1,
+    "correspondence": {
+      "tail": {
+        "native_object": "AST_Groom_v002_tail_native",
+        "export_objects": [
+          "AST_Groom_v002_tail_export"
+        ],
+        "passed": true,
+        "sides": 5,
+        "points_per_strand": 14,
+        "tube_vertices": 250740,
+        "expected_ring_vertices": 250740,
+        "max_center_error_world": 2.3038437383503534e-07,
+        "max_radius_error_local": 3.770561761819516e-07,
+        "max_radius_error_world_bound": 3.7705618180052653e-07,
+        "tolerance_world": 1e-05
+      }
+    },
+    "checks": {
+      "native_curves_present": true,
+      "at_least_1000_native_strands": true,
+      "native_points_radii_static_finite": true,
+      "matching_native_export_groups": true,
+      "all_native_points_match_export_tube_rings": true
+    }
+  },
+  "tail_geometry_sha256": {
+    "AST_Groom_v002_tail_native": "DAC4227FCC9D7D6AEBAE04B3A1C090A16D974ACC3DC64AFC718CF929451F7C2E",
+    "AST_Groom_v002_tail_export": "C65925FB23038D19F3B0CF279C8C8C257CBF6D23E6E5BF391D88D88B1D56B47C"
+  },
+  "materials": 18,
+  "draw_call_estimate": 23,
+  "compression": {
+    "extension": "EXT_meshopt_compression",
+    "buffer_view_filters": {
+      "EXPONENTIAL": 158,
+      "NONE": 115,
+      "QUATERNION": 92
+    },
+    "KHR_mesh_quantization": false,
+    "lossless_claimed": false,
+    "policy": "Preserve the historical Blender encoder, including its precision-reducing attribute and quaternion filters. Source actions are compared exactly; imported motion is checked independently against v003."
+  },
+  "clips": [
+    "blink",
+    "eat",
+    "happy",
+    "idle",
+    "pet_reaction",
+    "play",
+    "sleep",
+    "wake",
+    "walk"
+  ],
+  "rest_rig_sha256": "0846C3839479417844EB134926FF64F9E524E71252C903935BE13A0229FFE879",
+  "actions_sha256": {
+    "blink": "2D6A2DDA25F7FA929F492104911927C10516057AEF27789F6BDD5EFFC6300D72",
+    "eat": "3C6C9F49A26A2BF4EB62CBAD7F4C89285E48ECCB87B6465FAAC73D090CC40CBB",
+    "happy": "7407E5AD374DDD6979682E8BE8F3A496F0A723FF3BB9CF4D46A9E791CA854BDA",
+    "idle": "900FC72E95CA21E10A6BE20B3BCE9744F3870EDFC9566485435D3C1AE787B7D7",
+    "pet_reaction": "E47174AB065B3A4199662FF89C5733171D7714EEA8048BEAFCD51278B6E389DD",
+    "play": "FAE608E7D85447941C3A5C8F79F4F44B325A606DE6D95288A7227D02A6D524C5",
+    "sleep": "D6F49BE592A40DE99EECB09BBE76E5DC19DDDA31F1E01087B6C811654206C141",
+    "wake": "7E1971B98F43E987377D2ED6FBC2FD44444D7CB36FBC79EC78FEA15142D8D4F8",
+    "walk": "A8A8AF2A9F25F11F89E290718BA527689CAD76538C4ED0925ABACFDF0EFDC9C9"
+  },
+  "source_action_curve_count": 1980,
+  "source_action_key_count": 149600,
+  "motion_comparison": {
+    "idle": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "blink": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "happy": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "eat": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "play": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "pet_reaction": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "sleep": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "wake": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "walk": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    }
+  },
+  "excluded_imported_custom_shape_helpers": [
+    "Icosphere"
+  ],
+  "checks": {
+    "same_rest_hierarchy_and_transforms": true,
+    "same_constraints_and_drivers": true,
+    "exact_nine_action_names": true,
+    "all_nine_complete_action_data_unchanged": true,
+    "source_22_bones": true,
+    "source_fps_unchanged_30": true,
+    "finite_complete_source_keys": true,
+    "native_curves_present": true,
+    "at_least_1000_native_strands": true,
+    "native_points_radii_static_finite": true,
+    "matching_native_export_groups": true,
+    "all_native_points_match_export_tube_rings": true,
+    "native_and_export_tail_geometry_exactly_unchanged": true,
+    "only_tail_hair_remains": true,
+    "all_source_meshes_partitioned_body_or_armor": true,
+    "source_component_contract_tags": true,
+    "source_components_share_original_armature": true,
+    "baseline_import_22_bones_nine_clips": true,
+    "two_character_meshes": true,
+    "exact_body_armor_nodes": true,
+    "separate_component_geometry": true,
+    "one_shared_22_joint_skin": true,
+    "exact_nine_named_clips": true,
+    "only_public_equipment_extras": true,
+    "all_primitives_skinned_triangles": true,
+    "under_40_material_primitives": true,
+    "self_contained_no_images": true,
+    "no_editor_camera_or_light": true,
+    "meshopt_compressed": true,
+    "two_imported_character_meshes": true,
+    "imported_components_bound_to_same_armature": true,
+    "22_imported_bones_nine_clips": true,
+    "component_metadata_survives_fresh_import": true,
+    "finite_imported_geometry": true,
+    "all_imported_vertices_normalized_known_four_weights": true,
+    "bounded_importer_triangle_count_difference": true,
+    "imported_motion_unchanged": true,
+    "all_input_files_unchanged": true,
+    "six_independent_import_review_renders": true
+  },
+  "renders": {
+    "hero": {
+      "file": "assets/3d/reference/asterion/sculpt-v004/import-review/asterion-sculpt-hero.png",
+      "sha256": "DBD2B1C9F41D4178A8548F59578611C3891973DB778BDD2C3862CE662CE464ED"
+    },
+    "rear": {
+      "file": "assets/3d/reference/asterion/sculpt-v004/import-review/asterion-sculpt-rear.png",
+      "sha256": "180C69CDEE87591EB26520191C239C90D76E159FE33CE52ADCA279C0AC31AE9D"
+    },
+    "face": {
+      "file": "assets/3d/reference/asterion/sculpt-v004/import-review/asterion-sculpt-face.png",
+      "sha256": "F2C8761F2C9FB3583DB756EBC34F50005208F049FFBC5D21B452F668CA59B583"
+    },
+    "closed_blink_front": {
+      "file": "assets/3d/reference/asterion/sculpt-v004/import-review/blink/asterion-sculpt-front.png",
+      "sha256": "1A808372F0C44B9B257D6DDE5E38BE0D98004AEF0C686025F89D4D6428B1545A"
+    },
+    "armor_off_hero": {
+      "file": "assets/3d/reference/asterion/sculpt-v004/import-review/armor-off/asterion-sculpt-hero.png",
+      "sha256": "7AD1085FA85C66EB0903DC30A432D880C5256C96282A0284AA7D6BE3E367748F"
+    },
+    "armor_off_side": {
+      "file": "assets/3d/reference/asterion/sculpt-v004/import-review/armor-off/asterion-sculpt-side.png",
+      "sha256": "8A1F3B94B8FBFD10145BCE809F5130D542617C6CC471A61BC64BC656A44D56C3"
+    }
+  },
+  "human_likeness_accepted": false,
+  "mobile_performance_accepted": false,
+  "passed": true,
+  "publication_amendment": {
+    "id": "metadata-clean-2026-09-07",
+    "record": "assets/3d/publication/2026-09-07/amendment.json",
+    "original_document_sha256": "EDD83497187001629462EDDCF1AEED406EF79BFCBF936ABA05FE6024BCCD7B58",
+    "authoring_record": "assets/3d/publication/2026-09-07/authoring-records/assets/3d/reference/asterion/sculpt-v004/validation.json",
+    "authoring_record_status": "exact-public-safe-original",
+    "notice": "Metadata-only publication derivative, not a rerun of the historical builder or validator. File digest and size bindings identify publication copies; all measured geometry, materials, rig, action, motion and acceptance evidence remains historical and unchanged. Consult the original authoring record and amendment binding log."
+  }
+}

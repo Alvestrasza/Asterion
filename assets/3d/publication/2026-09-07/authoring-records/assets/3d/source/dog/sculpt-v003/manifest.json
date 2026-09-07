@@ -1,0 +1,116 @@
+{
+  "schema": "asterion-local-modular-companion-v1",
+  "kind": "dog",
+  "name": "Fenn",
+  "version": "sculpt-v003",
+  "source_sha256": "9606D351F43EEB56C749A9EBFD6312BDED95AAC3D119AB2D407CC268EE33D5F5",
+  "model_sha256": "2F912F11E2D332516888216EA2893AA761431AC9C7C0B340E9415558B8895362",
+  "reference_sha256": "1F94ED0A55E8718D7C891421B310932BB00D0022BB10D15D76281C440351171C",
+  "triangles": 1325472,
+  "bytes": 16023840,
+  "bones": 13,
+  "clips": [
+    "idle",
+    "blink",
+    "happy",
+    "eat",
+    "play",
+    "pet_reaction",
+    "sleep",
+    "wake",
+    "walk"
+  ],
+  "draw_calls": 11,
+  "materials": 11,
+  "components": {
+    "body": {
+      "mesh": 1,
+      "skin": 0,
+      "triangles": 1301332,
+      "primitives": 8
+    },
+    "armor": {
+      "mesh": 0,
+      "skin": 0,
+      "triangles": 24140,
+      "primitives": 3
+    }
+  },
+  "blender": "5.2.1 LTS",
+  "human_likeness_accepted": false,
+  "mobile_performance_accepted": false,
+  "projection_used": false,
+  "paid_provider_used": false,
+  "package_status": "Local hash-checked Blender delivery; no game-dev canonical receipt.",
+  "animation_limit": "Original source curves, keys, handles, rest rig and drivers compared exactly. Fresh GLBs compared at nine normalized times per clip with 2e-4 skin-matrix tolerance. Not a collision or gait acceptance.",
+  "likeness_limit": "Approved single-view reference retained. Hidden surfaces inferred; no exact 1:1 claim.",
+  "compression_lossless": false,
+  "source": "assets/3d/source/dog/sculpt-v003/dog-sculpt-v003.blend",
+  "model": "public/assets/3d/dog/dog-sculpt-v003.glb",
+  "reference": "assets/3d/reference/dog/sculpt-v003/original.png",
+  "validation": "assets/3d/reference/dog/sculpt-v003/validation.json",
+  "validation_sha256": "E7910BAE618A52419A9F2419DE8BEB8C699D8F0EE2533A2EC5E6523A494E2E00",
+  "fresh_import_passed": true,
+  "animations_unchanged": true,
+  "equipment_separate": true,
+  "input_sha256": {
+    "assets/3d/source/dog/sculpt-v002/dog-sculpt-v002.blend": "2A0ECF194DF7CBD4F31C3D08838D72F78E6FA27C47F25F1DCCD9CD663E70E6D6",
+    "public/assets/3d/dog/dog-sculpt-v002.glb": "F3A7B2C03E4B8C3F8CE9DDFB1D9406470C55FE9F405AB0F03B33AB2F4F2EC1D6",
+    "public/assets/companions/dog.png": "1F94ED0A55E8718D7C891421B310932BB00D0022BB10D15D76281C440351171C",
+    "assets/3d/source/companions/sculpt-v003/build.py": "D29DC488FAF8CB4CB51C81291A9B21102E74832209991D90B23DEF4DA12D5763",
+    "assets/3d/source/companions/sculpt-v003/refinements.py": "82AE8D392CCCF12EA231BD66A0244BDA073739AA4C0B3103DE7DD8DDDA1FBEBA",
+    "assets/3d/source/companions/sculpt-v003/export_equipment.py": "B12B82828199ED109E2764A69BA10A8036D79B62331FA8082C9EF4BEBFC1FB2D",
+    "assets/3d/source/companions/sculpt-v001/common.py": "A6DF036A5B3F6FAA3C74740382998D829D45C9E2734D91A285F9369764C21F9E",
+    "assets/3d/source/asterion/sculpt-v002/validate_refinement.py": "8C541F26C2D2546FB142988D10F07EDF51C891D1C81F02065C7B62CE01F78EFD",
+    "assets/3d/source/asterion/sculpt-v003/build_head_study.py": "A3B22323201D30A3BD9459985F8F7741A44545010A84D27CC5912E1C8A85E0F2",
+    "assets/3d/source/asterion/sculpt-v001/build_sculpt.py": "9A81C430E8FD07CE520BBA554C78845A508F22E5FB89E524BF515D8BF8415621",
+    "assets/3d/source/asterion/sculpt-v001/rig_delivery.py": "8758D105E70AB5405F61A48A531154CC591EAC0D82B167788F1D0785A16CDFF0",
+    "assets/3d/source/asterion/sculpt-v004/export_equipment.py": "C805B4740463215AE5CC9D314D14966F2BDF91A00FB82D05054BE0BBB8ED930B"
+  },
+  "renders": {
+    "hero": {
+      "file": "assets/3d/reference/dog/sculpt-v003/source/dog-hero.png",
+      "sha256": "EC8081296D389425A82B0C7DBEDFCEED507147AFA8EA915E742AE16C80BDF125"
+    },
+    "front": {
+      "file": "assets/3d/reference/dog/sculpt-v003/source/dog-front.png",
+      "sha256": "929088A0AFCB3F428A639EE4AF49C5AA9DEA2C9125DD5EE71A73B95637566F00"
+    },
+    "side": {
+      "file": "assets/3d/reference/dog/sculpt-v003/source/dog-side.png",
+      "sha256": "233DAF44E7BE79E45F1DB9E4A83857F369F81C71F6D2CDE919A47E87FB07ECAC"
+    },
+    "rear": {
+      "file": "assets/3d/reference/dog/sculpt-v003/source/dog-rear.png",
+      "sha256": "A1D94835275B1BFBD4EB9C2B6E7E83F1212F58A9B2DFA84CF6E91A926BE9BA8D"
+    },
+    "body-hero": {
+      "file": "assets/3d/reference/dog/sculpt-v003/source/dog-body-hero.png",
+      "sha256": "37E96B0126A250653E49442DDE1B1057913156152DB20C313AF1B2B8F16ADA6C"
+    },
+    "body-side": {
+      "file": "assets/3d/reference/dog/sculpt-v003/source/dog-body-side.png",
+      "sha256": "2540AA0F7820B8BB669090BBCDE9E9503B0ED0FAAA714AC85DEBCC4DFC355224"
+    }
+  },
+  "import_renders": {
+    "hero": {
+      "file": "assets/3d/reference/dog/sculpt-v003/import/dog-hero.png",
+      "sha256": "ABD18915536A1829B0661A1C84756C5D816CC93E04F61D8E31D950F45241C00C"
+    },
+    "rear": {
+      "file": "assets/3d/reference/dog/sculpt-v003/import/dog-rear.png",
+      "sha256": "F001A062E185E984D5088F14DC0A81A71F8F75FBBFFBEE67556DA43AF2DBA3A8"
+    },
+    "body-hero": {
+      "file": "assets/3d/reference/dog/sculpt-v003/import/dog-body-hero.png",
+      "sha256": "83131A373AF5D38FA2FDD13B00DF9A2DB3D629E479351CED45643449BE36DC27"
+    },
+    "blink": {
+      "file": "assets/3d/reference/dog/sculpt-v003/import/dog-blink.png",
+      "sha256": "0E957BB7750BE09D99C50DAAD98317A8D2FE90B976BDFD53262EF4CD78AA8F5F"
+    }
+  },
+  "notes": "Plush, directional ear and bib tufts; shorter smile seated on the actual muzzle; natural cream moons retained.",
+  "edited_objects": 124
+}

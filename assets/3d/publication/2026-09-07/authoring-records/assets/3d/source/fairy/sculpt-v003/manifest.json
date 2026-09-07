@@ -1,0 +1,116 @@
+{
+  "schema": "asterion-local-modular-companion-v1",
+  "kind": "fairy",
+  "name": "Selya",
+  "version": "sculpt-v003",
+  "source_sha256": "C83B48755F611AB9F7164579C58CE37E61DC96BB3824029EE11463C5440B71FC",
+  "model_sha256": "357B903EE358A4645A6E69FF53E260E2EF20A3DFB19739F6DB031C27A864C6C7",
+  "reference_sha256": "E22EA6A731DB9E432BB2E454DC0B847E7AD46829D52A871C3F2EDA4FD2AFAEF7",
+  "triangles": 1427002,
+  "bytes": 15043192,
+  "bones": 12,
+  "clips": [
+    "idle",
+    "blink",
+    "happy",
+    "eat",
+    "play",
+    "pet_reaction",
+    "sleep",
+    "wake",
+    "walk"
+  ],
+  "draw_calls": 23,
+  "materials": 19,
+  "components": {
+    "body": {
+      "mesh": 1,
+      "skin": 0,
+      "triangles": 1106152,
+      "primitives": 15
+    },
+    "armor": {
+      "mesh": 0,
+      "skin": 0,
+      "triangles": 320850,
+      "primitives": 8
+    }
+  },
+  "blender": "5.2.1 LTS",
+  "human_likeness_accepted": false,
+  "mobile_performance_accepted": false,
+  "projection_used": false,
+  "paid_provider_used": false,
+  "package_status": "Local hash-checked Blender delivery; no game-dev canonical receipt.",
+  "animation_limit": "Original source curves, keys, handles, rest rig and drivers compared exactly. Fresh GLBs compared at nine normalized times per clip with 2e-4 skin-matrix tolerance. Not a collision or gait acceptance.",
+  "likeness_limit": "Approved single-view reference retained. Hidden surfaces inferred; no exact 1:1 claim.",
+  "compression_lossless": false,
+  "source": "assets/3d/source/fairy/sculpt-v003/fairy-sculpt-v003.blend",
+  "model": "public/assets/3d/fairy/fairy-sculpt-v003.glb",
+  "reference": "assets/3d/reference/fairy/sculpt-v003/original.png",
+  "validation": "assets/3d/reference/fairy/sculpt-v003/validation.json",
+  "validation_sha256": "C920545CD29B84A64B20540369DC419DCF50BF95BAA6A6DAB0646EB24E794ACA",
+  "fresh_import_passed": true,
+  "animations_unchanged": true,
+  "equipment_separate": true,
+  "input_sha256": {
+    "assets/3d/source/fairy/sculpt-v002/fairy-sculpt-v002.blend": "C8CA6E620E5238F8B8ACB8A8125297AFF40F004FD63C558BB9420A66613A1749",
+    "public/assets/3d/fairy/fairy-sculpt-v002.glb": "376E836BE470E12FDD290DC913898D1C6A439C3D53F258F8F4B0E53AD657F309",
+    "public/assets/companions/fairy.png": "E22EA6A731DB9E432BB2E454DC0B847E7AD46829D52A871C3F2EDA4FD2AFAEF7",
+    "assets/3d/source/companions/sculpt-v003/build.py": "D29DC488FAF8CB4CB51C81291A9B21102E74832209991D90B23DEF4DA12D5763",
+    "assets/3d/source/companions/sculpt-v003/refinements.py": "82AE8D392CCCF12EA231BD66A0244BDA073739AA4C0B3103DE7DD8DDDA1FBEBA",
+    "assets/3d/source/companions/sculpt-v003/export_equipment.py": "B12B82828199ED109E2764A69BA10A8036D79B62331FA8082C9EF4BEBFC1FB2D",
+    "assets/3d/source/companions/sculpt-v001/common.py": "A6DF036A5B3F6FAA3C74740382998D829D45C9E2734D91A285F9369764C21F9E",
+    "assets/3d/source/asterion/sculpt-v002/validate_refinement.py": "8C541F26C2D2546FB142988D10F07EDF51C891D1C81F02065C7B62CE01F78EFD",
+    "assets/3d/source/asterion/sculpt-v003/build_head_study.py": "A3B22323201D30A3BD9459985F8F7741A44545010A84D27CC5912E1C8A85E0F2",
+    "assets/3d/source/asterion/sculpt-v001/build_sculpt.py": "9A81C430E8FD07CE520BBA554C78845A508F22E5FB89E524BF515D8BF8415621",
+    "assets/3d/source/asterion/sculpt-v001/rig_delivery.py": "8758D105E70AB5405F61A48A531154CC591EAC0D82B167788F1D0785A16CDFF0",
+    "assets/3d/source/asterion/sculpt-v004/export_equipment.py": "C805B4740463215AE5CC9D314D14966F2BDF91A00FB82D05054BE0BBB8ED930B"
+  },
+  "renders": {
+    "hero": {
+      "file": "assets/3d/reference/fairy/sculpt-v003/source/fairy-hero.png",
+      "sha256": "5EF7719CA84AE14771B29BF74F8676F86510860AA2E34779CBC821E237892F5A"
+    },
+    "front": {
+      "file": "assets/3d/reference/fairy/sculpt-v003/source/fairy-front.png",
+      "sha256": "744185846647E0DE99D7942E2CCCE6964BFBB22E577641EDDA84F4293FDA53E4"
+    },
+    "side": {
+      "file": "assets/3d/reference/fairy/sculpt-v003/source/fairy-side.png",
+      "sha256": "B053CC1A0FB406911B17C3341FC37C4740A01A33C5FA60C9226FDA6F50FD5B6F"
+    },
+    "rear": {
+      "file": "assets/3d/reference/fairy/sculpt-v003/source/fairy-rear.png",
+      "sha256": "AAD2E98C8752D1F56666DD5827058F2519883BE306199988783D9E4F802DF2AB"
+    },
+    "body-hero": {
+      "file": "assets/3d/reference/fairy/sculpt-v003/source/fairy-body-hero.png",
+      "sha256": "A4928F770224A64DE7C9B21925B6851A80FB2BD9BF3F2CC474BC450A842904F7"
+    },
+    "body-side": {
+      "file": "assets/3d/reference/fairy/sculpt-v003/source/fairy-body-side.png",
+      "sha256": "6E4AA9A746948CB5B0314D159E4E84E69AB130E8B81118ED1E4A9A66ECC424E3"
+    }
+  },
+  "import_renders": {
+    "hero": {
+      "file": "assets/3d/reference/fairy/sculpt-v003/import/fairy-hero.png",
+      "sha256": "7010F59CF92908550E534592DF8143BCE3C8A15FD439C70BB3EB49583AFA0D15"
+    },
+    "rear": {
+      "file": "assets/3d/reference/fairy/sculpt-v003/import/fairy-rear.png",
+      "sha256": "82EE2E44FFFA5DB0FF8F6D5F9ACD00AE5D0CC5927E1823989F9634C1FCBD9B72"
+    },
+    "body-hero": {
+      "file": "assets/3d/reference/fairy/sculpt-v003/import/fairy-body-hero.png",
+      "sha256": "64ECEB6953A2F4F5EEC8B4A2BA950B2596CCC38DF7AC59E8B5C84F995DA4A1A2"
+    },
+    "blink": {
+      "file": "assets/3d/reference/fairy/sculpt-v003/import/fairy-blink.png",
+      "sha256": "AAFFD36AA9D36A4688CC3411A4133DE88B1C82B86A7005E9040CB6A083FFC45F"
+    }
+  },
+  "notes": "Copper hair ribbons with deeper directional relief; softly curled coral petal overlay separated from mint/ivory base dress and biological wings.",
+  "edited_objects": 110
+}

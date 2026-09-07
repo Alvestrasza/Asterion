@@ -1,0 +1,1128 @@
+{
+  "schema": "asterion-face-only-v1",
+  "kind": "rabbit",
+  "name": "Liora",
+  "version": "sculpt-v005",
+  "source_sha256": "76199262D5DAFF78E69E3B3898326E7B9D35D8E856370BBA505914342ACEADD1",
+  "model_sha256": "04E301E7414E4ED1C6662401E6DBAE31231A5F18BC59B200696607C9A8945E3E",
+  "reference_input": "public/assets/companions/rabbit.png",
+  "reference_sha256": "26CD3B4BEFF8FE37488F860C3847BD78B9455102CB3FDF5C36BCBD98AF74F95D",
+  "input_sha256": {
+    "assets/3d/source/rabbit/sculpt-v004/rabbit-sculpt-v004.blend": "C5A954B487BD5DEDEBB933BB7B7C75AB53497353A039E7E9B4916662095A86E2",
+    "public/assets/3d/rabbit/rabbit-sculpt-v004.glb": "952B8D9CF7E02929A41DF8C39178609510A64BAD0FEDC87005B66CBAC168C69A",
+    "public/assets/companions/rabbit.png": "26CD3B4BEFF8FE37488F860C3847BD78B9455102CB3FDF5C36BCBD98AF74F95D",
+    "assets/3d/source/companions/sculpt-v001/common.py": "A6DF036A5B3F6FAA3C74740382998D829D45C9E2734D91A285F9369764C21F9E",
+    "assets/3d/source/asterion/sculpt-v001/build_sculpt.py": "9A81C430E8FD07CE520BBA554C78845A508F22E5FB89E524BF515D8BF8415621",
+    "assets/3d/source/asterion/sculpt-v001/rig_delivery.py": "8758D105E70AB5405F61A48A531154CC591EAC0D82B167788F1D0785A16CDFF0",
+    "assets/3d/source/asterion/sculpt-v002/validate_refinement.py": "8C541F26C2D2546FB142988D10F07EDF51C891D1C81F02065C7B62CE01F78EFD",
+    "assets/3d/source/asterion/sculpt-v003/build_head_study.py": "A3B22323201D30A3BD9459985F8F7741A44545010A84D27CC5912E1C8A85E0F2",
+    "assets/3d/source/asterion/sculpt-v004/export_equipment.py": "C805B4740463215AE5CC9D314D14966F2BDF91A00FB82D05054BE0BBB8ED930B",
+    "assets/3d/source/companions/sculpt-v004/build.py": "C6FBCA99D1117722B07933B90795DBFFA37DC22B399ECD6B339EAFF3C063A6BD",
+    "assets/3d/source/companions/sculpt-v004/refinements.py": "6247CEA1AE30B56B6FD3D23DEDEF1DD99BCD8A7B9158AA0576340AA2B8F89BCF",
+    "assets/3d/source/companions/sculpt-v004/export_equipment.py": "5EDB676641BE58BDE353213F6DA4F7F7662B76A08F586D0E7DADA7006AF343CF",
+    "assets/3d/source/companions/sculpt-v005/build.py": "2CD3C4D70E953C8BDBDDD01157745474A213968016F12BC3494BE8FD99C793BE",
+    "assets/3d/source/companions/sculpt-v005/contract.py": "F6829E7B890BA3B1108700B847CBB2C4CD532042233BD8049CC26B3A8522984E",
+    "assets/3d/source/companions/sculpt-v005/guards.py": "C98E5A25B553C56D016324F1AADE2669BEA28F3B2E73F5D883A74EBAEB599EF4",
+    "assets/3d/source/companions/sculpt-v005/equine_lapine_faces.py": "BE87AB1CFC52975B862EA5A19107F68B20D4578BA441E53FC3D739105C3CDBEE"
+  },
+  "blender": "5.2.1 LTS",
+  "components": {
+    "body": {
+      "mesh": 1,
+      "skin": 0,
+      "triangles": 1881742,
+      "primitives": 13
+    },
+    "armor": {
+      "mesh": 0,
+      "skin": 0,
+      "triangles": 59540,
+      "primitives": 11
+    }
+  },
+  "triangles": 1941282,
+  "draw_calls": 24,
+  "materials": 24,
+  "bones": 13,
+  "clips": [
+    "idle",
+    "blink",
+    "happy",
+    "eat",
+    "play",
+    "pet_reaction",
+    "sleep",
+    "wake",
+    "walk"
+  ],
+  "compression_lossless": false,
+  "bytes": 23390848,
+  "geometry": {
+    "vertices": 981428,
+    "triangles": 1941262,
+    "nonfinite_vertices": 0,
+    "nonfinite_transforms": 0,
+    "unweighted_vertices": 0,
+    "invalid_weights": 0,
+    "unknown_weights": 0,
+    "over_four_weights": 0,
+    "max_influences": 2,
+    "bounds_min": [
+      -1.1992186307907104,
+      -1.6796876192092896,
+      -0.01318345032632351
+    ],
+    "bounds_max": [
+      1.22265625,
+      2.046875,
+      4.828125
+    ],
+    "span": [
+      2.4218748807907104,
+      3.7265626192092896,
+      4.8413084503263235
+    ]
+  },
+  "triangle_count_evidence": {
+    "authored": 1941282,
+    "imported": 1941262,
+    "exact_equal": false,
+    "triangle_loss": 20,
+    "relative_loss": 1.0302470223285437e-05,
+    "maximum_allowed_loss": 38,
+    "relative_tolerance": 2e-05,
+    "passed": true,
+    "limit": "Count difference only; individual omitted triangle degeneracy is not proven by this check."
+  },
+  "changes": {
+    "notes": "Face-only recessed arched eyes, integrated orbital flesh, larger dark pupils, restrained corneal glints and species-specific muzzle expression.",
+    "edited_objects": [
+      {
+        "name": "AST_liora_v2_head",
+        "operation": "Species-specific soft muzzle planes on original facial skin only",
+        "max_displacement": 0.04099999627313777
+      },
+      {
+        "name": "AST_liora_v5_eye_L",
+        "operation": "Replaced original ocular geometry with recessed arched opening, large dark pupil and layered reference iris paint",
+        "max_displacement": 0.0,
+        "new_vertices": 18624
+      },
+      {
+        "name": "AST_liora_v5_eye_R",
+        "operation": "Replaced original ocular geometry with recessed arched opening, large dark pupil and layered reference iris paint",
+        "max_displacement": 0.0,
+        "new_vertices": 18624
+      }
+    ],
+    "face_objects": [
+      "AST_liora_v2_eye_L",
+      "AST_liora_v2_eye_L_catchlight",
+      "AST_liora_v2_eye_L_closed_lash",
+      "AST_liora_v2_eye_L_closed_lid",
+      "AST_liora_v2_eye_L_lash_wing",
+      "AST_liora_v2_eye_L_lower_lid",
+      "AST_liora_v2_eye_L_pinlight",
+      "AST_liora_v2_eye_L_sculpted_orbital_skin",
+      "AST_liora_v2_eye_L_tapered_upper_lid",
+      "AST_liora_v2_eye_R",
+      "AST_liora_v2_eye_R_catchlight",
+      "AST_liora_v2_eye_R_closed_lash",
+      "AST_liora_v2_eye_R_closed_lid",
+      "AST_liora_v2_eye_R_lash_wing",
+      "AST_liora_v2_eye_R_lower_lid",
+      "AST_liora_v2_eye_R_pinlight",
+      "AST_liora_v2_eye_R_sculpted_orbital_skin",
+      "AST_liora_v2_eye_R_tapered_upper_lid",
+      "AST_liora_v2_gentle_smile_-1",
+      "AST_liora_v2_gentle_smile_1",
+      "AST_liora_v2_head",
+      "AST_liora_v2_philtrum",
+      "AST_liora_v2_soft_rose_nose",
+      "AST_liora_v2_whisker_pore_-1_0",
+      "AST_liora_v2_whisker_pore_-1_1",
+      "AST_liora_v2_whisker_pore_-1_2",
+      "AST_liora_v2_whisker_pore_1_0",
+      "AST_liora_v2_whisker_pore_1_1",
+      "AST_liora_v2_whisker_pore_1_2",
+      "AST_liora_v5_eye_L",
+      "AST_liora_v5_eye_L_catchlight",
+      "AST_liora_v5_eye_L_integrated_orbital_flesh",
+      "AST_liora_v5_eye_L_lower_waterline",
+      "AST_liora_v5_eye_L_outer_lash_wing",
+      "AST_liora_v5_eye_L_pinlight",
+      "AST_liora_v5_eye_L_tapered_upper_lash",
+      "AST_liora_v5_eye_R",
+      "AST_liora_v5_eye_R_catchlight",
+      "AST_liora_v5_eye_R_integrated_orbital_flesh",
+      "AST_liora_v5_eye_R_lower_waterline",
+      "AST_liora_v5_eye_R_outer_lash_wing",
+      "AST_liora_v5_eye_R_pinlight",
+      "AST_liora_v5_eye_R_tapered_upper_lash",
+      "AST_liora_v5_gentle_smile_-1",
+      "AST_liora_v5_gentle_smile_1",
+      "AST_liora_v5_rounded_heart_nose",
+      "AST_liora_v5_short_philtrum",
+      "AST_liora_v5_whisker_pore_-1_0",
+      "AST_liora_v5_whisker_pore_-1_1",
+      "AST_liora_v5_whisker_pore_-1_2",
+      "AST_liora_v5_whisker_pore_1_0",
+      "AST_liora_v5_whisker_pore_1_1",
+      "AST_liora_v5_whisker_pore_1_2"
+    ],
+    "removed_face_objects": [
+      "AST_liora_v2_eye_R_sculpted_orbital_skin",
+      "AST_liora_v2_eye_R",
+      "AST_liora_v2_eye_R_tapered_upper_lid",
+      "AST_liora_v2_eye_R_lower_lid",
+      "AST_liora_v2_eye_R_lash_wing",
+      "AST_liora_v2_eye_R_catchlight",
+      "AST_liora_v2_eye_R_pinlight",
+      "AST_liora_v2_eye_L_sculpted_orbital_skin",
+      "AST_liora_v2_eye_L",
+      "AST_liora_v2_eye_L_tapered_upper_lid",
+      "AST_liora_v2_eye_L_lower_lid",
+      "AST_liora_v2_eye_L_lash_wing",
+      "AST_liora_v2_eye_L_catchlight",
+      "AST_liora_v2_eye_L_pinlight",
+      "AST_liora_v2_soft_rose_nose",
+      "AST_liora_v2_philtrum",
+      "AST_liora_v2_gentle_smile_-1",
+      "AST_liora_v2_whisker_pore_-1_0",
+      "AST_liora_v2_whisker_pore_-1_1",
+      "AST_liora_v2_whisker_pore_-1_2",
+      "AST_liora_v2_gentle_smile_1",
+      "AST_liora_v2_whisker_pore_1_0",
+      "AST_liora_v2_whisker_pore_1_1",
+      "AST_liora_v2_whisker_pore_1_2"
+    ],
+    "added_base_clothing": [],
+    "added_face_objects": [
+      "AST_liora_v5_eye_L",
+      "AST_liora_v5_eye_L_integrated_orbital_flesh",
+      "AST_liora_v5_eye_L_tapered_upper_lash",
+      "AST_liora_v5_eye_L_lower_waterline",
+      "AST_liora_v5_eye_L_outer_lash_wing",
+      "AST_liora_v5_eye_L_catchlight",
+      "AST_liora_v5_eye_L_pinlight",
+      "AST_liora_v5_eye_R",
+      "AST_liora_v5_eye_R_integrated_orbital_flesh",
+      "AST_liora_v5_eye_R_tapered_upper_lash",
+      "AST_liora_v5_eye_R_lower_waterline",
+      "AST_liora_v5_eye_R_outer_lash_wing",
+      "AST_liora_v5_eye_R_catchlight",
+      "AST_liora_v5_eye_R_pinlight",
+      "AST_liora_v5_rounded_heart_nose",
+      "AST_liora_v5_short_philtrum",
+      "AST_liora_v5_gentle_smile_-1",
+      "AST_liora_v5_whisker_pore_-1_0",
+      "AST_liora_v5_whisker_pore_-1_1",
+      "AST_liora_v5_whisker_pore_-1_2",
+      "AST_liora_v5_gentle_smile_1",
+      "AST_liora_v5_whisker_pore_1_0",
+      "AST_liora_v5_whisker_pore_1_1",
+      "AST_liora_v5_whisker_pore_1_2"
+    ],
+    "face_frame": {
+      "center": [
+        0,
+        -1.07,
+        2.43
+      ],
+      "span": [
+        1.94,
+        1.35,
+        1.44
+      ]
+    },
+    "original_lid_pivots": {
+      "L": [
+        0.4378165006637573,
+        -1.4194576740264893,
+        2.490699052810669
+      ],
+      "R": [
+        -0.43792176246643066,
+        -1.4196175336837769,
+        2.4907050132751465
+      ]
+    },
+    "animation_limit": "Original lid actions scale a closed mesh uniformly from its center; intermediate closure remains an expanding disk, not an anatomical blink.",
+    "body_source_objects": [
+      "AST_liora_v2_body",
+      "AST_liora_v2_head",
+      "AST_liora_v2_cupped_ear_R",
+      "AST_liora_v2_lavender_ear_bowl_R",
+      "AST_liora_v2_cupped_ear_L",
+      "AST_liora_v2_lavender_ear_bowl_L",
+      "AST_Liora_fur_jaw_R_00",
+      "AST_Liora_fur_jaw_R_01",
+      "AST_Liora_fur_jaw_L_00",
+      "AST_Liora_fur_jaw_L_01",
+      "AST_Liora_fur_inner_ear_brush_R_0",
+      "AST_Liora_fur_inner_ear_brush_R_1",
+      "AST_Liora_fur_inner_ear_brush_R_2",
+      "AST_Liora_fur_inner_ear_brush_L_0",
+      "AST_Liora_fur_inner_ear_brush_L_1",
+      "AST_Liora_fur_inner_ear_brush_L_2",
+      "AST_Liora_fur_bib_0_0",
+      "AST_Liora_fur_bib_0_1",
+      "AST_Liora_fur_bib_0_2",
+      "AST_Liora_fur_bib_0_3",
+      "AST_Liora_fur_bib_0_4",
+      "AST_Liora_fur_bib_1_0",
+      "AST_Liora_fur_bib_1_1",
+      "AST_Liora_fur_bib_1_2",
+      "AST_Liora_fur_bib_1_3",
+      "AST_Liora_fur_short_coat_R_00",
+      "AST_Liora_fur_short_coat_R_01",
+      "AST_Liora_fur_short_coat_R_02",
+      "AST_Liora_fur_short_coat_R_03",
+      "AST_Liora_fur_short_coat_R_04",
+      "AST_Liora_fur_short_coat_R_05",
+      "AST_Liora_fur_short_coat_R_06",
+      "AST_Liora_fur_short_coat_R_07",
+      "AST_Liora_fur_short_coat_L_00",
+      "AST_Liora_fur_short_coat_L_01",
+      "AST_Liora_fur_short_coat_L_02",
+      "AST_Liora_fur_short_coat_L_03",
+      "AST_Liora_fur_short_coat_L_04",
+      "AST_Liora_fur_short_coat_L_05",
+      "AST_Liora_fur_short_coat_L_06",
+      "AST_Liora_fur_short_coat_L_07",
+      "AST_Liora_v4_continuous_cotton_plush",
+      "AST_liora_v2_toe_crease_F-1-0.075",
+      "AST_liora_v2_toe_crease_F-10.075",
+      "AST_liora_v2_toe_crease_H-1-0.075",
+      "AST_liora_v2_toe_crease_H-10.075",
+      "AST_liora_v2_toe_crease_F1-0.075",
+      "AST_liora_v2_toe_crease_F10.075",
+      "AST_liora_v2_toe_crease_H1-0.075",
+      "AST_liora_v2_toe_crease_H10.075",
+      "AST_Liora_v4_continuous_cheek_fluff_L",
+      "AST_Liora_v4_crown_sweep_L",
+      "AST_Liora_v4_continuous_cheek_fluff_R",
+      "AST_Liora_v4_crown_sweep_R",
+      "AST_liora_v5_eye_L",
+      "AST_liora_v5_eye_L_integrated_orbital_flesh",
+      "AST_liora_v5_eye_L_tapered_upper_lash",
+      "AST_liora_v5_eye_L_lower_waterline",
+      "AST_liora_v5_eye_L_outer_lash_wing",
+      "AST_liora_v5_eye_L_catchlight",
+      "AST_liora_v5_eye_L_pinlight",
+      "AST_liora_v2_eye_L_closed_lid",
+      "AST_liora_v2_eye_L_closed_lash",
+      "AST_liora_v5_eye_R",
+      "AST_liora_v5_eye_R_integrated_orbital_flesh",
+      "AST_liora_v5_eye_R_tapered_upper_lash",
+      "AST_liora_v5_eye_R_lower_waterline",
+      "AST_liora_v5_eye_R_outer_lash_wing",
+      "AST_liora_v5_eye_R_catchlight",
+      "AST_liora_v5_eye_R_pinlight",
+      "AST_liora_v2_eye_R_closed_lid",
+      "AST_liora_v2_eye_R_closed_lash",
+      "AST_liora_v5_rounded_heart_nose",
+      "AST_liora_v5_short_philtrum",
+      "AST_liora_v5_gentle_smile_-1",
+      "AST_liora_v5_whisker_pore_-1_0",
+      "AST_liora_v5_whisker_pore_-1_1",
+      "AST_liora_v5_whisker_pore_-1_2",
+      "AST_liora_v5_gentle_smile_1",
+      "AST_liora_v5_whisker_pore_1_0",
+      "AST_liora_v5_whisker_pore_1_1",
+      "AST_liora_v5_whisker_pore_1_2"
+    ],
+    "equipment_source_objects": [
+      "AST_liora_v2_rose_ear_guard_R-1",
+      "AST_liora_v2_ear_guard_blade_R0",
+      "AST_liora_v2_ear_guard_blade_R1",
+      "AST_liora_v2_ear_guard_blade_R2",
+      "AST_liora_v2_rose_ear_guard_R1",
+      "AST_liora_v2_rose_ear_guard_L-1",
+      "AST_liora_v2_rose_ear_guard_L1",
+      "AST_liora_v2_ear_guard_blade_L0",
+      "AST_liora_v2_ear_guard_blade_L1",
+      "AST_liora_v2_ear_guard_blade_L2",
+      "AST_liora_v2_open_forehead_diamond",
+      "AST_liora_v2_forehead_upper_spark",
+      "AST_liora_v2_delicate_temple_star_L",
+      "AST_liora_v2_delicate_temple_star_R",
+      "AST_liora_v2_fitted_lavender_shoulder_L",
+      "AST_liora_v2_curved_lavender_saddle_L",
+      "AST_liora_v2_shoulder_rose_spark_L",
+      "AST_liora_v2_shoulder_lilac_spark_L",
+      "AST_liora_v2_haunch_rose_star_L",
+      "AST_liora_v2_fitted_lavender_shoulder_R",
+      "AST_liora_v2_curved_lavender_saddle_R",
+      "AST_liora_v2_shoulder_rose_spark_R",
+      "AST_liora_v2_shoulder_lilac_spark_R",
+      "AST_liora_v2_haunch_rose_star_R",
+      "AST_liora_v2_rose_body_girth",
+      "AST_liora_v2_long_breast_pendant_rose_bezel",
+      "AST_liora_v2_long_breast_pendant_lilac_crystal",
+      "AST_liora_v2_upper_diamond_connector_rose_bezel",
+      "AST_liora_v2_upper_diamond_connector_lilac_crystal",
+      "AST_liora_v2_continuous_rose_neck_harness",
+      "AST_liora_v2_double_angular_fore_cuff_L_0",
+      "AST_liora_v2_double_angular_fore_cuff_L_1",
+      "AST_liora_v2_open_fore_cuff_diamond_L",
+      "AST_liora_v2_double_angular_fore_cuff_R_0",
+      "AST_liora_v2_double_angular_fore_cuff_R_1",
+      "AST_liora_v2_open_fore_cuff_diamond_R"
+    ]
+  },
+  "face_scope": {
+    "checks": {
+      "explicit_face_only_allowlist": true,
+      "all_unedited_source_objects_retained": true,
+      "nonface_geometry_unchanged": true,
+      "nonface_materials_unchanged": true,
+      "original_lid_pivots_unchanged": true,
+      "meaningful_face_geometry_refinement": true
+    },
+    "protected_geometry_sha256": {
+      "AST_Liora_fur_bib_0_0": "928F3584952D3FEEDAECB189B46F71C23F0A3D7A055FBFAA9BCEF2751E052DDA",
+      "AST_Liora_fur_bib_0_1": "DA06633111D7FB34D6989E8A1FEE1F01A5878C926FE8C104016A8D8158067270",
+      "AST_Liora_fur_bib_0_2": "667CCD615F7A82B61588C6A01C05750872150E4BF5D05C4483DAF835631A60B1",
+      "AST_Liora_fur_bib_0_3": "1946A98BF8E475A53F0AB8AA3B37F003D0985D091D88699335B0ABFC46E7EF1D",
+      "AST_Liora_fur_bib_0_4": "625C4598EF59ADEF7D2D18AFC9C2564F7356615BF0486A7E50291E05B4D4D1D0",
+      "AST_Liora_fur_bib_1_0": "8AD2F9C4F52FBBCB8D5AE86C47B895F9B0355FE3DE99F99694BB93A3E89CBD27",
+      "AST_Liora_fur_bib_1_1": "70C97708823C6FDC82461C3703A1B5D590B354E06E900B023FFAE9D23815FC26",
+      "AST_Liora_fur_bib_1_2": "7AED24386FD8CDD4A51D48FDCDAE6BBF66E30FD20B83B336844396799587EBC0",
+      "AST_Liora_fur_bib_1_3": "472330E23BAF007B27E97680B375C7F1DC8E58DCBF4A4578C8CF3987A0B1BBA9",
+      "AST_Liora_fur_inner_ear_brush_L_0": "219E0D5BEAFA85AA1D457331704A52F02822EB9714464FA8D36E02C51DE00757",
+      "AST_Liora_fur_inner_ear_brush_L_1": "94092379EF987768CCD87E88073D93CEB99610B5518B019109F87D4D4A0A42FB",
+      "AST_Liora_fur_inner_ear_brush_L_2": "9F931725B983B954A1FC0F40D213BE4FB427EAD7E1FC3477F7693C8E0E0B3908",
+      "AST_Liora_fur_inner_ear_brush_R_0": "48495A9B6781F4F7A37E581A4561DA2C4C254F2DC1971A1430C826ED0B1653D5",
+      "AST_Liora_fur_inner_ear_brush_R_1": "04DCE6C5865CFADA6DFC307067B78B545A4C0E6D7E31D26782DD09ADC61B7D27",
+      "AST_Liora_fur_inner_ear_brush_R_2": "34642AE2498B9BC0C61BB72729DE8CB3264D16494F58C80E6080C545BEDDDE2E",
+      "AST_Liora_fur_jaw_L_00": "B309B611189F95674EAE6E7D183223A9161166C170C875D20A8EAFBF51571C19",
+      "AST_Liora_fur_jaw_L_01": "28F6E68C4DC9A814A6C34C2AE144B10F35DC9BCB059A38611E7834F979C3B96D",
+      "AST_Liora_fur_jaw_R_00": "B0583F13571872EAB92C4DE7FC62B0D8942F0229543A8356E41D5666A07BBAAC",
+      "AST_Liora_fur_jaw_R_01": "D6672087B669451B13F5AACA907E4E9E3B1382424F982DC09CE2D9A065C11274",
+      "AST_Liora_fur_short_coat_L_00": "C0C91A2DF96622090212C5FA642CC4A5B8D883C83AE00B33941FC4F8C066161B",
+      "AST_Liora_fur_short_coat_L_01": "1F724FC3C3F955A82DFA2CF1AD861DB1EAE366DE6B77724E75A0F73A36CF2C83",
+      "AST_Liora_fur_short_coat_L_02": "A78481B249C51855732F8374D448669D091DBBBE5C9E5531012344604DF3C80C",
+      "AST_Liora_fur_short_coat_L_03": "5E5C8AE87C2A05A0C35C79490D7E7BCE4B8F94143616194389C12A08B38CE1B1",
+      "AST_Liora_fur_short_coat_L_04": "E347C524A098810C633D751962F4AC0AF9E8CD7F6A3DAE5D8BB2D8047FA5C6C7",
+      "AST_Liora_fur_short_coat_L_05": "2D583F1305B155EF9B98A2A8DA174388ABE7261E97C349E96DA76E810443EC40",
+      "AST_Liora_fur_short_coat_L_06": "761C6F5CA348EB392306AA0C754B1DEB141C24B95025465D956AFA4889590878",
+      "AST_Liora_fur_short_coat_L_07": "C103E92AF85A06AFF112805BF0831F22C4D76F2FBCF87BC63B777DE3DD8F36F6",
+      "AST_Liora_fur_short_coat_R_00": "5155905C7B209AA25813C0D1CF40BA36BA8F4968D472A92BB9894C8F5E3CF87E",
+      "AST_Liora_fur_short_coat_R_01": "341ABAE72B39BD08EA0DF53763E4179EF49C7A348ECBEC7EE66C398FF23A4214",
+      "AST_Liora_fur_short_coat_R_02": "0C083CD8A7978D63BBFD511D2BA86605648DAE16C1FD0072AB76876E9364594F",
+      "AST_Liora_fur_short_coat_R_03": "D245631EAC91F72CC526A21B55195C13BA567A07E295C6AC85552648DA4A5465",
+      "AST_Liora_fur_short_coat_R_04": "9CCC1C522F6DE758545AFA3C57D46932003D3FFE19297323DDCB5E75695D6CBF",
+      "AST_Liora_fur_short_coat_R_05": "24C693CDE8F7C1B3CB237A88C268AFA4226F860CCEE9140B875C79956944ACED",
+      "AST_Liora_fur_short_coat_R_06": "0EBCCE9D2BDC5C4FA43C78FD95A8709BFB58B4487026F7AC8552CB27C7DF2E6E",
+      "AST_Liora_fur_short_coat_R_07": "33B684EED05BB4E5C310FCEDCDCD2DEF7C4DF9FCBDA5A99C6F80970F7579D15C",
+      "AST_Liora_v4_continuous_cheek_fluff_L": "5459898D5DBA05B9F17E58A9C3A63D4D7AD22DD4647F8EAFC50ED03E301DF3A4",
+      "AST_Liora_v4_continuous_cheek_fluff_R": "6A12503C206EDF2C556EBB451EA7894E3E69D74ED75F0C62B28F203F30031A94",
+      "AST_Liora_v4_continuous_cotton_plush": "345B97DBCF488FACBD5A7E004BF52050ACA08E75266A94125DCCC57EE1446B02",
+      "AST_Liora_v4_crown_sweep_L": "84EF8AF9B0442FBD5AE8402B3C303600C940722D2034E4274265040FD126C8BD",
+      "AST_Liora_v4_crown_sweep_R": "132573D0614FA258F05FB920382D881F87EAE9A8945730EF89E440B5455887B7",
+      "AST_liora_v2_body": "9F79DB22DB1C176A27DB7D826604A1D76FD3077BC4E02086F29D13BF138C168F",
+      "AST_liora_v2_continuous_rose_neck_harness": "8BD7028C06787186D9B427A552E197C00C37147596D5C5AA728A769CB2DC43DD",
+      "AST_liora_v2_cupped_ear_L": "7F8705E18477FDAF777456BB59C1514AEEF69050EFF22A3537342E415FC8A7DB",
+      "AST_liora_v2_cupped_ear_R": "4D1311927DB85B7000934B8789C5358722330BA4F02EEE3836727ACF2343FD2C",
+      "AST_liora_v2_curved_lavender_saddle_L": "CAA2192221B7138F8C4ED8698292D0D089E4299E1B50DD94AEC511BB1C2C216F",
+      "AST_liora_v2_curved_lavender_saddle_R": "E819E20D82807EA1484BA76F09775E8385AD7D595B092AB4958033C92671F783",
+      "AST_liora_v2_delicate_temple_star_L": "D59CBD96B375528241657A76462413C81B27030E2668F66FB59642392D01E118",
+      "AST_liora_v2_delicate_temple_star_R": "BECFB12BE706674DD27AB5BB9BB24F67FA7D69FCB70C0CDA6B5911C17E242B30",
+      "AST_liora_v2_double_angular_fore_cuff_L_0": "6EC63C8D39E456181F3A066C7F9D16365C299B7CED57FAEC8E51F6D6B216646C",
+      "AST_liora_v2_double_angular_fore_cuff_L_1": "F25292263431D08E60A029A73B83496DAF584A1A94F7C13387F6EF98974C13F4",
+      "AST_liora_v2_double_angular_fore_cuff_R_0": "776CDC1063FDC266D2FC8FEB3587E2CA7EFEDE8DEC09221532FCABA1C953DF0C",
+      "AST_liora_v2_double_angular_fore_cuff_R_1": "BC005827ACD059E0766C536DB815BB3DC96DCDAB8847D974CA522E872FA9B810",
+      "AST_liora_v2_ear_guard_blade_L0": "45FBB0B799A2646F5E31F3C8E8A4D62A9D311244847887BDB7BD7EBEFB0A23FA",
+      "AST_liora_v2_ear_guard_blade_L1": "DEA031D6DA85765CDA524A45838E440244EF90DADB8DDB1BD6D1DBBF852571FB",
+      "AST_liora_v2_ear_guard_blade_L2": "80AC4697D550E08180457E14EDDB406509D2420575746F96A60A478F28EC5FEF",
+      "AST_liora_v2_ear_guard_blade_R0": "364DB4885722B89E92A333BAAF2C291414868F14BDD3600559716E113DB316C8",
+      "AST_liora_v2_ear_guard_blade_R1": "451EB9B73F950D9FA98C5BF3821E4DE3E11D55BAA672B0E8BF0518AC00830273",
+      "AST_liora_v2_ear_guard_blade_R2": "E82288991A1F9AC5CD7D80FA390ED4034E1DB14E6583BCF6A386EAFDA29D0665",
+      "AST_liora_v2_fitted_lavender_shoulder_L": "A9334B01D55FAE82911A3746AA2CDB1AE8C1769DE601CCF81D8BF8C5B0A2D391",
+      "AST_liora_v2_fitted_lavender_shoulder_R": "4DFA7BDBABC31DADB32E1469FB47467D8483724CC7074D892CDF6A88828E0A1D",
+      "AST_liora_v2_forehead_upper_spark": "1D6AC18553B6FD90A4B04FA0F5618606FE97412996F2622AE477FB1F0F8E7CF1",
+      "AST_liora_v2_haunch_rose_star_L": "CE68B4A16B7AA51CEF581014F75E0F97AB2D43772FEBABCD814BE2206048D2A6",
+      "AST_liora_v2_haunch_rose_star_R": "44F9883E98B85355B798A5FA0A2077A0E5C32CD26C8CD7C89853FDBCFDFC5563",
+      "AST_liora_v2_lavender_ear_bowl_L": "8994603197CAB0A9C58B38EA78209E9DE9627E71387DAE372357D65ADD03D1D4",
+      "AST_liora_v2_lavender_ear_bowl_R": "56A58736D7C23A9B90B579376FAA955153D9F9A40B8CD0B2363F8A32E1DFF237",
+      "AST_liora_v2_long_breast_pendant_lilac_crystal": "8F52DF3627B343675D2C1329DB4D02D2917A9FDC60D42D1B08F8580DD8EA066D",
+      "AST_liora_v2_long_breast_pendant_rose_bezel": "5203E9BC30CB4537CBEDB945CB62705B7519EB4D42781B2FBF48F6FD04EBB837",
+      "AST_liora_v2_open_fore_cuff_diamond_L": "B6E29AC73F7C2EEDCC2CF0B91A8D19694A34B5A2C42ADA05445B07BD2A301F38",
+      "AST_liora_v2_open_fore_cuff_diamond_R": "8D143C00117B63ECA95847552E8D926080B1F1BA6B560A3F82C8A1DF288512D2",
+      "AST_liora_v2_open_forehead_diamond": "15928A7A99B7E6EADCE04107C71E0FFB6B9756892B16053F009BB0451B14AB10",
+      "AST_liora_v2_rose_body_girth": "9000D50B4F84B114640306AB6E8FED06AE4EC822B0D274E923B5A3D605F464B8",
+      "AST_liora_v2_rose_ear_guard_L-1": "04FCF85623270C647BF32D3B1A23C6893458632BF725274EC918CD925C9B5352",
+      "AST_liora_v2_rose_ear_guard_L1": "05004D8EF78055F06AF694E0AEF6B9586809D85A9745B0B314F924319578D520",
+      "AST_liora_v2_rose_ear_guard_R-1": "49C925D4B576FF205B2961D35244AF5023295096A8B6951235FD4915DD82380A",
+      "AST_liora_v2_rose_ear_guard_R1": "9901E88E5D2D775E9BB543AFF23E14780E02C8AF1F2564B625E1CDFC4453F78E",
+      "AST_liora_v2_shoulder_lilac_spark_L": "212374F4E0450B15C8DC2F47215EA4D71206BDDD8978296BEF29B67447206B4C",
+      "AST_liora_v2_shoulder_lilac_spark_R": "9B58E14B6F5118E27E8401013D68BF2C4654D049B59C070349A386E69025177F",
+      "AST_liora_v2_shoulder_rose_spark_L": "BBBE5042D8869B1E8C9FD6D6B3E31FEA9066188BF9CB6FB09B2040FA6E615BF1",
+      "AST_liora_v2_shoulder_rose_spark_R": "1A7175141C7A264982B0E38D6E5A81374EC7E2B56CF3139A01857A77D0D82446",
+      "AST_liora_v2_toe_crease_F-1-0.075": "149CDC80E874BD27670A6E10581136232D2ADD00B6C8635A9DFE1BA6B0D75CB7",
+      "AST_liora_v2_toe_crease_F-10.075": "8A6007C13677EEA440332EBB1CC8BBAD80F314BC2F77DCB14CB5A98A61C906FA",
+      "AST_liora_v2_toe_crease_F1-0.075": "07334F47987DDC8A47976A7474C767D0C0C0279D6E37B09DB65A784E5BC1B034",
+      "AST_liora_v2_toe_crease_F10.075": "3FEF57E20F70FAE0234822862580DCEA60AAD4810DDF5D1807DDFDD21BB09419",
+      "AST_liora_v2_toe_crease_H-1-0.075": "1BD2FABA44A98AC3E01363DA16244B5071C99D3C6A0842142DFD5888E6044285",
+      "AST_liora_v2_toe_crease_H-10.075": "3EB1B460C82E01E4493B03406D998785B4725B41DABCDBA3B1916557D0BA1FFE",
+      "AST_liora_v2_toe_crease_H1-0.075": "2BA51934947DE00CC25A7C9CF1D4F8D99574EB752673407AD16344B0E11E9821",
+      "AST_liora_v2_toe_crease_H10.075": "B58DC5B34E7AFC443DF35AC4B3C9D34F29A33C94910087B17050E82976645CD2",
+      "AST_liora_v2_upper_diamond_connector_lilac_crystal": "EA7A551320F1367EA3E90C7273B8609BBE20042FBCE48D37172CF84EEB544469",
+      "AST_liora_v2_upper_diamond_connector_rose_bezel": "4730FEDA9B27CAB0C1C3CA4F74F6901D191E76D6E4A0B44D80F5B09972011E99"
+    },
+    "protected_material_sha256": {
+      "AST_Liora_groomed_cream_fur": "C1151B3D40EF2AFD5ABBE6733304FF5133E1075758925BF622B74E8113E927DD",
+      "AST_Liora_v4_layered_cream_plush": "B11CFF9DFA19352C95B60E7F687D332408CAF537066DFD5AA101FC344F6F5850",
+      "AST_lo_crystal": "4407DC0C849D13E4D1D7FF41005A0F2FBE19F4C13FD707F65EF107022DE98540",
+      "AST_lo_crystal_dark": "4180EA16B224C002BCC5473E8AC40F3671AA2BA058EDA9F31F10A43FCC00D537",
+      "AST_lo_crystal_light": "5DA6C6B53384862579282405ADB94289170C432F4422A717099EB31E6081412B",
+      "AST_lo_crystal_lilac": "7686C19746C6A19581C6F21910B6439076F6C4B98289832D22FFB66165D1AE09",
+      "AST_lo_lavender": "AAF6F0CC1AC990B97032A0F7AF176A651900A05B1DB326628E07273A698BFB6D",
+      "AST_lo_lavender_light": "6A37F2CE7EEEAB7257F3CA11E9B806F2CD0E2A914CD8E9DBCC078C3BAA9ABF31",
+      "AST_lo_rose": "2F7A1934382ADA450F8143766DC243731FE67EE58F0B94D2A1C05F5108959A13",
+      "AST_lo_rose_dark": "398159063F3FE7AA8D00C2CB8A8E6EBEE69B3F395CF2875792A873AE3D004156",
+      "AST_lo_rose_light": "AB200D1F31389F6240740975A2839AADC06D0D2BCD08C2FCB82F8B37844F1530",
+      "AST_lv_fur": "D0FB1A5ABC3C3328FA7617DBB66B9659C3855E28DC906CA499FD0C74151342AD",
+      "AST_lv_inner": "AE37170FF5DC1FF77F7C38FE10A523DA71C3E5270E4C46A0A8CA8ECF146A10F6",
+      "AST_lv_rose": "B153CD7066BFF20A9A4AF24C97C17179ACA8BA51DDB296EB00B8F2A9CC1CCB20",
+      "AST_lv_rose_light": "35824136EC083C1D87AFA2CE77B7944A8A11910679351CEE9CE373A6A11B7504",
+      "AST_lv_shade": "4299033D48B3C859F8CFAC39492DF48477FA05FDBB79179FEAFAC0DAEC5F8049"
+    },
+    "original_face_geometry_sha256": {
+      "AST_liora_v2_eye_L": "893314FE1CF65E68DA5EC44124A32A6156327CDAE4E2B737EC318F3095B4C83E",
+      "AST_liora_v2_eye_L_catchlight": "93BC9D8C4F335ABF3ABE861217313B92714BEB700ABEF86E845C9AE18E5762ED",
+      "AST_liora_v2_eye_L_closed_lash": "E4F4D17E80EC36A17BC30C16A3E0A46604F390A8E9CE4D54B43ECA22B0BB1744",
+      "AST_liora_v2_eye_L_closed_lid": "8C0C101AE1B8F7F6DB1274E6A0FFF08F1E5EDBAADA58A885D514DDF8E784DAB1",
+      "AST_liora_v2_eye_L_lash_wing": "C3506A5A86B572D9CEB71BDB0A29CBA5017C6FA6F916B49159263954481E18DB",
+      "AST_liora_v2_eye_L_lower_lid": "5C40705DEF8024B5A11113B3832E074B6CE3A60F71B7BFDAF55D0FB4FD75FDC8",
+      "AST_liora_v2_eye_L_pinlight": "F46541E987D682B37837C7D368B5C6790CA16C8E3DCC43701279C2B983857AF1",
+      "AST_liora_v2_eye_L_sculpted_orbital_skin": "7B31D6389992677F9159DFE9C3684B874B22243C43E57C63FF5F2CFDC3814942",
+      "AST_liora_v2_eye_L_tapered_upper_lid": "581BB35F1EF94E310E860C44F41C5F52F060A47F24180052CDDA5087E4496674",
+      "AST_liora_v2_eye_R": "421F31F4539036F27E448DF446CFBD3F9AB1D27BC647E7E607D748296919097B",
+      "AST_liora_v2_eye_R_catchlight": "D978B1F75910EA3C914B318A406F9189EB2E3DDB20AE67CF5D88B1F65726CADD",
+      "AST_liora_v2_eye_R_closed_lash": "77850226A4F52E36DDFE57B8FF2396BEE38E90FB70AE033B273D52012BA10E99",
+      "AST_liora_v2_eye_R_closed_lid": "C44B7657CB1F85A4A65A97327E755A792EC2331135B349A79C959B0060592756",
+      "AST_liora_v2_eye_R_lash_wing": "585EB18D5928296364EAA16EB797AD3EE3F229598FE7E919F884DD9C74817496",
+      "AST_liora_v2_eye_R_lower_lid": "B6B50ECFBEA87287B5297EA57FAFC8F51C8DA92EEEAB53765DC8EA42DA21B76B",
+      "AST_liora_v2_eye_R_pinlight": "F5C5EB67B9838E7FE38328E47B412B83F1DB824183BC27D543F178453F8EF34F",
+      "AST_liora_v2_eye_R_sculpted_orbital_skin": "B583A84E36A8FC280EB97231E3CBAE88B153F9BEB01AAB520CFCF14EF4A3A849",
+      "AST_liora_v2_eye_R_tapered_upper_lid": "0F7EA930F7C67C195CBA9619EA7D54B70810F160F47A05DF8C7846A094E4862A",
+      "AST_liora_v2_gentle_smile_-1": "9C212C28D76A4FE8AA21551CF8E12302E47B5596E558C1954DF5073F4F883DB5",
+      "AST_liora_v2_gentle_smile_1": "43CE184603BC54F2B6CD6942C5C81F0FE3F51B6C69C78E35C4236761499995AC",
+      "AST_liora_v2_head": "65D489ADE6A550CF89FBA99FF4DC103CEB83883193E7EB338A80A81B3E9A3778",
+      "AST_liora_v2_philtrum": "73BEC7F8B6B6C2F32110AC61DF6EBBF751E34D97BEA1E698F10D72A95F279B49",
+      "AST_liora_v2_soft_rose_nose": "EF533E695E166EC1BA6793656E01B56DA02C6E99105D79F9CE0036ED1504A094",
+      "AST_liora_v2_whisker_pore_-1_0": "A6B86BC5EF6F66FD03F5BDAE541DE9EE79100DDB86CA68584B0BEFC7329BA7E6",
+      "AST_liora_v2_whisker_pore_-1_1": "1ECF1D88D657751870316EE09D70529C585CB1D617DE6EB5B281D1D6D4B73217",
+      "AST_liora_v2_whisker_pore_-1_2": "7E8C9561A0AAA3110685430F7940EE6B30CAAFE2A1EA4750C55121E8333DF477",
+      "AST_liora_v2_whisker_pore_1_0": "11FDD441D6630F86D67E0908C220068EBE09364B65CDBCDDE5B63F0E9FE62372",
+      "AST_liora_v2_whisker_pore_1_1": "703561803E600DF47023273D9072FC204527DBF73A48D4776218CB1B550A22B0",
+      "AST_liora_v2_whisker_pore_1_2": "7EE0532C69EB5EFC39BE74E634F99FBDDCC4283BD27B9F85BB4B0C51E5731F8B"
+    },
+    "candidate_face_geometry_sha256": {
+      "AST_liora_v2_eye_L_closed_lash": "1C03FB522DC82E2BC5F2617557AB71781DB12A28F0AFCF6D94AD9460D5F64A34",
+      "AST_liora_v2_eye_L_closed_lid": "4C0F6D91700DDE77E66B8494393BBA440B92341CBE0E291F198CC02710670937",
+      "AST_liora_v2_eye_R_closed_lash": "7A54080330CEC183FE874DA76F71D8F3391E9FDF500E55D96CE39A28C275B731",
+      "AST_liora_v2_eye_R_closed_lid": "C02555DB13950CB17EF1827D597653A167DE49A930DECCA736F4CCB54A4715DF",
+      "AST_liora_v2_head": "0FDD39987033DF83F682DB76E5944A8D9FCC5DDC2FE1F0C90C77D24C16472CC9",
+      "AST_liora_v5_eye_L": "B3E29DB5848453586AB6F941A784946745C61F41EAD00881AE2B26C896D6FE8A",
+      "AST_liora_v5_eye_L_catchlight": "93C50A702FDD59F92D6314D255D5BB9C6A1D553D1FF10EEB26DEE4EC126AA803",
+      "AST_liora_v5_eye_L_integrated_orbital_flesh": "7F49B89159727BC3C91D60DC35020DE2BC86D0418D9A2C77EE7B588B3521365E",
+      "AST_liora_v5_eye_L_lower_waterline": "80AF48A7B2DFFC5E465D751DCAEBB5E31A1C66EA97D9216444E40AF403CE8B30",
+      "AST_liora_v5_eye_L_outer_lash_wing": "9CE4CB3BD521EC41AC06FC4C68567FA2FFAB484AB692DBBBABFAE53E147374D3",
+      "AST_liora_v5_eye_L_pinlight": "4388891B83666DCF7193019C59572EF38B0779F464C5372323FA7B61AE03C4D9",
+      "AST_liora_v5_eye_L_tapered_upper_lash": "42C6B6624B257F3811771942C1AE4D6BFB697B4F3BA3FB094BC7D3C0324D3FF7",
+      "AST_liora_v5_eye_R": "35260B7B0422AAE1CBBD0C77FA46D07CBE6B870EE8A19239A56CB36BE1A25EF1",
+      "AST_liora_v5_eye_R_catchlight": "46E0D51B1883C5FDAC17583C9C20420F7E873FE1657C737021F9079AEBBB893B",
+      "AST_liora_v5_eye_R_integrated_orbital_flesh": "788BC07E0B5EFC7E385B8A41D31768ACC5B42143033B226E17948FBD33DC01BB",
+      "AST_liora_v5_eye_R_lower_waterline": "15B2074B2AE873238780E2117234740373D3BF58A7E5D67BC6761E9AA1A3A4A8",
+      "AST_liora_v5_eye_R_outer_lash_wing": "6116AD090545C57F56C419584F47F98FB5F33BB3E7279278D102C1F0BDEAF539",
+      "AST_liora_v5_eye_R_pinlight": "FCA0FBF91AA0A3F2A6F9435035F6C9EEBE0055999C4887B218A1025E0E55414F",
+      "AST_liora_v5_eye_R_tapered_upper_lash": "6A0551300FCC18F82F0C6374A7B5AD6DF7E7AA57AC00F64858DFB1106CE4EA9A",
+      "AST_liora_v5_gentle_smile_-1": "7FB387637468624044EB4DE3B2A6AE943957B962B3A44E6571EE1D9B2CD993D8",
+      "AST_liora_v5_gentle_smile_1": "2D117DE3A69BF5105639B0DCD567E8327BE9CBD8550CC57EA5EDE9F104FB9707",
+      "AST_liora_v5_rounded_heart_nose": "1E21D39311FAD0883654DB36D95292EE30D0B47D73AEF6340191570AFAEAB08E",
+      "AST_liora_v5_short_philtrum": "4D159F315875CAAA16A2591ED789A50BFD682BC6F3FAA06857E36EF292946A68",
+      "AST_liora_v5_whisker_pore_-1_0": "D030F50A384FFA84482AEFB18EE43E03E5367F0F24E433B1198AE887EB541021",
+      "AST_liora_v5_whisker_pore_-1_1": "8707ADF911633A3851369E2B18CFA5CAFD634A07355D1C0634FE87A73541ACF2",
+      "AST_liora_v5_whisker_pore_-1_2": "100E6771F684B877F52D55CA774E3B5DA16A11D6FBEE060F826E45F21A5138FE",
+      "AST_liora_v5_whisker_pore_1_0": "110CE36640C03C5907E8AF0C356B216B8F9AFBF3EE1BC4FFB0040DE69870F09A",
+      "AST_liora_v5_whisker_pore_1_1": "E7E6D7B77E0F25CE5AC0194C0C361B1BCB2CC3AAD8D00C54E2956B0AC70DD6FA",
+      "AST_liora_v5_whisker_pore_1_2": "842B7C4FB3DA7DA7E40FE8D1E4EC442ABB7DEF1F0AA6FD0509B8494874187C90"
+    },
+    "original_lid_pivots": {
+      "AST_liora_v2_eye_R_closed_lid": [
+        -0.43792176246643066,
+        -1.4196175336837769,
+        2.4907050132751465
+      ],
+      "AST_liora_v2_eye_R_closed_lash": [
+        -0.43792176246643066,
+        -1.4196175336837769,
+        2.4907050132751465
+      ],
+      "AST_liora_v2_eye_L_closed_lid": [
+        0.4378165006637573,
+        -1.4194576740264893,
+        2.490699052810669
+      ],
+      "AST_liora_v2_eye_L_closed_lash": [
+        0.4378165006637573,
+        -1.4194576740264893,
+        2.490699052810669
+      ]
+    },
+    "candidate_lid_pivots": {
+      "AST_liora_v2_eye_L_closed_lid": [
+        0.4378165006637573,
+        -1.4194576740264893,
+        2.490699052810669
+      ],
+      "AST_liora_v2_eye_L_closed_lash": [
+        0.4378165006637573,
+        -1.4194576740264893,
+        2.490699052810669
+      ],
+      "AST_liora_v2_eye_R_closed_lid": [
+        -0.43792176246643066,
+        -1.4196175336837769,
+        2.4907050132751465
+      ],
+      "AST_liora_v2_eye_R_closed_lash": [
+        -0.43792176246643066,
+        -1.4196175336837769,
+        2.4907050132751465
+      ]
+    },
+    "protected_object_count": 89,
+    "protected_material_count": 16,
+    "invalid_face_objects": []
+  },
+  "original_rig": {
+    "rest_sha256": "82C3E8DAB8AB4C2CC58195DFA445C8E8CB89B82D1A3731E4D366CE9AC47A8A3A",
+    "behavior_sha256": "37E2CB7157322B1B022EDA60C976DC4F934B2866BB43D2B7C6645C19C4A16C75",
+    "bones": 13,
+    "fps": 30,
+    "fps_base": 1.0,
+    "actions": {
+      "blink": {
+        "sha256": "AB6E6DF4DD4B43A8D6BE3569F9AF4B77E456818F40BBA69033EC0FB2C7489846",
+        "curve_count": 117,
+        "key_count": 1170,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          19.0
+        ]
+      },
+      "eat": {
+        "sha256": "E4508D090AB857715E8D1611949F970A7333A0EE55013F739C17C0476B050F36",
+        "curve_count": 117,
+        "key_count": 5382,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          91.0
+        ]
+      },
+      "happy": {
+        "sha256": "13CF20C4C6A146B2F88DA6BD0CFD14F6EC1F767D28FFBF9DF3E6F9FBF033A213",
+        "curve_count": 117,
+        "key_count": 3627,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          61.0
+        ]
+      },
+      "idle": {
+        "sha256": "A240D6BBF1444FFA54AFEB80ABABFA3AA14B739B41F52289393FA3067D2DFF13",
+        "curve_count": 117,
+        "key_count": 7137,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          121.0
+        ]
+      },
+      "pet_reaction": {
+        "sha256": "4E899373AA1FC31B0A07364991110E95D17E4158EBE1B83BB00BBC78A532FC21",
+        "curve_count": 117,
+        "key_count": 4563,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          76.0
+        ]
+      },
+      "play": {
+        "sha256": "D91B39E250AA0B5FC2F3B78EFC5E170E23E9066C598FA99B703DF025CE1BDAE1",
+        "curve_count": 117,
+        "key_count": 4797,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          81.0
+        ]
+      },
+      "sleep": {
+        "sha256": "B1DCFD518CB501C0C69249317CE2EBDDDDE28761FCFE26755AFF712E776E806B",
+        "curve_count": 117,
+        "key_count": 7137,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          121.0
+        ]
+      },
+      "wake": {
+        "sha256": "621ECBBD42886481500335BF854A02F69C6E56EEDC8A8D03B7DD787FE322C62A",
+        "curve_count": 117,
+        "key_count": 3627,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          61.0
+        ]
+      },
+      "walk": {
+        "sha256": "E70843FEAC80B2BC471FCDA0E3783729CB28E40C060C6097CD5664C56396E7D3",
+        "curve_count": 117,
+        "key_count": 2925,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          49.0
+        ]
+      }
+    }
+  },
+  "candidate_rig": {
+    "rest_sha256": "82C3E8DAB8AB4C2CC58195DFA445C8E8CB89B82D1A3731E4D366CE9AC47A8A3A",
+    "behavior_sha256": "37E2CB7157322B1B022EDA60C976DC4F934B2866BB43D2B7C6645C19C4A16C75",
+    "bones": 13,
+    "fps": 30,
+    "fps_base": 1.0,
+    "actions": {
+      "blink": {
+        "sha256": "AB6E6DF4DD4B43A8D6BE3569F9AF4B77E456818F40BBA69033EC0FB2C7489846",
+        "curve_count": 117,
+        "key_count": 1170,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          19.0
+        ]
+      },
+      "eat": {
+        "sha256": "E4508D090AB857715E8D1611949F970A7333A0EE55013F739C17C0476B050F36",
+        "curve_count": 117,
+        "key_count": 5382,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          91.0
+        ]
+      },
+      "happy": {
+        "sha256": "13CF20C4C6A146B2F88DA6BD0CFD14F6EC1F767D28FFBF9DF3E6F9FBF033A213",
+        "curve_count": 117,
+        "key_count": 3627,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          61.0
+        ]
+      },
+      "idle": {
+        "sha256": "A240D6BBF1444FFA54AFEB80ABABFA3AA14B739B41F52289393FA3067D2DFF13",
+        "curve_count": 117,
+        "key_count": 7137,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          121.0
+        ]
+      },
+      "pet_reaction": {
+        "sha256": "4E899373AA1FC31B0A07364991110E95D17E4158EBE1B83BB00BBC78A532FC21",
+        "curve_count": 117,
+        "key_count": 4563,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          76.0
+        ]
+      },
+      "play": {
+        "sha256": "D91B39E250AA0B5FC2F3B78EFC5E170E23E9066C598FA99B703DF025CE1BDAE1",
+        "curve_count": 117,
+        "key_count": 4797,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          81.0
+        ]
+      },
+      "sleep": {
+        "sha256": "B1DCFD518CB501C0C69249317CE2EBDDDDE28761FCFE26755AFF712E776E806B",
+        "curve_count": 117,
+        "key_count": 7137,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          121.0
+        ]
+      },
+      "wake": {
+        "sha256": "621ECBBD42886481500335BF854A02F69C6E56EEDC8A8D03B7DD787FE322C62A",
+        "curve_count": 117,
+        "key_count": 3627,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          61.0
+        ]
+      },
+      "walk": {
+        "sha256": "E70843FEAC80B2BC471FCDA0E3783729CB28E40C060C6097CD5664C56396E7D3",
+        "curve_count": 117,
+        "key_count": 2925,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          49.0
+        ]
+      }
+    }
+  },
+  "motion_comparison": {
+    "idle": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "blink": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "happy": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "eat": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "play": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "pet_reaction": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "sleep": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "wake": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "walk": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    }
+  },
+  "source_blink_samples": [
+    {
+      "frame": 1,
+      "evaluated_vertices": 247023,
+      "nonfinite_coordinates": 0
+    },
+    {
+      "frame": 5,
+      "evaluated_vertices": 247023,
+      "nonfinite_coordinates": 0
+    },
+    {
+      "frame": 7,
+      "evaluated_vertices": 247023,
+      "nonfinite_coordinates": 0
+    },
+    {
+      "frame": 8,
+      "evaluated_vertices": 247023,
+      "nonfinite_coordinates": 0
+    },
+    {
+      "frame": 9,
+      "evaluated_vertices": 247023,
+      "nonfinite_coordinates": 0
+    },
+    {
+      "frame": 10,
+      "evaluated_vertices": 247023,
+      "nonfinite_coordinates": 0
+    },
+    {
+      "frame": 12,
+      "evaluated_vertices": 247023,
+      "nonfinite_coordinates": 0
+    },
+    {
+      "frame": 16,
+      "evaluated_vertices": 247023,
+      "nonfinite_coordinates": 0
+    },
+    {
+      "frame": 24,
+      "evaluated_vertices": 247023,
+      "nonfinite_coordinates": 0
+    }
+  ],
+  "source_views": {
+    "face-hero": {
+      "file": "assets/3d/reference/rabbit/sculpt-v005/source/rabbit-face-hero.png",
+      "sha256": "88302FEB5696D18B8C62D6AC0E1FECE8E1CD82223C5CD41D37FA4D6C482B9879",
+      "clip": "idle",
+      "frame": 1
+    },
+    "face-front": {
+      "file": "assets/3d/reference/rabbit/sculpt-v005/source/rabbit-face-front.png",
+      "sha256": "A8545550EDDDB08D469D46B0C38E99817B8D6FE08F205EA1630417D66B2CD809",
+      "clip": "idle",
+      "frame": 1
+    },
+    "face-side": {
+      "file": "assets/3d/reference/rabbit/sculpt-v005/source/rabbit-face-side.png",
+      "sha256": "8CF0BE8C33855E2E6E16919E587B6B2397DD3019FFD4BFF1DF24B1EFAFE07BE0",
+      "clip": "idle",
+      "frame": 1
+    },
+    "blink-early": {
+      "file": "assets/3d/reference/rabbit/sculpt-v005/source/rabbit-blink-early.png",
+      "sha256": "3A573D061E1225990267B82FD285FBFFE09B98EB30CB598237A0288059F1DF4F",
+      "clip": "blink",
+      "frame": 5
+    },
+    "blink-partial": {
+      "file": "assets/3d/reference/rabbit/sculpt-v005/source/rabbit-blink-partial.png",
+      "sha256": "601CE0489A2C8975F3F7F95B802C4DC9EABF3A5BD8AFE891937D3E6455B85038",
+      "clip": "blink",
+      "frame": 7
+    },
+    "blink-closed": {
+      "file": "assets/3d/reference/rabbit/sculpt-v005/source/rabbit-blink-closed.png",
+      "sha256": "BC10EF2DBF568D0FB9BC401C357F1AD38C0B398BD095C0424DBB555A22612730",
+      "clip": "blink",
+      "frame": 10
+    },
+    "hero": {
+      "file": "assets/3d/reference/rabbit/sculpt-v005/source/rabbit-hero.png",
+      "sha256": "521756E8E071E349C1CEB9AE1F761F3BF762737759CD5914306D80BE29716EED",
+      "clip": "idle",
+      "frame": 1
+    },
+    "rear": {
+      "file": "assets/3d/reference/rabbit/sculpt-v005/source/rabbit-rear.png",
+      "sha256": "98FD5B25F8B45D446DB8EA5B7A26EABEABB789EF710AED723B735AF70B4890CF",
+      "clip": "idle",
+      "frame": 1
+    },
+    "body-hero": {
+      "file": "assets/3d/reference/rabbit/sculpt-v005/source/rabbit-body-hero.png",
+      "sha256": "F1B229B9426A7BE83EA9A380117DBA7A42C8178EBE555E8495EE0525D7FFEE63",
+      "clip": "idle",
+      "frame": 1
+    }
+  },
+  "import_views": {
+    "face-hero": {
+      "file": "assets/3d/reference/rabbit/sculpt-v005/import/rabbit-face-hero.png",
+      "sha256": "629B2822266A2FB1B935A1E29785BDC94DB63E37640673A8140C9C0759C780F7",
+      "clip": "idle",
+      "frame": 1
+    },
+    "face-front": {
+      "file": "assets/3d/reference/rabbit/sculpt-v005/import/rabbit-face-front.png",
+      "sha256": "BAA79F11BF175442AB9FC80E6659033D81F9D7D7D999AE22DDC922B7077CCBDA",
+      "clip": "idle",
+      "frame": 1
+    },
+    "face-side": {
+      "file": "assets/3d/reference/rabbit/sculpt-v005/import/rabbit-face-side.png",
+      "sha256": "463229568B7E9152931172297D1342DCE17E5BAF2BB2DB854E3A5F62B6DB0933",
+      "clip": "idle",
+      "frame": 1
+    },
+    "blink-early": {
+      "file": "assets/3d/reference/rabbit/sculpt-v005/import/rabbit-blink-early.png",
+      "sha256": "FC49C502780415014048F48640C623FB26131199BB75B0700EB2E3AA388A0D1F",
+      "clip": "blink",
+      "frame": 5
+    },
+    "blink-partial": {
+      "file": "assets/3d/reference/rabbit/sculpt-v005/import/rabbit-blink-partial.png",
+      "sha256": "0646FBAB2E9FC8C9B7ED54D76FA0C60509126E52AAC8B099657C670BEFBF5A49",
+      "clip": "blink",
+      "frame": 7
+    },
+    "blink-closed": {
+      "file": "assets/3d/reference/rabbit/sculpt-v005/import/rabbit-blink-closed.png",
+      "sha256": "DCF450B7DB23C79A96AAE387B55D562E3EA4135B7044E268FE4EE47BC80783EC",
+      "clip": "blink",
+      "frame": 10
+    },
+    "hero": {
+      "file": "assets/3d/reference/rabbit/sculpt-v005/import/rabbit-hero.png",
+      "sha256": "450955E4FB74DB7E46FC6711E27AA838D8ED80F588B9567A9586FD69000C1FFC",
+      "clip": "idle",
+      "frame": 1
+    },
+    "body-hero": {
+      "file": "assets/3d/reference/rabbit/sculpt-v005/import/rabbit-body-hero.png",
+      "sha256": "2D38C127CCF9800F3C045D3E0D55D43CED9C874EFB6C1FCE4CA1BF4A3542D40D",
+      "clip": "idle",
+      "frame": 1
+    }
+  },
+  "baseline_views": {
+    "face-hero": {
+      "file": "assets/3d/reference/rabbit/sculpt-v005/baseline/rabbit-face-hero.png",
+      "sha256": "AC544D6B33CFDFE79D06429C16F7D5B1C1F5AF423817AC70803A40E795BC5772",
+      "clip": "idle",
+      "frame": 1
+    },
+    "face-front": {
+      "file": "assets/3d/reference/rabbit/sculpt-v005/baseline/rabbit-face-front.png",
+      "sha256": "DAAAD84720024CCD88EB9C95EEC955C69070B4F81238B5E01F46E3ECE430E267",
+      "clip": "idle",
+      "frame": 1
+    },
+    "face-side": {
+      "file": "assets/3d/reference/rabbit/sculpt-v005/baseline/rabbit-face-side.png",
+      "sha256": "FDE5BAC86264803BB7E4645F97B16EC9C01FC0ED5E9C85B9360D72DFC36643C6",
+      "clip": "idle",
+      "frame": 1
+    }
+  },
+  "hair_evidence": null,
+  "checks": {
+    "original_rest_rig_unchanged": true,
+    "original_constraints_drivers_unchanged": true,
+    "all_original_action_data_unchanged": true,
+    "original_frame_rate_unchanged": true,
+    "explicit_face_only_allowlist": true,
+    "all_unedited_source_objects_retained": true,
+    "nonface_geometry_unchanged": true,
+    "nonface_materials_unchanged": true,
+    "original_lid_pivots_unchanged": true,
+    "meaningful_face_geometry_refinement": true,
+    "face_geometry_survives_source_reopen": true,
+    "all_protected_geometry_survives_source_reopen": true,
+    "all_protected_materials_survive_source_reopen": true,
+    "finite_evaluated_partial_blinks": true,
+    "two_character_meshes": true,
+    "exact_distinct_components": true,
+    "one_original_shared_skin": true,
+    "nine_original_clips": true,
+    "only_public_extras": true,
+    "skinned_triangle_primitives": true,
+    "under_40_primitives": true,
+    "within_species_triangle_budget": true,
+    "self_contained_no_projection": true,
+    "no_editor_stage": true,
+    "meshopt": true,
+    "within_species_byte_budget": true,
+    "finite_imported_geometry": true,
+    "valid_normalized_known_weights": true,
+    "bounded_importer_triangle_difference": true,
+    "nine_clips_match_historical_import": true,
+    "two_imported_components": true,
+    "imported_equipment_metadata": true,
+    "six_facial_views_present": true,
+    "all_historical_and_builder_inputs_unchanged": true
+  },
+  "passed": true,
+  "human_likeness_accepted": false,
+  "mobile_performance_accepted": false,
+  "paid_provider_used": false,
+  "projection_used": false,
+  "nonface_unchanged": true,
+  "package_status": "Local hash-checked Blender delivery; no game-dev canonical receipt.",
+  "animation_limit": "Original full action/rest/driver RNA unchanged; nine fresh GLB skin-matrix samples per clip. Original center-scale lids retained; no anatomical closure or collision-free motion claim.",
+  "likeness_limit": "Face-only sculpt interpreted from unchanged original artwork. Hidden angles inferred. Not a 100-percent likeness or human identity acceptance claim.",
+  "publication_amendment": {
+    "id": "metadata-clean-2026-09-07",
+    "record": "assets/3d/publication/2026-09-07/amendment.json",
+    "original_document_sha256": "5427695CC689803AE4607349F30110C28B245C22EA8971F5B6948CB4D2FB95F6",
+    "authoring_record": "assets/3d/publication/2026-09-07/authoring-records/assets/3d/reference/rabbit/sculpt-v005/validation.json",
+    "authoring_record_status": "exact-public-safe-original",
+    "notice": "Metadata-only publication derivative, not a rerun of the historical builder or validator. File digest and size bindings identify publication copies; all measured geometry, materials, rig, action, motion and acceptance evidence remains historical and unchanged. Consult the original authoring record and amendment binding log."
+  }
+}

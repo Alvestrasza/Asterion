@@ -1,0 +1,1572 @@
+{
+  "schema": "asterion-face-only-v1",
+  "kind": "cat",
+  "name": "Nyra",
+  "version": "sculpt-v005",
+  "source_sha256": "078411B0A28FBA674520DDB7DFA6AA9AB52726DA2BD1CEDD26210676B6251041",
+  "model_sha256": "C036971EE8BF6CED92E27C0D5604F49D7B240349ABC1DD17D67B4B22D102EFE3",
+  "reference_input": "public/assets/companions/cat.png",
+  "reference_sha256": "C996F1500869602E32B24047F8D1A6FAB6018CE87514AA22F017A09480EAEFED",
+  "input_sha256": {
+    "assets/3d/source/cat/sculpt-v004/cat-sculpt-v004.blend": "113E5213FE5FF127FADE01BA39C27422E057ECDDA3C3624AC1B15973128D97AB",
+    "public/assets/3d/cat/cat-sculpt-v004.glb": "5AF9E37CF5B488B302E1871606A2BC96BBA266C19CBD2BCFA806B0E3089622D5",
+    "public/assets/companions/cat.png": "C996F1500869602E32B24047F8D1A6FAB6018CE87514AA22F017A09480EAEFED",
+    "assets/3d/source/companions/sculpt-v001/common.py": "A6DF036A5B3F6FAA3C74740382998D829D45C9E2734D91A285F9369764C21F9E",
+    "assets/3d/source/asterion/sculpt-v001/build_sculpt.py": "9A81C430E8FD07CE520BBA554C78845A508F22E5FB89E524BF515D8BF8415621",
+    "assets/3d/source/asterion/sculpt-v001/rig_delivery.py": "8758D105E70AB5405F61A48A531154CC591EAC0D82B167788F1D0785A16CDFF0",
+    "assets/3d/source/asterion/sculpt-v002/validate_refinement.py": "8C541F26C2D2546FB142988D10F07EDF51C891D1C81F02065C7B62CE01F78EFD",
+    "assets/3d/source/asterion/sculpt-v003/build_head_study.py": "A3B22323201D30A3BD9459985F8F7741A44545010A84D27CC5912E1C8A85E0F2",
+    "assets/3d/source/asterion/sculpt-v004/export_equipment.py": "C805B4740463215AE5CC9D314D14966F2BDF91A00FB82D05054BE0BBB8ED930B",
+    "assets/3d/source/companions/sculpt-v004/build.py": "C6FBCA99D1117722B07933B90795DBFFA37DC22B399ECD6B339EAFF3C063A6BD",
+    "assets/3d/source/companions/sculpt-v004/refinements.py": "6247CEA1AE30B56B6FD3D23DEDEF1DD99BCD8A7B9158AA0576340AA2B8F89BCF",
+    "assets/3d/source/companions/sculpt-v004/export_equipment.py": "5EDB676641BE58BDE353213F6DA4F7F7662B76A08F586D0E7DADA7006AF343CF",
+    "assets/3d/source/cat/sculpt-v002/nyra_detail.py": "5DC1C07EAE70AE7C635D4C7026263D8D715EAE097EAD4904299B81D4405BC27B",
+    "assets/3d/source/companions/sculpt-v005/build.py": "2CD3C4D70E953C8BDBDDD01157745474A213968016F12BC3494BE8FD99C793BE",
+    "assets/3d/source/companions/sculpt-v005/contract.py": "F6829E7B890BA3B1108700B847CBB2C4CD532042233BD8049CC26B3A8522984E",
+    "assets/3d/source/companions/sculpt-v005/guards.py": "C98E5A25B553C56D016324F1AADE2669BEA28F3B2E73F5D883A74EBAEB599EF4",
+    "assets/3d/source/companions/sculpt-v005/feline_canine_faces.py": "E7063109E9EC68D995913009A55FB7EF4C229C353CB4750D6B74345F976D2E59"
+  },
+  "blender": "5.2.1 LTS",
+  "components": {
+    "body": {
+      "mesh": 1,
+      "skin": 0,
+      "triangles": 1463026,
+      "primitives": 8
+    },
+    "armor": {
+      "mesh": 0,
+      "skin": 0,
+      "triangles": 48952,
+      "primitives": 6
+    }
+  },
+  "triangles": 1511978,
+  "draw_calls": 14,
+  "materials": 14,
+  "bones": 13,
+  "clips": [
+    "idle",
+    "blink",
+    "happy",
+    "eat",
+    "play",
+    "pet_reaction",
+    "sleep",
+    "wake",
+    "walk"
+  ],
+  "compression_lossless": false,
+  "bytes": 18383140,
+  "geometry": {
+    "vertices": 759765,
+    "triangles": 1511976,
+    "nonfinite_vertices": 0,
+    "nonfinite_transforms": 0,
+    "unweighted_vertices": 0,
+    "invalid_weights": 0,
+    "unknown_weights": 0,
+    "over_four_weights": 0,
+    "max_influences": 2,
+    "bounds_min": [
+      -1.0878907442092896,
+      -1.7246092557907104,
+      -0.006347879767417908
+    ],
+    "bounds_max": [
+      1.0878907442092896,
+      3.390625,
+      3.880859136581421
+    ],
+    "span": [
+      2.175781488418579,
+      5.1152342557907104,
+      3.887207016348839
+    ]
+  },
+  "triangle_count_evidence": {
+    "authored": 1511978,
+    "imported": 1511976,
+    "exact_equal": false,
+    "triangle_loss": 2,
+    "relative_loss": 1.322770569413047e-06,
+    "maximum_allowed_loss": 30,
+    "relative_tolerance": 2e-05,
+    "passed": true,
+    "limit": "Count difference only; individual omitted triangle degeneracy is not proven by this check."
+  },
+  "changes": {
+    "notes": "Face-only integrated orbital curvature, larger dark pupils, connected whisker pads and softened facial fur.",
+    "edited_objects": [
+      {
+        "name": "AST_nyra_v2_head",
+        "operation": "Anatomical orbital aperture reshaped with the ocular family",
+        "max_displacement": 0.046524589016612855
+      },
+      {
+        "name": "AST_nyra_v2_eye_L_skin_annulus",
+        "operation": "Curved integrated eye surface and matching original blink shell",
+        "max_displacement": 0.061486579488044
+      },
+      {
+        "name": "AST_nyra_v2_eye_L",
+        "operation": "Curved integrated eye surface and matching original blink shell",
+        "max_displacement": 0.06148615883888939
+      },
+      {
+        "name": "AST_nyra_v2_eye_L_upper_lid",
+        "operation": "Curved integrated eye surface and matching original blink shell",
+        "max_displacement": 0.06198922060824852
+      },
+      {
+        "name": "AST_nyra_v2_eye_L_upper_lid",
+        "operation": "Thinner lid margin without the raised button-eye rim",
+        "max_displacement": 0.003079053958342701
+      },
+      {
+        "name": "AST_nyra_v2_eye_L_lower_lid",
+        "operation": "Curved integrated eye surface and matching original blink shell",
+        "max_displacement": 0.062017440290268164
+      },
+      {
+        "name": "AST_nyra_v2_eye_L_lower_lid",
+        "operation": "Thinner lid margin without the raised button-eye rim",
+        "max_displacement": 0.0021046337823327154
+      },
+      {
+        "name": "AST_nyra_v2_eye_L_lash_wing",
+        "operation": "Curved integrated eye surface and matching original blink shell",
+        "max_displacement": 0.0649674881078726
+      },
+      {
+        "name": "AST_nyra_v2_eye_L_catchlight",
+        "operation": "Curved integrated eye surface and matching original blink shell",
+        "max_displacement": 0.05397515861447415
+      },
+      {
+        "name": "AST_nyra_v2_eye_L_pinlight",
+        "operation": "Curved integrated eye surface and matching original blink shell",
+        "max_displacement": 0.038728584211515246
+      },
+      {
+        "name": "AST_nyra_v2_eye_L_closed_lid",
+        "operation": "Curved integrated eye surface and matching original blink shell",
+        "max_displacement": 0.06330503655687197
+      },
+      {
+        "name": "AST_nyra_v2_eye_L_closed_lash",
+        "operation": "Curved integrated eye surface and matching original blink shell",
+        "max_displacement": 0.05955923820220065
+      },
+      {
+        "name": "AST_nyra_v2_eye_L_lash_wing",
+        "operation": "Continuous tapered outer lash sewn to the reshaped eye corner",
+        "max_displacement": 0.04944425262892239
+      },
+      {
+        "name": "AST_nyra_v2_head",
+        "operation": "Anatomical orbital aperture reshaped with the ocular family",
+        "max_displacement": 0.04652448093543536
+      },
+      {
+        "name": "AST_nyra_v2_eye_R_skin_annulus",
+        "operation": "Curved integrated eye surface and matching original blink shell",
+        "max_displacement": 0.061112413191950585
+      },
+      {
+        "name": "AST_nyra_v2_eye_R",
+        "operation": "Curved integrated eye surface and matching original blink shell",
+        "max_displacement": 0.0611120275462118
+      },
+      {
+        "name": "AST_nyra_v2_eye_R_upper_lid",
+        "operation": "Curved integrated eye surface and matching original blink shell",
+        "max_displacement": 0.06165036468479165
+      },
+      {
+        "name": "AST_nyra_v2_eye_R_upper_lid",
+        "operation": "Thinner lid margin without the raised button-eye rim",
+        "max_displacement": 0.003079279113990213
+      },
+      {
+        "name": "AST_nyra_v2_eye_R_lower_lid",
+        "operation": "Curved integrated eye surface and matching original blink shell",
+        "max_displacement": 0.061663040500758694
+      },
+      {
+        "name": "AST_nyra_v2_eye_R_lower_lid",
+        "operation": "Thinner lid margin without the raised button-eye rim",
+        "max_displacement": 0.002105477765837585
+      },
+      {
+        "name": "AST_nyra_v2_eye_R_lash_wing",
+        "operation": "Curved integrated eye surface and matching original blink shell",
+        "max_displacement": 0.06477261187877834
+      },
+      {
+        "name": "AST_nyra_v2_eye_R_catchlight",
+        "operation": "Curved integrated eye surface and matching original blink shell",
+        "max_displacement": 0.05218319798341944
+      },
+      {
+        "name": "AST_nyra_v2_eye_R_pinlight",
+        "operation": "Curved integrated eye surface and matching original blink shell",
+        "max_displacement": 0.031964772543594575
+      },
+      {
+        "name": "AST_nyra_v2_eye_R_closed_lid",
+        "operation": "Curved integrated eye surface and matching original blink shell",
+        "max_displacement": 0.06300813548059034
+      },
+      {
+        "name": "AST_nyra_v2_eye_R_closed_lash",
+        "operation": "Curved integrated eye surface and matching original blink shell",
+        "max_displacement": 0.059098219283299794
+      },
+      {
+        "name": "AST_nyra_v2_eye_R_lash_wing",
+        "operation": "Continuous tapered outer lash sewn to the reshaped eye corner",
+        "max_displacement": 0.04947583754349868
+      },
+      {
+        "name": "AST_nyra_v2_head",
+        "operation": "Broader connected whisker-pad volumes and softened central muzzle",
+        "max_displacement": 0.056071379184722936
+      },
+      {
+        "name": "AST_nyra_v2_smile_L",
+        "operation": "Gentle mouth line refitted to the connected muzzle",
+        "max_displacement": 0.03238082647670417
+      },
+      {
+        "name": "AST_nyra_v2_smile_R",
+        "operation": "Gentle mouth line refitted to the connected muzzle",
+        "max_displacement": 0.032369334315446883
+      },
+      {
+        "name": "AST_nyra_v2_triangular_copper_nose",
+        "operation": "Small rounded triangular nose with coherent nostril placement",
+        "max_displacement": 0.015391893480938706
+      },
+      {
+        "name": "AST_nyra_v2_cheek_fan_L0",
+        "operation": "Softer shorter facial fur tips following cheek curvature",
+        "max_displacement": 0.052011203312097326
+      },
+      {
+        "name": "AST_nyra_v2_cheek_fan_L1",
+        "operation": "Softer shorter facial fur tips following cheek curvature",
+        "max_displacement": 0.06880957963303999
+      },
+      {
+        "name": "AST_nyra_v2_cheek_split_L1",
+        "operation": "Softer shorter facial fur tips following cheek curvature",
+        "max_displacement": 0.076796265766216
+      },
+      {
+        "name": "AST_nyra_v2_cheek_fan_L2",
+        "operation": "Softer shorter facial fur tips following cheek curvature",
+        "max_displacement": 0.06232318895581525
+      },
+      {
+        "name": "AST_nyra_v2_cheek_fan_L3",
+        "operation": "Softer shorter facial fur tips following cheek curvature",
+        "max_displacement": 0.07776343006910627
+      },
+      {
+        "name": "AST_nyra_v2_cheek_split_L3",
+        "operation": "Softer shorter facial fur tips following cheek curvature",
+        "max_displacement": 0.08479553455237666
+      },
+      {
+        "name": "AST_nyra_v2_cheek_fan_L4",
+        "operation": "Softer shorter facial fur tips following cheek curvature",
+        "max_displacement": 0.061121455151040255
+      },
+      {
+        "name": "AST_nyra_v2_cheek_fan_L5",
+        "operation": "Softer shorter facial fur tips following cheek curvature",
+        "max_displacement": 0.06419533244870904
+      },
+      {
+        "name": "AST_nyra_v2_cheek_split_L5",
+        "operation": "Softer shorter facial fur tips following cheek curvature",
+        "max_displacement": 0.07210996467646938
+      },
+      {
+        "name": "AST_nyra_v2_cheek_fan_L6",
+        "operation": "Softer shorter facial fur tips following cheek curvature",
+        "max_displacement": 0.04612163732941809
+      },
+      {
+        "name": "AST_nyra_v2_cheek_fan_R0",
+        "operation": "Softer shorter facial fur tips following cheek curvature",
+        "max_displacement": 0.052011203312097326
+      },
+      {
+        "name": "AST_nyra_v2_cheek_fan_R1",
+        "operation": "Softer shorter facial fur tips following cheek curvature",
+        "max_displacement": 0.06880957963303999
+      },
+      {
+        "name": "AST_nyra_v2_cheek_split_R1",
+        "operation": "Softer shorter facial fur tips following cheek curvature",
+        "max_displacement": 0.076796265766216
+      },
+      {
+        "name": "AST_nyra_v2_cheek_fan_R2",
+        "operation": "Softer shorter facial fur tips following cheek curvature",
+        "max_displacement": 0.06232318895581525
+      },
+      {
+        "name": "AST_nyra_v2_cheek_fan_R3",
+        "operation": "Softer shorter facial fur tips following cheek curvature",
+        "max_displacement": 0.07776343006910627
+      },
+      {
+        "name": "AST_nyra_v2_cheek_split_R3",
+        "operation": "Softer shorter facial fur tips following cheek curvature",
+        "max_displacement": 0.08479553455237666
+      },
+      {
+        "name": "AST_nyra_v2_cheek_fan_R4",
+        "operation": "Softer shorter facial fur tips following cheek curvature",
+        "max_displacement": 0.061121455151040255
+      },
+      {
+        "name": "AST_nyra_v2_cheek_fan_R5",
+        "operation": "Softer shorter facial fur tips following cheek curvature",
+        "max_displacement": 0.06419533244870904
+      },
+      {
+        "name": "AST_nyra_v2_cheek_split_R5",
+        "operation": "Softer shorter facial fur tips following cheek curvature",
+        "max_displacement": 0.07210996467646938
+      },
+      {
+        "name": "AST_nyra_v2_cheek_fan_R6",
+        "operation": "Softer shorter facial fur tips following cheek curvature",
+        "max_displacement": 0.04612163732941809
+      }
+    ],
+    "face_objects": [
+      "AST_nyra_v2_head",
+      "AST_nyra_v2_eye_R_skin_annulus",
+      "AST_nyra_v2_eye_R",
+      "AST_nyra_v2_eye_R_upper_lid",
+      "AST_nyra_v2_eye_R_lower_lid",
+      "AST_nyra_v2_eye_R_lash_wing",
+      "AST_nyra_v2_eye_R_catchlight",
+      "AST_nyra_v2_eye_R_pinlight",
+      "AST_nyra_v2_eye_R_closed_lid",
+      "AST_nyra_v2_eye_R_closed_lash",
+      "AST_nyra_v2_eye_L_skin_annulus",
+      "AST_nyra_v2_eye_L",
+      "AST_nyra_v2_eye_L_upper_lid",
+      "AST_nyra_v2_eye_L_lower_lid",
+      "AST_nyra_v2_eye_L_lash_wing",
+      "AST_nyra_v2_eye_L_catchlight",
+      "AST_nyra_v2_eye_L_pinlight",
+      "AST_nyra_v2_eye_L_closed_lid",
+      "AST_nyra_v2_eye_L_closed_lash",
+      "AST_nyra_v2_cheek_fan_L0",
+      "AST_nyra_v2_cheek_fan_L1",
+      "AST_nyra_v2_cheek_split_L1",
+      "AST_nyra_v2_cheek_fan_L2",
+      "AST_nyra_v2_cheek_fan_L3",
+      "AST_nyra_v2_cheek_split_L3",
+      "AST_nyra_v2_cheek_fan_L4",
+      "AST_nyra_v2_cheek_fan_L5",
+      "AST_nyra_v2_cheek_split_L5",
+      "AST_nyra_v2_cheek_fan_L6",
+      "AST_nyra_v2_cheek_fan_R0",
+      "AST_nyra_v2_cheek_fan_R1",
+      "AST_nyra_v2_cheek_split_R1",
+      "AST_nyra_v2_cheek_fan_R2",
+      "AST_nyra_v2_cheek_fan_R3",
+      "AST_nyra_v2_cheek_split_R3",
+      "AST_nyra_v2_cheek_fan_R4",
+      "AST_nyra_v2_cheek_fan_R5",
+      "AST_nyra_v2_cheek_split_R5",
+      "AST_nyra_v2_cheek_fan_R6",
+      "AST_nyra_v2_triangular_copper_nose",
+      "AST_nyra_v2_smile_L",
+      "AST_nyra_v2_smile_R"
+    ],
+    "removed_face_objects": [],
+    "added_base_clothing": [],
+    "face_frame": {
+      "center": [
+        0,
+        -1.0,
+        2.47
+      ],
+      "span": [
+        1.85,
+        1.2,
+        1.44
+      ]
+    },
+    "orbital_fit": [
+      {
+        "side": "L",
+        "support_samples": 6372,
+        "fit_rms": 0.03851363097239543,
+        "coefficients": [
+          -0.004177394791769813,
+          -0.04308960620416658,
+          -0.30650483875958784,
+          -0.6721685274253142,
+          0.7882738847492277,
+          -0.558401461197242
+        ],
+        "center": [
+          0.421087384223938,
+          -1.3945270776748657,
+          2.500555866294437
+        ],
+        "iris_center_recession": 0.04502513719991556
+      },
+      {
+        "side": "R",
+        "support_samples": 6502,
+        "fit_rms": 0.03815635459137589,
+        "coefficients": [
+          -0.0008347738923027828,
+          0.03981152313565842,
+          -0.3077469061588585,
+          -0.7031604675928101,
+          -0.7915994647273799,
+          -0.5896842356779364
+        ],
+        "center": [
+          -0.4210898280143738,
+          -1.3945308923721313,
+          2.500556141138077
+        ],
+        "iris_center_recession": 0.04418948165359371
+      }
+    ],
+    "animation_limit": "Original uniform-scale lid motion and pivots are retained; partial closure is checked but not reauthored.",
+    "body_source_objects": [
+      "AST_nyra_v2_body",
+      "AST_nyra_v2_head",
+      "AST_nyra_v2_eye_R_skin_annulus",
+      "AST_nyra_v2_eye_R",
+      "AST_nyra_v2_eye_R_upper_lid",
+      "AST_nyra_v2_eye_R_lower_lid",
+      "AST_nyra_v2_eye_R_lash_wing",
+      "AST_nyra_v2_eye_R_catchlight",
+      "AST_nyra_v2_eye_R_pinlight",
+      "AST_nyra_v2_eye_R_closed_lid",
+      "AST_nyra_v2_eye_R_closed_lash",
+      "AST_nyra_v2_eye_L_skin_annulus",
+      "AST_nyra_v2_eye_L",
+      "AST_nyra_v2_eye_L_upper_lid",
+      "AST_nyra_v2_eye_L_lower_lid",
+      "AST_nyra_v2_eye_L_lash_wing",
+      "AST_nyra_v2_eye_L_catchlight",
+      "AST_nyra_v2_eye_L_pinlight",
+      "AST_nyra_v2_eye_L_closed_lid",
+      "AST_nyra_v2_eye_L_closed_lash",
+      "AST_nyra_v2_cupped_rust_ear_R",
+      "AST_nyra_v2_cupped_rust_ear_L",
+      "AST_nyra_v2_cheek_fan_L0",
+      "AST_nyra_v2_cheek_fan_L1",
+      "AST_nyra_v2_cheek_split_L1",
+      "AST_nyra_v2_cheek_fan_L2",
+      "AST_nyra_v2_cheek_fan_L3",
+      "AST_nyra_v2_cheek_split_L3",
+      "AST_nyra_v2_cheek_fan_L4",
+      "AST_nyra_v2_cheek_fan_L5",
+      "AST_nyra_v2_cheek_split_L5",
+      "AST_nyra_v2_cheek_fan_L6",
+      "AST_nyra_v2_outer_dark_ruff_L0",
+      "AST_nyra_v2_outer_dark_ruff_L1",
+      "AST_nyra_v2_outer_dark_ruff_L2",
+      "AST_nyra_v2_outer_dark_ruff_L3",
+      "AST_nyra_v2_outer_dark_ruff_L4",
+      "AST_nyra_v2_outer_dark_ruff_L5",
+      "AST_nyra_v2_haunch_coat_L00",
+      "AST_nyra_v2_haunch_coat_L01",
+      "AST_nyra_v2_haunch_coat_L02",
+      "AST_nyra_v2_haunch_coat_L03",
+      "AST_nyra_v2_haunch_coat_L10",
+      "AST_nyra_v2_haunch_coat_L11",
+      "AST_nyra_v2_haunch_coat_L12",
+      "AST_nyra_v2_haunch_coat_L13",
+      "AST_nyra_v2_haunch_coat_L20",
+      "AST_nyra_v2_haunch_coat_L21",
+      "AST_nyra_v2_haunch_coat_L22",
+      "AST_nyra_v2_haunch_coat_L23",
+      "AST_nyra_v2_cheek_fan_R0",
+      "AST_nyra_v2_cheek_fan_R1",
+      "AST_nyra_v2_cheek_split_R1",
+      "AST_nyra_v2_cheek_fan_R2",
+      "AST_nyra_v2_cheek_fan_R3",
+      "AST_nyra_v2_cheek_split_R3",
+      "AST_nyra_v2_cheek_fan_R4",
+      "AST_nyra_v2_cheek_fan_R5",
+      "AST_nyra_v2_cheek_split_R5",
+      "AST_nyra_v2_cheek_fan_R6",
+      "AST_nyra_v2_outer_dark_ruff_R0",
+      "AST_nyra_v2_outer_dark_ruff_R1",
+      "AST_nyra_v2_outer_dark_ruff_R2",
+      "AST_nyra_v2_outer_dark_ruff_R3",
+      "AST_nyra_v2_outer_dark_ruff_R4",
+      "AST_nyra_v2_outer_dark_ruff_R5",
+      "AST_nyra_v2_haunch_coat_R00",
+      "AST_nyra_v2_haunch_coat_R01",
+      "AST_nyra_v2_haunch_coat_R02",
+      "AST_nyra_v2_haunch_coat_R03",
+      "AST_nyra_v2_haunch_coat_R10",
+      "AST_nyra_v2_haunch_coat_R11",
+      "AST_nyra_v2_haunch_coat_R12",
+      "AST_nyra_v2_haunch_coat_R13",
+      "AST_nyra_v2_haunch_coat_R20",
+      "AST_nyra_v2_haunch_coat_R21",
+      "AST_nyra_v2_haunch_coat_R22",
+      "AST_nyra_v2_haunch_coat_R23",
+      "AST_nyra_v2_nape_bundle_00",
+      "AST_nyra_v2_nape_bundle_01",
+      "AST_nyra_v2_nape_bundle_02",
+      "AST_nyra_v2_nape_bundle_03",
+      "AST_nyra_v2_nape_bundle_04",
+      "AST_nyra_v2_nape_bundle_10",
+      "AST_nyra_v2_nape_bundle_11",
+      "AST_nyra_v2_nape_bundle_12",
+      "AST_nyra_v2_nape_bundle_13",
+      "AST_nyra_v2_nape_bundle_14",
+      "AST_nyra_v2_nape_bundle_20",
+      "AST_nyra_v2_nape_bundle_21",
+      "AST_nyra_v2_nape_bundle_22",
+      "AST_nyra_v2_nape_bundle_23",
+      "AST_nyra_v2_nape_bundle_24",
+      "AST_nyra_v2_dark_bib_00",
+      "AST_nyra_v2_dark_bib_01",
+      "AST_nyra_v2_dark_bib_02",
+      "AST_nyra_v2_dark_bib_03",
+      "AST_nyra_v2_dark_bib_04",
+      "AST_nyra_v2_dark_bib_05",
+      "AST_nyra_v2_dark_bib_06",
+      "AST_nyra_v2_dark_bib_10",
+      "AST_nyra_v2_dark_bib_11",
+      "AST_nyra_v2_dark_bib_12",
+      "AST_nyra_v2_dark_bib_13",
+      "AST_nyra_v2_dark_bib_14",
+      "AST_nyra_v2_dark_bib_15",
+      "AST_nyra_v2_dark_bib_16",
+      "AST_nyra_v2_triangular_copper_nose",
+      "AST_nyra_v2_smile_L",
+      "AST_nyra_v2_smile_R",
+      "AST_nyra_v4_silver_flame_0",
+      "AST_nyra_v4_silver_flame_1",
+      "AST_nyra_v4_silver_flame_2",
+      "AST_nyra_v4_silver_flame_3",
+      "AST_nyra_v4_silver_flame_4",
+      "AST_nyra_v4_silver_flame_5",
+      "AST_nyra_v4_silver_flame_6",
+      "AST_nyra_v4_silver_ear_brush_R0",
+      "AST_nyra_v4_silver_ear_brush_R1",
+      "AST_nyra_v4_silver_ear_brush_R2",
+      "AST_nyra_v4_silver_ear_brush_R3",
+      "AST_nyra_v4_silver_ear_brush_R4",
+      "AST_nyra_v4_silver_ear_brush_L0",
+      "AST_nyra_v4_silver_ear_brush_L1",
+      "AST_nyra_v4_silver_ear_brush_L2",
+      "AST_nyra_v4_silver_ear_brush_L3",
+      "AST_nyra_v4_silver_ear_brush_L4",
+      "AST_nyra_v4_sculpted_s_plume",
+      "AST_nyra_v4_plume_surface_flow_0_0",
+      "AST_nyra_v4_plume_surface_flow_0_1",
+      "AST_nyra_v4_plume_surface_flow_0_2",
+      "AST_nyra_v4_plume_surface_flow_0_3",
+      "AST_nyra_v4_plume_surface_flow_0_4",
+      "AST_nyra_v4_plume_surface_flow_0_5",
+      "AST_nyra_v4_plume_surface_flow_0_6",
+      "AST_nyra_v4_plume_surface_flow_0_7",
+      "AST_nyra_v4_plume_surface_flow_1_0",
+      "AST_nyra_v4_plume_surface_flow_1_1",
+      "AST_nyra_v4_plume_surface_flow_1_2",
+      "AST_nyra_v4_plume_surface_flow_1_3",
+      "AST_nyra_v4_plume_surface_flow_1_4",
+      "AST_nyra_v4_plume_surface_flow_1_5",
+      "AST_nyra_v4_plume_surface_flow_1_6",
+      "AST_nyra_v4_plume_surface_flow_1_7",
+      "AST_nyra_v4_plume_surface_flow_2_0",
+      "AST_nyra_v4_plume_surface_flow_2_1",
+      "AST_nyra_v4_plume_surface_flow_2_2",
+      "AST_nyra_v4_plume_surface_flow_2_3",
+      "AST_nyra_v4_plume_surface_flow_2_4",
+      "AST_nyra_v4_plume_surface_flow_2_5",
+      "AST_nyra_v4_plume_surface_flow_2_6",
+      "AST_nyra_v4_plume_surface_flow_2_7",
+      "AST_nyra_v4_plume_surface_flow_3_0",
+      "AST_nyra_v4_plume_surface_flow_3_1",
+      "AST_nyra_v4_plume_surface_flow_3_2",
+      "AST_nyra_v4_plume_surface_flow_3_3",
+      "AST_nyra_v4_plume_surface_flow_3_4",
+      "AST_nyra_v4_plume_surface_flow_3_5",
+      "AST_nyra_v4_plume_surface_flow_3_6",
+      "AST_nyra_v4_plume_surface_flow_3_7",
+      "AST_nyra_v4_plume_surface_flow_4_0",
+      "AST_nyra_v4_plume_surface_flow_4_1",
+      "AST_nyra_v4_plume_surface_flow_4_2",
+      "AST_nyra_v4_plume_surface_flow_4_3",
+      "AST_nyra_v4_plume_surface_flow_4_4",
+      "AST_nyra_v4_plume_surface_flow_4_5",
+      "AST_nyra_v4_plume_surface_flow_4_6",
+      "AST_nyra_v4_plume_surface_flow_4_7",
+      "AST_nyra_v4_plume_surface_flow_5_0",
+      "AST_nyra_v4_plume_surface_flow_5_1",
+      "AST_nyra_v4_plume_surface_flow_5_2",
+      "AST_nyra_v4_plume_surface_flow_5_3",
+      "AST_nyra_v4_plume_surface_flow_5_4",
+      "AST_nyra_v4_plume_surface_flow_5_5",
+      "AST_nyra_v4_plume_surface_flow_5_6",
+      "AST_nyra_v4_plume_surface_flow_5_7",
+      "AST_nyra_v4_plume_surface_flow_6_0",
+      "AST_nyra_v4_plume_surface_flow_6_1",
+      "AST_nyra_v4_plume_surface_flow_6_2",
+      "AST_nyra_v4_plume_surface_flow_6_3",
+      "AST_nyra_v4_plume_surface_flow_6_4",
+      "AST_nyra_v4_plume_surface_flow_6_5",
+      "AST_nyra_v4_plume_surface_flow_6_6",
+      "AST_nyra_v4_plume_surface_flow_6_7",
+      "AST_nyra_v4_plume_surface_flow_7_0",
+      "AST_nyra_v4_plume_surface_flow_7_1",
+      "AST_nyra_v4_plume_surface_flow_7_2",
+      "AST_nyra_v4_plume_surface_flow_7_3",
+      "AST_nyra_v4_plume_surface_flow_7_4",
+      "AST_nyra_v4_plume_surface_flow_7_5",
+      "AST_nyra_v4_plume_surface_flow_7_6",
+      "AST_nyra_v4_plume_surface_flow_7_7"
+    ],
+    "equipment_source_objects": [
+      "AST_nyra_v2_fitted_teal_shoulder_L",
+      "AST_nyra_v2_shoulder_copper_star_L",
+      "AST_nyra_v2_shoulder_teal_star_L",
+      "AST_nyra_v2_copper_brow_L",
+      "AST_nyra_v2_haunch_double_crescent_L0",
+      "AST_nyra_v2_haunch_double_crescent_L1",
+      "AST_nyra_v2_hip_spark_L",
+      "AST_nyra_v2_angular_cuff_FL",
+      "AST_nyra_v2_cuff_diamond_FL",
+      "AST_nyra_v2_rounded_copper_toe_FL-1",
+      "AST_nyra_v2_rounded_copper_toe_FL0",
+      "AST_nyra_v2_rounded_copper_toe_FL1",
+      "AST_nyra_v2_angular_cuff_HL",
+      "AST_nyra_v2_cuff_diamond_HL",
+      "AST_nyra_v2_rounded_copper_toe_HL-1",
+      "AST_nyra_v2_rounded_copper_toe_HL0",
+      "AST_nyra_v2_rounded_copper_toe_HL1",
+      "AST_nyra_v2_fitted_teal_shoulder_R",
+      "AST_nyra_v2_shoulder_copper_star_R",
+      "AST_nyra_v2_shoulder_teal_star_R",
+      "AST_nyra_v2_copper_brow_R",
+      "AST_nyra_v2_haunch_double_crescent_R0",
+      "AST_nyra_v2_haunch_double_crescent_R1",
+      "AST_nyra_v2_hip_spark_R",
+      "AST_nyra_v2_angular_cuff_FR",
+      "AST_nyra_v2_cuff_diamond_FR",
+      "AST_nyra_v2_rounded_copper_toe_FR-1",
+      "AST_nyra_v2_rounded_copper_toe_FR0",
+      "AST_nyra_v2_rounded_copper_toe_FR1",
+      "AST_nyra_v2_angular_cuff_HR",
+      "AST_nyra_v2_cuff_diamond_HR",
+      "AST_nyra_v2_rounded_copper_toe_HR-1",
+      "AST_nyra_v2_rounded_copper_toe_HR0",
+      "AST_nyra_v2_rounded_copper_toe_HR1",
+      "AST_nyra_v2_forehead_copper_star",
+      "AST_nyra_v2_emerald_chest_frame",
+      "AST_nyra_v2_emerald_chest_crystal",
+      "AST_nyra_v2_upper_emerald_diamond_frame",
+      "AST_nyra_v2_upper_emerald_diamond_crystal",
+      "AST_nyra_v2_continuous_copper_collar",
+      "AST_nyra_v2_lower_pendant_flame_L",
+      "AST_nyra_v2_lower_pendant_flame_R",
+      "AST_nyra_v4_tail_copper_flame_L0",
+      "AST_nyra_v4_tail_copper_flame_L1",
+      "AST_nyra_v4_tail_copper_flame_R0",
+      "AST_nyra_v4_tail_copper_flame_R1"
+    ]
+  },
+  "face_scope": {
+    "checks": {
+      "explicit_face_only_allowlist": true,
+      "all_unedited_source_objects_retained": true,
+      "nonface_geometry_unchanged": true,
+      "nonface_materials_unchanged": true,
+      "original_lid_pivots_unchanged": true,
+      "meaningful_face_geometry_refinement": true
+    },
+    "protected_geometry_sha256": {
+      "AST_nyra_v2_angular_cuff_FL": "001F405F053041542CD0ABDA2C6CBA88060308739F79CB8780B53A5B3B16DE16",
+      "AST_nyra_v2_angular_cuff_FR": "8C81F473A11B2393F3453B71FFC1F5CCB205D8E7A1DB21BABE23BC6EFCC0BAD6",
+      "AST_nyra_v2_angular_cuff_HL": "5CC087BC9D4959FA9B8503AA6B4CCAE5DD95B06E516523C2F13E6E707E2A336D",
+      "AST_nyra_v2_angular_cuff_HR": "912E2D1899B4A3DB41796649BF3010BF8EDFBE0A3D29100699A1C7AB78C11D24",
+      "AST_nyra_v2_body": "6649EB383FF6E28B4EBBB6A2B6C93AFC7161AD4253C90BD096A3285343ADBDE8",
+      "AST_nyra_v2_continuous_copper_collar": "9B0FE27493CEF8B23DD7FC8B607A67DDF5C4ABA3E160C0D5135333B50006A053",
+      "AST_nyra_v2_copper_brow_L": "F7E731A4F95F69F928B976AD5C57E147EC820AD7D76D0F3BA46D519DB3CE2B17",
+      "AST_nyra_v2_copper_brow_R": "312216CA04B6EB34F572FF69B53A3648981590C4AD909B8A1D2C939DD8C000A6",
+      "AST_nyra_v2_cuff_diamond_FL": "E3F09B490B6B3BA66D57AE15208B75B54127EA1649CBD9FAD8D477C9538974A8",
+      "AST_nyra_v2_cuff_diamond_FR": "C865A0DFD306FC3905D3A5E252D8B054104AA40EC9AE8E853FC2227D8A42864A",
+      "AST_nyra_v2_cuff_diamond_HL": "D416814719DDE8FC58A34DBC2F6E259ECEDB47850D2C0FFD04BFB7B921D87BB7",
+      "AST_nyra_v2_cuff_diamond_HR": "E88561E3AC80ADFBE1B30D72AD44D8DC83F46C33D048FB4E0C1370A48F3B5C96",
+      "AST_nyra_v2_cupped_rust_ear_L": "CD2F1C76C4E0AF519BA616D2FF3BA2F6AAEFE6DD13155C0705C20A6FF5DF074E",
+      "AST_nyra_v2_cupped_rust_ear_R": "B88717D14B3188379F5938912CFE2116F0A73D7F6770EBD5D61EE6A5114E8C48",
+      "AST_nyra_v2_dark_bib_00": "6A29A894B8A1912C04D131B47AA196692F2B605985E07F5B08F20370B7223640",
+      "AST_nyra_v2_dark_bib_01": "D78FB4EAA4C6DC558762A7FD04D3D758015F5CBDDD0147703E7EDC3C69CC2F90",
+      "AST_nyra_v2_dark_bib_02": "92CBA7951AD05964443FBFD3734FF0EC896CD44F9E033B5A62235ACA6EE4F5A2",
+      "AST_nyra_v2_dark_bib_03": "7E910AB53456AB4C12D07C12E7011E08D55BB7D1362E325A063D8EB657D69E33",
+      "AST_nyra_v2_dark_bib_04": "75FD233C953B71A422A79E2AE5EBFEF800D1233913F6C5F4036BB8151E8ACA46",
+      "AST_nyra_v2_dark_bib_05": "41289CD03A6C4E8E09280147A699DBCDCBE469ABAAC8F90A37F2A5F617FCC54C",
+      "AST_nyra_v2_dark_bib_06": "4CCC6D104CC768ECC403E23087B80E73E0B364D4D1747A708D2A16592B582D24",
+      "AST_nyra_v2_dark_bib_10": "B51ACE2D111DD50A7B112A1ED365F94883E155CD2F15414612E0DC647ABC02F1",
+      "AST_nyra_v2_dark_bib_11": "000735642AF9D3DA2247B7F5F6F91D69FD35266F53CE8010A34FEDA0623793E4",
+      "AST_nyra_v2_dark_bib_12": "99DD345CA4722430C9DD5FB6F55BEC5EC3D62EE82DBBE935BE44A384E9122E97",
+      "AST_nyra_v2_dark_bib_13": "F87254578D3A05C4EE1005113932D52DFBB63D1D578EBD1F32B959F6CAA97CBD",
+      "AST_nyra_v2_dark_bib_14": "1D7480201536C89B75B740257569DDE8B02F91A570CFBBEBF95468D2DFB53ED9",
+      "AST_nyra_v2_dark_bib_15": "0EE1A0F70AE6C2ACD8AD5C0436BCD126283D73778047164BFB3C38B4054A465E",
+      "AST_nyra_v2_dark_bib_16": "A06C46CF4B5316B1D7B2437511C3F6693B0A12BE145C2F56D9F551577CF32547",
+      "AST_nyra_v2_emerald_chest_crystal": "F5AA7F90B582E43A4D0CEB3D9F9AD25E1F9F99527838F1935D55535A1FDAC4AB",
+      "AST_nyra_v2_emerald_chest_frame": "DB1DA39A412316E116973C21E3E816D9DF7773772B443D93EA1D48B1959BD1E3",
+      "AST_nyra_v2_fitted_teal_shoulder_L": "88219C8A85D7D61DBB5ECD19B3C27AE963FD51D4EBE498F48A52B5EA3F0B02CB",
+      "AST_nyra_v2_fitted_teal_shoulder_R": "512E2AB5254932ED2C5080A3142A7A76E321406F43BC60F995F232DFC596D0D2",
+      "AST_nyra_v2_forehead_copper_star": "11868E6C99B8489D0892F583CD375F23E420D71109E6EDAD2EF977064A60C37E",
+      "AST_nyra_v2_haunch_coat_L00": "64079B4615BFC2EFB57097937820A8ACF4029B53282758C60E1FBCDE5936015E",
+      "AST_nyra_v2_haunch_coat_L01": "97EA77669F337FA37C72CAB87F9ABA55E717C8CA4AAB4064B018F3E1FBE8258F",
+      "AST_nyra_v2_haunch_coat_L02": "CC036F040973A8D38216C7965E55408BF089A3BABEEEE76806EAC8E16545254E",
+      "AST_nyra_v2_haunch_coat_L03": "311BE72F711226B616C28EFFA5B547C459EE4FF6875A2BAA3A1DF5B50AD4747A",
+      "AST_nyra_v2_haunch_coat_L10": "18704AB7F2A363DC504DAC7D9CDBD773E46D5BD7173C460FC91826F88192D1D2",
+      "AST_nyra_v2_haunch_coat_L11": "120449735E298E64AD74BD928538D0716FAE9C49C3084755ECAFFA345E8235D0",
+      "AST_nyra_v2_haunch_coat_L12": "8BC5B7913DB2FE9851CC95552305514B9F9118ED32B414C9CEC9C98A90E03928",
+      "AST_nyra_v2_haunch_coat_L13": "883A11FB1043C9BA9C33347E5310A24920E750CD371CD0411E708FF1135264DF",
+      "AST_nyra_v2_haunch_coat_L20": "1F30389758B707B5946529D8311B335B38AF62EF9773A373AF0DB9FBB027BBF8",
+      "AST_nyra_v2_haunch_coat_L21": "FED07A5F0F08AAE90013DFAF424E45C983A05DFFFDBCE81BF737AEDA1803342E",
+      "AST_nyra_v2_haunch_coat_L22": "915BE8FAD7B634A6A089F504880196BDADA933E917FA52A9AA29D000E8B4EE26",
+      "AST_nyra_v2_haunch_coat_L23": "6164B508FC6D1B59C97E266F89C864CA23D1E11BE8E2E2C22C87A0593887C01F",
+      "AST_nyra_v2_haunch_coat_R00": "434C18BD6D9A577EC2CDD1A7A302A5902B5DC30B53634C4FFD98AA69DEACC07F",
+      "AST_nyra_v2_haunch_coat_R01": "1FADB2720D871EDE9C432950DAF5DE377DB7442972130E5605F6C9717F065C8B",
+      "AST_nyra_v2_haunch_coat_R02": "D32D49A02991EA94CE4ED287BE2B9C39094FC4D2607384F350D7B6F368374793",
+      "AST_nyra_v2_haunch_coat_R03": "532A7026249403CF205F7A43E0208B7E3A9400F3236AD05B0922AA4B1D054F48",
+      "AST_nyra_v2_haunch_coat_R10": "262D6E79237E4AB9799C67FE2DF98AC8E7D4E71ED275836C2841A4F228418AA1",
+      "AST_nyra_v2_haunch_coat_R11": "183993549614CF4E90CC2C4CB2BE8C454592290D45007DDE1260E948612FBFA6",
+      "AST_nyra_v2_haunch_coat_R12": "30BA81AD00DA3675EBAAC6C7C5442FEEBF29FB128EFACC8279D07D5423DD5E65",
+      "AST_nyra_v2_haunch_coat_R13": "6F629A47966C82E021B826F8EBA64D6C07AB4978BC96B26E23D7548F371E61D4",
+      "AST_nyra_v2_haunch_coat_R20": "457128087FDCD21F347B842C16C1F8B7745DE0B47298EF67F2E445EBE991122B",
+      "AST_nyra_v2_haunch_coat_R21": "DF1CE49BA6C5FBF18B666ED53B25800BCBBA6BC7AE5258299C5E2712740DDA90",
+      "AST_nyra_v2_haunch_coat_R22": "7D9BA10598CC1A2150957324C478D00C1ED9A5E36ABA9ECD9C2A662AAB2E9DDF",
+      "AST_nyra_v2_haunch_coat_R23": "7544C6B5C41E7BF8D107AC0663AA252D6B1A4AED6C976CE45871B8CDAF6D0D46",
+      "AST_nyra_v2_haunch_double_crescent_L0": "082810F69600E05E6226F8F2446F1C349273FCD0AA74E7279D7F621A2A965849",
+      "AST_nyra_v2_haunch_double_crescent_L1": "A80F438281E306FAE9FC2BB511C698A94D053AD803EAE9F1082E49190CF0EB64",
+      "AST_nyra_v2_haunch_double_crescent_R0": "4A291726271D866491B40076A97685E46A85F6929A0585B7D045878F53F0BD56",
+      "AST_nyra_v2_haunch_double_crescent_R1": "4559EF8F35FD4DE7483F31B983B04755A0361F46DF3180EAC815486B51392D09",
+      "AST_nyra_v2_hip_spark_L": "A3339445BD02BADDF491A4EDC6ADDD64613D283EA097A8715FE96E2FE93588BB",
+      "AST_nyra_v2_hip_spark_R": "79B38BEFA25804BCEB00041475B59A8F4207C91EA7DE703BBE37C652854D73A2",
+      "AST_nyra_v2_lower_pendant_flame_L": "D9848908BBF55997E55C510859E717C27CF948ADDDE606116974399F7BCCA8C4",
+      "AST_nyra_v2_lower_pendant_flame_R": "9F9A36518E539BDF614F4D31DC71802A57BA32EEDE2A284D8F166C44FD7E03C2",
+      "AST_nyra_v2_nape_bundle_00": "7186AF8C9C05B3C28CCA1D1A6140083FC68FB0362D79599232E7784DEDE1F28C",
+      "AST_nyra_v2_nape_bundle_01": "BA47F505B063DBA4F196B2DDD4182379DECA738E7BD970619A6817E4DE01949D",
+      "AST_nyra_v2_nape_bundle_02": "AD275B42B90B3A034D2770BCA52A036344CE50C61DC460B89D3D17F0C788298E",
+      "AST_nyra_v2_nape_bundle_03": "8182621E1952AA5B0BFB83768ED0BDB257CF0D8860E17F44F1A12F210D8AC0D1",
+      "AST_nyra_v2_nape_bundle_04": "40C725DC801072F61195C52CCE7D13C2B8FD9985E18AE846904BDA6AF189B450",
+      "AST_nyra_v2_nape_bundle_10": "63419407287D7C465ECFE92B84B5863B9AE257EF33CB0B935106E4A861FCBB90",
+      "AST_nyra_v2_nape_bundle_11": "E5AE78369EDA3D64D9520368297BEE448A302A6E8370B4F86815F5D152317159",
+      "AST_nyra_v2_nape_bundle_12": "19E21E900828CFA56EB1D0ADC29D2C04E15729A83873CB19D24FA2FB19F3A587",
+      "AST_nyra_v2_nape_bundle_13": "A63927299893B598190418DA29B27B90D65E2FEBE9656CA61DEB32699C857204",
+      "AST_nyra_v2_nape_bundle_14": "028F2C477A8205F70E0D424E505AE3153194D6B202F77FDD795FE5AAD8F23591",
+      "AST_nyra_v2_nape_bundle_20": "98B9FEA26A11E05EDD2B87A6524E1421CBC772B4BF0675C5E3F67B8FAF25B90B",
+      "AST_nyra_v2_nape_bundle_21": "6BB30862361BF9DC40A4431BA69ACCD8493779B0255E7F81DEC97D138C220275",
+      "AST_nyra_v2_nape_bundle_22": "D8D87E2D9C51A76DFAAC85AA9C78884BF98844098402EB95E20FCBC9B1AF152D",
+      "AST_nyra_v2_nape_bundle_23": "559009A1D06DD579BFC2A67A68D30B9FE33CBB30FAF001925C65967941FA7C55",
+      "AST_nyra_v2_nape_bundle_24": "BE11C925EC6AD6AF193410252721B92D43D5F18298A9B8CA2D4A0C333B66B60B",
+      "AST_nyra_v2_outer_dark_ruff_L0": "D4D44D962785D61C0795A9E91C07FBDF244F11132BC5FECEB1A039A8F862DECD",
+      "AST_nyra_v2_outer_dark_ruff_L1": "3145AD78F800F02DC5448DE301283992A65E2E3DE5CD381547470641A978FA84",
+      "AST_nyra_v2_outer_dark_ruff_L2": "D6B2C652505DD890B6B231650A48C72C64A8A32C7CF4EE3F9679BD6557608068",
+      "AST_nyra_v2_outer_dark_ruff_L3": "0D389EC01AB2CE4E3154C3984B9705367D249552D2C2A7422FED21527C7BF676",
+      "AST_nyra_v2_outer_dark_ruff_L4": "E487311433C5EBEED705D6E9F7CCE70CC07CD6386EBD7FD7B7089B63566F637A",
+      "AST_nyra_v2_outer_dark_ruff_L5": "DFFD384ACB9D409698542E5A52331054FA2EBD8FF90F8A9D19C0BB5572CA6039",
+      "AST_nyra_v2_outer_dark_ruff_R0": "856C1A8C674133782283F402104A8A521C369BCB07EF0FA67CC1D2B7FA3FC956",
+      "AST_nyra_v2_outer_dark_ruff_R1": "1A69559FE6B1C26BD9ACEF0FE1DAA95E08A333F1720A8C329409A86E2967FB8E",
+      "AST_nyra_v2_outer_dark_ruff_R2": "E8EC1BEF24B2F1D79363B1ADDE4A3D5FB3C2F73B86FD907CB436872B1437E4E8",
+      "AST_nyra_v2_outer_dark_ruff_R3": "0B5A5C893E4CC981C26FF5900F56E54C9D7192510929575936066E4163158F4E",
+      "AST_nyra_v2_outer_dark_ruff_R4": "B8F0AE13DFBABE0E3D24ED906B16B7CCE9606CABE5913412349C96C5F77EB19B",
+      "AST_nyra_v2_outer_dark_ruff_R5": "B9C42834101C0A0022D587C662EDE39C2599E099EF76604C17B6E8F8A175C888",
+      "AST_nyra_v2_rounded_copper_toe_FL-1": "C25645EBAAF0F2FF45ACD4CDBA89CCD8D151B658EDECD077DBC4D1F178005B9A",
+      "AST_nyra_v2_rounded_copper_toe_FL0": "4C7D2262A70B5157DFD768CF5D4AF1E6C4AE17F9853FE38733E6E4C20422702E",
+      "AST_nyra_v2_rounded_copper_toe_FL1": "C33EB254E4C1136018C9B72509022986EDC20103F2F8C8CEDA18DCD2C893586F",
+      "AST_nyra_v2_rounded_copper_toe_FR-1": "4991B3CCD4B27CA409205354423A9B7A1A01A687CC2C4AEEBB4065E99E199AAC",
+      "AST_nyra_v2_rounded_copper_toe_FR0": "3F9121ABE13E6755FE774D1CCFFF2D89485A12511AF50D3D74698B68B1352BBF",
+      "AST_nyra_v2_rounded_copper_toe_FR1": "17860DEAF337841FA16A983F8DF1E52D97BFC82054767E3A793D1B943F2192E5",
+      "AST_nyra_v2_rounded_copper_toe_HL-1": "42D9C1930C40D48A8C695988521EF5629B3BFF8C95833F9C84992E48C2D37D1A",
+      "AST_nyra_v2_rounded_copper_toe_HL0": "0AAE3B5AA80A67EBFEFEBA1C0EF147DBC0907C4A394EE921E98A337733F2017D",
+      "AST_nyra_v2_rounded_copper_toe_HL1": "1242AC344B3E90507074A3FD78D0068B2F4BA60B1B7268C763B6627973786B47",
+      "AST_nyra_v2_rounded_copper_toe_HR-1": "880785325262438913F5AB1F0D8923EB4F39A4378418D6F40E2E0D6CB341EEA9",
+      "AST_nyra_v2_rounded_copper_toe_HR0": "D344E2F2FFB6A115295D988A0048337ED1F555B26A82C3281522E5859F486374",
+      "AST_nyra_v2_rounded_copper_toe_HR1": "8E23D1C93176D641EB6BDDEBFB62A8F160AB115C181389AB965029018C4B491E",
+      "AST_nyra_v2_shoulder_copper_star_L": "691F9F190D61955FC1D7DF3AAA58E3575CDCB0192BC59D779FE054A9B1318C45",
+      "AST_nyra_v2_shoulder_copper_star_R": "F285794E2EE437D9A0657E4FC65AF371E906FEC97D68E34CB5D35B3B952EE3F6",
+      "AST_nyra_v2_shoulder_teal_star_L": "954A295C6105D31B27E582B06411CE0A26FBFF5E8B8DAFE90FB2E2A80AB5D50D",
+      "AST_nyra_v2_shoulder_teal_star_R": "BB4CA7C478282EEEF5CAC5B7955E496D29998D9BB019D655B7B706B42F10D77C",
+      "AST_nyra_v2_upper_emerald_diamond_crystal": "F24AF875BF7CECBD50BC2B238BA69CE849F0B6EA0B44959FA11F0B4162547E98",
+      "AST_nyra_v2_upper_emerald_diamond_frame": "B985319A649F167A42A6726019D813306F6069BBA75700D94A8529BE25C0548E",
+      "AST_nyra_v4_plume_surface_flow_0_0": "6AFB1C80AF0C459708F422DDF530759C52CA0CC573C07F8630F8B44E59902811",
+      "AST_nyra_v4_plume_surface_flow_0_1": "4657E36DD7F96D9D7BE5A4E2411458653DEDBEF1781215759F045CE886A8FDAB",
+      "AST_nyra_v4_plume_surface_flow_0_2": "88D866E7136EF764099213BF93BC8D650AE8911F751470FC1A612EA7623DF07E",
+      "AST_nyra_v4_plume_surface_flow_0_3": "BECA382B02A62D0C6ADF088904764CA411E50EB290A47003C1A8BF91266C5AE8",
+      "AST_nyra_v4_plume_surface_flow_0_4": "3D114E4B125D3DAE8C77363DEF67FD8F0EC0D7917E451F4C5E5E42430DAB9D77",
+      "AST_nyra_v4_plume_surface_flow_0_5": "13CA87FB4E05471CF0345BE1BAF8359B90CB69A6B28865C525B9ECC22BB12117",
+      "AST_nyra_v4_plume_surface_flow_0_6": "1C4AB048F836D7E165289DD290617479E0F4CE1B1A431DD77828FBE3138408B1",
+      "AST_nyra_v4_plume_surface_flow_0_7": "956E8630D6D997A9D6655861CC56F52A3FBEEE0C0C5DE83229E90746B45DB6C0",
+      "AST_nyra_v4_plume_surface_flow_1_0": "928D937FB91F30329BBD6DD756E3C6C064FF95ED6F1E5DE638B46A469C4391FC",
+      "AST_nyra_v4_plume_surface_flow_1_1": "46B56F05AADB70E357090ED9C1F8C181EAAEB55681872D484459933CC0A85E12",
+      "AST_nyra_v4_plume_surface_flow_1_2": "6AA2146B9D913D682144D3BC8E37A6E44FE2A09D550672DC6E50D23A457BA032",
+      "AST_nyra_v4_plume_surface_flow_1_3": "AE03872CF561E380E003454915ABA85BB00D45525E6B614AA1AB600C7ADF5C06",
+      "AST_nyra_v4_plume_surface_flow_1_4": "2878B42FFD3CC25E6B3042C65EC89639A355A82BB5847AF95CDBFD3B97EE1141",
+      "AST_nyra_v4_plume_surface_flow_1_5": "27AAADE1E3D2F391A80FF61C20CE550E17E329506F61BCCBDDAF79A77160F4B9",
+      "AST_nyra_v4_plume_surface_flow_1_6": "84D187A911FB8279B9AC6C271367F4DA8285E53124E99AB292D142A66259C55B",
+      "AST_nyra_v4_plume_surface_flow_1_7": "8E0743158A7C3973F8910E91DE68A95B44AF922FCD182F81C958831B9576D061",
+      "AST_nyra_v4_plume_surface_flow_2_0": "772668CA482CE37AFADAE776B940B47486A0C2DD62E6E00B74734916C6C4C68A",
+      "AST_nyra_v4_plume_surface_flow_2_1": "907F7925AF1305A0E998564500CAB096CC2ADBB6842C9002871FFE9F16CC4D9A",
+      "AST_nyra_v4_plume_surface_flow_2_2": "089403D334AB6946851B210DED1D692870BD3ED53736301AA00E4C5A8CE75B54",
+      "AST_nyra_v4_plume_surface_flow_2_3": "F201C3690480455560C91E1744CB4C46CCE31CDF5A311B724E71DBC70A60AAFD",
+      "AST_nyra_v4_plume_surface_flow_2_4": "1A7F95E2274B7EAA82B773BEAF584AC005E0A6048B1A3EFC73B81CEBB70F155D",
+      "AST_nyra_v4_plume_surface_flow_2_5": "E55E7D527F1188098F568DAD05E0E4F87AA626CEA47014F034ADA91B75A270AD",
+      "AST_nyra_v4_plume_surface_flow_2_6": "D68115F04EEE6A6598D676B9BC219E818DDCEA3D13DE8C53D4744B79CB9B0057",
+      "AST_nyra_v4_plume_surface_flow_2_7": "E68742F6AFB3845A2C3104651EF5562571C4DFE6B49F9385DE94F7875BBA717D",
+      "AST_nyra_v4_plume_surface_flow_3_0": "B5BE671B909479C017DB1F5F0DBB15618B95A0208F22093EEE22B56E0F7CA573",
+      "AST_nyra_v4_plume_surface_flow_3_1": "C912D45E296F309711AEDDC1685E964D26DC7B1231A80E70F02C33165E9C6D8B",
+      "AST_nyra_v4_plume_surface_flow_3_2": "1074820C7E2D7F8A6320AD6F6F36A53B3E14054C5B4BCD5257837BBFD14DC9D2",
+      "AST_nyra_v4_plume_surface_flow_3_3": "4888855D7C81E0D3A5E16FA3189CD928038DDCEACB3B1E263584F639E72BF231",
+      "AST_nyra_v4_plume_surface_flow_3_4": "EB6C4DB5416DC3C1F1D2C608B0A2D36DF10A018D421EBFC715C9AC84FDBB98D5",
+      "AST_nyra_v4_plume_surface_flow_3_5": "0121898D586A05566F3C739CC6E09D2DFE889D1CD8670BF984B4562FCD8035B2",
+      "AST_nyra_v4_plume_surface_flow_3_6": "570328AAB86E168526F4DE66B57C3DD2D25FDDDE1EF60234E2ECADD60347C821",
+      "AST_nyra_v4_plume_surface_flow_3_7": "6B1E35BEA9A16263EF15BADBE357E28EF537EB4E8ADFAACF1A4F2281ACBF3865",
+      "AST_nyra_v4_plume_surface_flow_4_0": "D2C9078447C4C35562DCA76B1E5E3E6E93074A2047C2D6C8B7E290434B88C4ED",
+      "AST_nyra_v4_plume_surface_flow_4_1": "0094B8FB5C1BFCB4C9B85CA2168EEC3AC37D4B26BF2D81718D30CC7235D3AFD6",
+      "AST_nyra_v4_plume_surface_flow_4_2": "40704E3395D8D153F31694DCF5BEB663B94FA88E2486E4C5EC590706C71E57CA",
+      "AST_nyra_v4_plume_surface_flow_4_3": "C7ACDC8B208F98C842D872EBBA11377200D5AE34D8867BFF5279513B9D1DA1F1",
+      "AST_nyra_v4_plume_surface_flow_4_4": "7EA60F615FFD31D002816C31182BE6EBBFCCE27B735B3AD90EE6AF16D25F2FEB",
+      "AST_nyra_v4_plume_surface_flow_4_5": "F49688EAC4D74FB936A35B19E280CC4B348A150304D7CC63E04FC8C08FB7B9DA",
+      "AST_nyra_v4_plume_surface_flow_4_6": "934C2BDF6D16C40EBA115C02BB2AC08DCD9E126C9AC12B3506E961DE6606AA7B",
+      "AST_nyra_v4_plume_surface_flow_4_7": "3F8919AE1741C5265AA6E9C7ECDB89B7B4C1B1C6A65CE63AA9450A49B91CBD6F",
+      "AST_nyra_v4_plume_surface_flow_5_0": "7BD9852599210B8470226D96EB1187C0FBCECBA952AD996E3D0C86CB205C8780",
+      "AST_nyra_v4_plume_surface_flow_5_1": "D32903720DD2797C8919C9387459FAC6EF0DA1B043586157FE72901153F3662D",
+      "AST_nyra_v4_plume_surface_flow_5_2": "146B1A422C03875A97BB1A54E8FEAFED3966A21D793CF5A2D96D24DF4F193797",
+      "AST_nyra_v4_plume_surface_flow_5_3": "57CCEC663333EBF6E00CF6440F88A64F5755E6EFA132B9EA5BB3156C2F029909",
+      "AST_nyra_v4_plume_surface_flow_5_4": "DB9BE4A3EEE273A8AF8F3369061485CB37FA4E1B524E8C045A02286EEFDB6B62",
+      "AST_nyra_v4_plume_surface_flow_5_5": "5FC16214DE40ED15125D44E33FB3F5E25727B4229589B8AC864FC19B0BADE906",
+      "AST_nyra_v4_plume_surface_flow_5_6": "C02799FF24998F800AB0DB13A3A2A11587654B9AE859581B80B1A49B486E40F1",
+      "AST_nyra_v4_plume_surface_flow_5_7": "21D9C85D3FEC84D5B877225DAF9547F076569A55B697A26936371485250A2715",
+      "AST_nyra_v4_plume_surface_flow_6_0": "9728D04BA3819A02FC1204BD13E6F407E565BA112404FD7EE420D29EE2B8FBE0",
+      "AST_nyra_v4_plume_surface_flow_6_1": "AA372FD7116E69C72C52B45453EA076921684A69ED9DA1B3F1631B59E6273DF0",
+      "AST_nyra_v4_plume_surface_flow_6_2": "7D07409731404FA0715E945D4A9803A9698C175A6263AD32B920D6A5ACAF8B6D",
+      "AST_nyra_v4_plume_surface_flow_6_3": "70ADC2CC55AB7C2883A65FF4DBE2995A098E8EF57FAB7A4EFF336DB9259A0E77",
+      "AST_nyra_v4_plume_surface_flow_6_4": "54830563D6BD560656A2847CFC66C8530CFDD2F18BAF52FFB0A1ED5F4FCDEF5C",
+      "AST_nyra_v4_plume_surface_flow_6_5": "17524C4B61E33D1A0668B7477E08353A219C8DC4BF20EDD94133C1EE9518E011",
+      "AST_nyra_v4_plume_surface_flow_6_6": "B9D1C5508CAFCB8A4C06D50AD01873860F21A952C2BCC9DFC901C923E908125C",
+      "AST_nyra_v4_plume_surface_flow_6_7": "4D4C74C4EE4C874EB7021835E908C4923F6D8BD88031656AE182D6D94E763E14",
+      "AST_nyra_v4_plume_surface_flow_7_0": "1C9B3700489031C6ABA1EBA1DC5D5267C36446235B8C24195D7B759712FAA9FF",
+      "AST_nyra_v4_plume_surface_flow_7_1": "40176DB2C4E9D23CCDA846A641AC9CCDBC022364DCBC80BF75C4FCB771BB0895",
+      "AST_nyra_v4_plume_surface_flow_7_2": "6FBAD9A478B5A4AE4AC96409A500BE379BA2E1B970486B5CCC1C58C6159BA38B",
+      "AST_nyra_v4_plume_surface_flow_7_3": "5539649765C0C8671A1991C89AD276AE4FBFE9477DC82E38073AAD1A55E3617E",
+      "AST_nyra_v4_plume_surface_flow_7_4": "B85F9B76A7169BF46F245BFF593E5E1D24478DED4CE7FEA4DE59DE76504A46CD",
+      "AST_nyra_v4_plume_surface_flow_7_5": "B5C15695B085A0F6B5488961507921B077221592E99FC3ECDA59DF888B83D9CD",
+      "AST_nyra_v4_plume_surface_flow_7_6": "169140775C7BE6CEE0F246EFEDB1307512BB970C83C7D85F20821187CD37134A",
+      "AST_nyra_v4_plume_surface_flow_7_7": "860339927831256D46CB42FFB62053EBE7A5EF02733A11879AE83365F64C21FC",
+      "AST_nyra_v4_sculpted_s_plume": "A233B5815FB1B5C4D86690E5DFD3ECEB283FC670C1A86CC3C81C7134F6693C57",
+      "AST_nyra_v4_silver_ear_brush_L0": "1AC6A191582BA98FC3589115187352676D4B14A8068F9B1FE6A37E4B6D39CD09",
+      "AST_nyra_v4_silver_ear_brush_L1": "D0734329E95AA17C931488C3B0999F0560B9292AF0ECFC4261D901463CBD948F",
+      "AST_nyra_v4_silver_ear_brush_L2": "39ECD2F8CC439C89223D9E1271F29AF593D7EF2DE64B18D65552A0B10CD0EEA6",
+      "AST_nyra_v4_silver_ear_brush_L3": "A99E0A10704F967BA2FF9A9D15ADBB013A031F9F1092355CCA98B2B58C392BC2",
+      "AST_nyra_v4_silver_ear_brush_L4": "3CB35421A770591B4314CA90EB1156E8E08BD5FB1DE6477598371B9A9700E9A2",
+      "AST_nyra_v4_silver_ear_brush_R0": "BDF31A87AF18BCA6F2002372549D47DAEBA450CDE716CBE0B495D3859E0F622D",
+      "AST_nyra_v4_silver_ear_brush_R1": "927158B00174A78053507B5034F72DB5A604F305DB4182FEFF8B667A353AD588",
+      "AST_nyra_v4_silver_ear_brush_R2": "BD27DBE0D0F2FF4C129CB8E20709530A7C44065AF43F0F88714FEF85F3A25426",
+      "AST_nyra_v4_silver_ear_brush_R3": "4161EDBA512B8F8AB8771920816A33D3FE7C7CCC3BDDC5A0836D9C2E1C69F350",
+      "AST_nyra_v4_silver_ear_brush_R4": "42A3B7DE0D0A2011C11C644590EB519B0DEC24744A3ED0623680E18670788AE4",
+      "AST_nyra_v4_silver_flame_0": "9B0414E0A849C67A9F496FC72C53A974F153668353362E0433F210620C3950EC",
+      "AST_nyra_v4_silver_flame_1": "D561C67B11DD71B776A02082C5994451BE1142B298F6F4906EC86CBFD793C7D0",
+      "AST_nyra_v4_silver_flame_2": "6C23E92ECC2F2E6E8DDD3342B9F855B248F9176DE2BE2BB51C57AC2E7C993EBA",
+      "AST_nyra_v4_silver_flame_3": "9311F060678B0ADCDF04BBDB592FB277F629D0609F85B760A6E30E7C8B50DB04",
+      "AST_nyra_v4_silver_flame_4": "940DB56F9D8B9AA4F8A53AE7772014ED5FA993D711E357CD985DE465A4AF65E3",
+      "AST_nyra_v4_silver_flame_5": "3716B27797BA490F166BC640F1CDDFC6F8F109477850730ECBC5A0296357BD57",
+      "AST_nyra_v4_silver_flame_6": "FDE34C5BB8B42D683FDF92FB0E927A80A551C55A69B6BBBBD0BD3339E7D5C44C",
+      "AST_nyra_v4_tail_copper_flame_L0": "5D1B85EDAC5DF65356409AB0C3A13875A279B72B09E6B376BA5CBA327161BD12",
+      "AST_nyra_v4_tail_copper_flame_L1": "052F7DA8A45AB5AA725DE24744181BA3095577D6F0198BA3E6212913E692493D",
+      "AST_nyra_v4_tail_copper_flame_R0": "98F20433487E84A50D5AAD0A0821FF15BAC69A23E731D8448E2FC60C062B08F7",
+      "AST_nyra_v4_tail_copper_flame_R1": "C56A4F740A7E45EBFB51E916A9156730AE15CFF8EE3D265E36B5EC4D400AFC35"
+    },
+    "protected_material_sha256": {
+      "AST_nyra_v2_armor": "9A07CA0EA63E4DB344854B849B4526CF4C9D2EE911614D1C09322D0C6E0E41FB",
+      "AST_nyra_v2_gem": "13BCB8F3099C328FBEC8E6EA94C08FC67AC7B5C443895BDFACD3B5E5A20F264C",
+      "AST_nyra_v2_gem_dark": "A1CD820C40D92CAE3F9D6418568A85A225B57DA470B6E3BD8CC3D27306EF0527",
+      "AST_nyra_v2_gem_light": "975A365FA0895E4254C1A32B5C3201914FE3D271B145ED1A719B026FF363D431",
+      "AST_nyra_v2_metal": "F25F102F81A158D4ACE13AC376A2537EEE18236241BAAE52842CF92BD1520A0B",
+      "AST_nyra_v2_metal_light": "370B2A5DDA33C7118183FC19C2B8A8A2FB6D4C6F0B97612EF7415F2DDDE95527",
+      "AST_nyra_v2_painted_coat": "EBEBD6672AD3E8DFAF004CE069D7F12E02EA8A91D14DF1A367DDF8EC4EA1157C"
+    },
+    "original_face_geometry_sha256": {
+      "AST_nyra_v2_cheek_fan_L0": "8AABFEEBD9B2B761FAC1E68637C561A4670B5F075E0CE3035EFF9298CB630C9F",
+      "AST_nyra_v2_cheek_fan_L1": "F00E662201B97A3095F5E597B36D74A27D174EF95DA3FD7BB78BD6A423F124BD",
+      "AST_nyra_v2_cheek_fan_L2": "D7FCA81D27755C963C501320CA40EF02ACC886B964BADFD3CC1020D0C1A9E4FC",
+      "AST_nyra_v2_cheek_fan_L3": "813885B8E3D4107ED4A2109CC72613003EAC04D729A01AFBA225F13B2A1994B6",
+      "AST_nyra_v2_cheek_fan_L4": "FA72CE28C3BCE6CB7D095C1D2C37753D6D16114CCE97500E7C4F20D91F85FA5B",
+      "AST_nyra_v2_cheek_fan_L5": "948E86DB852CCB385941B7F86CA6E2F7A083CE71402BE779AAA0C94D50B3088F",
+      "AST_nyra_v2_cheek_fan_L6": "6B10A8C5D98AF106B31C11BCCAF49B886CFD8D5EF8575E534AA84D9C8057517D",
+      "AST_nyra_v2_cheek_fan_R0": "77C7AC173E83C016891D7BCD391A2E62650044FF043366C6E7F04C45651A9AE3",
+      "AST_nyra_v2_cheek_fan_R1": "19B7AA8C5E56CE448F34131BF105BED1D5936177F999D21676D80DE35753451E",
+      "AST_nyra_v2_cheek_fan_R2": "2074EBB7912A8F8D69D18CDEDC2DF965D937DBDD14413C6C13E9B6BBEB8510E1",
+      "AST_nyra_v2_cheek_fan_R3": "C166D1FF601013B888B1A95138F89057154D9273C421C425D4A841FD85E174B8",
+      "AST_nyra_v2_cheek_fan_R4": "3C0B053B0CF830426F6A955591226762C8266796336E8015C1C945AF1EFC3E7A",
+      "AST_nyra_v2_cheek_fan_R5": "38FA141072912C7EB2E71B26FCA81641DEDCE13B893277249F67B5CF430FE7D0",
+      "AST_nyra_v2_cheek_fan_R6": "AED31564494D076D683BE9FE87910703ADE1A4C2CF8ED30E2222036E70EF6296",
+      "AST_nyra_v2_cheek_split_L1": "508B8257C8B85978489A8100B710024BB409973C044CF83CAD768F0038F3CCA8",
+      "AST_nyra_v2_cheek_split_L3": "D8180CC61EBD29EDDFC7D41436AAEAED74A05C6F4EA46CB0857AAB53F4173508",
+      "AST_nyra_v2_cheek_split_L5": "F4DB058A61F0B77B3199BD38F72F622D267BF0DC535CF01CB8AF1A979D83878D",
+      "AST_nyra_v2_cheek_split_R1": "EFEE224B3BA517996BB72D07A34548856D04CA3553BA22EE1ADAB68B53A7D41E",
+      "AST_nyra_v2_cheek_split_R3": "E266F6EBE870A0F8EA38E0AF5DCD53AFA8577ADC10248F847FEAC89C9D4F035E",
+      "AST_nyra_v2_cheek_split_R5": "0CF7524BBDBDBE53F995DFA9FC75853552B2CD21FB71CC11E8E494028A4B5E30",
+      "AST_nyra_v2_eye_L": "AD27FCB8D8EAA10DDF3D42DC4F4B9E317AE7D1FC484FF4C35341AD66EAE0C3A5",
+      "AST_nyra_v2_eye_L_catchlight": "D15DAD0A609833E81A6FD0C62CB3AA3F7C85C03E8791C370687F2F50B2AA7A52",
+      "AST_nyra_v2_eye_L_closed_lash": "88F8C56DB36AF17D39154F4D7FE08523110BE741CBEE794933F5A303690AEBC4",
+      "AST_nyra_v2_eye_L_closed_lid": "AD408D7DC1CBA8D39C88CD580266B1F933850463661472465FB1AE77246A6567",
+      "AST_nyra_v2_eye_L_lash_wing": "9654E71CAD8A336D3799C0C0E4807BFC3885EA798C3E8E537179CF309C8DBDBF",
+      "AST_nyra_v2_eye_L_lower_lid": "63FFC1E5C0BEF06B627AAD6F4375EF5D866BC0A6507E01B052A60D55851D23DA",
+      "AST_nyra_v2_eye_L_pinlight": "B033E7D036F497B89B9F38B99E19C506B4670CC1F73E8C3A7FA9B80774DE6F22",
+      "AST_nyra_v2_eye_L_skin_annulus": "08AD828D51E0F83D1CB687E54813F448B7AFDA6EAC09D868E6D39080FEC08F90",
+      "AST_nyra_v2_eye_L_upper_lid": "9E81123B32B4BAA6F3BBEBE0B1532ADC288BE13F3DC430212150418067A65597",
+      "AST_nyra_v2_eye_R": "14CDB2F317667716290CF47DC8EF91DF793F690339ED0BA2FF86FB096F18C904",
+      "AST_nyra_v2_eye_R_catchlight": "2525B3BC175B828EC3D9D9937C593396EE2F2BCC7486995D7F94775292051BB3",
+      "AST_nyra_v2_eye_R_closed_lash": "3E129B0E3DCEAFD4713339AEC8B669DBE6B6DFDFA4D0286BE5B48B3242E70615",
+      "AST_nyra_v2_eye_R_closed_lid": "E3D5A1CA124F5C998633EEF5A430E60A55E877AA430C083FDCDA7969312F1A09",
+      "AST_nyra_v2_eye_R_lash_wing": "E5FE4790C3AF0293411066B3026775075FA890096634D5148A786EBC80068F7D",
+      "AST_nyra_v2_eye_R_lower_lid": "504EC0EEF7FF0A17A59F581201B194B6E95943FCB1A236AB11F6D2F6D7FED02F",
+      "AST_nyra_v2_eye_R_pinlight": "2F23BB6CBB15D64445ADC82487CBD60502655FA4C4D8558195D573CF00115922",
+      "AST_nyra_v2_eye_R_skin_annulus": "6A15DD8271EBFF2C852ABCD1CB900263EFB6E0F157F8828A29FC0AF581877B44",
+      "AST_nyra_v2_eye_R_upper_lid": "D35A75CEF93B35C6C1367399DCAEE84BE254C143613EE7ADA1404E1664E4D95B",
+      "AST_nyra_v2_head": "050FACB99992F39A0C58CF7DDF65B1D777BCF2B368B1ACE605FEBB7A0C863EA7",
+      "AST_nyra_v2_smile_L": "7E91B340E7BAFDD1DDC45CA7075C70AD1BD5CF3AF150F1609B0BC9011075F878",
+      "AST_nyra_v2_smile_R": "954455165AC2808AF3DAE7CC75C4E2DC505CCBEA21F70B3685DADEB982B5A8E4",
+      "AST_nyra_v2_triangular_copper_nose": "D41581D7CEEA082E8FF756798CFDA2EA681AEF8DD0E9AB6D5D7AD4EC52870CC0"
+    },
+    "candidate_face_geometry_sha256": {
+      "AST_nyra_v2_cheek_fan_L0": "730494BC8BEFDEAF26A828AEA16254EFE1896BAB227D07C969F893803986AF08",
+      "AST_nyra_v2_cheek_fan_L1": "B35C7BCDC508448D70101244D811D6ABE9CFDFEAFA263DE363A70313E270B6BC",
+      "AST_nyra_v2_cheek_fan_L2": "6F42AB0525D2089C3BC19A9A5A55C501D071ACEF958510ED926AE32AA3DC5496",
+      "AST_nyra_v2_cheek_fan_L3": "1C45F20DE825E061F1CFE7AFCEEE4F6374D5D5085E25C13332DA3BE94D1EA3AB",
+      "AST_nyra_v2_cheek_fan_L4": "DE2E0416A9E59C1501024E65E8B28E6A5D01C114A20BE61CA4DB78B60A756E14",
+      "AST_nyra_v2_cheek_fan_L5": "E5D68A30AAACC2B30EB91B5F22637ACDB13639C65716CCA41BA94A90547F94ED",
+      "AST_nyra_v2_cheek_fan_L6": "F2FBBA13D41F1E67A2A4746F9113115C8094CFEDE4BBF2BC8A25F6B5ADDA934A",
+      "AST_nyra_v2_cheek_fan_R0": "4DF45B2B5C9D7C246118F6328471CB6FFFCE91351DF074DDB0DD6AD6A4A16FCB",
+      "AST_nyra_v2_cheek_fan_R1": "7529F59658F53930F36DE56074E026C92FE497022801D9214931B175F9DA19F7",
+      "AST_nyra_v2_cheek_fan_R2": "386AAD08FF94F76F1F90DAEAC4BE811962803C3B1735D8C6ACA14E3A80345583",
+      "AST_nyra_v2_cheek_fan_R3": "730ABEA9F48089F493AD1B87D76CB712322AAB730AAB2A38CD031D01696E8FA0",
+      "AST_nyra_v2_cheek_fan_R4": "937791DDEA0632E8E4ED59A812C86A5669BBEB63CD9F62BA099A881867AC2F68",
+      "AST_nyra_v2_cheek_fan_R5": "66974AA2D1DC2E34E89656114636D612B8EDA0B4B3096C97692C94DD1A5786ED",
+      "AST_nyra_v2_cheek_fan_R6": "32EDD2D44F2380935BD6E0127B8CC3E7E8825A0D0D7CEB4A7EF5115233FB52DE",
+      "AST_nyra_v2_cheek_split_L1": "7A7B05CCC9885E6CB5E225314F1528C5929B0039859D1AB3ABA7D924B480BA21",
+      "AST_nyra_v2_cheek_split_L3": "7C4363456D01C6F12479B83EB594EBF5A573B8FBAE3AA5CA804B1D7B75653EB7",
+      "AST_nyra_v2_cheek_split_L5": "ABB25AA4EF38E58D5A8E6D39D23B360A6044897B58B164BA0B1F6C033262D637",
+      "AST_nyra_v2_cheek_split_R1": "23FE6D66513925F14E6F4C12EA4B39BBC368A16C08E46DDB9622B9ED85561D47",
+      "AST_nyra_v2_cheek_split_R3": "CAE2BD36785BCD7325F74D252886B46FDD8C29810A4CA55326F9217D60F7E2B7",
+      "AST_nyra_v2_cheek_split_R5": "117C50D109B595AABCF6444521D6B9893A6155DFFFA1F73288DF553F654CFC1F",
+      "AST_nyra_v2_eye_L": "FF6C2D0FC589280CA5982CCD2AE9C2BB3A101F488317918C5AD99B16505FD726",
+      "AST_nyra_v2_eye_L_catchlight": "112219AD3CE392354755D1CD4731AF3038F1759423155BC032B40ACE0D02318A",
+      "AST_nyra_v2_eye_L_closed_lash": "9AFAB6669961C028F8858EB6E2E60A346F154BE86B4B930919D25AE6E56A4D15",
+      "AST_nyra_v2_eye_L_closed_lid": "BCA890E010319BCA859F1F0350C1EEFFB637F9A19976C8608DE1F7ACB2A5D490",
+      "AST_nyra_v2_eye_L_lash_wing": "282C7113A3420DA3CEDEF6956E4D2FF9C76ED156C56BC6835FC89BE9BE8B5648",
+      "AST_nyra_v2_eye_L_lower_lid": "428E9622AACAA37B5BCACA35B86BC95EFB88E15CEECFD00F8FA3BF81F4BC9E4E",
+      "AST_nyra_v2_eye_L_pinlight": "D8F34A68AA367C5BF9D483E705438E89965F98428B03F056C193B9F4FC4C63C2",
+      "AST_nyra_v2_eye_L_skin_annulus": "53768930197B8B2B30722A86F9B2DC96154DCD42B63F3D67089EA18CA62931E0",
+      "AST_nyra_v2_eye_L_upper_lid": "9C00AF700D7B0BAE1FF304A985A9414CC44B5A47B689CE373C3850F3D3FC272D",
+      "AST_nyra_v2_eye_R": "777E7DEFBDE44C4B325642B6398A6E0C88930A1B56D8DF35106609C19A0C739D",
+      "AST_nyra_v2_eye_R_catchlight": "18EA4DEA2B534DCA142B076DE4C3CA8AFB61F7F9B0F2E234A978CA69153111DA",
+      "AST_nyra_v2_eye_R_closed_lash": "FE9E5FABF62A3F07B224C32B1F366E0CEA4B4626CEB02DD732E8A2560951077A",
+      "AST_nyra_v2_eye_R_closed_lid": "C1E63FD25F0CF46EFA399BFD7C00F7473FBF445F4308D02D5771DD375C3034B0",
+      "AST_nyra_v2_eye_R_lash_wing": "BAA2542CB8DB2696097E60723E4C7C8665D957F6E2CB2F56DB2889873E44E6B1",
+      "AST_nyra_v2_eye_R_lower_lid": "93A5BBA785F2195023F79F7257AC38BBF409A0EFB584A2CFD2141716390F288A",
+      "AST_nyra_v2_eye_R_pinlight": "14173EB6C96977EB0E07DF5AF1F906F768B0567698EBFCEAE0CA31E57D0661D2",
+      "AST_nyra_v2_eye_R_skin_annulus": "F1817B64624834765FBF9D233BE7C68B08A30867AC1E607166EFA9E7EBE134EC",
+      "AST_nyra_v2_eye_R_upper_lid": "64C86AD17CCE31E86FD7A03EBB52C7BA6E57EDF5139FD46CC93088D5CA64B657",
+      "AST_nyra_v2_head": "45F6211E36CC9D0BD15738A1B02E4AAC2C8E9286EE1366E6A577D98B17F91E63",
+      "AST_nyra_v2_smile_L": "BC094F703B4E1AAF92C6ACE1428AC3367094B7F67B72767816FF735CFDCFF1C4",
+      "AST_nyra_v2_smile_R": "43AFF9B8F62A633D68FDD8329A781C454320DC7A52AC0F090A8F7D145A675489",
+      "AST_nyra_v2_triangular_copper_nose": "C20B6456CEDCCEA3050C7200195B04FEE0C33F840587467A8E51FF5CA55B39AF"
+    },
+    "original_lid_pivots": {
+      "AST_nyra_v2_eye_R_closed_lid": [
+        -0.4078327417373657,
+        -1.3733445405960083,
+        2.499875068664551
+      ],
+      "AST_nyra_v2_eye_R_closed_lash": [
+        -0.4078327417373657,
+        -1.3733445405960083,
+        2.499875068664551
+      ],
+      "AST_nyra_v2_eye_L_closed_lid": [
+        0.40783029794692993,
+        -1.3733407258987427,
+        2.499875068664551
+      ],
+      "AST_nyra_v2_eye_L_closed_lash": [
+        0.40783029794692993,
+        -1.3733407258987427,
+        2.499875068664551
+      ]
+    },
+    "candidate_lid_pivots": {
+      "AST_nyra_v2_eye_R_closed_lid": [
+        -0.4078327417373657,
+        -1.3733445405960083,
+        2.499875068664551
+      ],
+      "AST_nyra_v2_eye_R_closed_lash": [
+        -0.4078327417373657,
+        -1.3733445405960083,
+        2.499875068664551
+      ],
+      "AST_nyra_v2_eye_L_closed_lid": [
+        0.40783029794692993,
+        -1.3733407258987427,
+        2.499875068664551
+      ],
+      "AST_nyra_v2_eye_L_closed_lash": [
+        0.40783029794692993,
+        -1.3733407258987427,
+        2.499875068664551
+      ]
+    },
+    "protected_object_count": 196,
+    "protected_material_count": 7,
+    "invalid_face_objects": []
+  },
+  "original_rig": {
+    "rest_sha256": "831FE95C97E252E6DA88F801FCE88147999CC5D14C327589D0B995F2A0F1031C",
+    "behavior_sha256": "37E2CB7157322B1B022EDA60C976DC4F934B2866BB43D2B7C6645C19C4A16C75",
+    "bones": 13,
+    "fps": 30,
+    "fps_base": 1.0,
+    "actions": {
+      "blink": {
+        "sha256": "53D90AD797C3149C1F887CBAF6F5222C36B82564E3422FEC198FE27F8864DCC4",
+        "curve_count": 117,
+        "key_count": 1170,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          19.0
+        ]
+      },
+      "eat": {
+        "sha256": "15735E2CC974B9F7C94E4B9F8C3AEE83E59E83DAFE2F8A083A2F3D05DB7A76AC",
+        "curve_count": 117,
+        "key_count": 5382,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          91.0
+        ]
+      },
+      "happy": {
+        "sha256": "DF5B2F8021FBB35F170DFE0FC6D045B9DCB681FD418AE4681D9F053DD50F54A3",
+        "curve_count": 117,
+        "key_count": 3627,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          61.0
+        ]
+      },
+      "idle": {
+        "sha256": "FE58E57D7DCFAD53A63F33E498D98B79F3530F638B5D2C603B3A76B013D8793A",
+        "curve_count": 117,
+        "key_count": 7137,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          121.0
+        ]
+      },
+      "pet_reaction": {
+        "sha256": "97259C22555C196331BAB7CCB2AE82D9F9E66E061A29994EFD2001DC7802563A",
+        "curve_count": 117,
+        "key_count": 4563,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          76.0
+        ]
+      },
+      "play": {
+        "sha256": "EF1FC15872649E931595A62896CB4D740F6100DBBAE28C4CC85367466DB52895",
+        "curve_count": 117,
+        "key_count": 4797,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          81.0
+        ]
+      },
+      "sleep": {
+        "sha256": "B720F672BCB3D0661BF3217D4248098ADA04FEE6280AB398E0E3E65D57297B0B",
+        "curve_count": 117,
+        "key_count": 7137,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          121.0
+        ]
+      },
+      "wake": {
+        "sha256": "5502BEF1AE28D5A16D201229C41412C916898AB0EAA0234786E0365E6C73153D",
+        "curve_count": 117,
+        "key_count": 3627,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          61.0
+        ]
+      },
+      "walk": {
+        "sha256": "13FCE1E35359EB2D10E00BE348E4444A7C7F3DF0F931FE17367EAAABE98853A0",
+        "curve_count": 117,
+        "key_count": 2925,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          49.0
+        ]
+      }
+    }
+  },
+  "candidate_rig": {
+    "rest_sha256": "831FE95C97E252E6DA88F801FCE88147999CC5D14C327589D0B995F2A0F1031C",
+    "behavior_sha256": "37E2CB7157322B1B022EDA60C976DC4F934B2866BB43D2B7C6645C19C4A16C75",
+    "bones": 13,
+    "fps": 30,
+    "fps_base": 1.0,
+    "actions": {
+      "blink": {
+        "sha256": "53D90AD797C3149C1F887CBAF6F5222C36B82564E3422FEC198FE27F8864DCC4",
+        "curve_count": 117,
+        "key_count": 1170,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          19.0
+        ]
+      },
+      "eat": {
+        "sha256": "15735E2CC974B9F7C94E4B9F8C3AEE83E59E83DAFE2F8A083A2F3D05DB7A76AC",
+        "curve_count": 117,
+        "key_count": 5382,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          91.0
+        ]
+      },
+      "happy": {
+        "sha256": "DF5B2F8021FBB35F170DFE0FC6D045B9DCB681FD418AE4681D9F053DD50F54A3",
+        "curve_count": 117,
+        "key_count": 3627,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          61.0
+        ]
+      },
+      "idle": {
+        "sha256": "FE58E57D7DCFAD53A63F33E498D98B79F3530F638B5D2C603B3A76B013D8793A",
+        "curve_count": 117,
+        "key_count": 7137,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          121.0
+        ]
+      },
+      "pet_reaction": {
+        "sha256": "97259C22555C196331BAB7CCB2AE82D9F9E66E061A29994EFD2001DC7802563A",
+        "curve_count": 117,
+        "key_count": 4563,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          76.0
+        ]
+      },
+      "play": {
+        "sha256": "EF1FC15872649E931595A62896CB4D740F6100DBBAE28C4CC85367466DB52895",
+        "curve_count": 117,
+        "key_count": 4797,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          81.0
+        ]
+      },
+      "sleep": {
+        "sha256": "B720F672BCB3D0661BF3217D4248098ADA04FEE6280AB398E0E3E65D57297B0B",
+        "curve_count": 117,
+        "key_count": 7137,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          121.0
+        ]
+      },
+      "wake": {
+        "sha256": "5502BEF1AE28D5A16D201229C41412C916898AB0EAA0234786E0365E6C73153D",
+        "curve_count": 117,
+        "key_count": 3627,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          61.0
+        ]
+      },
+      "walk": {
+        "sha256": "13FCE1E35359EB2D10E00BE348E4444A7C7F3DF0F931FE17367EAAABE98853A0",
+        "curve_count": 117,
+        "key_count": 2925,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          49.0
+        ]
+      }
+    }
+  },
+  "motion_comparison": {
+    "idle": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "blink": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "happy": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "eat": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "play": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "pet_reaction": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "sleep": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "wake": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "walk": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    }
+  },
+  "source_blink_samples": [
+    {
+      "frame": 1,
+      "evaluated_vertices": 220737,
+      "nonfinite_coordinates": 0
+    },
+    {
+      "frame": 5,
+      "evaluated_vertices": 220737,
+      "nonfinite_coordinates": 0
+    },
+    {
+      "frame": 7,
+      "evaluated_vertices": 220737,
+      "nonfinite_coordinates": 0
+    },
+    {
+      "frame": 8,
+      "evaluated_vertices": 220737,
+      "nonfinite_coordinates": 0
+    },
+    {
+      "frame": 9,
+      "evaluated_vertices": 220737,
+      "nonfinite_coordinates": 0
+    },
+    {
+      "frame": 10,
+      "evaluated_vertices": 220737,
+      "nonfinite_coordinates": 0
+    },
+    {
+      "frame": 12,
+      "evaluated_vertices": 220737,
+      "nonfinite_coordinates": 0
+    },
+    {
+      "frame": 16,
+      "evaluated_vertices": 220737,
+      "nonfinite_coordinates": 0
+    },
+    {
+      "frame": 24,
+      "evaluated_vertices": 220737,
+      "nonfinite_coordinates": 0
+    }
+  ],
+  "source_views": {
+    "face-hero": {
+      "file": "assets/3d/reference/cat/sculpt-v005/source/cat-face-hero.png",
+      "sha256": "D2D1DA8BCFF5DBD733C50FD66A9DC87E7B64F31E0CF81680E41490CF29ABCFCE",
+      "clip": "idle",
+      "frame": 1
+    },
+    "face-front": {
+      "file": "assets/3d/reference/cat/sculpt-v005/source/cat-face-front.png",
+      "sha256": "D9F23DD34EFC88E7C9C0334014BFFEF128414DDD7AFF3ED3FB9D7EEE03FA892D",
+      "clip": "idle",
+      "frame": 1
+    },
+    "face-side": {
+      "file": "assets/3d/reference/cat/sculpt-v005/source/cat-face-side.png",
+      "sha256": "50082905FE4D54D5969B9C8CF50E6F68F843B223E51D282639A7B19331FD9C33",
+      "clip": "idle",
+      "frame": 1
+    },
+    "blink-early": {
+      "file": "assets/3d/reference/cat/sculpt-v005/source/cat-blink-early.png",
+      "sha256": "1F2EEDD91F1A4964F9B00B07461DC1C3431DAB32658605BA05BFA83B356771E7",
+      "clip": "blink",
+      "frame": 5
+    },
+    "blink-partial": {
+      "file": "assets/3d/reference/cat/sculpt-v005/source/cat-blink-partial.png",
+      "sha256": "94F0D2E509CFD7F4FCBFA0D2F662D0F0651895940CF1D405ABAB391DB5DD272C",
+      "clip": "blink",
+      "frame": 7
+    },
+    "blink-closed": {
+      "file": "assets/3d/reference/cat/sculpt-v005/source/cat-blink-closed.png",
+      "sha256": "950C0C616472177CACC84FFDD7AE538C50C477F2DCE189227A243CC86471C742",
+      "clip": "blink",
+      "frame": 10
+    },
+    "hero": {
+      "file": "assets/3d/reference/cat/sculpt-v005/source/cat-hero.png",
+      "sha256": "6E642B9D151EB87F823786E61EF63F69FB497F1FC78EC2A059B2CA0EACD5D99F",
+      "clip": "idle",
+      "frame": 1
+    },
+    "rear": {
+      "file": "assets/3d/reference/cat/sculpt-v005/source/cat-rear.png",
+      "sha256": "CC549A38AEA276196FA8EAE6D1FFF9CE53A40EC20FBF5752B11CAE8AFD5B2719",
+      "clip": "idle",
+      "frame": 1
+    },
+    "body-hero": {
+      "file": "assets/3d/reference/cat/sculpt-v005/source/cat-body-hero.png",
+      "sha256": "0FE413E3FF97F631F9FAEAD58923432E5D04DD888C720AEF8063DC95B1EDC6FB",
+      "clip": "idle",
+      "frame": 1
+    }
+  },
+  "import_views": {
+    "face-hero": {
+      "file": "assets/3d/reference/cat/sculpt-v005/import/cat-face-hero.png",
+      "sha256": "FC877FB794CE7E71E7A8FEAA330087886725242F5B46A26DE8264BE64E260C27",
+      "clip": "idle",
+      "frame": 1
+    },
+    "face-front": {
+      "file": "assets/3d/reference/cat/sculpt-v005/import/cat-face-front.png",
+      "sha256": "5E2188BAF9CAEE93CDB2B64AD53B64FD152F308AED8E64C3D202DE1583D5861C",
+      "clip": "idle",
+      "frame": 1
+    },
+    "face-side": {
+      "file": "assets/3d/reference/cat/sculpt-v005/import/cat-face-side.png",
+      "sha256": "FCE34F2FE16DC5EED18F18D9F01DF338A99459097AA9573CC7E222FE587E5B2C",
+      "clip": "idle",
+      "frame": 1
+    },
+    "blink-early": {
+      "file": "assets/3d/reference/cat/sculpt-v005/import/cat-blink-early.png",
+      "sha256": "ECA893FEF8C569D42B0D1D34FDB353D98B35441E5596B0598E3AA4E92E0B5B59",
+      "clip": "blink",
+      "frame": 5
+    },
+    "blink-partial": {
+      "file": "assets/3d/reference/cat/sculpt-v005/import/cat-blink-partial.png",
+      "sha256": "AB54444E590F71DA4FA2D8C30D85016AD1BECF6430B3411572C521299021B176",
+      "clip": "blink",
+      "frame": 7
+    },
+    "blink-closed": {
+      "file": "assets/3d/reference/cat/sculpt-v005/import/cat-blink-closed.png",
+      "sha256": "028C3E1F2AC3EB67A9F656E9687C1AE724351A87FD4088B5CEB0A15C7B8BB825",
+      "clip": "blink",
+      "frame": 10
+    },
+    "hero": {
+      "file": "assets/3d/reference/cat/sculpt-v005/import/cat-hero.png",
+      "sha256": "B3F3FE16207864D81932BA76D4B542F517352AD0A81154BC8C3CEC499F9FCACA",
+      "clip": "idle",
+      "frame": 1
+    },
+    "body-hero": {
+      "file": "assets/3d/reference/cat/sculpt-v005/import/cat-body-hero.png",
+      "sha256": "363AA7B97F140401E7B81831D6EB84A63912D089D95F8F34D833293C4A6584CB",
+      "clip": "idle",
+      "frame": 1
+    }
+  },
+  "baseline_views": {
+    "face-hero": {
+      "file": "assets/3d/reference/cat/sculpt-v005/baseline/cat-face-hero.png",
+      "sha256": "B1F424870F889B99DCF028925EFB495C7F0AAA99A3B57E77609FD9378109DECC",
+      "clip": "idle",
+      "frame": 1
+    },
+    "face-front": {
+      "file": "assets/3d/reference/cat/sculpt-v005/baseline/cat-face-front.png",
+      "sha256": "1DCC58AA254B51F99F746C643E9F51E534AEAE1B531D49E3D070340236EEDCB7",
+      "clip": "idle",
+      "frame": 1
+    },
+    "face-side": {
+      "file": "assets/3d/reference/cat/sculpt-v005/baseline/cat-face-side.png",
+      "sha256": "2B22CE4DA118A758413ADFF7FE109774F2A8AF0593C341F3A045C8BE7A23237F",
+      "clip": "idle",
+      "frame": 1
+    }
+  },
+  "hair_evidence": null,
+  "checks": {
+    "original_rest_rig_unchanged": true,
+    "original_constraints_drivers_unchanged": true,
+    "all_original_action_data_unchanged": true,
+    "original_frame_rate_unchanged": true,
+    "explicit_face_only_allowlist": true,
+    "all_unedited_source_objects_retained": true,
+    "nonface_geometry_unchanged": true,
+    "nonface_materials_unchanged": true,
+    "original_lid_pivots_unchanged": true,
+    "meaningful_face_geometry_refinement": true,
+    "face_geometry_survives_source_reopen": true,
+    "all_protected_geometry_survives_source_reopen": true,
+    "all_protected_materials_survive_source_reopen": true,
+    "finite_evaluated_partial_blinks": true,
+    "two_character_meshes": true,
+    "exact_distinct_components": true,
+    "one_original_shared_skin": true,
+    "nine_original_clips": true,
+    "only_public_extras": true,
+    "skinned_triangle_primitives": true,
+    "under_40_primitives": true,
+    "within_species_triangle_budget": true,
+    "self_contained_no_projection": true,
+    "no_editor_stage": true,
+    "meshopt": true,
+    "within_species_byte_budget": true,
+    "finite_imported_geometry": true,
+    "valid_normalized_known_weights": true,
+    "bounded_importer_triangle_difference": true,
+    "nine_clips_match_historical_import": true,
+    "two_imported_components": true,
+    "imported_equipment_metadata": true,
+    "six_facial_views_present": true,
+    "all_historical_and_builder_inputs_unchanged": true
+  },
+  "passed": true,
+  "human_likeness_accepted": false,
+  "mobile_performance_accepted": false,
+  "paid_provider_used": false,
+  "projection_used": false,
+  "nonface_unchanged": true,
+  "package_status": "Local hash-checked Blender delivery; no game-dev canonical receipt.",
+  "animation_limit": "Original full action/rest/driver RNA unchanged; nine fresh GLB skin-matrix samples per clip. Original center-scale lids retained; no anatomical closure or collision-free motion claim.",
+  "likeness_limit": "Face-only sculpt interpreted from unchanged original artwork. Hidden angles inferred. Not a 100-percent likeness or human identity acceptance claim.",
+  "publication_amendment": {
+    "id": "metadata-clean-2026-09-07",
+    "record": "assets/3d/publication/2026-09-07/amendment.json",
+    "original_document_sha256": "F23BF3A061F29AF1313398FDA72940BE9298C2D1C6718F66E7916D1E789EF31D",
+    "authoring_record": "assets/3d/publication/2026-09-07/authoring-records/assets/3d/reference/cat/sculpt-v005/validation.json",
+    "authoring_record_status": "exact-public-safe-original",
+    "notice": "Metadata-only publication derivative, not a rerun of the historical builder or validator. File digest and size bindings identify publication copies; all measured geometry, materials, rig, action, motion and acceptance evidence remains historical and unchanged. Consult the original authoring record and amendment binding log."
+  }
+}

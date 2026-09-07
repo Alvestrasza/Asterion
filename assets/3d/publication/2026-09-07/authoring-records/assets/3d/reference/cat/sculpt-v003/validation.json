@@ -1,0 +1,1479 @@
+{
+  "schema": "asterion-local-modular-companion-v1",
+  "version": "sculpt-v003",
+  "kind": "cat",
+  "name": "Nyra",
+  "source_sha256": "7A5A01725D890ED558760BAAA77825B0761FD4018F0E30518A6D8FA3F29969D2",
+  "model_sha256": "87233485054F6E958F2C2BB4A7ED509EDB3E814A8994BBBC7F4F3BFAC615E50F",
+  "reference_sha256": "C996F1500869602E32B24047F8D1A6FAB6018CE87514AA22F017A09480EAEFED",
+  "input_sha256": {
+    "assets/3d/source/cat/sculpt-v002/cat-sculpt-v002.blend": "27E489A3841EF6EF9D4E822470EC20E0D3C0888288D474417CA05748F2254E57",
+    "public/assets/3d/cat/cat-sculpt-v002.glb": "B97818FB5E2D2F726C702BA153F439E4F2B6568B4BBD3FAFB029057F609EA50E",
+    "public/assets/companions/cat.png": "C996F1500869602E32B24047F8D1A6FAB6018CE87514AA22F017A09480EAEFED",
+    "assets/3d/source/companions/sculpt-v003/build.py": "D29DC488FAF8CB4CB51C81291A9B21102E74832209991D90B23DEF4DA12D5763",
+    "assets/3d/source/companions/sculpt-v003/refinements.py": "82AE8D392CCCF12EA231BD66A0244BDA073739AA4C0B3103DE7DD8DDDA1FBEBA",
+    "assets/3d/source/companions/sculpt-v003/export_equipment.py": "B12B82828199ED109E2764A69BA10A8036D79B62331FA8082C9EF4BEBFC1FB2D",
+    "assets/3d/source/companions/sculpt-v001/common.py": "A6DF036A5B3F6FAA3C74740382998D829D45C9E2734D91A285F9369764C21F9E",
+    "assets/3d/source/asterion/sculpt-v002/validate_refinement.py": "8C541F26C2D2546FB142988D10F07EDF51C891D1C81F02065C7B62CE01F78EFD",
+    "assets/3d/source/asterion/sculpt-v003/build_head_study.py": "A3B22323201D30A3BD9459985F8F7741A44545010A84D27CC5912E1C8A85E0F2",
+    "assets/3d/source/asterion/sculpt-v001/build_sculpt.py": "9A81C430E8FD07CE520BBA554C78845A508F22E5FB89E524BF515D8BF8415621",
+    "assets/3d/source/asterion/sculpt-v001/rig_delivery.py": "8758D105E70AB5405F61A48A531154CC591EAC0D82B167788F1D0785A16CDFF0",
+    "assets/3d/source/asterion/sculpt-v004/export_equipment.py": "C805B4740463215AE5CC9D314D14966F2BDF91A00FB82D05054BE0BBB8ED930B"
+  },
+  "blender": "5.2.1 LTS",
+  "checks": {
+    "original_rest_rig_unchanged": true,
+    "original_constraints_drivers_unchanged": true,
+    "all_original_action_data_unchanged": true,
+    "original_frame_rate_unchanged": true,
+    "original_eye_geometry_colors_weights_unchanged": true,
+    "all_source_parts_classified_once": true,
+    "explicit_editable_equipment_groups": true,
+    "meaningful_geometry_refinement": true,
+    "base_clothing_present": true,
+    "two_character_meshes": true,
+    "exact_distinct_components": true,
+    "one_original_shared_skin": true,
+    "nine_original_clips": true,
+    "only_public_extras": true,
+    "skinned_triangle_primitives": true,
+    "under_40_primitives": true,
+    "under_two_million_triangles": true,
+    "self_contained_no_projection": true,
+    "no_editor_stage": true,
+    "meshopt": true,
+    "under_25_mb": true,
+    "finite_imported_geometry": true,
+    "valid_normalized_known_weights": true,
+    "bounded_importer_triangle_difference": true,
+    "nine_clips_match_historical_import": true,
+    "two_imported_components": true,
+    "imported_equipment_metadata": true,
+    "all_historical_and_builder_inputs_unchanged": true
+  },
+  "components": {
+    "body": {
+      "mesh": 1,
+      "skin": 0,
+      "triangles": 1318418,
+      "primitives": 7
+    },
+    "armor": {
+      "mesh": 0,
+      "skin": 0,
+      "triangles": 49432,
+      "primitives": 6
+    }
+  },
+  "triangles": 1367850,
+  "draw_calls": 13,
+  "materials": 13,
+  "bones": 13,
+  "clips": [
+    "idle",
+    "blink",
+    "happy",
+    "eat",
+    "play",
+    "pet_reaction",
+    "sleep",
+    "wake",
+    "walk"
+  ],
+  "compression_lossless": false,
+  "bytes": 16524384,
+  "geometry": {
+    "vertices": 687595,
+    "triangles": 1367847,
+    "nonfinite_vertices": 0,
+    "nonfinite_transforms": 0,
+    "unweighted_vertices": 0,
+    "invalid_weights": 0,
+    "unknown_weights": 0,
+    "over_four_weights": 0,
+    "max_influences": 2,
+    "bounds_min": [
+      -1.1406251192092896,
+      -1.7421873807907104,
+      -0.006347879767417908
+    ],
+    "bounds_max": [
+      1.1406251192092896,
+      3.185546875,
+      3.689453125
+    ],
+    "span": [
+      2.281250238418579,
+      4.9277342557907104,
+      3.695801004767418
+    ]
+  },
+  "triangle_count_evidence": {
+    "authored": 1367850,
+    "imported": 1367847,
+    "exact_equal": false,
+    "triangle_loss": 3,
+    "relative_loss": 2.193222941111964e-06,
+    "maximum_allowed_loss": 27,
+    "relative_tolerance": 2e-05,
+    "passed": true,
+    "limit": "Count difference only; individual omitted triangle degeneracy is not proven by this check."
+  },
+  "changes": {
+    "notes": "Shortened silver cheek blades, fuller crest, darker strand valleys and a less projecting nose/mouth.",
+    "edited_objects": [
+      {
+        "name": "AST_nyra_v2_silver_crest_0",
+        "vertices": 4874,
+        "max_displacement": 0.01724933700605941,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_crest_undercoat_0",
+        "vertices": 2950,
+        "max_displacement": 0.012327432754265987,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_silver_crest_1",
+        "vertices": 4874,
+        "max_displacement": 0.02370615823637263,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_crest_undercoat_1",
+        "vertices": 2950,
+        "max_displacement": 0.016934978569421576,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_silver_crest_2",
+        "vertices": 4874,
+        "max_displacement": 0.019939292978483965,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_crest_undercoat_2",
+        "vertices": 2950,
+        "max_displacement": 0.014246739441397283,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_silver_crest_3",
+        "vertices": 4874,
+        "max_displacement": 0.01563576604032827,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_crest_undercoat_3",
+        "vertices": 2950,
+        "max_displacement": 0.011176378004728222,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_silver_crest_4",
+        "vertices": 4874,
+        "max_displacement": 0.01402262938976868,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_crest_undercoat_4",
+        "vertices": 2950,
+        "max_displacement": 0.01002587218222062,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_silver_crest_5",
+        "vertices": 4874,
+        "max_displacement": 0.016711442401081623,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_crest_undercoat_5",
+        "vertices": 2950,
+        "max_displacement": 0.01194369722129463,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_silver_crest_6",
+        "vertices": 4874,
+        "max_displacement": 0.01509800030300686,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_crest_undercoat_6",
+        "vertices": 2950,
+        "max_displacement": 0.010792803910223707,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_cheek_fan_L0",
+        "vertices": 2774,
+        "max_displacement": 0.0539726799400465,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0.14
+      },
+      {
+        "name": "AST_nyra_v2_cheek_fan_L1",
+        "vertices": 2774,
+        "max_displacement": 0.06431244344799737,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0.14
+      },
+      {
+        "name": "AST_nyra_v2_cheek_split_L1",
+        "vertices": 1442,
+        "max_displacement": 0.07065493340177978,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0.14
+      },
+      {
+        "name": "AST_nyra_v2_cheek_fan_L2",
+        "vertices": 2774,
+        "max_displacement": 0.060338210197223734,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0.14
+      },
+      {
+        "name": "AST_nyra_v2_cheek_fan_L3",
+        "vertices": 2774,
+        "max_displacement": 0.07045004524300025,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0.14
+      },
+      {
+        "name": "AST_nyra_v2_cheek_split_L3",
+        "vertices": 1442,
+        "max_displacement": 0.07675778736680729,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0.14
+      },
+      {
+        "name": "AST_nyra_v2_cheek_fan_L4",
+        "vertices": 2774,
+        "max_displacement": 0.05941759181668976,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0.14
+      },
+      {
+        "name": "AST_nyra_v2_cheek_fan_L5",
+        "vertices": 2774,
+        "max_displacement": 0.06114491343736186,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0.14
+      },
+      {
+        "name": "AST_nyra_v2_cheek_split_L5",
+        "vertices": 1442,
+        "max_displacement": 0.06736386662829742,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0.14
+      },
+      {
+        "name": "AST_nyra_v2_cheek_fan_L6",
+        "vertices": 2774,
+        "max_displacement": 0.050190536109423485,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0.14
+      },
+      {
+        "name": "AST_nyra_v2_ear_inner_brush_L0",
+        "vertices": 1570,
+        "max_displacement": 0.005640656941208719,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_ear_inner_brush_L1",
+        "vertices": 1570,
+        "max_displacement": 0.005640644643403628,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_ear_inner_brush_L2",
+        "vertices": 1570,
+        "max_displacement": 0.005640651990632182,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_outer_dark_ruff_L0",
+        "vertices": 1766,
+        "max_displacement": 0.007402573452062749,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_outer_dark_ruff_L1",
+        "vertices": 1766,
+        "max_displacement": 0.00858225431048901,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_outer_dark_ruff_L2",
+        "vertices": 1766,
+        "max_displacement": 0.009764518465487086,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_outer_dark_ruff_L3",
+        "vertices": 1766,
+        "max_displacement": 0.007402586289950152,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_outer_dark_ruff_L4",
+        "vertices": 1766,
+        "max_displacement": 0.008582242683917425,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_outer_dark_ruff_L5",
+        "vertices": 1766,
+        "max_displacement": 0.00976452704205636,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_haunch_coat_L00",
+        "vertices": 698,
+        "max_displacement": 0.003373140049478407,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_haunch_coat_L01",
+        "vertices": 698,
+        "max_displacement": 0.003373144840663298,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_haunch_coat_L02",
+        "vertices": 698,
+        "max_displacement": 0.003373138190355668,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_haunch_coat_L03",
+        "vertices": 698,
+        "max_displacement": 0.003373143836668395,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_haunch_coat_L10",
+        "vertices": 698,
+        "max_displacement": 0.003373131619803973,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_haunch_coat_L11",
+        "vertices": 698,
+        "max_displacement": 0.0033731393843994774,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_haunch_coat_L12",
+        "vertices": 698,
+        "max_displacement": 0.0033731334152741913,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_haunch_coat_L13",
+        "vertices": 698,
+        "max_displacement": 0.003373139687013181,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_haunch_coat_L20",
+        "vertices": 698,
+        "max_displacement": 0.0033731402634828798,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_haunch_coat_L21",
+        "vertices": 698,
+        "max_displacement": 0.0033731448841933906,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_haunch_coat_L22",
+        "vertices": 698,
+        "max_displacement": 0.0033731399292021517,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_haunch_coat_L23",
+        "vertices": 698,
+        "max_displacement": 0.0033731442003681698,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_cheek_fan_R0",
+        "vertices": 2774,
+        "max_displacement": 0.0539726799400465,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0.14
+      },
+      {
+        "name": "AST_nyra_v2_cheek_fan_R1",
+        "vertices": 2774,
+        "max_displacement": 0.06431244344799737,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0.14
+      },
+      {
+        "name": "AST_nyra_v2_cheek_split_R1",
+        "vertices": 1442,
+        "max_displacement": 0.07065493340177978,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0.14
+      },
+      {
+        "name": "AST_nyra_v2_cheek_fan_R2",
+        "vertices": 2774,
+        "max_displacement": 0.060338210197223734,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0.14
+      },
+      {
+        "name": "AST_nyra_v2_cheek_fan_R3",
+        "vertices": 2774,
+        "max_displacement": 0.07045004524300025,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0.14
+      },
+      {
+        "name": "AST_nyra_v2_cheek_split_R3",
+        "vertices": 1442,
+        "max_displacement": 0.07675778736680729,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0.14
+      },
+      {
+        "name": "AST_nyra_v2_cheek_fan_R4",
+        "vertices": 2774,
+        "max_displacement": 0.05941759181668976,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0.14
+      },
+      {
+        "name": "AST_nyra_v2_cheek_fan_R5",
+        "vertices": 2774,
+        "max_displacement": 0.06114491343736186,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0.14
+      },
+      {
+        "name": "AST_nyra_v2_cheek_split_R5",
+        "vertices": 1442,
+        "max_displacement": 0.06736386662829742,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0.14
+      },
+      {
+        "name": "AST_nyra_v2_cheek_fan_R6",
+        "vertices": 2774,
+        "max_displacement": 0.050190536109423485,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0.14
+      },
+      {
+        "name": "AST_nyra_v2_ear_inner_brush_R0",
+        "vertices": 1570,
+        "max_displacement": 0.005640663318196648,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_ear_inner_brush_R1",
+        "vertices": 1570,
+        "max_displacement": 0.005640658743535375,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_ear_inner_brush_R2",
+        "vertices": 1570,
+        "max_displacement": 0.005640646949999269,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_outer_dark_ruff_R0",
+        "vertices": 1766,
+        "max_displacement": 0.007402586697380191,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_outer_dark_ruff_R1",
+        "vertices": 1766,
+        "max_displacement": 0.008582268520158568,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_outer_dark_ruff_R2",
+        "vertices": 1766,
+        "max_displacement": 0.009764522385396584,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_outer_dark_ruff_R3",
+        "vertices": 1766,
+        "max_displacement": 0.007402605153574159,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_outer_dark_ruff_R4",
+        "vertices": 1766,
+        "max_displacement": 0.008582267959955502,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_outer_dark_ruff_R5",
+        "vertices": 1766,
+        "max_displacement": 0.00976452947194191,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_haunch_coat_R00",
+        "vertices": 698,
+        "max_displacement": 0.0033731391604914984,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_haunch_coat_R01",
+        "vertices": 698,
+        "max_displacement": 0.0033731365790684986,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_haunch_coat_R02",
+        "vertices": 698,
+        "max_displacement": 0.003373134343754147,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_haunch_coat_R03",
+        "vertices": 698,
+        "max_displacement": 0.003373142250800548,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_haunch_coat_R10",
+        "vertices": 698,
+        "max_displacement": 0.0033731406743470597,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_haunch_coat_R11",
+        "vertices": 698,
+        "max_displacement": 0.0033731366783355823,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_haunch_coat_R12",
+        "vertices": 698,
+        "max_displacement": 0.0033731413714363427,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_haunch_coat_R13",
+        "vertices": 698,
+        "max_displacement": 0.0033731388679842356,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_haunch_coat_R20",
+        "vertices": 698,
+        "max_displacement": 0.003373140775345823,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_haunch_coat_R21",
+        "vertices": 698,
+        "max_displacement": 0.0033731390387225094,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_haunch_coat_R22",
+        "vertices": 698,
+        "max_displacement": 0.003373138324218529,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_haunch_coat_R23",
+        "vertices": 698,
+        "max_displacement": 0.00337313792994903,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_nape_bundle_00",
+        "vertices": 1378,
+        "max_displacement": 0.009027147037191338,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_nape_bundle_01",
+        "vertices": 1378,
+        "max_displacement": 0.010198636784740782,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_nape_bundle_02",
+        "vertices": 1378,
+        "max_displacement": 0.009027148374241413,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_nape_bundle_03",
+        "vertices": 1378,
+        "max_displacement": 0.010198638850979295,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_nape_bundle_04",
+        "vertices": 1378,
+        "max_displacement": 0.009027145517441491,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_nape_bundle_10",
+        "vertices": 1378,
+        "max_displacement": 0.009027150532709234,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_nape_bundle_11",
+        "vertices": 1378,
+        "max_displacement": 0.010198640166567227,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_nape_bundle_12",
+        "vertices": 1378,
+        "max_displacement": 0.009027147045230484,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_nape_bundle_13",
+        "vertices": 1378,
+        "max_displacement": 0.010198637588286145,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_nape_bundle_14",
+        "vertices": 1378,
+        "max_displacement": 0.009027147767238319,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_nape_bundle_20",
+        "vertices": 1378,
+        "max_displacement": 0.009027147615946718,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_nape_bundle_21",
+        "vertices": 1378,
+        "max_displacement": 0.010198635850199882,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_nape_bundle_22",
+        "vertices": 1378,
+        "max_displacement": 0.009027147736110857,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_nape_bundle_23",
+        "vertices": 1378,
+        "max_displacement": 0.010198635878907722,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_nape_bundle_24",
+        "vertices": 1378,
+        "max_displacement": 0.009027148045040165,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_dark_bib_00",
+        "vertices": 1378,
+        "max_displacement": 0.00489317934737102,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_dark_bib_01",
+        "vertices": 1378,
+        "max_displacement": 0.0048931840054546125,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_dark_bib_02",
+        "vertices": 1378,
+        "max_displacement": 0.004893178965043744,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_dark_bib_03",
+        "vertices": 1378,
+        "max_displacement": 0.00489318104784821,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_dark_bib_04",
+        "vertices": 1378,
+        "max_displacement": 0.004893180337603049,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_dark_bib_05",
+        "vertices": 1378,
+        "max_displacement": 0.004893179310129936,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_dark_bib_06",
+        "vertices": 1378,
+        "max_displacement": 0.004893178880839262,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_dark_bib_10",
+        "vertices": 1378,
+        "max_displacement": 0.004893182434910942,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_dark_bib_11",
+        "vertices": 1378,
+        "max_displacement": 0.004893171305381737,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_dark_bib_12",
+        "vertices": 1378,
+        "max_displacement": 0.004893177968924002,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_dark_bib_13",
+        "vertices": 1378,
+        "max_displacement": 0.004893179418411998,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_dark_bib_14",
+        "vertices": 1378,
+        "max_displacement": 0.004893179795796701,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_dark_bib_15",
+        "vertices": 1378,
+        "max_displacement": 0.004893182107458625,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_dark_bib_16",
+        "vertices": 1378,
+        "max_displacement": 0.0048931757191144985,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_plume_edge_bundle_L0",
+        "vertices": 1838,
+        "max_displacement": 0.007848845667590932,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_plume_edge_bundle_L1",
+        "vertices": 1838,
+        "max_displacement": 0.007848840500811142,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_plume_edge_bundle_L2",
+        "vertices": 1838,
+        "max_displacement": 0.007848843613232707,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_plume_edge_bundle_L3",
+        "vertices": 1838,
+        "max_displacement": 0.007848857311776735,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_plume_edge_bundle_R0",
+        "vertices": 1838,
+        "max_displacement": 0.007848870719806049,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_plume_edge_bundle_R1",
+        "vertices": 1838,
+        "max_displacement": 0.007848849247416774,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_plume_edge_bundle_R2",
+        "vertices": 1838,
+        "max_displacement": 0.00784884939168496,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_plume_edge_bundle_R3",
+        "vertices": 1838,
+        "max_displacement": 0.007848852231522234,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_nyra_v2_head",
+        "operation": "rounder, less projecting lower muzzle",
+        "max_displacement": 0.06362690712357573
+      },
+      {
+        "name": "AST_nyra_v2_triangular_copper_nose",
+        "operation": "rounder, less projecting lower muzzle",
+        "max_displacement": 0.07212944708768977
+      },
+      {
+        "name": "AST_nyra_v2_smile_L",
+        "operation": "rounder, less projecting lower muzzle",
+        "max_displacement": 0.06451218075584558
+      },
+      {
+        "name": "AST_nyra_v2_smile_R",
+        "operation": "rounder, less projecting lower muzzle",
+        "max_displacement": 0.06451239262109751
+      }
+    ],
+    "added_base_clothing": [],
+    "equipment_source_objects": [
+      "AST_nyra_v2_fitted_teal_shoulder_L",
+      "AST_nyra_v2_shoulder_copper_star_L",
+      "AST_nyra_v2_shoulder_teal_star_L",
+      "AST_nyra_v2_copper_brow_L",
+      "AST_nyra_v2_haunch_double_crescent_L0",
+      "AST_nyra_v2_haunch_double_crescent_L1",
+      "AST_nyra_v2_hip_spark_L",
+      "AST_nyra_v2_angular_cuff_FL",
+      "AST_nyra_v2_cuff_diamond_FL",
+      "AST_nyra_v2_rounded_copper_toe_FL-1",
+      "AST_nyra_v2_rounded_copper_toe_FL0",
+      "AST_nyra_v2_rounded_copper_toe_FL1",
+      "AST_nyra_v2_angular_cuff_HL",
+      "AST_nyra_v2_cuff_diamond_HL",
+      "AST_nyra_v2_rounded_copper_toe_HL-1",
+      "AST_nyra_v2_rounded_copper_toe_HL0",
+      "AST_nyra_v2_rounded_copper_toe_HL1",
+      "AST_nyra_v2_fitted_teal_shoulder_R",
+      "AST_nyra_v2_shoulder_copper_star_R",
+      "AST_nyra_v2_shoulder_teal_star_R",
+      "AST_nyra_v2_copper_brow_R",
+      "AST_nyra_v2_haunch_double_crescent_R0",
+      "AST_nyra_v2_haunch_double_crescent_R1",
+      "AST_nyra_v2_hip_spark_R",
+      "AST_nyra_v2_angular_cuff_FR",
+      "AST_nyra_v2_cuff_diamond_FR",
+      "AST_nyra_v2_rounded_copper_toe_FR-1",
+      "AST_nyra_v2_rounded_copper_toe_FR0",
+      "AST_nyra_v2_rounded_copper_toe_FR1",
+      "AST_nyra_v2_angular_cuff_HR",
+      "AST_nyra_v2_cuff_diamond_HR",
+      "AST_nyra_v2_rounded_copper_toe_HR-1",
+      "AST_nyra_v2_rounded_copper_toe_HR0",
+      "AST_nyra_v2_rounded_copper_toe_HR1",
+      "AST_nyra_v2_forehead_copper_star",
+      "AST_nyra_v2_emerald_chest_frame",
+      "AST_nyra_v2_emerald_chest_crystal",
+      "AST_nyra_v2_upper_emerald_diamond_frame",
+      "AST_nyra_v2_upper_emerald_diamond_crystal",
+      "AST_nyra_v2_continuous_copper_collar",
+      "AST_nyra_v2_lower_pendant_flame_L",
+      "AST_nyra_v2_lower_pendant_flame_R",
+      "AST_nyra_v2_tail_copper_sweep_L0",
+      "AST_nyra_v2_tail_copper_sweep_L1",
+      "AST_nyra_v2_tail_copper_sweep_R0",
+      "AST_nyra_v2_tail_copper_sweep_R1"
+    ],
+    "body_source_objects": [
+      "AST_nyra_v2_body",
+      "AST_nyra_v2_head",
+      "AST_nyra_v2_eye_R_skin_annulus",
+      "AST_nyra_v2_eye_R",
+      "AST_nyra_v2_eye_R_upper_lid",
+      "AST_nyra_v2_eye_R_lower_lid",
+      "AST_nyra_v2_eye_R_lash_wing",
+      "AST_nyra_v2_eye_R_catchlight",
+      "AST_nyra_v2_eye_R_pinlight",
+      "AST_nyra_v2_eye_R_closed_lid",
+      "AST_nyra_v2_eye_R_closed_lash",
+      "AST_nyra_v2_eye_L_skin_annulus",
+      "AST_nyra_v2_eye_L",
+      "AST_nyra_v2_eye_L_upper_lid",
+      "AST_nyra_v2_eye_L_lower_lid",
+      "AST_nyra_v2_eye_L_lash_wing",
+      "AST_nyra_v2_eye_L_catchlight",
+      "AST_nyra_v2_eye_L_pinlight",
+      "AST_nyra_v2_eye_L_closed_lid",
+      "AST_nyra_v2_eye_L_closed_lash",
+      "AST_nyra_v2_cupped_rust_ear_R",
+      "AST_nyra_v2_cupped_rust_ear_L",
+      "AST_nyra_v2_silver_crest_0",
+      "AST_nyra_v2_crest_undercoat_0",
+      "AST_nyra_v2_silver_crest_1",
+      "AST_nyra_v2_crest_undercoat_1",
+      "AST_nyra_v2_silver_crest_2",
+      "AST_nyra_v2_crest_undercoat_2",
+      "AST_nyra_v2_silver_crest_3",
+      "AST_nyra_v2_crest_undercoat_3",
+      "AST_nyra_v2_silver_crest_4",
+      "AST_nyra_v2_crest_undercoat_4",
+      "AST_nyra_v2_silver_crest_5",
+      "AST_nyra_v2_crest_undercoat_5",
+      "AST_nyra_v2_silver_crest_6",
+      "AST_nyra_v2_crest_undercoat_6",
+      "AST_nyra_v2_cheek_fan_L0",
+      "AST_nyra_v2_cheek_fan_L1",
+      "AST_nyra_v2_cheek_split_L1",
+      "AST_nyra_v2_cheek_fan_L2",
+      "AST_nyra_v2_cheek_fan_L3",
+      "AST_nyra_v2_cheek_split_L3",
+      "AST_nyra_v2_cheek_fan_L4",
+      "AST_nyra_v2_cheek_fan_L5",
+      "AST_nyra_v2_cheek_split_L5",
+      "AST_nyra_v2_cheek_fan_L6",
+      "AST_nyra_v2_ear_inner_brush_L0",
+      "AST_nyra_v2_ear_inner_brush_L1",
+      "AST_nyra_v2_ear_inner_brush_L2",
+      "AST_nyra_v2_outer_dark_ruff_L0",
+      "AST_nyra_v2_outer_dark_ruff_L1",
+      "AST_nyra_v2_outer_dark_ruff_L2",
+      "AST_nyra_v2_outer_dark_ruff_L3",
+      "AST_nyra_v2_outer_dark_ruff_L4",
+      "AST_nyra_v2_outer_dark_ruff_L5",
+      "AST_nyra_v2_haunch_coat_L00",
+      "AST_nyra_v2_haunch_coat_L01",
+      "AST_nyra_v2_haunch_coat_L02",
+      "AST_nyra_v2_haunch_coat_L03",
+      "AST_nyra_v2_haunch_coat_L10",
+      "AST_nyra_v2_haunch_coat_L11",
+      "AST_nyra_v2_haunch_coat_L12",
+      "AST_nyra_v2_haunch_coat_L13",
+      "AST_nyra_v2_haunch_coat_L20",
+      "AST_nyra_v2_haunch_coat_L21",
+      "AST_nyra_v2_haunch_coat_L22",
+      "AST_nyra_v2_haunch_coat_L23",
+      "AST_nyra_v2_cheek_fan_R0",
+      "AST_nyra_v2_cheek_fan_R1",
+      "AST_nyra_v2_cheek_split_R1",
+      "AST_nyra_v2_cheek_fan_R2",
+      "AST_nyra_v2_cheek_fan_R3",
+      "AST_nyra_v2_cheek_split_R3",
+      "AST_nyra_v2_cheek_fan_R4",
+      "AST_nyra_v2_cheek_fan_R5",
+      "AST_nyra_v2_cheek_split_R5",
+      "AST_nyra_v2_cheek_fan_R6",
+      "AST_nyra_v2_ear_inner_brush_R0",
+      "AST_nyra_v2_ear_inner_brush_R1",
+      "AST_nyra_v2_ear_inner_brush_R2",
+      "AST_nyra_v2_outer_dark_ruff_R0",
+      "AST_nyra_v2_outer_dark_ruff_R1",
+      "AST_nyra_v2_outer_dark_ruff_R2",
+      "AST_nyra_v2_outer_dark_ruff_R3",
+      "AST_nyra_v2_outer_dark_ruff_R4",
+      "AST_nyra_v2_outer_dark_ruff_R5",
+      "AST_nyra_v2_haunch_coat_R00",
+      "AST_nyra_v2_haunch_coat_R01",
+      "AST_nyra_v2_haunch_coat_R02",
+      "AST_nyra_v2_haunch_coat_R03",
+      "AST_nyra_v2_haunch_coat_R10",
+      "AST_nyra_v2_haunch_coat_R11",
+      "AST_nyra_v2_haunch_coat_R12",
+      "AST_nyra_v2_haunch_coat_R13",
+      "AST_nyra_v2_haunch_coat_R20",
+      "AST_nyra_v2_haunch_coat_R21",
+      "AST_nyra_v2_haunch_coat_R22",
+      "AST_nyra_v2_haunch_coat_R23",
+      "AST_nyra_v2_nape_bundle_00",
+      "AST_nyra_v2_nape_bundle_01",
+      "AST_nyra_v2_nape_bundle_02",
+      "AST_nyra_v2_nape_bundle_03",
+      "AST_nyra_v2_nape_bundle_04",
+      "AST_nyra_v2_nape_bundle_10",
+      "AST_nyra_v2_nape_bundle_11",
+      "AST_nyra_v2_nape_bundle_12",
+      "AST_nyra_v2_nape_bundle_13",
+      "AST_nyra_v2_nape_bundle_14",
+      "AST_nyra_v2_nape_bundle_20",
+      "AST_nyra_v2_nape_bundle_21",
+      "AST_nyra_v2_nape_bundle_22",
+      "AST_nyra_v2_nape_bundle_23",
+      "AST_nyra_v2_nape_bundle_24",
+      "AST_nyra_v2_dark_bib_00",
+      "AST_nyra_v2_dark_bib_01",
+      "AST_nyra_v2_dark_bib_02",
+      "AST_nyra_v2_dark_bib_03",
+      "AST_nyra_v2_dark_bib_04",
+      "AST_nyra_v2_dark_bib_05",
+      "AST_nyra_v2_dark_bib_06",
+      "AST_nyra_v2_dark_bib_10",
+      "AST_nyra_v2_dark_bib_11",
+      "AST_nyra_v2_dark_bib_12",
+      "AST_nyra_v2_dark_bib_13",
+      "AST_nyra_v2_dark_bib_14",
+      "AST_nyra_v2_dark_bib_15",
+      "AST_nyra_v2_dark_bib_16",
+      "AST_nyra_v2_continuous_plume_tail",
+      "AST_nyra_v2_plume_edge_bundle_L0",
+      "AST_nyra_v2_plume_edge_bundle_L1",
+      "AST_nyra_v2_plume_edge_bundle_L2",
+      "AST_nyra_v2_plume_edge_bundle_L3",
+      "AST_nyra_v2_plume_edge_bundle_R0",
+      "AST_nyra_v2_plume_edge_bundle_R1",
+      "AST_nyra_v2_plume_edge_bundle_R2",
+      "AST_nyra_v2_plume_edge_bundle_R3",
+      "AST_nyra_v2_triangular_copper_nose",
+      "AST_nyra_v2_smile_L",
+      "AST_nyra_v2_smile_R"
+    ]
+  },
+  "original_rig": {
+    "rest_sha256": "831FE95C97E252E6DA88F801FCE88147999CC5D14C327589D0B995F2A0F1031C",
+    "behavior_sha256": "37E2CB7157322B1B022EDA60C976DC4F934B2866BB43D2B7C6645C19C4A16C75",
+    "bones": 13,
+    "fps": 30,
+    "fps_base": 1.0,
+    "actions": {
+      "blink": {
+        "sha256": "53D90AD797C3149C1F887CBAF6F5222C36B82564E3422FEC198FE27F8864DCC4",
+        "curve_count": 117,
+        "key_count": 1170,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          19.0
+        ]
+      },
+      "eat": {
+        "sha256": "15735E2CC974B9F7C94E4B9F8C3AEE83E59E83DAFE2F8A083A2F3D05DB7A76AC",
+        "curve_count": 117,
+        "key_count": 5382,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          91.0
+        ]
+      },
+      "happy": {
+        "sha256": "DF5B2F8021FBB35F170DFE0FC6D045B9DCB681FD418AE4681D9F053DD50F54A3",
+        "curve_count": 117,
+        "key_count": 3627,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          61.0
+        ]
+      },
+      "idle": {
+        "sha256": "FE58E57D7DCFAD53A63F33E498D98B79F3530F638B5D2C603B3A76B013D8793A",
+        "curve_count": 117,
+        "key_count": 7137,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          121.0
+        ]
+      },
+      "pet_reaction": {
+        "sha256": "97259C22555C196331BAB7CCB2AE82D9F9E66E061A29994EFD2001DC7802563A",
+        "curve_count": 117,
+        "key_count": 4563,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          76.0
+        ]
+      },
+      "play": {
+        "sha256": "EF1FC15872649E931595A62896CB4D740F6100DBBAE28C4CC85367466DB52895",
+        "curve_count": 117,
+        "key_count": 4797,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          81.0
+        ]
+      },
+      "sleep": {
+        "sha256": "B720F672BCB3D0661BF3217D4248098ADA04FEE6280AB398E0E3E65D57297B0B",
+        "curve_count": 117,
+        "key_count": 7137,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          121.0
+        ]
+      },
+      "wake": {
+        "sha256": "5502BEF1AE28D5A16D201229C41412C916898AB0EAA0234786E0365E6C73153D",
+        "curve_count": 117,
+        "key_count": 3627,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          61.0
+        ]
+      },
+      "walk": {
+        "sha256": "13FCE1E35359EB2D10E00BE348E4444A7C7F3DF0F931FE17367EAAABE98853A0",
+        "curve_count": 117,
+        "key_count": 2925,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          49.0
+        ]
+      }
+    }
+  },
+  "candidate_rig": {
+    "rest_sha256": "831FE95C97E252E6DA88F801FCE88147999CC5D14C327589D0B995F2A0F1031C",
+    "behavior_sha256": "37E2CB7157322B1B022EDA60C976DC4F934B2866BB43D2B7C6645C19C4A16C75",
+    "bones": 13,
+    "fps": 30,
+    "fps_base": 1.0,
+    "actions": {
+      "blink": {
+        "sha256": "53D90AD797C3149C1F887CBAF6F5222C36B82564E3422FEC198FE27F8864DCC4",
+        "curve_count": 117,
+        "key_count": 1170,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          19.0
+        ]
+      },
+      "eat": {
+        "sha256": "15735E2CC974B9F7C94E4B9F8C3AEE83E59E83DAFE2F8A083A2F3D05DB7A76AC",
+        "curve_count": 117,
+        "key_count": 5382,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          91.0
+        ]
+      },
+      "happy": {
+        "sha256": "DF5B2F8021FBB35F170DFE0FC6D045B9DCB681FD418AE4681D9F053DD50F54A3",
+        "curve_count": 117,
+        "key_count": 3627,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          61.0
+        ]
+      },
+      "idle": {
+        "sha256": "FE58E57D7DCFAD53A63F33E498D98B79F3530F638B5D2C603B3A76B013D8793A",
+        "curve_count": 117,
+        "key_count": 7137,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          121.0
+        ]
+      },
+      "pet_reaction": {
+        "sha256": "97259C22555C196331BAB7CCB2AE82D9F9E66E061A29994EFD2001DC7802563A",
+        "curve_count": 117,
+        "key_count": 4563,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          76.0
+        ]
+      },
+      "play": {
+        "sha256": "EF1FC15872649E931595A62896CB4D740F6100DBBAE28C4CC85367466DB52895",
+        "curve_count": 117,
+        "key_count": 4797,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          81.0
+        ]
+      },
+      "sleep": {
+        "sha256": "B720F672BCB3D0661BF3217D4248098ADA04FEE6280AB398E0E3E65D57297B0B",
+        "curve_count": 117,
+        "key_count": 7137,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          121.0
+        ]
+      },
+      "wake": {
+        "sha256": "5502BEF1AE28D5A16D201229C41412C916898AB0EAA0234786E0365E6C73153D",
+        "curve_count": 117,
+        "key_count": 3627,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          61.0
+        ]
+      },
+      "walk": {
+        "sha256": "13FCE1E35359EB2D10E00BE348E4444A7C7F3DF0F931FE17367EAAABE98853A0",
+        "curve_count": 117,
+        "key_count": 2925,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          49.0
+        ]
+      }
+    }
+  },
+  "motion_comparison": {
+    "idle": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "blink": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "happy": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "eat": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "play": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "pet_reaction": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "sleep": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "wake": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "walk": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    }
+  },
+  "source_views": {
+    "hero": {
+      "file": "assets/3d/reference/cat/sculpt-v003/source/cat-hero.png",
+      "sha256": "006B51E9C4357D4AB7954E2BF722750210B43929B3AC8AB6C81FEE5D16FA5D0E"
+    },
+    "front": {
+      "file": "assets/3d/reference/cat/sculpt-v003/source/cat-front.png",
+      "sha256": "B35B8DB6C6EDC88775EDE14CE5BADBAA8C1E18CE47E8A88325D5CC8C62DE652E"
+    },
+    "side": {
+      "file": "assets/3d/reference/cat/sculpt-v003/source/cat-side.png",
+      "sha256": "FF537BB6076633086C20E3CFEE158AB5289D570664C5105968E2B6D87BFB999F"
+    },
+    "rear": {
+      "file": "assets/3d/reference/cat/sculpt-v003/source/cat-rear.png",
+      "sha256": "59048F9A8CA11201081D378F93E9A05643C002E63A93F39E50A6A95495625445"
+    },
+    "body-hero": {
+      "file": "assets/3d/reference/cat/sculpt-v003/source/cat-body-hero.png",
+      "sha256": "2F31CCF6291A936443D8ED76F96F9C1913B08A0478FB2E883E816B133EBCAB7B"
+    },
+    "body-side": {
+      "file": "assets/3d/reference/cat/sculpt-v003/source/cat-body-side.png",
+      "sha256": "8EC6B001100CA09E7ABD13B239485506468CF4B03525F574E3C629BA3BE6D005"
+    }
+  },
+  "import_views": {
+    "hero": {
+      "file": "assets/3d/reference/cat/sculpt-v003/import/cat-hero.png",
+      "sha256": "45DF44345DA40127D4DA40E56258E131E5E50B33908E7AFEF1E1E383F993978E"
+    },
+    "rear": {
+      "file": "assets/3d/reference/cat/sculpt-v003/import/cat-rear.png",
+      "sha256": "0C12797B766350961AB74A0731027E492B7F13EC865FB7FC22863167D71CFB65"
+    },
+    "body-hero": {
+      "file": "assets/3d/reference/cat/sculpt-v003/import/cat-body-hero.png",
+      "sha256": "11D0A3D4467B6527E22DC89CFED6DC9E8A0E689042912A9494D05E3DA3C352F7"
+    },
+    "blink": {
+      "file": "assets/3d/reference/cat/sculpt-v003/import/cat-blink.png",
+      "sha256": "5889198B8E6722BEE38B424AB8BB2671B3F8F6CA6AFA9660D72925C4923802C1"
+    }
+  },
+  "passed": true,
+  "human_likeness_accepted": false,
+  "mobile_performance_accepted": false,
+  "paid_provider_used": false,
+  "projection_used": false,
+  "package_status": "Local hash-checked Blender delivery; no game-dev canonical receipt.",
+  "animation_limit": "Original source curves, keys, handles, rest rig and drivers compared exactly. Fresh GLBs compared at nine normalized times per clip with 2e-4 skin-matrix tolerance. Not a collision or gait acceptance.",
+  "likeness_limit": "Approved single-view reference retained. Hidden surfaces inferred; no exact 1:1 claim."
+}

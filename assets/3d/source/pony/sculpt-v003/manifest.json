@@ -1,0 +1,124 @@
+{
+  "schema": "asterion-local-modular-companion-v1",
+  "kind": "pony",
+  "name": "Caelo",
+  "version": "sculpt-v003",
+  "source_sha256": "B247D67119C0B021E1E63C4D7771029343AAB8F72ABD5F63D93A304D896F4DDA",
+  "model_sha256": "4A8B118119537DC1B7E1C4A4D043E04279B60D091CDB11123341A6A34320A5BB",
+  "reference_sha256": "9D059157FECF1C2905F9C1EB56A460AA45995DDD8B924C1E854827C73EFFD118",
+  "triangles": 1203008,
+  "bytes": 13507336,
+  "bones": 13,
+  "clips": [
+    "idle",
+    "blink",
+    "happy",
+    "eat",
+    "play",
+    "pet_reaction",
+    "sleep",
+    "wake",
+    "walk"
+  ],
+  "draw_calls": 17,
+  "materials": 17,
+  "components": {
+    "body": {
+      "mesh": 1,
+      "skin": 0,
+      "triangles": 1148476,
+      "primitives": 10
+    },
+    "armor": {
+      "mesh": 0,
+      "skin": 0,
+      "triangles": 54532,
+      "primitives": 7
+    }
+  },
+  "blender": "5.2.1 LTS",
+  "human_likeness_accepted": false,
+  "mobile_performance_accepted": false,
+  "projection_used": false,
+  "paid_provider_used": false,
+  "package_status": "Local hash-checked Blender delivery; no game-dev canonical receipt.",
+  "animation_limit": "Original source curves, keys, handles, rest rig and drivers compared exactly. Fresh GLBs compared at nine normalized times per clip with 2e-4 skin-matrix tolerance. Not a collision or gait acceptance.",
+  "likeness_limit": "Approved single-view reference retained. Hidden surfaces inferred; no exact 1:1 claim.",
+  "compression_lossless": false,
+  "source": "assets/3d/source/pony/sculpt-v003/pony-sculpt-v003.blend",
+  "model": "public/assets/3d/pony/pony-sculpt-v003.glb",
+  "reference": "assets/3d/reference/pony/sculpt-v003/original.png",
+  "validation": "assets/3d/reference/pony/sculpt-v003/validation.json",
+  "validation_sha256": "24CA4953C353919660BC0041A5D7443E03C7405341C8C1DD5ADF93BBA42186E1",
+  "fresh_import_passed": true,
+  "animations_unchanged": true,
+  "equipment_separate": true,
+  "input_sha256": {
+    "assets/3d/source/pony/sculpt-v002/pony-sculpt-v002.blend": "0DAC1824694D3E37332FB83A2F6C702A4242DCB767117C8E8E107FB6A535EF68",
+    "public/assets/3d/pony/pony-sculpt-v002.glb": "8ACBEFF75EE53A76D1FEC1798A61232957A142A1E4B7E68BCE5B277786B61153",
+    "public/assets/companions/pony.png": "9D059157FECF1C2905F9C1EB56A460AA45995DDD8B924C1E854827C73EFFD118",
+    "assets/3d/source/companions/sculpt-v003/build.py": "D29DC488FAF8CB4CB51C81291A9B21102E74832209991D90B23DEF4DA12D5763",
+    "assets/3d/source/companions/sculpt-v003/refinements.py": "82AE8D392CCCF12EA231BD66A0244BDA073739AA4C0B3103DE7DD8DDDA1FBEBA",
+    "assets/3d/source/companions/sculpt-v003/export_equipment.py": "B12B82828199ED109E2764A69BA10A8036D79B62331FA8082C9EF4BEBFC1FB2D",
+    "assets/3d/source/companions/sculpt-v001/common.py": "A6DF036A5B3F6FAA3C74740382998D829D45C9E2734D91A285F9369764C21F9E",
+    "assets/3d/source/asterion/sculpt-v002/validate_refinement.py": "8C541F26C2D2546FB142988D10F07EDF51C891D1C81F02065C7B62CE01F78EFD",
+    "assets/3d/source/asterion/sculpt-v003/build_head_study.py": "A3B22323201D30A3BD9459985F8F7741A44545010A84D27CC5912E1C8A85E0F2",
+    "assets/3d/source/asterion/sculpt-v001/build_sculpt.py": "9A81C430E8FD07CE520BBA554C78845A508F22E5FB89E524BF515D8BF8415621",
+    "assets/3d/source/asterion/sculpt-v001/rig_delivery.py": "8758D105E70AB5405F61A48A531154CC591EAC0D82B167788F1D0785A16CDFF0",
+    "assets/3d/source/asterion/sculpt-v004/export_equipment.py": "C805B4740463215AE5CC9D314D14966F2BDF91A00FB82D05054BE0BBB8ED930B"
+  },
+  "renders": {
+    "hero": {
+      "file": "assets/3d/reference/pony/sculpt-v003/source/pony-hero.png",
+      "sha256": "D4CCCEC2BF6D38F33B65F1B0DB112401D8884959088522824F8A618FD30C8A1C"
+    },
+    "front": {
+      "file": "assets/3d/reference/pony/sculpt-v003/source/pony-front.png",
+      "sha256": "B3B2BD5ED4397A80CC60FE478A7787AEF6DF1EB05FCDAD89E8C7B0B9110924EB"
+    },
+    "side": {
+      "file": "assets/3d/reference/pony/sculpt-v003/source/pony-side.png",
+      "sha256": "BEE89C8D8093B5948FA7CC51976428FB4C53185F8A3D378B4D05F99C8C35322C"
+    },
+    "rear": {
+      "file": "assets/3d/reference/pony/sculpt-v003/source/pony-rear.png",
+      "sha256": "1F51BC8479AD230EE61C1FF056E899616B969A59E6B56A8B68A0CF6D758138D1"
+    },
+    "body-hero": {
+      "file": "assets/3d/reference/pony/sculpt-v003/source/pony-body-hero.png",
+      "sha256": "1B6236CEA30F858E30188FF2D369004ECA06B1043A395F75EC4963D57AE455BD"
+    },
+    "body-side": {
+      "file": "assets/3d/reference/pony/sculpt-v003/source/pony-body-side.png",
+      "sha256": "9FC90CCB3971D4993F4547408236D0C3DF14852FC7DDEEB737DB581225E36ED1"
+    }
+  },
+  "import_renders": {
+    "hero": {
+      "file": "assets/3d/reference/pony/sculpt-v003/import/pony-hero.png",
+      "sha256": "810DE9F0AFC295E001AF2CBD3032495409E87F11150612AF34DB19059D32ECE8"
+    },
+    "rear": {
+      "file": "assets/3d/reference/pony/sculpt-v003/import/pony-rear.png",
+      "sha256": "33F5ACD94A4724638C0BF831870B8A52DC777C05E9C15D668792EC94797D255E"
+    },
+    "body-hero": {
+      "file": "assets/3d/reference/pony/sculpt-v003/import/pony-body-hero.png",
+      "sha256": "F8583E4838E33D9A600257A40FDE1DD9A82DE6024DD0FAE8078F3B072C2076B4"
+    },
+    "blink": {
+      "file": "assets/3d/reference/pony/sculpt-v003/import/pony-blink.png",
+      "sha256": "C71345E31AB1E1EA490D593F841AEBE94DCD5C5C32C0B0A818020F20669128A2"
+    }
+  },
+  "notes": "Fuller, scored sky-blue mane and tail; deeper root-to-ribbon color; shorter rounded lower muzzle.",
+  "edited_objects": 39,
+  "publication_amendment": {
+    "id": "metadata-clean-2026-09-07",
+    "record": "assets/3d/publication/2026-09-07/amendment.json",
+    "original_document_sha256": "2A36A0F9DE94C1B501C33DC08A23C55DC39508813B933131520D6B6887817D84",
+    "authoring_record": "assets/3d/publication/2026-09-07/authoring-records/assets/3d/source/pony/sculpt-v003/manifest.json",
+    "authoring_record_status": "exact-public-safe-original",
+    "notice": "Metadata-only publication derivative, not a rerun of the historical builder or validator. File digest and size bindings identify publication copies; all measured geometry, materials, rig, action, motion and acceptance evidence remains historical and unchanged. Consult the original authoring record and amendment binding log."
+  }
+}

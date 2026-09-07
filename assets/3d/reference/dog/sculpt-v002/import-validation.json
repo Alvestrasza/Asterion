@@ -1,0 +1,287 @@
+{
+  "asset": "public/assets/3d/dog/dog-sculpt-v002.glb",
+  "sha256": "F3A7B2C03E4B8C3F8CE9DDFB1D9406470C55FE9F405AB0F03B33AB2F4F2EC1D6",
+  "master_sha256": "B0BF3E248CCC5B5E283303E5C64373748F4AF22F7400E29B851122B978AE3456",
+  "blender": "5.2.1 LTS",
+  "bytes": 15841868,
+  "reopened_master_meshes": 200,
+  "reopened_master_clips": [
+    "blink",
+    "eat",
+    "happy",
+    "idle",
+    "pet_reaction",
+    "play",
+    "sleep",
+    "wake",
+    "walk"
+  ],
+  "vertices": 665293,
+  "triangles": 1325462,
+  "bones": 13,
+  "materials": 11,
+  "draw_calls": 11,
+  "span": [
+    2.826171875,
+    4.14453125,
+    3.203613042831421
+  ],
+  "weighted_groups": {
+    "leg.FR": 44527,
+    "body": 199190,
+    "leg.HR": 55255,
+    "neck": 44724,
+    "leg.FL": 44527,
+    "leg.HL": 55255,
+    "head": 220882,
+    "lid.R": 9184,
+    "lid.L": 9184,
+    "ear.L": 42872,
+    "ear.R": 42872,
+    "tail": 16808
+  },
+  "animation_samples": {
+    "idle": [
+      {
+        "frame": 1,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 31,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 61,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 91,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 121,
+        "finite_bone_matrices": true
+      }
+    ],
+    "blink": [
+      {
+        "frame": 1,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 5,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 10,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 14,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 19,
+        "finite_bone_matrices": true
+      }
+    ],
+    "happy": [
+      {
+        "frame": 1,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 16,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 31,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 46,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 61,
+        "finite_bone_matrices": true
+      }
+    ],
+    "eat": [
+      {
+        "frame": 1,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 23,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 46,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 68,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 91,
+        "finite_bone_matrices": true
+      }
+    ],
+    "play": [
+      {
+        "frame": 1,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 21,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 41,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 61,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 81,
+        "finite_bone_matrices": true
+      }
+    ],
+    "pet_reaction": [
+      {
+        "frame": 1,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 20,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 38,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 57,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 76,
+        "finite_bone_matrices": true
+      }
+    ],
+    "sleep": [
+      {
+        "frame": 1,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 31,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 61,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 91,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 121,
+        "finite_bone_matrices": true
+      }
+    ],
+    "wake": [
+      {
+        "frame": 1,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 16,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 31,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 46,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 61,
+        "finite_bone_matrices": true
+      }
+    ],
+    "walk": [
+      {
+        "frame": 1,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 13,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 25,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 37,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 49,
+        "finite_bone_matrices": true
+      }
+    ]
+  },
+  "included_meshes": [
+    "asterion_sculpt_delivery"
+  ],
+  "excluded_armature_visualization_helpers": [
+    "Icosphere"
+  ],
+  "checks": {
+    "reopened_master_nine_clips": true,
+    "master_separate_editable_parts": true,
+    "one_authored_mesh": true,
+    "one_imported_skin": true,
+    "nine_authored_clips": true,
+    "nine_imported_clips": true,
+    "no_scene_cameras": true,
+    "no_scene_lights": true,
+    "no_image_projection": true,
+    "self_contained": true,
+    "volumetric_xyz": true,
+    "finite_vertices": true,
+    "all_vertices_weighted": true,
+    "normalized_weights": true,
+    "known_bones": true,
+    "maximum_four_weights": true,
+    "finite_nine_animation_samples": true,
+    "both_moving_eyelids": true,
+    "nonempty_mesh": true
+  },
+  "passed": true,
+  "renders": {
+    "hero": "assets/3d/reference/dog/sculpt-v002/import-review/dog-sculpt-hero.png",
+    "rear": "assets/3d/reference/dog/sculpt-v002/import-review/dog-sculpt-rear.png",
+    "blink": "assets/3d/reference/dog/sculpt-v002/import-review/dog-blink-sculpt-front.png"
+  },
+  "human_likeness_accepted": false,
+  "mobile_performance_accepted": false,
+  "animation_limit": "Gentle stylized presentation gestures; no biomechanical gait simulation.",
+  "publication_amendment": {
+    "id": "metadata-clean-2026-09-07",
+    "record": "assets/3d/publication/2026-09-07/amendment.json",
+    "original_document_sha256": "D4F31D1FE4804D3BC3266F633CE21FB1BDDE1DFEB3BF228C508201F5D733CF08",
+    "authoring_record": "assets/3d/publication/2026-09-07/authoring-records/assets/3d/reference/dog/sculpt-v002/import-validation.json",
+    "authoring_record_status": "exact-public-safe-original",
+    "notice": "Metadata-only publication derivative, not a rerun of the historical builder or validator. File digest and size bindings identify publication copies; all measured geometry, materials, rig, action, motion and acceptance evidence remains historical and unchanged. Consult the original authoring record and amendment binding log."
+  }
+}

@@ -20,3 +20,15 @@
 
 *.gif binary
 *.webp binary
+
+*.blend filter=lfs diff=lfs merge=lfs -text
+*.fbx filter=lfs diff=lfs merge=lfs -text
+*.glb filter=lfs diff=lfs merge=lfs -text
+# Asset receipts bind exact builder and metadata bytes across operating systems.
+assets/3d/**/*.py -text
+assets/3d/**/*.json -text
+scripts/asset-publication/*.mjs -text
+scripts/asset-publication/*.py -text
+assets/3d/reference/**/*.png filter=lfs diff=lfs merge=lfs -text
+assets/3d/reference/**/*.mp4 filter=lfs diff=lfs merge=lfs -text
+assets/3d/source/**/*.png filter=lfs diff=lfs merge=lfs -text

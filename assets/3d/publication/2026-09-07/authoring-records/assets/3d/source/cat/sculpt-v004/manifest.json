@@ -1,0 +1,118 @@
+{
+  "schema": "asterion-local-modular-companion-v1",
+  "kind": "cat",
+  "name": "Nyra",
+  "version": "sculpt-v004",
+  "source_sha256": "F81EB0BA2C6BBE3050EFC2FFB910CA2D8CC5355D20F6A9B6CBA95C5E856095FA",
+  "model_sha256": "5AF9E37CF5B488B302E1871606A2BC96BBA266C19CBD2BCFA806B0E3089622D5",
+  "reference_sha256": "C996F1500869602E32B24047F8D1A6FAB6018CE87514AA22F017A09480EAEFED",
+  "triangles": 1511978,
+  "bytes": 18389340,
+  "bones": 13,
+  "clips": [
+    "idle",
+    "blink",
+    "happy",
+    "eat",
+    "play",
+    "pet_reaction",
+    "sleep",
+    "wake",
+    "walk"
+  ],
+  "draw_calls": 13,
+  "materials": 13,
+  "components": {
+    "body": {
+      "mesh": 1,
+      "skin": 0,
+      "triangles": 1463026,
+      "primitives": 7
+    },
+    "armor": {
+      "mesh": 0,
+      "skin": 0,
+      "triangles": 48952,
+      "primitives": 6
+    }
+  },
+  "blender": "5.2.1 LTS",
+  "human_likeness_accepted": false,
+  "mobile_performance_accepted": false,
+  "projection_used": false,
+  "paid_provider_used": false,
+  "package_status": "Local hash-checked Blender delivery; no game-dev canonical receipt.",
+  "animation_limit": "Original source curves, keys, handles, rest rig and drivers compared exactly. Fresh GLBs compared at nine normalized times per clip with 2e-4 skin-matrix tolerance. Not a collision or gait acceptance.",
+  "likeness_limit": "Original approved artwork retained. Primary forms intentionally refined; unseen surfaces inferred. No exact 1:1 or human acceptance claim.",
+  "compression_lossless": false,
+  "source": "assets/3d/source/cat/sculpt-v004/cat-sculpt-v004.blend",
+  "model": "public/assets/3d/cat/cat-sculpt-v004.glb",
+  "reference": "assets/3d/reference/cat/sculpt-v004/original.png",
+  "validation": "assets/3d/reference/cat/sculpt-v004/validation.json",
+  "validation_sha256": "1E2185EB40287CD08569852E376DCD0A8C09558DA2BF99BB393CA88B388D4C82",
+  "fresh_import_passed": true,
+  "animations_unchanged": true,
+  "equipment_separate": true,
+  "input_sha256": {
+    "assets/3d/source/cat/sculpt-v003/cat-sculpt-v003.blend": "7A5A01725D890ED558760BAAA77825B0761FD4018F0E30518A6D8FA3F29969D2",
+    "public/assets/3d/cat/cat-sculpt-v003.glb": "87233485054F6E958F2C2BB4A7ED509EDB3E814A8994BBBC7F4F3BFAC615E50F",
+    "public/assets/companions/cat.png": "C996F1500869602E32B24047F8D1A6FAB6018CE87514AA22F017A09480EAEFED",
+    "assets/3d/source/companions/sculpt-v004/build.py": "C6FBCA99D1117722B07933B90795DBFFA37DC22B399ECD6B339EAFF3C063A6BD",
+    "assets/3d/source/companions/sculpt-v004/refinements.py": "6247CEA1AE30B56B6FD3D23DEDEF1DD99BCD8A7B9158AA0576340AA2B8F89BCF",
+    "assets/3d/source/companions/sculpt-v004/export_equipment.py": "5EDB676641BE58BDE353213F6DA4F7F7662B76A08F586D0E7DADA7006AF343CF",
+    "assets/3d/source/companions/sculpt-v001/common.py": "A6DF036A5B3F6FAA3C74740382998D829D45C9E2734D91A285F9369764C21F9E",
+    "assets/3d/source/asterion/sculpt-v002/validate_refinement.py": "8C541F26C2D2546FB142988D10F07EDF51C891D1C81F02065C7B62CE01F78EFD",
+    "assets/3d/source/asterion/sculpt-v003/build_head_study.py": "A3B22323201D30A3BD9459985F8F7741A44545010A84D27CC5912E1C8A85E0F2",
+    "assets/3d/source/asterion/sculpt-v001/build_sculpt.py": "9A81C430E8FD07CE520BBA554C78845A508F22E5FB89E524BF515D8BF8415621",
+    "assets/3d/source/asterion/sculpt-v001/rig_delivery.py": "8758D105E70AB5405F61A48A531154CC591EAC0D82B167788F1D0785A16CDFF0",
+    "assets/3d/source/asterion/sculpt-v004/export_equipment.py": "C805B4740463215AE5CC9D314D14966F2BDF91A00FB82D05054BE0BBB8ED930B",
+    "assets/3d/source/companions/sculpt-v004/feline_canine.py": "1F975802D9AC64B7785E0A8EBEC81C6D9C37C3D8FDD59103D07E08285FE96A2E",
+    "assets/3d/source/cat/sculpt-v002/nyra_detail.py": "5DC1C07EAE70AE7C635D4C7026263D8D715EAE097EAD4904299B81D4405BC27B"
+  },
+  "renders": {
+    "hero": {
+      "file": "assets/3d/reference/cat/sculpt-v004/source/cat-hero.png",
+      "sha256": "AC0DA41E13FC0C01ACF754387999D14ABA586631A76A972A1C3BE8151813C465"
+    },
+    "front": {
+      "file": "assets/3d/reference/cat/sculpt-v004/source/cat-front.png",
+      "sha256": "656A9CC29F5E1AFC4E8B384D429BFAA824FCCD26E756DB4A0D9E1BB61C7594A2"
+    },
+    "side": {
+      "file": "assets/3d/reference/cat/sculpt-v004/source/cat-side.png",
+      "sha256": "7E0F0C4D03D3898C8F17BE585E0CE37C5462F2F77DF5021EE1A65F02D5564EB8"
+    },
+    "rear": {
+      "file": "assets/3d/reference/cat/sculpt-v004/source/cat-rear.png",
+      "sha256": "A3CC246E0E894C8C475000ACB1C71604173241D9E01F0F85BAFA78BC6D97CC56"
+    },
+    "body-hero": {
+      "file": "assets/3d/reference/cat/sculpt-v004/source/cat-body-hero.png",
+      "sha256": "71868DA3D4679C6AD9B30B104391CDCBFC8040A30AF26F40E12DD2108A8FE0A7"
+    },
+    "body-side": {
+      "file": "assets/3d/reference/cat/sculpt-v004/source/cat-body-side.png",
+      "sha256": "593348F0CB641B4274AB605929F459890BBD687E31D768BE1E005CFBA1FBFC08"
+    }
+  },
+  "import_renders": {
+    "hero": {
+      "file": "assets/3d/reference/cat/sculpt-v004/import/cat-hero.png",
+      "sha256": "0C556E37F785331484295C7BC7090C3C72CFFE95E813C7CF103786D9D75A0CF0"
+    },
+    "rear": {
+      "file": "assets/3d/reference/cat/sculpt-v004/import/cat-rear.png",
+      "sha256": "43E7623DBD3CCBF4C415D776FDBA2A2317F7146F98583083BA6D15F9AD7AC24E"
+    },
+    "body-hero": {
+      "file": "assets/3d/reference/cat/sculpt-v004/import/cat-body-hero.png",
+      "sha256": "9535B5002925D1D185DE7139118456374F4CA7B66A9A8CDAEA722550C77AC842"
+    },
+    "blink": {
+      "file": "assets/3d/reference/cat/sculpt-v004/import/cat-blink.png",
+      "sha256": "4E15E196EA0145D170C2199F13B0FD3502F44586AD6E66BDE0DE18D084425E2F"
+    }
+  },
+  "notes": "Swept silver flame crest, triangular ears, tapered feline eye surround and full S-plume.",
+  "edited_objects": 173
+}

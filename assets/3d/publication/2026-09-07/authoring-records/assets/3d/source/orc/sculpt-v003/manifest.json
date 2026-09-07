@@ -1,0 +1,116 @@
+{
+  "schema": "asterion-local-modular-companion-v1",
+  "kind": "orc",
+  "name": "Brumo",
+  "version": "sculpt-v003",
+  "source_sha256": "46AA657C4777841F00FBB41C07E8250EDE17D962BBAF1ACC1645D8808E067F2A",
+  "model_sha256": "50E1CF4C5FDC0110A1CDB3177DC01C94CF3F95A1553E7FFE78843433909D392A",
+  "reference_sha256": "55FB8AD6273C92AC99A165B0BC4E6C9C56F86C9780F5D39CAEAD7C138C905B35",
+  "triangles": 1320470,
+  "bytes": 13846740,
+  "bones": 10,
+  "clips": [
+    "idle",
+    "blink",
+    "happy",
+    "eat",
+    "play",
+    "pet_reaction",
+    "sleep",
+    "wake",
+    "walk"
+  ],
+  "draw_calls": 23,
+  "materials": 22,
+  "components": {
+    "body": {
+      "mesh": 1,
+      "skin": 0,
+      "triangles": 952466,
+      "primitives": 13
+    },
+    "armor": {
+      "mesh": 0,
+      "skin": 0,
+      "triangles": 368004,
+      "primitives": 10
+    }
+  },
+  "blender": "5.2.1 LTS",
+  "human_likeness_accepted": false,
+  "mobile_performance_accepted": false,
+  "projection_used": false,
+  "paid_provider_used": false,
+  "package_status": "Local hash-checked Blender delivery; no game-dev canonical receipt.",
+  "animation_limit": "Original source curves, keys, handles, rest rig and drivers compared exactly. Fresh GLBs compared at nine normalized times per clip with 2e-4 skin-matrix tolerance. Not a collision or gait acceptance.",
+  "likeness_limit": "Approved single-view reference retained. Hidden surfaces inferred; no exact 1:1 claim.",
+  "compression_lossless": false,
+  "source": "assets/3d/source/orc/sculpt-v003/orc-sculpt-v003.blend",
+  "model": "public/assets/3d/orc/orc-sculpt-v003.glb",
+  "reference": "assets/3d/reference/orc/sculpt-v003/original.png",
+  "validation": "assets/3d/reference/orc/sculpt-v003/validation.json",
+  "validation_sha256": "1D1BD39988243528AE1D5FE9CD166923DCFF3661842005E18D52EFB8FCB21A4B",
+  "fresh_import_passed": true,
+  "animations_unchanged": true,
+  "equipment_separate": true,
+  "input_sha256": {
+    "assets/3d/source/orc/sculpt-v002/orc-sculpt-v002.blend": "367E8D14E1F1D1AE1F361F61065BF751C94E9432AD323862EC052F12F3EC868A",
+    "public/assets/3d/orc/orc-sculpt-v002.glb": "413DF6B9A5EAAC09CF124F6069E3D0679DCFC5FD38A04E35505C39EE9090A5F1",
+    "public/assets/companions/orc.png": "55FB8AD6273C92AC99A165B0BC4E6C9C56F86C9780F5D39CAEAD7C138C905B35",
+    "assets/3d/source/companions/sculpt-v003/build.py": "D29DC488FAF8CB4CB51C81291A9B21102E74832209991D90B23DEF4DA12D5763",
+    "assets/3d/source/companions/sculpt-v003/refinements.py": "82AE8D392CCCF12EA231BD66A0244BDA073739AA4C0B3103DE7DD8DDDA1FBEBA",
+    "assets/3d/source/companions/sculpt-v003/export_equipment.py": "B12B82828199ED109E2764A69BA10A8036D79B62331FA8082C9EF4BEBFC1FB2D",
+    "assets/3d/source/companions/sculpt-v001/common.py": "A6DF036A5B3F6FAA3C74740382998D829D45C9E2734D91A285F9369764C21F9E",
+    "assets/3d/source/asterion/sculpt-v002/validate_refinement.py": "8C541F26C2D2546FB142988D10F07EDF51C891D1C81F02065C7B62CE01F78EFD",
+    "assets/3d/source/asterion/sculpt-v003/build_head_study.py": "A3B22323201D30A3BD9459985F8F7741A44545010A84D27CC5912E1C8A85E0F2",
+    "assets/3d/source/asterion/sculpt-v001/build_sculpt.py": "9A81C430E8FD07CE520BBA554C78845A508F22E5FB89E524BF515D8BF8415621",
+    "assets/3d/source/asterion/sculpt-v001/rig_delivery.py": "8758D105E70AB5405F61A48A531154CC591EAC0D82B167788F1D0785A16CDFF0",
+    "assets/3d/source/asterion/sculpt-v004/export_equipment.py": "C805B4740463215AE5CC9D314D14966F2BDF91A00FB82D05054BE0BBB8ED930B"
+  },
+  "renders": {
+    "hero": {
+      "file": "assets/3d/reference/orc/sculpt-v003/source/orc-hero.png",
+      "sha256": "14A083AEE5FAA78E37C8EA89A2591C8F32B0EE83B27E41143D79473C4FB802F7"
+    },
+    "front": {
+      "file": "assets/3d/reference/orc/sculpt-v003/source/orc-front.png",
+      "sha256": "170136E1015ADD9ED46399E55AA9AEAACAAEF170BE78AB1AB07410D16119D98C"
+    },
+    "side": {
+      "file": "assets/3d/reference/orc/sculpt-v003/source/orc-side.png",
+      "sha256": "B99F7D7372FB5C6A1BA8D2641A3818FDC42615DF2FBDBA947044A3AC714A8E48"
+    },
+    "rear": {
+      "file": "assets/3d/reference/orc/sculpt-v003/source/orc-rear.png",
+      "sha256": "2CB79386EE3D89FEFAF8B0D97B7CD3F737839E2A04E22D73658E8A358C6D68DB"
+    },
+    "body-hero": {
+      "file": "assets/3d/reference/orc/sculpt-v003/source/orc-body-hero.png",
+      "sha256": "60CCA78B549C87CA244CF1D55668B5C431A3B8DB96CE52D89BD837DD38B41202"
+    },
+    "body-side": {
+      "file": "assets/3d/reference/orc/sculpt-v003/source/orc-body-side.png",
+      "sha256": "61A53F18BF1A005BEACE229F317ACB48EDFE8178F96565E3F31E073E8C1769C0"
+    }
+  },
+  "import_renders": {
+    "hero": {
+      "file": "assets/3d/reference/orc/sculpt-v003/import/orc-hero.png",
+      "sha256": "144AA0446898B17FE90469208E751597ACDCDD83ACE66B65ECA104F951E8A392"
+    },
+    "rear": {
+      "file": "assets/3d/reference/orc/sculpt-v003/import/orc-rear.png",
+      "sha256": "EFF8ACF02EF1D67F122AD93EE524DF343F0AE25ED8501AC3F5D4C866C0B6A241"
+    },
+    "body-hero": {
+      "file": "assets/3d/reference/orc/sculpt-v003/import/orc-body-hero.png",
+      "sha256": "8064030461ED8100C80FCC324DF5451F48A160813A83D321810224DB44EAD4FF"
+    },
+    "blink": {
+      "file": "assets/3d/reference/orc/sculpt-v003/import/orc-blink.png",
+      "sha256": "7773E62FBA96293573A285BAF760DE999CA6ADC80B1CA3B8D0505368ABFEE537"
+    }
+  },
+  "notes": "Scored, shaded plum hair; separate forged/leather outfit above a complete opaque plum under-tunic and shorts.",
+  "edited_objects": 55
+}

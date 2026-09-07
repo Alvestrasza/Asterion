@@ -1,0 +1,838 @@
+{
+  "schema": "asterion-local-modular-companion-v1",
+  "version": "sculpt-v004",
+  "kind": "pony",
+  "name": "Caelo",
+  "source_sha256": "9632A7ECBF45DBEFCAB3F75C9680533FAED6461BCC24347DA01E52AE4DB3DD5C",
+  "model_sha256": "ED7911A8433E4C2F35BAFB987120CAFC99E87361FA4E2E3F10E0AD85F42A2784",
+  "reference_sha256": "9D059157FECF1C2905F9C1EB56A460AA45995DDD8B924C1E854827C73EFFD118",
+  "reference_input": "public/assets/companions/pony.png",
+  "input_sha256": {
+    "assets/3d/source/pony/sculpt-v003/pony-sculpt-v003.blend": "D56F1B7A57C40F49002B9625675212D1206F167AA181AA544777BA7B9A279BE8",
+    "public/assets/3d/pony/pony-sculpt-v003.glb": "4A8B118119537DC1B7E1C4A4D043E04279B60D091CDB11123341A6A34320A5BB",
+    "public/assets/companions/pony.png": "9D059157FECF1C2905F9C1EB56A460AA45995DDD8B924C1E854827C73EFFD118",
+    "assets/3d/source/companions/sculpt-v004/build.py": "C6FBCA99D1117722B07933B90795DBFFA37DC22B399ECD6B339EAFF3C063A6BD",
+    "assets/3d/source/companions/sculpt-v004/refinements.py": "6247CEA1AE30B56B6FD3D23DEDEF1DD99BCD8A7B9158AA0576340AA2B8F89BCF",
+    "assets/3d/source/companions/sculpt-v004/export_equipment.py": "5EDB676641BE58BDE353213F6DA4F7F7662B76A08F586D0E7DADA7006AF343CF",
+    "assets/3d/source/companions/sculpt-v001/common.py": "A6DF036A5B3F6FAA3C74740382998D829D45C9E2734D91A285F9369764C21F9E",
+    "assets/3d/source/asterion/sculpt-v002/validate_refinement.py": "8C541F26C2D2546FB142988D10F07EDF51C891D1C81F02065C7B62CE01F78EFD",
+    "assets/3d/source/asterion/sculpt-v003/build_head_study.py": "A3B22323201D30A3BD9459985F8F7741A44545010A84D27CC5912E1C8A85E0F2",
+    "assets/3d/source/asterion/sculpt-v001/build_sculpt.py": "9A81C430E8FD07CE520BBA554C78845A508F22E5FB89E524BF515D8BF8415621",
+    "assets/3d/source/asterion/sculpt-v001/rig_delivery.py": "8758D105E70AB5405F61A48A531154CC591EAC0D82B167788F1D0785A16CDFF0",
+    "assets/3d/source/asterion/sculpt-v004/export_equipment.py": "C805B4740463215AE5CC9D314D14966F2BDF91A00FB82D05054BE0BBB8ED930B",
+    "assets/3d/source/companions/sculpt-v004/equine_lapine.py": "8783AA44FB7987CD3D0E244C2B0B524B17DFF63B8D725F30CE4E3D7B69957016"
+  },
+  "blender": "5.2.1 LTS",
+  "checks": {
+    "original_rest_rig_unchanged": true,
+    "original_constraints_drivers_unchanged": true,
+    "all_original_action_data_unchanged": true,
+    "original_frame_rate_unchanged": true,
+    "authored_eyes_survive_source_reopen": true,
+    "all_source_parts_classified_once": true,
+    "explicit_editable_equipment_groups": true,
+    "meaningful_geometry_refinement": true,
+    "base_clothing_present": true,
+    "two_character_meshes": true,
+    "exact_distinct_components": true,
+    "one_original_shared_skin": true,
+    "nine_original_clips": true,
+    "only_public_extras": true,
+    "skinned_triangle_primitives": true,
+    "under_40_primitives": true,
+    "within_species_triangle_budget": true,
+    "self_contained_no_projection": true,
+    "no_editor_stage": true,
+    "meshopt": true,
+    "within_species_byte_budget": true,
+    "finite_imported_geometry": true,
+    "valid_normalized_known_weights": true,
+    "bounded_importer_triangle_difference": true,
+    "nine_clips_match_historical_import": true,
+    "two_imported_components": true,
+    "imported_equipment_metadata": true,
+    "all_historical_and_builder_inputs_unchanged": true
+  },
+  "components": {
+    "body": {
+      "mesh": 1,
+      "skin": 0,
+      "triangles": 1048060,
+      "primitives": 11
+    },
+    "armor": {
+      "mesh": 0,
+      "skin": 0,
+      "triangles": 54532,
+      "primitives": 7
+    }
+  },
+  "triangles": 1102592,
+  "draw_calls": 18,
+  "materials": 18,
+  "bones": 13,
+  "clips": [
+    "idle",
+    "blink",
+    "happy",
+    "eat",
+    "play",
+    "pet_reaction",
+    "sleep",
+    "wake",
+    "walk"
+  ],
+  "compression_lossless": false,
+  "bytes": 12310924,
+  "geometry": {
+    "vertices": 565089,
+    "triangles": 1102592,
+    "nonfinite_vertices": 0,
+    "nonfinite_transforms": 0,
+    "unweighted_vertices": 0,
+    "invalid_weights": 0,
+    "unknown_weights": 0,
+    "over_four_weights": 0,
+    "max_influences": 2,
+    "bounds_min": [
+      -1.060546875,
+      -2.117187738418579,
+      0.026854347437620163
+    ],
+    "bounds_max": [
+      0.849609375,
+      3.087890863418579,
+      4.7265625
+    ],
+    "span": [
+      1.91015625,
+      5.205078601837158,
+      4.69970815256238
+    ]
+  },
+  "triangle_count_evidence": {
+    "authored": 1102592,
+    "imported": 1102592,
+    "exact_equal": true,
+    "triangle_loss": 0,
+    "relative_loss": 0.0,
+    "maximum_allowed_loss": 22,
+    "relative_tolerance": 2e-05,
+    "passed": true,
+    "limit": "Count difference only; individual omitted triangle degeneracy is not proven by this check."
+  },
+  "changes": {
+    "notes": "Rebuilt diagonally rolled cloud-blue forelock, layered neck crescents and full S-shaped tail; coherently tapered eyes/socket/lids with deeper blue irises and warm muzzle planes. Original rig, action curves and detachable outfit retained.",
+    "edited_objects": [
+      {
+        "name": "AST_caelo_v2_head",
+        "operation": "Coherent tapered orbital field across eye, lash, movable lid and supporting skull",
+        "vertices": 113972,
+        "max_displacement": 0.06354298567901961
+      },
+      {
+        "name": "AST_caelo_v2_eye_R",
+        "operation": "Coherent tapered orbital field across eye, lash, movable lid and supporting skull",
+        "vertices": 10400,
+        "max_displacement": 0.030571273276573125
+      },
+      {
+        "name": "AST_caelo_v2_eye_R_upper_lash",
+        "operation": "Coherent tapered orbital field across eye, lash, movable lid and supporting skull",
+        "vertices": 1700,
+        "max_displacement": 0.035414372693989976
+      },
+      {
+        "name": "AST_caelo_v2_eye_R_lower_lid",
+        "operation": "Coherent tapered orbital field across eye, lash, movable lid and supporting skull",
+        "vertices": 1700,
+        "max_displacement": 0.032576986358898434
+      },
+      {
+        "name": "AST_caelo_v2_eye_R_outer_lash_wing",
+        "operation": "Coherent tapered orbital field across eye, lash, movable lid and supporting skull",
+        "vertices": 580,
+        "max_displacement": 0.014617142881577436
+      },
+      {
+        "name": "AST_caelo_v2_eye_R_upper_fold",
+        "operation": "Coherent tapered orbital field across eye, lash, movable lid and supporting skull",
+        "vertices": 1040,
+        "max_displacement": 0.037289780287909705
+      },
+      {
+        "name": "AST_caelo_v2_eye_R_blue_brow",
+        "operation": "Coherent tapered orbital field across eye, lash, movable lid and supporting skull",
+        "vertices": 720,
+        "max_displacement": 0.029105564460771557
+      },
+      {
+        "name": "AST_caelo_v2_eye_R_catchlight",
+        "operation": "Coherent tapered orbital field across eye, lash, movable lid and supporting skull",
+        "vertices": 385,
+        "max_displacement": 0.005948176435011251
+      },
+      {
+        "name": "AST_caelo_v2_eye_R_pinlight",
+        "operation": "Coherent tapered orbital field across eye, lash, movable lid and supporting skull",
+        "vertices": 385,
+        "max_displacement": 0.006261613053255928
+      },
+      {
+        "name": "AST_caelo_v2_eye_R_closed_lid",
+        "operation": "Coherent tapered orbital field across eye, lash, movable lid and supporting skull",
+        "vertices": 10400,
+        "max_displacement": 0.034026768866259716
+      },
+      {
+        "name": "AST_caelo_v2_eye_R_sleeping_lash",
+        "operation": "Coherent tapered orbital field across eye, lash, movable lid and supporting skull",
+        "vertices": 976,
+        "max_displacement": 0.014836442343127075
+      },
+      {
+        "name": "AST_caelo_v2_eye_L",
+        "operation": "Coherent tapered orbital field across eye, lash, movable lid and supporting skull",
+        "vertices": 10400,
+        "max_displacement": 0.03057127914609207
+      },
+      {
+        "name": "AST_caelo_v2_eye_L_upper_lash",
+        "operation": "Coherent tapered orbital field across eye, lash, movable lid and supporting skull",
+        "vertices": 1700,
+        "max_displacement": 0.035414358463000575
+      },
+      {
+        "name": "AST_caelo_v2_eye_L_lower_lid",
+        "operation": "Coherent tapered orbital field across eye, lash, movable lid and supporting skull",
+        "vertices": 1700,
+        "max_displacement": 0.03257700877889277
+      },
+      {
+        "name": "AST_caelo_v2_eye_L_outer_lash_wing",
+        "operation": "Coherent tapered orbital field across eye, lash, movable lid and supporting skull",
+        "vertices": 580,
+        "max_displacement": 0.01461716658309306
+      },
+      {
+        "name": "AST_caelo_v2_eye_L_upper_fold",
+        "operation": "Coherent tapered orbital field across eye, lash, movable lid and supporting skull",
+        "vertices": 1040,
+        "max_displacement": 0.03728984534866169
+      },
+      {
+        "name": "AST_caelo_v2_eye_L_blue_brow",
+        "operation": "Coherent tapered orbital field across eye, lash, movable lid and supporting skull",
+        "vertices": 720,
+        "max_displacement": 0.029105573571833854
+      },
+      {
+        "name": "AST_caelo_v2_eye_L_catchlight",
+        "operation": "Coherent tapered orbital field across eye, lash, movable lid and supporting skull",
+        "vertices": 385,
+        "max_displacement": 0.017199253540483708
+      },
+      {
+        "name": "AST_caelo_v2_eye_L_pinlight",
+        "operation": "Coherent tapered orbital field across eye, lash, movable lid and supporting skull",
+        "vertices": 385,
+        "max_displacement": 0.015886619990094233
+      },
+      {
+        "name": "AST_caelo_v2_eye_L_closed_lid",
+        "operation": "Coherent tapered orbital field across eye, lash, movable lid and supporting skull",
+        "vertices": 10400,
+        "max_displacement": 0.034026804426625167
+      },
+      {
+        "name": "AST_caelo_v2_eye_L_sleeping_lash",
+        "operation": "Coherent tapered orbital field across eye, lash, movable lid and supporting skull",
+        "vertices": 976,
+        "max_displacement": 0.014823884552803073
+      }
+    ],
+    "added_base_clothing": [],
+    "replaced_source_objects": [
+      "AST_Caelo_hair_forelock_main",
+      "AST_Caelo_hair_forelock_upper",
+      "AST_Caelo_hair_forelock_lower_hook",
+      "AST_Caelo_hair_crown_rising_wave",
+      "AST_Caelo_hair_crown_rear_curl",
+      "AST_Caelo_hair_crown_left_flick",
+      "AST_Caelo_hair_right_parting_curl",
+      "AST_Caelo_hair_temple_R_upper",
+      "AST_Caelo_hair_temple_R_lower",
+      "AST_Caelo_hair_temple_L_upper",
+      "AST_Caelo_hair_temple_L_lower",
+      "AST_Caelo_hair_mane_R_long_00",
+      "AST_Caelo_hair_mane_R_long_01",
+      "AST_Caelo_hair_mane_R_long_02",
+      "AST_Caelo_hair_mane_R_flick_00",
+      "AST_Caelo_hair_mane_R_flick_01",
+      "AST_Caelo_hair_mane_R_flick_02",
+      "AST_Caelo_hair_mane_L_long_00",
+      "AST_Caelo_hair_mane_L_long_01",
+      "AST_Caelo_hair_mane_L_long_02",
+      "AST_Caelo_hair_mane_L_flick_00",
+      "AST_Caelo_hair_mane_L_flick_01",
+      "AST_Caelo_hair_mane_L_flick_02",
+      "AST_Caelo_hair_dorsal_sweep_R",
+      "AST_Caelo_hair_dorsal_sweep_L",
+      "AST_Caelo_hair_tail_full_plume",
+      "AST_Caelo_hair_tail_L_high_wave",
+      "AST_Caelo_hair_tail_R_long_wave",
+      "AST_Caelo_hair_tail_L_lower_sweep",
+      "AST_Caelo_hair_tail_back_lift",
+      "AST_Caelo_hair_tail_crest_L",
+      "AST_Caelo_hair_tail_crest_R"
+    ],
+    "new_sculpture_objects": [
+      "AST_Caelo_v4_rolled_forelock",
+      "AST_Caelo_v4_forelock_lower_crescent",
+      "AST_Caelo_v4_forelock_inner_turn",
+      "AST_Caelo_v4_swept_crown",
+      "AST_Caelo_v4_crown_lift",
+      "AST_Caelo_v4_parting_temple",
+      "AST_Caelo_v4_temple_wave_L",
+      "AST_Caelo_v4_mane_main_curl_L",
+      "AST_Caelo_v4_mane_face_curl_L",
+      "AST_Caelo_v4_mane_flick_L_0",
+      "AST_Caelo_v4_mane_flick_L_1",
+      "AST_Caelo_v4_mane_flick_L_2",
+      "AST_Caelo_v4_temple_wave_R",
+      "AST_Caelo_v4_mane_main_curl_R",
+      "AST_Caelo_v4_mane_face_curl_R",
+      "AST_Caelo_v4_mane_flick_R_0",
+      "AST_Caelo_v4_mane_flick_R_1",
+      "AST_Caelo_v4_mane_flick_R_2",
+      "AST_Caelo_v4_rear_continuous_sweep",
+      "AST_Caelo_v4_tail_full_S_plume",
+      "AST_Caelo_v4_tail_surface_curl_L",
+      "AST_Caelo_v4_tail_low_turn_L",
+      "AST_Caelo_v4_tail_crown_flick_L",
+      "AST_Caelo_v4_tail_surface_curl_R",
+      "AST_Caelo_v4_tail_low_turn_R",
+      "AST_Caelo_v4_tail_crown_flick_R"
+    ],
+    "repainted_head_surfaces": 1,
+    "ocular_change": "Coherent eye, eyelid, lash and skull field; original bone centers and actions retained.",
+    "likeness_limit": "Single-view reference does not establish hidden geometry. Authored closer likeness, not exact 1:1 acceptance.",
+    "equipment_source_objects": [
+      "AST_caelo_v2_broad_chamfered_tiara",
+      "AST_caelo_v2_tiara_diamond_drop_gold_frame",
+      "AST_caelo_v2_tiara_central_star",
+      "AST_caelo_v2_tiara_temple_band_L",
+      "AST_caelo_v2_tiara_temple_star_L",
+      "AST_caelo_v2_tiara_temple_band_R",
+      "AST_caelo_v2_tiara_temple_star_R",
+      "AST_caelo_v2_polygonal_shoulder_shield_L",
+      "AST_caelo_v2_curved_blue_saddle_L",
+      "AST_caelo_v2_shoulder_gold_star_L",
+      "AST_caelo_v2_saddle_main_star_L",
+      "AST_caelo_v2_saddle_border_star_L",
+      "AST_caelo_v2_polygonal_shoulder_shield_R",
+      "AST_caelo_v2_curved_blue_saddle_R",
+      "AST_caelo_v2_shoulder_gold_star_R",
+      "AST_caelo_v2_saddle_main_star_R",
+      "AST_caelo_v2_saddle_border_star_R",
+      "AST_caelo_v2_broad_saddle_girth",
+      "AST_caelo_v2_shield_breast_jewel_gold_frame",
+      "AST_caelo_v2_shield_breast_jewel_faceted_crystal",
+      "AST_caelo_v2_breast_frame_upper_star",
+      "AST_caelo_v2_continuous_fitted_neck_harness",
+      "AST_caelo_v2_flat_double_anklet_FL_0",
+      "AST_caelo_v2_flat_double_anklet_FL_1",
+      "AST_caelo_v2_anklet_diamond_FL_gold_frame",
+      "AST_caelo_v2_anklet_diamond_FL_faceted_crystal",
+      "AST_caelo_v2_flat_double_anklet_FR_0",
+      "AST_caelo_v2_flat_double_anklet_FR_1",
+      "AST_caelo_v2_anklet_diamond_FR_gold_frame",
+      "AST_caelo_v2_anklet_diamond_FR_faceted_crystal",
+      "AST_caelo_v2_flat_double_anklet_HL_0",
+      "AST_caelo_v2_flat_double_anklet_HL_1",
+      "AST_caelo_v2_anklet_diamond_HL_gold_frame",
+      "AST_caelo_v2_anklet_diamond_HL_faceted_crystal",
+      "AST_caelo_v2_flat_double_anklet_HR_0",
+      "AST_caelo_v2_flat_double_anklet_HR_1",
+      "AST_caelo_v2_anklet_diamond_HR_gold_frame",
+      "AST_caelo_v2_anklet_diamond_HR_faceted_crystal"
+    ],
+    "body_source_objects": [
+      "AST_caelo_v2_torso",
+      "AST_caelo_v2_head",
+      "AST_caelo_v2_eye_R",
+      "AST_caelo_v2_eye_R_upper_lash",
+      "AST_caelo_v2_eye_R_lower_lid",
+      "AST_caelo_v2_eye_R_outer_lash_wing",
+      "AST_caelo_v2_eye_R_upper_fold",
+      "AST_caelo_v2_eye_R_blue_brow",
+      "AST_caelo_v2_eye_R_catchlight",
+      "AST_caelo_v2_eye_R_pinlight",
+      "AST_caelo_v2_eye_R_closed_lid",
+      "AST_caelo_v2_eye_R_sleeping_lash",
+      "AST_caelo_v2_cupped_ear_R",
+      "AST_caelo_v2_ear_inset_R",
+      "AST_caelo_v2_blue_hoof_leg.FR",
+      "AST_caelo_v2_fetlock_tuft_leg.FR_0",
+      "AST_caelo_v2_fetlock_tuft_leg.FR_1",
+      "AST_caelo_v2_fetlock_tuft_leg.FR_2",
+      "AST_caelo_v2_fetlock_tuft_leg.FR_3",
+      "AST_caelo_v2_fetlock_tuft_leg.FR_4",
+      "AST_caelo_v2_fetlock_tuft_leg.FR_5",
+      "AST_caelo_v2_fetlock_tuft_leg.FR_6",
+      "AST_caelo_v2_fetlock_tuft_leg.FR_7",
+      "AST_caelo_v2_fetlock_tuft_leg.FR_8",
+      "AST_caelo_v2_fetlock_tuft_leg.FR_9",
+      "AST_caelo_v2_fetlock_tuft_leg.FR_10",
+      "AST_caelo_v2_fetlock_tuft_leg.FR_11",
+      "AST_caelo_v2_fetlock_tuft_leg.FR_12",
+      "AST_caelo_v2_fetlock_tuft_leg.FR_13",
+      "AST_caelo_v2_fetlock_tuft_leg.FR_14",
+      "AST_caelo_v2_blue_hoof_leg.HR",
+      "AST_caelo_v2_fetlock_tuft_leg.HR_0",
+      "AST_caelo_v2_fetlock_tuft_leg.HR_1",
+      "AST_caelo_v2_fetlock_tuft_leg.HR_2",
+      "AST_caelo_v2_fetlock_tuft_leg.HR_3",
+      "AST_caelo_v2_fetlock_tuft_leg.HR_4",
+      "AST_caelo_v2_fetlock_tuft_leg.HR_5",
+      "AST_caelo_v2_fetlock_tuft_leg.HR_6",
+      "AST_caelo_v2_fetlock_tuft_leg.HR_7",
+      "AST_caelo_v2_fetlock_tuft_leg.HR_8",
+      "AST_caelo_v2_fetlock_tuft_leg.HR_9",
+      "AST_caelo_v2_fetlock_tuft_leg.HR_10",
+      "AST_caelo_v2_fetlock_tuft_leg.HR_11",
+      "AST_caelo_v2_fetlock_tuft_leg.HR_12",
+      "AST_caelo_v2_fetlock_tuft_leg.HR_13",
+      "AST_caelo_v2_fetlock_tuft_leg.HR_14",
+      "AST_caelo_v2_eye_L",
+      "AST_caelo_v2_eye_L_upper_lash",
+      "AST_caelo_v2_eye_L_lower_lid",
+      "AST_caelo_v2_eye_L_outer_lash_wing",
+      "AST_caelo_v2_eye_L_upper_fold",
+      "AST_caelo_v2_eye_L_blue_brow",
+      "AST_caelo_v2_eye_L_catchlight",
+      "AST_caelo_v2_eye_L_pinlight",
+      "AST_caelo_v2_eye_L_closed_lid",
+      "AST_caelo_v2_eye_L_sleeping_lash",
+      "AST_caelo_v2_cupped_ear_L",
+      "AST_caelo_v2_ear_inset_L",
+      "AST_caelo_v2_blue_hoof_leg.FL",
+      "AST_caelo_v2_fetlock_tuft_leg.FL_0",
+      "AST_caelo_v2_fetlock_tuft_leg.FL_1",
+      "AST_caelo_v2_fetlock_tuft_leg.FL_2",
+      "AST_caelo_v2_fetlock_tuft_leg.FL_3",
+      "AST_caelo_v2_fetlock_tuft_leg.FL_4",
+      "AST_caelo_v2_fetlock_tuft_leg.FL_5",
+      "AST_caelo_v2_fetlock_tuft_leg.FL_6",
+      "AST_caelo_v2_fetlock_tuft_leg.FL_7",
+      "AST_caelo_v2_fetlock_tuft_leg.FL_8",
+      "AST_caelo_v2_fetlock_tuft_leg.FL_9",
+      "AST_caelo_v2_fetlock_tuft_leg.FL_10",
+      "AST_caelo_v2_fetlock_tuft_leg.FL_11",
+      "AST_caelo_v2_fetlock_tuft_leg.FL_12",
+      "AST_caelo_v2_fetlock_tuft_leg.FL_13",
+      "AST_caelo_v2_fetlock_tuft_leg.FL_14",
+      "AST_caelo_v2_blue_hoof_leg.HL",
+      "AST_caelo_v2_fetlock_tuft_leg.HL_0",
+      "AST_caelo_v2_fetlock_tuft_leg.HL_1",
+      "AST_caelo_v2_fetlock_tuft_leg.HL_2",
+      "AST_caelo_v2_fetlock_tuft_leg.HL_3",
+      "AST_caelo_v2_fetlock_tuft_leg.HL_4",
+      "AST_caelo_v2_fetlock_tuft_leg.HL_5",
+      "AST_caelo_v2_fetlock_tuft_leg.HL_6",
+      "AST_caelo_v2_fetlock_tuft_leg.HL_7",
+      "AST_caelo_v2_fetlock_tuft_leg.HL_8",
+      "AST_caelo_v2_fetlock_tuft_leg.HL_9",
+      "AST_caelo_v2_fetlock_tuft_leg.HL_10",
+      "AST_caelo_v2_fetlock_tuft_leg.HL_11",
+      "AST_caelo_v2_fetlock_tuft_leg.HL_12",
+      "AST_caelo_v2_fetlock_tuft_leg.HL_13",
+      "AST_caelo_v2_fetlock_tuft_leg.HL_14",
+      "AST_caelo_v2_nostril_-1",
+      "AST_caelo_v2_smile_-1",
+      "AST_caelo_v2_nostril_1",
+      "AST_caelo_v2_smile_1",
+      "AST_Caelo_hair_fitted_rear_scalp",
+      "AST_Caelo_hair_fitted_neck_underwave",
+      "AST_Caelo_v4_rolled_forelock",
+      "AST_Caelo_v4_forelock_lower_crescent",
+      "AST_Caelo_v4_forelock_inner_turn",
+      "AST_Caelo_v4_swept_crown",
+      "AST_Caelo_v4_crown_lift",
+      "AST_Caelo_v4_parting_temple",
+      "AST_Caelo_v4_temple_wave_L",
+      "AST_Caelo_v4_mane_main_curl_L",
+      "AST_Caelo_v4_mane_face_curl_L",
+      "AST_Caelo_v4_mane_flick_L_0",
+      "AST_Caelo_v4_mane_flick_L_1",
+      "AST_Caelo_v4_mane_flick_L_2",
+      "AST_Caelo_v4_temple_wave_R",
+      "AST_Caelo_v4_mane_main_curl_R",
+      "AST_Caelo_v4_mane_face_curl_R",
+      "AST_Caelo_v4_mane_flick_R_0",
+      "AST_Caelo_v4_mane_flick_R_1",
+      "AST_Caelo_v4_mane_flick_R_2",
+      "AST_Caelo_v4_rear_continuous_sweep",
+      "AST_Caelo_v4_tail_full_S_plume",
+      "AST_Caelo_v4_tail_surface_curl_L",
+      "AST_Caelo_v4_tail_low_turn_L",
+      "AST_Caelo_v4_tail_crown_flick_L",
+      "AST_Caelo_v4_tail_surface_curl_R",
+      "AST_Caelo_v4_tail_low_turn_R",
+      "AST_Caelo_v4_tail_crown_flick_R"
+    ]
+  },
+  "original_rig": {
+    "rest_sha256": "3A2A8ACE387874872B6E3EDB13D84AB99A435FD7CC0E106334E33CFD8DF95358",
+    "behavior_sha256": "37E2CB7157322B1B022EDA60C976DC4F934B2866BB43D2B7C6645C19C4A16C75",
+    "bones": 13,
+    "fps": 30,
+    "fps_base": 1.0,
+    "actions": {
+      "blink": {
+        "sha256": "1D96907293615F6D1A8359E2A0C6C497E2E6F2B3FCA14954029285ECF4EDFAAE",
+        "curve_count": 117,
+        "key_count": 1170,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          19.0
+        ]
+      },
+      "eat": {
+        "sha256": "F950E92DCBB7276906D85D7FED5CCF6742079DCD1B3BB6A05058A1441EC72491",
+        "curve_count": 117,
+        "key_count": 5382,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          91.0
+        ]
+      },
+      "happy": {
+        "sha256": "0DE4269AABEC94936DE994D677EDBA02376A590E39E4B3E934F56FE74BA91CB5",
+        "curve_count": 117,
+        "key_count": 3627,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          61.0
+        ]
+      },
+      "idle": {
+        "sha256": "C5D9F80B600BB1279414CE20156759017FC5D4F9B79CCA811AD71F1D138DEAE9",
+        "curve_count": 117,
+        "key_count": 7137,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          121.0
+        ]
+      },
+      "pet_reaction": {
+        "sha256": "29CEBD0E01FFF8EB3E4C0393575419FFFE069C5EEF3C0363A209DD4BDFA83102",
+        "curve_count": 117,
+        "key_count": 4563,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          76.0
+        ]
+      },
+      "play": {
+        "sha256": "78E46F9C36389FFE3D625B07505AC58E3B92BC5C2C3A8F67C4349ED0494EDB18",
+        "curve_count": 117,
+        "key_count": 4797,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          81.0
+        ]
+      },
+      "sleep": {
+        "sha256": "ECD001EA963E9448C5B1E5347586449E7DD6E37AC8243758D58AF8622BA1FAEB",
+        "curve_count": 117,
+        "key_count": 7137,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          121.0
+        ]
+      },
+      "wake": {
+        "sha256": "1ACA77669A85B363672BA8AA721188421B37DAB46109BB9C83A4B342E90630F8",
+        "curve_count": 117,
+        "key_count": 3627,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          61.0
+        ]
+      },
+      "walk": {
+        "sha256": "85495C9D0766A39162DFB42FE303F8FA56238316C9A83CF1B13F793F233D0CA7",
+        "curve_count": 117,
+        "key_count": 2925,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          49.0
+        ]
+      }
+    }
+  },
+  "candidate_rig": {
+    "rest_sha256": "3A2A8ACE387874872B6E3EDB13D84AB99A435FD7CC0E106334E33CFD8DF95358",
+    "behavior_sha256": "37E2CB7157322B1B022EDA60C976DC4F934B2866BB43D2B7C6645C19C4A16C75",
+    "bones": 13,
+    "fps": 30,
+    "fps_base": 1.0,
+    "actions": {
+      "blink": {
+        "sha256": "1D96907293615F6D1A8359E2A0C6C497E2E6F2B3FCA14954029285ECF4EDFAAE",
+        "curve_count": 117,
+        "key_count": 1170,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          19.0
+        ]
+      },
+      "eat": {
+        "sha256": "F950E92DCBB7276906D85D7FED5CCF6742079DCD1B3BB6A05058A1441EC72491",
+        "curve_count": 117,
+        "key_count": 5382,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          91.0
+        ]
+      },
+      "happy": {
+        "sha256": "0DE4269AABEC94936DE994D677EDBA02376A590E39E4B3E934F56FE74BA91CB5",
+        "curve_count": 117,
+        "key_count": 3627,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          61.0
+        ]
+      },
+      "idle": {
+        "sha256": "C5D9F80B600BB1279414CE20156759017FC5D4F9B79CCA811AD71F1D138DEAE9",
+        "curve_count": 117,
+        "key_count": 7137,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          121.0
+        ]
+      },
+      "pet_reaction": {
+        "sha256": "29CEBD0E01FFF8EB3E4C0393575419FFFE069C5EEF3C0363A209DD4BDFA83102",
+        "curve_count": 117,
+        "key_count": 4563,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          76.0
+        ]
+      },
+      "play": {
+        "sha256": "78E46F9C36389FFE3D625B07505AC58E3B92BC5C2C3A8F67C4349ED0494EDB18",
+        "curve_count": 117,
+        "key_count": 4797,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          81.0
+        ]
+      },
+      "sleep": {
+        "sha256": "ECD001EA963E9448C5B1E5347586449E7DD6E37AC8243758D58AF8622BA1FAEB",
+        "curve_count": 117,
+        "key_count": 7137,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          121.0
+        ]
+      },
+      "wake": {
+        "sha256": "1ACA77669A85B363672BA8AA721188421B37DAB46109BB9C83A4B342E90630F8",
+        "curve_count": 117,
+        "key_count": 3627,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          61.0
+        ]
+      },
+      "walk": {
+        "sha256": "85495C9D0766A39162DFB42FE303F8FA56238316C9A83CF1B13F793F233D0CA7",
+        "curve_count": 117,
+        "key_count": 2925,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          49.0
+        ]
+      }
+    }
+  },
+  "motion_comparison": {
+    "idle": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "blink": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "happy": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "eat": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "play": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "pet_reaction": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "sleep": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "wake": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "walk": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    }
+  },
+  "source_views": {
+    "hero": {
+      "file": "assets/3d/reference/pony/sculpt-v004/source/pony-hero.png",
+      "sha256": "0EFC2F5A97557D3EB88395F2183DA7298F7384F253C25AE18FD319DBC27BED6D"
+    },
+    "front": {
+      "file": "assets/3d/reference/pony/sculpt-v004/source/pony-front.png",
+      "sha256": "1D700A25E7A127A9295917ADFD1BC042348CC65FD1A84D08586AAE139516CD39"
+    },
+    "side": {
+      "file": "assets/3d/reference/pony/sculpt-v004/source/pony-side.png",
+      "sha256": "B747453095D2E440650AFEE5D856AF158262B373973E017BC60E429A4822AF09"
+    },
+    "rear": {
+      "file": "assets/3d/reference/pony/sculpt-v004/source/pony-rear.png",
+      "sha256": "F1EE563B93A7C5DC10BEE14DAC4D5AE96823B303A3DF061FA0173D154320ECA7"
+    },
+    "body-hero": {
+      "file": "assets/3d/reference/pony/sculpt-v004/source/pony-body-hero.png",
+      "sha256": "91EDF0436424FEC967927BD3119D9921A9543332A9EFEDB6534F743B134EC688"
+    },
+    "body-side": {
+      "file": "assets/3d/reference/pony/sculpt-v004/source/pony-body-side.png",
+      "sha256": "A717CD163E6F19013C607B5F2AF4B8EAC737CAC38F4DD8F0AE9088A4D69EBDD0"
+    }
+  },
+  "import_views": {
+    "hero": {
+      "file": "assets/3d/reference/pony/sculpt-v004/import/pony-hero.png",
+      "sha256": "4C9EFEED424A6AD87D873824CA116FEE270D31030F5D783570909F42639FF519"
+    },
+    "rear": {
+      "file": "assets/3d/reference/pony/sculpt-v004/import/pony-rear.png",
+      "sha256": "700C83B59E49F562F10BC9D6B4D5DFCE48CCDBF70BC5BF571426F4C60F3A7C30"
+    },
+    "body-hero": {
+      "file": "assets/3d/reference/pony/sculpt-v004/import/pony-body-hero.png",
+      "sha256": "E194EF756C5F193C58105952EEA209FC6A1330E3C1275A73C6FC5E6D82489313"
+    },
+    "blink": {
+      "file": "assets/3d/reference/pony/sculpt-v004/import/pony-blink.png",
+      "sha256": "E621E470ECAEE00FEA445530F9D50F10C24DC13B684B8C59BA3B5B8EE315F16B"
+    }
+  },
+  "hair_evidence": null,
+  "passed": true,
+  "human_likeness_accepted": false,
+  "mobile_performance_accepted": false,
+  "paid_provider_used": false,
+  "projection_used": false,
+  "ocular_geometry_intentionally_refined": true,
+  "package_status": "Local hash-checked Blender delivery; no game-dev canonical receipt.",
+  "animation_limit": "Original source curves, keys, handles, rest rig and drivers compared exactly. Fresh GLBs compared at nine normalized times per clip with 2e-4 skin-matrix tolerance. Not a collision or gait acceptance.",
+  "likeness_limit": "Original approved artwork retained. Primary forms intentionally refined; unseen surfaces inferred. No exact 1:1 or human acceptance claim."
+}

@@ -1,0 +1,71 @@
+{
+  "schema": "asterion-local-companion-sculpt-v1",
+  "kind": "rabbit",
+  "name": "Liora",
+  "version": "sculpt-v002",
+  "source": "assets/3d/source/rabbit/sculpt-v002/rabbit-sculpt-v002.blend",
+  "model": "public/assets/3d/rabbit/rabbit-sculpt-v002.glb",
+  "reference": "assets/3d/reference/rabbit/sculpt-v002/original.png",
+  "source_sha256": "0F407316B2711B708D6202F08DADED5737801C66E36F2E8FF15F91A2194DC5B0",
+  "model_sha256": "2C0F4479A9FAF1004812BFF5AF878A975A08C108D4CA0F034942AA87FAAFFB25",
+  "reference_sha256": "26CD3B4BEFF8FE37488F860C3847BD78B9455102CB3FDF5C36BCBD98AF74F95D",
+  "bytes": 15578760,
+  "triangles": 1325465,
+  "vertices": 674560,
+  "bones": 13,
+  "materials": 21,
+  "draw_calls": 21,
+  "clips": [
+    "idle",
+    "blink",
+    "happy",
+    "eat",
+    "play",
+    "pet_reaction",
+    "sleep",
+    "wake",
+    "walk"
+  ],
+  "editable_source_meshes": 199,
+  "blender": "5.2.1 LTS",
+  "renders": {
+    "hero": "assets/3d/reference/rabbit/sculpt-v002/rabbit-sculpt-hero.png",
+    "front": "assets/3d/reference/rabbit/sculpt-v002/rabbit-sculpt-front.png",
+    "side": "assets/3d/reference/rabbit/sculpt-v002/rabbit-sculpt-side.png",
+    "rear": "assets/3d/reference/rabbit/sculpt-v002/rabbit-sculpt-rear.png"
+  },
+  "fresh_import_passed": true,
+  "sampled_motion_passed": true,
+  "human_likeness_accepted": false,
+  "mobile_performance_accepted": false,
+  "projection_used": false,
+  "paid_provider_used": false,
+  "provenance": "Locally modeled from unchanged rabbit.png. Hidden views inferred; source and historical v001 preserved.",
+  "animation_limit": "Gentle stylized presentation gestures; no biomechanical gait simulation.",
+  "package_status": "Local hash-checked delivery, not a game-dev CLI canonical receipt.",
+  "builder": "assets/3d/source/rabbit/sculpt-v002/build.py",
+  "builder_sha256": {
+    "assets/3d/source/rabbit/sculpt-v002/anatomy.py": "F4F7F76B6D317A2A3F9DF3DFEE8FDC70BC36CE3C847D6E5FF2846FC1D3530612",
+    "assets/3d/source/rabbit/sculpt-v002/build.py": "9F687D03173323F5A87B8057ADAADE77082FEC0F4661E587CB3D6EE1F45CB4C2",
+    "assets/3d/source/rabbit/sculpt-v002/deliver.py": "DFE4B8B08CDC40D1761309F8C1E64E8028B31B1B3294AF6BEC13F50D71AC9A47",
+    "assets/3d/source/rabbit/sculpt-v002/fur.py": "2EED8A117C6BBDA4DF7A9131EEDAD3FEE29A82E139A9B2332C6E6FAB0AFE0157",
+    "assets/3d/source/rabbit/sculpt-v002/inspect_motion.py": "5CD059AE284B0F557C5D4B7F300A2F4B0FB4F19B5B284F0FE329784B2C0A64ED",
+    "assets/3d/source/rabbit/sculpt-v002/ornaments.py": "9D6B59D38A40B37080639840E5ED0DB3F7C9319D66812065D1318D05805B887A",
+    "assets/3d/source/companions/sculpt-v001/common.py": "A6DF036A5B3F6FAA3C74740382998D829D45C9E2734D91A285F9369764C21F9E",
+    "assets/3d/source/asterion/sculpt-v001/build_sculpt.py": "9A81C430E8FD07CE520BBA554C78845A508F22E5FB89E524BF515D8BF8415621",
+    "assets/3d/source/asterion/sculpt-v001/rig_delivery.py": "8758D105E70AB5405F61A48A531154CC591EAC0D82B167788F1D0785A16CDFF0"
+  },
+  "notes": [
+    "Reference-led rabbit v002 with continuous seated anatomy, rounded paws, expressive almond eyes and deep violet ear bowls.",
+    "Layered cream fur, curled cotton tail and fitted architectural rose-gold/lavender fittings preserve Liora identity.",
+    "Unchanged single-view rabbit.png remains the authority. Hidden surfaces inferred; no exact 1:1 claim."
+  ],
+  "publication_amendment": {
+    "id": "metadata-clean-2026-09-07",
+    "record": "assets/3d/publication/2026-09-07/amendment.json",
+    "original_document_sha256": "AA378EEAFE7574EFB3D85FC9D33E6EEC8A74FE50B6934B3175DAEABD198D105F",
+    "authoring_record": "assets/3d/publication/2026-09-07/authoring-records/assets/3d/source/rabbit/sculpt-v002/manifest.json",
+    "authoring_record_status": "exact-public-safe-original",
+    "notice": "Metadata-only publication derivative, not a rerun of the historical builder or validator. File digest and size bindings identify publication copies; all measured geometry, materials, rig, action, motion and acceptance evidence remains historical and unchanged. Consult the original authoring record and amendment binding log."
+  }
+}

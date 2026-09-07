@@ -1,0 +1,920 @@
+{
+  "schema": "asterion-local-modular-companion-v1",
+  "version": "sculpt-v003",
+  "kind": "pony",
+  "name": "Caelo",
+  "source_sha256": "B247D67119C0B021E1E63C4D7771029343AAB8F72ABD5F63D93A304D896F4DDA",
+  "model_sha256": "4A8B118119537DC1B7E1C4A4D043E04279B60D091CDB11123341A6A34320A5BB",
+  "reference_sha256": "9D059157FECF1C2905F9C1EB56A460AA45995DDD8B924C1E854827C73EFFD118",
+  "input_sha256": {
+    "assets/3d/source/pony/sculpt-v002/pony-sculpt-v002.blend": "0DAC1824694D3E37332FB83A2F6C702A4242DCB767117C8E8E107FB6A535EF68",
+    "public/assets/3d/pony/pony-sculpt-v002.glb": "8ACBEFF75EE53A76D1FEC1798A61232957A142A1E4B7E68BCE5B277786B61153",
+    "public/assets/companions/pony.png": "9D059157FECF1C2905F9C1EB56A460AA45995DDD8B924C1E854827C73EFFD118",
+    "assets/3d/source/companions/sculpt-v003/build.py": "D29DC488FAF8CB4CB51C81291A9B21102E74832209991D90B23DEF4DA12D5763",
+    "assets/3d/source/companions/sculpt-v003/refinements.py": "82AE8D392CCCF12EA231BD66A0244BDA073739AA4C0B3103DE7DD8DDDA1FBEBA",
+    "assets/3d/source/companions/sculpt-v003/export_equipment.py": "B12B82828199ED109E2764A69BA10A8036D79B62331FA8082C9EF4BEBFC1FB2D",
+    "assets/3d/source/companions/sculpt-v001/common.py": "A6DF036A5B3F6FAA3C74740382998D829D45C9E2734D91A285F9369764C21F9E",
+    "assets/3d/source/asterion/sculpt-v002/validate_refinement.py": "8C541F26C2D2546FB142988D10F07EDF51C891D1C81F02065C7B62CE01F78EFD",
+    "assets/3d/source/asterion/sculpt-v003/build_head_study.py": "A3B22323201D30A3BD9459985F8F7741A44545010A84D27CC5912E1C8A85E0F2",
+    "assets/3d/source/asterion/sculpt-v001/build_sculpt.py": "9A81C430E8FD07CE520BBA554C78845A508F22E5FB89E524BF515D8BF8415621",
+    "assets/3d/source/asterion/sculpt-v001/rig_delivery.py": "8758D105E70AB5405F61A48A531154CC591EAC0D82B167788F1D0785A16CDFF0",
+    "assets/3d/source/asterion/sculpt-v004/export_equipment.py": "C805B4740463215AE5CC9D314D14966F2BDF91A00FB82D05054BE0BBB8ED930B"
+  },
+  "blender": "5.2.1 LTS",
+  "checks": {
+    "original_rest_rig_unchanged": true,
+    "original_constraints_drivers_unchanged": true,
+    "all_original_action_data_unchanged": true,
+    "original_frame_rate_unchanged": true,
+    "original_eye_geometry_colors_weights_unchanged": true,
+    "all_source_parts_classified_once": true,
+    "explicit_editable_equipment_groups": true,
+    "meaningful_geometry_refinement": true,
+    "base_clothing_present": true,
+    "two_character_meshes": true,
+    "exact_distinct_components": true,
+    "one_original_shared_skin": true,
+    "nine_original_clips": true,
+    "only_public_extras": true,
+    "skinned_triangle_primitives": true,
+    "under_40_primitives": true,
+    "under_two_million_triangles": true,
+    "self_contained_no_projection": true,
+    "no_editor_stage": true,
+    "meshopt": true,
+    "under_25_mb": true,
+    "finite_imported_geometry": true,
+    "valid_normalized_known_weights": true,
+    "bounded_importer_triangle_difference": true,
+    "nine_clips_match_historical_import": true,
+    "two_imported_components": true,
+    "imported_equipment_metadata": true,
+    "all_historical_and_builder_inputs_unchanged": true
+  },
+  "components": {
+    "body": {
+      "mesh": 1,
+      "skin": 0,
+      "triangles": 1148476,
+      "primitives": 10
+    },
+    "armor": {
+      "mesh": 0,
+      "skin": 0,
+      "triangles": 54532,
+      "primitives": 7
+    }
+  },
+  "triangles": 1203008,
+  "draw_calls": 17,
+  "materials": 17,
+  "bones": 13,
+  "clips": [
+    "idle",
+    "blink",
+    "happy",
+    "eat",
+    "play",
+    "pet_reaction",
+    "sleep",
+    "wake",
+    "walk"
+  ],
+  "compression_lossless": false,
+  "bytes": 13507336,
+  "geometry": {
+    "vertices": 615309,
+    "triangles": 1203008,
+    "nonfinite_vertices": 0,
+    "nonfinite_transforms": 0,
+    "unweighted_vertices": 0,
+    "invalid_weights": 0,
+    "unknown_weights": 0,
+    "over_four_weights": 0,
+    "max_influences": 2,
+    "bounds_min": [
+      -1.05078125,
+      -2.117187738418579,
+      0.026854347437620163
+    ],
+    "bounds_max": [
+      0.880859375,
+      3.369140863418579,
+      4.7265625
+    ],
+    "span": [
+      1.931640625,
+      5.486328601837158,
+      4.69970815256238
+    ]
+  },
+  "triangle_count_evidence": {
+    "authored": 1203008,
+    "imported": 1203008,
+    "exact_equal": true,
+    "triangle_loss": 0,
+    "relative_loss": 0.0,
+    "maximum_allowed_loss": 24,
+    "relative_tolerance": 2e-05,
+    "passed": true,
+    "limit": "Count difference only; individual omitted triangle degeneracy is not proven by this check."
+  },
+  "changes": {
+    "notes": "Fuller, scored sky-blue mane and tail; deeper root-to-ribbon color; shorter rounded lower muzzle.",
+    "edited_objects": [
+      {
+        "name": "AST_Caelo_hair_fitted_rear_scalp",
+        "vertices": 7272,
+        "max_displacement": 0.0698283291711842,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Caelo_hair_fitted_neck_underwave",
+        "vertices": 7272,
+        "max_displacement": 0.0579243292434666,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Caelo_hair_forelock_main",
+        "vertices": 4314,
+        "max_displacement": 0.0272898990012333,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Caelo_hair_forelock_upper",
+        "vertices": 4314,
+        "max_displacement": 0.025075923181977516,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Caelo_hair_forelock_lower_hook",
+        "vertices": 4314,
+        "max_displacement": 0.020687983850476797,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Caelo_hair_crown_rising_wave",
+        "vertices": 4314,
+        "max_displacement": 0.025510731418337786,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Caelo_hair_crown_rear_curl",
+        "vertices": 4314,
+        "max_displacement": 0.022790011328122816,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Caelo_hair_crown_left_flick",
+        "vertices": 4314,
+        "max_displacement": 0.016673497609381943,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Caelo_hair_right_parting_curl",
+        "vertices": 4314,
+        "max_displacement": 0.00928451052113904,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Caelo_hair_temple_R_upper",
+        "vertices": 3122,
+        "max_displacement": 0.01698348755466309,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Caelo_hair_temple_R_lower",
+        "vertices": 3122,
+        "max_displacement": 0.014955528883333116,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Caelo_hair_temple_L_upper",
+        "vertices": 3122,
+        "max_displacement": 0.016734233858051374,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Caelo_hair_temple_L_lower",
+        "vertices": 3122,
+        "max_displacement": 0.01497090029206158,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Caelo_hair_mane_R_long_00",
+        "vertices": 7234,
+        "max_displacement": 0.03228878817671325,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Caelo_hair_mane_R_long_01",
+        "vertices": 7234,
+        "max_displacement": 0.030664601096778685,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Caelo_hair_mane_R_long_02",
+        "vertices": 7234,
+        "max_displacement": 0.029623122560592685,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Caelo_hair_mane_R_flick_00",
+        "vertices": 4538,
+        "max_displacement": 0.022083075489343466,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Caelo_hair_mane_R_flick_01",
+        "vertices": 4538,
+        "max_displacement": 0.019941531953916857,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Caelo_hair_mane_R_flick_02",
+        "vertices": 4538,
+        "max_displacement": 0.018837996426128895,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Caelo_hair_mane_L_long_00",
+        "vertices": 7234,
+        "max_displacement": 0.034869698834362216,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Caelo_hair_mane_L_long_01",
+        "vertices": 7234,
+        "max_displacement": 0.033165008321204274,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Caelo_hair_mane_L_long_02",
+        "vertices": 7234,
+        "max_displacement": 0.03133259499634652,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Caelo_hair_mane_L_flick_00",
+        "vertices": 4538,
+        "max_displacement": 0.02385487882614046,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Caelo_hair_mane_L_flick_01",
+        "vertices": 4538,
+        "max_displacement": 0.02061710426655328,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Caelo_hair_mane_L_flick_02",
+        "vertices": 4538,
+        "max_displacement": 0.019482985843711026,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Caelo_hair_dorsal_sweep_R",
+        "vertices": 7234,
+        "max_displacement": 0.029983277831445755,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Caelo_hair_dorsal_sweep_L",
+        "vertices": 7234,
+        "max_displacement": 0.027570024327394076,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Caelo_hair_tail_full_plume",
+        "vertices": 11602,
+        "max_displacement": 0.04168342726513356,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Caelo_hair_tail_L_high_wave",
+        "vertices": 9290,
+        "max_displacement": 0.027688895012123967,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Caelo_hair_tail_R_long_wave",
+        "vertices": 9290,
+        "max_displacement": 0.02681303551090193,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Caelo_hair_tail_L_lower_sweep",
+        "vertices": 8714,
+        "max_displacement": 0.03556281120139347,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Caelo_hair_tail_back_lift",
+        "vertices": 6722,
+        "max_displacement": 0.024720045843736743,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Caelo_hair_tail_crest_L",
+        "vertices": 6722,
+        "max_displacement": 0.02296477205063381,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_Caelo_hair_tail_crest_R",
+        "vertices": 6722,
+        "max_displacement": 0.020055591655056014,
+        "operation": "fitted longitudinal relief, root shading and species-specific silhouette",
+        "shortening": 0
+      },
+      {
+        "name": "AST_caelo_v2_head",
+        "operation": "rounder, less projecting lower muzzle",
+        "max_displacement": 0.051400821685791076
+      },
+      {
+        "name": "AST_caelo_v2_nostril_-1",
+        "operation": "rounder, less projecting lower muzzle",
+        "max_displacement": 0.024499871196317823
+      },
+      {
+        "name": "AST_caelo_v2_smile_-1",
+        "operation": "rounder, less projecting lower muzzle",
+        "max_displacement": 0.04122993399796755
+      },
+      {
+        "name": "AST_caelo_v2_nostril_1",
+        "operation": "rounder, less projecting lower muzzle",
+        "max_displacement": 0.02449553008529625
+      },
+      {
+        "name": "AST_caelo_v2_smile_1",
+        "operation": "rounder, less projecting lower muzzle",
+        "max_displacement": 0.04122993399458683
+      }
+    ],
+    "added_base_clothing": [],
+    "equipment_source_objects": [
+      "AST_caelo_v2_broad_chamfered_tiara",
+      "AST_caelo_v2_tiara_diamond_drop_gold_frame",
+      "AST_caelo_v2_tiara_central_star",
+      "AST_caelo_v2_tiara_temple_band_L",
+      "AST_caelo_v2_tiara_temple_star_L",
+      "AST_caelo_v2_tiara_temple_band_R",
+      "AST_caelo_v2_tiara_temple_star_R",
+      "AST_caelo_v2_polygonal_shoulder_shield_L",
+      "AST_caelo_v2_curved_blue_saddle_L",
+      "AST_caelo_v2_shoulder_gold_star_L",
+      "AST_caelo_v2_saddle_main_star_L",
+      "AST_caelo_v2_saddle_border_star_L",
+      "AST_caelo_v2_polygonal_shoulder_shield_R",
+      "AST_caelo_v2_curved_blue_saddle_R",
+      "AST_caelo_v2_shoulder_gold_star_R",
+      "AST_caelo_v2_saddle_main_star_R",
+      "AST_caelo_v2_saddle_border_star_R",
+      "AST_caelo_v2_broad_saddle_girth",
+      "AST_caelo_v2_shield_breast_jewel_gold_frame",
+      "AST_caelo_v2_shield_breast_jewel_faceted_crystal",
+      "AST_caelo_v2_breast_frame_upper_star",
+      "AST_caelo_v2_continuous_fitted_neck_harness",
+      "AST_caelo_v2_flat_double_anklet_FL_0",
+      "AST_caelo_v2_flat_double_anklet_FL_1",
+      "AST_caelo_v2_anklet_diamond_FL_gold_frame",
+      "AST_caelo_v2_anklet_diamond_FL_faceted_crystal",
+      "AST_caelo_v2_flat_double_anklet_FR_0",
+      "AST_caelo_v2_flat_double_anklet_FR_1",
+      "AST_caelo_v2_anklet_diamond_FR_gold_frame",
+      "AST_caelo_v2_anklet_diamond_FR_faceted_crystal",
+      "AST_caelo_v2_flat_double_anklet_HL_0",
+      "AST_caelo_v2_flat_double_anklet_HL_1",
+      "AST_caelo_v2_anklet_diamond_HL_gold_frame",
+      "AST_caelo_v2_anklet_diamond_HL_faceted_crystal",
+      "AST_caelo_v2_flat_double_anklet_HR_0",
+      "AST_caelo_v2_flat_double_anklet_HR_1",
+      "AST_caelo_v2_anklet_diamond_HR_gold_frame",
+      "AST_caelo_v2_anklet_diamond_HR_faceted_crystal"
+    ],
+    "body_source_objects": [
+      "AST_caelo_v2_torso",
+      "AST_caelo_v2_head",
+      "AST_caelo_v2_eye_R",
+      "AST_caelo_v2_eye_R_upper_lash",
+      "AST_caelo_v2_eye_R_lower_lid",
+      "AST_caelo_v2_eye_R_outer_lash_wing",
+      "AST_caelo_v2_eye_R_upper_fold",
+      "AST_caelo_v2_eye_R_blue_brow",
+      "AST_caelo_v2_eye_R_catchlight",
+      "AST_caelo_v2_eye_R_pinlight",
+      "AST_caelo_v2_eye_R_closed_lid",
+      "AST_caelo_v2_eye_R_sleeping_lash",
+      "AST_caelo_v2_cupped_ear_R",
+      "AST_caelo_v2_ear_inset_R",
+      "AST_caelo_v2_blue_hoof_leg.FR",
+      "AST_caelo_v2_fetlock_tuft_leg.FR_0",
+      "AST_caelo_v2_fetlock_tuft_leg.FR_1",
+      "AST_caelo_v2_fetlock_tuft_leg.FR_2",
+      "AST_caelo_v2_fetlock_tuft_leg.FR_3",
+      "AST_caelo_v2_fetlock_tuft_leg.FR_4",
+      "AST_caelo_v2_fetlock_tuft_leg.FR_5",
+      "AST_caelo_v2_fetlock_tuft_leg.FR_6",
+      "AST_caelo_v2_fetlock_tuft_leg.FR_7",
+      "AST_caelo_v2_fetlock_tuft_leg.FR_8",
+      "AST_caelo_v2_fetlock_tuft_leg.FR_9",
+      "AST_caelo_v2_fetlock_tuft_leg.FR_10",
+      "AST_caelo_v2_fetlock_tuft_leg.FR_11",
+      "AST_caelo_v2_fetlock_tuft_leg.FR_12",
+      "AST_caelo_v2_fetlock_tuft_leg.FR_13",
+      "AST_caelo_v2_fetlock_tuft_leg.FR_14",
+      "AST_caelo_v2_blue_hoof_leg.HR",
+      "AST_caelo_v2_fetlock_tuft_leg.HR_0",
+      "AST_caelo_v2_fetlock_tuft_leg.HR_1",
+      "AST_caelo_v2_fetlock_tuft_leg.HR_2",
+      "AST_caelo_v2_fetlock_tuft_leg.HR_3",
+      "AST_caelo_v2_fetlock_tuft_leg.HR_4",
+      "AST_caelo_v2_fetlock_tuft_leg.HR_5",
+      "AST_caelo_v2_fetlock_tuft_leg.HR_6",
+      "AST_caelo_v2_fetlock_tuft_leg.HR_7",
+      "AST_caelo_v2_fetlock_tuft_leg.HR_8",
+      "AST_caelo_v2_fetlock_tuft_leg.HR_9",
+      "AST_caelo_v2_fetlock_tuft_leg.HR_10",
+      "AST_caelo_v2_fetlock_tuft_leg.HR_11",
+      "AST_caelo_v2_fetlock_tuft_leg.HR_12",
+      "AST_caelo_v2_fetlock_tuft_leg.HR_13",
+      "AST_caelo_v2_fetlock_tuft_leg.HR_14",
+      "AST_caelo_v2_eye_L",
+      "AST_caelo_v2_eye_L_upper_lash",
+      "AST_caelo_v2_eye_L_lower_lid",
+      "AST_caelo_v2_eye_L_outer_lash_wing",
+      "AST_caelo_v2_eye_L_upper_fold",
+      "AST_caelo_v2_eye_L_blue_brow",
+      "AST_caelo_v2_eye_L_catchlight",
+      "AST_caelo_v2_eye_L_pinlight",
+      "AST_caelo_v2_eye_L_closed_lid",
+      "AST_caelo_v2_eye_L_sleeping_lash",
+      "AST_caelo_v2_cupped_ear_L",
+      "AST_caelo_v2_ear_inset_L",
+      "AST_caelo_v2_blue_hoof_leg.FL",
+      "AST_caelo_v2_fetlock_tuft_leg.FL_0",
+      "AST_caelo_v2_fetlock_tuft_leg.FL_1",
+      "AST_caelo_v2_fetlock_tuft_leg.FL_2",
+      "AST_caelo_v2_fetlock_tuft_leg.FL_3",
+      "AST_caelo_v2_fetlock_tuft_leg.FL_4",
+      "AST_caelo_v2_fetlock_tuft_leg.FL_5",
+      "AST_caelo_v2_fetlock_tuft_leg.FL_6",
+      "AST_caelo_v2_fetlock_tuft_leg.FL_7",
+      "AST_caelo_v2_fetlock_tuft_leg.FL_8",
+      "AST_caelo_v2_fetlock_tuft_leg.FL_9",
+      "AST_caelo_v2_fetlock_tuft_leg.FL_10",
+      "AST_caelo_v2_fetlock_tuft_leg.FL_11",
+      "AST_caelo_v2_fetlock_tuft_leg.FL_12",
+      "AST_caelo_v2_fetlock_tuft_leg.FL_13",
+      "AST_caelo_v2_fetlock_tuft_leg.FL_14",
+      "AST_caelo_v2_blue_hoof_leg.HL",
+      "AST_caelo_v2_fetlock_tuft_leg.HL_0",
+      "AST_caelo_v2_fetlock_tuft_leg.HL_1",
+      "AST_caelo_v2_fetlock_tuft_leg.HL_2",
+      "AST_caelo_v2_fetlock_tuft_leg.HL_3",
+      "AST_caelo_v2_fetlock_tuft_leg.HL_4",
+      "AST_caelo_v2_fetlock_tuft_leg.HL_5",
+      "AST_caelo_v2_fetlock_tuft_leg.HL_6",
+      "AST_caelo_v2_fetlock_tuft_leg.HL_7",
+      "AST_caelo_v2_fetlock_tuft_leg.HL_8",
+      "AST_caelo_v2_fetlock_tuft_leg.HL_9",
+      "AST_caelo_v2_fetlock_tuft_leg.HL_10",
+      "AST_caelo_v2_fetlock_tuft_leg.HL_11",
+      "AST_caelo_v2_fetlock_tuft_leg.HL_12",
+      "AST_caelo_v2_fetlock_tuft_leg.HL_13",
+      "AST_caelo_v2_fetlock_tuft_leg.HL_14",
+      "AST_caelo_v2_nostril_-1",
+      "AST_caelo_v2_smile_-1",
+      "AST_caelo_v2_nostril_1",
+      "AST_caelo_v2_smile_1",
+      "AST_Caelo_hair_fitted_rear_scalp",
+      "AST_Caelo_hair_fitted_neck_underwave",
+      "AST_Caelo_hair_forelock_main",
+      "AST_Caelo_hair_forelock_upper",
+      "AST_Caelo_hair_forelock_lower_hook",
+      "AST_Caelo_hair_crown_rising_wave",
+      "AST_Caelo_hair_crown_rear_curl",
+      "AST_Caelo_hair_crown_left_flick",
+      "AST_Caelo_hair_right_parting_curl",
+      "AST_Caelo_hair_temple_R_upper",
+      "AST_Caelo_hair_temple_R_lower",
+      "AST_Caelo_hair_temple_L_upper",
+      "AST_Caelo_hair_temple_L_lower",
+      "AST_Caelo_hair_mane_R_long_00",
+      "AST_Caelo_hair_mane_R_long_01",
+      "AST_Caelo_hair_mane_R_long_02",
+      "AST_Caelo_hair_mane_R_flick_00",
+      "AST_Caelo_hair_mane_R_flick_01",
+      "AST_Caelo_hair_mane_R_flick_02",
+      "AST_Caelo_hair_mane_L_long_00",
+      "AST_Caelo_hair_mane_L_long_01",
+      "AST_Caelo_hair_mane_L_long_02",
+      "AST_Caelo_hair_mane_L_flick_00",
+      "AST_Caelo_hair_mane_L_flick_01",
+      "AST_Caelo_hair_mane_L_flick_02",
+      "AST_Caelo_hair_dorsal_sweep_R",
+      "AST_Caelo_hair_dorsal_sweep_L",
+      "AST_Caelo_hair_tail_full_plume",
+      "AST_Caelo_hair_tail_L_high_wave",
+      "AST_Caelo_hair_tail_R_long_wave",
+      "AST_Caelo_hair_tail_L_lower_sweep",
+      "AST_Caelo_hair_tail_back_lift",
+      "AST_Caelo_hair_tail_crest_L",
+      "AST_Caelo_hair_tail_crest_R"
+    ]
+  },
+  "original_rig": {
+    "rest_sha256": "3A2A8ACE387874872B6E3EDB13D84AB99A435FD7CC0E106334E33CFD8DF95358",
+    "behavior_sha256": "37E2CB7157322B1B022EDA60C976DC4F934B2866BB43D2B7C6645C19C4A16C75",
+    "bones": 13,
+    "fps": 30,
+    "fps_base": 1.0,
+    "actions": {
+      "blink": {
+        "sha256": "1D96907293615F6D1A8359E2A0C6C497E2E6F2B3FCA14954029285ECF4EDFAAE",
+        "curve_count": 117,
+        "key_count": 1170,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          19.0
+        ]
+      },
+      "eat": {
+        "sha256": "F950E92DCBB7276906D85D7FED5CCF6742079DCD1B3BB6A05058A1441EC72491",
+        "curve_count": 117,
+        "key_count": 5382,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          91.0
+        ]
+      },
+      "happy": {
+        "sha256": "0DE4269AABEC94936DE994D677EDBA02376A590E39E4B3E934F56FE74BA91CB5",
+        "curve_count": 117,
+        "key_count": 3627,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          61.0
+        ]
+      },
+      "idle": {
+        "sha256": "C5D9F80B600BB1279414CE20156759017FC5D4F9B79CCA811AD71F1D138DEAE9",
+        "curve_count": 117,
+        "key_count": 7137,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          121.0
+        ]
+      },
+      "pet_reaction": {
+        "sha256": "29CEBD0E01FFF8EB3E4C0393575419FFFE069C5EEF3C0363A209DD4BDFA83102",
+        "curve_count": 117,
+        "key_count": 4563,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          76.0
+        ]
+      },
+      "play": {
+        "sha256": "78E46F9C36389FFE3D625B07505AC58E3B92BC5C2C3A8F67C4349ED0494EDB18",
+        "curve_count": 117,
+        "key_count": 4797,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          81.0
+        ]
+      },
+      "sleep": {
+        "sha256": "ECD001EA963E9448C5B1E5347586449E7DD6E37AC8243758D58AF8622BA1FAEB",
+        "curve_count": 117,
+        "key_count": 7137,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          121.0
+        ]
+      },
+      "wake": {
+        "sha256": "1ACA77669A85B363672BA8AA721188421B37DAB46109BB9C83A4B342E90630F8",
+        "curve_count": 117,
+        "key_count": 3627,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          61.0
+        ]
+      },
+      "walk": {
+        "sha256": "85495C9D0766A39162DFB42FE303F8FA56238316C9A83CF1B13F793F233D0CA7",
+        "curve_count": 117,
+        "key_count": 2925,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          49.0
+        ]
+      }
+    }
+  },
+  "candidate_rig": {
+    "rest_sha256": "3A2A8ACE387874872B6E3EDB13D84AB99A435FD7CC0E106334E33CFD8DF95358",
+    "behavior_sha256": "37E2CB7157322B1B022EDA60C976DC4F934B2866BB43D2B7C6645C19C4A16C75",
+    "bones": 13,
+    "fps": 30,
+    "fps_base": 1.0,
+    "actions": {
+      "blink": {
+        "sha256": "1D96907293615F6D1A8359E2A0C6C497E2E6F2B3FCA14954029285ECF4EDFAAE",
+        "curve_count": 117,
+        "key_count": 1170,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          19.0
+        ]
+      },
+      "eat": {
+        "sha256": "F950E92DCBB7276906D85D7FED5CCF6742079DCD1B3BB6A05058A1441EC72491",
+        "curve_count": 117,
+        "key_count": 5382,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          91.0
+        ]
+      },
+      "happy": {
+        "sha256": "0DE4269AABEC94936DE994D677EDBA02376A590E39E4B3E934F56FE74BA91CB5",
+        "curve_count": 117,
+        "key_count": 3627,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          61.0
+        ]
+      },
+      "idle": {
+        "sha256": "C5D9F80B600BB1279414CE20156759017FC5D4F9B79CCA811AD71F1D138DEAE9",
+        "curve_count": 117,
+        "key_count": 7137,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          121.0
+        ]
+      },
+      "pet_reaction": {
+        "sha256": "29CEBD0E01FFF8EB3E4C0393575419FFFE069C5EEF3C0363A209DD4BDFA83102",
+        "curve_count": 117,
+        "key_count": 4563,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          76.0
+        ]
+      },
+      "play": {
+        "sha256": "78E46F9C36389FFE3D625B07505AC58E3B92BC5C2C3A8F67C4349ED0494EDB18",
+        "curve_count": 117,
+        "key_count": 4797,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          81.0
+        ]
+      },
+      "sleep": {
+        "sha256": "ECD001EA963E9448C5B1E5347586449E7DD6E37AC8243758D58AF8622BA1FAEB",
+        "curve_count": 117,
+        "key_count": 7137,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          121.0
+        ]
+      },
+      "wake": {
+        "sha256": "1ACA77669A85B363672BA8AA721188421B37DAB46109BB9C83A4B342E90630F8",
+        "curve_count": 117,
+        "key_count": 3627,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          61.0
+        ]
+      },
+      "walk": {
+        "sha256": "85495C9D0766A39162DFB42FE303F8FA56238316C9A83CF1B13F793F233D0CA7",
+        "curve_count": 117,
+        "key_count": 2925,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          49.0
+        ]
+      }
+    }
+  },
+  "motion_comparison": {
+    "idle": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "blink": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "happy": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "eat": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "play": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "pet_reaction": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "sleep": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "wake": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "walk": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    }
+  },
+  "source_views": {
+    "hero": {
+      "file": "assets/3d/reference/pony/sculpt-v003/source/pony-hero.png",
+      "sha256": "D4CCCEC2BF6D38F33B65F1B0DB112401D8884959088522824F8A618FD30C8A1C"
+    },
+    "front": {
+      "file": "assets/3d/reference/pony/sculpt-v003/source/pony-front.png",
+      "sha256": "B3B2BD5ED4397A80CC60FE478A7787AEF6DF1EB05FCDAD89E8C7B0B9110924EB"
+    },
+    "side": {
+      "file": "assets/3d/reference/pony/sculpt-v003/source/pony-side.png",
+      "sha256": "BEE89C8D8093B5948FA7CC51976428FB4C53185F8A3D378B4D05F99C8C35322C"
+    },
+    "rear": {
+      "file": "assets/3d/reference/pony/sculpt-v003/source/pony-rear.png",
+      "sha256": "1F51BC8479AD230EE61C1FF056E899616B969A59E6B56A8B68A0CF6D758138D1"
+    },
+    "body-hero": {
+      "file": "assets/3d/reference/pony/sculpt-v003/source/pony-body-hero.png",
+      "sha256": "1B6236CEA30F858E30188FF2D369004ECA06B1043A395F75EC4963D57AE455BD"
+    },
+    "body-side": {
+      "file": "assets/3d/reference/pony/sculpt-v003/source/pony-body-side.png",
+      "sha256": "9FC90CCB3971D4993F4547408236D0C3DF14852FC7DDEEB737DB581225E36ED1"
+    }
+  },
+  "import_views": {
+    "hero": {
+      "file": "assets/3d/reference/pony/sculpt-v003/import/pony-hero.png",
+      "sha256": "810DE9F0AFC295E001AF2CBD3032495409E87F11150612AF34DB19059D32ECE8"
+    },
+    "rear": {
+      "file": "assets/3d/reference/pony/sculpt-v003/import/pony-rear.png",
+      "sha256": "33F5ACD94A4724638C0BF831870B8A52DC777C05E9C15D668792EC94797D255E"
+    },
+    "body-hero": {
+      "file": "assets/3d/reference/pony/sculpt-v003/import/pony-body-hero.png",
+      "sha256": "F8583E4838E33D9A600257A40FDE1DD9A82DE6024DD0FAE8078F3B072C2076B4"
+    },
+    "blink": {
+      "file": "assets/3d/reference/pony/sculpt-v003/import/pony-blink.png",
+      "sha256": "C71345E31AB1E1EA490D593F841AEBE94DCD5C5C32C0B0A818020F20669128A2"
+    }
+  },
+  "passed": true,
+  "human_likeness_accepted": false,
+  "mobile_performance_accepted": false,
+  "paid_provider_used": false,
+  "projection_used": false,
+  "package_status": "Local hash-checked Blender delivery; no game-dev canonical receipt.",
+  "animation_limit": "Original source curves, keys, handles, rest rig and drivers compared exactly. Fresh GLBs compared at nine normalized times per clip with 2e-4 skin-matrix tolerance. Not a collision or gait acceptance.",
+  "likeness_limit": "Approved single-view reference retained. Hidden surfaces inferred; no exact 1:1 claim.",
+  "publication_amendment": {
+    "id": "metadata-clean-2026-09-07",
+    "record": "assets/3d/publication/2026-09-07/amendment.json",
+    "original_document_sha256": "98D4D6F9A9370602647FA7FE8D0E618BAF46A92A0C377D6B0B74B4BE3EB138F4",
+    "authoring_record": "assets/3d/publication/2026-09-07/authoring-records/assets/3d/reference/pony/sculpt-v003/validation.json",
+    "authoring_record_status": "exact-public-safe-original",
+    "notice": "Metadata-only publication derivative, not a rerun of the historical builder or validator. File digest and size bindings identify publication copies; all measured geometry, materials, rig, action, motion and acceptance evidence remains historical and unchanged. Consult the original authoring record and amendment binding log."
+  }
+}

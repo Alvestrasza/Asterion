@@ -1,0 +1,214 @@
+{
+  "schema": "asterion-face-only-v1",
+  "kind": "asterion",
+  "name": "Asterion",
+  "version": "sculpt-v006",
+  "source_sha256": "B09042CF1B0FEF14C964F389C3B2B1B188E96EFA0FF07E83AC7AC4FE5805DD95",
+  "model_sha256": "F2C30E278362C74B386E3A114BA7D417AB983F9323A8C1B10D1852434ACD0088",
+  "reference_sha256": "FE91A72F21A139CB4443E7BDE99498FC7AF7D07B8784A5F4A0B48CC37A141AEC",
+  "triangles": 3126884,
+  "bytes": 38992000,
+  "bones": 22,
+  "clips": [
+    "idle",
+    "blink",
+    "happy",
+    "eat",
+    "play",
+    "pet_reaction",
+    "sleep",
+    "wake",
+    "walk"
+  ],
+  "draw_calls": 25,
+  "materials": 20,
+  "components": {
+    "body": {
+      "mesh": 1,
+      "skin": 0,
+      "triangles": 3063260,
+      "primitives": 16
+    },
+    "armor": {
+      "mesh": 0,
+      "skin": 0,
+      "triangles": 63624,
+      "primitives": 9
+    }
+  },
+  "blender": "5.2.1 LTS",
+  "human_likeness_accepted": false,
+  "mobile_performance_accepted": false,
+  "projection_used": false,
+  "paid_provider_used": false,
+  "package_status": "Local hash-checked Blender delivery; no game-dev canonical receipt.",
+  "animation_limit": "Original full action/rest/driver RNA unchanged; nine fresh GLB skin-matrix samples per clip. Original center-scale lids retained; no anatomical closure or collision-free motion claim.",
+  "likeness_limit": "Face-only sculpt interpreted from unchanged original artwork. Hidden angles inferred. Not a 100-percent likeness or human identity acceptance claim.",
+  "compression_lossless": false,
+  "source": "assets/3d/source/asterion/sculpt-v006/asterion-sculpt-v006.blend",
+  "model": "public/assets/3d/asterion/asterion-sculpt-v006.glb",
+  "reference": "assets/3d/reference/asterion/sculpt-v006/original.png",
+  "validation": "assets/3d/reference/asterion/sculpt-v006/validation.json",
+  "validation_sha256": "8796159614435563DC6235C38AE5EB19118943F00BEECB894CB1B34686BC8B09",
+  "input_sha256": {
+    "assets/3d/source/asterion/sculpt-v005/asterion-sculpt-v005.blend": "7288827BEE5C980823A002326ACFD2D3966054525578B5D700F5241376B6A2F7",
+    "public/assets/3d/asterion/asterion-sculpt-v005.glb": "9A6676EA015C798B3E7FAAED48554815519840A41ED2D557634527CAC8FE9B3A",
+    "assets/3d/reference/asterion/sculpt-v004/asterion-approved-turnaround.png": "FE91A72F21A139CB4443E7BDE99498FC7AF7D07B8784A5F4A0B48CC37A141AEC",
+    "assets/3d/source/companions/sculpt-v001/common.py": "A6DF036A5B3F6FAA3C74740382998D829D45C9E2734D91A285F9369764C21F9E",
+    "assets/3d/source/asterion/sculpt-v001/build_sculpt.py": "9A81C430E8FD07CE520BBA554C78845A508F22E5FB89E524BF515D8BF8415621",
+    "assets/3d/source/asterion/sculpt-v001/rig_delivery.py": "8758D105E70AB5405F61A48A531154CC591EAC0D82B167788F1D0785A16CDFF0",
+    "assets/3d/source/asterion/sculpt-v002/validate_refinement.py": "8C541F26C2D2546FB142988D10F07EDF51C891D1C81F02065C7B62CE01F78EFD",
+    "assets/3d/source/asterion/sculpt-v003/build_head_study.py": "A3B22323201D30A3BD9459985F8F7741A44545010A84D27CC5912E1C8A85E0F2",
+    "assets/3d/source/asterion/sculpt-v004/export_equipment.py": "C805B4740463215AE5CC9D314D14966F2BDF91A00FB82D05054BE0BBB8ED930B",
+    "assets/3d/source/companions/sculpt-v004/build.py": "C6FBCA99D1117722B07933B90795DBFFA37DC22B399ECD6B339EAFF3C063A6BD",
+    "assets/3d/source/companions/sculpt-v004/refinements.py": "6247CEA1AE30B56B6FD3D23DEDEF1DD99BCD8A7B9158AA0576340AA2B8F89BCF",
+    "assets/3d/source/companions/sculpt-v004/export_equipment.py": "5EDB676641BE58BDE353213F6DA4F7F7662B76A08F586D0E7DADA7006AF343CF",
+    "assets/3d/source/companions/sculpt-v005/build.py": "2CD3C4D70E953C8BDBDDD01157745474A213968016F12BC3494BE8FD99C793BE",
+    "assets/3d/source/companions/sculpt-v005/contract.py": "F6829E7B890BA3B1108700B847CBB2C4CD532042233BD8049CC26B3A8522984E",
+    "assets/3d/source/companions/sculpt-v005/guards.py": "C98E5A25B553C56D016324F1AADE2669BEA28F3B2E73F5D883A74EBAEB599EF4",
+    "assets/3d/source/asterion/sculpt-v006/face.py": "BFA1062733037571A41196923751CC2760C5D7F26C31C71B49DDB04C68FFB081"
+  },
+  "renders": {
+    "face-hero": {
+      "file": "assets/3d/reference/asterion/sculpt-v006/source/asterion-face-hero.png",
+      "sha256": "8FE090526F92E18F85F00B02D2A4324654CDFCEE74722BFAD764353EE31790C5",
+      "clip": "idle",
+      "frame": 1
+    },
+    "face-front": {
+      "file": "assets/3d/reference/asterion/sculpt-v006/source/asterion-face-front.png",
+      "sha256": "B42BB1584397B6DDFF723FD0CE62A02563BCCBF09BABBFB246E78126B19D7F35",
+      "clip": "idle",
+      "frame": 1
+    },
+    "face-side": {
+      "file": "assets/3d/reference/asterion/sculpt-v006/source/asterion-face-side.png",
+      "sha256": "86A3516FB7FA43FF815C4FE40B7A9DB19CC7F52BD977A630452050880A9FDE0F",
+      "clip": "idle",
+      "frame": 1
+    },
+    "blink-early": {
+      "file": "assets/3d/reference/asterion/sculpt-v006/source/asterion-blink-early.png",
+      "sha256": "11ADD2987E5313D693DBAEE4231CB7D2EF32C386C587DF802E2B9970EA8D6003",
+      "clip": "blink",
+      "frame": 5
+    },
+    "blink-partial": {
+      "file": "assets/3d/reference/asterion/sculpt-v006/source/asterion-blink-partial.png",
+      "sha256": "DF8DE58531A03096C6D5B068E0BC4CC11A7353A7AEF45B49C71E188AF9C72E00",
+      "clip": "blink",
+      "frame": 7
+    },
+    "blink-closed": {
+      "file": "assets/3d/reference/asterion/sculpt-v006/source/asterion-blink-closed.png",
+      "sha256": "DB78586B44E4E8D41273A469EB509C79BED382D76694876EBFA31716529505E2",
+      "clip": "blink",
+      "frame": 10
+    },
+    "hero": {
+      "file": "assets/3d/reference/asterion/sculpt-v006/source/asterion-hero.png",
+      "sha256": "C73A3B37C6F2ABC2906563E708FD48FC8BE4FF35A409A85B3E0D93650DA031F3",
+      "clip": "idle",
+      "frame": 1
+    },
+    "rear": {
+      "file": "assets/3d/reference/asterion/sculpt-v006/source/asterion-rear.png",
+      "sha256": "649DAA0A8A931D55E4B12961082AFDBF47FA1C75D437F1B3B28A1D40149A3484",
+      "clip": "idle",
+      "frame": 1
+    },
+    "body-hero": {
+      "file": "assets/3d/reference/asterion/sculpt-v006/source/asterion-body-hero.png",
+      "sha256": "8FAC34A8DF1738BBDA6AF48A76BDD668ABA702E3BD883B1AE795E9AC3ACD5C3E",
+      "clip": "idle",
+      "frame": 1
+    }
+  },
+  "import_renders": {
+    "face-hero": {
+      "file": "assets/3d/reference/asterion/sculpt-v006/import/asterion-face-hero.png",
+      "sha256": "16F0AC38C0EB48B5A26BFA141831B3E4196F5271D7452B15A9ED944CB26324B3",
+      "clip": "idle",
+      "frame": 1
+    },
+    "face-front": {
+      "file": "assets/3d/reference/asterion/sculpt-v006/import/asterion-face-front.png",
+      "sha256": "A2EAEAA410697BF5A2ACE60F0AB765DDE1CB74E5588A766E58DB4B60181EDDDD",
+      "clip": "idle",
+      "frame": 1
+    },
+    "face-side": {
+      "file": "assets/3d/reference/asterion/sculpt-v006/import/asterion-face-side.png",
+      "sha256": "273A4C351EC6392308F635B48A2F799BD693EC0A443F3B8C7F0F2FC6AD5232EA",
+      "clip": "idle",
+      "frame": 1
+    },
+    "blink-early": {
+      "file": "assets/3d/reference/asterion/sculpt-v006/import/asterion-blink-early.png",
+      "sha256": "9001A0F86BEDB76D9C223338B8FC5D3484F0D821E6D9AA7AC3D87616D4C5C92D",
+      "clip": "blink",
+      "frame": 5
+    },
+    "blink-partial": {
+      "file": "assets/3d/reference/asterion/sculpt-v006/import/asterion-blink-partial.png",
+      "sha256": "EBC1E74809E8FECCAF8225A5826DA5A89071FD628FFDFE2A68AFBA7E1D7E89E8",
+      "clip": "blink",
+      "frame": 7
+    },
+    "blink-closed": {
+      "file": "assets/3d/reference/asterion/sculpt-v006/import/asterion-blink-closed.png",
+      "sha256": "C424787A183EBBFB61044E8CDC603B5FDB062296A8B193831B0225C3A594F789",
+      "clip": "blink",
+      "frame": 10
+    },
+    "hero": {
+      "file": "assets/3d/reference/asterion/sculpt-v006/import/asterion-hero.png",
+      "sha256": "9656C7EC79E11F115BEE252BFB1BB0825AC1DCEAC7880EF9E17669591A2D94F0",
+      "clip": "idle",
+      "frame": 1
+    },
+    "body-hero": {
+      "file": "assets/3d/reference/asterion/sculpt-v006/import/asterion-body-hero.png",
+      "sha256": "6DEE065000CA6322379C0824EAE2D4FE700B4A62680E4F97E7E06E581E8A9A8B",
+      "clip": "idle",
+      "frame": 1
+    }
+  },
+  "baseline_renders": {
+    "face-hero": {
+      "file": "assets/3d/reference/asterion/sculpt-v006/baseline/asterion-face-hero.png",
+      "sha256": "D5F3BA8F261A7E3097047C438AF6CCB9F799077BAA981269D937FDBE0FBA9B6D",
+      "clip": "idle",
+      "frame": 1
+    },
+    "face-front": {
+      "file": "assets/3d/reference/asterion/sculpt-v006/baseline/asterion-face-front.png",
+      "sha256": "2F592ABCBEBC112A2A4C780ADA327E5F0E4ABE24A62C5ED37904FD4E2FE2DC0E",
+      "clip": "idle",
+      "frame": 1
+    },
+    "face-side": {
+      "file": "assets/3d/reference/asterion/sculpt-v006/baseline/asterion-face-side.png",
+      "sha256": "83FF5F77464CA08A1D65A7AC34F3CC4B5AFF452F91C02104260B824BA0A4D88B",
+      "clip": "idle",
+      "frame": 1
+    }
+  },
+  "face_scope_only": true,
+  "nonface_unchanged": true,
+  "animations_unchanged": true,
+  "equipment_separate": true,
+  "fresh_import_passed": true,
+  "notes": "Face-only study: larger integrated azure eyes, skin-seated orbital transitions, lighter brow volume, softly rounded cheeks/chin, shaped nasal planes and a restrained lifted mouth. Head mane remains omitted.",
+  "edited_objects": 38,
+  "protected_object_count": 121,
+  "protected_material_count": 16,
+  "publication_amendment": {
+    "id": "metadata-clean-2026-09-07",
+    "record": "assets/3d/publication/2026-09-07/amendment.json",
+    "original_document_sha256": "43964B73B51C80F30E9423DC06C5F2BC4B449D73128064D77BB0E911DFF46362",
+    "authoring_record": "assets/3d/publication/2026-09-07/authoring-records/assets/3d/source/asterion/sculpt-v006/manifest.json",
+    "authoring_record_status": "exact-public-safe-original",
+    "notice": "Metadata-only publication derivative, not a rerun of the historical builder or validator. File digest and size bindings identify publication copies; all measured geometry, materials, rig, action, motion and acceptance evidence remains historical and unchanged. Consult the original authoring record and amendment binding log."
+  }
+}

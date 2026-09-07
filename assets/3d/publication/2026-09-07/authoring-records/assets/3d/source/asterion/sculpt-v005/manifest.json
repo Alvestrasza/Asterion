@@ -1,0 +1,117 @@
+{
+  "schema": "asterion-local-modular-companion-v1",
+  "kind": "asterion",
+  "name": "Asterion",
+  "version": "sculpt-v005",
+  "source_sha256": "1F6BAD67653EFE95561E3B07AA4E866BEDD960E72125AD869F59667BDBABA05C",
+  "model_sha256": "9A6676EA015C798B3E7FAAED48554815519840A41ED2D557634527CAC8FE9B3A",
+  "reference_sha256": "FE91A72F21A139CB4443E7BDE99498FC7AF7D07B8784A5F4A0B48CC37A141AEC",
+  "triangles": 3111372,
+  "bytes": 40080216,
+  "bones": 22,
+  "clips": [
+    "idle",
+    "blink",
+    "happy",
+    "eat",
+    "play",
+    "pet_reaction",
+    "sleep",
+    "wake",
+    "walk"
+  ],
+  "draw_calls": 23,
+  "materials": 18,
+  "components": {
+    "body": {
+      "mesh": 1,
+      "skin": 0,
+      "triangles": 3047748,
+      "primitives": 14
+    },
+    "armor": {
+      "mesh": 0,
+      "skin": 0,
+      "triangles": 63624,
+      "primitives": 9
+    }
+  },
+  "blender": "5.2.1 LTS",
+  "human_likeness_accepted": false,
+  "mobile_performance_accepted": false,
+  "projection_used": false,
+  "paid_provider_used": false,
+  "package_status": "Local hash-checked Blender delivery; no game-dev canonical receipt.",
+  "animation_limit": "Original source curves, keys, handles, rest rig and drivers compared exactly. Fresh GLBs compared at nine normalized times per clip with 2e-4 skin-matrix tolerance. Not a collision or gait acceptance.",
+  "likeness_limit": "Original approved artwork retained. Primary forms intentionally refined; unseen surfaces inferred. No exact 1:1 or human acceptance claim.",
+  "compression_lossless": false,
+  "source": "assets/3d/source/asterion/sculpt-v005/asterion-sculpt-v005.blend",
+  "model": "public/assets/3d/asterion/asterion-sculpt-v005.glb",
+  "reference": "assets/3d/reference/asterion/sculpt-v005/original.png",
+  "validation": "assets/3d/reference/asterion/sculpt-v005/validation.json",
+  "validation_sha256": "3C44877095BE3114D4BCB8977B897468851988C8C89A0C088AA2BB20F1E799CF",
+  "fresh_import_passed": true,
+  "animations_unchanged": true,
+  "equipment_separate": true,
+  "input_sha256": {
+    "assets/3d/source/asterion/sculpt-v004/asterion-sculpt-v004.blend": "07F6ECF1594F5D41BFE262367CA2188E48B942BCFF9F0A6C493EF18B04693822",
+    "public/assets/3d/asterion/asterion-sculpt-v004.glb": "CF14A6363C19B8C1B599C5C89181A63B31296CC97B72A0299C0230D9C81DF6CF",
+    "assets/3d/reference/asterion/sculpt-v004/asterion-approved-turnaround.png": "FE91A72F21A139CB4443E7BDE99498FC7AF7D07B8784A5F4A0B48CC37A141AEC",
+    "assets/3d/source/companions/sculpt-v004/build.py": "C6FBCA99D1117722B07933B90795DBFFA37DC22B399ECD6B339EAFF3C063A6BD",
+    "assets/3d/source/companions/sculpt-v004/refinements.py": "6247CEA1AE30B56B6FD3D23DEDEF1DD99BCD8A7B9158AA0576340AA2B8F89BCF",
+    "assets/3d/source/companions/sculpt-v004/export_equipment.py": "5EDB676641BE58BDE353213F6DA4F7F7662B76A08F586D0E7DADA7006AF343CF",
+    "assets/3d/source/companions/sculpt-v001/common.py": "A6DF036A5B3F6FAA3C74740382998D829D45C9E2734D91A285F9369764C21F9E",
+    "assets/3d/source/asterion/sculpt-v002/validate_refinement.py": "8C541F26C2D2546FB142988D10F07EDF51C891D1C81F02065C7B62CE01F78EFD",
+    "assets/3d/source/asterion/sculpt-v003/build_head_study.py": "A3B22323201D30A3BD9459985F8F7741A44545010A84D27CC5912E1C8A85E0F2",
+    "assets/3d/source/asterion/sculpt-v001/build_sculpt.py": "9A81C430E8FD07CE520BBA554C78845A508F22E5FB89E524BF515D8BF8415621",
+    "assets/3d/source/asterion/sculpt-v001/rig_delivery.py": "8758D105E70AB5405F61A48A531154CC591EAC0D82B167788F1D0785A16CDFF0",
+    "assets/3d/source/asterion/sculpt-v004/export_equipment.py": "C805B4740463215AE5CC9D314D14966F2BDF91A00FB82D05054BE0BBB8ED930B",
+    "assets/3d/source/asterion/sculpt-v005/likeness.py": "526C84561A1FBFEAD71F49ECB950E51D73F903853F7E649AAE3112709EFD557F"
+  },
+  "renders": {
+    "hero": {
+      "file": "assets/3d/reference/asterion/sculpt-v005/source/asterion-hero.png",
+      "sha256": "8ED872F14C82D3FE027065813C381D7D07D81D0F3CF1F24165134BA5A13EDD4C"
+    },
+    "front": {
+      "file": "assets/3d/reference/asterion/sculpt-v005/source/asterion-front.png",
+      "sha256": "6BEFD3F16770C29FB0E204AA06244A1090F69C85724CB3DF8EB8BAE0EC3FFA3A"
+    },
+    "side": {
+      "file": "assets/3d/reference/asterion/sculpt-v005/source/asterion-side.png",
+      "sha256": "1AF8F272C4FDF3203013F907D04E74A47A955606AF59794BD1240D800455C723"
+    },
+    "rear": {
+      "file": "assets/3d/reference/asterion/sculpt-v005/source/asterion-rear.png",
+      "sha256": "C891F2A6FD4489735AEE9545DDD1A0B5B501B9E645AFFD9B9622918683ECB038"
+    },
+    "body-hero": {
+      "file": "assets/3d/reference/asterion/sculpt-v005/source/asterion-body-hero.png",
+      "sha256": "FAFDE3C6A5F532584E19694EA5D63ABF4E6FF147F702D686B503D7DBB0A167DC"
+    },
+    "body-side": {
+      "file": "assets/3d/reference/asterion/sculpt-v005/source/asterion-body-side.png",
+      "sha256": "19CE7F93F8F4174244C0BDAD951513E25F7F7D1A03CD0436E84F56468D4B28CB"
+    }
+  },
+  "import_renders": {
+    "hero": {
+      "file": "assets/3d/reference/asterion/sculpt-v005/import/asterion-hero.png",
+      "sha256": "3C7C210E84ACA743B890D99763DE2220E1D9027319A0699A0DA689BD5B584141"
+    },
+    "rear": {
+      "file": "assets/3d/reference/asterion/sculpt-v005/import/asterion-rear.png",
+      "sha256": "007A7CA2DAD36A878091632D6D583ED2576D602C7872322D0F1B082B9DF3A066"
+    },
+    "body-hero": {
+      "file": "assets/3d/reference/asterion/sculpt-v005/import/asterion-body-hero.png",
+      "sha256": "522B94DBEDFF219E6AA978A521A12B879CAF622C9FFEB3D381E5C069A12D6C02"
+    },
+    "blink": {
+      "file": "assets/3d/reference/asterion/sculpt-v005/import/asterion-blink.png",
+      "sha256": "D45128B02FD089CAA3AAE1D6BC2772510EEC3F4838A7350EA5D5370F7FC7AB4F"
+    }
+  },
+  "notes": "Swept-back compact crown, shorter coherent neck/ears, fuller cheek/nose silhouette, rounded azure pupils, shallow navy scales, fitted rear collar and fuller gold claws. Head mane still omitted by prior instruction.",
+  "edited_objects": 102
+}

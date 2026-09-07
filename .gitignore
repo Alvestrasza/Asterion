@@ -4,6 +4,7 @@
 !.env.example
 .next/
 node_modules/
+.pnpm-store/
 *.tsbuildinfo
 .DS_Store
 Thumbs.db
@@ -12,3 +13,6 @@ Thumbs.db
 coverage/
 dist/
 *.log
+__pycache__/
+*.py[cod]
+*.blend[0-9]

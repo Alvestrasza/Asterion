@@ -1,0 +1,286 @@
+{
+  "asset": "public/assets/3d/fairy/fairy-sculpt-v002.glb",
+  "sha256": "376E836BE470E12FDD290DC913898D1C6A439C3D53F258F8F4B0E53AD657F309",
+  "master_sha256": "03EBF4694E628FA26DF232006260865BCFC40D49A108B7880F9F82461D4146ED",
+  "blender": "5.2.1 LTS",
+  "bytes": 15148892,
+  "reopened_master_meshes": 1035,
+  "reopened_master_clips": [
+    "blink",
+    "eat",
+    "happy",
+    "idle",
+    "pet_reaction",
+    "play",
+    "sleep",
+    "wake",
+    "walk"
+  ],
+  "vertices": 766139,
+  "triangles": 1426998,
+  "bones": 12,
+  "materials": 19,
+  "draw_calls": 19,
+  "span": [
+    3.921875,
+    2.037109375,
+    4.394043445587158
+  ],
+  "weighted_groups": {
+    "body": 186203,
+    "neck": 9146,
+    "head": 317384,
+    "lid.R": 6736,
+    "leg.R": 43453,
+    "arm.R": 47724,
+    "lid.L": 6736,
+    "leg.L": 43453,
+    "arm.L": 47724,
+    "wing.R": 28790,
+    "wing.L": 28790
+  },
+  "animation_samples": {
+    "idle": [
+      {
+        "frame": 1,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 31,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 61,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 91,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 121,
+        "finite_bone_matrices": true
+      }
+    ],
+    "blink": [
+      {
+        "frame": 1,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 5,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 10,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 14,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 19,
+        "finite_bone_matrices": true
+      }
+    ],
+    "happy": [
+      {
+        "frame": 1,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 16,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 31,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 46,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 61,
+        "finite_bone_matrices": true
+      }
+    ],
+    "eat": [
+      {
+        "frame": 1,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 23,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 46,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 68,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 91,
+        "finite_bone_matrices": true
+      }
+    ],
+    "play": [
+      {
+        "frame": 1,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 21,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 41,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 61,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 81,
+        "finite_bone_matrices": true
+      }
+    ],
+    "pet_reaction": [
+      {
+        "frame": 1,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 20,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 38,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 57,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 76,
+        "finite_bone_matrices": true
+      }
+    ],
+    "sleep": [
+      {
+        "frame": 1,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 31,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 61,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 91,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 121,
+        "finite_bone_matrices": true
+      }
+    ],
+    "wake": [
+      {
+        "frame": 1,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 16,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 31,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 46,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 61,
+        "finite_bone_matrices": true
+      }
+    ],
+    "walk": [
+      {
+        "frame": 1,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 13,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 25,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 37,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 49,
+        "finite_bone_matrices": true
+      }
+    ]
+  },
+  "included_meshes": [
+    "asterion_sculpt_delivery"
+  ],
+  "excluded_armature_visualization_helpers": [
+    "Icosphere"
+  ],
+  "checks": {
+    "reopened_master_nine_clips": true,
+    "master_separate_editable_parts": true,
+    "one_authored_mesh": true,
+    "one_imported_skin": true,
+    "nine_authored_clips": true,
+    "nine_imported_clips": true,
+    "no_scene_cameras": true,
+    "no_scene_lights": true,
+    "no_image_projection": true,
+    "self_contained": true,
+    "volumetric_xyz": true,
+    "finite_vertices": true,
+    "all_vertices_weighted": true,
+    "normalized_weights": true,
+    "known_bones": true,
+    "maximum_four_weights": true,
+    "finite_nine_animation_samples": true,
+    "both_moving_eyelids": true,
+    "nonempty_mesh": true
+  },
+  "passed": true,
+  "renders": {
+    "hero": "assets/3d/reference/fairy/sculpt-v002/import-review/fairy-sculpt-hero.png",
+    "rear": "assets/3d/reference/fairy/sculpt-v002/import-review/fairy-sculpt-rear.png",
+    "blink": "assets/3d/reference/fairy/sculpt-v002/import-review/fairy-blink-sculpt-front.png"
+  },
+  "human_likeness_accepted": false,
+  "mobile_performance_accepted": false,
+  "animation_limit": "Gentle stylized presentation gestures; no biomechanical gait simulation.",
+  "publication_amendment": {
+    "id": "metadata-clean-2026-09-07",
+    "record": "assets/3d/publication/2026-09-07/amendment.json",
+    "original_document_sha256": "FA6135617291B10CB076FC580B265A23CBC8F4A0F387FE423D0A73AF1DB1FF68",
+    "authoring_record": "assets/3d/publication/2026-09-07/authoring-records/assets/3d/reference/fairy/sculpt-v002/import-validation.json",
+    "authoring_record_status": "exact-public-safe-original",
+    "notice": "Metadata-only publication derivative, not a rerun of the historical builder or validator. File digest and size bindings identify publication copies; all measured geometry, materials, rig, action, motion and acceptance evidence remains historical and unchanged. Consult the original authoring record and amendment binding log."
+  }
+}

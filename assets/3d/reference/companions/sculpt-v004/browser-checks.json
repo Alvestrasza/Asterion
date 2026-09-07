@@ -1,0 +1,39 @@
+{
+  "schema": "asterion-likeness-browser-review-v1",
+  "reviewed_on": "2026-09-06",
+  "surface": "local in-app Chromium browser",
+  "route": "/3d-preview",
+  "feature_flag_override": "development process only; repository default unchanged",
+  "method": "UI clicks followed by ready and equipment-state waits, with DOM evidence and screenshots",
+  "models": [
+    { "name": "Asterion", "version": "sculpt-v005", "ready": true, "visible_meshes_on_off_restored": [9, 0, 9] },
+    { "name": "Caelo", "version": "sculpt-v004", "ready": true, "visible_meshes_on_off_restored": [7, 0, 7] },
+    { "name": "Liora", "version": "sculpt-v004", "ready": true, "visible_meshes_on_off_restored": [11, 0, 11] },
+    { "name": "Nyra", "version": "sculpt-v004", "ready": true, "visible_meshes_on_off_restored": [6, 0, 6] },
+    { "name": "Fenn", "version": "sculpt-v004", "ready": true, "visible_meshes_on_off_restored": [3, 0, 3] },
+    { "name": "Brumo", "version": "sculpt-v004", "ready": true, "visible_meshes_on_off_restored": [10, 0, 10] },
+    { "name": "Selya", "version": "sculpt-v004", "ready": true, "visible_meshes_on_off_restored": [8, 0, 8] },
+    { "name": "Aelira", "version": "sculpt-v004", "ready": true, "visible_meshes_on_off_restored": [8, 0, 8] }
+  ],
+  "final_artifact_recheck": {
+    "reason": "Recheck the three regenerated folk deliveries after the final body-joint corrections and production build",
+    "fresh_tab": true,
+    "models": [
+      { "name": "Brumo", "glb_sha256": "C62C96117A29A7B4EC1CB5856DD05AE4F68D5552A17769F491F4DB6E70F0FA8F", "ready": true, "visible_meshes_on_off_restored": [10, 0, 10] },
+      { "name": "Selya", "glb_sha256": "8A4C45664A42C145F84E514752A85F6A857A8698C0B4C46ADC8163A7D4F1F0E4", "ready": true, "visible_meshes_on_off_restored": [8, 0, 8] },
+      { "name": "Aelira", "glb_sha256": "8B590B3FA577B408C7332C623D58D3E89B663DEA8A9CF5B7073E5049F47B5E38", "ready": true, "visible_meshes_on_off_restored": [8, 0, 8] }
+    ],
+    "preview_console_errors": 0,
+    "preview_console_warnings": 0,
+    "body_only_screenshots_inspected": ["Brumo", "Aelira"],
+    "handoff_view": { "figure": "Caelo", "camera": "hero", "clip": "idle", "equipment": "visible" }
+  },
+  "camera_controls_checked": ["front", "side", "rear", "hero"],
+  "clip_controls_checked": ["walk", "idle"],
+  "reduced_motion": { "figure": "Aelira", "original_2d_visible": true, "returned_to_3d_ready": true },
+  "preview_console_errors": 0,
+  "preview_warning": "Nonfatal graphics-driver shader precision warning",
+  "main_page": { "login_screen_reached": true, "configuration_error": "Auth.js MissingSecret", "authenticated_action_tested": false },
+  "mobile_performance_accepted": false,
+  "human_likeness_accepted": false
+}

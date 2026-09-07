@@ -50,6 +50,7 @@ node --version
 pnpm --version
 blender --version
 git lfs version
+git lfs install
 ```
 
 If `blender` is not on `PATH`, record its absolute executable path in local tooling configuration. Do not hard-code a workstation-specific Blender path into tracked source files.
@@ -59,13 +60,23 @@ If `blender` is not on `PATH`, record its absolute executable path in local tool
 Choose a data-drive path appropriate for the workstation:
 
 ```powershell
-New-Item -ItemType Directory -Force D:\projects | Out-Null
-Set-Location D:\projects
+$asterionProjects = '<data-drive-projects-directory>'
+New-Item -ItemType Directory -Force $asterionProjects | Out-Null
+Set-Location $asterionProjects
 git clone https://github.com/Alvestrasza/Asterion.git asterion
-Set-Location D:\projects\asterion
+Set-Location (Join-Path $asterionProjects 'asterion')
 git switch main
 git pull --ff-only
+git lfs pull
+git lfs fsck
 ```
+
+The repository now includes the versioned 3D collection. Install Git LFS before
+cloning and ensure it downloads real asset bytes, not only pointer files. The
+initial history is approximately 3 GB; allow extra local space for Git LFS's
+object cache and Blender work. Do not convert line endings in hash-bound asset
+builders or JSON receipts: their scoped `.gitattributes` rules preserve the
+exact authored bytes across Windows and Linux.
 
 Install only reproducible dependencies:
 
@@ -90,7 +101,7 @@ They are generated, architecture-sensitive, or already represented by Git histor
 
 1. Sign in to the ChatGPT desktop app with the intended account.
 2. Select Codex.
-3. Add `D:\projects\asterion` as a local project and make it the primary folder.
+3. Add the cloned `asterion` directory as a local project and make it the primary folder.
 4. Keep the sandbox enabled and use targeted approvals for external access.
 5. Start a new focused chat and ask it to read `AGENTS.md` plus `docs/PROJECT-STATUS.md` before changing files.
 
@@ -114,19 +125,19 @@ Never send private files through GitHub issues, pull requests, chat messages, or
 
 ## 6. Prepare Git LFS for 3D assets
 
-Enable LFS before committing the first large binary source file:
+LFS rules for Blender/GLB files and generated reference media are already
+tracked. Initialize the local client and validate downloaded objects:
 
 ```powershell
 git lfs install
-git lfs track "*.blend"
-git lfs track "*.glb"
-git lfs track "*.fbx"
-git add .gitattributes
-git commit -m "chore: track 3D assets with Git LFS"
-git push origin main
+git lfs pull
+git lfs fsck
 ```
 
-Review repository storage and bandwidth limits before adding high-resolution textures or many binary revisions. Prefer compact source assets and remove unused generated exports before committing.
+Review repository storage and bandwidth limits before adding high-resolution
+textures or more binary revisions. Keep private candidates, caches and autosaves
+ignored. Preserve delivered historical inputs needed by manifests and tests;
+do not remove them as redundant exports. CI downloads LFS objects explicitly.
 
 ## 7. Move work between both computers
 

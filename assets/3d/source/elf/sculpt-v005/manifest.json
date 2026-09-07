@@ -1,0 +1,214 @@
+{
+  "schema": "asterion-face-only-v1",
+  "kind": "elf",
+  "name": "Aelira",
+  "version": "sculpt-v005",
+  "source_sha256": "42E8295DB02C5D3D8FED45E420B489087042FC0F0A744812D1A8AA0FDDB91797",
+  "model_sha256": "4500179BCD5D2C90B6F3A10679DFF9A52BB0BF4D84FC70F7530BBA2EB33352DE",
+  "reference_sha256": "DE8904FAF12031561B752E3A4590F09A2E9BA5E763804F7D83156CF414ECA417",
+  "triangles": 1582994,
+  "bytes": 16705796,
+  "bones": 10,
+  "clips": [
+    "idle",
+    "blink",
+    "happy",
+    "eat",
+    "play",
+    "pet_reaction",
+    "sleep",
+    "wake",
+    "walk"
+  ],
+  "draw_calls": 33,
+  "materials": 29,
+  "components": {
+    "body": {
+      "mesh": 1,
+      "skin": 0,
+      "triangles": 1414894,
+      "primitives": 25
+    },
+    "armor": {
+      "mesh": 0,
+      "skin": 0,
+      "triangles": 168100,
+      "primitives": 8
+    }
+  },
+  "blender": "5.2.1 LTS",
+  "human_likeness_accepted": false,
+  "mobile_performance_accepted": false,
+  "projection_used": false,
+  "paid_provider_used": false,
+  "package_status": "Local hash-checked Blender delivery; no game-dev canonical receipt.",
+  "animation_limit": "Original full action/rest/driver RNA unchanged; nine fresh GLB skin-matrix samples per clip. Original center-scale lids retained; no anatomical closure or collision-free motion claim.",
+  "likeness_limit": "Face-only sculpt interpreted from unchanged original artwork. Hidden angles inferred. Not a 100-percent likeness or human identity acceptance claim.",
+  "compression_lossless": false,
+  "source": "assets/3d/source/elf/sculpt-v005/elf-sculpt-v005.blend",
+  "model": "public/assets/3d/elf/elf-sculpt-v005.glb",
+  "reference": "assets/3d/reference/elf/sculpt-v005/original.png",
+  "validation": "assets/3d/reference/elf/sculpt-v005/validation.json",
+  "validation_sha256": "344E5B4C473B8598A7EA35075169A5BABE6EC098EFEAF01E09A159EA6AAADA32",
+  "input_sha256": {
+    "assets/3d/source/elf/sculpt-v004/elf-sculpt-v004.blend": "5CBD1DF3438FCC2518EF46325C3C3BF2FE687AB7A8C6768A1E9C442DED00177F",
+    "public/assets/3d/elf/elf-sculpt-v004.glb": "8B590B3FA577B408C7332C623D58D3E89B663DEA8A9CF5B7073E5049F47B5E38",
+    "public/assets/companions/elf.png": "DE8904FAF12031561B752E3A4590F09A2E9BA5E763804F7D83156CF414ECA417",
+    "assets/3d/source/companions/sculpt-v001/common.py": "A6DF036A5B3F6FAA3C74740382998D829D45C9E2734D91A285F9369764C21F9E",
+    "assets/3d/source/asterion/sculpt-v001/build_sculpt.py": "9A81C430E8FD07CE520BBA554C78845A508F22E5FB89E524BF515D8BF8415621",
+    "assets/3d/source/asterion/sculpt-v001/rig_delivery.py": "8758D105E70AB5405F61A48A531154CC591EAC0D82B167788F1D0785A16CDFF0",
+    "assets/3d/source/asterion/sculpt-v002/validate_refinement.py": "8C541F26C2D2546FB142988D10F07EDF51C891D1C81F02065C7B62CE01F78EFD",
+    "assets/3d/source/asterion/sculpt-v003/build_head_study.py": "A3B22323201D30A3BD9459985F8F7741A44545010A84D27CC5912E1C8A85E0F2",
+    "assets/3d/source/asterion/sculpt-v004/export_equipment.py": "C805B4740463215AE5CC9D314D14966F2BDF91A00FB82D05054BE0BBB8ED930B",
+    "assets/3d/source/companions/sculpt-v004/build.py": "C6FBCA99D1117722B07933B90795DBFFA37DC22B399ECD6B339EAFF3C063A6BD",
+    "assets/3d/source/companions/sculpt-v004/refinements.py": "6247CEA1AE30B56B6FD3D23DEDEF1DD99BCD8A7B9158AA0576340AA2B8F89BCF",
+    "assets/3d/source/companions/sculpt-v004/export_equipment.py": "5EDB676641BE58BDE353213F6DA4F7F7662B76A08F586D0E7DADA7006AF343CF",
+    "assets/3d/source/companions/sculpt-v005/build.py": "2CD3C4D70E953C8BDBDDD01157745474A213968016F12BC3494BE8FD99C793BE",
+    "assets/3d/source/companions/sculpt-v005/contract.py": "F6829E7B890BA3B1108700B847CBB2C4CD532042233BD8049CC26B3A8522984E",
+    "assets/3d/source/companions/sculpt-v005/guards.py": "C98E5A25B553C56D016324F1AADE2669BEA28F3B2E73F5D883A74EBAEB599EF4",
+    "assets/3d/source/companions/sculpt-v005/folk_faces.py": "26BB92F8C85328CC8FBA0DA15BAACE4F8B0047AE5A00917FCD872204154A257A"
+  },
+  "renders": {
+    "face-hero": {
+      "file": "assets/3d/reference/elf/sculpt-v005/source/elf-face-hero.png",
+      "sha256": "15EA7C871E12ADB176900F692865A30BD96F26A49611EB877CEC95B8D43FD244",
+      "clip": "idle",
+      "frame": 1
+    },
+    "face-front": {
+      "file": "assets/3d/reference/elf/sculpt-v005/source/elf-face-front.png",
+      "sha256": "E1BC6604119F1F83C0E15DD2ADA1E8EB018ABA42F369F762C8C8304B3DC1CDA7",
+      "clip": "idle",
+      "frame": 1
+    },
+    "face-side": {
+      "file": "assets/3d/reference/elf/sculpt-v005/source/elf-face-side.png",
+      "sha256": "42CF16E163B768CDC397B6577848C1DEC5FB9A2E7AC5DAA873CED30B4EC49F7C",
+      "clip": "idle",
+      "frame": 1
+    },
+    "blink-early": {
+      "file": "assets/3d/reference/elf/sculpt-v005/source/elf-blink-early.png",
+      "sha256": "46680144673F73C5C0717DEBD1EAFA3654BE71244EC1B0EF2968423D8BCAD0BB",
+      "clip": "blink",
+      "frame": 5
+    },
+    "blink-partial": {
+      "file": "assets/3d/reference/elf/sculpt-v005/source/elf-blink-partial.png",
+      "sha256": "FA9924B9394FC75D40E9657603F59F080F7EC031C4220D8CC290392606C43654",
+      "clip": "blink",
+      "frame": 7
+    },
+    "blink-closed": {
+      "file": "assets/3d/reference/elf/sculpt-v005/source/elf-blink-closed.png",
+      "sha256": "B1E20E6EBF40ABEE9ADD088CF6C553005B31E5453F949FD7F42BE5150DA64482",
+      "clip": "blink",
+      "frame": 10
+    },
+    "hero": {
+      "file": "assets/3d/reference/elf/sculpt-v005/source/elf-hero.png",
+      "sha256": "E0E337B0551DAAE1DB83B03518E997471BC910009D065160B37A0A1F1E2F3797",
+      "clip": "idle",
+      "frame": 1
+    },
+    "rear": {
+      "file": "assets/3d/reference/elf/sculpt-v005/source/elf-rear.png",
+      "sha256": "F5590C9AFF56F5C63044673941EF81A9619A21C28F5D041ADA35B5A1FAA0023F",
+      "clip": "idle",
+      "frame": 1
+    },
+    "body-hero": {
+      "file": "assets/3d/reference/elf/sculpt-v005/source/elf-body-hero.png",
+      "sha256": "105F0EBAB48EF6981DF41504000A928E3CDEDBD6054D6E99524BF86F4C75F57B",
+      "clip": "idle",
+      "frame": 1
+    }
+  },
+  "import_renders": {
+    "face-hero": {
+      "file": "assets/3d/reference/elf/sculpt-v005/import/elf-face-hero.png",
+      "sha256": "CEAC6D4928DEF8DA29C5201B489D7A348353ACE754AFFEDCCD1842B3DD3B64EB",
+      "clip": "idle",
+      "frame": 1
+    },
+    "face-front": {
+      "file": "assets/3d/reference/elf/sculpt-v005/import/elf-face-front.png",
+      "sha256": "A5E2B48C29116AF54CF0CE8B5D9905CEEF60B0AA9B3B5A0E99EA53282219A2CC",
+      "clip": "idle",
+      "frame": 1
+    },
+    "face-side": {
+      "file": "assets/3d/reference/elf/sculpt-v005/import/elf-face-side.png",
+      "sha256": "B8171C98B2B51D03752369105C0E77B0B8E602096A10AF7A9D67620716750E02",
+      "clip": "idle",
+      "frame": 1
+    },
+    "blink-early": {
+      "file": "assets/3d/reference/elf/sculpt-v005/import/elf-blink-early.png",
+      "sha256": "E4C3A5C4AA895F33FF9934459E9FCDC82D979637606DD9932B0BE43CD0D7D318",
+      "clip": "blink",
+      "frame": 5
+    },
+    "blink-partial": {
+      "file": "assets/3d/reference/elf/sculpt-v005/import/elf-blink-partial.png",
+      "sha256": "9C61777DFBE32FF199F89874AFA9D6A701E3982E4BBE29E87E6B1FC8D6DC313D",
+      "clip": "blink",
+      "frame": 7
+    },
+    "blink-closed": {
+      "file": "assets/3d/reference/elf/sculpt-v005/import/elf-blink-closed.png",
+      "sha256": "0B52097E7FFBD788CE41085E83034D94708FB9D1F20C08DAB32DEDECAD44414F",
+      "clip": "blink",
+      "frame": 10
+    },
+    "hero": {
+      "file": "assets/3d/reference/elf/sculpt-v005/import/elf-hero.png",
+      "sha256": "9D2C8BAEB806C6F95A2E025F4BDCAFFF67737B170A0DC1F68410906451C4B84A",
+      "clip": "idle",
+      "frame": 1
+    },
+    "body-hero": {
+      "file": "assets/3d/reference/elf/sculpt-v005/import/elf-body-hero.png",
+      "sha256": "710428C77B537D5DEB21CF6493F562541901A834963CBF51DB6E5468420D9C43",
+      "clip": "idle",
+      "frame": 1
+    }
+  },
+  "baseline_renders": {
+    "face-hero": {
+      "file": "assets/3d/reference/elf/sculpt-v005/baseline/elf-face-hero.png",
+      "sha256": "73A194AA5222530F219A09DB5650EBF8B3F102DC6A4916DE85E26A04ACAEF32A",
+      "clip": "idle",
+      "frame": 1
+    },
+    "face-front": {
+      "file": "assets/3d/reference/elf/sculpt-v005/baseline/elf-face-front.png",
+      "sha256": "CD0D040CF7E73AAA39604930E1B39A6686135CF45031A9AD328F7A97C3E4EC6C",
+      "clip": "idle",
+      "frame": 1
+    },
+    "face-side": {
+      "file": "assets/3d/reference/elf/sculpt-v005/baseline/elf-face-side.png",
+      "sha256": "AB6C16A22669AF893E333A5058D9F013A5B3807E5B21ABE6F3BDA58773AB1181",
+      "clip": "idle",
+      "frame": 1
+    }
+  },
+  "face_scope_only": true,
+  "nonface_unchanged": true,
+  "animations_unchanged": true,
+  "equipment_separate": true,
+  "fresh_import_passed": true,
+  "notes": "Facial-only sculpt, coherent pivot-fixed ocular arches, deeper broad irises and pupils, isolated warm skin value fields. Original body, joint shells, hair, ears, outfit and every action retained.",
+  "edited_objects": 81,
+  "protected_object_count": 258,
+  "protected_material_count": 20,
+  "publication_amendment": {
+    "id": "metadata-clean-2026-09-07",
+    "record": "assets/3d/publication/2026-09-07/amendment.json",
+    "original_document_sha256": "6FD13304A05165B2F1E13E04BB852657E2BEDA7DA8D4B64ADD4D34D6B73A12B6",
+    "authoring_record": "assets/3d/publication/2026-09-07/authoring-records/assets/3d/source/elf/sculpt-v005/manifest.json",
+    "authoring_record_status": "exact-public-safe-original",
+    "notice": "Metadata-only publication derivative, not a rerun of the historical builder or validator. File digest and size bindings identify publication copies; all measured geometry, materials, rig, action, motion and acceptance evidence remains historical and unchanged. Consult the original authoring record and amendment binding log."
+  }
+}

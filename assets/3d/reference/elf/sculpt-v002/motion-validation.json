@@ -1,0 +1,231 @@
+{
+  "source_sha256": "ABDC383BE0FFB1F480092B3203A161CF9867E96AFFE3D3E16D7261DDF12DF6CA",
+  "blender": "5.2.1 LTS",
+  "fps_at_import": 30,
+  "authored_clips": [
+    "blink",
+    "eat",
+    "happy",
+    "idle",
+    "pet_reaction",
+    "play",
+    "sleep",
+    "wake",
+    "walk"
+  ],
+  "imported_frame_ranges": {
+    "blink": [
+      0.999755859375,
+      18.9990234375
+    ],
+    "eat": [
+      0.999755859375,
+      90.99609375
+    ],
+    "happy": [
+      0.999755859375,
+      60.99609375
+    ],
+    "idle": [
+      0.999755859375,
+      121.0546875
+    ],
+    "pet_reaction": [
+      0.999755859375,
+      75.99609375
+    ],
+    "play": [
+      0.999755859375,
+      80.9765625
+    ],
+    "sleep": [
+      0.999755859375,
+      121.0546875
+    ],
+    "wake": [
+      0.999755859375,
+      60.99609375
+    ],
+    "walk": [
+      0.999755859375,
+      49.013671875
+    ]
+  },
+  "included_meshes": [
+    "asterion_sculpt_delivery"
+  ],
+  "excluded_armature_visualization_helpers": [
+    "Icosphere"
+  ],
+  "samples": [
+    {
+      "evaluated_meshes": 1,
+      "evaluated_vertices": 770305,
+      "nonfinite_vertices": 0,
+      "finite": true,
+      "bounds_min": [
+        -0.955078125,
+        -0.5703125,
+        -0.0018529174849390984
+      ],
+      "bounds_max": [
+        0.955078125,
+        0.5927734375,
+        3.681211233139038
+      ],
+      "clip": "idle",
+      "frame": 1
+    },
+    {
+      "evaluated_meshes": 1,
+      "evaluated_vertices": 770305,
+      "nonfinite_vertices": 0,
+      "finite": true,
+      "bounds_min": [
+        -0.955078125,
+        -0.5703125,
+        -0.0018529174849390984
+      ],
+      "bounds_max": [
+        0.955078125,
+        0.5927734375,
+        3.681211233139038
+      ],
+      "clip": "blink",
+      "frame": 10
+    },
+    {
+      "evaluated_meshes": 1,
+      "evaluated_vertices": 770305,
+      "nonfinite_vertices": 0,
+      "finite": true,
+      "bounds_min": [
+        -0.9550384879112244,
+        -0.5703125,
+        -0.001820373348891735
+      ],
+      "bounds_max": [
+        0.9551190137863159,
+        0.5927734375,
+        3.6812524795532227
+      ],
+      "clip": "happy",
+      "frame": 31
+    },
+    {
+      "evaluated_meshes": 1,
+      "evaluated_vertices": 770305,
+      "nonfinite_vertices": 0,
+      "finite": true,
+      "bounds_min": [
+        -0.955078125,
+        -0.5921539068222046,
+        -0.0018529174849390984
+      ],
+      "bounds_max": [
+        0.955078125,
+        0.5927734375,
+        3.681802272796631
+      ],
+      "clip": "eat",
+      "frame": 46
+    },
+    {
+      "evaluated_meshes": 1,
+      "evaluated_vertices": 770305,
+      "nonfinite_vertices": 0,
+      "finite": true,
+      "bounds_min": [
+        -0.955078125,
+        -0.6122715473175049,
+        -0.0018529174849390984
+      ],
+      "bounds_max": [
+        0.955078125,
+        0.5927734375,
+        3.680633306503296
+      ],
+      "clip": "sleep",
+      "frame": 61
+    },
+    {
+      "evaluated_meshes": 1,
+      "evaluated_vertices": 770305,
+      "nonfinite_vertices": 0,
+      "finite": true,
+      "bounds_min": [
+        -0.955078125,
+        -0.5703125,
+        -0.011558160185813904
+      ],
+      "bounds_max": [
+        0.955078125,
+        0.5927734375,
+        3.681211233139038
+      ],
+      "clip": "walk",
+      "frame": 13
+    }
+  ],
+  "loop_comparisons": {
+    "idle": {
+      "start_frame": 0.999755859375,
+      "end_frame": 121.0546875,
+      "same_evaluated_vertex_layout": true,
+      "finite_start_and_end": true,
+      "compared_vertices": 770305,
+      "max_vertex_distance": 0.0,
+      "per_mesh_max_vertex_distance": {
+        "asterion_sculpt_delivery": 0.0
+      },
+      "tolerance_world_units": 0.0001,
+      "within_tolerance": true
+    },
+    "sleep": {
+      "start_frame": 0.999755859375,
+      "end_frame": 121.0546875,
+      "same_evaluated_vertex_layout": true,
+      "finite_start_and_end": true,
+      "compared_vertices": 770305,
+      "max_vertex_distance": 0.0,
+      "per_mesh_max_vertex_distance": {
+        "asterion_sculpt_delivery": 0.0
+      },
+      "tolerance_world_units": 0.0001,
+      "within_tolerance": true
+    },
+    "walk": {
+      "start_frame": 0.999755859375,
+      "end_frame": 49.013671875,
+      "same_evaluated_vertex_layout": true,
+      "finite_start_and_end": true,
+      "compared_vertices": 770305,
+      "max_vertex_distance": 0.0,
+      "per_mesh_max_vertex_distance": {
+        "asterion_sculpt_delivery": 0.0
+      },
+      "tolerance_world_units": 0.0001,
+      "within_tolerance": true
+    }
+  },
+  "checks": {
+    "nonempty_evaluated_meshes": true,
+    "all_six_full_mesh_samples_finite": true,
+    "idle_sleep_walk_vertex_loops": true
+  },
+  "passed": true,
+  "diagnostic_scope": "Full evaluated mesh finiteness at six frames and loop endpoint vertex equality only.",
+  "collision_free_verified": false,
+  "ground_contact_verified": false,
+  "human_visual_review_required": true,
+  "asset": "public/assets/3d/elf/elf-sculpt-v002.glb",
+  "renders": {
+    "idle": "assets/3d/reference/elf/sculpt-v002/motion/elf-idle-f001-sculpt-hero.png",
+    "blink": "assets/3d/reference/elf/sculpt-v002/motion/elf-blink-f010-sculpt-hero.png",
+    "happy": "assets/3d/reference/elf/sculpt-v002/motion/elf-happy-f031-sculpt-hero.png",
+    "eat": "assets/3d/reference/elf/sculpt-v002/motion/elf-eat-f046-sculpt-hero.png",
+    "sleep": "assets/3d/reference/elf/sculpt-v002/motion/elf-sleep-f061-sculpt-hero.png",
+    "walk": "assets/3d/reference/elf/sculpt-v002/motion/elf-walk-f013-sculpt-hero.png"
+  },
+  "contact_sheet": "assets/3d/reference/elf/sculpt-v002/motion/elf-v002-motion-contact-sheet.png"
+}

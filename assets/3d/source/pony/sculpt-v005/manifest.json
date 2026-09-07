@@ -1,0 +1,214 @@
+{
+  "schema": "asterion-face-only-v1",
+  "kind": "pony",
+  "name": "Caelo",
+  "version": "sculpt-v005",
+  "source_sha256": "9AE1DD85B45659EBB992B39989A0665A8B7A98D59F36152F85D404D29637E9DF",
+  "model_sha256": "E39F8008FA91287A72BF0F833EF1968DA7A36DA53E067AC43400C5F956CF5DDA",
+  "reference_sha256": "9D059157FECF1C2905F9C1EB56A460AA45995DDD8B924C1E854827C73EFFD118",
+  "triangles": 1202448,
+  "bytes": 13008600,
+  "bones": 13,
+  "clips": [
+    "idle",
+    "blink",
+    "happy",
+    "eat",
+    "play",
+    "pet_reaction",
+    "sleep",
+    "wake",
+    "walk"
+  ],
+  "draw_calls": 20,
+  "materials": 20,
+  "components": {
+    "body": {
+      "mesh": 1,
+      "skin": 0,
+      "triangles": 1147916,
+      "primitives": 13
+    },
+    "armor": {
+      "mesh": 0,
+      "skin": 0,
+      "triangles": 54532,
+      "primitives": 7
+    }
+  },
+  "blender": "5.2.1 LTS",
+  "human_likeness_accepted": false,
+  "mobile_performance_accepted": false,
+  "projection_used": false,
+  "paid_provider_used": false,
+  "package_status": "Local hash-checked Blender delivery; no game-dev canonical receipt.",
+  "animation_limit": "Original full action/rest/driver RNA unchanged; nine fresh GLB skin-matrix samples per clip. Original center-scale lids retained; no anatomical closure or collision-free motion claim.",
+  "likeness_limit": "Face-only sculpt interpreted from unchanged original artwork. Hidden angles inferred. Not a 100-percent likeness or human identity acceptance claim.",
+  "compression_lossless": false,
+  "source": "assets/3d/source/pony/sculpt-v005/pony-sculpt-v005.blend",
+  "model": "public/assets/3d/pony/pony-sculpt-v005.glb",
+  "reference": "assets/3d/reference/pony/sculpt-v005/original.png",
+  "validation": "assets/3d/reference/pony/sculpt-v005/validation.json",
+  "validation_sha256": "87B124797172A7C4E4E7C29A6AA165B106AC76B5CAA32C83AAA59AE5ED740490",
+  "input_sha256": {
+    "assets/3d/source/pony/sculpt-v004/pony-sculpt-v004.blend": "93FAA32D529E27590E131A087744BAFB9A20C3D5E24B1E8596123AB8536588EB",
+    "public/assets/3d/pony/pony-sculpt-v004.glb": "ED7911A8433E4C2F35BAFB987120CAFC99E87361FA4E2E3F10E0AD85F42A2784",
+    "public/assets/companions/pony.png": "9D059157FECF1C2905F9C1EB56A460AA45995DDD8B924C1E854827C73EFFD118",
+    "assets/3d/source/companions/sculpt-v001/common.py": "A6DF036A5B3F6FAA3C74740382998D829D45C9E2734D91A285F9369764C21F9E",
+    "assets/3d/source/asterion/sculpt-v001/build_sculpt.py": "9A81C430E8FD07CE520BBA554C78845A508F22E5FB89E524BF515D8BF8415621",
+    "assets/3d/source/asterion/sculpt-v001/rig_delivery.py": "8758D105E70AB5405F61A48A531154CC591EAC0D82B167788F1D0785A16CDFF0",
+    "assets/3d/source/asterion/sculpt-v002/validate_refinement.py": "8C541F26C2D2546FB142988D10F07EDF51C891D1C81F02065C7B62CE01F78EFD",
+    "assets/3d/source/asterion/sculpt-v003/build_head_study.py": "A3B22323201D30A3BD9459985F8F7741A44545010A84D27CC5912E1C8A85E0F2",
+    "assets/3d/source/asterion/sculpt-v004/export_equipment.py": "C805B4740463215AE5CC9D314D14966F2BDF91A00FB82D05054BE0BBB8ED930B",
+    "assets/3d/source/companions/sculpt-v004/build.py": "C6FBCA99D1117722B07933B90795DBFFA37DC22B399ECD6B339EAFF3C063A6BD",
+    "assets/3d/source/companions/sculpt-v004/refinements.py": "6247CEA1AE30B56B6FD3D23DEDEF1DD99BCD8A7B9158AA0576340AA2B8F89BCF",
+    "assets/3d/source/companions/sculpt-v004/export_equipment.py": "5EDB676641BE58BDE353213F6DA4F7F7662B76A08F586D0E7DADA7006AF343CF",
+    "assets/3d/source/companions/sculpt-v005/build.py": "2CD3C4D70E953C8BDBDDD01157745474A213968016F12BC3494BE8FD99C793BE",
+    "assets/3d/source/companions/sculpt-v005/contract.py": "F6829E7B890BA3B1108700B847CBB2C4CD532042233BD8049CC26B3A8522984E",
+    "assets/3d/source/companions/sculpt-v005/guards.py": "C98E5A25B553C56D016324F1AADE2669BEA28F3B2E73F5D883A74EBAEB599EF4",
+    "assets/3d/source/companions/sculpt-v005/equine_lapine_faces.py": "BE87AB1CFC52975B862EA5A19107F68B20D4578BA441E53FC3D739105C3CDBEE"
+  },
+  "renders": {
+    "face-hero": {
+      "file": "assets/3d/reference/pony/sculpt-v005/source/pony-face-hero.png",
+      "sha256": "1B2C825B283CB14380E463FC0E1139265F61B94FFCB8FFD1D552323184A1CC57",
+      "clip": "idle",
+      "frame": 1
+    },
+    "face-front": {
+      "file": "assets/3d/reference/pony/sculpt-v005/source/pony-face-front.png",
+      "sha256": "FEC7A9895D1DB58EB6BB619CCEE13636954B414F788152C82AB0EDC8139A1115",
+      "clip": "idle",
+      "frame": 1
+    },
+    "face-side": {
+      "file": "assets/3d/reference/pony/sculpt-v005/source/pony-face-side.png",
+      "sha256": "1CB6366C2F605E7796650E1C5E7B34324A586EDE249C0678D18FBA92235BEE8F",
+      "clip": "idle",
+      "frame": 1
+    },
+    "blink-early": {
+      "file": "assets/3d/reference/pony/sculpt-v005/source/pony-blink-early.png",
+      "sha256": "83EF29761C30394ABDE44356D6CE7B136B00C60DDE8C6564E046E2BFC4E387BC",
+      "clip": "blink",
+      "frame": 5
+    },
+    "blink-partial": {
+      "file": "assets/3d/reference/pony/sculpt-v005/source/pony-blink-partial.png",
+      "sha256": "00DC80D4FF16AA43AD65220CD8FDC0848E12A3A963194E8F297B7AAEBF2162B4",
+      "clip": "blink",
+      "frame": 7
+    },
+    "blink-closed": {
+      "file": "assets/3d/reference/pony/sculpt-v005/source/pony-blink-closed.png",
+      "sha256": "77CCD0ECA5528C3B038DB50B66F68607095306C012B2A8C9F21A61D073414868",
+      "clip": "blink",
+      "frame": 10
+    },
+    "hero": {
+      "file": "assets/3d/reference/pony/sculpt-v005/source/pony-hero.png",
+      "sha256": "484EB031F46721531107D4D05836859AC46B78905955BD62419DDA2399D757DA",
+      "clip": "idle",
+      "frame": 1
+    },
+    "rear": {
+      "file": "assets/3d/reference/pony/sculpt-v005/source/pony-rear.png",
+      "sha256": "36AC6B4744C5041F6BEEFE34E072B59C0D539D4A8A66BFB67AEF45EAF66873F3",
+      "clip": "idle",
+      "frame": 1
+    },
+    "body-hero": {
+      "file": "assets/3d/reference/pony/sculpt-v005/source/pony-body-hero.png",
+      "sha256": "5214624546096FFE972A8B72133FB67433B5E3A8EAFBDD472261820E6CA137FD",
+      "clip": "idle",
+      "frame": 1
+    }
+  },
+  "import_renders": {
+    "face-hero": {
+      "file": "assets/3d/reference/pony/sculpt-v005/import/pony-face-hero.png",
+      "sha256": "2AED8BBFAF2DFFAB673576E52C7C62B00442D2EB1CEB065F155308AAC37DD68D",
+      "clip": "idle",
+      "frame": 1
+    },
+    "face-front": {
+      "file": "assets/3d/reference/pony/sculpt-v005/import/pony-face-front.png",
+      "sha256": "94E85B5DA98CC72CE4B47F956831BA35B51E57C4758D588369E5489B6462085D",
+      "clip": "idle",
+      "frame": 1
+    },
+    "face-side": {
+      "file": "assets/3d/reference/pony/sculpt-v005/import/pony-face-side.png",
+      "sha256": "92ABD842A899E35559B985E422442D1E9EB91E58E2953193C038FCF95F87D77F",
+      "clip": "idle",
+      "frame": 1
+    },
+    "blink-early": {
+      "file": "assets/3d/reference/pony/sculpt-v005/import/pony-blink-early.png",
+      "sha256": "2F6EEEB84530C7B2C0424FCAB69EAED5E8865F618B0463137E96A3DB36AB6B63",
+      "clip": "blink",
+      "frame": 5
+    },
+    "blink-partial": {
+      "file": "assets/3d/reference/pony/sculpt-v005/import/pony-blink-partial.png",
+      "sha256": "2D6BED7A026890316E2E514541B1290649C7BE7F51DE209D3E5B2C20F7DC9FDF",
+      "clip": "blink",
+      "frame": 7
+    },
+    "blink-closed": {
+      "file": "assets/3d/reference/pony/sculpt-v005/import/pony-blink-closed.png",
+      "sha256": "0A457C4F73C572D885CF3799FFBD4B1258709903E1C4D9C268509FB15817E30D",
+      "clip": "blink",
+      "frame": 10
+    },
+    "hero": {
+      "file": "assets/3d/reference/pony/sculpt-v005/import/pony-hero.png",
+      "sha256": "FE03BBCDF87A1419F9303657CDF6B88D73E6ABA4BC6B4AF3A39410DB96D0EAD9",
+      "clip": "idle",
+      "frame": 1
+    },
+    "body-hero": {
+      "file": "assets/3d/reference/pony/sculpt-v005/import/pony-body-hero.png",
+      "sha256": "E8FF8C69A47DF827B8FD52BEB9AA4E97828F4317E44EE61685D8546B3BB88494",
+      "clip": "idle",
+      "frame": 1
+    }
+  },
+  "baseline_renders": {
+    "face-hero": {
+      "file": "assets/3d/reference/pony/sculpt-v005/baseline/pony-face-hero.png",
+      "sha256": "EA988FC8BABBC8BE586799CE2A3791F9BD47E3422110789F2F27397EB9EFC1BD",
+      "clip": "idle",
+      "frame": 1
+    },
+    "face-front": {
+      "file": "assets/3d/reference/pony/sculpt-v005/baseline/pony-face-front.png",
+      "sha256": "1E14F345DAA7F53701589949B9B34FE861340D136AFDEFFBFBA8C6D76DFD0E7A",
+      "clip": "idle",
+      "frame": 1
+    },
+    "face-side": {
+      "file": "assets/3d/reference/pony/sculpt-v005/baseline/pony-face-side.png",
+      "sha256": "627D6A2AE2C21C9A458E455F8103C2174E0DE0199B2FFBD16933CA21DA7F04C1",
+      "clip": "idle",
+      "frame": 1
+    }
+  },
+  "face_scope_only": true,
+  "nonface_unchanged": true,
+  "animations_unchanged": true,
+  "equipment_separate": true,
+  "fresh_import_passed": true,
+  "notes": "Face-only recessed arched eyes, integrated orbital flesh, larger dark pupils, restrained corneal glints and species-specific muzzle expression.",
+  "edited_objects": 3,
+  "protected_object_count": 135,
+  "protected_material_count": 12,
+  "publication_amendment": {
+    "id": "metadata-clean-2026-09-07",
+    "record": "assets/3d/publication/2026-09-07/amendment.json",
+    "original_document_sha256": "7D22044420F95C322F2507F083866CC3849543DEBD5F93801E0FBC6EFC98AC2A",
+    "authoring_record": "assets/3d/publication/2026-09-07/authoring-records/assets/3d/source/pony/sculpt-v005/manifest.json",
+    "authoring_record_status": "exact-public-safe-original",
+    "notice": "Metadata-only publication derivative, not a rerun of the historical builder or validator. File digest and size bindings identify publication copies; all measured geometry, materials, rig, action, motion and acceptance evidence remains historical and unchanged. Consult the original authoring record and amendment binding log."
+  }
+}

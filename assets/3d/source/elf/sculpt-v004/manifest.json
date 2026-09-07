@@ -1,0 +1,125 @@
+{
+  "schema": "asterion-local-modular-companion-v1",
+  "kind": "elf",
+  "name": "Aelira",
+  "version": "sculpt-v004",
+  "source_sha256": "5CBD1DF3438FCC2518EF46325C3C3BF2FE687AB7A8C6768A1E9C442DED00177F",
+  "model_sha256": "8B590B3FA577B408C7332C623D58D3E89B663DEA8A9CF5B7073E5049F47B5E38",
+  "reference_sha256": "DE8904FAF12031561B752E3A4590F09A2E9BA5E763804F7D83156CF414ECA417",
+  "triangles": 1582994,
+  "bytes": 16679524,
+  "bones": 10,
+  "clips": [
+    "idle",
+    "blink",
+    "happy",
+    "eat",
+    "play",
+    "pet_reaction",
+    "sleep",
+    "wake",
+    "walk"
+  ],
+  "draw_calls": 28,
+  "materials": 24,
+  "components": {
+    "body": {
+      "mesh": 1,
+      "skin": 0,
+      "triangles": 1414894,
+      "primitives": 20
+    },
+    "armor": {
+      "mesh": 0,
+      "skin": 0,
+      "triangles": 168100,
+      "primitives": 8
+    }
+  },
+  "blender": "5.2.1 LTS",
+  "human_likeness_accepted": false,
+  "mobile_performance_accepted": false,
+  "projection_used": false,
+  "paid_provider_used": false,
+  "package_status": "Local hash-checked Blender delivery; no game-dev canonical receipt.",
+  "animation_limit": "Original source curves, keys, handles, rest rig and drivers compared exactly. Fresh GLBs compared at nine normalized times per clip with 2e-4 skin-matrix tolerance. Not a collision or gait acceptance.",
+  "likeness_limit": "Original approved artwork retained. Primary forms intentionally refined; unseen surfaces inferred. No exact 1:1 or human acceptance claim.",
+  "compression_lossless": false,
+  "source": "assets/3d/source/elf/sculpt-v004/elf-sculpt-v004.blend",
+  "model": "public/assets/3d/elf/elf-sculpt-v004.glb",
+  "reference": "assets/3d/reference/elf/sculpt-v004/original.png",
+  "validation": "assets/3d/reference/elf/sculpt-v004/validation.json",
+  "validation_sha256": "E70006C7D0788A015017E6EE72C4FDB22E9B23168E40F77389976447586C2874",
+  "fresh_import_passed": true,
+  "animations_unchanged": true,
+  "equipment_separate": true,
+  "input_sha256": {
+    "assets/3d/source/elf/sculpt-v003/elf-sculpt-v003.blend": "0A4B62740ED88E062C309CBD86F6B25B1152EF47A651A3783E3131F7F8D8C726",
+    "public/assets/3d/elf/elf-sculpt-v003.glb": "36BDDB043D5BF285D044B304689D40CB6C048C4C3CF9C36BB4B5BAD2B9276FBE",
+    "public/assets/companions/elf.png": "DE8904FAF12031561B752E3A4590F09A2E9BA5E763804F7D83156CF414ECA417",
+    "assets/3d/source/companions/sculpt-v004/build.py": "C6FBCA99D1117722B07933B90795DBFFA37DC22B399ECD6B339EAFF3C063A6BD",
+    "assets/3d/source/companions/sculpt-v004/refinements.py": "6247CEA1AE30B56B6FD3D23DEDEF1DD99BCD8A7B9158AA0576340AA2B8F89BCF",
+    "assets/3d/source/companions/sculpt-v004/export_equipment.py": "5EDB676641BE58BDE353213F6DA4F7F7662B76A08F586D0E7DADA7006AF343CF",
+    "assets/3d/source/companions/sculpt-v001/common.py": "A6DF036A5B3F6FAA3C74740382998D829D45C9E2734D91A285F9369764C21F9E",
+    "assets/3d/source/asterion/sculpt-v002/validate_refinement.py": "8C541F26C2D2546FB142988D10F07EDF51C891D1C81F02065C7B62CE01F78EFD",
+    "assets/3d/source/asterion/sculpt-v003/build_head_study.py": "A3B22323201D30A3BD9459985F8F7741A44545010A84D27CC5912E1C8A85E0F2",
+    "assets/3d/source/asterion/sculpt-v001/build_sculpt.py": "9A81C430E8FD07CE520BBA554C78845A508F22E5FB89E524BF515D8BF8415621",
+    "assets/3d/source/asterion/sculpt-v001/rig_delivery.py": "8758D105E70AB5405F61A48A531154CC591EAC0D82B167788F1D0785A16CDFF0",
+    "assets/3d/source/asterion/sculpt-v004/export_equipment.py": "C805B4740463215AE5CC9D314D14966F2BDF91A00FB82D05054BE0BBB8ED930B",
+    "assets/3d/source/companions/sculpt-v004/folk.py": "50D3791A106E1F83FDCD7429F082A9085285CAB850C98D7AB75D4DFCD0CEA9EF"
+  },
+  "renders": {
+    "hero": {
+      "file": "assets/3d/reference/elf/sculpt-v004/source/elf-hero.png",
+      "sha256": "BD3B524277A0121B2DBCCFE95504E1562C95A0B58374B9717B15B1859C6173AD"
+    },
+    "front": {
+      "file": "assets/3d/reference/elf/sculpt-v004/source/elf-front.png",
+      "sha256": "31CC21663997297C42E6A0374FAC80F40B57C085E43BEDF90D5E4057CDA2F7FA"
+    },
+    "side": {
+      "file": "assets/3d/reference/elf/sculpt-v004/source/elf-side.png",
+      "sha256": "CD63BF3F714CAE7F905A9D35B19BA66C1019AA6AEC406EC2DE57FBB6AA228BA6"
+    },
+    "rear": {
+      "file": "assets/3d/reference/elf/sculpt-v004/source/elf-rear.png",
+      "sha256": "E80D59531781F2A5005E9E835BB557B8DCD905BCC5046E807EC1827F170F4DCA"
+    },
+    "body-hero": {
+      "file": "assets/3d/reference/elf/sculpt-v004/source/elf-body-hero.png",
+      "sha256": "4EF0D2AED9AC6FBBFA38175DEF5AD3A3A98FF510B97E5E8F7B37FF81B0E52F37"
+    },
+    "body-side": {
+      "file": "assets/3d/reference/elf/sculpt-v004/source/elf-body-side.png",
+      "sha256": "7109EB0CC7BF80192B5C2D644CB7B539AF26D3727254A4F06A3A5E2423A8F24E"
+    }
+  },
+  "import_renders": {
+    "hero": {
+      "file": "assets/3d/reference/elf/sculpt-v004/import/elf-hero.png",
+      "sha256": "438A0CD1FD76A89DC21CD4F6095D8D66131CCB21E86F90F2886049731F4170F5"
+    },
+    "rear": {
+      "file": "assets/3d/reference/elf/sculpt-v004/import/elf-rear.png",
+      "sha256": "5195244579FB783B40042B84FDBDCA3CCFBBEE18A3E308B1AA2B2D1E4796B4B5"
+    },
+    "body-hero": {
+      "file": "assets/3d/reference/elf/sculpt-v004/import/elf-body-hero.png",
+      "sha256": "A116CE02474D68D760657C1BD1067981EBF3ECC5244613D7809B84964684035B"
+    },
+    "blink": {
+      "file": "assets/3d/reference/elf/sculpt-v004/import/elf-blink.png",
+      "sha256": "564060760FFA7DEB1CC6EE0FB66DDC275C6F75D6256AF9ADB38F710CBA86CFF5"
+    }
+  },
+  "notes": "Arched parted crown and flowing temple ringlets replace slab-like fringe; softer plait silhouette, narrower leaf-ear tips, coherent almond eye/socket/lid shape and deeper forest pigment; opaque tunic, trousers and boots retained.",
+  "edited_objects": 156,
+  "publication_amendment": {
+    "id": "metadata-clean-2026-09-07",
+    "record": "assets/3d/publication/2026-09-07/amendment.json",
+    "original_document_sha256": "457287C2F02086F2B4DAC0E35646D5024AF21E5894A03F1B0949AF10A4D0AEE2",
+    "authoring_record": "assets/3d/publication/2026-09-07/authoring-records/assets/3d/source/elf/sculpt-v004/manifest.json",
+    "authoring_record_status": "exact-public-safe-original",
+    "notice": "Metadata-only publication derivative, not a rerun of the historical builder or validator. File digest and size bindings identify publication copies; all measured geometry, materials, rig, action, motion and acceptance evidence remains historical and unchanged. Consult the original authoring record and amendment binding log."
+  }
+}

@@ -1,0 +1,372 @@
+{
+  "asset": "public/assets/3d/asterion/asterion-sculpt-v001.glb",
+  "sha256": "EE133C744A11C37FDC447963094E2C4F7614441FC6CDC5127960FFD7135FD165",
+  "file_size_bytes": 14130508,
+  "blender": "5.2.1 LTS",
+  "import_fps": 30,
+  "authored_meshes": 1,
+  "imported_meshes": 1,
+  "authored_primitives_draw_call_estimate": 18,
+  "materials": 18,
+  "extensions": [
+    "EXT_meshopt_compression",
+    "KHR_materials_clearcoat",
+    "KHR_materials_specular"
+  ],
+  "authored_cameras": 0,
+  "authored_lights": 0,
+  "imported_cameras": [],
+  "imported_lights": [],
+  "import_helpers_ignored": [
+    "Icosphere"
+  ],
+  "armatures": 1,
+  "bones": 22,
+  "authored_actions": [
+    "blink",
+    "eat",
+    "happy",
+    "idle",
+    "pet_reaction",
+    "play",
+    "sleep",
+    "wake",
+    "walk"
+  ],
+  "imported_actions": [
+    "blink",
+    "eat",
+    "happy",
+    "idle",
+    "pet_reaction",
+    "play",
+    "sleep",
+    "wake",
+    "walk"
+  ],
+  "geometry": {
+    "vertices": 784325,
+    "triangles": 1496672,
+    "unweighted_vertices": 0,
+    "nonfinite_vertices": 0,
+    "nonfinite_transforms": 0,
+    "negative_or_excess_weights": 0,
+    "vertices_over_four_influences": 0,
+    "unnormalized_vertices": 0,
+    "unknown_weight_groups": 0,
+    "max_influences": 4,
+    "max_weight_sum_error": 1.4901161193847656e-7,
+    "mesh_details": [
+      {
+        "name": "asterion_sculpt_delivery",
+        "vertices": 784325,
+        "triangles": 1496672,
+        "material_slots": 18,
+        "unnormalized_vertices": 0
+      }
+    ],
+    "bounds": {
+      "min": [
+        -1.4999998807907104,
+        -2.156250476837158,
+        0.02538999542593956
+      ],
+      "max": [
+        1.4999998807907104,
+        3.2304680347442627,
+        5.80078125
+      ],
+      "span": [
+        2.999999761581421,
+        5.386718511581421,
+        5.77539125457406
+      ]
+    },
+    "paw_surfaces": {
+      "fore.paw.L": {
+        "vertices": 10833,
+        "weight_sum": 9285.810997992754,
+        "bounds": [
+          [
+            0.28125008940696716,
+            -1.7265625,
+            0.036132704466581345
+          ],
+          [
+            1.0390625,
+            -0.7207030653953552,
+            0.46191394329071045
+          ]
+        ],
+        "centroid": [
+          0.6600565792950396,
+          -1.3189070434245045,
+          0.21532272749473222
+        ]
+      },
+      "fore.paw.R": {
+        "vertices": 10832,
+        "weight_sum": 9285.470997959375,
+        "bounds": [
+          [
+            -1.0390625,
+            -1.7265625,
+            0.036132704466581345
+          ],
+          [
+            -0.28125008940696716,
+            -0.7197265625,
+            0.46191394329071045
+          ]
+        ],
+        "centroid": [
+          -0.66003893993994,
+          -1.3189040327428103,
+          0.2153150940803793
+        ]
+      },
+      "hind.paw.L": {
+        "vertices": 10667,
+        "weight_sum": 9098.204999417067,
+        "bounds": [
+          [
+            0.2812497913837433,
+            0.36279287934303284,
+            0.02538999542593956
+          ],
+          [
+            1.0390623807907104,
+            1.3125003576278687,
+            0.4619136154651642
+          ]
+        ],
+        "centroid": [
+          0.665127812340677,
+          0.7430121747978581,
+          0.21487749180693003
+        ]
+      },
+      "hind.paw.R": {
+        "vertices": 10666,
+        "weight_sum": 9098.077998995781,
+        "bounds": [
+          [
+            -1.0390623807907104,
+            0.36279287934303284,
+            0.02538999542593956
+          ],
+          [
+            -0.28124985098838806,
+            1.315429925918579,
+            0.4619136154651642
+          ]
+        ],
+        "centroid": [
+          -0.665145556863692,
+          0.7430237037713779,
+          0.21487236870382548
+        ]
+      }
+    }
+  },
+  "paw_checks": {
+    "fore.paw.L": true,
+    "fore.paw.R": true,
+    "hind.paw.L": true,
+    "hind.paw.R": true
+  },
+  "animation_checks": {
+    "blink": {
+      "frame_range": [
+        0.999755859375,
+        18.9990234375
+      ],
+      "sampled_frames": [
+        1,
+        10,
+        19
+      ],
+      "nonfinite_sampled_transforms": 0
+    },
+    "eat": {
+      "frame_range": [
+        0.999755859375,
+        90.99609375
+      ],
+      "sampled_frames": [
+        1,
+        46,
+        91
+      ],
+      "nonfinite_sampled_transforms": 0
+    },
+    "happy": {
+      "frame_range": [
+        0.999755859375,
+        60.99609375
+      ],
+      "sampled_frames": [
+        1,
+        31,
+        61
+      ],
+      "nonfinite_sampled_transforms": 0
+    },
+    "idle": {
+      "frame_range": [
+        0.999755859375,
+        121.0546875
+      ],
+      "sampled_frames": [
+        1,
+        61,
+        121
+      ],
+      "nonfinite_sampled_transforms": 0
+    },
+    "pet_reaction": {
+      "frame_range": [
+        0.999755859375,
+        75.99609375
+      ],
+      "sampled_frames": [
+        1,
+        38,
+        76
+      ],
+      "nonfinite_sampled_transforms": 0
+    },
+    "play": {
+      "frame_range": [
+        0.999755859375,
+        80.9765625
+      ],
+      "sampled_frames": [
+        1,
+        41,
+        81
+      ],
+      "nonfinite_sampled_transforms": 0
+    },
+    "sleep": {
+      "frame_range": [
+        0.999755859375,
+        121.0546875
+      ],
+      "sampled_frames": [
+        1,
+        61,
+        121
+      ],
+      "nonfinite_sampled_transforms": 0
+    },
+    "wake": {
+      "frame_range": [
+        0.999755859375,
+        60.99609375
+      ],
+      "sampled_frames": [
+        1,
+        31,
+        61
+      ],
+      "nonfinite_sampled_transforms": 0
+    },
+    "walk": {
+      "frame_range": [
+        0.999755859375,
+        49.013671875
+      ],
+      "sampled_frames": [
+        1,
+        25,
+        49
+      ],
+      "nonfinite_sampled_transforms": 0
+    }
+  },
+  "renders": {
+    "front": {
+      "path": "assets/3d/reference/asterion/sculpt-v001/import/asterion-sculpt-glb-import-front.png",
+      "clip": "idle",
+      "frame": 1,
+      "camera_position": [
+        0,
+        -14,
+        4.3
+      ],
+      "camera_target": [
+        0,
+        -0.15,
+        2.88
+      ],
+      "ortho_scale": 6.6
+    },
+    "hero": {
+      "path": "assets/3d/reference/asterion/sculpt-v001/import/asterion-sculpt-glb-import-hero.png",
+      "clip": "idle",
+      "frame": 1,
+      "camera_position": [
+        8,
+        -12,
+        5.8
+      ],
+      "camera_target": [
+        0,
+        0.25,
+        2.88
+      ],
+      "ortho_scale": 6.8
+    },
+    "blink": {
+      "path": "assets/3d/reference/asterion/sculpt-v001/import/asterion-sculpt-glb-import-blink.png",
+      "clip": "blink",
+      "frame": 10,
+      "camera_position": [
+        8,
+        -12,
+        5.8
+      ],
+      "camera_target": [
+        0,
+        0.25,
+        2.88
+      ],
+      "ortho_scale": 6.8
+    }
+  },
+  "render_settings": {
+    "engine": "CYCLES",
+    "device": "OPTIX",
+    "device_note": null,
+    "resolution": [
+      850,
+      850
+    ],
+    "samples": 40,
+    "denoising": true
+  },
+  "render_error": null,
+  "checks": {
+    "one_armature": true,
+    "twenty_two_bones": true,
+    "authored_nine_clips": true,
+    "imported_nine_clips": true,
+    "no_authored_cameras_or_lights": true,
+    "no_imported_cameras_or_lights": true,
+    "finite_geometry": true,
+    "finite_animation_samples": true,
+    "all_vertices_weighted": true,
+    "normalized_skinning": true,
+    "maximum_four_influences": true,
+    "known_deformation_groups": true,
+    "volumetric_bounds_x_y_z": true,
+    "four_separate_weighted_paw_surfaces": true,
+    "nonempty_triangle_geometry": true,
+    "three_import_evidence_renders": true
+  },
+  "passed": true,
+  "mobile_performance_accepted": false,
+  "warnings": [],
+  "path_base": "repository_root"
+}

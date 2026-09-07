@@ -1,0 +1,283 @@
+{
+  "asset": "public/assets/3d/orc/orc-sculpt-v002.glb",
+  "sha256": "413DF6B9A5EAAC09CF124F6069E3D0679DCFC5FD38A04E35505C39EE9090A5F1",
+  "master_sha256": "3BC38C0405A64AB07377904A2959BB4C4D05BD20DA1D4B7958A7D429AAB1E1BD",
+  "blender": "5.2.1 LTS",
+  "bytes": 13669416,
+  "reopened_master_meshes": 227,
+  "reopened_master_clips": [
+    "blink",
+    "eat",
+    "happy",
+    "idle",
+    "pet_reaction",
+    "play",
+    "sleep",
+    "wake",
+    "walk"
+  ],
+  "vertices": 658423,
+  "triangles": 1289652,
+  "bones": 10,
+  "materials": 21,
+  "draw_calls": 21,
+  "span": [
+    2.08984375,
+    1.435546875,
+    4.013916492462158
+  ],
+  "weighted_groups": {
+    "body": 85223,
+    "arm.R": 44785,
+    "leg.R": 40876,
+    "arm.L": 44785,
+    "leg.L": 40876,
+    "head": 383894,
+    "lid.R": 8992,
+    "lid.L": 8992
+  },
+  "animation_samples": {
+    "idle": [
+      {
+        "frame": 1,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 31,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 61,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 91,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 121,
+        "finite_bone_matrices": true
+      }
+    ],
+    "blink": [
+      {
+        "frame": 1,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 5,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 10,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 14,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 19,
+        "finite_bone_matrices": true
+      }
+    ],
+    "happy": [
+      {
+        "frame": 1,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 16,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 31,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 46,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 61,
+        "finite_bone_matrices": true
+      }
+    ],
+    "eat": [
+      {
+        "frame": 1,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 23,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 46,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 68,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 91,
+        "finite_bone_matrices": true
+      }
+    ],
+    "play": [
+      {
+        "frame": 1,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 21,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 41,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 61,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 81,
+        "finite_bone_matrices": true
+      }
+    ],
+    "pet_reaction": [
+      {
+        "frame": 1,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 20,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 38,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 57,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 76,
+        "finite_bone_matrices": true
+      }
+    ],
+    "sleep": [
+      {
+        "frame": 1,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 31,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 61,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 91,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 121,
+        "finite_bone_matrices": true
+      }
+    ],
+    "wake": [
+      {
+        "frame": 1,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 16,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 31,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 46,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 61,
+        "finite_bone_matrices": true
+      }
+    ],
+    "walk": [
+      {
+        "frame": 1,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 13,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 25,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 37,
+        "finite_bone_matrices": true
+      },
+      {
+        "frame": 49,
+        "finite_bone_matrices": true
+      }
+    ]
+  },
+  "included_meshes": [
+    "asterion_sculpt_delivery"
+  ],
+  "excluded_armature_visualization_helpers": [
+    "Icosphere"
+  ],
+  "checks": {
+    "reopened_master_nine_clips": true,
+    "master_separate_editable_parts": true,
+    "one_authored_mesh": true,
+    "one_imported_skin": true,
+    "nine_authored_clips": true,
+    "nine_imported_clips": true,
+    "no_scene_cameras": true,
+    "no_scene_lights": true,
+    "no_image_projection": true,
+    "self_contained": true,
+    "volumetric_xyz": true,
+    "finite_vertices": true,
+    "all_vertices_weighted": true,
+    "normalized_weights": true,
+    "known_bones": true,
+    "maximum_four_weights": true,
+    "finite_nine_animation_samples": true,
+    "both_moving_eyelids": true,
+    "nonempty_mesh": true
+  },
+  "passed": true,
+  "renders": {
+    "hero": "assets/3d/reference/orc/sculpt-v002/import-review/orc-sculpt-hero.png",
+    "rear": "assets/3d/reference/orc/sculpt-v002/import-review/orc-sculpt-rear.png",
+    "blink": "assets/3d/reference/orc/sculpt-v002/import-review/orc-blink-sculpt-front.png"
+  },
+  "human_likeness_accepted": false,
+  "mobile_performance_accepted": false,
+  "animation_limit": "Gentle stylized presentation gestures; no biomechanical gait simulation.",
+  "publication_amendment": {
+    "id": "metadata-clean-2026-09-07",
+    "record": "assets/3d/publication/2026-09-07/amendment.json",
+    "original_document_sha256": "A0DBA14175DEA80637202A202580D5848E5109B5E26100181DF3383B927666D9",
+    "authoring_record": "assets/3d/publication/2026-09-07/authoring-records/assets/3d/reference/orc/sculpt-v002/import-validation.json",
+    "authoring_record_status": "exact-public-safe-original",
+    "notice": "Metadata-only publication derivative, not a rerun of the historical builder or validator. File digest and size bindings identify publication copies; all measured geometry, materials, rig, action, motion and acceptance evidence remains historical and unchanged. Consult the original authoring record and amendment binding log."
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "asset": "public/assets/3d/asterion/asterion-canonical-highpoly-v001.glb",
+  "sha256": "50D3505C3FE5FA1DA7535C2989DFDE245E007EB80D47BE10E0A99005E26F071F",
+  "file_size_bytes": 15437652,
+  "meshes": 5,
+  "import_helpers_ignored": [
+    "Icosphere"
+  ],
+  "mesh_details": [
+    {
+      "name": "AST_CANONICAL_DENSE_SHELL",
+      "vertices": 709784,
+      "triangles": 1362592,
+      "unweighted_vertices": 0,
+      "max_vertex_influences": 4
+    },
+    {
+      "name": "AST_EYELID_BACK",
+      "vertices": 49,
+      "triangles": 48,
+      "unweighted_vertices": 0,
+      "max_vertex_influences": 1
+    },
+    {
+      "name": "AST_EYELID_FRONT",
+      "vertices": 49,
+      "triangles": 48,
+      "unweighted_vertices": 0,
+      "max_vertex_influences": 1
+    },
+    {
+      "name": "AST_EYELID_SEAM_BACK",
+      "vertices": 50,
+      "triangles": 48,
+      "unweighted_vertices": 0,
+      "max_vertex_influences": 1
+    },
+    {
+      "name": "AST_EYELID_SEAM_FRONT",
+      "vertices": 50,
+      "triangles": 48,
+      "unweighted_vertices": 0,
+      "max_vertex_influences": 1
+    }
+  ],
+  "vertices": 709982,
+  "triangles": 1362784,
+  "armatures": 1,
+  "bones": 18,
+  "actions": [
+    "blink",
+    "eat",
+    "happy",
+    "idle",
+    "pet_reaction",
+    "play",
+    "sleep",
+    "wake",
+    "walk"
+  ],
+  "materials": [
+    "AST_MAT_CANONICAL_PAINT",
+    "AST_MAT_EDGE_BLUE",
+    "AST_MAT_EDGE_GOLD",
+    "AST_MAT_EDGE_IVORY",
+    "AST_MAT_EDGE_NAVY",
+    "AST_MAT_EYELID_NAVY",
+    "AST_MAT_EYELID_SEAM"
+  ],
+  "images": [
+    "Render Result",
+    "Viewer Node",
+    "asterion"
+  ],
+  "max_vertex_influences": 4,
+  "unweighted_vertices": 0,
+  "renders": {
+    "idle": null,
+    "blink": null,
+    "walk": null
+  },
+  "checks": {
+    "one_armature": true,
+    "bone_count_18": true,
+    "required_actions": true,
+    "highpoly_triangle_floor": true,
+    "skinning_influence_limit": true,
+    "canonical_image_embedded": true,
+    "renders_written": true
+  },
+  "passed": true,
+  "blender": "5.2.1 LTS",
+  "publication_amendment": {
+    "id": "metadata-clean-2026-09-07",
+    "record": "assets/3d/publication/2026-09-07/amendment.json",
+    "original_document_sha256": "A3293FC4524BEE7467B4FE6A42755A7CDFE789D3CA581E5E988C55D969AD33A9",
+    "authoring_record": null,
+    "authoring_record_status": "private-original-retained-not-published",
+    "notice": "Metadata-only publication derivative, not a rerun of the historical builder or validator. File digest and size bindings identify publication copies; all measured geometry, materials, rig, action, motion and acceptance evidence remains historical and unchanged. Consult the original authoring record and amendment binding log."
+  }
+}

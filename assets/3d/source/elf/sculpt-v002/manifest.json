@@ -1,0 +1,71 @@
+{
+  "schema": "asterion-local-companion-sculpt-v1",
+  "kind": "elf",
+  "name": "Aelira",
+  "version": "sculpt-v002",
+  "source": "assets/3d/source/elf/sculpt-v002/elf-sculpt-v002.blend",
+  "model": "public/assets/3d/elf/elf-sculpt-v002.glb",
+  "reference": "assets/3d/reference/elf/sculpt-v002/original.png",
+  "source_sha256": "FEF3CAEE99FE3ED7FDA7A38FD9CDDB4F99D69D2CF187A999C347F5C24D7CFF77",
+  "model_sha256": "ABDC383BE0FFB1F480092B3203A161CF9867E96AFFE3D3E16D7261DDF12DF6CA",
+  "reference_sha256": "DE8904FAF12031561B752E3A4590F09A2E9BA5E763804F7D83156CF414ECA417",
+  "bytes": 15901816,
+  "triangles": 1519337,
+  "vertices": 770305,
+  "bones": 10,
+  "materials": 24,
+  "draw_calls": 24,
+  "clips": [
+    "idle",
+    "blink",
+    "happy",
+    "eat",
+    "play",
+    "pet_reaction",
+    "sleep",
+    "wake",
+    "walk"
+  ],
+  "editable_source_meshes": 280,
+  "blender": "5.2.1 LTS",
+  "renders": {
+    "hero": "assets/3d/reference/elf/sculpt-v002/elf-sculpt-hero.png",
+    "front": "assets/3d/reference/elf/sculpt-v002/elf-sculpt-front.png",
+    "side": "assets/3d/reference/elf/sculpt-v002/elf-sculpt-side.png",
+    "rear": "assets/3d/reference/elf/sculpt-v002/elf-sculpt-rear.png"
+  },
+  "fresh_import_passed": true,
+  "sampled_motion_passed": true,
+  "human_likeness_accepted": false,
+  "mobile_performance_accepted": false,
+  "projection_used": false,
+  "paid_provider_used": false,
+  "provenance": "Locally refined from unchanged elf.png. Hidden views inferred; historical files preserved.",
+  "animation_limit": "Gentle stylized presentation gestures; no biomechanical gait simulation.",
+  "package_status": "Local hash-checked delivery, not a game-dev CLI canonical receipt.",
+  "builder": "assets/3d/source/companions/sculpt-v002/build.py",
+  "builder_sha256": {
+    "assets/3d/source/companions/sculpt-v002/build.py": "DAFCB52347E7886CBE278F76AFBC44AE09488F053F53AF2A93472E4037CBCFBD",
+    "assets/3d/source/elf/sculpt-v002/model.py": "B5EB6A0DF6B1CD2D2FA9757E2026F0F61D666C6C27585167C271E3D719CD8437",
+    "assets/3d/source/elf/sculpt-v002/sculpt_helpers.py": "6E476190E16332F77DBF5FD532A7224889AE3F90A9499667BF061B237F12A255",
+    "assets/3d/source/companions/sculpt-v001/common.py": "A6DF036A5B3F6FAA3C74740382998D829D45C9E2734D91A285F9369764C21F9E",
+    "assets/3d/source/companions/sculpt-v001/woodland.py": "D7BBD2ECF612DF09E88A179AAA3F1F71A983EA66DDFAC6D27733B5139977EA7C",
+    "assets/3d/source/companions/sculpt-v001/humanoids.py": "9264D27B44C6616F53D4E77A67130E54A824559491D46341C25049EC8EF0C425",
+    "assets/3d/source/companions/sculpt-v001/sky_folk.py": "839361E4D565EBF5D06AB06504CF9760902889CFCF32FB3311716341A2DDE27E",
+    "assets/3d/source/asterion/sculpt-v001/build_sculpt.py": "9A81C430E8FD07CE520BBA554C78845A508F22E5FB89E524BF515D8BF8415621",
+    "assets/3d/source/asterion/sculpt-v001/rig_delivery.py": "8758D105E70AB5405F61A48A531154CC591EAC0D82B167788F1D0785A16CDFF0"
+  },
+  "notes": [
+    "Reference-led v002: modest violet almond eyes, warm cheeks, refined elven muzzle, genuinely recessed long ears and tapered brows.",
+    "Overlapping scored crown locks, three crossing braid strands, loose face curls, embroidered cream tailoring and shaped open fingers.",
+    "Layered cuff boots, crossed leather straps, leaf clasps and textured lined cape. Hidden construction inferred; original portrait and v001 preserved."
+  ],
+  "publication_amendment": {
+    "id": "metadata-clean-2026-09-07",
+    "record": "assets/3d/publication/2026-09-07/amendment.json",
+    "original_document_sha256": "5D2D9C184E503D8F29D032467FD003E4FE6C006E609203C724373330560CBCA9",
+    "authoring_record": "assets/3d/publication/2026-09-07/authoring-records/assets/3d/source/elf/sculpt-v002/manifest.json",
+    "authoring_record_status": "exact-public-safe-original",
+    "notice": "Metadata-only publication derivative, not a rerun of the historical builder or validator. File digest and size bindings identify publication copies; all measured geometry, materials, rig, action, motion and acceptance evidence remains historical and unchanged. Consult the original authoring record and amendment binding log."
+  }
+}

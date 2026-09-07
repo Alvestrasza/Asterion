@@ -1,0 +1,491 @@
+{
+  "schema": "asterion-head-hair-study-v003",
+  "source_sha256": "FD2EC8503E393F68306C93D82DDAC59E9C6377EAEE7070C70CDBDA9D67DBFD77",
+  "model_sha256": "A2923D851CA53F8983EA5BCCD71C160D6381244C058B0429ACF797FD524A3DE1",
+  "baseline_source": "assets/3d/source/asterion/sculpt-v002/asterion-sculpt-v002.blend",
+  "baseline_model": "public/assets/3d/asterion/asterion-sculpt-v002.glb",
+  "input_sha256": {
+    "assets/3d/source/asterion/sculpt-v002/asterion-sculpt-v002.blend": "6C9FDAE31003F8FE87AFD016E0E356B5D827E41BA485222BEA484B0E6BA33D24",
+    "public/assets/3d/asterion/asterion-sculpt-v002.glb": "5DDC901135C30D85B82760AA026B8146ED1E90ABBA15E600F2FB69DF6DB08838",
+    "assets/3d/reference/asterion/sculpt-v002/asterion-approved-turnaround.png": "FE91A72F21A139CB4443E7BDE99498FC7AF7D07B8784A5F4A0B48CC37A141AEC",
+    "assets/3d/source/asterion/sculpt-v003/build_head_study.py": "A3B22323201D30A3BD9459985F8F7741A44545010A84D27CC5912E1C8A85E0F2",
+    "assets/3d/source/asterion/sculpt-v001/build_sculpt.py": "9A81C430E8FD07CE520BBA554C78845A508F22E5FB89E524BF515D8BF8415621",
+    "assets/3d/source/asterion/sculpt-v001/rig_delivery.py": "8758D105E70AB5405F61A48A531154CC591EAC0D82B167788F1D0785A16CDFF0",
+    "assets/3d/source/asterion/sculpt-v002/validate_refinement.py": "8C541F26C2D2546FB142988D10F07EDF51C891D1C81F02065C7B62CE01F78EFD"
+  },
+  "builder_sha256": {
+    "assets/3d/source/asterion/sculpt-v003/build_head_study.py": "A3B22323201D30A3BD9459985F8F7741A44545010A84D27CC5912E1C8A85E0F2",
+    "assets/3d/source/asterion/sculpt-v001/build_sculpt.py": "9A81C430E8FD07CE520BBA554C78845A508F22E5FB89E524BF515D8BF8415621",
+    "assets/3d/source/asterion/sculpt-v001/rig_delivery.py": "8758D105E70AB5405F61A48A531154CC591EAC0D82B167788F1D0785A16CDFF0",
+    "assets/3d/source/asterion/sculpt-v002/validate_refinement.py": "8C541F26C2D2546FB142988D10F07EDF51C891D1C81F02065C7B62CE01F78EFD"
+  },
+  "blender": "5.2.1 LTS",
+  "triangles": 3051226,
+  "removed_triangles": 1948744,
+  "bytes": 40261464,
+  "removed_objects": [
+    {
+      "name": "AST_Groom_v002_mane_L_native",
+      "type": "CURVES",
+      "group": "mane.L"
+    },
+    {
+      "name": "AST_Groom_v002_mane_L_export",
+      "type": "MESH",
+      "group": "mane.L"
+    },
+    {
+      "name": "AST_Groom_v002_mane_R_native",
+      "type": "CURVES",
+      "group": "mane.R"
+    },
+    {
+      "name": "AST_Groom_v002_mane_R_export",
+      "type": "MESH",
+      "group": "mane.R"
+    },
+    {
+      "name": "AST_Groom_v002_cheek_L_native",
+      "type": "CURVES",
+      "group": "cheek.L"
+    },
+    {
+      "name": "AST_Groom_v002_cheek_L_export",
+      "type": "MESH",
+      "group": "cheek.L"
+    },
+    {
+      "name": "AST_Groom_v002_cheek_R_native",
+      "type": "CURVES",
+      "group": "cheek.R"
+    },
+    {
+      "name": "AST_Groom_v002_cheek_R_export",
+      "type": "MESH",
+      "group": "cheek.R"
+    }
+  ],
+  "geometry": {
+    "vertices": 1585156,
+    "triangles": 3051226,
+    "nonfinite_vertices": 0,
+    "nonfinite_transforms": 0,
+    "unweighted_vertices": 0,
+    "invalid_weights": 0,
+    "unknown_weights": 0,
+    "over_four_weights": 0,
+    "max_influences": 4,
+    "bounds_min": [
+      -1.4999998807907104,
+      -2.179687976837158,
+      0.02538999542593956
+    ],
+    "bounds_max": [
+      1.4999998807907104,
+      3.2304680347442627,
+      5.80078125
+    ],
+    "span": [
+      2.999999761581421,
+      5.410156011581421,
+      5.77539125457406
+    ]
+  },
+  "retained_geometry_sha256": {
+    "AST_Sculpted_body": "B1848084A0A0ECFE7823435E5DC8802289C4613FB36580F2EE44C0A399797485",
+    "AST_Sculpted_head": "3A3EF475E46185E0353CF4A81957AE3E9687776EF3A4CF594DE04412A2821095",
+    "AST_Sculpted_tail": "CD57582E0E770B88C4AC08AFB156B3CCC9F549431AA031F6DE0077801D66DFD6",
+    "AST_fore_gold_claw_R0": "FD58EB57DB3411CD04016B9465E50FABD9319A9821EF9ED4B38087BA3F563DA0",
+    "AST_fore_gold_claw_R1": "883DB4D9C1B1CF2B1253DF32E7921F1C1A98764D900A8C9CD2BB671CD5F5FC40",
+    "AST_fore_gold_claw_R2": "E00826393890FBD2FE3D2190AD5E9B0E5C754146B58CE20CB9B92C5E2E90BE5F",
+    "AST_fore_gold_claw_R3": "DC3678DEB10EF3BEE2168158BAB5703446A8F2ADFCB051CE69A06990015BA033",
+    "AST_hind_gold_claw_R0": "9BCA85156FFD3E721E4CBFFF82A57BE08BB83DC93B492379B723641CDC40C304",
+    "AST_hind_gold_claw_R1": "00EDD9A3C54F77723AA99355D9D4942B47EBFA5361CE41AC8DCB48B8EE9B8936",
+    "AST_hind_gold_claw_R2": "9E810F3B6B95949A7847541D40C031359CACD9AF32F8936D9E81DCD4B8772034",
+    "AST_hind_gold_claw_R3": "AE1C77467E66C3F991DEE6E929AC2D0F62DBC10404DC69BD6C5CC4CE76825A30",
+    "AST_fore_gold_claw_L0": "F015DB03899463AE017035927F9881EA2D4047E8D72BE17A618068D5DF388D14",
+    "AST_fore_gold_claw_L1": "EA45FE59C3A47144E53064A648B28C93D58A79CF37736BFDB51C0C7E6AB3C944",
+    "AST_fore_gold_claw_L2": "20BD1D7C122A7634C0EEEC3E1A8769BDADC98C7DE097F31AC094BB2EE3822F42",
+    "AST_fore_gold_claw_L3": "67FC65B26CDB9A8F4F2122562BB4068327E3A4B3FAA01DC6521364D16C9BD674",
+    "AST_hind_gold_claw_L0": "165CBB4BBF152CCC5D869BCF45FCA5DA561B3B23B2AEE77CD607416C4A51058F",
+    "AST_hind_gold_claw_L1": "7F9B0F47C5A273A9055D333164F33DCFF8ECBF80C20B683A669CEBB9A200444B",
+    "AST_hind_gold_claw_L2": "A5238428C2B1C146EBD4B5CF64E327D166C1EDCAB7372648035D44CC3933D2E7",
+    "AST_hind_gold_claw_L3": "AC9419E3C4EB134AFAEFF8AD843FFEBCAE522EA9EDB6C911A50626E5EC7A2EB8",
+    "AST_orbital_socket.R": "8AFE60E0D7A5D6BA7880EA38B7DDC587CF9414329F4C35C29F8B0433226F2946",
+    "AST_upper_brow.R": "84927FF2D6C76B24F6847769315FA0EDBC937382B4F69EADBDF50576435245A2",
+    "AST_lower_eyelid.R": "3F9B78F492B84FC19D6F21C08FFA962DE193039604AE6A69B3500D83191E9497",
+    "AST_closed_eyelid.R": "BF8DB94DAF02C706AD8430F7E3593A4135A43EB98BE6246330F6A05D96A9E0AA",
+    "AST_cheek_scale_R0": "1AC1BC101AB24DE5DD4CA6E27D957E6C9F86EB80A510E6EEC9282B6B8F73BB74",
+    "AST_cheek_scale_R1": "1839C64B233A0E3B37C0580F8CD8794E942EEA22BBBD787DDC551A07D0A9D372",
+    "AST_cheek_scale_R2": "9585FB319B7B49D701D52819D1757FB6151137881FF56867CCA0AC6D941965A0",
+    "AST_orbital_socket.L": "24D0BF8CAEBDEE32DB3FBCFB7328A6CD1042F168ED8A52371DB96204CC2B51E9",
+    "AST_upper_brow.L": "F7F2340A8F1F2BF02BA05204DD07D71794499C28A9DA9A5EFF2DF074CFC3077A",
+    "AST_lower_eyelid.L": "9235679CACC979503C8BCD9AF497FB3046D301F712C9511609D4D10E28F84357",
+    "AST_closed_eyelid.L": "2E2C7D4E3D1381E5413BC00B399839CD537506FEED63F52F276CAED56F525D6A",
+    "AST_cheek_scale_L0": "FDFE98C6B504A338A866434EB5BF6E0E6544F13DD522C09467F8D7698DA5CDC9",
+    "AST_cheek_scale_L1": "9C2588C59DB445B6FEA0BFB780CA3AC45EA8EB2550B908D73F2CDAA577E8C2BE",
+    "AST_cheek_scale_L2": "0D0BAA6763E113ECADDC43B00C113E07D0FECF7AA73EE8DABF4F0ABE94A13030",
+    "AST_nose": "8B344F1F8F0CAF0407A566327D1177986C218362B19A2CCA6626CA12FA275427",
+    "AST_living_eye.R": "851A7CAA5D89DE3A00F73AAEF074AFF557C6435DC382B017A51608A0582120F9",
+    "AST_eye_catchlight.R": "4E571EE634443084077D7F418F86FD196728F0F881D7C951B65151A0E224C193",
+    "AST_eye_pinlight.R": "5EBBBB53921F47E9BB81A7CA1403A1F5EE9E5A5608DDC24CBF23EFDC005C5832",
+    "AST_living_eye.L": "4F8C4FC467B6194CDAA740E97515E2D1F32F819590A82466D5F771D778A3CBC9",
+    "AST_eye_catchlight.L": "9E62FCDF16C1CC2C9D436D2B0FDCC3A11699B15882A30B06ED2A7FA8C64B9391",
+    "AST_eye_pinlight.L": "5DB874E2254B7AD1528B5701CAFC39F46EC63DF1568524AED3BE1A5841D3DB1A",
+    "AST_recessed_nostril.R": "56EF60385F43806A18DAF3858821833A93A95DE7B4C6EBF1531EB67578690D1B",
+    "AST_recessed_nostril.L": "484FB5DCB8AB394D5390DD08EC74FC0AE38EC0D0113CA8E9DD6939F70A32E607",
+    "AST_gold_temple.R": "DE69EB14982323404784C88A7AC59B3956397CB5DCC195E0DE7E7517ED9A0B6D",
+    "AST_gold_temple.L": "23C14931680EC7A50ACC575D5012AB6DB990CACF936231F0247328E9E0552705",
+    "AST_forehead_lance_0": "E036CE8FFB2BAFB58823D273E68FD777C1A1880AB4F5842BA7F7FC48D475B50A",
+    "AST_forehead_lance_1": "9773A1680FA15272FB33AF042EB298268392911B261847244AB6763874805A79",
+    "AST_forehead_lance_2": "B1D590FEB6F0EF9E76BEBBB116E2AA4CAA83FA85AA19DA5F5A796EA9C43706A1",
+    "AST_forehead_lance_3": "9A0508503BBA4613B3DFAA29E2A77940BCE4027BA973FEB4F9AEA162F96B0688",
+    "AST_forehead_lance_4": "84B065201D6FF3F63E7AB49918223DD2E6F51A5F81DC436BA2674AC8AC3CBB85",
+    "AST_forehead_lance_5": "C89966E2171076134635C8D2CAD4AA0FDBE4B911C77B6F6383CAF2ACA610F827",
+    "AST_forehead_diadem_-1": "A4DF58AA716515BD2E7FB6A98D18437567697E884564899A0DD579E232BAD359",
+    "AST_forehead_diadem_1": "133ABF20FE68277C0CCC19B97AD83D702E607106D26C725FB2A4883B58C8C3A0",
+    "AST_tail_gold_inlay_-1": "A7F6B28596B0EFF83FD1093F2325A8F963C8AC26216B3BBFF4514C1617254637",
+    "AST_tail_gold_inlay_1": "1471D8B49DE6CFFE7725DE96E6BC7CDE308A77F92EF92ECE3025EB671295C22E",
+    "AST_throat_plate_0": "232A5F3A5EA13CC7FDA50CB1168060BC7A77BEE3107EA3C3A2F603C7410980F8",
+    "AST_throat_plate_1": "5D2AD005F72170FFD0B5E4F4C60327EC9E2C25E3AB49DD4B3EC790EDD8E11589",
+    "AST_throat_plate_2": "E37F6ACAD296E9BD3E41C43500F5719112BB2BFCD31553A24F9CC6E0C625BCDA",
+    "AST_throat_plate_3": "D3C92907C09207625BF21BE1C1560EAE685912860D0837F7A9E887E539B11328",
+    "AST_throat_plate_4": "F0237F4A9E57F91E5D67E50F0A3CE406E14B05C1681154BF4912999B1D180AA0",
+    "AST_throat_plate_5": "D2AABBF97F8ADD730823B25FA5FD06B9609F25DDEF4068BB8BBA31E867EA69C6",
+    "AST_throat_plate_6": "043FDE9D8BCB81D7F957D01E42C16D99B32DDE83772FBE7DDA1563026D97ED03",
+    "AST_dorsal_neck_plate_0": "9955FB4684185684A364F6A966C860CAC5F8AA1EABE1EF55C052C81163785A42",
+    "AST_dorsal_neck_plate_1": "18CCA68AEC767F0B00339DE39A3095509BBA0D3D7C033ABCDBE944C75B2E30D3",
+    "AST_dorsal_neck_plate_2": "E71E09152BACFA55668DF9C46B9C502D50082074D817AC8EDF1EFB7A1BA9CF43",
+    "AST_dorsal_neck_plate_3": "85886EB6873680B0DDF6EB7BA4864505D377C21E3F8030DA88056C3925D3A88F",
+    "AST_dorsal_neck_plate_4": "907AC3278947DBD91F3AF89857AF90344B0C218E19E9C5A470571EE4A024068F",
+    "AST_dorsal_neck_plate_5": "AE0A4C329C0EEC4530AD8DCA6A17B149300448730FDF779A1E79E203D957A872",
+    "AST_dorsal_neck_plate_6": "98F05BECAA05D745D45347C4AE4B91EF05E998F548017F7A3AD63701FFA80C1E",
+    "AST_dorsal_neck_plate_7": "982E7948C9F74CE6D5A42780EDE8D2213E9D240627D2246E6AF948BA9BE00BD7",
+    "AST_dorsal_neck_plate_8": "8EBD6293BE8768EF42CD1FDF5E3D0697E182B39C67C3FB6CED5A7E001CB7CCE3",
+    "AST_dorsal_neck_plate_9": "5FA7CEE5EFEAB21EC38256DC9D4089272A6AB8DB9E5779969D907560B32F47D8",
+    "AST_dorsal_neck_plate_10": "5081F50F9C5A19F74BD65C791F5B11F31513ABD3E239A9D41AB62842167DB59E",
+    "AST_dorsal_neck_plate_11": "8B7D9DF9F4C593BD097252A2532B7E57C3CF6424FD610B040277AD598F64039F",
+    "AST_dorsal_neck_plate_12": "459DE8E7128B3DAB432BC1B03989733FBFAEB0E9845726FA35F55F5D66E1A59B",
+    "AST_dorsal_neck_plate_13": "CCD4BBB00FFB5617EB6B0546012337DCB917AE7A15D439F62E60AEC30D1E6CA7",
+    "AST_spine_scale_0": "8C60E687F8FAB84D9930FDF8C0E07844BF05FD0411D978F127D45A3BA5E39165",
+    "AST_spine_scale_1": "5C5509030E34BD063FA3D597C0EF90304057BF758A72BA9E70009D7DA275EBEC",
+    "AST_spine_scale_2": "3507D5BE86F2008F8675049387EBB86D4F5AB59C5809554A1DD7AB47A47BB21D",
+    "AST_spine_scale_3": "D5105764345C95AF4A41E4ADAE00C73933900A42CA5E4843EE978AE31ADB2DBF",
+    "AST_spine_scale_4": "9F12EC7A98C2F6A8902619E79420A0ECB198AF717EEE091734DC3191E24E78CE",
+    "AST_spine_scale_5": "05A5773495BFC56239DC831EDEB5261F69AFC2B596A7B3E12EFDF0EF54D69423",
+    "AST_spine_scale_6": "8D9D079C7E492CB5EE616C4B03DE683A1E14669304E890CA8819DF7CC38047C6",
+    "AST_spine_scale_7": "76B074C5300DA21D0B5D5FA049E4DE1CBA268934520F9ACC70B3A4EC3B8E84E5",
+    "AST_spine_scale_8": "ADA24DCA60103BBD165C608250ED8FD145DF8856F561443EB15C5E6F104CBB42",
+    "AST_Curved_Ceremonial_Shoulder_Shield_L": "39BEA046A8D87309770695AFA3D27C4A2D15FF8D810A7E1CD9BBBDAA2D9FC791",
+    "AST_Shoulder_Enamel_Blue_Chevron_L": "F9BB87A8F4A67634EC009EF890401871EF651094EE5B24F6BD3FDD551DD2160C",
+    "AST_Shoulder_Four_Point_Gold_Star_L": "6091525AAF14400B3674F4099C51838448621FFDF254D922F72E703FEA1B6647",
+    "AST_Back_Collar_Gold_Rim_L": "0096AA6030971D4541BC549C781C2151A122EF1B14D96CF82F51FC450926EA48",
+    "AST_Haunch_Gold_Crescent_L": "87B545B72AE0F79D84309DB78551A9AB1188685910282A5F9C5BF2EAD1F22922",
+    "AST_Haunch_Inner_Gold_Crescent_L": "C3D8674620B0B3C9848D22F0A9AAD0CA22538B5F13ED04382C8906777EB41967",
+    "AST_Haunch_Four_Point_Star_L": "A33A680920E16771F406574B27ABD1605003584CBE26D40B6655418E0F9F76C1",
+    "AST_Fore_Sculpted_Gold_Cuff_L": "2A97A9932B93EF52BCE23014EA6E987B939AD5FC5ABFC98B0FD175164AF1A6A4",
+    "AST_Fore_Cuff_Diamond_L": "BDF02F0CA7BA87826C98D1B1FED05684F8ABBE439F128A2862BC8D973B15F347",
+    "AST_Fore_Cuff_Diamond_Ink_Inset_L": "7CD4F20BD73C87B90236FBA1F0EB7856FFFE0D380BD7D2B2BF6F0F44E2F1CF4F",
+    "AST_Fore_Cuff_Diamond_Light_Spine_L": "47BD09FA93F40296B9C069910E750786C7E3ED4F157B1A04E89B7115090DE864",
+    "AST_Fore_Cuff_Outer_Spur_L": "DB3E870C93E032FDE87C7E76CE0FC90CFCC6D0A104F5331095A4039F7E58E1B3",
+    "AST_Hind_Sculpted_Gold_Cuff_L": "BACA956F59B0F7183709998A36FB9A2A32C36EE4FF2A06EAF0EFC4A1BE5E2207",
+    "AST_Hind_Cuff_Diamond_L": "AD84050C4A4B185F70121C69799192DF70A2DC0984C0B70A86915E0DE2E065C4",
+    "AST_Hind_Cuff_Diamond_Ink_Inset_L": "F684A17A14FF199B7DAB1CC542904152E4545F45A8D40D7C2226FD67CCDB74D8",
+    "AST_Hind_Cuff_Diamond_Light_Spine_L": "D37AEB01F42D3C82D3FD660845462273F2E2E9D616EBA668883F1B41F7CDDBD3",
+    "AST_Hind_Cuff_Outer_Spur_L": "F652BADCF75D857EFD084B22BDD26E3DEA292499048621B6DEF9B93054D3678A",
+    "AST_Curved_Ceremonial_Shoulder_Shield_R": "2B3E6C4A3E9163286D7C4E6A1E73A2E877E695231F05545FB9D4865ABE8B6E0A",
+    "AST_Shoulder_Enamel_Blue_Chevron_R": "77FC3C222A4F9AF663D55E8F6462A7C0408B7AC81C86A5CB16282477B99211E0",
+    "AST_Shoulder_Four_Point_Gold_Star_R": "93C853ECE109B35435884B237070A76C80D29CE077963298025D69F8929C3F5A",
+    "AST_Back_Collar_Gold_Rim_R": "68EA74A71DD57599334AEC6E4E5AEF1758F060E8D156258E20CAC4A0B80562A8",
+    "AST_Haunch_Gold_Crescent_R": "B14D12D0DC6314334F92471E02B6F5DE9D414B695C94518F4966900B59B6824D",
+    "AST_Haunch_Inner_Gold_Crescent_R": "75BA2BAC53532D1F1E02BDC9BEF6191828C4565E7EF9116C2C6E991AED556901",
+    "AST_Haunch_Four_Point_Star_R": "7908B5D588A3DD25BC5F95719DE3ED19B2EC8BA87DCFAF13B88177698A7C6BFA",
+    "AST_Fore_Sculpted_Gold_Cuff_R": "CD8E96F74AF36A02A121825B98E7875BD49A2BDD2B629A73B644B4D102F663E4",
+    "AST_Fore_Cuff_Diamond_R": "D042E28B733AC6A9635D21CBA3E24D19BA6C209AC3D35738600D8E03DE38F04F",
+    "AST_Fore_Cuff_Diamond_Ink_Inset_R": "6ADAF1618D150DB462859E20D477A1ECE684FD38089566E767D665EBE690A8CC",
+    "AST_Fore_Cuff_Diamond_Light_Spine_R": "6B9A593C81AF2CFE666A829982F3BB85E91EDE820CB6613010DEBFB97CD82494",
+    "AST_Fore_Cuff_Outer_Spur_R": "9262A1F0E4C68D1DB7602C2493CD914D37088ED6F8DCD0C3335B66B04F1275FA",
+    "AST_Hind_Sculpted_Gold_Cuff_R": "5CDC406574AFC020968A55E13FCAA76601A7B49534AF2E8067C8A4422EF15264",
+    "AST_Hind_Cuff_Diamond_R": "E271558ADE2DFFE4D9A3D2DAD4CEFCF19A3BAD1C5EB9C52A4F15CA525CC6D315",
+    "AST_Hind_Cuff_Diamond_Ink_Inset_R": "842CEDBC7F078A726C52E6D65B26CE758E81184FA21E83D4D48E8B3CF57CC261",
+    "AST_Hind_Cuff_Diamond_Light_Spine_R": "8D6954CB0DBB5B45C636B7E16901A99F2514854C7F107A7C646C276DBAB8012B",
+    "AST_Hind_Cuff_Outer_Spur_R": "5BBA49B623C300FC5DA40F26AF1B4796493FC7D6172F5F79FACA79B031E397F5",
+    "AST_Fitted_Navy_Breast_Shield": "546E43602A8E0CB7D8A4DE0ACD28EA47FE9AC0A56A3326B46856C96E63C91541",
+    "AST_Chest_Pendant_Backplate": "C9C3B9B982E03FC646F84E6D57EA0CD2F8C6F0DC37B1D01A86BA05FF17E5D24C",
+    "AST_Chest_Raised_Hexagonal_Gold_Setting": "733D940203060181235CB0C38F5324040F7812436481EA02DB10051ABD8464ED",
+    "AST_Chest_Gem_Shadow_Well": "2BC24220CCA5C189103836898EC88A08CA66EF853A918B2AE7572FD15C78C189",
+    "AST_Chest_Faceted_Azure_Crystal": "85616C6121242D1A76E9C52CBC2ED2FF3963833303F8C03AF6D66783DEA71052",
+    "AST_Chest_Crown_Diamond": "7E9E84D603322E382D7078686B1EEBA5448586EEF78A29D039F465F19DBAD090",
+    "AST_Chest_Crown_Diamond_Inset": "9425D86F82BD8EE397971E29A80E7722FDC963555074DD28B7F52C32A12E25F7",
+    "AST_Chest_Crown_Arm_L": "8CC46BCD3B5CCC400F0D7D0D2BACD167C6C32DEF4BF505F2967CB32D1466236C",
+    "AST_Chest_Lower_Sculpted_Flame_L": "2206F86325CC053E173B453682FD5B121836438163A7C75B238A11A173C18C84",
+    "AST_Chest_Lower_Inset_Chevron_L": "FCEF594AB25FE981FDF36A81C600C1CE671A8F29622B69568EA985676F06B750",
+    "AST_Chest_Neck_Connector_L": "1F9D79BDC4AF9ECBBE9FF78EF804C78D278F1F0D8F527E61C94306959572F1D1",
+    "AST_Chest_Crown_Arm_R": "57C552F2884DD3EA3EFA55A8A32F20D02B7808DC7592984889CC625AC35CC324",
+    "AST_Chest_Lower_Sculpted_Flame_R": "1F6A3AE65D3FE7BC9C56C450C3B94DFB92B5BA63A5949F1EC378382DC7969ACA",
+    "AST_Chest_Lower_Inset_Chevron_R": "8026AA57D88C918A15D4BF5CB52ED588BDB8A84ED580CDAC721492EC9761F071",
+    "AST_Chest_Neck_Connector_R": "7E4040B66792911693854040B0ED7C08EFE31E63490DB8368A07AC572706C570",
+    "AST_Dragon_Leaf_Ear_L": "6F10B6330DD4A6AF9E69C942114BAB7A2557EA22EABA68EBFCFEE196D4AF0599",
+    "AST_Dragon_Ear_Swept_Gold_Inlay_L": "9F3803CF59556EE10CA77AF6AF2B33B182F2BDBF0274058C94D9C2D828714B74",
+    "AST_Dragon_Leaf_Ear_R": "23801171BC365F0C980A4A33D4B4AFC5D8926C47C207F124E5FF59B9C6727699",
+    "AST_Dragon_Ear_Swept_Gold_Inlay_R": "B70DE565105DEB82000653D7A5139B11E8668FEA688C50C42202E78C479EE964",
+    "AST_body_scale_sculpt": "2C7F3B2B6A9D1CAB7A7C8EBD21E3A5870DAD1EA6C5FC14DCE7B382E8862EF1D0",
+    "AST_head_scale_sculpt": "660272B84A57C0CBEFE2C609679D1C1C75DE2A925D3C4D71ACBE8A0C0B5DED19",
+    "AST_tail_scale_sculpt": "56D7BD4FA346B82EDBE2B77756DE512360A295203093C187A30978DD21AE9009",
+    "AST_restrained_mouth.L": "52C3A7EEB7E3DBA48708DA8A863B9EC3ECD739CB24F83660AFD1DEE4297C4C00",
+    "AST_restrained_mouth.R": "CA8487B274B699404AF06833654B2BA9A0D1DD55EC7D4104CFA88E63B16AC4F6",
+    "AST_great_horn.L": "16BB77AB6B7C22284859A187051C4602097BF739083221016BFAE124F865BB7A",
+    "AST_inner_horn.L": "400069103926BDF1E4B7639500DDB6138A8B359628E071AD4EDF923ECF8EBD77",
+    "AST_great_horn.R": "A8E3C5F15CD51798D7E55E295106B044857B0914A947319E35E616B83B427BAD",
+    "AST_inner_horn.R": "7AEA7184243BCF94C232C4849760433E8CEC6F842556D6A4B48412460D92D955",
+    "AST_temple_overlapping_lamellae": "341D50733CAE59E1BF46FA159F5D4B992B2B29C3CD1B4481D1B39A9B6342EEF4",
+    "AST_shoulder_enamel_lamellae_L": "EE66975BE709CE04AC54CACDB5EB4F810B088F1395D33B0EB5A62AC75AD83F49",
+    "AST_shoulder_enamel_lamellae_R": "AEF36D6C24DF6EEAA2BBCCF352EB91E5F3C20D534412B7B1A1A4A555CED426F9",
+    "AST_Groom_v002_tail_native": "DAC4227FCC9D7D6AEBAE04B3A1C090A16D974ACC3DC64AFC718CF929451F7C2E",
+    "AST_Groom_v002_tail_export": "C65925FB23038D19F3B0CF279C8C8C257CBF6D23E6E5BF391D88D88B1D56B47C"
+  },
+  "tail_hair": {
+    "native_objects": [
+      {
+        "name": "AST_Groom_v002_tail_native",
+        "group": "tail",
+        "type": "CURVES",
+        "physics": [],
+        "strands": 3582,
+        "points": 50148,
+        "finite_points_radii": true,
+        "valid_offsets": true,
+        "nonnegative_nonzero_radii": true,
+        "finite_transform": true,
+        "passed": true
+      }
+    ],
+    "native_strands": 3582,
+    "native_points": 50148,
+    "export_meshes": 1,
+    "correspondence": {
+      "tail": {
+        "native_object": "AST_Groom_v002_tail_native",
+        "export_objects": [
+          "AST_Groom_v002_tail_export"
+        ],
+        "passed": true,
+        "sides": 5,
+        "points_per_strand": 14,
+        "tube_vertices": 250740,
+        "expected_ring_vertices": 250740,
+        "max_center_error_world": 2.3038437383503534e-07,
+        "max_radius_error_local": 3.770561761819516e-07,
+        "max_radius_error_world_bound": 3.7705618180052653e-07,
+        "tolerance_world": 1e-05
+      }
+    },
+    "checks": {
+      "native_curves_present": true,
+      "at_least_1000_native_strands": true,
+      "native_points_radii_static_finite": true,
+      "matching_native_export_groups": true,
+      "all_native_points_match_export_tube_rings": true
+    }
+  },
+  "motion_comparison": {
+    "idle": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "blink": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "happy": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "eat": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "play": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "pet_reaction": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "sleep": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "wake": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "walk": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    }
+  },
+  "actions_sha256": {
+    "blink": "2D6A2DDA25F7FA929F492104911927C10516057AEF27789F6BDD5EFFC6300D72",
+    "eat": "3C6C9F49A26A2BF4EB62CBAD7F4C89285E48ECCB87B6465FAAC73D090CC40CBB",
+    "happy": "7407E5AD374DDD6979682E8BE8F3A496F0A723FF3BB9CF4D46A9E791CA854BDA",
+    "idle": "900FC72E95CA21E10A6BE20B3BCE9744F3870EDFC9566485435D3C1AE787B7D7",
+    "pet_reaction": "E47174AB065B3A4199662FF89C5733171D7714EEA8048BEAFCD51278B6E389DD",
+    "play": "FAE608E7D85447941C3A5C8F79F4F44B325A606DE6D95288A7227D02A6D524C5",
+    "sleep": "D6F49BE592A40DE99EECB09BBE76E5DC19DDDA31F1E01087B6C811654206C141",
+    "wake": "7E1971B98F43E987377D2ED6FBC2FD44444D7CB36FBC79EC78FEA15142D8D4F8",
+    "walk": "A8A8AF2A9F25F11F89E290718BA527689CAD76538C4ED0925ABACFDF0EFDC9C9"
+  },
+  "rest_rig_sha256": "0846C3839479417844EB134926FF64F9E524E71252C903935BE13A0229FFE879",
+  "checks": {
+    "same_rest_hierarchy_and_transforms": true,
+    "same_constraints_and_drivers": true,
+    "exact_nine_action_names": true,
+    "all_nine_complete_action_data_unchanged": true,
+    "source_22_bones": true,
+    "source_fps_unchanged_30": true,
+    "finite_complete_source_keys": true,
+    "native_curves_present": true,
+    "at_least_1000_native_strands": true,
+    "native_points_radii_static_finite": true,
+    "matching_native_export_groups": true,
+    "all_native_points_match_export_tube_rings": true,
+    "all_retained_source_geometry_identical": true,
+    "no_head_hair_objects": true,
+    "only_tail_groom_remains": true,
+    "triangle_count_is_exact_head_hair_subtraction": true,
+    "same_exported_materials": true,
+    "one_mesh_and_skin": true,
+    "22_bones_nine_clips": true,
+    "all_primitives_skinned": true,
+    "finite_normalized_geometry": true,
+    "imported_motion_unchanged": true,
+    "self_contained_no_images_cameras_lights": true,
+    "baseline_and_dependencies_unchanged": true
+  },
+  "passed": true,
+  "renders": {
+    "source.hero": {
+      "file": "assets/3d/reference/asterion/sculpt-v003/source-views/asterion-sculpt-hero.png",
+      "sha256": "F100F4BF08FFBDEBD362C6AA729873E9663BD7798D55657DEBF1A437CCB99459"
+    },
+    "source.front": {
+      "file": "assets/3d/reference/asterion/sculpt-v003/source-views/asterion-sculpt-front.png",
+      "sha256": "E374E34FE6423F37080ACDBD2F89C1DA616E3E97CDF7EC5389CB61B310BEFF98"
+    },
+    "source.side": {
+      "file": "assets/3d/reference/asterion/sculpt-v003/source-views/asterion-sculpt-side.png",
+      "sha256": "D2CD6FA1A66824ACC69DA151F695DB03F5D2B60F74CB2766FFA8419475D0B034"
+    },
+    "source.rear": {
+      "file": "assets/3d/reference/asterion/sculpt-v003/source-views/asterion-sculpt-rear.png",
+      "sha256": "2186D49F0BDF4FACF83F8964EAD21F6E5EE499BF215CF46F9E79D2BB9FD15EBB"
+    },
+    "source.face": {
+      "file": "assets/3d/reference/asterion/sculpt-v003/source-views/asterion-sculpt-face.png",
+      "sha256": "67DAD11B9D584C08E23D91A25B3D2DA15ABD1F9C9240B70004F0C5CC4FD31BC8"
+    },
+    "import.hero": {
+      "file": "assets/3d/reference/asterion/sculpt-v003/import-review/asterion-sculpt-hero.png",
+      "sha256": "8076FD7EF16F01A8615942BBEC4A2D11F5DF73A4D8E885F56A9B298A514759EA"
+    },
+    "import.rear": {
+      "file": "assets/3d/reference/asterion/sculpt-v003/import-review/asterion-sculpt-rear.png",
+      "sha256": "9B2DC0440454393A140C4B7A09A09E19B9620BF2AF8E4ADD8EC5D831B5D49AA4"
+    },
+    "import.face": {
+      "file": "assets/3d/reference/asterion/sculpt-v003/import-review/asterion-sculpt-face.png",
+      "sha256": "A3D7A893B9B85C3098C89F3431DD8C68D1332C62D32B5CCF0B6923B22DA45084"
+    },
+    "import.closed_blink_front": {
+      "file": "assets/3d/reference/asterion/sculpt-v003/import-review/blink/asterion-sculpt-front.png",
+      "sha256": "AF5E7558DD1C5104F9334CE4061523B95EBF8A7C31BF796DAC921691473AF05F"
+    }
+  },
+  "materials": 18,
+  "clips": [
+    "blink",
+    "eat",
+    "happy",
+    "idle",
+    "pet_reaction",
+    "play",
+    "sleep",
+    "wake",
+    "walk"
+  ],
+  "human_likeness_accepted": false,
+  "mobile_performance_accepted": false,
+  "publication_amendment": {
+    "id": "metadata-clean-2026-09-07",
+    "record": "assets/3d/publication/2026-09-07/amendment.json",
+    "original_document_sha256": "CADEC3E567D96E4384F03BF1A0CE24EC5AA4554011EA62BD9BD0954173675D35",
+    "authoring_record": "assets/3d/publication/2026-09-07/authoring-records/assets/3d/reference/asterion/sculpt-v003/validation.json",
+    "authoring_record_status": "exact-public-safe-original",
+    "notice": "Metadata-only publication derivative, not a rerun of the historical builder or validator. File digest and size bindings identify publication copies; all measured geometry, materials, rig, action, motion and acceptance evidence remains historical and unchanged. Consult the original authoring record and amendment binding log."
+  }
+}

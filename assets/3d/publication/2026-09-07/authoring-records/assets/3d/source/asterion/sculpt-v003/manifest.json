@@ -1,0 +1,46 @@
+{
+  "schema": "asterion-local-head-study-v003",
+  "version": "sculpt-v003",
+  "name": "Asterion",
+  "kind": "asterion",
+  "source": "assets/3d/source/asterion/sculpt-v003/asterion-sculpt-v003.blend",
+  "model": "public/assets/3d/asterion/asterion-sculpt-v003.glb",
+  "reference": "assets/3d/reference/asterion/sculpt-v003/asterion-approved-turnaround.png",
+  "source_sha256": "044E0C219693A8D9BB9004F26CD50F5082A3E02D6CD59C8D48D7EC2813013228",
+  "model_sha256": "A2923D851CA53F8983EA5BCCD71C160D6381244C058B0429ACF797FD524A3DE1",
+  "reference_sha256": "FE91A72F21A139CB4443E7BDE99498FC7AF7D07B8784A5F4A0B48CC37A141AEC",
+  "builder_sha256": {
+    "assets/3d/source/asterion/sculpt-v003/build_head_study.py": "A3B22323201D30A3BD9459985F8F7741A44545010A84D27CC5912E1C8A85E0F2",
+    "assets/3d/source/asterion/sculpt-v001/build_sculpt.py": "9A81C430E8FD07CE520BBA554C78845A508F22E5FB89E524BF515D8BF8415621",
+    "assets/3d/source/asterion/sculpt-v001/rig_delivery.py": "8758D105E70AB5405F61A48A531154CC591EAC0D82B167788F1D0785A16CDFF0",
+    "assets/3d/source/asterion/sculpt-v002/validate_refinement.py": "8C541F26C2D2546FB142988D10F07EDF51C891D1C81F02065C7B62CE01F78EFD"
+  },
+  "validation": "assets/3d/reference/asterion/sculpt-v003/validation.json",
+  "triangles": 3051226,
+  "bytes": 40261464,
+  "vertices": 1585156,
+  "materials": 18,
+  "clips": [
+    "blink",
+    "eat",
+    "happy",
+    "idle",
+    "pet_reaction",
+    "play",
+    "sleep",
+    "wake",
+    "walk"
+  ],
+  "head_hair_removed": true,
+  "hair_groups": [
+    "tail"
+  ],
+  "hair_strands": 3582,
+  "native_hair": true,
+  "animations_unchanged": true,
+  "retained_geometry_unchanged": true,
+  "hair_physics": false,
+  "human_likeness_accepted": false,
+  "mobile_performance_accepted": false,
+  "provenance": "Temporary head-hair-free copy of unchanged local sculpt-v002. Tail hair, retained anatomy and animations preserved."
+}

@@ -1,0 +1,124 @@
+{
+  "schema": "asterion-local-modular-companion-v1",
+  "kind": "fairy",
+  "name": "Selya",
+  "version": "sculpt-v003",
+  "source_sha256": "98EF440D3D3FA020C46C15BDA3CE6317CCB6F525E187BA9478110B5140478415",
+  "model_sha256": "357B903EE358A4645A6E69FF53E260E2EF20A3DFB19739F6DB031C27A864C6C7",
+  "reference_sha256": "E22EA6A731DB9E432BB2E454DC0B847E7AD46829D52A871C3F2EDA4FD2AFAEF7",
+  "triangles": 1427002,
+  "bytes": 15043192,
+  "bones": 12,
+  "clips": [
+    "idle",
+    "blink",
+    "happy",
+    "eat",
+    "play",
+    "pet_reaction",
+    "sleep",
+    "wake",
+    "walk"
+  ],
+  "draw_calls": 23,
+  "materials": 19,
+  "components": {
+    "body": {
+      "mesh": 1,
+      "skin": 0,
+      "triangles": 1106152,
+      "primitives": 15
+    },
+    "armor": {
+      "mesh": 0,
+      "skin": 0,
+      "triangles": 320850,
+      "primitives": 8
+    }
+  },
+  "blender": "5.2.1 LTS",
+  "human_likeness_accepted": false,
+  "mobile_performance_accepted": false,
+  "projection_used": false,
+  "paid_provider_used": false,
+  "package_status": "Local hash-checked Blender delivery; no game-dev canonical receipt.",
+  "animation_limit": "Original source curves, keys, handles, rest rig and drivers compared exactly. Fresh GLBs compared at nine normalized times per clip with 2e-4 skin-matrix tolerance. Not a collision or gait acceptance.",
+  "likeness_limit": "Approved single-view reference retained. Hidden surfaces inferred; no exact 1:1 claim.",
+  "compression_lossless": false,
+  "source": "assets/3d/source/fairy/sculpt-v003/fairy-sculpt-v003.blend",
+  "model": "public/assets/3d/fairy/fairy-sculpt-v003.glb",
+  "reference": "assets/3d/reference/fairy/sculpt-v003/original.png",
+  "validation": "assets/3d/reference/fairy/sculpt-v003/validation.json",
+  "validation_sha256": "3850997DAEB899AFC9B99831BDC57FFF4AA4431BF5E9A1C3D006A1BD611CE364",
+  "fresh_import_passed": true,
+  "animations_unchanged": true,
+  "equipment_separate": true,
+  "input_sha256": {
+    "assets/3d/source/fairy/sculpt-v002/fairy-sculpt-v002.blend": "03EBF4694E628FA26DF232006260865BCFC40D49A108B7880F9F82461D4146ED",
+    "public/assets/3d/fairy/fairy-sculpt-v002.glb": "376E836BE470E12FDD290DC913898D1C6A439C3D53F258F8F4B0E53AD657F309",
+    "public/assets/companions/fairy.png": "E22EA6A731DB9E432BB2E454DC0B847E7AD46829D52A871C3F2EDA4FD2AFAEF7",
+    "assets/3d/source/companions/sculpt-v003/build.py": "D29DC488FAF8CB4CB51C81291A9B21102E74832209991D90B23DEF4DA12D5763",
+    "assets/3d/source/companions/sculpt-v003/refinements.py": "82AE8D392CCCF12EA231BD66A0244BDA073739AA4C0B3103DE7DD8DDDA1FBEBA",
+    "assets/3d/source/companions/sculpt-v003/export_equipment.py": "B12B82828199ED109E2764A69BA10A8036D79B62331FA8082C9EF4BEBFC1FB2D",
+    "assets/3d/source/companions/sculpt-v001/common.py": "A6DF036A5B3F6FAA3C74740382998D829D45C9E2734D91A285F9369764C21F9E",
+    "assets/3d/source/asterion/sculpt-v002/validate_refinement.py": "8C541F26C2D2546FB142988D10F07EDF51C891D1C81F02065C7B62CE01F78EFD",
+    "assets/3d/source/asterion/sculpt-v003/build_head_study.py": "A3B22323201D30A3BD9459985F8F7741A44545010A84D27CC5912E1C8A85E0F2",
+    "assets/3d/source/asterion/sculpt-v001/build_sculpt.py": "9A81C430E8FD07CE520BBA554C78845A508F22E5FB89E524BF515D8BF8415621",
+    "assets/3d/source/asterion/sculpt-v001/rig_delivery.py": "8758D105E70AB5405F61A48A531154CC591EAC0D82B167788F1D0785A16CDFF0",
+    "assets/3d/source/asterion/sculpt-v004/export_equipment.py": "C805B4740463215AE5CC9D314D14966F2BDF91A00FB82D05054BE0BBB8ED930B"
+  },
+  "renders": {
+    "hero": {
+      "file": "assets/3d/reference/fairy/sculpt-v003/source/fairy-hero.png",
+      "sha256": "055FA97FC2B6CA4DE3B85B774E413CD0C5D31E8A80F00750405918CEA6C1A15A"
+    },
+    "front": {
+      "file": "assets/3d/reference/fairy/sculpt-v003/source/fairy-front.png",
+      "sha256": "6EB1C401900BE5EC8B49A459FED1A1CD9B239595B0A0A3BC7F5F62DE95D016F5"
+    },
+    "side": {
+      "file": "assets/3d/reference/fairy/sculpt-v003/source/fairy-side.png",
+      "sha256": "9FF0D59D6FA5A34602678936E78CCEE1DF1C4BF63D18C295BDACE492F8D0D0C4"
+    },
+    "rear": {
+      "file": "assets/3d/reference/fairy/sculpt-v003/source/fairy-rear.png",
+      "sha256": "5EE5E72F486FFFD333C3E7862A1D7EA2C7921108D9D03A2FCB193BD5DC81B3BB"
+    },
+    "body-hero": {
+      "file": "assets/3d/reference/fairy/sculpt-v003/source/fairy-body-hero.png",
+      "sha256": "0C4A32F930D6B1FF6656D7F2E52E7990A0D912414D2FD09B3E705AA7B359D1AF"
+    },
+    "body-side": {
+      "file": "assets/3d/reference/fairy/sculpt-v003/source/fairy-body-side.png",
+      "sha256": "BDDD2921DB1A00D82656627F81A7474956F724D51854055A934A24C382BCA709"
+    }
+  },
+  "import_renders": {
+    "hero": {
+      "file": "assets/3d/reference/fairy/sculpt-v003/import/fairy-hero.png",
+      "sha256": "7010F59CF92908550E534592DF8143BCE3C8A15FD439C70BB3EB49583AFA0D15"
+    },
+    "rear": {
+      "file": "assets/3d/reference/fairy/sculpt-v003/import/fairy-rear.png",
+      "sha256": "82EE2E44FFFA5DB0FF8F6D5F9ACD00AE5D0CC5927E1823989F9634C1FCBD9B72"
+    },
+    "body-hero": {
+      "file": "assets/3d/reference/fairy/sculpt-v003/import/fairy-body-hero.png",
+      "sha256": "64ECEB6953A2F4F5EEC8B4A2BA950B2596CCC38DF7AC59E8B5C84F995DA4A1A2"
+    },
+    "blink": {
+      "file": "assets/3d/reference/fairy/sculpt-v003/import/fairy-blink.png",
+      "sha256": "AAFFD36AA9D36A4688CC3411A4133DE88B1C82B86A7005E9040CB6A083FFC45F"
+    }
+  },
+  "notes": "Copper hair ribbons with deeper directional relief; softly curled coral petal overlay separated from mint/ivory base dress and biological wings.",
+  "edited_objects": 110,
+  "publication_amendment": {
+    "id": "metadata-clean-2026-09-07",
+    "record": "assets/3d/publication/2026-09-07/amendment.json",
+    "original_document_sha256": "706FC929BBD7B770265E80E7FD4946405658A5D282D936A364D9296D03D6CC6B",
+    "authoring_record": "assets/3d/publication/2026-09-07/authoring-records/assets/3d/source/fairy/sculpt-v003/manifest.json",
+    "authoring_record_status": "exact-public-safe-original",
+    "notice": "Metadata-only publication derivative, not a rerun of the historical builder or validator. File digest and size bindings identify publication copies; all measured geometry, materials, rig, action, motion and acceptance evidence remains historical and unchanged. Consult the original authoring record and amendment binding log."
+  }
+}

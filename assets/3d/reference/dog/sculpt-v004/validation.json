@@ -1,0 +1,3791 @@
+{
+  "schema": "asterion-local-modular-companion-v1",
+  "version": "sculpt-v004",
+  "kind": "dog",
+  "name": "Fenn",
+  "source_sha256": "9404D5ADA263786F598802FBF80A545DDFF4D5E796FDB811C217C41DFCB33624",
+  "model_sha256": "91969708CFE8A2443F36FB83D751F35CDE3E0AAF6F8C927D1177989B1C8C3761",
+  "reference_sha256": "1F94ED0A55E8718D7C891421B310932BB00D0022BB10D15D76281C440351171C",
+  "reference_input": "public/assets/companions/dog.png",
+  "input_sha256": {
+    "assets/3d/source/dog/sculpt-v003/dog-sculpt-v003.blend": "225D00C1BDD9AE1EC468E6D71B58307FFBA40C8D13771E6C902AB95842A6CA55",
+    "public/assets/3d/dog/dog-sculpt-v003.glb": "2F912F11E2D332516888216EA2893AA761431AC9C7C0B340E9415558B8895362",
+    "public/assets/companions/dog.png": "1F94ED0A55E8718D7C891421B310932BB00D0022BB10D15D76281C440351171C",
+    "assets/3d/source/companions/sculpt-v004/build.py": "C6FBCA99D1117722B07933B90795DBFFA37DC22B399ECD6B339EAFF3C063A6BD",
+    "assets/3d/source/companions/sculpt-v004/refinements.py": "6247CEA1AE30B56B6FD3D23DEDEF1DD99BCD8A7B9158AA0576340AA2B8F89BCF",
+    "assets/3d/source/companions/sculpt-v004/export_equipment.py": "5EDB676641BE58BDE353213F6DA4F7F7662B76A08F586D0E7DADA7006AF343CF",
+    "assets/3d/source/companions/sculpt-v001/common.py": "A6DF036A5B3F6FAA3C74740382998D829D45C9E2734D91A285F9369764C21F9E",
+    "assets/3d/source/asterion/sculpt-v002/validate_refinement.py": "8C541F26C2D2546FB142988D10F07EDF51C891D1C81F02065C7B62CE01F78EFD",
+    "assets/3d/source/asterion/sculpt-v003/build_head_study.py": "A3B22323201D30A3BD9459985F8F7741A44545010A84D27CC5912E1C8A85E0F2",
+    "assets/3d/source/asterion/sculpt-v001/build_sculpt.py": "9A81C430E8FD07CE520BBA554C78845A508F22E5FB89E524BF515D8BF8415621",
+    "assets/3d/source/asterion/sculpt-v001/rig_delivery.py": "8758D105E70AB5405F61A48A531154CC591EAC0D82B167788F1D0785A16CDFF0",
+    "assets/3d/source/asterion/sculpt-v004/export_equipment.py": "C805B4740463215AE5CC9D314D14966F2BDF91A00FB82D05054BE0BBB8ED930B",
+    "assets/3d/source/companions/sculpt-v004/feline_canine.py": "1F975802D9AC64B7785E0A8EBEC81C6D9C37C3D8FDD59103D07E08285FE96A2E",
+    "assets/3d/source/cat/sculpt-v002/nyra_detail.py": "5DC1C07EAE70AE7C635D4C7026263D8D715EAE097EAD4904299B81D4405BC27B"
+  },
+  "blender": "5.2.1 LTS",
+  "checks": {
+    "original_rest_rig_unchanged": true,
+    "original_constraints_drivers_unchanged": true,
+    "all_original_action_data_unchanged": true,
+    "original_frame_rate_unchanged": true,
+    "authored_eyes_survive_source_reopen": true,
+    "all_source_parts_classified_once": true,
+    "explicit_editable_equipment_groups": true,
+    "meaningful_geometry_refinement": true,
+    "base_clothing_present": true,
+    "two_character_meshes": true,
+    "exact_distinct_components": true,
+    "one_original_shared_skin": true,
+    "nine_original_clips": true,
+    "only_public_extras": true,
+    "skinned_triangle_primitives": true,
+    "under_40_primitives": true,
+    "within_species_triangle_budget": true,
+    "self_contained_no_projection": true,
+    "no_editor_stage": true,
+    "meshopt": true,
+    "within_species_byte_budget": true,
+    "finite_imported_geometry": true,
+    "valid_normalized_known_weights": true,
+    "bounded_importer_triangle_difference": true,
+    "nine_clips_match_historical_import": true,
+    "two_imported_components": true,
+    "imported_equipment_metadata": true,
+    "all_historical_and_builder_inputs_unchanged": true
+  },
+  "components": {
+    "body": {
+      "mesh": 1,
+      "skin": 0,
+      "triangles": 1540372,
+      "primitives": 8
+    },
+    "armor": {
+      "mesh": 0,
+      "skin": 0,
+      "triangles": 24140,
+      "primitives": 3
+    }
+  },
+  "triangles": 1564512,
+  "draw_calls": 11,
+  "materials": 11,
+  "bones": 13,
+  "clips": [
+    "idle",
+    "blink",
+    "happy",
+    "eat",
+    "play",
+    "pet_reaction",
+    "sleep",
+    "wake",
+    "walk"
+  ],
+  "compression_lossless": false,
+  "bytes": 18806388,
+  "geometry": {
+    "vertices": 784913,
+    "triangles": 1564504,
+    "nonfinite_vertices": 0,
+    "nonfinite_transforms": 0,
+    "unweighted_vertices": 0,
+    "invalid_weights": 0,
+    "unknown_weights": 0,
+    "over_four_weights": 0,
+    "max_influences": 2,
+    "bounds_min": [
+      -1.4003907442092896,
+      -1.7851561307907104,
+      -0.012206927873194218
+    ],
+    "bounds_max": [
+      1.4003907442092896,
+      2.505859375,
+      3.253906011581421
+    ],
+    "span": [
+      2.800781488418579,
+      4.2910155057907104,
+      3.266112939454615
+    ]
+  },
+  "triangle_count_evidence": {
+    "authored": 1564512,
+    "imported": 1564504,
+    "exact_equal": false,
+    "triangle_loss": 8,
+    "relative_loss": 5.1134155570554904e-06,
+    "maximum_allowed_loss": 31,
+    "relative_tolerance": 2e-05,
+    "passed": true,
+    "limit": "Count difference only; individual omitted triangle degeneracy is not proven by this check."
+  },
+  "changes": {
+    "notes": "Flowing dark-tipped ear masses, continuous overlapping cream breast, curved plume and richer expressive eyes.",
+    "edited_objects": [
+      {
+        "name": "AST_fenn_v2_head",
+        "operation": "Coherent expressive orbital shaping including original blink lid",
+        "max_displacement": 0.024096943807097482
+      },
+      {
+        "name": "AST_fenn_v2_eye_R_skin_annulus",
+        "operation": "Coherent expressive orbital shaping including original blink lid",
+        "max_displacement": 0.020414473757694562
+      },
+      {
+        "name": "AST_fenn_v2_eye_R",
+        "operation": "Coherent expressive orbital shaping including original blink lid",
+        "max_displacement": 0.01709537258756999
+      },
+      {
+        "name": "AST_fenn_v2_eye_R_upper_lid",
+        "operation": "Coherent expressive orbital shaping including original blink lid",
+        "max_displacement": 0.01859938864535282
+      },
+      {
+        "name": "AST_fenn_v2_eye_R_lower_lid",
+        "operation": "Coherent expressive orbital shaping including original blink lid",
+        "max_displacement": 0.017483200793085185
+      },
+      {
+        "name": "AST_fenn_v2_eye_R_lash_wing",
+        "operation": "Coherent expressive orbital shaping including original blink lid",
+        "max_displacement": 0.004206822381149777
+      },
+      {
+        "name": "AST_fenn_v2_eye_R_catchlight",
+        "operation": "Coherent expressive orbital shaping including original blink lid",
+        "max_displacement": 0.009645640475664852
+      },
+      {
+        "name": "AST_fenn_v2_eye_R_pinlight",
+        "operation": "Coherent expressive orbital shaping including original blink lid",
+        "max_displacement": 0.010529032641032998
+      },
+      {
+        "name": "AST_fenn_v2_eye_R_closed_lid",
+        "operation": "Coherent expressive orbital shaping including original blink lid",
+        "max_displacement": 0.01820940805119209
+      },
+      {
+        "name": "AST_fenn_v2_eye_R_closed_lash",
+        "operation": "Coherent expressive orbital shaping including original blink lid",
+        "max_displacement": 0.00662733059999443
+      },
+      {
+        "name": "AST_fenn_v2_eye_L_skin_annulus",
+        "operation": "Coherent expressive orbital shaping including original blink lid",
+        "max_displacement": 0.020414209565457142
+      },
+      {
+        "name": "AST_fenn_v2_eye_L",
+        "operation": "Coherent expressive orbital shaping including original blink lid",
+        "max_displacement": 0.017095390006868882
+      },
+      {
+        "name": "AST_fenn_v2_eye_L_upper_lid",
+        "operation": "Coherent expressive orbital shaping including original blink lid",
+        "max_displacement": 0.018599388851778365
+      },
+      {
+        "name": "AST_fenn_v2_eye_L_lower_lid",
+        "operation": "Coherent expressive orbital shaping including original blink lid",
+        "max_displacement": 0.0174831791131127
+      },
+      {
+        "name": "AST_fenn_v2_eye_L_lash_wing",
+        "operation": "Coherent expressive orbital shaping including original blink lid",
+        "max_displacement": 0.004206804499756522
+      },
+      {
+        "name": "AST_fenn_v2_eye_L_catchlight",
+        "operation": "Coherent expressive orbital shaping including original blink lid",
+        "max_displacement": 0.012476281169244707
+      },
+      {
+        "name": "AST_fenn_v2_eye_L_pinlight",
+        "operation": "Coherent expressive orbital shaping including original blink lid",
+        "max_displacement": 0.01356948979164363
+      },
+      {
+        "name": "AST_fenn_v2_eye_L_closed_lid",
+        "operation": "Coherent expressive orbital shaping including original blink lid",
+        "max_displacement": 0.018209389342068505
+      },
+      {
+        "name": "AST_fenn_v2_eye_L_closed_lash",
+        "operation": "Coherent expressive orbital shaping including original blink lid",
+        "max_displacement": 0.006627300499916
+      },
+      {
+        "name": "AST_fenn_v2_plush_floppy_ear_L",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_flow_L0_0",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_flow_L0_1",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_flow_L0_2",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_flow_L0_3",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_flow_L1_0",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_flow_L1_1",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_flow_L1_2",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_flow_L1_3",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_flow_L2_0",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_flow_L2_1",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_flow_L2_2",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_flow_L2_3",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_flow_L3_0",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_flow_L3_1",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_flow_L3_2",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_flow_L3_3",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_flow_L4_0",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_flow_L4_1",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_flow_L4_2",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_flow_L4_3",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_root_wisp_L0",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_root_wisp_L1",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_root_wisp_L2",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_root_wisp_L3",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_fenn_v2_plush_floppy_ear_R",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_flow_R0_0",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_flow_R0_1",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_flow_R0_2",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_flow_R0_3",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_flow_R1_0",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_flow_R1_1",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_flow_R1_2",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_flow_R1_3",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_flow_R2_0",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_flow_R2_1",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_flow_R2_2",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_flow_R2_3",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_flow_R3_0",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_flow_R3_1",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_flow_R3_2",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_flow_R3_3",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_flow_R4_0",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_flow_R4_1",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_flow_R4_2",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_flow_R4_3",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_root_wisp_R0",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_root_wisp_R1",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_root_wisp_R2",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_fenn_v2_ear_root_wisp_R3",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_fenn_v2_cheek_fluff_L0",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_fenn_v2_cheek_fluff_L1",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_fenn_v2_cheek_fluff_L2",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_fenn_v2_cheek_fluff_L3",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_fenn_v2_cheek_fluff_L4",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_fenn_v2_cheek_fluff_L5",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_fenn_v2_cheek_fluff_L6",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_fenn_v2_cheek_fluff_R0",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_fenn_v2_cheek_fluff_R1",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_fenn_v2_cheek_fluff_R2",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_fenn_v2_cheek_fluff_R3",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_fenn_v2_cheek_fluff_R4",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_fenn_v2_cheek_fluff_R5",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_fenn_v2_cheek_fluff_R6",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_fenn_v2_crown_flick_0",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_fenn_v2_crown_flick_1",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_fenn_v2_crown_flick_2",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_fenn_v2_crown_flick_3",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_fenn_v2_crown_flick_4",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_fenn_v2_crown_flick_5",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_fenn_v2_crown_flick_6",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_fenn_v2_crown_flick_7",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_fenn_v2_crown_flick_8",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_fenn_v2_cream_bib_0_0",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_fenn_v2_cream_bib_0_1",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_fenn_v2_cream_bib_0_7",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_fenn_v2_cream_bib_0_8",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_fenn_v2_cream_bib_1_0",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_fenn_v2_cream_bib_1_1",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_fenn_v2_cream_bib_1_7",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_fenn_v2_cream_bib_1_8",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_fenn_v2_cream_bib_2_0",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_fenn_v2_cream_bib_2_1",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_fenn_v2_cream_bib_2_2",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_fenn_v2_cream_bib_2_3",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_fenn_v2_cream_bib_2_4",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_fenn_v2_cream_bib_2_5",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_fenn_v2_cream_bib_2_6",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_fenn_v2_full_curled_tail",
+        "operation": "Replaced by a newly shaped continuous sculpt family",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_fenn_v2_head",
+        "operation": "Softer lifted lower jaw exposing the original collar",
+        "max_displacement": 0.05499999999999994
+      },
+      {
+        "name": "AST_fenn_v2_gentle_smile_L",
+        "operation": "Softer lifted lower jaw exposing the original collar",
+        "max_displacement": 0.011598693176551933
+      },
+      {
+        "name": "AST_fenn_v2_gentle_smile_R",
+        "operation": "Softer lifted lower jaw exposing the original collar",
+        "max_displacement": 0.011598693176551933
+      },
+      {
+        "name": "AST_fenn_v2_soft_triangular_nose",
+        "operation": "Broader rounded puppy nose including coherent nostrils",
+        "max_displacement": 0.016380913589568804
+      },
+      {
+        "name": "AST_fenn_v2_nostril_L",
+        "operation": "Broader rounded puppy nose including coherent nostrils",
+        "max_displacement": 0.01235053736970643
+      },
+      {
+        "name": "AST_fenn_v2_nostril_R",
+        "operation": "Broader rounded puppy nose including coherent nostrils",
+        "max_displacement": 0.012385421652651172
+      },
+      {
+        "name": "AST_fenn_v2_navy_celestial_medallion",
+        "operation": "Complete pendant family moved forward for measured fur clearance",
+        "max_displacement": 0.061646394492919414
+      },
+      {
+        "name": "AST_fenn_v2_medallion_gold_bezel",
+        "operation": "Complete pendant family moved forward for measured fur clearance",
+        "max_displacement": 0.061646394492919414
+      },
+      {
+        "name": "AST_fenn_v2_medallion_inner_engraving",
+        "operation": "Complete pendant family moved forward for measured fur clearance",
+        "max_displacement": 0.061646394492919414
+      },
+      {
+        "name": "AST_fenn_v2_medallion_polar_star",
+        "operation": "Complete pendant family moved forward for measured fur clearance",
+        "max_displacement": 0.061646394492919414
+      },
+      {
+        "name": "AST_fenn_v2_medallion_moon",
+        "operation": "Complete pendant family moved forward for measured fur clearance",
+        "max_displacement": 0.061646394492919414
+      },
+      {
+        "name": "AST_fenn_v2_medallion_lower_point",
+        "operation": "Complete pendant family moved forward for measured fur clearance",
+        "max_displacement": 0.061646394492919414
+      },
+      {
+        "name": "AST_fenn_v2_medallion_suspension_loop",
+        "operation": "Complete pendant family moved forward for measured fur clearance",
+        "max_displacement": 0.061646394492919414
+      },
+      {
+        "name": "AST_fenn_v2_collar_hanging_tab",
+        "operation": "Suspension tab reconnected to moved loop; collar-side ring retained",
+        "max_displacement": 0.061646394492919414
+      },
+      {
+        "name": "AST_fenn_v4_flowing_drop_ear_L",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.43339455127716064,
+            -0.956165075302124,
+            1.8820799589157104
+          ],
+          [
+            1.4004579782485962,
+            -0.45087724924087524,
+            3.1969809532165527
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_long_ear_wave_L0",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.4772755801677704,
+            -0.9576518535614014,
+            2.201443910598755
+          ],
+          [
+            1.275163173675537,
+            -0.7098621129989624,
+            3.021664619445801
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_long_ear_wave_L1",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.553586483001709,
+            -0.944455623626709,
+            2.131528854370117
+          ],
+          [
+            1.2501428127288818,
+            -0.7272573709487915,
+            3.0602991580963135
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_long_ear_wave_L2",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.6574662327766418,
+            -0.955970287322998,
+            2.2135283946990967
+          ],
+          [
+            1.1584495306015015,
+            -0.74446702003479,
+            3.043058395385742
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_long_ear_wave_L3",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.5056655406951904,
+            -0.9501438140869141,
+            2.121656656265259
+          ],
+          [
+            1.1432572603225708,
+            -0.7458536028862,
+            2.9519145488739014
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_long_ear_wave_L4",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.6059908270835876,
+            -0.9378156065940857,
+            2.0451109409332275
+          ],
+          [
+            1.140045404434204,
+            -0.7418069839477539,
+            2.9428720474243164
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_long_ear_wave_L5",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.6550910472869873,
+            -0.9450704455375671,
+            2.146533727645874
+          ],
+          [
+            1.0038686990737915,
+            -0.7263016104698181,
+            2.920624256134033
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_long_ear_wave_L6",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.555874228477478,
+            -0.9426355361938477,
+            2.0418848991394043
+          ],
+          [
+            1.0112991333007812,
+            -0.7090563178062439,
+            2.865684747695923
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_soft_cheek_fan_L0",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.5692645907402039,
+            -1.071825385093689,
+            1.9644758701324463
+          ],
+          [
+            0.6936883330345154,
+            -0.8796262741088867,
+            2.0647733211517334
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_soft_cheek_fan_L1",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.5991036891937256,
+            -1.1388477087020874,
+            2.043694019317627
+          ],
+          [
+            0.742373526096344,
+            -0.9467686414718628,
+            2.145106315612793
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_soft_cheek_fan_L2",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.6281741261482239,
+            -1.148809790611267,
+            2.097257137298584
+          ],
+          [
+            0.7315500378608704,
+            -0.9588220715522766,
+            2.1869614124298096
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_soft_cheek_fan_L3",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.6421290040016174,
+            -1.1870951652526855,
+            2.1812307834625244
+          ],
+          [
+            0.7666335701942444,
+            -0.994806170463562,
+            2.28013014793396
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_soft_cheek_fan_L4",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.6523030996322632,
+            -1.2051929235458374,
+            2.242507219314575
+          ],
+          [
+            0.7963740229606628,
+            -1.0120006799697876,
+            2.3491404056549072
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_soft_cheek_fan_L5",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.6641557216644287,
+            -1.204787015914917,
+            2.297820568084717
+          ],
+          [
+            0.769597589969635,
+            -1.0128347873687744,
+            2.3980517387390137
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_soft_cheek_fan_L6",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.6596714854240417,
+            -1.2215971946716309,
+            2.3915793895721436
+          ],
+          [
+            0.7848213315010071,
+            -1.0288920402526855,
+            2.4919068813323975
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_soft_cheek_fan_L7",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.6686949729919434,
+            -1.2047369480133057,
+            2.4427261352539062
+          ],
+          [
+            0.8116452693939209,
+            -1.0121994018554688,
+            2.5444509983062744
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_flowing_drop_ear_R",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -1.4004579782485962,
+            -0.9585894346237183,
+            1.8855060338974
+          ],
+          [
+            -0.43339455127716064,
+            -0.45061826705932617,
+            3.198702573776245
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_long_ear_wave_R0",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -1.0112991333007812,
+            -0.9426354765892029,
+            2.0418848991394043
+          ],
+          [
+            -0.5563734173774719,
+            -0.7097347974777222,
+            2.8658947944641113
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_long_ear_wave_R1",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -1.1033799648284912,
+            -0.9356023669242859,
+            2.016293525695801
+          ],
+          [
+            -0.6070482730865479,
+            -0.7259637117385864,
+            2.9176011085510254
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_long_ear_wave_R2",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -1.0553784370422363,
+            -0.9487035274505615,
+            2.168869972229004
+          ],
+          [
+            -0.6651257276535034,
+            -0.7417111396789551,
+            2.9585366249084473
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_long_ear_wave_R3",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -1.1432572603225708,
+            -0.9501438140869141,
+            2.121656656265259
+          ],
+          [
+            -0.5063059329986572,
+            -0.7463507056236267,
+            2.9527909755706787
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_long_ear_wave_R4",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -1.2134262323379517,
+            -0.9422420263290405,
+            2.102726936340332
+          ],
+          [
+            -0.576952338218689,
+            -0.7429570555686951,
+            3.0182313919067383
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_long_ear_wave_R5",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -1.2100112438201904,
+            -0.9596039652824402,
+            2.235851526260376
+          ],
+          [
+            -0.6423498392105103,
+            -0.730835497379303,
+            3.097989559173584
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_long_ear_wave_R6",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -1.275163173675537,
+            -0.9576518535614014,
+            2.201443910598755
+          ],
+          [
+            -0.4779132604598999,
+            -0.709821343421936,
+            3.0222551822662354
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_soft_cheek_fan_R0",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.6941760182380676,
+            -1.0713034868240356,
+            1.9674959182739258
+          ],
+          [
+            -0.5700742602348328,
+            -0.8794081211090088,
+            2.066390037536621
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_soft_cheek_fan_R1",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.7426126003265381,
+            -1.1384650468826294,
+            2.046335458755493
+          ],
+          [
+            -0.5994557738304138,
+            -0.946871280670166,
+            2.14644455909729
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_soft_cheek_fan_R2",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.7315452098846436,
+            -1.1486358642578125,
+            2.099623203277588
+          ],
+          [
+            -0.6284712553024292,
+            -0.9588465690612793,
+            2.1880013942718506
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_soft_cheek_fan_R3",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.7663920521736145,
+            -1.1869369745254517,
+            2.1836161613464355
+          ],
+          [
+            -0.6422048807144165,
+            -0.9947633147239685,
+            2.2811079025268555
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_soft_cheek_fan_R4",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.7963968515396118,
+            -1.20453679561615,
+            2.244882583618164
+          ],
+          [
+            -0.6525289416313171,
+            -1.0117218494415283,
+            2.350578784942627
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_soft_cheek_fan_R5",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.7694247961044312,
+            -1.2044636011123657,
+            2.300513744354248
+          ],
+          [
+            -0.6643314957618713,
+            -1.0129354000091553,
+            2.3992013931274414
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_soft_cheek_fan_R6",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.7849538922309875,
+            -1.2214527130126953,
+            2.394183397293091
+          ],
+          [
+            -0.660086452960968,
+            -1.028759241104126,
+            2.4932544231414795
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_soft_cheek_fan_R7",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.8115353584289551,
+            -1.2046867609024048,
+            2.4457170963287354
+          ],
+          [
+            -0.6687617301940918,
+            -1.0124750137329102,
+            2.5459442138671875
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_continuous_cream_breast",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.4868631958961487,
+            -1.0953837633132935,
+            0.9185627698898315
+          ],
+          [
+            0.4850127100944519,
+            -0.7303746938705444,
+            1.7653090953826904
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_overlapping_breast_lock_0_0",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.4766610860824585,
+            -0.8736947774887085,
+            1.4740945100784302
+          ],
+          [
+            -0.3948594033718109,
+            -0.7768188118934631,
+            1.7132049798965454
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_overlapping_breast_lock_0_1",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.3588513433933258,
+            -0.987981915473938,
+            1.4470422267913818
+          ],
+          [
+            -0.2855283319950104,
+            -0.8958165049552917,
+            1.7139098644256592
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_overlapping_breast_lock_0_2",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.25271347165107727,
+            -1.0479735136032104,
+            1.463948369026184
+          ],
+          [
+            -0.17453032732009888,
+            -0.9667559266090393,
+            1.7287200689315796
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_overlapping_breast_lock_0_3",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.13982878625392914,
+            -1.0779730081558228,
+            1.449562430381775
+          ],
+          [
+            -0.08239918947219849,
+            -1.005929946899414,
+            1.729319453239441
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_overlapping_breast_lock_0_4",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.03005153499543667,
+            -1.0913084745407104,
+            1.4700132608413696
+          ],
+          [
+            0.027185650542378426,
+            -1.0187469720840454,
+            1.7383204698562622
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_overlapping_breast_lock_0_5",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.07031795382499695,
+            -1.0802725553512573,
+            1.4503084421157837
+          ],
+          [
+            0.14061056077480316,
+            -1.0057276487350464,
+            1.7314598560333252
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_overlapping_breast_lock_0_6",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.1737348735332489,
+            -1.0491865873336792,
+            1.4670376777648926
+          ],
+          [
+            0.2462851107120514,
+            -0.9701604843139648,
+            1.726557970046997
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_overlapping_breast_lock_0_7",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.27194374799728394,
+            -0.9880720376968384,
+            1.4476982355117798
+          ],
+          [
+            0.3732578456401825,
+            -0.8930506706237793,
+            1.719614028930664
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_overlapping_breast_lock_0_8",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.39518851041793823,
+            -0.8733500838279724,
+            1.4747138023376465
+          ],
+          [
+            0.4769614636898041,
+            -0.7749855518341064,
+            1.713388204574585
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_overlapping_breast_lock_1_0",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.4935947060585022,
+            -0.8679607510566711,
+            1.3145805597305298
+          ],
+          [
+            -0.35533156991004944,
+            -0.8188905119895935,
+            1.5759375095367432
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_overlapping_breast_lock_1_1",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.37093812227249146,
+            -0.9462229013442993,
+            1.2926876544952393
+          ],
+          [
+            -0.26986414194107056,
+            -0.89737868309021,
+            1.5665819644927979
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_overlapping_breast_lock_1_2",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.2401687055826187,
+            -1.0026631355285645,
+            1.2968367338180542
+          ],
+          [
+            -0.18511460721492767,
+            -0.9699206948280334,
+            1.5540989637374878
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_overlapping_breast_lock_1_3",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.1425490826368332,
+            -1.0366302728652954,
+            1.2775377035140991
+          ],
+          [
+            -0.07313141226768494,
+            -0.9962360262870789,
+            1.5560184717178345
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_overlapping_breast_lock_1_4",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.03061026521027088,
+            -1.045426368713379,
+            1.296838402748108
+          ],
+          [
+            0.032233402132987976,
+            -1.0095664262771606,
+            1.5586401224136353
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_overlapping_breast_lock_1_5",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.0876535102725029,
+            -1.034799575805664,
+            1.2806611061096191
+          ],
+          [
+            0.1299010068178177,
+            -1.0017919540405273,
+            1.55512273311615
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_overlapping_breast_lock_1_6",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.19150029122829437,
+            -1.0033551454544067,
+            1.2972122430801392
+          ],
+          [
+            0.2436298429965973,
+            -0.9708752036094666,
+            1.5595717430114746
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_overlapping_breast_lock_1_7",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.275173157453537,
+            -0.947216808795929,
+            1.28860604763031
+          ],
+          [
+            0.3692839443683624,
+            -0.8964020609855652,
+            1.566833257675171
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_overlapping_breast_lock_1_8",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.36582130193710327,
+            -0.8602669835090637,
+            1.3232035636901855
+          ],
+          [
+            0.48222458362579346,
+            -0.8199552297592163,
+            1.5745089054107666
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_overlapping_breast_lock_2_0",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.46424147486686707,
+            -0.8773028254508972,
+            1.154822587966919
+          ],
+          [
+            -0.38905099034309387,
+            -0.8491251468658447,
+            1.4038360118865967
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_overlapping_breast_lock_2_1",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.38198426365852356,
+            -0.9627431035041809,
+            1.1276284456253052
+          ],
+          [
+            -0.2668161988258362,
+            -0.8628396987915039,
+            1.4072613716125488
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_overlapping_breast_lock_2_2",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.25980016589164734,
+            -1.008406639099121,
+            1.1383353471755981
+          ],
+          [
+            -0.17199061810970306,
+            -0.9387530088424683,
+            1.411972999572754
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_overlapping_breast_lock_2_3",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.14829526841640472,
+            -1.0384457111358643,
+            1.1185002326965332
+          ],
+          [
+            -0.08043615520000458,
+            -0.9757102727890015,
+            1.4159331321716309
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_overlapping_breast_lock_2_4",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.03186800330877304,
+            -1.044806718826294,
+            1.1414414644241333
+          ],
+          [
+            0.025425059720873833,
+            -0.9953941106796265,
+            1.4207950830459595
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_overlapping_breast_lock_2_5",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.0767434686422348,
+            -1.0374451875686646,
+            1.1217609643936157
+          ],
+          [
+            0.1279202550649643,
+            -0.9793365597724915,
+            1.4174134731292725
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_overlapping_breast_lock_2_6",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.17988041043281555,
+            -1.0085915327072144,
+            1.1375916004180908
+          ],
+          [
+            0.24572931230068207,
+            -0.9380946755409241,
+            1.412531852722168
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_overlapping_breast_lock_2_7",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.27643853425979614,
+            -0.9585517644882202,
+            1.1225911378860474
+          ],
+          [
+            0.36233699321746826,
+            -0.867056131362915,
+            1.4087769985198975
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_overlapping_breast_lock_2_8",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.390434592962265,
+            -0.8754841685295105,
+            1.1540169715881348
+          ],
+          [
+            0.4703056216239929,
+            -0.8517221212387085,
+            1.4047714471817017
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_overlapping_breast_lock_3_0",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.28542637825012207,
+            -0.9823498129844666,
+            0.9680516719818115
+          ],
+          [
+            -0.19240765273571014,
+            -0.8493202328681946,
+            1.2382858991622925
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_overlapping_breast_lock_3_1",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.18714189529418945,
+            -1.004564881324768,
+            0.9522359371185303
+          ],
+          [
+            -0.13719993829727173,
+            -0.8826254606246948,
+            1.24691903591156
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_overlapping_breast_lock_3_2",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.10063527524471283,
+            -1.016997218132019,
+            0.9678031802177429
+          ],
+          [
+            -0.0639476627111435,
+            -0.921826958656311,
+            1.2461293935775757
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_overlapping_breast_lock_3_3",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.025325730443000793,
+            -1.027455449104309,
+            0.9586232304573059
+          ],
+          [
+            0.027146100997924805,
+            -0.9252790808677673,
+            1.2523411512374878
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_overlapping_breast_lock_3_4",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.04903058707714081,
+            -1.0199084281921387,
+            0.9712916612625122
+          ],
+          [
+            0.1084393560886383,
+            -0.9227880239486694,
+            1.2428141832351685
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_overlapping_breast_lock_3_5",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.10213033109903336,
+            -1.0134706497192383,
+            0.9551541805267334
+          ],
+          [
+            0.21542206406593323,
+            -0.8891515135765076,
+            1.2545249462127686
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_overlapping_breast_lock_3_6",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.1903742253780365,
+            -0.9843060374259949,
+            0.9703260660171509
+          ],
+          [
+            0.28257545828819275,
+            -0.8474838137626648,
+            1.243787407875061
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_wind_swept_crown_0",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.36070746183395386,
+            -0.8718773722648621,
+            3.082634210586548
+          ],
+          [
+            -0.1523863971233368,
+            -0.5704746842384338,
+            3.2064008712768555
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_wind_swept_crown_1",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.26343485713005066,
+            -0.8236807584762573,
+            3.1085855960845947
+          ],
+          [
+            -0.07093098759651184,
+            -0.5198498368263245,
+            3.2260982990264893
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_wind_swept_crown_2",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.14957551658153534,
+            -0.9348267316818237,
+            3.1290910243988037
+          ],
+          [
+            0.02343154139816761,
+            -0.6377062797546387,
+            3.2093358039855957
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_wind_swept_crown_3",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.06189749762415886,
+            -0.8370967507362366,
+            3.133390188217163
+          ],
+          [
+            0.1519080549478531,
+            -0.5317562818527222,
+            3.249966621398926
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_wind_swept_crown_4",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.05293721705675125,
+            -0.8551027774810791,
+            3.130358934402466
+          ],
+          [
+            0.23339396715164185,
+            -0.5560563802719116,
+            3.254737615585327
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_wind_swept_crown_5",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.14933538436889648,
+            -0.9304989576339722,
+            3.111085891723633
+          ],
+          [
+            0.3323207497596741,
+            -0.6296935677528381,
+            3.1922144889831543
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_wind_swept_crown_6",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.24825304746627808,
+            -0.8108729720115662,
+            3.0750131607055664
+          ],
+          [
+            0.4573882222175598,
+            -0.5067941546440125,
+            3.1836414337158203
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_golden_cream_curl",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.2901212275028229,
+            0.9837862253189087,
+            1.0380624532699585
+          ],
+          [
+            0.2959355413913727,
+            2.4938266277313232,
+            2.7132651805877686
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_cream_plume_flow_0_0",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.054666079580783844,
+            1.4861443042755127,
+            1.131190538406372
+          ],
+          [
+            0.16523431241512299,
+            2.2749881744384766,
+            1.6135162115097046
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_cream_plume_flow_0_1",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.06989499926567078,
+            1.8754425048828125,
+            1.2952455282211304
+          ],
+          [
+            0.18266081809997559,
+            2.4657227993011475,
+            2.0127480030059814
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_cream_plume_flow_0_2",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.07379782199859619,
+            2.1459007263183594,
+            1.4964369535446167
+          ],
+          [
+            0.18785527348518372,
+            2.493595600128174,
+            2.3577117919921875
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_cream_plume_flow_0_3",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.0840957909822464,
+            2.323382616043091,
+            1.7082080841064453
+          ],
+          [
+            0.17105072736740112,
+            2.505341053009033,
+            2.520961046218872
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_cream_plume_flow_0_4",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.07084912061691284,
+            2.1793389320373535,
+            1.948620319366455
+          ],
+          [
+            0.1687013953924179,
+            2.5029702186584473,
+            2.640305995941162
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_cream_plume_flow_0_5",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.05129673331975937,
+            1.9105764627456665,
+            2.2601609230041504
+          ],
+          [
+            0.1616533398628235,
+            2.4479756355285645,
+            2.7046992778778076
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_cream_plume_flow_0_6",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.04237177595496178,
+            1.5613071918487549,
+            2.554018259048462
+          ],
+          [
+            0.1295405477285385,
+            2.2670695781707764,
+            2.7309868335723877
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_cream_plume_flow_0_7",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.011315682902932167,
+            1.346932291984558,
+            2.2486095428466797
+          ],
+          [
+            0.11376693844795227,
+            1.942365050315857,
+            2.7115838527679443
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_cream_plume_flow_1_0",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.1818222850561142,
+            1.468705654144287,
+            1.2100965976715088
+          ],
+          [
+            0.27406930923461914,
+            2.2528254985809326,
+            1.747248649597168
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_cream_plume_flow_1_1",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.19296956062316895,
+            1.7506827116012573,
+            1.3217425346374512
+          ],
+          [
+            0.2808227241039276,
+            2.338411331176758,
+            1.8978008031845093
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_cream_plume_flow_1_2",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.1975644826889038,
+            2.0136337280273438,
+            1.4921447038650513
+          ],
+          [
+            0.2815302312374115,
+            2.3894195556640625,
+            2.082859754562378
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_cream_plume_flow_1_3",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.1963908076286316,
+            2.2422502040863037,
+            1.733662724494934
+          ],
+          [
+            0.2631845772266388,
+            2.430115222930908,
+            2.381012201309204
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_cream_plume_flow_1_4",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.1733531504869461,
+            2.0411763191223145,
+            2.0290191173553467
+          ],
+          [
+            0.24872630834579468,
+            2.4384090900421143,
+            2.6250834465026855
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_cream_plume_flow_1_5",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.1489315778017044,
+            1.6983925104141235,
+            2.33322811126709
+          ],
+          [
+            0.23638096451759338,
+            2.3588156700134277,
+            2.676942825317383
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_cream_plume_flow_1_6",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.1417931616306305,
+            1.4838799238204956,
+            2.459733009338379
+          ],
+          [
+            0.2132188230752945,
+            2.2073638439178467,
+            2.6864051818847656
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_cream_plume_flow_1_7",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.12309252470731735,
+            1.3952836990356445,
+            2.3239738941192627
+          ],
+          [
+            0.20625846087932587,
+            1.9875422716140747,
+            2.682678461074829
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_cream_plume_flow_2_0",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.2230207473039627,
+            1.4130781888961792,
+            1.2950698137283325
+          ],
+          [
+            0.30331677198410034,
+            2.0553736686706543,
+            1.6859081983566284
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_cream_plume_flow_2_1",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.24627652764320374,
+            1.7649197578430176,
+            1.4413161277770996
+          ],
+          [
+            0.3160286843776703,
+            2.218446731567383,
+            1.912354588508606
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_cream_plume_flow_2_2",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.2576186954975128,
+            2.0152111053466797,
+            1.6259337663650513
+          ],
+          [
+            0.315658301115036,
+            2.2962448596954346,
+            2.201265335083008
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_cream_plume_flow_2_3",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.25554409623146057,
+            2.1395325660705566,
+            1.8126766681671143
+          ],
+          [
+            0.30670228600502014,
+            2.3259425163269043,
+            2.432802200317383
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_cream_plume_flow_2_4",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.24662627279758453,
+            1.9604579210281372,
+            2.000978946685791
+          ],
+          [
+            0.3009719252586365,
+            2.3377926349639893,
+            2.510775566101074
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_cream_plume_flow_2_5",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.23755475878715515,
+            1.811218023300171,
+            2.2190141677856445
+          ],
+          [
+            0.2949426472187042,
+            2.30128812789917,
+            2.5428144931793213
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_cream_plume_flow_2_6",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.22979791462421417,
+            1.6673314571380615,
+            2.426302433013916
+          ],
+          [
+            0.281713604927063,
+            2.1584584712982178,
+            2.565065383911133
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_cream_plume_flow_2_7",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.20383547246456146,
+            1.5080482959747314,
+            2.3158249855041504
+          ],
+          [
+            0.2654511034488678,
+            1.931209921836853,
+            2.5753114223480225
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_cream_plume_flow_3_0",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.2075308859348297,
+            1.4235727787017822,
+            1.4074417352676392
+          ],
+          [
+            0.29588377475738525,
+            1.9832996129989624,
+            1.82807195186615
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_cream_plume_flow_3_1",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.22840958833694458,
+            1.6553535461425781,
+            1.5122684240341187
+          ],
+          [
+            0.31064072251319885,
+            2.0821287631988525,
+            2.0325088500976562
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_cream_plume_flow_3_2",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.2454383820295334,
+            1.8651291131973267,
+            1.6622955799102783
+          ],
+          [
+            0.31410372257232666,
+            2.120086908340454,
+            2.1741621494293213
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_cream_plume_flow_3_3",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.25270336866378784,
+            2.016357898712158,
+            1.8551220893859863
+          ],
+          [
+            0.30455324053764343,
+            2.1401515007019043,
+            2.2823593616485596
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_cream_plume_flow_3_4",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.2438010573387146,
+            1.957229495048523,
+            2.0667693614959717
+          ],
+          [
+            0.29812148213386536,
+            2.160156011581421,
+            2.3182780742645264
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_cream_plume_flow_3_5",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.22320988774299622,
+            1.8410522937774658,
+            2.228078842163086
+          ],
+          [
+            0.2672652006149292,
+            2.0857326984405518,
+            2.333963394165039
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_cream_plume_flow_3_6",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.19497428834438324,
+            1.7057536840438843,
+            2.289313554763794
+          ],
+          [
+            0.26518940925598145,
+            2.012336254119873,
+            2.3787314891815186
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_cream_plume_flow_3_7",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            0.1496673971414566,
+            1.5806270837783813,
+            2.2146339416503906
+          ],
+          [
+            0.24955223500728607,
+            1.923386573791504,
+            2.397469997406006
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_cream_plume_flow_4_0",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.18773098289966583,
+            1.3394756317138672,
+            1.5054270029067993
+          ],
+          [
+            -0.08318734914064407,
+            1.8958641290664673,
+            1.9471375942230225
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_cream_plume_flow_4_1",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.20726308226585388,
+            1.6236720085144043,
+            1.660434365272522
+          ],
+          [
+            -0.09106267243623734,
+            1.9586142301559448,
+            2.0801639556884766
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_cream_plume_flow_4_2",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.20900391042232513,
+            1.8213688135147095,
+            1.829973816871643
+          ],
+          [
+            -0.11632974445819855,
+            1.9696779251098633,
+            2.1312975883483887
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_cream_plume_flow_4_3",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.2012598216533661,
+            1.9216008186340332,
+            1.9685311317443848
+          ],
+          [
+            -0.1490096002817154,
+            1.9634099006652832,
+            2.2075083255767822
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_cream_plume_flow_4_4",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.20534639060497284,
+            1.9383234977722168,
+            2.0827298164367676
+          ],
+          [
+            -0.15613609552383423,
+            1.971957802772522,
+            2.255218744277954
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_cream_plume_flow_4_5",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.20218884944915771,
+            1.8288921117782593,
+            2.1494364738464355
+          ],
+          [
+            -0.16425924003124237,
+            1.9762710332870483,
+            2.293436050415039
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_cream_plume_flow_4_6",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.1995682567358017,
+            1.677369236946106,
+            2.2388246059417725
+          ],
+          [
+            -0.16963617503643036,
+            1.952858805656433,
+            2.2898447513580322
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_cream_plume_flow_4_7",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.22131025791168213,
+            1.5886784791946411,
+            2.208524703979492
+          ],
+          [
+            -0.13090766966342926,
+            1.9019606113433838,
+            2.3254446983337402
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_cream_plume_flow_5_0",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.2981700897216797,
+            1.4313710927963257,
+            1.429948329925537
+          ],
+          [
+            -0.19885802268981934,
+            1.9991687536239624,
+            1.8039289712905884
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_cream_plume_flow_5_1",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.31237536668777466,
+            1.6547386646270752,
+            1.533149242401123
+          ],
+          [
+            -0.21895602345466614,
+            2.0867555141448975,
+            1.9296238422393799
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_cream_plume_flow_5_2",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.3207602798938751,
+            1.854767918586731,
+            1.6719096899032593
+          ],
+          [
+            -0.23781883716583252,
+            2.1477210521698,
+            2.1087894439697266
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_cream_plume_flow_5_3",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.31452691555023193,
+            2.0156614780426025,
+            1.8537378311157227
+          ],
+          [
+            -0.25179147720336914,
+            2.1681947708129883,
+            2.3235716819763184
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_cream_plume_flow_5_4",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.309770792722702,
+            1.9202460050582886,
+            2.0586719512939453
+          ],
+          [
+            -0.2498439997434616,
+            2.181598663330078,
+            2.4121882915496826
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_cream_plume_flow_5_5",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.2989082336425781,
+            1.7635457515716553,
+            2.2360095977783203
+          ],
+          [
+            -0.24158985912799835,
+            2.1397933959960938,
+            2.4371049404144287
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_cream_plume_flow_5_6",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.28382688760757446,
+            1.6520373821258545,
+            2.336697816848755
+          ],
+          [
+            -0.22514955699443817,
+            2.0396013259887695,
+            2.4409615993499756
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_cream_plume_flow_5_7",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.26835301518440247,
+            1.5638328790664673,
+            2.2748467922210693
+          ],
+          [
+            -0.2014838308095932,
+            1.9233652353286743,
+            2.452671527862549
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_cream_plume_flow_6_0",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.28921228647232056,
+            1.3928402662277222,
+            1.2560491561889648
+          ],
+          [
+            -0.2147497832775116,
+            2.107012987136841,
+            1.637183427810669
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_cream_plume_flow_6_1",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.3039204478263855,
+            1.7598775625228882,
+            1.4009315967559814
+          ],
+          [
+            -0.2351420819759369,
+            2.3055005073547363,
+            1.9785637855529785
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_cream_plume_flow_6_2",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.30499738454818726,
+            2.037487506866455,
+            1.604892373085022
+          ],
+          [
+            -0.2450987696647644,
+            2.3451578617095947,
+            2.3022849559783936
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_cream_plume_flow_6_3",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.2986530065536499,
+            2.14591383934021,
+            1.817367672920227
+          ],
+          [
+            -0.24574626982212067,
+            2.3496735095977783,
+            2.460153579711914
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_cream_plume_flow_6_4",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.29671797156333923,
+            2.032898187637329,
+            2.020477056503296
+          ],
+          [
+            -0.24073033034801483,
+            2.3488447666168213,
+            2.513313055038452
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_cream_plume_flow_6_5",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.2937072217464447,
+            1.8943170309066772,
+            2.2267251014709473
+          ],
+          [
+            -0.2366846650838852,
+            2.3032617568969727,
+            2.5340731143951416
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_cream_plume_flow_6_6",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.28218740224838257,
+            1.6875531673431396,
+            2.41037654876709
+          ],
+          [
+            -0.23390808701515198,
+            2.162231206893921,
+            2.555790662765503
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_cream_plume_flow_6_7",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.26483118534088135,
+            1.4780547618865967,
+            2.2803938388824463
+          ],
+          [
+            -0.18727043271064758,
+            1.946297287940979,
+            2.5576577186584473
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_cream_plume_flow_7_0",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.20617873966693878,
+            1.5304532051086426,
+            1.1716190576553345
+          ],
+          [
+            -0.11739286035299301,
+            2.34102201461792,
+            1.7444134950637817
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_cream_plume_flow_7_1",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.22195395827293396,
+            1.8181322813034058,
+            1.29469633102417
+          ],
+          [
+            -0.12260051816701889,
+            2.4235103130340576,
+            1.9571739435195923
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_cream_plume_flow_7_2",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.23471298813819885,
+            2.055405616760254,
+            1.4576350450515747
+          ],
+          [
+            -0.12892033159732819,
+            2.4385194778442383,
+            2.141446590423584
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_cream_plume_flow_7_3",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.23150518536567688,
+            2.2644433975219727,
+            1.6851662397384644
+          ],
+          [
+            -0.1488942950963974,
+            2.4591004848480225,
+            2.3620119094848633
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_cream_plume_flow_7_4",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.24348752200603485,
+            2.113184928894043,
+            1.9875131845474243
+          ],
+          [
+            -0.1541488617658615,
+            2.455461025238037,
+            2.5973715782165527
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_cream_plume_flow_7_5",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.25094184279441833,
+            1.7528270483016968,
+            2.32000994682312
+          ],
+          [
+            -0.15930025279521942,
+            2.3600001335144043,
+            2.652111053466797
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_cream_plume_flow_7_6",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.2378419041633606,
+            1.482195258140564,
+            2.4358954429626465
+          ],
+          [
+            -0.1684882789850235,
+            2.1661691665649414,
+            2.657499074935913
+          ]
+        ]
+      },
+      {
+        "name": "AST_fenn_v4_cream_plume_flow_7_7",
+        "operation": "New reference-shaped volumetric sculpt surface",
+        "authored_bounds": [
+          [
+            -0.23203428089618683,
+            1.3946315050125122,
+            2.2438771724700928
+          ],
+          [
+            -0.12659858167171478,
+            1.947453260421753,
+            2.647594690322876
+          ]
+        ]
+      }
+    ],
+    "added_base_clothing": [],
+    "added_sculpt_objects": [
+      "AST_fenn_v4_flowing_drop_ear_L",
+      "AST_fenn_v4_long_ear_wave_L0",
+      "AST_fenn_v4_long_ear_wave_L1",
+      "AST_fenn_v4_long_ear_wave_L2",
+      "AST_fenn_v4_long_ear_wave_L3",
+      "AST_fenn_v4_long_ear_wave_L4",
+      "AST_fenn_v4_long_ear_wave_L5",
+      "AST_fenn_v4_long_ear_wave_L6",
+      "AST_fenn_v4_soft_cheek_fan_L0",
+      "AST_fenn_v4_soft_cheek_fan_L1",
+      "AST_fenn_v4_soft_cheek_fan_L2",
+      "AST_fenn_v4_soft_cheek_fan_L3",
+      "AST_fenn_v4_soft_cheek_fan_L4",
+      "AST_fenn_v4_soft_cheek_fan_L5",
+      "AST_fenn_v4_soft_cheek_fan_L6",
+      "AST_fenn_v4_soft_cheek_fan_L7",
+      "AST_fenn_v4_flowing_drop_ear_R",
+      "AST_fenn_v4_long_ear_wave_R0",
+      "AST_fenn_v4_long_ear_wave_R1",
+      "AST_fenn_v4_long_ear_wave_R2",
+      "AST_fenn_v4_long_ear_wave_R3",
+      "AST_fenn_v4_long_ear_wave_R4",
+      "AST_fenn_v4_long_ear_wave_R5",
+      "AST_fenn_v4_long_ear_wave_R6",
+      "AST_fenn_v4_soft_cheek_fan_R0",
+      "AST_fenn_v4_soft_cheek_fan_R1",
+      "AST_fenn_v4_soft_cheek_fan_R2",
+      "AST_fenn_v4_soft_cheek_fan_R3",
+      "AST_fenn_v4_soft_cheek_fan_R4",
+      "AST_fenn_v4_soft_cheek_fan_R5",
+      "AST_fenn_v4_soft_cheek_fan_R6",
+      "AST_fenn_v4_soft_cheek_fan_R7",
+      "AST_fenn_v4_continuous_cream_breast",
+      "AST_fenn_v4_overlapping_breast_lock_0_0",
+      "AST_fenn_v4_overlapping_breast_lock_0_1",
+      "AST_fenn_v4_overlapping_breast_lock_0_2",
+      "AST_fenn_v4_overlapping_breast_lock_0_3",
+      "AST_fenn_v4_overlapping_breast_lock_0_4",
+      "AST_fenn_v4_overlapping_breast_lock_0_5",
+      "AST_fenn_v4_overlapping_breast_lock_0_6",
+      "AST_fenn_v4_overlapping_breast_lock_0_7",
+      "AST_fenn_v4_overlapping_breast_lock_0_8",
+      "AST_fenn_v4_overlapping_breast_lock_1_0",
+      "AST_fenn_v4_overlapping_breast_lock_1_1",
+      "AST_fenn_v4_overlapping_breast_lock_1_2",
+      "AST_fenn_v4_overlapping_breast_lock_1_3",
+      "AST_fenn_v4_overlapping_breast_lock_1_4",
+      "AST_fenn_v4_overlapping_breast_lock_1_5",
+      "AST_fenn_v4_overlapping_breast_lock_1_6",
+      "AST_fenn_v4_overlapping_breast_lock_1_7",
+      "AST_fenn_v4_overlapping_breast_lock_1_8",
+      "AST_fenn_v4_overlapping_breast_lock_2_0",
+      "AST_fenn_v4_overlapping_breast_lock_2_1",
+      "AST_fenn_v4_overlapping_breast_lock_2_2",
+      "AST_fenn_v4_overlapping_breast_lock_2_3",
+      "AST_fenn_v4_overlapping_breast_lock_2_4",
+      "AST_fenn_v4_overlapping_breast_lock_2_5",
+      "AST_fenn_v4_overlapping_breast_lock_2_6",
+      "AST_fenn_v4_overlapping_breast_lock_2_7",
+      "AST_fenn_v4_overlapping_breast_lock_2_8",
+      "AST_fenn_v4_overlapping_breast_lock_3_0",
+      "AST_fenn_v4_overlapping_breast_lock_3_1",
+      "AST_fenn_v4_overlapping_breast_lock_3_2",
+      "AST_fenn_v4_overlapping_breast_lock_3_3",
+      "AST_fenn_v4_overlapping_breast_lock_3_4",
+      "AST_fenn_v4_overlapping_breast_lock_3_5",
+      "AST_fenn_v4_overlapping_breast_lock_3_6",
+      "AST_fenn_v4_wind_swept_crown_0",
+      "AST_fenn_v4_wind_swept_crown_1",
+      "AST_fenn_v4_wind_swept_crown_2",
+      "AST_fenn_v4_wind_swept_crown_3",
+      "AST_fenn_v4_wind_swept_crown_4",
+      "AST_fenn_v4_wind_swept_crown_5",
+      "AST_fenn_v4_wind_swept_crown_6",
+      "AST_fenn_v4_golden_cream_curl",
+      "AST_fenn_v4_cream_plume_flow_0_0",
+      "AST_fenn_v4_cream_plume_flow_0_1",
+      "AST_fenn_v4_cream_plume_flow_0_2",
+      "AST_fenn_v4_cream_plume_flow_0_3",
+      "AST_fenn_v4_cream_plume_flow_0_4",
+      "AST_fenn_v4_cream_plume_flow_0_5",
+      "AST_fenn_v4_cream_plume_flow_0_6",
+      "AST_fenn_v4_cream_plume_flow_0_7",
+      "AST_fenn_v4_cream_plume_flow_1_0",
+      "AST_fenn_v4_cream_plume_flow_1_1",
+      "AST_fenn_v4_cream_plume_flow_1_2",
+      "AST_fenn_v4_cream_plume_flow_1_3",
+      "AST_fenn_v4_cream_plume_flow_1_4",
+      "AST_fenn_v4_cream_plume_flow_1_5",
+      "AST_fenn_v4_cream_plume_flow_1_6",
+      "AST_fenn_v4_cream_plume_flow_1_7",
+      "AST_fenn_v4_cream_plume_flow_2_0",
+      "AST_fenn_v4_cream_plume_flow_2_1",
+      "AST_fenn_v4_cream_plume_flow_2_2",
+      "AST_fenn_v4_cream_plume_flow_2_3",
+      "AST_fenn_v4_cream_plume_flow_2_4",
+      "AST_fenn_v4_cream_plume_flow_2_5",
+      "AST_fenn_v4_cream_plume_flow_2_6",
+      "AST_fenn_v4_cream_plume_flow_2_7",
+      "AST_fenn_v4_cream_plume_flow_3_0",
+      "AST_fenn_v4_cream_plume_flow_3_1",
+      "AST_fenn_v4_cream_plume_flow_3_2",
+      "AST_fenn_v4_cream_plume_flow_3_3",
+      "AST_fenn_v4_cream_plume_flow_3_4",
+      "AST_fenn_v4_cream_plume_flow_3_5",
+      "AST_fenn_v4_cream_plume_flow_3_6",
+      "AST_fenn_v4_cream_plume_flow_3_7",
+      "AST_fenn_v4_cream_plume_flow_4_0",
+      "AST_fenn_v4_cream_plume_flow_4_1",
+      "AST_fenn_v4_cream_plume_flow_4_2",
+      "AST_fenn_v4_cream_plume_flow_4_3",
+      "AST_fenn_v4_cream_plume_flow_4_4",
+      "AST_fenn_v4_cream_plume_flow_4_5",
+      "AST_fenn_v4_cream_plume_flow_4_6",
+      "AST_fenn_v4_cream_plume_flow_4_7",
+      "AST_fenn_v4_cream_plume_flow_5_0",
+      "AST_fenn_v4_cream_plume_flow_5_1",
+      "AST_fenn_v4_cream_plume_flow_5_2",
+      "AST_fenn_v4_cream_plume_flow_5_3",
+      "AST_fenn_v4_cream_plume_flow_5_4",
+      "AST_fenn_v4_cream_plume_flow_5_5",
+      "AST_fenn_v4_cream_plume_flow_5_6",
+      "AST_fenn_v4_cream_plume_flow_5_7",
+      "AST_fenn_v4_cream_plume_flow_6_0",
+      "AST_fenn_v4_cream_plume_flow_6_1",
+      "AST_fenn_v4_cream_plume_flow_6_2",
+      "AST_fenn_v4_cream_plume_flow_6_3",
+      "AST_fenn_v4_cream_plume_flow_6_4",
+      "AST_fenn_v4_cream_plume_flow_6_5",
+      "AST_fenn_v4_cream_plume_flow_6_6",
+      "AST_fenn_v4_cream_plume_flow_6_7",
+      "AST_fenn_v4_cream_plume_flow_7_0",
+      "AST_fenn_v4_cream_plume_flow_7_1",
+      "AST_fenn_v4_cream_plume_flow_7_2",
+      "AST_fenn_v4_cream_plume_flow_7_3",
+      "AST_fenn_v4_cream_plume_flow_7_4",
+      "AST_fenn_v4_cream_plume_flow_7_5",
+      "AST_fenn_v4_cream_plume_flow_7_6",
+      "AST_fenn_v4_cream_plume_flow_7_7"
+    ],
+    "material_edits": [
+      {
+        "name": "AST_fenn_v2_body",
+        "operation": "Baked directional painterly coat color",
+        "maximum_linear_color_difference": 0.19903178226773988
+      },
+      {
+        "name": "AST_fenn_v2_head",
+        "operation": "Baked directional painterly coat color",
+        "maximum_linear_color_difference": 0.20478921120470428
+      },
+      {
+        "name": "AST_fenn_v2_eye_R_skin_annulus",
+        "operation": "Baked directional painterly coat color",
+        "maximum_linear_color_difference": 0.16018407882672908
+      },
+      {
+        "name": "AST_fenn_v2_eye_R_closed_lid",
+        "operation": "Baked directional painterly coat color",
+        "maximum_linear_color_difference": 0.11873132308700007
+      },
+      {
+        "name": "AST_fenn_v2_eye_L_skin_annulus",
+        "operation": "Baked directional painterly coat color",
+        "maximum_linear_color_difference": 0.16588251920265773
+      },
+      {
+        "name": "AST_fenn_v2_eye_L_closed_lid",
+        "operation": "Baked directional painterly coat color",
+        "maximum_linear_color_difference": 0.12360657257898944
+      }
+    ],
+    "pendant_clearance": {
+      "method": "Conservative projected ellipse and front/back support-plane separation",
+      "ellipse_radii": [
+        0.289,
+        0.351
+      ],
+      "footprint_fur_vertices": 25106,
+      "normal": [
+        0.0,
+        -0.9968152642250061,
+        -0.07974521815776825
+      ],
+      "family": [
+        "AST_fenn_v2_navy_celestial_medallion",
+        "AST_fenn_v2_medallion_gold_bezel",
+        "AST_fenn_v2_medallion_inner_engraving",
+        "AST_fenn_v2_medallion_polar_star",
+        "AST_fenn_v2_medallion_moon",
+        "AST_fenn_v2_medallion_lower_point",
+        "AST_fenn_v2_medallion_suspension_loop"
+      ],
+      "translation": [
+        0.0,
+        -0.06145006790757179,
+        -0.004916005302220583
+      ],
+      "translation_distance": 0.0616463939011096,
+      "required_clearance": 0.024,
+      "measured_clearance": 0.024000051197333505,
+      "original_tab_collar_ring_unchanged": true,
+      "tab_collar_ring_maximum_error": 0.0,
+      "bib_deleted_or_hidden": false
+    },
+    "dependency_paths": [
+      "assets/3d/source/cat/sculpt-v002/nyra_detail.py"
+    ],
+    "ocular_revision": "Coherently reshaped orbital surfaces and closed lids; original actions unchanged.",
+    "likeness_limit": "Single-view hidden surfaces inferred; artistic reconstruction, not exact 1:1 identity.",
+    "equipment_source_objects": [
+      "AST_fenn_v2_navy_star_collar",
+      "AST_fenn_v2_collar_gold_edge_0",
+      "AST_fenn_v2_collar_gold_edge_1",
+      "AST_fenn_v2_collar_star_0",
+      "AST_fenn_v2_collar_star_1",
+      "AST_fenn_v2_collar_star_2",
+      "AST_fenn_v2_collar_star_3",
+      "AST_fenn_v2_collar_star_4",
+      "AST_fenn_v2_collar_star_5",
+      "AST_fenn_v2_collar_star_6",
+      "AST_fenn_v2_collar_star_7",
+      "AST_fenn_v2_collar_star_8",
+      "AST_fenn_v2_collar_star_9",
+      "AST_fenn_v2_collar_star_10",
+      "AST_fenn_v2_forehead_long_star",
+      "AST_fenn_v2_forehead_nested_star",
+      "AST_fenn_v2_cheek_spark_L0",
+      "AST_fenn_v2_cheek_spark_L1",
+      "AST_fenn_v2_ankle_gold_spark_FL",
+      "AST_fenn_v2_ankle_gold_spark_HL",
+      "AST_fenn_v2_cheek_spark_R0",
+      "AST_fenn_v2_cheek_spark_R1",
+      "AST_fenn_v2_ankle_gold_spark_FR",
+      "AST_fenn_v2_ankle_gold_spark_HR",
+      "AST_fenn_v2_navy_celestial_medallion",
+      "AST_fenn_v2_medallion_gold_bezel",
+      "AST_fenn_v2_medallion_inner_engraving",
+      "AST_fenn_v2_medallion_polar_star",
+      "AST_fenn_v2_medallion_moon",
+      "AST_fenn_v2_medallion_lower_point",
+      "AST_fenn_v2_medallion_suspension_loop",
+      "AST_fenn_v2_collar_hanging_tab"
+    ],
+    "body_source_objects": [
+      "AST_fenn_v2_body",
+      "AST_fenn_v2_head",
+      "AST_fenn_v2_eye_R_skin_annulus",
+      "AST_fenn_v2_eye_R",
+      "AST_fenn_v2_eye_R_upper_lid",
+      "AST_fenn_v2_eye_R_lower_lid",
+      "AST_fenn_v2_eye_R_lash_wing",
+      "AST_fenn_v2_eye_R_catchlight",
+      "AST_fenn_v2_eye_R_pinlight",
+      "AST_fenn_v2_eye_R_closed_lid",
+      "AST_fenn_v2_eye_R_closed_lash",
+      "AST_fenn_v2_eye_L_skin_annulus",
+      "AST_fenn_v2_eye_L",
+      "AST_fenn_v2_eye_L_upper_lid",
+      "AST_fenn_v2_eye_L_lower_lid",
+      "AST_fenn_v2_eye_L_lash_wing",
+      "AST_fenn_v2_eye_L_catchlight",
+      "AST_fenn_v2_eye_L_pinlight",
+      "AST_fenn_v2_eye_L_closed_lid",
+      "AST_fenn_v2_eye_L_closed_lash",
+      "AST_fenn_v2_cream_brow_L0",
+      "AST_fenn_v2_cream_brow_L1",
+      "AST_fenn_v2_cream_brow_L2",
+      "AST_fenn_v2_cream_brow_L3",
+      "AST_fenn_v2_cream_brow_L4",
+      "AST_fenn_v2_haunch_flow_L0_0",
+      "AST_fenn_v2_haunch_flow_L0_4",
+      "AST_fenn_v2_haunch_flow_L1_0",
+      "AST_fenn_v2_haunch_flow_L2_0",
+      "AST_fenn_v2_haunch_flow_L2_1",
+      "AST_fenn_v2_leg_fluff_FL0",
+      "AST_fenn_v2_leg_fluff_FL1",
+      "AST_fenn_v2_leg_fluff_FL2",
+      "AST_fenn_v2_leg_fluff_FL3",
+      "AST_fenn_v2_leg_fluff_HL0",
+      "AST_fenn_v2_leg_fluff_HL1",
+      "AST_fenn_v2_leg_fluff_HL2",
+      "AST_fenn_v2_leg_fluff_HL3",
+      "AST_fenn_v2_cream_brow_R0",
+      "AST_fenn_v2_cream_brow_R1",
+      "AST_fenn_v2_cream_brow_R2",
+      "AST_fenn_v2_cream_brow_R3",
+      "AST_fenn_v2_cream_brow_R4",
+      "AST_fenn_v2_haunch_flow_R0_0",
+      "AST_fenn_v2_haunch_flow_R0_4",
+      "AST_fenn_v2_haunch_flow_R1_0",
+      "AST_fenn_v2_haunch_flow_R2_0",
+      "AST_fenn_v2_haunch_flow_R2_1",
+      "AST_fenn_v2_leg_fluff_FR0",
+      "AST_fenn_v2_leg_fluff_FR1",
+      "AST_fenn_v2_leg_fluff_FR2",
+      "AST_fenn_v2_leg_fluff_FR3",
+      "AST_fenn_v2_leg_fluff_HR0",
+      "AST_fenn_v2_leg_fluff_HR1",
+      "AST_fenn_v2_leg_fluff_HR2",
+      "AST_fenn_v2_leg_fluff_HR3",
+      "AST_fenn_v2_nape_flow_00",
+      "AST_fenn_v2_nape_flow_01",
+      "AST_fenn_v2_nape_flow_02",
+      "AST_fenn_v2_nape_flow_03",
+      "AST_fenn_v2_nape_flow_04",
+      "AST_fenn_v2_nape_flow_10",
+      "AST_fenn_v2_nape_flow_11",
+      "AST_fenn_v2_nape_flow_12",
+      "AST_fenn_v2_nape_flow_13",
+      "AST_fenn_v2_nape_flow_14",
+      "AST_fenn_v2_shoulder_cream_crescent_L",
+      "AST_fenn_v2_shoulder_cream_spark_L",
+      "AST_fenn_v2_haunch_cream_crescent_L",
+      "AST_fenn_v2_haunch_cream_spark_L",
+      "AST_fenn_v2_shoulder_cream_crescent_R",
+      "AST_fenn_v2_shoulder_cream_spark_R",
+      "AST_fenn_v2_haunch_cream_crescent_R",
+      "AST_fenn_v2_haunch_cream_spark_R",
+      "AST_fenn_v2_soft_triangular_nose",
+      "AST_fenn_v2_nostril_L",
+      "AST_fenn_v2_gentle_smile_L",
+      "AST_fenn_v2_nostril_R",
+      "AST_fenn_v2_gentle_smile_R",
+      "AST_fenn_v4_flowing_drop_ear_L",
+      "AST_fenn_v4_long_ear_wave_L0",
+      "AST_fenn_v4_long_ear_wave_L1",
+      "AST_fenn_v4_long_ear_wave_L2",
+      "AST_fenn_v4_long_ear_wave_L3",
+      "AST_fenn_v4_long_ear_wave_L4",
+      "AST_fenn_v4_long_ear_wave_L5",
+      "AST_fenn_v4_long_ear_wave_L6",
+      "AST_fenn_v4_soft_cheek_fan_L0",
+      "AST_fenn_v4_soft_cheek_fan_L1",
+      "AST_fenn_v4_soft_cheek_fan_L2",
+      "AST_fenn_v4_soft_cheek_fan_L3",
+      "AST_fenn_v4_soft_cheek_fan_L4",
+      "AST_fenn_v4_soft_cheek_fan_L5",
+      "AST_fenn_v4_soft_cheek_fan_L6",
+      "AST_fenn_v4_soft_cheek_fan_L7",
+      "AST_fenn_v4_flowing_drop_ear_R",
+      "AST_fenn_v4_long_ear_wave_R0",
+      "AST_fenn_v4_long_ear_wave_R1",
+      "AST_fenn_v4_long_ear_wave_R2",
+      "AST_fenn_v4_long_ear_wave_R3",
+      "AST_fenn_v4_long_ear_wave_R4",
+      "AST_fenn_v4_long_ear_wave_R5",
+      "AST_fenn_v4_long_ear_wave_R6",
+      "AST_fenn_v4_soft_cheek_fan_R0",
+      "AST_fenn_v4_soft_cheek_fan_R1",
+      "AST_fenn_v4_soft_cheek_fan_R2",
+      "AST_fenn_v4_soft_cheek_fan_R3",
+      "AST_fenn_v4_soft_cheek_fan_R4",
+      "AST_fenn_v4_soft_cheek_fan_R5",
+      "AST_fenn_v4_soft_cheek_fan_R6",
+      "AST_fenn_v4_soft_cheek_fan_R7",
+      "AST_fenn_v4_continuous_cream_breast",
+      "AST_fenn_v4_overlapping_breast_lock_0_0",
+      "AST_fenn_v4_overlapping_breast_lock_0_1",
+      "AST_fenn_v4_overlapping_breast_lock_0_2",
+      "AST_fenn_v4_overlapping_breast_lock_0_3",
+      "AST_fenn_v4_overlapping_breast_lock_0_4",
+      "AST_fenn_v4_overlapping_breast_lock_0_5",
+      "AST_fenn_v4_overlapping_breast_lock_0_6",
+      "AST_fenn_v4_overlapping_breast_lock_0_7",
+      "AST_fenn_v4_overlapping_breast_lock_0_8",
+      "AST_fenn_v4_overlapping_breast_lock_1_0",
+      "AST_fenn_v4_overlapping_breast_lock_1_1",
+      "AST_fenn_v4_overlapping_breast_lock_1_2",
+      "AST_fenn_v4_overlapping_breast_lock_1_3",
+      "AST_fenn_v4_overlapping_breast_lock_1_4",
+      "AST_fenn_v4_overlapping_breast_lock_1_5",
+      "AST_fenn_v4_overlapping_breast_lock_1_6",
+      "AST_fenn_v4_overlapping_breast_lock_1_7",
+      "AST_fenn_v4_overlapping_breast_lock_1_8",
+      "AST_fenn_v4_overlapping_breast_lock_2_0",
+      "AST_fenn_v4_overlapping_breast_lock_2_1",
+      "AST_fenn_v4_overlapping_breast_lock_2_2",
+      "AST_fenn_v4_overlapping_breast_lock_2_3",
+      "AST_fenn_v4_overlapping_breast_lock_2_4",
+      "AST_fenn_v4_overlapping_breast_lock_2_5",
+      "AST_fenn_v4_overlapping_breast_lock_2_6",
+      "AST_fenn_v4_overlapping_breast_lock_2_7",
+      "AST_fenn_v4_overlapping_breast_lock_2_8",
+      "AST_fenn_v4_overlapping_breast_lock_3_0",
+      "AST_fenn_v4_overlapping_breast_lock_3_1",
+      "AST_fenn_v4_overlapping_breast_lock_3_2",
+      "AST_fenn_v4_overlapping_breast_lock_3_3",
+      "AST_fenn_v4_overlapping_breast_lock_3_4",
+      "AST_fenn_v4_overlapping_breast_lock_3_5",
+      "AST_fenn_v4_overlapping_breast_lock_3_6",
+      "AST_fenn_v4_wind_swept_crown_0",
+      "AST_fenn_v4_wind_swept_crown_1",
+      "AST_fenn_v4_wind_swept_crown_2",
+      "AST_fenn_v4_wind_swept_crown_3",
+      "AST_fenn_v4_wind_swept_crown_4",
+      "AST_fenn_v4_wind_swept_crown_5",
+      "AST_fenn_v4_wind_swept_crown_6",
+      "AST_fenn_v4_golden_cream_curl",
+      "AST_fenn_v4_cream_plume_flow_0_0",
+      "AST_fenn_v4_cream_plume_flow_0_1",
+      "AST_fenn_v4_cream_plume_flow_0_2",
+      "AST_fenn_v4_cream_plume_flow_0_3",
+      "AST_fenn_v4_cream_plume_flow_0_4",
+      "AST_fenn_v4_cream_plume_flow_0_5",
+      "AST_fenn_v4_cream_plume_flow_0_6",
+      "AST_fenn_v4_cream_plume_flow_0_7",
+      "AST_fenn_v4_cream_plume_flow_1_0",
+      "AST_fenn_v4_cream_plume_flow_1_1",
+      "AST_fenn_v4_cream_plume_flow_1_2",
+      "AST_fenn_v4_cream_plume_flow_1_3",
+      "AST_fenn_v4_cream_plume_flow_1_4",
+      "AST_fenn_v4_cream_plume_flow_1_5",
+      "AST_fenn_v4_cream_plume_flow_1_6",
+      "AST_fenn_v4_cream_plume_flow_1_7",
+      "AST_fenn_v4_cream_plume_flow_2_0",
+      "AST_fenn_v4_cream_plume_flow_2_1",
+      "AST_fenn_v4_cream_plume_flow_2_2",
+      "AST_fenn_v4_cream_plume_flow_2_3",
+      "AST_fenn_v4_cream_plume_flow_2_4",
+      "AST_fenn_v4_cream_plume_flow_2_5",
+      "AST_fenn_v4_cream_plume_flow_2_6",
+      "AST_fenn_v4_cream_plume_flow_2_7",
+      "AST_fenn_v4_cream_plume_flow_3_0",
+      "AST_fenn_v4_cream_plume_flow_3_1",
+      "AST_fenn_v4_cream_plume_flow_3_2",
+      "AST_fenn_v4_cream_plume_flow_3_3",
+      "AST_fenn_v4_cream_plume_flow_3_4",
+      "AST_fenn_v4_cream_plume_flow_3_5",
+      "AST_fenn_v4_cream_plume_flow_3_6",
+      "AST_fenn_v4_cream_plume_flow_3_7",
+      "AST_fenn_v4_cream_plume_flow_4_0",
+      "AST_fenn_v4_cream_plume_flow_4_1",
+      "AST_fenn_v4_cream_plume_flow_4_2",
+      "AST_fenn_v4_cream_plume_flow_4_3",
+      "AST_fenn_v4_cream_plume_flow_4_4",
+      "AST_fenn_v4_cream_plume_flow_4_5",
+      "AST_fenn_v4_cream_plume_flow_4_6",
+      "AST_fenn_v4_cream_plume_flow_4_7",
+      "AST_fenn_v4_cream_plume_flow_5_0",
+      "AST_fenn_v4_cream_plume_flow_5_1",
+      "AST_fenn_v4_cream_plume_flow_5_2",
+      "AST_fenn_v4_cream_plume_flow_5_3",
+      "AST_fenn_v4_cream_plume_flow_5_4",
+      "AST_fenn_v4_cream_plume_flow_5_5",
+      "AST_fenn_v4_cream_plume_flow_5_6",
+      "AST_fenn_v4_cream_plume_flow_5_7",
+      "AST_fenn_v4_cream_plume_flow_6_0",
+      "AST_fenn_v4_cream_plume_flow_6_1",
+      "AST_fenn_v4_cream_plume_flow_6_2",
+      "AST_fenn_v4_cream_plume_flow_6_3",
+      "AST_fenn_v4_cream_plume_flow_6_4",
+      "AST_fenn_v4_cream_plume_flow_6_5",
+      "AST_fenn_v4_cream_plume_flow_6_6",
+      "AST_fenn_v4_cream_plume_flow_6_7",
+      "AST_fenn_v4_cream_plume_flow_7_0",
+      "AST_fenn_v4_cream_plume_flow_7_1",
+      "AST_fenn_v4_cream_plume_flow_7_2",
+      "AST_fenn_v4_cream_plume_flow_7_3",
+      "AST_fenn_v4_cream_plume_flow_7_4",
+      "AST_fenn_v4_cream_plume_flow_7_5",
+      "AST_fenn_v4_cream_plume_flow_7_6",
+      "AST_fenn_v4_cream_plume_flow_7_7"
+    ]
+  },
+  "original_rig": {
+    "rest_sha256": "90E4064824CBB8FA5F1DD303E66DFC754A51649B99205008A28CC6F5BC6FCD09",
+    "behavior_sha256": "37E2CB7157322B1B022EDA60C976DC4F934B2866BB43D2B7C6645C19C4A16C75",
+    "bones": 13,
+    "fps": 30,
+    "fps_base": 1.0,
+    "actions": {
+      "blink": {
+        "sha256": "9FA2EB14EA62F7EC0DC80D32DDF9816BF6B8522AB2BF439F07CBAFDCAB384F14",
+        "curve_count": 117,
+        "key_count": 1170,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          19.0
+        ]
+      },
+      "eat": {
+        "sha256": "5A0B248055EB630841BFC46A0CD8706AF59E4F8876139A7C8E0AF5572B317E43",
+        "curve_count": 117,
+        "key_count": 5382,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          91.0
+        ]
+      },
+      "happy": {
+        "sha256": "9CC4503D9B41571253FC4A2FB1249DF586280AA88011B697DBE3985988EEA537",
+        "curve_count": 117,
+        "key_count": 3627,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          61.0
+        ]
+      },
+      "idle": {
+        "sha256": "C71613B29B7C10CE7485631886DA5A50AF8E16A336851314E62B42F05BC497AF",
+        "curve_count": 117,
+        "key_count": 7137,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          121.0
+        ]
+      },
+      "pet_reaction": {
+        "sha256": "DD868DD509F6244B01EEE99BC815B3C2144C74B3415274A9CA056A9083509B0C",
+        "curve_count": 117,
+        "key_count": 4563,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          76.0
+        ]
+      },
+      "play": {
+        "sha256": "229AFEED1D4A74F14DC300D3BC6819B0D9125BD2275683BD05A39AED8E1B1995",
+        "curve_count": 117,
+        "key_count": 4797,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          81.0
+        ]
+      },
+      "sleep": {
+        "sha256": "02C7526DF3CBC7986579F96B3BEDA0CA43AB5A23E6CCC0C65A36BED65C9A2F00",
+        "curve_count": 117,
+        "key_count": 7137,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          121.0
+        ]
+      },
+      "wake": {
+        "sha256": "EFA6765F07776B42589B87F61D5F8632D80B15B6D7DB354D6B653B959AFCE62D",
+        "curve_count": 117,
+        "key_count": 3627,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          61.0
+        ]
+      },
+      "walk": {
+        "sha256": "B4DD7575C14C6EB1101EF9EFE7432DA8D57A0C03E593DC9C10D3FA1F54CEC979",
+        "curve_count": 117,
+        "key_count": 2925,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          49.0
+        ]
+      }
+    }
+  },
+  "candidate_rig": {
+    "rest_sha256": "90E4064824CBB8FA5F1DD303E66DFC754A51649B99205008A28CC6F5BC6FCD09",
+    "behavior_sha256": "37E2CB7157322B1B022EDA60C976DC4F934B2866BB43D2B7C6645C19C4A16C75",
+    "bones": 13,
+    "fps": 30,
+    "fps_base": 1.0,
+    "actions": {
+      "blink": {
+        "sha256": "9FA2EB14EA62F7EC0DC80D32DDF9816BF6B8522AB2BF439F07CBAFDCAB384F14",
+        "curve_count": 117,
+        "key_count": 1170,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          19.0
+        ]
+      },
+      "eat": {
+        "sha256": "5A0B248055EB630841BFC46A0CD8706AF59E4F8876139A7C8E0AF5572B317E43",
+        "curve_count": 117,
+        "key_count": 5382,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          91.0
+        ]
+      },
+      "happy": {
+        "sha256": "9CC4503D9B41571253FC4A2FB1249DF586280AA88011B697DBE3985988EEA537",
+        "curve_count": 117,
+        "key_count": 3627,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          61.0
+        ]
+      },
+      "idle": {
+        "sha256": "C71613B29B7C10CE7485631886DA5A50AF8E16A336851314E62B42F05BC497AF",
+        "curve_count": 117,
+        "key_count": 7137,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          121.0
+        ]
+      },
+      "pet_reaction": {
+        "sha256": "DD868DD509F6244B01EEE99BC815B3C2144C74B3415274A9CA056A9083509B0C",
+        "curve_count": 117,
+        "key_count": 4563,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          76.0
+        ]
+      },
+      "play": {
+        "sha256": "229AFEED1D4A74F14DC300D3BC6819B0D9125BD2275683BD05A39AED8E1B1995",
+        "curve_count": 117,
+        "key_count": 4797,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          81.0
+        ]
+      },
+      "sleep": {
+        "sha256": "02C7526DF3CBC7986579F96B3BEDA0CA43AB5A23E6CCC0C65A36BED65C9A2F00",
+        "curve_count": 117,
+        "key_count": 7137,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          121.0
+        ]
+      },
+      "wake": {
+        "sha256": "EFA6765F07776B42589B87F61D5F8632D80B15B6D7DB354D6B653B959AFCE62D",
+        "curve_count": 117,
+        "key_count": 3627,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          61.0
+        ]
+      },
+      "walk": {
+        "sha256": "B4DD7575C14C6EB1101EF9EFE7432DA8D57A0C03E593DC9C10D3FA1F54CEC979",
+        "curve_count": 117,
+        "key_count": 2925,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          49.0
+        ]
+      }
+    }
+  },
+  "motion_comparison": {
+    "idle": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "blink": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "happy": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "eat": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "play": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "pet_reaction": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "sleep": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "wake": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "walk": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    }
+  },
+  "source_views": {
+    "hero": {
+      "file": "assets/3d/reference/dog/sculpt-v004/source/dog-hero.png",
+      "sha256": "39C2B035CF890E75847E57260B0D2FDA7D48B3FF86C5F3EB8658DA7A9836EBD9"
+    },
+    "front": {
+      "file": "assets/3d/reference/dog/sculpt-v004/source/dog-front.png",
+      "sha256": "FB697B08C288E045E1963632343606ED47D20208BC4390358EBFEDAC248BEAB3"
+    },
+    "side": {
+      "file": "assets/3d/reference/dog/sculpt-v004/source/dog-side.png",
+      "sha256": "F362CAC91FEA809794E6DFD759AFB1B283B4F61C4828648F7E271CA4C9285011"
+    },
+    "rear": {
+      "file": "assets/3d/reference/dog/sculpt-v004/source/dog-rear.png",
+      "sha256": "C7618B287A49CAF1ED6B3C562BF6CD720D9538FE887B7D7AC372B5F4AFE7CD00"
+    },
+    "body-hero": {
+      "file": "assets/3d/reference/dog/sculpt-v004/source/dog-body-hero.png",
+      "sha256": "CBD5791AB8654A283363B03B49E67B476EAB0774B0713DA3A2F2A9B8677B36B8"
+    },
+    "body-side": {
+      "file": "assets/3d/reference/dog/sculpt-v004/source/dog-body-side.png",
+      "sha256": "B66794702DFD0D6195AEB4D62636A824977E212D1BCE9F591D84D4A291E7748E"
+    }
+  },
+  "import_views": {
+    "hero": {
+      "file": "assets/3d/reference/dog/sculpt-v004/import/dog-hero.png",
+      "sha256": "6B470A2ECDDF1D015E5B1F45975EDB1BE20DAE7D1193FC6BE99B9ADBC4E712FE"
+    },
+    "rear": {
+      "file": "assets/3d/reference/dog/sculpt-v004/import/dog-rear.png",
+      "sha256": "7E60B1C0B92B5C1544A846EC3CEF7C8FBFB7D2D24707E24873BBACC6C193137F"
+    },
+    "body-hero": {
+      "file": "assets/3d/reference/dog/sculpt-v004/import/dog-body-hero.png",
+      "sha256": "92CDFC4D6914E58C73F2BFD29F9D607A829F6DA7BA6B2BB2859E38189F618DC9"
+    },
+    "blink": {
+      "file": "assets/3d/reference/dog/sculpt-v004/import/dog-blink.png",
+      "sha256": "C23738A15D9AEEAD34BE5ED3C31A5B47F35B0A5D2B320D465176ACAEBC3E9861"
+    }
+  },
+  "hair_evidence": null,
+  "passed": true,
+  "human_likeness_accepted": false,
+  "mobile_performance_accepted": false,
+  "paid_provider_used": false,
+  "projection_used": false,
+  "ocular_geometry_intentionally_refined": true,
+  "package_status": "Local hash-checked Blender delivery; no game-dev canonical receipt.",
+  "animation_limit": "Original source curves, keys, handles, rest rig and drivers compared exactly. Fresh GLBs compared at nine normalized times per clip with 2e-4 skin-matrix tolerance. Not a collision or gait acceptance.",
+  "likeness_limit": "Original approved artwork retained. Primary forms intentionally refined; unseen surfaces inferred. No exact 1:1 or human acceptance claim.",
+  "publication_amendment": {
+    "id": "metadata-clean-2026-09-07",
+    "record": "assets/3d/publication/2026-09-07/amendment.json",
+    "original_document_sha256": "5755063A747D501F45834FAD29B05AF56FE670BAE658A9445655B23DCA722843",
+    "authoring_record": "assets/3d/publication/2026-09-07/authoring-records/assets/3d/reference/dog/sculpt-v004/validation.json",
+    "authoring_record_status": "exact-public-safe-original",
+    "notice": "Metadata-only publication derivative, not a rerun of the historical builder or validator. File digest and size bindings identify publication copies; all measured geometry, materials, rig, action, motion and acceptance evidence remains historical and unchanged. Consult the original authoring record and amendment binding log."
+  }
+}

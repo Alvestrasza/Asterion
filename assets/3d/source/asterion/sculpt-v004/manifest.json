@@ -1,0 +1,129 @@
+{
+  "schema": "asterion-modular-sculpt-v004",
+  "version": "sculpt-v004",
+  "name": "Asterion",
+  "kind": "asterion",
+  "source": "assets/3d/source/asterion/sculpt-v004/asterion-sculpt-v004.blend",
+  "model": "public/assets/3d/asterion/asterion-sculpt-v004.glb",
+  "reference": "assets/3d/reference/asterion/sculpt-v004/asterion-approved-turnaround.png",
+  "source_sha256": "93F216A7C867199EC6A33620ACE8EDEA202E4A954142C032CBA9D86B02B46DC2",
+  "model_sha256": "CF14A6363C19B8C1B599C5C89181A63B31296CC97B72A0299C0230D9C81DF6CF",
+  "reference_sha256": "FE91A72F21A139CB4443E7BDE99498FC7AF7D07B8784A5F4A0B48CC37A141AEC",
+  "builder_sha256": {
+    "assets/3d/source/asterion/sculpt-v004/build_v004.py": "84E80A879354458DD72DF4F938C8D21101849345C662727AEF3E68C37DBDB936",
+    "assets/3d/source/asterion/sculpt-v004/morphology.py": "F1678992F208B3D0B3F8F36F7211CD0BC2AE59E6DBAA2A9F108F3506C33D9733",
+    "assets/3d/source/asterion/sculpt-v001/build_sculpt.py": "9A81C430E8FD07CE520BBA554C78845A508F22E5FB89E524BF515D8BF8415621",
+    "assets/3d/source/asterion/sculpt-v001/rig_delivery.py": "8758D105E70AB5405F61A48A531154CC591EAC0D82B167788F1D0785A16CDFF0",
+    "assets/3d/source/asterion/sculpt-v002/validate_refinement.py": "8C541F26C2D2546FB142988D10F07EDF51C891D1C81F02065C7B62CE01F78EFD",
+    "assets/3d/source/asterion/sculpt-v003/build_head_study.py": "A3B22323201D30A3BD9459985F8F7741A44545010A84D27CC5912E1C8A85E0F2",
+    "assets/3d/source/asterion/sculpt-v004/export_equipment.py": "C805B4740463215AE5CC9D314D14966F2BDF91A00FB82D05054BE0BBB8ED930B",
+    "assets/3d/source/asterion/sculpt-v004/validate_v004.py": "A371C4ED775E754FDFCFD66458650F369AAE21B4F2B53F7E200F3591F5EB3B71",
+    "assets/3d/source/asterion/sculpt-v004/deliver_v004.py": "51543F7FCEF70B1CA820D19F8899858C9ED5145E6D722A8C7F4486CF4005C118",
+    "assets/3d/source/companions/sculpt-v002/deliver.py": "B1AD730497E6E9A7B9B24B40A3C8F7F5C42AC45F375C04D24308B0CC57E15111"
+  },
+  "build_report": "assets/3d/source/asterion/sculpt-v004/build-report.json",
+  "validation": "assets/3d/reference/asterion/sculpt-v004/validation.json",
+  "triangles": 3049212,
+  "vertices": 1584221,
+  "bytes": 40099324,
+  "meshes": 2,
+  "skins": 1,
+  "bones": 22,
+  "materials": 18,
+  "material_primitives": 23,
+  "components": {
+    "body": {
+      "node": 23,
+      "name": "asterion_body",
+      "mesh": 1,
+      "skin": 0,
+      "extras": {
+        "asterion_component": "body",
+        "asterion_rig": "asterion-rig-v1"
+      },
+      "triangles": 2985588,
+      "material_primitives": 14,
+      "materials": [
+        "AST_navy",
+        "AST_gold_light",
+        "AST_scale_dark",
+        "AST_Eye_living_azure",
+        "AST_white",
+        "AST_gold",
+        "AST_belly",
+        "AST_armor",
+        "AST_gold_dark",
+        "AST_scale",
+        "AST_groom_v002_ivory",
+        "AST_groom_v002_light",
+        "AST_groom_v002_depth",
+        "AST_black"
+      ]
+    },
+    "armor": {
+      "node": 22,
+      "name": "asterion_armor",
+      "mesh": 0,
+      "skin": 0,
+      "extras": {
+        "asterion_component": "armor",
+        "asterion_rig": "asterion-rig-v1",
+        "asterion_equipment_slot": "outfit",
+        "asterion_equipment_id": "ceremonial-gold-v1"
+      },
+      "triangles": 63624,
+      "material_primitives": 9,
+      "materials": [
+        "AST_gold_light",
+        "AST_gold",
+        "AST_gold_dark",
+        "AST_Armor_Blue_Inlay",
+        "AST_armor",
+        "AST_black",
+        "AST_gem",
+        "AST_gem_light",
+        "AST_gem_dark"
+      ]
+    }
+  },
+  "equipment_slot": "outfit",
+  "equipment_id": "ceremonial-gold-v1",
+  "rig_contract": "asterion-rig-v1",
+  "clips": [
+    "blink",
+    "eat",
+    "happy",
+    "idle",
+    "pet_reaction",
+    "play",
+    "sleep",
+    "wake",
+    "walk"
+  ],
+  "animations_unchanged": true,
+  "head_hair_removed": true,
+  "tail_hair_strands": 3582,
+  "hair_physics": false,
+  "compression": {
+    "extension": "EXT_meshopt_compression",
+    "buffer_view_filters": {
+      "EXPONENTIAL": 158,
+      "NONE": 115,
+      "QUATERNION": 92
+    },
+    "KHR_mesh_quantization": false,
+    "lossless_claimed": false,
+    "policy": "Preserve the historical Blender encoder, including its precision-reducing attribute and quaternion filters. Source actions are compared exactly; imported motion is checked independently against v003."
+  },
+  "human_likeness_accepted": false,
+  "mobile_performance_accepted": false,
+  "provenance": "Local v003 copy: rounded muzzle, skin-fitted dorsal plates, separate authored armor outfit; no external generation or animation redesign.",
+  "publication_amendment": {
+    "id": "metadata-clean-2026-09-07",
+    "record": "assets/3d/publication/2026-09-07/amendment.json",
+    "original_document_sha256": "96F6F22FD9CCEF11BCE7AF8B0ED299AB2E117EEFE6EB01365BB9FCAFCD6742FC",
+    "authoring_record": "assets/3d/publication/2026-09-07/authoring-records/assets/3d/source/asterion/sculpt-v004/manifest.json",
+    "authoring_record_status": "exact-public-safe-original",
+    "notice": "Metadata-only publication derivative, not a rerun of the historical builder or validator. File digest and size bindings identify publication copies; all measured geometry, materials, rig, action, motion and acceptance evidence remains historical and unchanged. Consult the original authoring record and amendment binding log."
+  }
+}

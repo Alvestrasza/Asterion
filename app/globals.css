@@ -464,6 +464,60 @@ h2 {
   object-fit: contain;
 }
 
+.asterion-model {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  isolation: isolate;
+}
+
+.asterion-model-fallback {
+  z-index: 1;
+  object-fit: contain;
+  opacity: 1;
+  transition: opacity 320ms ease;
+}
+
+.asterion-model.is-ready .asterion-model-fallback {
+  opacity: 0;
+}
+
+.asterion-model-host {
+  position: absolute;
+  inset: -8%;
+  z-index: 2;
+  overflow: visible;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 320ms ease;
+}
+
+.asterion-model.is-ready .asterion-model-host {
+  opacity: 1;
+}
+
+.asterion-model-canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.asterion-model-loading {
+  position: absolute;
+  right: 50%;
+  bottom: -9px;
+  z-index: 3;
+  padding: 5px 9px;
+  color: var(--azure-soft);
+  border: 1px solid rgba(73, 185, 233, 0.18);
+  border-radius: 999px;
+  background: rgba(5, 20, 35, 0.82);
+  font-size: 0.58rem;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+  transform: translateX(50%);
+}
+
 .pet-visual.reacting {
   animation: sprite-reaction 400ms ease-out;
 }
@@ -769,6 +823,103 @@ footer {
   border-top: 1px solid var(--line);
   letter-spacing: 0.1em;
   font-size: 0.58rem;
+}
+
+.model-review-shell {
+  position: relative;
+  display: grid;
+  width: min(1120px, calc(100% - 32px));
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 54px 0 70px;
+  grid-template-columns: minmax(270px, 0.72fr) minmax(420px, 1.28fr);
+  gap: 24px 46px;
+  align-content: center;
+  align-items: center;
+}
+
+.model-review-copy h1 {
+  margin-bottom: 22px;
+  font-size: clamp(2.3rem, 4vw, 4rem);
+  overflow-wrap: break-word;
+}
+
+.model-review-copy > p:last-child,
+.model-review-disabled > p:last-child {
+  max-width: 560px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.model-review-stage {
+  position: relative;
+  min-height: min(70vh, 700px);
+  border: 1px solid rgba(139, 202, 235, 0.16);
+  border-radius: 40px;
+  background:
+    radial-gradient(circle at 45% 40%, rgba(73, 185, 233, 0.18), transparent 52%),
+    linear-gradient(145deg, rgba(13, 42, 68, 0.72), rgba(4, 15, 27, 0.88));
+  box-shadow: var(--shadow);
+}
+
+.model-review-stage .asterion-model {
+  position: absolute;
+  inset: 3%;
+  width: 94%;
+  height: 94%;
+}
+
+.model-review-aura {
+  position: absolute;
+  inset: 16%;
+  border: 1px solid rgba(232, 197, 106, 0.15);
+  border-radius: 50%;
+  box-shadow: inset 0 0 90px rgba(73, 185, 233, 0.1), 0 0 70px rgba(73, 185, 233, 0.08);
+  transform: rotate(-11deg);
+}
+
+.model-review-controls {
+  grid-column: 1 / -1;
+  padding: 26px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: rgba(8, 25, 42, 0.68);
+}
+
+.model-review-buttons {
+  display: flex;
+  gap: 9px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.model-review-buttons .quiet-button {
+  min-width: 88px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.7rem;
+}
+
+.model-review-buttons .quiet-button[data-active="true"] {
+  color: #071426;
+  border-color: var(--gold-soft);
+  background: linear-gradient(135deg, var(--gold-soft), var(--gold));
+}
+
+.model-review-buttons .model-review-motion-toggle {
+  margin-left: auto;
+  font-family: inherit;
+}
+
+.model-review-meta {
+  margin: 18px 0 0;
+  color: var(--faint);
+  font-size: 0.68rem;
+}
+
+.model-review-disabled {
+  display: block;
+  max-width: 760px;
+  padding-top: 20vh;
 }
 
 dialog {
@@ -1157,6 +1308,23 @@ dialog::backdrop {
   .journal-list {
     grid-template-columns: 1fr;
   }
+
+  .model-review-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .model-review-copy {
+    text-align: center;
+  }
+
+  .model-review-copy > p:last-child {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .model-review-stage {
+    min-height: 580px;
+  }
 }
 
 @media (max-width: 590px) {
@@ -1249,6 +1417,24 @@ dialog::backdrop {
     gap: 10px;
     flex-direction: column;
     text-align: center;
+  }
+
+  .model-review-shell {
+    width: min(100% - 20px, 1120px);
+    padding-top: 34px;
+  }
+
+  .model-review-stage {
+    min-height: 420px;
+    border-radius: 28px;
+  }
+
+  .model-review-controls {
+    padding: 21px;
+  }
+
+  .model-review-buttons .quiet-button {
+    flex: 1 1 42%;
   }
 }
 

@@ -1,0 +1,207 @@
+{
+  "schema": "asterion-face-only-v1",
+  "kind": "dog",
+  "name": "Fenn",
+  "version": "sculpt-v005",
+  "source_sha256": "03D17BBDD2B70EF921869B8A6D6FAB7F31EBFE3A40226690AE80FD6EDCA33C59",
+  "model_sha256": "FD720C46F6EE3B06E120708E13C9F128422E970423B874C32DC00EF0F5DDA171",
+  "reference_sha256": "1F94ED0A55E8718D7C891421B310932BB00D0022BB10D15D76281C440351171C",
+  "triangles": 1564512,
+  "bytes": 18817520,
+  "bones": 13,
+  "clips": [
+    "idle",
+    "blink",
+    "happy",
+    "eat",
+    "play",
+    "pet_reaction",
+    "sleep",
+    "wake",
+    "walk"
+  ],
+  "draw_calls": 12,
+  "materials": 12,
+  "components": {
+    "body": {
+      "mesh": 1,
+      "skin": 0,
+      "triangles": 1540372,
+      "primitives": 9
+    },
+    "armor": {
+      "mesh": 0,
+      "skin": 0,
+      "triangles": 24140,
+      "primitives": 3
+    }
+  },
+  "blender": "5.2.1 LTS",
+  "human_likeness_accepted": false,
+  "mobile_performance_accepted": false,
+  "projection_used": false,
+  "paid_provider_used": false,
+  "package_status": "Local hash-checked Blender delivery; no game-dev canonical receipt.",
+  "animation_limit": "Original full action/rest/driver RNA unchanged; nine fresh GLB skin-matrix samples per clip. Original center-scale lids retained; no anatomical closure or collision-free motion claim.",
+  "likeness_limit": "Face-only sculpt interpreted from unchanged original artwork. Hidden angles inferred. Not a 100-percent likeness or human identity acceptance claim.",
+  "compression_lossless": false,
+  "source": "assets/3d/source/dog/sculpt-v005/dog-sculpt-v005.blend",
+  "model": "public/assets/3d/dog/dog-sculpt-v005.glb",
+  "reference": "assets/3d/reference/dog/sculpt-v005/original.png",
+  "validation": "assets/3d/reference/dog/sculpt-v005/validation.json",
+  "validation_sha256": "902F4A2517DAE9494810C50F36036131A5F599FF180252E98A16085A96D7C501",
+  "input_sha256": {
+    "assets/3d/source/dog/sculpt-v004/dog-sculpt-v004.blend": "A95B9446725611F920D384134F313D6F2384CAF345C1FFE9F4EFA93B86B909E8",
+    "public/assets/3d/dog/dog-sculpt-v004.glb": "91969708CFE8A2443F36FB83D751F35CDE3E0AAF6F8C927D1177989B1C8C3761",
+    "public/assets/companions/dog.png": "1F94ED0A55E8718D7C891421B310932BB00D0022BB10D15D76281C440351171C",
+    "assets/3d/source/companions/sculpt-v001/common.py": "A6DF036A5B3F6FAA3C74740382998D829D45C9E2734D91A285F9369764C21F9E",
+    "assets/3d/source/asterion/sculpt-v001/build_sculpt.py": "9A81C430E8FD07CE520BBA554C78845A508F22E5FB89E524BF515D8BF8415621",
+    "assets/3d/source/asterion/sculpt-v001/rig_delivery.py": "8758D105E70AB5405F61A48A531154CC591EAC0D82B167788F1D0785A16CDFF0",
+    "assets/3d/source/asterion/sculpt-v002/validate_refinement.py": "8C541F26C2D2546FB142988D10F07EDF51C891D1C81F02065C7B62CE01F78EFD",
+    "assets/3d/source/asterion/sculpt-v003/build_head_study.py": "A3B22323201D30A3BD9459985F8F7741A44545010A84D27CC5912E1C8A85E0F2",
+    "assets/3d/source/asterion/sculpt-v004/export_equipment.py": "C805B4740463215AE5CC9D314D14966F2BDF91A00FB82D05054BE0BBB8ED930B",
+    "assets/3d/source/companions/sculpt-v004/build.py": "C6FBCA99D1117722B07933B90795DBFFA37DC22B399ECD6B339EAFF3C063A6BD",
+    "assets/3d/source/companions/sculpt-v004/refinements.py": "6247CEA1AE30B56B6FD3D23DEDEF1DD99BCD8A7B9158AA0576340AA2B8F89BCF",
+    "assets/3d/source/companions/sculpt-v004/export_equipment.py": "5EDB676641BE58BDE353213F6DA4F7F7662B76A08F586D0E7DADA7006AF343CF",
+    "assets/3d/source/cat/sculpt-v002/nyra_detail.py": "5DC1C07EAE70AE7C635D4C7026263D8D715EAE097EAD4904299B81D4405BC27B",
+    "assets/3d/source/companions/sculpt-v005/build.py": "2CD3C4D70E953C8BDBDDD01157745474A213968016F12BC3494BE8FD99C793BE",
+    "assets/3d/source/companions/sculpt-v005/contract.py": "F6829E7B890BA3B1108700B847CBB2C4CD532042233BD8049CC26B3A8522984E",
+    "assets/3d/source/companions/sculpt-v005/guards.py": "C98E5A25B553C56D016324F1AADE2669BEA28F3B2E73F5D883A74EBAEB599EF4",
+    "assets/3d/source/companions/sculpt-v005/feline_canine_faces.py": "E7063109E9EC68D995913009A55FB7EF4C229C353CB4750D6B74345F976D2E59"
+  },
+  "renders": {
+    "face-hero": {
+      "file": "assets/3d/reference/dog/sculpt-v005/source/dog-face-hero.png",
+      "sha256": "BD2CF66BC5E06ACA640D4C418F226F2620D7F6ACB9CDB6E768650EC633208ECD",
+      "clip": "idle",
+      "frame": 1
+    },
+    "face-front": {
+      "file": "assets/3d/reference/dog/sculpt-v005/source/dog-face-front.png",
+      "sha256": "A6F4983988FE850AFEC8876B05D4B75B1F49D89EF93A1B86D0BBEAFC543473D3",
+      "clip": "idle",
+      "frame": 1
+    },
+    "face-side": {
+      "file": "assets/3d/reference/dog/sculpt-v005/source/dog-face-side.png",
+      "sha256": "094DC51BEC218A603F46B96C25A1E9F163C002B0DC65F34A71DC9E9DA31DBE2C",
+      "clip": "idle",
+      "frame": 1
+    },
+    "blink-early": {
+      "file": "assets/3d/reference/dog/sculpt-v005/source/dog-blink-early.png",
+      "sha256": "7AB3F0E13623AD742EA5FACB8424FF863B0327D5EFDA6DB2E59D11B57D2188C3",
+      "clip": "blink",
+      "frame": 5
+    },
+    "blink-partial": {
+      "file": "assets/3d/reference/dog/sculpt-v005/source/dog-blink-partial.png",
+      "sha256": "7A81D7E7E6B0639C79F068042BF871C77F4F8CE53D2E559B4949DCCC0644E37E",
+      "clip": "blink",
+      "frame": 7
+    },
+    "blink-closed": {
+      "file": "assets/3d/reference/dog/sculpt-v005/source/dog-blink-closed.png",
+      "sha256": "B2D1555D2E0CD12DD920D678C354C98ED792228EF9535AC504745BFCD6D4FCA0",
+      "clip": "blink",
+      "frame": 10
+    },
+    "hero": {
+      "file": "assets/3d/reference/dog/sculpt-v005/source/dog-hero.png",
+      "sha256": "5611F6443581D70FF2E26AFA753D0A98FDC45EEB659ADF6AE305E75B30CBAB4A",
+      "clip": "idle",
+      "frame": 1
+    },
+    "rear": {
+      "file": "assets/3d/reference/dog/sculpt-v005/source/dog-rear.png",
+      "sha256": "706D40A89B6C03AC4CF5F5DAE9B58CAEEF25573156FBB858ACB4ECDFAD3D3A52",
+      "clip": "idle",
+      "frame": 1
+    },
+    "body-hero": {
+      "file": "assets/3d/reference/dog/sculpt-v005/source/dog-body-hero.png",
+      "sha256": "B62464C994AB0F91A4D2356F871299BAE918844DA3877808E3EA4DBBA763AE97",
+      "clip": "idle",
+      "frame": 1
+    }
+  },
+  "import_renders": {
+    "face-hero": {
+      "file": "assets/3d/reference/dog/sculpt-v005/import/dog-face-hero.png",
+      "sha256": "51AB848ADF7B32C93FA81416C757D2EA04424BDC78DFB06CA818D3A925172657",
+      "clip": "idle",
+      "frame": 1
+    },
+    "face-front": {
+      "file": "assets/3d/reference/dog/sculpt-v005/import/dog-face-front.png",
+      "sha256": "22D5EFE8E2395B31D6BA345909FEF8C8CA998EFDF0A5C28BDDC3A37D4C4B107E",
+      "clip": "idle",
+      "frame": 1
+    },
+    "face-side": {
+      "file": "assets/3d/reference/dog/sculpt-v005/import/dog-face-side.png",
+      "sha256": "F3F2ECF6538F4C7A127235C9B2175A078ABBA3040C6B7FE615B9F392742DCEE1",
+      "clip": "idle",
+      "frame": 1
+    },
+    "blink-early": {
+      "file": "assets/3d/reference/dog/sculpt-v005/import/dog-blink-early.png",
+      "sha256": "234DFD0DC4DC2C953699F80BDE898508F8C5A336311634B0B2CB0242294A3FA3",
+      "clip": "blink",
+      "frame": 5
+    },
+    "blink-partial": {
+      "file": "assets/3d/reference/dog/sculpt-v005/import/dog-blink-partial.png",
+      "sha256": "750F2BAC80400BF663F8DC34145020379C5AFDB7DA3F791ACB1C457A927B5524",
+      "clip": "blink",
+      "frame": 7
+    },
+    "blink-closed": {
+      "file": "assets/3d/reference/dog/sculpt-v005/import/dog-blink-closed.png",
+      "sha256": "8039B4DFA786D62A04B2F2606FFC64EBFA4E772EA94A5BD29AF0E741CE56A432",
+      "clip": "blink",
+      "frame": 10
+    },
+    "hero": {
+      "file": "assets/3d/reference/dog/sculpt-v005/import/dog-hero.png",
+      "sha256": "04211D19E896E5F70D49786E9713D42CC2F79213A722940F4A02BF48C301F5F2",
+      "clip": "idle",
+      "frame": 1
+    },
+    "body-hero": {
+      "file": "assets/3d/reference/dog/sculpt-v005/import/dog-body-hero.png",
+      "sha256": "E96B46113906108EB4AA8E65D869A346479D07E1BCB97A846ABBBD07CB19EEF1",
+      "clip": "idle",
+      "frame": 1
+    }
+  },
+  "baseline_renders": {
+    "face-hero": {
+      "file": "assets/3d/reference/dog/sculpt-v005/baseline/dog-face-hero.png",
+      "sha256": "5A1FD6EE4D0E322F12EBF37206E26F5C99848EF404691AA6B64F44DA308744A1",
+      "clip": "idle",
+      "frame": 1
+    },
+    "face-front": {
+      "file": "assets/3d/reference/dog/sculpt-v005/baseline/dog-face-front.png",
+      "sha256": "9DADDBE08D1867AF354E1B2D45B0E18CA14839709FC37E17B2B30D78B5CF523D",
+      "clip": "idle",
+      "frame": 1
+    },
+    "face-side": {
+      "file": "assets/3d/reference/dog/sculpt-v005/baseline/dog-face-side.png",
+      "sha256": "25E01F7AF34D6CB5CF597F1BC0C83A8FA8B061F20601787654D34D52C1376241",
+      "clip": "idle",
+      "frame": 1
+    }
+  },
+  "face_scope_only": true,
+  "nonface_unchanged": true,
+  "animations_unchanged": true,
+  "equipment_separate": true,
+  "fresh_import_passed": true,
+  "notes": "Face-only integrated orbital curvature, larger dark pupils, connected whisker pads and softened facial fur.",
+  "edited_objects": 48,
+  "protected_object_count": 200,
+  "protected_material_count": 5
+}

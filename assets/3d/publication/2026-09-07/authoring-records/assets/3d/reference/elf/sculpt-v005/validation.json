@@ -1,0 +1,1788 @@
+{
+  "schema": "asterion-face-only-v1",
+  "kind": "elf",
+  "name": "Aelira",
+  "version": "sculpt-v005",
+  "source_sha256": "DB6992CAD3FB4030EC64C432BB0658EB6E9C4F55684B103D8FC56277D80D087C",
+  "model_sha256": "4500179BCD5D2C90B6F3A10679DFF9A52BB0BF4D84FC70F7530BBA2EB33352DE",
+  "reference_input": "public/assets/companions/elf.png",
+  "reference_sha256": "DE8904FAF12031561B752E3A4590F09A2E9BA5E763804F7D83156CF414ECA417",
+  "input_sha256": {
+    "assets/3d/source/elf/sculpt-v004/elf-sculpt-v004.blend": "28D248C008E7D9923870D7F7C5B089373032409C9FCD21843D8662987773C544",
+    "public/assets/3d/elf/elf-sculpt-v004.glb": "8B590B3FA577B408C7332C623D58D3E89B663DEA8A9CF5B7073E5049F47B5E38",
+    "public/assets/companions/elf.png": "DE8904FAF12031561B752E3A4590F09A2E9BA5E763804F7D83156CF414ECA417",
+    "assets/3d/source/companions/sculpt-v001/common.py": "A6DF036A5B3F6FAA3C74740382998D829D45C9E2734D91A285F9369764C21F9E",
+    "assets/3d/source/asterion/sculpt-v001/build_sculpt.py": "9A81C430E8FD07CE520BBA554C78845A508F22E5FB89E524BF515D8BF8415621",
+    "assets/3d/source/asterion/sculpt-v001/rig_delivery.py": "8758D105E70AB5405F61A48A531154CC591EAC0D82B167788F1D0785A16CDFF0",
+    "assets/3d/source/asterion/sculpt-v002/validate_refinement.py": "8C541F26C2D2546FB142988D10F07EDF51C891D1C81F02065C7B62CE01F78EFD",
+    "assets/3d/source/asterion/sculpt-v003/build_head_study.py": "A3B22323201D30A3BD9459985F8F7741A44545010A84D27CC5912E1C8A85E0F2",
+    "assets/3d/source/asterion/sculpt-v004/export_equipment.py": "C805B4740463215AE5CC9D314D14966F2BDF91A00FB82D05054BE0BBB8ED930B",
+    "assets/3d/source/companions/sculpt-v004/build.py": "C6FBCA99D1117722B07933B90795DBFFA37DC22B399ECD6B339EAFF3C063A6BD",
+    "assets/3d/source/companions/sculpt-v004/refinements.py": "6247CEA1AE30B56B6FD3D23DEDEF1DD99BCD8A7B9158AA0576340AA2B8F89BCF",
+    "assets/3d/source/companions/sculpt-v004/export_equipment.py": "5EDB676641BE58BDE353213F6DA4F7F7662B76A08F586D0E7DADA7006AF343CF",
+    "assets/3d/source/companions/sculpt-v005/build.py": "2CD3C4D70E953C8BDBDDD01157745474A213968016F12BC3494BE8FD99C793BE",
+    "assets/3d/source/companions/sculpt-v005/contract.py": "F6829E7B890BA3B1108700B847CBB2C4CD532042233BD8049CC26B3A8522984E",
+    "assets/3d/source/companions/sculpt-v005/guards.py": "C98E5A25B553C56D016324F1AADE2669BEA28F3B2E73F5D883A74EBAEB599EF4",
+    "assets/3d/source/companions/sculpt-v005/folk_faces.py": "26BB92F8C85328CC8FBA0DA15BAACE4F8B0047AE5A00917FCD872204154A257A"
+  },
+  "blender": "5.2.1 LTS",
+  "components": {
+    "body": {
+      "mesh": 1,
+      "skin": 0,
+      "triangles": 1414894,
+      "primitives": 25
+    },
+    "armor": {
+      "mesh": 0,
+      "skin": 0,
+      "triangles": 168100,
+      "primitives": 8
+    }
+  },
+  "triangles": 1582994,
+  "draw_calls": 33,
+  "materials": 29,
+  "bones": 10,
+  "clips": [
+    "idle",
+    "blink",
+    "happy",
+    "eat",
+    "play",
+    "pet_reaction",
+    "sleep",
+    "wake",
+    "walk"
+  ],
+  "compression_lossless": false,
+  "bytes": 16705796,
+  "geometry": {
+    "vertices": 799892,
+    "triangles": 1582993,
+    "nonfinite_vertices": 0,
+    "nonfinite_transforms": 0,
+    "unweighted_vertices": 0,
+    "invalid_weights": 0,
+    "unknown_weights": 0,
+    "over_four_weights": 0,
+    "max_influences": 2,
+    "bounds_min": [
+      -0.97998046875,
+      -0.5703125,
+      -0.0009764897404238582
+    ],
+    "bounds_max": [
+      0.99658203125,
+      0.6435546875,
+      3.619140625
+    ],
+    "span": [
+      1.9765625,
+      1.2138671875,
+      3.620117114740424
+    ]
+  },
+  "triangle_count_evidence": {
+    "authored": 1582994,
+    "imported": 1582993,
+    "exact_equal": false,
+    "triangle_loss": 1,
+    "relative_loss": 6.317143337245751e-07,
+    "maximum_allowed_loss": 31,
+    "relative_tolerance": 2e-05,
+    "passed": true,
+    "limit": "Count difference only; individual omitted triangle degeneracy is not proven by this check."
+  },
+  "changes": {
+    "edited_objects": [
+      {
+        "name": "AST_Aelira_v2_refined_head",
+        "operation": "pivot_fixed_continuous_arch_and_socket_corner_shape",
+        "max_displacement": 0.03324274766867363
+      },
+      {
+        "name": "AST_Aelira_v2_refined_head",
+        "operation": "species_specific_cheek_chin_nose_and_lip_support",
+        "max_displacement": 0.016023494109986207
+      },
+      {
+        "name": "AST_Aelira_v2_refined_head",
+        "operation": "isolated_face_material_and_reference_value_structure",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Aelira_v2_eye_R_orbital_skin",
+        "operation": "pivot_fixed_continuous_arch_and_socket_corner_shape",
+        "max_displacement": 0.013710528683457568
+      },
+      {
+        "name": "AST_Aelira_v2_eye_R_orbital_skin",
+        "operation": "curved_eye_and_inner_orbit_with_fixed_skull_join_and_lid_pivot",
+        "max_displacement": 0.08595395763180436
+      },
+      {
+        "name": "AST_Aelira_v2_eye_R_orbital_skin",
+        "operation": "isolated_face_material_and_reference_value_structure",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Aelira_v2_eye_R",
+        "operation": "pivot_fixed_continuous_arch_and_socket_corner_shape",
+        "max_displacement": 0.010752273473100704
+      },
+      {
+        "name": "AST_Aelira_v2_eye_R",
+        "operation": "curved_eye_and_inner_orbit_with_fixed_skull_join_and_lid_pivot",
+        "max_displacement": 0.08700111362845137
+      },
+      {
+        "name": "AST_Aelira_v2_eye_R",
+        "operation": "isolated_face_material_and_reference_value_structure",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Aelira_v2_eye_R_upper_lash",
+        "operation": "pivot_fixed_continuous_arch_and_socket_corner_shape",
+        "max_displacement": 0.012628864347695501
+      },
+      {
+        "name": "AST_Aelira_v2_eye_R_upper_lash",
+        "operation": "curved_eye_and_inner_orbit_with_fixed_skull_join_and_lid_pivot",
+        "max_displacement": 0.09916946977449281
+      },
+      {
+        "name": "AST_Aelira_v2_eye_R_upper_lash",
+        "operation": "tapered_upper_arch_and_slim_lower_lid_margin",
+        "max_displacement": 0.0040702560578653926
+      },
+      {
+        "name": "AST_Aelira_v2_eye_R_upper_lash",
+        "operation": "isolated_face_material_and_reference_value_structure",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Aelira_v2_eye_R_lower_lid",
+        "operation": "pivot_fixed_continuous_arch_and_socket_corner_shape",
+        "max_displacement": 0.010945626520677099
+      },
+      {
+        "name": "AST_Aelira_v2_eye_R_lower_lid",
+        "operation": "curved_eye_and_inner_orbit_with_fixed_skull_join_and_lid_pivot",
+        "max_displacement": 0.08770594866738113
+      },
+      {
+        "name": "AST_Aelira_v2_eye_R_lower_lid",
+        "operation": "tapered_upper_arch_and_slim_lower_lid_margin",
+        "max_displacement": 0.004396979404930795
+      },
+      {
+        "name": "AST_Aelira_v2_eye_R_lower_lid",
+        "operation": "isolated_face_material_and_reference_value_structure",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Aelira_v2_eye_R_lash_wing",
+        "operation": "pivot_fixed_continuous_arch_and_socket_corner_shape",
+        "max_displacement": 0.004869875441290805
+      },
+      {
+        "name": "AST_Aelira_v2_eye_R_lash_wing",
+        "operation": "curved_eye_and_inner_orbit_with_fixed_skull_join_and_lid_pivot",
+        "max_displacement": 0.12740387052743413
+      },
+      {
+        "name": "AST_Aelira_v2_eye_R_lash_wing",
+        "operation": "isolated_face_material_and_reference_value_structure",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Aelira_v2_eye_R_catchlight",
+        "operation": "pivot_fixed_continuous_arch_and_socket_corner_shape",
+        "max_displacement": 0.0019058470174670994
+      },
+      {
+        "name": "AST_Aelira_v2_eye_R_catchlight",
+        "operation": "curved_eye_and_inner_orbit_with_fixed_skull_join_and_lid_pivot",
+        "max_displacement": 0.060887685080684706
+      },
+      {
+        "name": "AST_Aelira_v2_eye_R_catchlight",
+        "operation": "isolated_face_material_and_reference_value_structure",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Aelira_v2_eye_R_pinlight",
+        "operation": "pivot_fixed_continuous_arch_and_socket_corner_shape",
+        "max_displacement": 0.0015432670268413773
+      },
+      {
+        "name": "AST_Aelira_v2_eye_R_pinlight",
+        "operation": "curved_eye_and_inner_orbit_with_fixed_skull_join_and_lid_pivot",
+        "max_displacement": 0.03032236988362369
+      },
+      {
+        "name": "AST_Aelira_v2_eye_R_pinlight",
+        "operation": "isolated_face_material_and_reference_value_structure",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Aelira_v2_eye_R_closed_lid",
+        "operation": "pivot_fixed_continuous_arch_and_socket_corner_shape",
+        "max_displacement": 0.011675734310180985
+      },
+      {
+        "name": "AST_Aelira_v2_eye_R_closed_lid",
+        "operation": "curved_eye_and_inner_orbit_with_fixed_skull_join_and_lid_pivot",
+        "max_displacement": 0.09817441118244447
+      },
+      {
+        "name": "AST_Aelira_v2_eye_R_closed_lid",
+        "operation": "isolated_face_material_and_reference_value_structure",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Aelira_v2_eye_R_sleep_lash",
+        "operation": "pivot_fixed_continuous_arch_and_socket_corner_shape",
+        "max_displacement": 0.0058395879152493
+      },
+      {
+        "name": "AST_Aelira_v2_eye_R_sleep_lash",
+        "operation": "curved_eye_and_inner_orbit_with_fixed_skull_join_and_lid_pivot",
+        "max_displacement": 0.0509437287633262
+      },
+      {
+        "name": "AST_Aelira_v2_eye_R_sleep_lash",
+        "operation": "isolated_face_material_and_reference_value_structure",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Aelira_v2_brow_R",
+        "operation": "pivot_fixed_continuous_arch_and_socket_corner_shape",
+        "max_displacement": 0.020222088012902262
+      },
+      {
+        "name": "AST_Aelira_v2_brow_R",
+        "operation": "isolated_face_material_and_reference_value_structure",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Aelira_v2_nostril_R",
+        "operation": "species_specific_cheek_chin_nose_and_lip_support",
+        "max_displacement": 0.001423000660242012
+      },
+      {
+        "name": "AST_Aelira_v2_nostril_R",
+        "operation": "isolated_face_material_and_reference_value_structure",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Aelira_v2_eye_L_orbital_skin",
+        "operation": "pivot_fixed_continuous_arch_and_socket_corner_shape",
+        "max_displacement": 0.013710477163126011
+      },
+      {
+        "name": "AST_Aelira_v2_eye_L_orbital_skin",
+        "operation": "curved_eye_and_inner_orbit_with_fixed_skull_join_and_lid_pivot",
+        "max_displacement": 0.08595295366749028
+      },
+      {
+        "name": "AST_Aelira_v2_eye_L_orbital_skin",
+        "operation": "isolated_face_material_and_reference_value_structure",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Aelira_v2_eye_L",
+        "operation": "pivot_fixed_continuous_arch_and_socket_corner_shape",
+        "max_displacement": 0.010752274585760002
+      },
+      {
+        "name": "AST_Aelira_v2_eye_L",
+        "operation": "curved_eye_and_inner_orbit_with_fixed_skull_join_and_lid_pivot",
+        "max_displacement": 0.08700009127221958
+      },
+      {
+        "name": "AST_Aelira_v2_eye_L",
+        "operation": "isolated_face_material_and_reference_value_structure",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Aelira_v2_eye_L_upper_lash",
+        "operation": "pivot_fixed_continuous_arch_and_socket_corner_shape",
+        "max_displacement": 0.012628887465996996
+      },
+      {
+        "name": "AST_Aelira_v2_eye_L_upper_lash",
+        "operation": "curved_eye_and_inner_orbit_with_fixed_skull_join_and_lid_pivot",
+        "max_displacement": 0.09916856716620048
+      },
+      {
+        "name": "AST_Aelira_v2_eye_L_upper_lash",
+        "operation": "tapered_upper_arch_and_slim_lower_lid_margin",
+        "max_displacement": 0.004070253298697979
+      },
+      {
+        "name": "AST_Aelira_v2_eye_L_upper_lash",
+        "operation": "isolated_face_material_and_reference_value_structure",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Aelira_v2_eye_L_lower_lid",
+        "operation": "pivot_fixed_continuous_arch_and_socket_corner_shape",
+        "max_displacement": 0.010945647840929773
+      },
+      {
+        "name": "AST_Aelira_v2_eye_L_lower_lid",
+        "operation": "curved_eye_and_inner_orbit_with_fixed_skull_join_and_lid_pivot",
+        "max_displacement": 0.08770858030870077
+      },
+      {
+        "name": "AST_Aelira_v2_eye_L_lower_lid",
+        "operation": "tapered_upper_arch_and_slim_lower_lid_margin",
+        "max_displacement": 0.004397025738789714
+      },
+      {
+        "name": "AST_Aelira_v2_eye_L_lower_lid",
+        "operation": "isolated_face_material_and_reference_value_structure",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Aelira_v2_eye_L_lash_wing",
+        "operation": "pivot_fixed_continuous_arch_and_socket_corner_shape",
+        "max_displacement": 0.004869874764566351
+      },
+      {
+        "name": "AST_Aelira_v2_eye_L_lash_wing",
+        "operation": "curved_eye_and_inner_orbit_with_fixed_skull_join_and_lid_pivot",
+        "max_displacement": 0.12739828358211278
+      },
+      {
+        "name": "AST_Aelira_v2_eye_L_lash_wing",
+        "operation": "isolated_face_material_and_reference_value_structure",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Aelira_v2_eye_L_catchlight",
+        "operation": "pivot_fixed_continuous_arch_and_socket_corner_shape",
+        "max_displacement": 0.004800789225566593
+      },
+      {
+        "name": "AST_Aelira_v2_eye_L_catchlight",
+        "operation": "curved_eye_and_inner_orbit_with_fixed_skull_join_and_lid_pivot",
+        "max_displacement": 0.037271275356170475
+      },
+      {
+        "name": "AST_Aelira_v2_eye_L_catchlight",
+        "operation": "isolated_face_material_and_reference_value_structure",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Aelira_v2_eye_L_pinlight",
+        "operation": "pivot_fixed_continuous_arch_and_socket_corner_shape",
+        "max_displacement": 0.004313638677747367
+      },
+      {
+        "name": "AST_Aelira_v2_eye_L_pinlight",
+        "operation": "curved_eye_and_inner_orbit_with_fixed_skull_join_and_lid_pivot",
+        "max_displacement": 0.015777881483951095
+      },
+      {
+        "name": "AST_Aelira_v2_eye_L_pinlight",
+        "operation": "isolated_face_material_and_reference_value_structure",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Aelira_v2_eye_L_closed_lid",
+        "operation": "pivot_fixed_continuous_arch_and_socket_corner_shape",
+        "max_displacement": 0.011675735507173268
+      },
+      {
+        "name": "AST_Aelira_v2_eye_L_closed_lid",
+        "operation": "curved_eye_and_inner_orbit_with_fixed_skull_join_and_lid_pivot",
+        "max_displacement": 0.098172785096314
+      },
+      {
+        "name": "AST_Aelira_v2_eye_L_closed_lid",
+        "operation": "isolated_face_material_and_reference_value_structure",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Aelira_v2_eye_L_sleep_lash",
+        "operation": "pivot_fixed_continuous_arch_and_socket_corner_shape",
+        "max_displacement": 0.005839547190221062
+      },
+      {
+        "name": "AST_Aelira_v2_eye_L_sleep_lash",
+        "operation": "curved_eye_and_inner_orbit_with_fixed_skull_join_and_lid_pivot",
+        "max_displacement": 0.05093979726765835
+      },
+      {
+        "name": "AST_Aelira_v2_eye_L_sleep_lash",
+        "operation": "isolated_face_material_and_reference_value_structure",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Aelira_v2_brow_L",
+        "operation": "pivot_fixed_continuous_arch_and_socket_corner_shape",
+        "max_displacement": 0.020222795675404193
+      },
+      {
+        "name": "AST_Aelira_v2_brow_L",
+        "operation": "isolated_face_material_and_reference_value_structure",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Aelira_v2_nostril_L",
+        "operation": "species_specific_cheek_chin_nose_and_lip_support",
+        "max_displacement": 0.0014233987904922394
+      },
+      {
+        "name": "AST_Aelira_v2_nostril_L",
+        "operation": "isolated_face_material_and_reference_value_structure",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Aelira_v2_warm_smile",
+        "operation": "species_specific_cheek_chin_nose_and_lip_support",
+        "max_displacement": 0.007884073429721793
+      },
+      {
+        "name": "AST_Aelira_v2_warm_smile",
+        "operation": "isolated_face_material_and_reference_value_structure",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Aelira_v2_lower_lip",
+        "operation": "species_specific_cheek_chin_nose_and_lip_support",
+        "max_displacement": 0.006676498181449598
+      },
+      {
+        "name": "AST_Aelira_v2_lower_lip",
+        "operation": "isolated_face_material_and_reference_value_structure",
+        "max_displacement": 0
+      },
+      {
+        "name": "AST_Aelira_v2_eye_R_orbital_skin",
+        "operation": "orbital_outer_root_embedded_in_actual_facial_surface",
+        "max_displacement": 0.004047424107103544
+      },
+      {
+        "name": "AST_Aelira_v2_brow_R",
+        "operation": "brow_roots_seated_on_actual_facial_skin",
+        "max_displacement": 0.13558781957626342
+      },
+      {
+        "name": "AST_Aelira_v2_nostril_R",
+        "operation": "subtle_mouth_and_nostril_relief_seated_on_facial_skin",
+        "max_displacement": 0.049127350807189996
+      },
+      {
+        "name": "AST_Aelira_v2_eye_L_orbital_skin",
+        "operation": "orbital_outer_root_embedded_in_actual_facial_surface",
+        "max_displacement": 0.004045721178498273
+      },
+      {
+        "name": "AST_Aelira_v2_brow_L",
+        "operation": "brow_roots_seated_on_actual_facial_skin",
+        "max_displacement": 0.13558877325057983
+      },
+      {
+        "name": "AST_Aelira_v2_nostril_L",
+        "operation": "subtle_mouth_and_nostril_relief_seated_on_facial_skin",
+        "max_displacement": 0.049285362720489556
+      },
+      {
+        "name": "AST_Aelira_v2_warm_smile",
+        "operation": "subtle_mouth_and_nostril_relief_seated_on_facial_skin",
+        "max_displacement": 0.009500130234945177
+      },
+      {
+        "name": "AST_Aelira_v2_lower_lip",
+        "operation": "subtle_mouth_and_nostril_relief_seated_on_facial_skin",
+        "max_displacement": 0.011800643367343384
+      }
+    ],
+    "face_objects": [
+      "AST_Aelira_v2_brow_L",
+      "AST_Aelira_v2_brow_R",
+      "AST_Aelira_v2_eye_L",
+      "AST_Aelira_v2_eye_L_catchlight",
+      "AST_Aelira_v2_eye_L_closed_lid",
+      "AST_Aelira_v2_eye_L_lash_wing",
+      "AST_Aelira_v2_eye_L_lower_lid",
+      "AST_Aelira_v2_eye_L_orbital_skin",
+      "AST_Aelira_v2_eye_L_pinlight",
+      "AST_Aelira_v2_eye_L_sleep_lash",
+      "AST_Aelira_v2_eye_L_upper_lash",
+      "AST_Aelira_v2_eye_R",
+      "AST_Aelira_v2_eye_R_catchlight",
+      "AST_Aelira_v2_eye_R_closed_lid",
+      "AST_Aelira_v2_eye_R_lash_wing",
+      "AST_Aelira_v2_eye_R_lower_lid",
+      "AST_Aelira_v2_eye_R_orbital_skin",
+      "AST_Aelira_v2_eye_R_pinlight",
+      "AST_Aelira_v2_eye_R_sleep_lash",
+      "AST_Aelira_v2_eye_R_upper_lash",
+      "AST_Aelira_v2_lower_lip",
+      "AST_Aelira_v2_nostril_L",
+      "AST_Aelira_v2_nostril_R",
+      "AST_Aelira_v2_refined_head",
+      "AST_Aelira_v2_warm_smile"
+    ],
+    "removed_face_objects": [],
+    "added_base_clothing": [],
+    "face_frame": {
+      "center": [
+        0,
+        -0.25,
+        2.87
+      ],
+      "span": [
+        1.2,
+        0.86,
+        1.19
+      ]
+    },
+    "face_material_copies": 9,
+    "iris_design": [
+      {
+        "name": "AST_Aelira_v2_eye_L",
+        "pupil_half_width_fraction": 0.46,
+        "pupil_half_height_fraction": 0.6,
+        "iris_half_width_fraction": 0.83,
+        "iris_half_height_fraction": 0.98
+      },
+      {
+        "name": "AST_Aelira_v2_eye_R",
+        "pupil_half_width_fraction": 0.46,
+        "pupil_half_height_fraction": 0.6,
+        "iris_half_width_fraction": 0.83,
+        "iris_half_height_fraction": 0.98
+      }
+    ],
+    "orbital_surface_fit": {
+      "L": {
+        "coefficients": [
+          0.08876039805885681,
+          0.5634382278092321,
+          0.7282716441063566,
+          -0.9994167522759917,
+          1.9098294239409448
+        ],
+        "edge_rms_before": 0.05584713181296571,
+        "edge_rms_after": 0.013550084658881018
+      },
+      "R": {
+        "coefficients": [
+          -0.08877623267928104,
+          0.563425000810565,
+          0.7284640189195433,
+          -0.9993211747819208,
+          -1.9095600406526079
+        ],
+        "edge_rms_before": 0.055847471208374154,
+        "edge_rms_after": 0.013551519804404808
+      }
+    },
+    "original_lid_scale_pivots_unchanged": true,
+    "notes": "Facial-only sculpt, coherent pivot-fixed ocular arches, deeper broad irises and pupils, isolated warm skin value fields. Original body, joint shells, hair, ears, outfit and every action retained.",
+    "body_source_objects": [
+      "AST_Aelira_neck",
+      "AST_Aelira_cream_tunic",
+      "AST_Aelira_forest_v_neck_insert",
+      "AST_Aelira_forest_v_neck_insert_bound_edge",
+      "AST_Aelira_soft_cream_sleeve_R",
+      "AST_Aelira_forest_trouser_R",
+      "AST_Aelira_shaped_boot_R",
+      "AST_Aelira_boot_integrated_sole_R",
+      "AST_Aelira_soft_cream_sleeve_L",
+      "AST_Aelira_forest_trouser_L",
+      "AST_Aelira_shaped_boot_L",
+      "AST_Aelira_boot_integrated_sole_L",
+      "AST_Aelira_center_tabard",
+      "AST_Aelira_center_tabard_bound_edge",
+      "AST_Aelira_v2_refined_head",
+      "AST_Aelira_v2_eye_R_orbital_skin",
+      "AST_Aelira_v2_eye_R",
+      "AST_Aelira_v2_eye_R_upper_lash",
+      "AST_Aelira_v2_eye_R_lower_lid",
+      "AST_Aelira_v2_eye_R_lash_wing",
+      "AST_Aelira_v2_eye_R_catchlight",
+      "AST_Aelira_v2_eye_R_pinlight",
+      "AST_Aelira_v2_eye_R_closed_lid",
+      "AST_Aelira_v2_eye_R_sleep_lash",
+      "AST_Aelira_v2_leaf_ear_R",
+      "AST_Aelira_v2_leaf_ear_R_concha",
+      "AST_Aelira_v2_leaf_ear_R_antihelix",
+      "AST_Aelira_v2_brow_R",
+      "AST_Aelira_v2_nostril_R",
+      "AST_Aelira_v2_eye_L_orbital_skin",
+      "AST_Aelira_v2_eye_L",
+      "AST_Aelira_v2_eye_L_upper_lash",
+      "AST_Aelira_v2_eye_L_lower_lid",
+      "AST_Aelira_v2_eye_L_lash_wing",
+      "AST_Aelira_v2_eye_L_catchlight",
+      "AST_Aelira_v2_eye_L_pinlight",
+      "AST_Aelira_v2_eye_L_closed_lid",
+      "AST_Aelira_v2_eye_L_sleep_lash",
+      "AST_Aelira_v2_leaf_ear_L",
+      "AST_Aelira_v2_leaf_ear_L_concha",
+      "AST_Aelira_v2_leaf_ear_L_antihelix",
+      "AST_Aelira_v2_brow_L",
+      "AST_Aelira_v2_nostril_L",
+      "AST_Aelira_v2_warm_smile",
+      "AST_Aelira_v2_lower_lip",
+      "AST_Aelira_v2_sculpted_hair_cap",
+      "AST_Aelira_v2_back_swept_lock_0",
+      "AST_Aelira_v2_back_swept_lock_1",
+      "AST_Aelira_v2_back_swept_lock_2",
+      "AST_Aelira_v2_back_swept_lock_3",
+      "AST_Aelira_v2_back_swept_lock_4",
+      "AST_Aelira_v2_back_swept_lock_5",
+      "AST_Aelira_v2_back_swept_lock_6",
+      "AST_Aelira_v2_back_swept_lock_7",
+      "AST_Aelira_v2_back_swept_lock_8",
+      "AST_Aelira_v2_back_swept_lock_9",
+      "AST_Aelira_v2_interwoven_plait_0",
+      "AST_Aelira_v2_interwoven_plait_1",
+      "AST_Aelira_v2_interwoven_plait_2",
+      "AST_Aelira_v2_braid_tassel_0",
+      "AST_Aelira_v2_braid_tassel_1",
+      "AST_Aelira_v2_braid_tassel_2",
+      "AST_Aelira_v2_braid_tassel_3",
+      "AST_Aelira_v2_braid_tassel_4",
+      "AST_Aelira_v2_braid_tassel_5",
+      "AST_Aelira_v2_tailored_split_skirt_-1",
+      "AST_Aelira_v2_skirt_leather_binding_-1",
+      "AST_Aelira_v2_skirt_fine_gold_edge_-1",
+      "AST_Aelira_v2_tailored_split_skirt_1",
+      "AST_Aelira_v2_skirt_leather_binding_1",
+      "AST_Aelira_v2_skirt_fine_gold_edge_1",
+      "AST_Aelira_v2_shaped_hand_-1",
+      "AST_Aelira_v2_knuckle_crease_-10",
+      "AST_Aelira_v2_knuckle_crease_-11",
+      "AST_Aelira_v2_knuckle_crease_-12",
+      "AST_Aelira_v2_knuckle_crease_-13",
+      "AST_Aelira_v2_shaped_cream_boot_cuff_R",
+      "AST_Aelira_v2_toecap_stitch_R",
+      "AST_Aelira_v2_shaped_hand_1",
+      "AST_Aelira_v2_knuckle_crease_10",
+      "AST_Aelira_v2_knuckle_crease_11",
+      "AST_Aelira_v2_knuckle_crease_12",
+      "AST_Aelira_v2_knuckle_crease_13",
+      "AST_Aelira_v2_shaped_cream_boot_cuff_L",
+      "AST_Aelira_v2_toecap_stitch_L",
+      "AST_Aelira_v2_bodice_vine_-1_vine_stitch",
+      "AST_Aelira_v2_bodice_vine_-1_embroidered_leaf_0",
+      "AST_Aelira_v2_bodice_vine_-1_embroidered_leaf_1",
+      "AST_Aelira_v2_bodice_vine_-1_embroidered_leaf_2",
+      "AST_Aelira_v2_bodice_vine_-1_embroidered_leaf_3",
+      "AST_Aelira_v2_bodice_vine_-1_embroidered_leaf_4",
+      "AST_Aelira_v2_bodice_vine_-1_embroidered_leaf_5",
+      "AST_Aelira_v2_bodice_vine_-1_embroidered_leaf_6",
+      "AST_Aelira_v2_bodice_vine_-1_embroidered_leaf_7",
+      "AST_Aelira_v2_skirt_vine_-1_vine_stitch",
+      "AST_Aelira_v2_skirt_vine_-1_embroidered_leaf_0",
+      "AST_Aelira_v2_skirt_vine_-1_embroidered_leaf_1",
+      "AST_Aelira_v2_skirt_vine_-1_embroidered_leaf_2",
+      "AST_Aelira_v2_skirt_vine_-1_embroidered_leaf_3",
+      "AST_Aelira_v2_skirt_vine_-1_embroidered_leaf_4",
+      "AST_Aelira_v2_skirt_vine_-1_embroidered_leaf_5",
+      "AST_Aelira_v2_skirt_vine_-1_embroidered_leaf_6",
+      "AST_Aelira_v2_skirt_vine_-1_embroidered_leaf_7",
+      "AST_Aelira_v2_sleeve_vine_-1_vine_stitch",
+      "AST_Aelira_v2_sleeve_vine_-1_embroidered_leaf_0",
+      "AST_Aelira_v2_sleeve_vine_-1_embroidered_leaf_1",
+      "AST_Aelira_v2_sleeve_vine_-1_embroidered_leaf_2",
+      "AST_Aelira_v2_sleeve_vine_-1_embroidered_leaf_3",
+      "AST_Aelira_v2_sleeve_vine_-1_embroidered_leaf_4",
+      "AST_Aelira_v2_sleeve_vine_-1_embroidered_leaf_5",
+      "AST_Aelira_v2_bodice_vine_1_vine_stitch",
+      "AST_Aelira_v2_bodice_vine_1_embroidered_leaf_0",
+      "AST_Aelira_v2_bodice_vine_1_embroidered_leaf_1",
+      "AST_Aelira_v2_bodice_vine_1_embroidered_leaf_2",
+      "AST_Aelira_v2_bodice_vine_1_embroidered_leaf_3",
+      "AST_Aelira_v2_bodice_vine_1_embroidered_leaf_4",
+      "AST_Aelira_v2_bodice_vine_1_embroidered_leaf_5",
+      "AST_Aelira_v2_bodice_vine_1_embroidered_leaf_6",
+      "AST_Aelira_v2_bodice_vine_1_embroidered_leaf_7",
+      "AST_Aelira_v2_skirt_vine_1_vine_stitch",
+      "AST_Aelira_v2_skirt_vine_1_embroidered_leaf_0",
+      "AST_Aelira_v2_skirt_vine_1_embroidered_leaf_1",
+      "AST_Aelira_v2_skirt_vine_1_embroidered_leaf_2",
+      "AST_Aelira_v2_skirt_vine_1_embroidered_leaf_3",
+      "AST_Aelira_v2_skirt_vine_1_embroidered_leaf_4",
+      "AST_Aelira_v2_skirt_vine_1_embroidered_leaf_5",
+      "AST_Aelira_v2_skirt_vine_1_embroidered_leaf_6",
+      "AST_Aelira_v2_skirt_vine_1_embroidered_leaf_7",
+      "AST_Aelira_v2_sleeve_vine_1_vine_stitch",
+      "AST_Aelira_v2_sleeve_vine_1_embroidered_leaf_0",
+      "AST_Aelira_v2_sleeve_vine_1_embroidered_leaf_1",
+      "AST_Aelira_v2_sleeve_vine_1_embroidered_leaf_2",
+      "AST_Aelira_v2_sleeve_vine_1_embroidered_leaf_3",
+      "AST_Aelira_v2_sleeve_vine_1_embroidered_leaf_4",
+      "AST_Aelira_v2_sleeve_vine_1_embroidered_leaf_5",
+      "AST_Aelira_v2_tabard_gold_laurel_vine_stitch",
+      "AST_Aelira_v2_tabard_gold_laurel_embroidered_leaf_0",
+      "AST_Aelira_v2_tabard_gold_laurel_embroidered_leaf_1",
+      "AST_Aelira_v2_tabard_gold_laurel_embroidered_leaf_2",
+      "AST_Aelira_v2_tabard_gold_laurel_embroidered_leaf_3",
+      "AST_Aelira_v2_tabard_gold_laurel_embroidered_leaf_4",
+      "AST_Aelira_v2_tabard_gold_laurel_embroidered_leaf_5",
+      "AST_Aelira_v2_tabard_gold_laurel_embroidered_leaf_6",
+      "AST_Aelira_v2_tabard_gold_laurel_embroidered_leaf_7",
+      "AST_Aelira_v2_tabard_gold_laurel_embroidered_leaf_8",
+      "AST_Aelira_v2_tabard_gold_laurel_embroidered_leaf_9",
+      "AST_Aelira_v2_tabard_gold_laurel_embroidered_leaf_10",
+      "AST_Aelira_v4_arched_parted_crown_-1_00",
+      "AST_Aelira_v4_arched_parted_crown_-1_01",
+      "AST_Aelira_v4_arched_parted_crown_-1_02",
+      "AST_Aelira_v4_arched_parted_crown_-1_03",
+      "AST_Aelira_v4_arched_parted_crown_-1_04",
+      "AST_Aelira_v4_flowing_temple_ringlet_-1",
+      "AST_Aelira_v4_arched_parted_crown_1_00",
+      "AST_Aelira_v4_arched_parted_crown_1_01",
+      "AST_Aelira_v4_arched_parted_crown_1_02",
+      "AST_Aelira_v4_arched_parted_crown_1_03",
+      "AST_Aelira_v4_arched_parted_crown_1_04",
+      "AST_Aelira_v4_flowing_temple_ringlet_1",
+      "AST_Aelira_v4_closed_tunic_armhole_L",
+      "AST_Aelira_v4_closed_wrist_L",
+      "AST_Aelira_v4_closed_tunic_armhole_R",
+      "AST_Aelira_v4_closed_wrist_R",
+      "AST_Aelira_v4_closed_base_trouser_seat"
+    ],
+    "equipment_source_objects": [
+      "AST_Aelira_leaf_vambrace_R",
+      "AST_Aelira_bracer_gilt_R0.04",
+      "AST_Aelira_bracer_gilt_R0.57",
+      "AST_Aelira_leaf_vambrace_L",
+      "AST_Aelira_bracer_gilt_L0.04",
+      "AST_Aelira_bracer_gilt_L0.57",
+      "AST_Aelira_wide_leather_belt",
+      "AST_Aelira_belt_gilt_stitch_1.475",
+      "AST_Aelira_belt_gilt_stitch_1.6",
+      "AST_Aelira_v2_braid_engraved_tie_1.83",
+      "AST_Aelira_v2_braid_engraved_tie_1.877",
+      "AST_Aelira_v2_full_folded_forest_cape",
+      "AST_Aelira_v2_cape_gold_selvedge_-1",
+      "AST_Aelira_v2_cape_margin_vine_-1",
+      "AST_Aelira_v2_cape_margin_leaf_-1_0",
+      "AST_Aelira_v2_cape_margin_leaf_-1_1",
+      "AST_Aelira_v2_cape_margin_leaf_-1_2",
+      "AST_Aelira_v2_cape_margin_leaf_-1_3",
+      "AST_Aelira_v2_cape_margin_leaf_-1_4",
+      "AST_Aelira_v2_cape_margin_leaf_-1_5",
+      "AST_Aelira_v2_cape_margin_leaf_-1_6",
+      "AST_Aelira_v2_cape_margin_leaf_-1_7",
+      "AST_Aelira_v2_cape_margin_leaf_-1_8",
+      "AST_Aelira_v2_cape_margin_leaf_-1_9",
+      "AST_Aelira_v2_cape_margin_leaf_-1_10",
+      "AST_Aelira_v2_cape_margin_leaf_-1_11",
+      "AST_Aelira_v2_cape_margin_leaf_-1_12",
+      "AST_Aelira_v2_cape_margin_leaf_-1_13",
+      "AST_Aelira_v2_cape_margin_leaf_-1_14",
+      "AST_Aelira_v2_cape_margin_leaf_-1_15",
+      "AST_Aelira_v2_cape_gold_selvedge_1",
+      "AST_Aelira_v2_cape_margin_vine_1",
+      "AST_Aelira_v2_cape_margin_leaf_1_0",
+      "AST_Aelira_v2_cape_margin_leaf_1_1",
+      "AST_Aelira_v2_cape_margin_leaf_1_2",
+      "AST_Aelira_v2_cape_margin_leaf_1_3",
+      "AST_Aelira_v2_cape_margin_leaf_1_4",
+      "AST_Aelira_v2_cape_margin_leaf_1_5",
+      "AST_Aelira_v2_cape_margin_leaf_1_6",
+      "AST_Aelira_v2_cape_margin_leaf_1_7",
+      "AST_Aelira_v2_cape_margin_leaf_1_8",
+      "AST_Aelira_v2_cape_margin_leaf_1_9",
+      "AST_Aelira_v2_cape_margin_leaf_1_10",
+      "AST_Aelira_v2_cape_margin_leaf_1_11",
+      "AST_Aelira_v2_cape_margin_leaf_1_12",
+      "AST_Aelira_v2_cape_margin_leaf_1_13",
+      "AST_Aelira_v2_cape_margin_leaf_1_14",
+      "AST_Aelira_v2_cape_margin_leaf_1_15",
+      "AST_Aelira_v2_connected_cloak_mantle",
+      "AST_Aelira_v2_mantle_gold_edge",
+      "AST_Aelira_v2_cape_embroidered_hem",
+      "AST_Aelira_v2_cape_hem_leaf_0",
+      "AST_Aelira_v2_cape_hem_leaf_1",
+      "AST_Aelira_v2_cape_hem_leaf_2",
+      "AST_Aelira_v2_cape_hem_leaf_3",
+      "AST_Aelira_v2_cape_hem_leaf_4",
+      "AST_Aelira_v2_cape_hem_leaf_5",
+      "AST_Aelira_v2_cape_hem_leaf_6",
+      "AST_Aelira_v2_cape_hem_leaf_7",
+      "AST_Aelira_v2_cape_hem_leaf_8",
+      "AST_Aelira_v2_cape_hem_leaf_9",
+      "AST_Aelira_v2_cape_hem_leaf_10",
+      "AST_Aelira_v2_cape_hem_leaf_11",
+      "AST_Aelira_v2_cape_hem_leaf_12",
+      "AST_Aelira_v2_cape_hem_leaf_13",
+      "AST_Aelira_v2_cape_hem_leaf_14",
+      "AST_Aelira_v2_cape_hem_leaf_15",
+      "AST_Aelira_v2_cape_hem_leaf_16",
+      "AST_Aelira_v2_cape_hem_leaf_17",
+      "AST_Aelira_v2_cape_hem_leaf_18",
+      "AST_Aelira_v2_cape_hem_leaf_19",
+      "AST_Aelira_v2_cape_hem_leaf_20",
+      "AST_Aelira_v2_cape_hem_leaf_21",
+      "AST_Aelira_v2_cape_hem_leaf_22",
+      "AST_Aelira_v2_cape_hem_leaf_23",
+      "AST_Aelira_v2_cape_hem_leaf_24",
+      "AST_Aelira_v2_cape_hem_leaf_25",
+      "AST_Aelira_v2_cape_hem_leaf_26",
+      "AST_Aelira_v2_cape_hem_leaf_27",
+      "AST_Aelira_v2_cuff_gold_stitch_R0.08",
+      "AST_Aelira_v2_cuff_gold_stitch_R0.94",
+      "AST_Aelira_v2_fitted_boot_strap_R0",
+      "AST_Aelira_v2_boot_buckle_R0_cut_setting",
+      "AST_Aelira_v2_boot_buckle_R0_metal_bezel",
+      "AST_Aelira_v2_fitted_boot_strap_R1",
+      "AST_Aelira_v2_boot_buckle_R1_cut_setting",
+      "AST_Aelira_v2_boot_buckle_R1_metal_bezel",
+      "AST_Aelira_v2_cuff_leaf_R_vine_stitch",
+      "AST_Aelira_v2_cuff_leaf_R_embroidered_leaf_4",
+      "AST_Aelira_v2_cuff_gold_stitch_L0.08",
+      "AST_Aelira_v2_cuff_gold_stitch_L0.94",
+      "AST_Aelira_v2_fitted_boot_strap_L0",
+      "AST_Aelira_v2_boot_buckle_L0_cut_setting",
+      "AST_Aelira_v2_boot_buckle_L0_metal_bezel",
+      "AST_Aelira_v2_fitted_boot_strap_L1",
+      "AST_Aelira_v2_boot_buckle_L1_cut_setting",
+      "AST_Aelira_v2_boot_buckle_L1_metal_bezel",
+      "AST_Aelira_v2_cuff_leaf_L_vine_stitch",
+      "AST_Aelira_v2_cuff_leaf_L_embroidered_leaf_4",
+      "AST_Aelira_v2_vambrace_laurel_-1_vine_stitch",
+      "AST_Aelira_v2_vambrace_laurel_-1_embroidered_leaf_0",
+      "AST_Aelira_v2_vambrace_laurel_-1_embroidered_leaf_1",
+      "AST_Aelira_v2_vambrace_laurel_-1_embroidered_leaf_2",
+      "AST_Aelira_v2_vambrace_laurel_-1_embroidered_leaf_3",
+      "AST_Aelira_v2_vambrace_laurel_-1_embroidered_leaf_4",
+      "AST_Aelira_v2_vambrace_laurel_-1_embroidered_leaf_5",
+      "AST_Aelira_v2_vambrace_laurel_1_vine_stitch",
+      "AST_Aelira_v2_vambrace_laurel_1_embroidered_leaf_0",
+      "AST_Aelira_v2_vambrace_laurel_1_embroidered_leaf_1",
+      "AST_Aelira_v2_vambrace_laurel_1_embroidered_leaf_2",
+      "AST_Aelira_v2_vambrace_laurel_1_embroidered_leaf_3",
+      "AST_Aelira_v2_vambrace_laurel_1_embroidered_leaf_4",
+      "AST_Aelira_v2_vambrace_laurel_1_embroidered_leaf_5",
+      "AST_Aelira_v2_cloak_clasp_cut_setting",
+      "AST_Aelira_v2_cloak_clasp_metal_bezel",
+      "AST_Aelira_v2_cloak_leaf_star",
+      "AST_Aelira_v2_belt_clasp_cut_setting",
+      "AST_Aelira_v2_belt_clasp_metal_bezel",
+      "AST_Aelira_v2_belt_leaf_star"
+    ]
+  },
+  "face_scope": {
+    "checks": {
+      "explicit_face_only_allowlist": true,
+      "all_unedited_source_objects_retained": true,
+      "nonface_geometry_unchanged": true,
+      "nonface_materials_unchanged": true,
+      "original_lid_pivots_unchanged": true,
+      "meaningful_face_geometry_refinement": true
+    },
+    "protected_geometry_sha256": {
+      "AST_Aelira_belt_gilt_stitch_1.475": "2CCE008121A851F168986204E9B86FAA120552F32DE3C08A0356E84B46BDE6F4",
+      "AST_Aelira_belt_gilt_stitch_1.6": "CE6C990F722BB308DCA41ED40048B633AD6A4BEDA104A2C8088B81544600DD8C",
+      "AST_Aelira_boot_integrated_sole_L": "34C51960BE9AD861451F30AE97F4DD864F9E343EE58B9FEDB840AB985F548FAC",
+      "AST_Aelira_boot_integrated_sole_R": "FB172297C921DB78D78D5123E1D361482CF4E2133072184EBAED66232A1AD361",
+      "AST_Aelira_bracer_gilt_L0.04": "4F762C5F640B0950ED0BB341E08E82484A4E42976D3877DEDD45A2F31A45934C",
+      "AST_Aelira_bracer_gilt_L0.57": "D28F84DB919F784107EDAE6D273B35A2EAADF988EA21A5A2D6915AAC3DDB5CCD",
+      "AST_Aelira_bracer_gilt_R0.04": "F81A9D022B32C24590C0B83549704118B70C60657D74EC7B86C6F6D1218882BA",
+      "AST_Aelira_bracer_gilt_R0.57": "3103C0C420F739941B0C27140C0A0C2B11B5E451F57FACF4442D17AB987B0A53",
+      "AST_Aelira_center_tabard": "713CBD02BA0A896C50C392E60361627C1B55BC164F552BD08285770AB93F3538",
+      "AST_Aelira_center_tabard_bound_edge": "2F55603AE47E6B76B649C1F82BBE26BACE61225F2F3CD6F1D5B2B9BF3226D5B0",
+      "AST_Aelira_cream_tunic": "47D140084097CF2954150168DD42F90F0EEC7A41770C1826F59B6B653903E5E9",
+      "AST_Aelira_forest_trouser_L": "01AE788F03E79E3CECEDA86CCFF2A3E8E902B3068CBD258A92E4AD7D52AE4FEC",
+      "AST_Aelira_forest_trouser_R": "5C9529C2549FEBED90AA3A275B0402145ACBB8615D9C7D8370147D16A938FBA4",
+      "AST_Aelira_forest_v_neck_insert": "3C81800A5A6F33F1D87AED4B2A0074587ED5DE509C424739D4AB40997921467D",
+      "AST_Aelira_forest_v_neck_insert_bound_edge": "DA5EADE30E808A7EDF199FA7141BC80C1377897E999C56D58C8703749A669F8C",
+      "AST_Aelira_leaf_vambrace_L": "A7B7C8E201071449D39E2B385CD8FFB2837A0E572FACAD8E240A8474B49BCDFF",
+      "AST_Aelira_leaf_vambrace_R": "B298A9562E06E5BB9C4A263D7F1F294E1F6C4122C1C03FFCAD793A7E7899E267",
+      "AST_Aelira_neck": "3316523DA39E9E2A845FA0D9017A4F84479E46D96EA7545887FE2DFA24D46091",
+      "AST_Aelira_shaped_boot_L": "581063A8BA2F2839F22120AAF06FB2D079ECBACA9E3B758DD42CD45AD5C306D8",
+      "AST_Aelira_shaped_boot_R": "ADCE8EE1224685C07E0B2103A3F6C3B6643D6075986CCC33C5F01E31E61C6E33",
+      "AST_Aelira_soft_cream_sleeve_L": "7DF69149EDEB5C878BDD35C7A475BE2D53217CE039488C03289EEEA58BB111E8",
+      "AST_Aelira_soft_cream_sleeve_R": "D9DEE60AD0E7EE4AFE28FE0DB781C4CCB10A44124FBDF620A3BBAA0410392BE8",
+      "AST_Aelira_v2_back_swept_lock_0": "A0C8DB85A1581BDE032DEF2AF8CBBB2AACC0378EA783E5514CCCF9C2CA165544",
+      "AST_Aelira_v2_back_swept_lock_1": "5C95CB0324BE4751D7162DE51DC2A585580D7A982F7B3A3CA15FED08ADC6D70A",
+      "AST_Aelira_v2_back_swept_lock_2": "523DD8099F42BBF7C18A910C2D15EF3C1DF6F8ADAA2C97173FCDB22086E4F18C",
+      "AST_Aelira_v2_back_swept_lock_3": "66B08EF4B00457BC79327B06412E8E343AA4E98922B44F83A47A0C8D96D5F2E5",
+      "AST_Aelira_v2_back_swept_lock_4": "01ABCC58D50F554AC72C48DC28A34186B9987A565B5F5E6617FAF47661E0A050",
+      "AST_Aelira_v2_back_swept_lock_5": "51CC144FBECB23403AAB608281C69AA824C62D12394D717601341D9DC753BB3C",
+      "AST_Aelira_v2_back_swept_lock_6": "B6471F4FBE8A4302E279074516B7E1944D206677E6BB7BF7D3FB522AF1A52262",
+      "AST_Aelira_v2_back_swept_lock_7": "B7FEB4E6165C451166052C3C2030DF93A93973DF580F65A9FDF45265EC000F1B",
+      "AST_Aelira_v2_back_swept_lock_8": "3FE22B5C8D06AD0FA798AEF4324FC8A315E7D9B00C8ED954A42A5F20CC79F8A1",
+      "AST_Aelira_v2_back_swept_lock_9": "8A0D635C4DF9D28ABE4239A9F4C0D9835CF800E8463CDC6F97ECD6CA0CDC23C5",
+      "AST_Aelira_v2_belt_clasp_cut_setting": "9A317D9A4080E41DB2F65315BC32B908858EF6A06D39C1732CAD18CCA1648FBB",
+      "AST_Aelira_v2_belt_clasp_metal_bezel": "BDD7785721720B458F1582594356E2B8765F6F29C8CB11EA6A78681DA2C89F61",
+      "AST_Aelira_v2_belt_leaf_star": "A1F918D7DA58A29605EC9D867B7592B9AAA27BAB4AE50618B09E87D3854AD440",
+      "AST_Aelira_v2_bodice_vine_-1_embroidered_leaf_0": "9BB77F6DC7CB712981A92F8DB71324F4E6D58825966E7D5F4019F2881636A345",
+      "AST_Aelira_v2_bodice_vine_-1_embroidered_leaf_1": "1775054F380CB4090F5CB88B20B5E630BA95A903BCEE38DF8BA45ABA0A4A8FC6",
+      "AST_Aelira_v2_bodice_vine_-1_embroidered_leaf_2": "657B01274CB1AB0E95322F98B50208673AACC59710601713A8147AEAA20E8732",
+      "AST_Aelira_v2_bodice_vine_-1_embroidered_leaf_3": "B637950EE20FB4D6844E43D18A197D63631D8E27183306AA79E9AC490E360C77",
+      "AST_Aelira_v2_bodice_vine_-1_embroidered_leaf_4": "618CC96262EDF105718062183037B863AE928ABEE44DD5EA2CCA453F0E741041",
+      "AST_Aelira_v2_bodice_vine_-1_embroidered_leaf_5": "080A82335B17FA7820D936B8604A92D2DFFBB1FB42E9177691F288E310F47081",
+      "AST_Aelira_v2_bodice_vine_-1_embroidered_leaf_6": "BB2A38916F327A6CA4FBE983D41B8BBD36C7B2FA4D48174571D5027741B4A404",
+      "AST_Aelira_v2_bodice_vine_-1_embroidered_leaf_7": "D8810C6C845DAF3B0432C0EAFE55253B09BC711FCAEE8088FB3A7993B7086415",
+      "AST_Aelira_v2_bodice_vine_-1_vine_stitch": "6325310FB299A16AE1E697DC64907B28A5F85BE249393391ED4FE8A4E2A44E48",
+      "AST_Aelira_v2_bodice_vine_1_embroidered_leaf_0": "FC8684EC6DA9440F1349B1A4AB732A7EDA799B9DFD3964B3194575DEA7D599D2",
+      "AST_Aelira_v2_bodice_vine_1_embroidered_leaf_1": "F5BB46F0A142ED033D5E3BA5600D5F551789CB7A5FAD9B70046500C80834EB58",
+      "AST_Aelira_v2_bodice_vine_1_embroidered_leaf_2": "4EF8AC2591F585E1F661318D867884C5C1E289D5AA4917D2E5CDB3EFDD55CFFD",
+      "AST_Aelira_v2_bodice_vine_1_embroidered_leaf_3": "A552E9E044792D983FCA8E77BE00936EFDC7F37496481481E06BECFE2BABEA76",
+      "AST_Aelira_v2_bodice_vine_1_embroidered_leaf_4": "4F24154721F0BEF1B82AA333920A5BFFFDDD8CDB6DAE90C3D4B4ED3FD4F63114",
+      "AST_Aelira_v2_bodice_vine_1_embroidered_leaf_5": "B7FF25D9F33809A93A6B15FB48DE55D961C1033D57A524D6E3AA6C152BB8FB0A",
+      "AST_Aelira_v2_bodice_vine_1_embroidered_leaf_6": "5A49542B1E41AC543A181EE4F47AB03E7A3F932ED14F10AD478665A77F411F40",
+      "AST_Aelira_v2_bodice_vine_1_embroidered_leaf_7": "82660AFA07CB8EE9237AADACD96E7D0EAE4BA68D3E5531584B7A750793A335BD",
+      "AST_Aelira_v2_bodice_vine_1_vine_stitch": "2008B5693D718CB8CFB81A5374C8CEFC13298578FD5A629505B0F621E865ED44",
+      "AST_Aelira_v2_boot_buckle_L0_cut_setting": "17693323212FA1A6E53DDCDACD5EF4F30DB8647E891CDF0773422C2742E18649",
+      "AST_Aelira_v2_boot_buckle_L0_metal_bezel": "98D3E275AAC9D5D343D836A8A5E99554D510609F260B2DD17C831A05FC8CD775",
+      "AST_Aelira_v2_boot_buckle_L1_cut_setting": "01AFE843A51654E71C2A97D0EAB4098803B429177B41D21052E9889850151CA3",
+      "AST_Aelira_v2_boot_buckle_L1_metal_bezel": "1CFD5D1408A63E4432828569FF87681ED2C054F950E4AD58DFA370B38DFF49A3",
+      "AST_Aelira_v2_boot_buckle_R0_cut_setting": "2D1F351F6284191148A1AE7C2023BFCEF2E154F15C433C23CB1B8FB2B2DC6005",
+      "AST_Aelira_v2_boot_buckle_R0_metal_bezel": "4AD8DA4998284915D62DFADB57A8D7E0B4AA04716AB240EF59CD74AE1E487F8D",
+      "AST_Aelira_v2_boot_buckle_R1_cut_setting": "87B43129D0F8DD98FBC1242E42AE14D3671B3B961573448A255C8D1F1D829177",
+      "AST_Aelira_v2_boot_buckle_R1_metal_bezel": "6DFEF762E2A587157E6E690B614F9BB3F406381DCCAB7BFFD375B35BBAC2023E",
+      "AST_Aelira_v2_braid_engraved_tie_1.83": "DCBBF7EAB254D7800BB59E304C13B91797017D027757768448B94DE56AD24177",
+      "AST_Aelira_v2_braid_engraved_tie_1.877": "D270C607258B4761F56FE92D56CFB6F800F4727EE0AC629DCD8F1993847C85BB",
+      "AST_Aelira_v2_braid_tassel_0": "AB590845F6FD42024AC4C2090A50FD29BAC5141CA46F68663D96DA297A50ACB8",
+      "AST_Aelira_v2_braid_tassel_1": "F3CFAAFD0B6C62DF0FE2AD5DB2568F5852206B77B6910A0459A75D40A1E256BF",
+      "AST_Aelira_v2_braid_tassel_2": "1FF06C52B8DB2123DB881252036DAC04DCFE2B88EF2458A3EB29ABECE068E56B",
+      "AST_Aelira_v2_braid_tassel_3": "A43C16F534D827E043A08D59E0E9DF4F28EA28666F47F00070F68E3633EBE50F",
+      "AST_Aelira_v2_braid_tassel_4": "DBEA620C38743A5B5A1DBCDDFC8065856011E37B69CA0C8AE64AC12631FCBDEF",
+      "AST_Aelira_v2_braid_tassel_5": "FF33734CB2DEF35F6CBACAE82872D019DC3C0735CFA0CFF4A82D022BE8879A36",
+      "AST_Aelira_v2_cape_embroidered_hem": "DA6FC974F8B8485765B8AC946EFF427D679B0A420D2F6455B27BEFE4B7810F9E",
+      "AST_Aelira_v2_cape_gold_selvedge_-1": "09ED994F1648844599D5CE6F44124A7500F0D0B9CB7E87E496370646FD0B8936",
+      "AST_Aelira_v2_cape_gold_selvedge_1": "41B3B827A07C9F95972E632694B1E17D7D0FE8751E72F53926E853D79E43B30A",
+      "AST_Aelira_v2_cape_hem_leaf_0": "8B091A50C4FCC91478EDAEDD45FA034457849DC95786A8EE779AAC466A8069D8",
+      "AST_Aelira_v2_cape_hem_leaf_1": "28FA0FEC44B01DC66FE3F4595E8888E7766D33280DCAC9FD0C5523468E065791",
+      "AST_Aelira_v2_cape_hem_leaf_10": "1C43B6943D07437F74ABAA33A7D3BC950F248D4FEBA7A3EB1284DCB963EA2816",
+      "AST_Aelira_v2_cape_hem_leaf_11": "65ABB3F4ED88470A859DE379FDBDDE88A4F997498040A688313F57B854CB6507",
+      "AST_Aelira_v2_cape_hem_leaf_12": "2E492137255A2584DF27B55A00E413B3600CEAD7F5AA7FDFC7C6760D2216FB45",
+      "AST_Aelira_v2_cape_hem_leaf_13": "88557292309444CE408F3504DA057C6354DE4001B2D1A15297AADB8D80EFDD66",
+      "AST_Aelira_v2_cape_hem_leaf_14": "ABCC65EE5F48C1FD2CC02CE9D36E99D1C26AECF313655E5771AEAB0B03079675",
+      "AST_Aelira_v2_cape_hem_leaf_15": "01763E45BBB4EC7B63082EF4FEF48C35EA7037CDCFBAFC0515F9FEABCC609E46",
+      "AST_Aelira_v2_cape_hem_leaf_16": "1FB787E4E9B084AB8EACBA07DE405C1D42CD517DE15B662236BCE144112C6745",
+      "AST_Aelira_v2_cape_hem_leaf_17": "8E22E6EAD0EFBA546083239838F78F5C93EA20A65DC65DCB5D7D9E91E46963E3",
+      "AST_Aelira_v2_cape_hem_leaf_18": "1837E75ABB83AB927E8788A712B7357C27A41F33AA4D4AAC2EABCBEF8BECBAD8",
+      "AST_Aelira_v2_cape_hem_leaf_19": "7C2EA8232C162AF0A75BC71B0AE95CA34A3F801983E78FE131C4C5ACC9B842CB",
+      "AST_Aelira_v2_cape_hem_leaf_2": "3246932C832F581714ED8BC91C6838F5D1D6185804E4BB126942F8E33A0FDBF4",
+      "AST_Aelira_v2_cape_hem_leaf_20": "1CE0017D621FB44C09D4E4923117A4829052F98D3E0C23D7F2DB77C2256B3639",
+      "AST_Aelira_v2_cape_hem_leaf_21": "395916CCBDDE7D0D06C4979998BF7DB71131DCB467F85E02A5AFEF6678D906DD",
+      "AST_Aelira_v2_cape_hem_leaf_22": "2DCBA4C94906CA0AEDD97B5EC6C2193E3A46444E5A83623A58644142352B2E59",
+      "AST_Aelira_v2_cape_hem_leaf_23": "D6106C161B3567D1FF4118B9FC4F4217234C98B097B1DA76E8F4C0D32088EFB4",
+      "AST_Aelira_v2_cape_hem_leaf_24": "8B302031A393CFAD02E2A3A6046EA5F5104E998E40EC5A8F5F52A6CF7A0B2EFA",
+      "AST_Aelira_v2_cape_hem_leaf_25": "150DCBAD6158B785C392BBE613B9F731FB6F12D731A209397998D65D7557372F",
+      "AST_Aelira_v2_cape_hem_leaf_26": "CFB1D34935A8171CC264C834658E8412D5C6FE79B9DEAF7ACC1342538F22A9AF",
+      "AST_Aelira_v2_cape_hem_leaf_27": "A0E581B2B8BECC68DCDD2C67FC2B49B26E70ABB940F6E22046821CF106CAC031",
+      "AST_Aelira_v2_cape_hem_leaf_3": "059066FBE0BD586C39DA3C9FECAC0C51F75D5708EB7FF076F94E9693F1D9FA27",
+      "AST_Aelira_v2_cape_hem_leaf_4": "645E7C0F5DC82B27333FDEBEAF9DE1384FE4B7F91820225D1A0C4717A9FE4C68",
+      "AST_Aelira_v2_cape_hem_leaf_5": "3B0C47779DB5F48E3A4A8351C8A981A80B825F86CCD26CF62C23BB5F9096FA4E",
+      "AST_Aelira_v2_cape_hem_leaf_6": "864C3A77CC831D6933CE5D2CA3B6F5F0594E8DCFB3BEC0F1FCD466D675B3BE0B",
+      "AST_Aelira_v2_cape_hem_leaf_7": "BB293BA7D79FAC246DBC5FFFDDC44162014944D69BB10DE8B1365BE5FC8F44FC",
+      "AST_Aelira_v2_cape_hem_leaf_8": "55DCF09B0E17B8518488CC49339A5052C769364EEC7B73913F43C883F41F3AC6",
+      "AST_Aelira_v2_cape_hem_leaf_9": "2F028382CF47A0A46D8FFAFEBE0EE8268BF331BD50C17CEB9CE0C8D793302178",
+      "AST_Aelira_v2_cape_margin_leaf_-1_0": "F6D464FB41B001D444677E2DFF40A3D0AB235D57F71033744A9FEDF3C2E8A4D2",
+      "AST_Aelira_v2_cape_margin_leaf_-1_1": "0D14513F17760E0AB99582407231F284C939928F8E55D82ACA4161EDDC7EB73B",
+      "AST_Aelira_v2_cape_margin_leaf_-1_10": "81689A4BAB1E215E5086529FFA9411C60AD6997D1A9EB02924D35BCDF5031A94",
+      "AST_Aelira_v2_cape_margin_leaf_-1_11": "A83A9E11F3ABF7019922DDD9EC8476ADE83BA6C7437012EDF69282278876B4CA",
+      "AST_Aelira_v2_cape_margin_leaf_-1_12": "A55E17AF78831E6E7D6B7FF3DCAFB51FF278F7F1CA228CE738340A5EA1DB0CB5",
+      "AST_Aelira_v2_cape_margin_leaf_-1_13": "32BBB46130B8AB98BFE71C11E7AE4A13CFB64C10DE89BCDAE8F180D980C08529",
+      "AST_Aelira_v2_cape_margin_leaf_-1_14": "11BF9921463639978B9B9B7AFCCA9A8E5D446AB124EE410DF683A4BF4E118065",
+      "AST_Aelira_v2_cape_margin_leaf_-1_15": "F3793E70056AF324AE19D4A3907E95C1CBA7E9F9E8ACED5E94D2A67ACFAC5E6F",
+      "AST_Aelira_v2_cape_margin_leaf_-1_2": "F013A4119206426D4307E01AF1712311BD2A090427A7B1B9361AA07D3259408D",
+      "AST_Aelira_v2_cape_margin_leaf_-1_3": "EAD916E7511EF4E607A4D13AA9EA042FE0ECF38AB54A178F6974EC8527C391E9",
+      "AST_Aelira_v2_cape_margin_leaf_-1_4": "13A03E284794F82EA0C420636307B91B7A380CF97BFE84F5732C2A03C5063B1D",
+      "AST_Aelira_v2_cape_margin_leaf_-1_5": "8B3F3DE3713C5E220FD645B6131870054632017D014EACC4450B9432CBC64A8C",
+      "AST_Aelira_v2_cape_margin_leaf_-1_6": "03492D79A77005EA13C0C23BE2AE38046E4DDE052B6CCD596F147EB6CE1E991F",
+      "AST_Aelira_v2_cape_margin_leaf_-1_7": "DBCE7D3FB7FE1D9431BCE5697869C8772FF8D65CE342594C07667CA9677E69F3",
+      "AST_Aelira_v2_cape_margin_leaf_-1_8": "1F05C0520BF3F76C471031A2B6CA7D3262C4F474AB4E619782FCD744A1EF8555",
+      "AST_Aelira_v2_cape_margin_leaf_-1_9": "BBFBC10F0C4B2E1060AB7E7546F0B3B454E015804953EC723D2486D9C46DAD90",
+      "AST_Aelira_v2_cape_margin_leaf_1_0": "B90BF092C57C965C95062E15ECDF45665AD53A0CB10BEA4C2C225D1ACCCBFE8B",
+      "AST_Aelira_v2_cape_margin_leaf_1_1": "8D25F6B34D0AC315CE92EFA3AC53D18CC4DB3FD5E7987990E4EDD5B9A784F537",
+      "AST_Aelira_v2_cape_margin_leaf_1_10": "6D1AB06D3D0FAF662B421686493F8623CD390E138388C622B9577F881FB8E8C7",
+      "AST_Aelira_v2_cape_margin_leaf_1_11": "FA1BEF592D51528593615ED703546B6802FD2649C66589F44334AFD9DB5C75F1",
+      "AST_Aelira_v2_cape_margin_leaf_1_12": "EE130A593017FAB458FD4AACD4D5853FE8D79FA8E48460EA1B19C64D64A8BF0D",
+      "AST_Aelira_v2_cape_margin_leaf_1_13": "B99A772C9DC85194F68F2910BDC4F617958EBE43340D328B56DBE6811FC025A2",
+      "AST_Aelira_v2_cape_margin_leaf_1_14": "620F761F138FB296BB7FB3A8B9F84F79655CE8AB33C27C9EC8955607E645A3B1",
+      "AST_Aelira_v2_cape_margin_leaf_1_15": "BC0B99BBA8D33398F4FFACECB534D9F1E1660FB3BA760CCDB233E779ADBBB171",
+      "AST_Aelira_v2_cape_margin_leaf_1_2": "F6DB41266FA7443F348DECC252ACE3AC5C505B33072D5021F7D9A6FCEEBD0590",
+      "AST_Aelira_v2_cape_margin_leaf_1_3": "5361E22F06FFBFEA3BFADABDAB319941D93691CA586502F496B7633E090D94DD",
+      "AST_Aelira_v2_cape_margin_leaf_1_4": "0C2E0F048F05546695C3424A1F81559183FB68032E6DCFF34B13D73F51C933B2",
+      "AST_Aelira_v2_cape_margin_leaf_1_5": "2AEB770F0ECF5FA23117F680D5C7ECC24E4B7794978592811980200D060D3009",
+      "AST_Aelira_v2_cape_margin_leaf_1_6": "C8ECC6993F5308C4CDD02DFEB29A0777089588C4B17E53053B336C4CC3E2328B",
+      "AST_Aelira_v2_cape_margin_leaf_1_7": "4892ABD04C6B73589B337DC63AA7123B8FB568D835055478988EAF95F2F96200",
+      "AST_Aelira_v2_cape_margin_leaf_1_8": "064041C801E2E929BDF283018E672C4C27E152DA42B87D577F4BD419C6201D10",
+      "AST_Aelira_v2_cape_margin_leaf_1_9": "69BE7CB3CFCB1663E8CF81B139C698DEC72ACB245A91F1507BB94CA36A9ABC39",
+      "AST_Aelira_v2_cape_margin_vine_-1": "1E5F069D23D416D2B571115ED20B8358BAA065F03D64A7C219E13687D80569DB",
+      "AST_Aelira_v2_cape_margin_vine_1": "7C6483623D037B2DC6810944A29A31B8E0F5F6A16640998EAA3E3EDC9965D1FB",
+      "AST_Aelira_v2_cloak_clasp_cut_setting": "82FDB5B95C901987D4FF539D64922CF1730F5CE6E46CA75E02BB6AADF3BB0FB4",
+      "AST_Aelira_v2_cloak_clasp_metal_bezel": "DF53D351107F2FD7D2F98221E300DB6DB95E13266EDC8B106444C0EB7708A67A",
+      "AST_Aelira_v2_cloak_leaf_star": "1DF82ADE863C9F8D93737C3A62C36B1843942BB51294201E2408235C7E28FAF3",
+      "AST_Aelira_v2_connected_cloak_mantle": "759E18C8D4849FF329DA208469666661D6724A98772A2A3887F921A16B20DEED",
+      "AST_Aelira_v2_cuff_gold_stitch_L0.08": "C1AF56C276D748FD3F05EEE88FC1D2FDFC65FE60619E162A174E334A5BF5C36D",
+      "AST_Aelira_v2_cuff_gold_stitch_L0.94": "40802BB86C56D5F19DF14E2E5493E7B4D516E1AFA071DC9721660E85BBDA5319",
+      "AST_Aelira_v2_cuff_gold_stitch_R0.08": "D4116C7F4F662E24ECCCB5AB9B7624B89697CEA83A10B664B22FB7CE9BA251D3",
+      "AST_Aelira_v2_cuff_gold_stitch_R0.94": "1AF004B38385C148523A9910C6CAF2C0AA87D4D7DEFDA7495D863D27098CBC12",
+      "AST_Aelira_v2_cuff_leaf_L_embroidered_leaf_4": "F556A6C106051941D2529DB6BD8174788DDF0FDA43DE19D36A17352BC593713E",
+      "AST_Aelira_v2_cuff_leaf_L_vine_stitch": "E088995E828E478404A53CE1552A8AA0A4015089AC8168892032BA2F4B8C4876",
+      "AST_Aelira_v2_cuff_leaf_R_embroidered_leaf_4": "F27BD7C1F06BA92C1F5E9585F4D4D658630D7881477E58F37C4C2A9470CD1E67",
+      "AST_Aelira_v2_cuff_leaf_R_vine_stitch": "45E5B1FC338D1D7F578E6298F6763A1321AA8FADF223343FA842960343910180",
+      "AST_Aelira_v2_fitted_boot_strap_L0": "67AAF504C00A3D56ADC64643DE009753678DDB1CB43CB2384BDD44901B502367",
+      "AST_Aelira_v2_fitted_boot_strap_L1": "B1C703BCB90F543FC450294DC985B05B76483D7E034BDE135053111FE9A3F54C",
+      "AST_Aelira_v2_fitted_boot_strap_R0": "0F408B78EDF5A8A16601A328D060AABE3D125F0F328AC9D858DA3481E96E92B1",
+      "AST_Aelira_v2_fitted_boot_strap_R1": "4E333B88F2DE4DC526CA3B32869F67C8BC1FA2E3CBB4093C6EFC76313A935AF1",
+      "AST_Aelira_v2_full_folded_forest_cape": "CDD9395F34E525029375C11A56BD5D9D1EC3104A30D3EA70B4DF3FCE57AFE610",
+      "AST_Aelira_v2_interwoven_plait_0": "4DC1A01B20EC138B2578A3F2593A6DA036A8C5303B3954AA5B10DCE9C660760A",
+      "AST_Aelira_v2_interwoven_plait_1": "A9B6F8E60C911D412F49CEC1013CE4724827F91351CE9190F1722B431E3B4D3D",
+      "AST_Aelira_v2_interwoven_plait_2": "7FCA2C9718C352B3A65CA964419960A388250D2A86BE349E1D8AC0B69B4E4C39",
+      "AST_Aelira_v2_knuckle_crease_-10": "8C29E3F4DFF0FBBF8D2CC789BDC5092ED216C99F8A807C68152B449309DCAA36",
+      "AST_Aelira_v2_knuckle_crease_-11": "72DEE0797F7A348BFB7C4B621554543BA6F40FC4857F0DFF9251A2DF538213B1",
+      "AST_Aelira_v2_knuckle_crease_-12": "690FC5D97D62B0338758813D6F413F727A78F7C747351F69FDCC96D5DDCF609B",
+      "AST_Aelira_v2_knuckle_crease_-13": "99CAA596EB83DA2AD9839D7E46D3B165EA1AB241CC98AA6D994F8734DC012F22",
+      "AST_Aelira_v2_knuckle_crease_10": "114D31AA3CC240986DD0AD8676E438ED7E59E315503591328C70C5050CEF6ADD",
+      "AST_Aelira_v2_knuckle_crease_11": "5378DC0BEE6DECEB043C5AFC59C814FA129C73AAC8B88F1FF26006FDFEF54D92",
+      "AST_Aelira_v2_knuckle_crease_12": "56868DFBCF29637464DD1C6B7A4E4C5C08A596DEEEFDCF4374AF54BF4EC64C3C",
+      "AST_Aelira_v2_knuckle_crease_13": "547B9D62AE09C4CE6016CECDD6F83A0DDEDF4E5587EEBF632F38F8B6C01E62BC",
+      "AST_Aelira_v2_leaf_ear_L": "EEE3C14922342F54B60DC506632A5CFD680A3325E1C0AFED8868E96756347D0C",
+      "AST_Aelira_v2_leaf_ear_L_antihelix": "07BAC9334C5F1DBC9878D5274EDF3F05EE26059DB45532DD2206A46884E335D3",
+      "AST_Aelira_v2_leaf_ear_L_concha": "1EBACC7B3CEA0366633E1439E674D357B11CE3A9BBA6F2A93B8672917D630B40",
+      "AST_Aelira_v2_leaf_ear_R": "A8796E3FDD60CAF519A35E9861855991C6BBABC38D55E6C00E722662B5C74CA2",
+      "AST_Aelira_v2_leaf_ear_R_antihelix": "63D95A7AAC4C54B325DE6BC46288305AC93CCC8BEFB9EEC3103938E7D547DD36",
+      "AST_Aelira_v2_leaf_ear_R_concha": "393DEF894304FB1FCDED9DCFC66EE3446F3EC2811E34E95F724006AA667D4D48",
+      "AST_Aelira_v2_mantle_gold_edge": "278591EBCA9735764E67F75D425A632AC53A0D97EEFBDD9BC94930B6A0F685C6",
+      "AST_Aelira_v2_sculpted_hair_cap": "E44CBB26105A3CB370155A2D12D3B4221629E70DE81DA7D21DBFE33E639B394A",
+      "AST_Aelira_v2_shaped_cream_boot_cuff_L": "E930BD53F7CCA0FC8577F6C26CFE4064807AFB65EE5AFEF09DD57A03B039342D",
+      "AST_Aelira_v2_shaped_cream_boot_cuff_R": "3236E08E279AC7B539F396F0ACEE6D119D2320AA3992625D63D9A9517E33A4FC",
+      "AST_Aelira_v2_shaped_hand_-1": "777550CC0AB8192E17EA9F70EC84BA920366B9A4CB8C7D457770A4212C69CFBC",
+      "AST_Aelira_v2_shaped_hand_1": "724D3FA972FC144668D8479D46642C5F41CC57E17DDE70BD0F686544E5F78A56",
+      "AST_Aelira_v2_skirt_fine_gold_edge_-1": "660D402A19DFC149C79A83800487BD9665C3A6E1A1D7BCFA7B4D120BCED55EA2",
+      "AST_Aelira_v2_skirt_fine_gold_edge_1": "43281F0E1D7CCB1A5AE4DA6ED91E762E3643F768621535EA5F32BF29A104F357",
+      "AST_Aelira_v2_skirt_leather_binding_-1": "C058914ECC1C758E4927368A666A12D3397F9E28155E97B4B3812105D3BFA444",
+      "AST_Aelira_v2_skirt_leather_binding_1": "E9ACCA12ACD589C0B271B9D23833BCF5D178FB5A9194B4336F5635ADE8696BCC",
+      "AST_Aelira_v2_skirt_vine_-1_embroidered_leaf_0": "FD4310D48858333EA3EDAC03140F7B88249AEAF97312E048514E65A450F282F5",
+      "AST_Aelira_v2_skirt_vine_-1_embroidered_leaf_1": "672EEE48740EF3A4E8DB3722F70460E3F9E2B764B8ED41F9A3668EB5B17DF525",
+      "AST_Aelira_v2_skirt_vine_-1_embroidered_leaf_2": "A77AB4AEC3E4CE4C7470C3478D0314FEAF6422A238707462E12223AAE3D06D14",
+      "AST_Aelira_v2_skirt_vine_-1_embroidered_leaf_3": "3B931264C22831FEF5DC9EB148A15F25C2FF04936781C01C7E81F4B1BF1DC540",
+      "AST_Aelira_v2_skirt_vine_-1_embroidered_leaf_4": "B320707B823A5FEF2897A1B5574B4869B08DEF4608B320D55B4301824322093A",
+      "AST_Aelira_v2_skirt_vine_-1_embroidered_leaf_5": "F3B826E81224FBFA096A36BCB3DD06AF3AB3B3E7F5F701BDD54F3CF8640D92F9",
+      "AST_Aelira_v2_skirt_vine_-1_embroidered_leaf_6": "39B1243125F9E96D298BA07A356C2B3B15587FCFB79A81F175033D8F945C93A9",
+      "AST_Aelira_v2_skirt_vine_-1_embroidered_leaf_7": "112B8D6337F2C8BC00BEA75ADD70EC0B70A9D81E222E1663E80ADAF0FE22E50E",
+      "AST_Aelira_v2_skirt_vine_-1_vine_stitch": "D41C7F981FB11FDDECEB634918695B014DB93833058125B9F0AFBA167481EE48",
+      "AST_Aelira_v2_skirt_vine_1_embroidered_leaf_0": "26356BA987B76AA0EBE8B266659BB184FB64B1E880DCF912C74767E7B6782620",
+      "AST_Aelira_v2_skirt_vine_1_embroidered_leaf_1": "B62AAAF01CA9BDA9AE0D0F577E50F323F11FBCB78A83A275CCCD0264EBD5BF01",
+      "AST_Aelira_v2_skirt_vine_1_embroidered_leaf_2": "DDA2FA6317D8A9C091315AABD0B3E16335944085F3E67317D866B9A1F062927E",
+      "AST_Aelira_v2_skirt_vine_1_embroidered_leaf_3": "A7460D68B25DF405820BD46B8C4B963769BCC6B6A1C6113DCE4E393F4002F3C6",
+      "AST_Aelira_v2_skirt_vine_1_embroidered_leaf_4": "F867AE1D16B7780B6F8BCC1F8F9DC155AD7219176AA2ACD3F196DB77644BA97B",
+      "AST_Aelira_v2_skirt_vine_1_embroidered_leaf_5": "0A0DE3A3A4FE136F71B83EDE1741CA72AA4A98929D254DDBA54E70C15DC7BE67",
+      "AST_Aelira_v2_skirt_vine_1_embroidered_leaf_6": "C73CDF7F5F753730C77C2794AF088E8B0B7FD689815284A9264943AB70489AF7",
+      "AST_Aelira_v2_skirt_vine_1_embroidered_leaf_7": "CC5B8A988352C29F5217A1DFAE603781457607768D3ACC298C793645A323FB0D",
+      "AST_Aelira_v2_skirt_vine_1_vine_stitch": "D89F09565FD05D8B1D42FE31A5406E28FF56D94953144F7FCD9C7AD48DD367D0",
+      "AST_Aelira_v2_sleeve_vine_-1_embroidered_leaf_0": "2420E871B4E9775A2BE55B08B66F6912ACCC8B3A644632701A38F8F8D17DD652",
+      "AST_Aelira_v2_sleeve_vine_-1_embroidered_leaf_1": "A4532852940E5AE7CBAB56AAE5CE4F91024A4200021C848DD2D381B1C4E1EF55",
+      "AST_Aelira_v2_sleeve_vine_-1_embroidered_leaf_2": "366EE12B79EFBC8508CFE8F7AFC2BBEEDF160DBE2949B953A0755A2977027B66",
+      "AST_Aelira_v2_sleeve_vine_-1_embroidered_leaf_3": "6C8627A78F491F0845E0E2FB7D7B7F69F5AA2CD934E6D2CFE59E93C13A58DAEC",
+      "AST_Aelira_v2_sleeve_vine_-1_embroidered_leaf_4": "F288D3FCAB63BB5BF67302820B895A63D55969998BEC6EB3EA3DDCB3E0C5C1D4",
+      "AST_Aelira_v2_sleeve_vine_-1_embroidered_leaf_5": "1015585AF41F2AD352254553923D697640099979CAA7F5EA97BD16CBCCD52B78",
+      "AST_Aelira_v2_sleeve_vine_-1_vine_stitch": "00095A82F64C58DF8E27BF349D06A27459A9900E6BCDC27B9DA1F46959131A4E",
+      "AST_Aelira_v2_sleeve_vine_1_embroidered_leaf_0": "6420D060A07C25D7E1CA555EC6C727EC873E5553B6B84F8F141D40003B930A5E",
+      "AST_Aelira_v2_sleeve_vine_1_embroidered_leaf_1": "4776373D896B5EA6CCA653F54B7C1985E0221C9D4A5DFA953EE0446E8C6B5FDC",
+      "AST_Aelira_v2_sleeve_vine_1_embroidered_leaf_2": "CC4E625A2BEDFEC7FD6B09413CE53F75A3B71EC1132CF6F1AC74AC9B23621F59",
+      "AST_Aelira_v2_sleeve_vine_1_embroidered_leaf_3": "5AEA96165C6B094B458068D12B805F4A82EB42979233E98E86C10F2FB4172EF4",
+      "AST_Aelira_v2_sleeve_vine_1_embroidered_leaf_4": "B265F7CF43C59F494BF11FF1BE9ED4F0E44B2329ED4B50E9A2A3FF29EA338153",
+      "AST_Aelira_v2_sleeve_vine_1_embroidered_leaf_5": "62311E858CD1FCE76FF5C24C6E940897AF7563DDF2D65BFB6044CFB6F9AA0D33",
+      "AST_Aelira_v2_sleeve_vine_1_vine_stitch": "5C7EE90045970429B48F4D71AAA94FABB47FC8CD1390F219FE0B251CF8EE1F35",
+      "AST_Aelira_v2_tabard_gold_laurel_embroidered_leaf_0": "D8D5C50EF6A3F9CD4E001D6A6FD8C9C13299D7369D8688EF972221E221ED3F61",
+      "AST_Aelira_v2_tabard_gold_laurel_embroidered_leaf_1": "FE9804DE83DCD69B7DB80957157AF590376F2E504E549ED791169B1ABB9C0332",
+      "AST_Aelira_v2_tabard_gold_laurel_embroidered_leaf_10": "29B9D4A62B220D807D4C0A95579883208FF475657B1B21CF4929B0ED23430D5A",
+      "AST_Aelira_v2_tabard_gold_laurel_embroidered_leaf_2": "E06CBB54E7575EF8114BAE20E2720C992447D035AA956AC03DC082F0EF0CB22D",
+      "AST_Aelira_v2_tabard_gold_laurel_embroidered_leaf_3": "D2E1B3A58D83703DEAFD4ADD403ACA44BDA760A984B3F958602541F3960A1C4E",
+      "AST_Aelira_v2_tabard_gold_laurel_embroidered_leaf_4": "28C2A7DDA502BB1A0461F00C1E38E91FE001A759663F85FEFDCE34F6E49946C1",
+      "AST_Aelira_v2_tabard_gold_laurel_embroidered_leaf_5": "2BD32C080CB443350348F2FFAE5AE83EBEF911CF570D1AAD6502714549DE6C00",
+      "AST_Aelira_v2_tabard_gold_laurel_embroidered_leaf_6": "9CE888332DAF04A3DAC7AAEA14E25770536C7243D98C380D5DAF7CD8DA81BF0F",
+      "AST_Aelira_v2_tabard_gold_laurel_embroidered_leaf_7": "37CD3D545D4101B256DBAA973360AA0C693FF07843F0DE58E58FCECCB8206090",
+      "AST_Aelira_v2_tabard_gold_laurel_embroidered_leaf_8": "A4BC01EB46FBD80DF473E4ECD448BABA0AD5C22140C02DB2AB431497CA1A4279",
+      "AST_Aelira_v2_tabard_gold_laurel_embroidered_leaf_9": "8AF5A36C4688CC15AC509B780A41A6C587C1C04D825C8E02A2F239142DCA4761",
+      "AST_Aelira_v2_tabard_gold_laurel_vine_stitch": "32629D45A1867E0079456D7F6941B47BD7A9955148678A51B8E640AC633BFDD3",
+      "AST_Aelira_v2_tailored_split_skirt_-1": "6B5C6B3E27941A44888FD542B30625F32BC15A066BE5A4FACF60B0D083AF172F",
+      "AST_Aelira_v2_tailored_split_skirt_1": "A99AD39E23E2A9BD482F119B6D188D6570CFD5297B0CB65A3715843325E73531",
+      "AST_Aelira_v2_toecap_stitch_L": "BB6E36E375976648ACF5AAAAA2EE7C75761813BD81D57223AAF76E7C2608238B",
+      "AST_Aelira_v2_toecap_stitch_R": "144F5965F5C0E7C2DED31AA956B59D73FE98E50D8D5B386D4687AF2155D5BC4C",
+      "AST_Aelira_v2_vambrace_laurel_-1_embroidered_leaf_0": "39002E7427534C8010A4A7DB889595BC37FC64936DC050B4BCA80B57DA1DD202",
+      "AST_Aelira_v2_vambrace_laurel_-1_embroidered_leaf_1": "AEAA359E85746E2B196FD964700E37E053F12093C3B5C9569E09CB26510C7577",
+      "AST_Aelira_v2_vambrace_laurel_-1_embroidered_leaf_2": "C4731CA03B62EADCB1F5F0DF81483C12A7D1A762302539BAC4AB83E06BCE2527",
+      "AST_Aelira_v2_vambrace_laurel_-1_embroidered_leaf_3": "591EB04154C586D6DEDDC059024051E940E484A637A7AF01FEA8BC5C358A624E",
+      "AST_Aelira_v2_vambrace_laurel_-1_embroidered_leaf_4": "11F76B9CC4F805553AB51187A1745158B9B8461C99FCA25041F3B3010653BC54",
+      "AST_Aelira_v2_vambrace_laurel_-1_embroidered_leaf_5": "5A2784C0BE7CEF38B7760B14B6D6EAA21FF8934D5618B7401008779E5324C6DE",
+      "AST_Aelira_v2_vambrace_laurel_-1_vine_stitch": "9281E6432A281B861EC3D16473D3C73A358854D66F9B778D23A165C71025360B",
+      "AST_Aelira_v2_vambrace_laurel_1_embroidered_leaf_0": "2CE99B905AECB4C70A57AD980B9298E0D80F30565AC3D0B357D5B6849EC724A9",
+      "AST_Aelira_v2_vambrace_laurel_1_embroidered_leaf_1": "B50A13D2253BA64C283542A175FE0138AC2BE57005B70920FB8ED970A309EE55",
+      "AST_Aelira_v2_vambrace_laurel_1_embroidered_leaf_2": "4BB670F3436EDEA1CACBFAB4FC772D9545B5475ECF3382C60ACFB2582CBE2CD5",
+      "AST_Aelira_v2_vambrace_laurel_1_embroidered_leaf_3": "70B90873AAE5844FC410BACB6FF7F25023D969A8A5201D5751C3FCD71CEB5244",
+      "AST_Aelira_v2_vambrace_laurel_1_embroidered_leaf_4": "589B521228195D844FFE1F30BF171FF05769584141B2CB34DFC48C4A5288CA3C",
+      "AST_Aelira_v2_vambrace_laurel_1_embroidered_leaf_5": "298D7C20ED719D9BEB6659D742A57A6F51B7C235EB1EA1DEED0BA46534E6344F",
+      "AST_Aelira_v2_vambrace_laurel_1_vine_stitch": "A0717198BCA164D3AC8EC555E07420D3C41DDB8DAC83FF5934340BDB917A1E99",
+      "AST_Aelira_v4_arched_parted_crown_-1_00": "9B8619A689B38AFEB6ACC09BB63ED28D6C4A166B6EAFFF27C48876A6D62CB7AD",
+      "AST_Aelira_v4_arched_parted_crown_-1_01": "34D739650FC9E6F78E6D9FCBF6F83AB867485A5024C978A2E4A5E58EA837358E",
+      "AST_Aelira_v4_arched_parted_crown_-1_02": "D88C113EE06DA5673E44A53A7ACB111266059B5F772BD86BA35CA1782A9D2603",
+      "AST_Aelira_v4_arched_parted_crown_-1_03": "FDD9312ED04E868236268028C74162354728A59EB4217B7D155EBF548C65274B",
+      "AST_Aelira_v4_arched_parted_crown_-1_04": "58A6149C11E7753B9589A82EA11988D6ABE36DD749F3D1AAA31A4A4B8DE1F74B",
+      "AST_Aelira_v4_arched_parted_crown_1_00": "D449C4353E01DD886B7FD83C6A69A0F82D55CBBACEA2ECC42F16D599874CA733",
+      "AST_Aelira_v4_arched_parted_crown_1_01": "72A4756A751B79A9D7578490974D532F812129FD25D527C74DA7FD97AE0068F7",
+      "AST_Aelira_v4_arched_parted_crown_1_02": "EDD86A4A156E9CDC55901968672513E1BF1ACAC81727017D328BCAF324C5A5D1",
+      "AST_Aelira_v4_arched_parted_crown_1_03": "42AB556DDAB761BE6F9C3C2AE57DA3B99194F5C00E6C1043FB3A2B1C518ADF84",
+      "AST_Aelira_v4_arched_parted_crown_1_04": "2FD12ABEC65D15702CA4C5867925B5632858D9A0C0640EC0304FA93F8059F907",
+      "AST_Aelira_v4_closed_base_trouser_seat": "D5C485F3ED0EA37AD3B19868018C0F10231E3B3439CE8B9878D020610E74C3E4",
+      "AST_Aelira_v4_closed_tunic_armhole_L": "71955EF5BD5E1A5AC78527672E8CB6696F06033443E0AC06EF1E29A64A70F53E",
+      "AST_Aelira_v4_closed_tunic_armhole_R": "FD36BB73BA96768E61F9BD4A3977CFB07399F88412ED16A1D2FE227D3360FF83",
+      "AST_Aelira_v4_closed_wrist_L": "A3227F46A9DB669851853506CE726BE347DDD038EB598A253872CFA590A1D282",
+      "AST_Aelira_v4_closed_wrist_R": "0EABA24ED16D14FA4E3F3D03CDB279A5C7636D6320D876FF172FD477DD94F3CB",
+      "AST_Aelira_v4_flowing_temple_ringlet_-1": "1B19059C0663F09354A68D3FF3337F79586593864542CEA282E3854B66E29AAB",
+      "AST_Aelira_v4_flowing_temple_ringlet_1": "C759E3D1BCA3482D38B97A6A65D72FADD25DD83D6F1FCCF88CF5032636CEC3C0",
+      "AST_Aelira_wide_leather_belt": "D8BB0F4D2B7B7CB2D8B30AA3BE8313CD668699E05805618364DB83BA3CC1748C"
+    },
+    "protected_material_sha256": {
+      "AST_Aelira_v4_directional_hair_pigment": "D91B54E52F9317A83F65AB3AF8B8BBE00908CF2090992BB98AFF9F54E62539CB",
+      "AST_aelira_v2_ae_cream": "D33F06F80E83AF2DADB98D2DD12F6F0F94C11FA03FCAD4E8A80EA0DC3AD8E797",
+      "AST_aelira_v2_ae_forest": "C7C5A837E62BC6B6039A90A7C60AF640AF3DB728197C02EC23FEE23B35DB9D88",
+      "AST_aelira_v2_ae_gold": "6E4014B4138B7971F2786270630FE8070CBAA5750F69D864E6B35084DA6C2345",
+      "AST_aelira_v2_ae_gold_hi": "F0B7EF2C00A787341363DD3F1CE956C0286598902E71F0E0F03523630E48AE41",
+      "AST_aelira_v2_ae_hair": "FF76615D003F1A8A1EF65A88647215E9E58A891EA88A8411C4C9E59950BA9F43",
+      "AST_aelira_v2_ae_inner": "D6A869A40F6C6A1F0B164FF8FBDC7699B64AE27FDF539348F44676DD6C2D58A4",
+      "AST_aelira_v2_ae_leather": "EE96F3C6821183176B83DE296E950E26B620B0757EF10E0F3EE77DE6572B420F",
+      "AST_aelira_v2_ae_lip": "6AE20E30FC0B58C8E80DE95382D7C99454966FC8536767B08EEFA574CB3A58F4",
+      "ae_hair_scored_color": "7E4CB2532D1F058B8CBF968C68B11CE7F77562C435719E6CBA6662F6732C7E1D",
+      "ae_v2_braid_field_0": "97EBB8BC30250486636D1D0E88F3EE3172E37A21F87600B4169E9D1ABF2A36A8",
+      "ae_v2_braid_field_1": "F9E9BBA96AF806342141C61AE137B143295477BD10C1ED15CE561C10C6048245",
+      "ae_v2_braid_field_2": "B9A053EBAC55B65E0174121722A9CCD83F056252EA6D7AF7141FF7F4A65C2AFB",
+      "ae_v2_cape_woven_field": "982D7FD48B934615099369597D48F26EA35A8F4A19414D29C5CACCFF305E1B0F",
+      "ae_v2_green_leather": "55AD77050086FA260395E9E16152F2EB4C633E3CD2408AD5C36F718455C68DE6",
+      "ae_v2_leather": "DF0F781145BEED45547BEB5A6794CA112E83A9DE15BC6C86EB3D5C0DE915018C",
+      "ae_v2_mantle_field": "FF8CDB190B9B4F751C5A47687F9FFF97390776CB9D4358F5EF2EED115643C48B",
+      "ae_v2_warm_skin": "97470F0969FBA216DE0A73B2A4CCD0168456AD0659520225BC2A414F3C0FF9C0",
+      "ae_v2_woven_cream": "1D1E1C44758C91BD53AC590AB49974B85B43219BF3ABB8A9DEF65805CF26353A",
+      "ae_v2_woven_green": "3A280E6F7F1F6649FA0368DE2B6F2D1B58CD6AED4F8EE0BE42CBEA90A0BA9E64"
+    },
+    "original_face_geometry_sha256": {
+      "AST_Aelira_v2_brow_L": "9DB83EFAF7CEA5F5B94B8AF4AF32992C385EE3434B83328410CB31B6C16ADC46",
+      "AST_Aelira_v2_brow_R": "B2B2B41F09890F1E414AD95B375E9859FCC8E166D26BE7D76CD5AB194DD77FE1",
+      "AST_Aelira_v2_eye_L": "B6998F3EACE80A99C3EA7829AB26DF5353EEA6E4146955DB2680ED232068B688",
+      "AST_Aelira_v2_eye_L_catchlight": "0C1139F5DD2B04F6295F4AF7B18A663EC6380C9F201FD1C9A78B7C8AB984B442",
+      "AST_Aelira_v2_eye_L_closed_lid": "AEE7CF777DF1AF1958F3CF88C219F3169FF55016FDE0CEDEC8603C0CBFF1DE9F",
+      "AST_Aelira_v2_eye_L_lash_wing": "4B48867C65742FDF4342D82544CC32D02552042C4F475C99F25A1CD552C41F3F",
+      "AST_Aelira_v2_eye_L_lower_lid": "1CC1D254167C9CC5150951871571CF3AB6E96CA353C93685DAEE3F1AB29CBE68",
+      "AST_Aelira_v2_eye_L_orbital_skin": "A4A07DC4920118045F7BD34A0552DADFAB671E84A552317AAA0712A4A55BC517",
+      "AST_Aelira_v2_eye_L_pinlight": "6261A874CBB412F80FFA6488B44DA51AD724DD3D2786059E1929CB737BAA29FF",
+      "AST_Aelira_v2_eye_L_sleep_lash": "235335AAA4C8EE50D2C923F486C4F8A13BD2CB6E6750DA122309710250A5E98A",
+      "AST_Aelira_v2_eye_L_upper_lash": "4CFA6208D309BFCCE489CD945F986522555761F01EE2B2B944BD2FA3660409FF",
+      "AST_Aelira_v2_eye_R": "56EE7135C2E989D2DB33D793EF7F76E3E4E687DBF9B8DFF7944097A620AC99C5",
+      "AST_Aelira_v2_eye_R_catchlight": "4A7BC9D7288768F9F7376CBBBFBED7CEC0994E9C2D51A43A99E07FAE72B11598",
+      "AST_Aelira_v2_eye_R_closed_lid": "A71127A6067567307178BAE02CDC3996794EC412BFE85FEDE04D7D6E0A36D82B",
+      "AST_Aelira_v2_eye_R_lash_wing": "28D39711FCB44BDC4D7DF94CC9AD1D3BBB0F513CC39B6AC7A3BC8D9D7BEA6C03",
+      "AST_Aelira_v2_eye_R_lower_lid": "41591BDE483B88F79977E0296B0A5F7143F37DCF117A14381061B1889272C8B4",
+      "AST_Aelira_v2_eye_R_orbital_skin": "E98331B62477797283FDDD76D702068C730265368FFEB4232B0F095560818C19",
+      "AST_Aelira_v2_eye_R_pinlight": "031DE3CE184470364E4EDBA9E87484AC2295C5C194DB94E4586963E4BC25CB47",
+      "AST_Aelira_v2_eye_R_sleep_lash": "7FEC2F0FAA07BA0FECF40E1FA9820ABE1BD430E3B848A458C5F714547D364224",
+      "AST_Aelira_v2_eye_R_upper_lash": "C19273B4FA3CB2812F995BE972C654E0CDB1FE9B687AEFB2602AEE0ABD50023E",
+      "AST_Aelira_v2_lower_lip": "98B873ACFFD0C758A7931F04CB54C010158CC741E560977CE77334C37A1642F3",
+      "AST_Aelira_v2_nostril_L": "8BEC878D039EBCECE6494EC991EB13EA3D29A387B13A411DB1B4CC1D38A93D44",
+      "AST_Aelira_v2_nostril_R": "0EAEDA34F26445D450F1E8B638A20DD9485BCBCA62FD64A148F818642F6BB4CC",
+      "AST_Aelira_v2_refined_head": "7323AA4BFC8FBB66873C9F2B593164BA1FD3057B742899BE6198E5E1F0F51A65",
+      "AST_Aelira_v2_warm_smile": "9A53C17F9591939E958A2AF326E683EF915721799A39162AFBFE4F19708870B7"
+    },
+    "candidate_face_geometry_sha256": {
+      "AST_Aelira_v2_brow_L": "3FD497B5BDB8ABC5EC0439E9E23A30E93EEEC9F4FB53F76535B3BCAC005E4917",
+      "AST_Aelira_v2_brow_R": "39478615022F1460B248E5983A4BCB4BAB7152C157F3C20427CF0D61D3BBFB43",
+      "AST_Aelira_v2_eye_L": "3F2CF38E7F0B05818BA396348BE6857673B97BA90AB09391992069D8C1DB94CA",
+      "AST_Aelira_v2_eye_L_catchlight": "50C9E25982A5BD19BD639685F45D933F011C677E9DB11F274094AABFFF915E84",
+      "AST_Aelira_v2_eye_L_closed_lid": "4E81B5834DB413F1E36D61B8618D607C9B6BDA2163A7F4325B59FADE5FF11737",
+      "AST_Aelira_v2_eye_L_lash_wing": "9F523552576716205BC857D56CAD4BD67236ACD01F8541A9E8C2F9C913D762F3",
+      "AST_Aelira_v2_eye_L_lower_lid": "C61FC95A0419F0F747CD5AE35880CF30641187F01B929D0F0B6E756BA85A1D8A",
+      "AST_Aelira_v2_eye_L_orbital_skin": "C7839C8F4980D148847AC3A2741EBC49571482E35767958CCA1730AF26181641",
+      "AST_Aelira_v2_eye_L_pinlight": "D9ADC9CEA61E026E4EF13E83C935D3D33868F443BFB983C97AA06BDD959C6020",
+      "AST_Aelira_v2_eye_L_sleep_lash": "DE3CACD717AD2D6B77689A19A52024AABE7ED5FCAF1911B5CE42543E5FAB74D0",
+      "AST_Aelira_v2_eye_L_upper_lash": "F792596CA51DE285A15DCD89962BE8A88F7976D72FF410B23E94D302BF6E40A5",
+      "AST_Aelira_v2_eye_R": "D9E723678A218FE71F9094629226BBEC96EBCE74378787BFE83ED0D131041831",
+      "AST_Aelira_v2_eye_R_catchlight": "FE2D836CBC144996F3530B2D556ED28B74AD54A19663DD6C1346D0F3AFCC26F2",
+      "AST_Aelira_v2_eye_R_closed_lid": "8A767E6FB936178F1629563C5364EC3D1DC420C85AAD3FB6B3921C07AE965D23",
+      "AST_Aelira_v2_eye_R_lash_wing": "40EA40B08EE8987B8FE1330D447C358CC889E5562E294061DF659F827796F179",
+      "AST_Aelira_v2_eye_R_lower_lid": "3A44E5CC179D09A191D3220167C29B3044B0876619C5A19CFA6F5CEEFB00FCBC",
+      "AST_Aelira_v2_eye_R_orbital_skin": "91E29AF287F7CFE6F76611030737567C7AEA06E4BA34858060C04EE78354763A",
+      "AST_Aelira_v2_eye_R_pinlight": "5172B955C31FBE9775836210A50EF59163CEE05978203034A42DD97380E433E3",
+      "AST_Aelira_v2_eye_R_sleep_lash": "E5EB3E6D900C7AD6A0E7021D026FEFE22C01355DA6CB4D8CC43F0E92C514BC2B",
+      "AST_Aelira_v2_eye_R_upper_lash": "0C81B2E6E502708FB52E779CE612BE052315737FECD7F924244F7D7B53D3AFDE",
+      "AST_Aelira_v2_lower_lip": "2BDFA27B8C727FC2AFB36C6295800D4F7BCA821C07714F05509A133C06472B71",
+      "AST_Aelira_v2_nostril_L": "9D36F66A14781059701D910130BEB342FD9B8CE932C67F74324531744FA04085",
+      "AST_Aelira_v2_nostril_R": "5F2BDB3226CEC435B8E612360826525479471C626B953A2F7BC63094B44A475F",
+      "AST_Aelira_v2_refined_head": "0BDB236FB09776F51A8286990F435BE8170F2A102A787D5FC3441E769DC920C4",
+      "AST_Aelira_v2_warm_smile": "6F52F3E4F33CCB8C59AB02BD05A2F88BD5CA68B8B49CDAB9A15265E71F2435C7"
+    },
+    "original_lid_pivots": {
+      "AST_Aelira_v2_eye_R_closed_lid": [
+        -0.22556401789188385,
+        -0.43398797512054443,
+        2.8765172958374023
+      ],
+      "AST_Aelira_v2_eye_R_sleep_lash": [
+        -0.22556401789188385,
+        -0.43398797512054443,
+        2.8765172958374023
+      ],
+      "AST_Aelira_v2_eye_L_closed_lid": [
+        0.22556374967098236,
+        -0.4339867830276489,
+        2.8765172958374023
+      ],
+      "AST_Aelira_v2_eye_L_sleep_lash": [
+        0.22556374967098236,
+        -0.4339867830276489,
+        2.8765172958374023
+      ]
+    },
+    "candidate_lid_pivots": {
+      "AST_Aelira_v2_eye_R_closed_lid": [
+        -0.22556401789188385,
+        -0.43398797512054443,
+        2.8765172958374023
+      ],
+      "AST_Aelira_v2_eye_R_sleep_lash": [
+        -0.22556401789188385,
+        -0.43398797512054443,
+        2.8765172958374023
+      ],
+      "AST_Aelira_v2_eye_L_closed_lid": [
+        0.22556374967098236,
+        -0.4339867830276489,
+        2.8765172958374023
+      ],
+      "AST_Aelira_v2_eye_L_sleep_lash": [
+        0.22556374967098236,
+        -0.4339867830276489,
+        2.8765172958374023
+      ]
+    },
+    "protected_object_count": 258,
+    "protected_material_count": 20,
+    "invalid_face_objects": []
+  },
+  "original_rig": {
+    "rest_sha256": "F89FA9CB9FEB8A488BABDE8FED3F84FDC17AB7D63051FF4113ABF55A1A37B0FB",
+    "behavior_sha256": "C548BAA88EDC1E08A41DF0DB71E04395FCA37EA11C23D17E1383E26C93F9BD59",
+    "bones": 10,
+    "fps": 30,
+    "fps_base": 1.0,
+    "actions": {
+      "blink": {
+        "sha256": "9D6805668F7E51F8B5906C974159EE0ED81473F3CAF5E7910662BBB578291622",
+        "curve_count": 90,
+        "key_count": 900,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          19.0
+        ]
+      },
+      "eat": {
+        "sha256": "A4FC2EFE0561581ABBD4098DFFC22A7FA370DA961818CAF375DEC46203329D73",
+        "curve_count": 90,
+        "key_count": 4140,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          91.0
+        ]
+      },
+      "happy": {
+        "sha256": "B24D844191CDD5358EE2E45162D5A07EF7F0BAC85C3095E6AB6DA67E1A491789",
+        "curve_count": 90,
+        "key_count": 2790,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          61.0
+        ]
+      },
+      "idle": {
+        "sha256": "1BB02DF595F866EECCCC336A0374431B7815A440060189059F2751AEAFBFAB01",
+        "curve_count": 90,
+        "key_count": 5490,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          121.0
+        ]
+      },
+      "pet_reaction": {
+        "sha256": "8A24FD363C2AB2B9026BB1906A6B4E856B1A0519DFD6A7038543ADF2DB9AA8C4",
+        "curve_count": 90,
+        "key_count": 3510,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          76.0
+        ]
+      },
+      "play": {
+        "sha256": "7AA8DF0F79E6E77F91471395FDBD82F4D8B0D0553906A4FE41F3DA080DEF5973",
+        "curve_count": 90,
+        "key_count": 3690,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          81.0
+        ]
+      },
+      "sleep": {
+        "sha256": "C5945FE350F72609F6FC3F3CEA6DB880D561E1CCFB6C72C93CEC312F55B8D3E1",
+        "curve_count": 90,
+        "key_count": 5490,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          121.0
+        ]
+      },
+      "wake": {
+        "sha256": "0661D69CB2AFFA51C2B5A1EF640AF0FA82B5A585577C6D43EB04953B720881AD",
+        "curve_count": 90,
+        "key_count": 2790,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          61.0
+        ]
+      },
+      "walk": {
+        "sha256": "4EBAF99E87FCD7B76BCE8DDEFE3802E55DC27C82060E457579EA7CBCCC1FE8E4",
+        "curve_count": 90,
+        "key_count": 2250,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          49.0
+        ]
+      }
+    }
+  },
+  "candidate_rig": {
+    "rest_sha256": "F89FA9CB9FEB8A488BABDE8FED3F84FDC17AB7D63051FF4113ABF55A1A37B0FB",
+    "behavior_sha256": "C548BAA88EDC1E08A41DF0DB71E04395FCA37EA11C23D17E1383E26C93F9BD59",
+    "bones": 10,
+    "fps": 30,
+    "fps_base": 1.0,
+    "actions": {
+      "blink": {
+        "sha256": "9D6805668F7E51F8B5906C974159EE0ED81473F3CAF5E7910662BBB578291622",
+        "curve_count": 90,
+        "key_count": 900,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          19.0
+        ]
+      },
+      "eat": {
+        "sha256": "A4FC2EFE0561581ABBD4098DFFC22A7FA370DA961818CAF375DEC46203329D73",
+        "curve_count": 90,
+        "key_count": 4140,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          91.0
+        ]
+      },
+      "happy": {
+        "sha256": "B24D844191CDD5358EE2E45162D5A07EF7F0BAC85C3095E6AB6DA67E1A491789",
+        "curve_count": 90,
+        "key_count": 2790,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          61.0
+        ]
+      },
+      "idle": {
+        "sha256": "1BB02DF595F866EECCCC336A0374431B7815A440060189059F2751AEAFBFAB01",
+        "curve_count": 90,
+        "key_count": 5490,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          121.0
+        ]
+      },
+      "pet_reaction": {
+        "sha256": "8A24FD363C2AB2B9026BB1906A6B4E856B1A0519DFD6A7038543ADF2DB9AA8C4",
+        "curve_count": 90,
+        "key_count": 3510,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          76.0
+        ]
+      },
+      "play": {
+        "sha256": "7AA8DF0F79E6E77F91471395FDBD82F4D8B0D0553906A4FE41F3DA080DEF5973",
+        "curve_count": 90,
+        "key_count": 3690,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          81.0
+        ]
+      },
+      "sleep": {
+        "sha256": "C5945FE350F72609F6FC3F3CEA6DB880D561E1CCFB6C72C93CEC312F55B8D3E1",
+        "curve_count": 90,
+        "key_count": 5490,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          121.0
+        ]
+      },
+      "wake": {
+        "sha256": "0661D69CB2AFFA51C2B5A1EF640AF0FA82B5A585577C6D43EB04953B720881AD",
+        "curve_count": 90,
+        "key_count": 2790,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          61.0
+        ]
+      },
+      "walk": {
+        "sha256": "4EBAF99E87FCD7B76BCE8DDEFE3802E55DC27C82060E457579EA7CBCCC1FE8E4",
+        "curve_count": 90,
+        "key_count": 2250,
+        "finite_keys": true,
+        "frame_range": [
+          1.0,
+          49.0
+        ]
+      }
+    }
+  },
+  "motion_comparison": {
+    "idle": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "blink": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "happy": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "eat": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "play": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "pet_reaction": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "sleep": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "wake": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    },
+    "walk": {
+      "passed": true,
+      "finite": true,
+      "same_bone_names": true,
+      "max_world_skin_matrix_component_error": 0.0,
+      "worst_sample": null,
+      "duration_error_seconds": 0.0,
+      "sample_count": 9,
+      "tolerance": 0.0002,
+      "comparison": "Corresponding normalized times at 30 fps; not action byte equality."
+    }
+  },
+  "source_blink_samples": [
+    {
+      "frame": 1,
+      "evaluated_vertices": 185037,
+      "nonfinite_coordinates": 0
+    },
+    {
+      "frame": 5,
+      "evaluated_vertices": 185037,
+      "nonfinite_coordinates": 0
+    },
+    {
+      "frame": 7,
+      "evaluated_vertices": 185037,
+      "nonfinite_coordinates": 0
+    },
+    {
+      "frame": 8,
+      "evaluated_vertices": 185037,
+      "nonfinite_coordinates": 0
+    },
+    {
+      "frame": 9,
+      "evaluated_vertices": 185037,
+      "nonfinite_coordinates": 0
+    },
+    {
+      "frame": 10,
+      "evaluated_vertices": 185037,
+      "nonfinite_coordinates": 0
+    },
+    {
+      "frame": 12,
+      "evaluated_vertices": 185037,
+      "nonfinite_coordinates": 0
+    },
+    {
+      "frame": 16,
+      "evaluated_vertices": 185037,
+      "nonfinite_coordinates": 0
+    },
+    {
+      "frame": 24,
+      "evaluated_vertices": 185037,
+      "nonfinite_coordinates": 0
+    }
+  ],
+  "source_views": {
+    "face-hero": {
+      "file": "assets/3d/reference/elf/sculpt-v005/source/elf-face-hero.png",
+      "sha256": "0F57F97794C0A40D62D0BDA2262AADD0A94D9D74874F9600B3404F3AF577F6E2",
+      "clip": "idle",
+      "frame": 1
+    },
+    "face-front": {
+      "file": "assets/3d/reference/elf/sculpt-v005/source/elf-face-front.png",
+      "sha256": "47AFED93074FED12E2004AD4996302B81E6ACF69E9CE013C4FA726B1C5CF6052",
+      "clip": "idle",
+      "frame": 1
+    },
+    "face-side": {
+      "file": "assets/3d/reference/elf/sculpt-v005/source/elf-face-side.png",
+      "sha256": "6E5C0B997BBCDC0B8E42F37A2C1CF9537EF25FF404ACC147BA57D96C4B3D4D14",
+      "clip": "idle",
+      "frame": 1
+    },
+    "blink-early": {
+      "file": "assets/3d/reference/elf/sculpt-v005/source/elf-blink-early.png",
+      "sha256": "3600CA729DAAEEAF8DC39F10B80E31F9DDC8F1D1AC6DD0D70ADBFDF24363DE06",
+      "clip": "blink",
+      "frame": 5
+    },
+    "blink-partial": {
+      "file": "assets/3d/reference/elf/sculpt-v005/source/elf-blink-partial.png",
+      "sha256": "60625D6A4385593ED1D5A32EADAE761B751E0A072A33CFA974DB06898C015FE5",
+      "clip": "blink",
+      "frame": 7
+    },
+    "blink-closed": {
+      "file": "assets/3d/reference/elf/sculpt-v005/source/elf-blink-closed.png",
+      "sha256": "6F27E5042B58F5D20F0707D7B41BD1940555C8BA4505E454789B0F18B725020B",
+      "clip": "blink",
+      "frame": 10
+    },
+    "hero": {
+      "file": "assets/3d/reference/elf/sculpt-v005/source/elf-hero.png",
+      "sha256": "8E52235A39FF8B0DE195C27DC5B604A4D13A40F6A6729405D3D5A1A61868AC67",
+      "clip": "idle",
+      "frame": 1
+    },
+    "rear": {
+      "file": "assets/3d/reference/elf/sculpt-v005/source/elf-rear.png",
+      "sha256": "C02A39B3CA78868A992203CD9D0BDA48854F9B37C1A47066B89432413BCABB50",
+      "clip": "idle",
+      "frame": 1
+    },
+    "body-hero": {
+      "file": "assets/3d/reference/elf/sculpt-v005/source/elf-body-hero.png",
+      "sha256": "36A4FD45F1F104539D157A8AF7D7E8A5F8C6394B75E862FAE6B919EA4FD69F91",
+      "clip": "idle",
+      "frame": 1
+    }
+  },
+  "import_views": {
+    "face-hero": {
+      "file": "assets/3d/reference/elf/sculpt-v005/import/elf-face-hero.png",
+      "sha256": "CEAC6D4928DEF8DA29C5201B489D7A348353ACE754AFFEDCCD1842B3DD3B64EB",
+      "clip": "idle",
+      "frame": 1
+    },
+    "face-front": {
+      "file": "assets/3d/reference/elf/sculpt-v005/import/elf-face-front.png",
+      "sha256": "A5E2B48C29116AF54CF0CE8B5D9905CEEF60B0AA9B3B5A0E99EA53282219A2CC",
+      "clip": "idle",
+      "frame": 1
+    },
+    "face-side": {
+      "file": "assets/3d/reference/elf/sculpt-v005/import/elf-face-side.png",
+      "sha256": "B8171C98B2B51D03752369105C0E77B0B8E602096A10AF7A9D67620716750E02",
+      "clip": "idle",
+      "frame": 1
+    },
+    "blink-early": {
+      "file": "assets/3d/reference/elf/sculpt-v005/import/elf-blink-early.png",
+      "sha256": "E4C3A5C4AA895F33FF9934459E9FCDC82D979637606DD9932B0BE43CD0D7D318",
+      "clip": "blink",
+      "frame": 5
+    },
+    "blink-partial": {
+      "file": "assets/3d/reference/elf/sculpt-v005/import/elf-blink-partial.png",
+      "sha256": "9C61777DFBE32FF199F89874AFA9D6A701E3982E4BBE29E87E6B1FC8D6DC313D",
+      "clip": "blink",
+      "frame": 7
+    },
+    "blink-closed": {
+      "file": "assets/3d/reference/elf/sculpt-v005/import/elf-blink-closed.png",
+      "sha256": "0B52097E7FFBD788CE41085E83034D94708FB9D1F20C08DAB32DEDECAD44414F",
+      "clip": "blink",
+      "frame": 10
+    },
+    "hero": {
+      "file": "assets/3d/reference/elf/sculpt-v005/import/elf-hero.png",
+      "sha256": "9D2C8BAEB806C6F95A2E025F4BDCAFFF67737B170A0DC1F68410906451C4B84A",
+      "clip": "idle",
+      "frame": 1
+    },
+    "body-hero": {
+      "file": "assets/3d/reference/elf/sculpt-v005/import/elf-body-hero.png",
+      "sha256": "710428C77B537D5DEB21CF6493F562541901A834963CBF51DB6E5468420D9C43",
+      "clip": "idle",
+      "frame": 1
+    }
+  },
+  "baseline_views": {
+    "face-hero": {
+      "file": "assets/3d/reference/elf/sculpt-v005/baseline/elf-face-hero.png",
+      "sha256": "73A194AA5222530F219A09DB5650EBF8B3F102DC6A4916DE85E26A04ACAEF32A",
+      "clip": "idle",
+      "frame": 1
+    },
+    "face-front": {
+      "file": "assets/3d/reference/elf/sculpt-v005/baseline/elf-face-front.png",
+      "sha256": "CD0D040CF7E73AAA39604930E1B39A6686135CF45031A9AD328F7A97C3E4EC6C",
+      "clip": "idle",
+      "frame": 1
+    },
+    "face-side": {
+      "file": "assets/3d/reference/elf/sculpt-v005/baseline/elf-face-side.png",
+      "sha256": "AB6C16A22669AF893E333A5058D9F013A5B3807E5B21ABE6F3BDA58773AB1181",
+      "clip": "idle",
+      "frame": 1
+    }
+  },
+  "hair_evidence": null,
+  "checks": {
+    "original_rest_rig_unchanged": true,
+    "original_constraints_drivers_unchanged": true,
+    "all_original_action_data_unchanged": true,
+    "original_frame_rate_unchanged": true,
+    "explicit_face_only_allowlist": true,
+    "all_unedited_source_objects_retained": true,
+    "nonface_geometry_unchanged": true,
+    "nonface_materials_unchanged": true,
+    "original_lid_pivots_unchanged": true,
+    "meaningful_face_geometry_refinement": true,
+    "face_geometry_survives_source_reopen": true,
+    "all_protected_geometry_survives_source_reopen": true,
+    "all_protected_materials_survive_source_reopen": true,
+    "finite_evaluated_partial_blinks": true,
+    "two_character_meshes": true,
+    "exact_distinct_components": true,
+    "one_original_shared_skin": true,
+    "nine_original_clips": true,
+    "only_public_extras": true,
+    "skinned_triangle_primitives": true,
+    "under_40_primitives": true,
+    "within_species_triangle_budget": true,
+    "self_contained_no_projection": true,
+    "no_editor_stage": true,
+    "meshopt": true,
+    "within_species_byte_budget": true,
+    "finite_imported_geometry": true,
+    "valid_normalized_known_weights": true,
+    "bounded_importer_triangle_difference": true,
+    "nine_clips_match_historical_import": true,
+    "two_imported_components": true,
+    "imported_equipment_metadata": true,
+    "six_facial_views_present": true,
+    "all_historical_and_builder_inputs_unchanged": true
+  },
+  "passed": true,
+  "human_likeness_accepted": false,
+  "mobile_performance_accepted": false,
+  "paid_provider_used": false,
+  "projection_used": false,
+  "nonface_unchanged": true,
+  "package_status": "Local hash-checked Blender delivery; no game-dev canonical receipt.",
+  "animation_limit": "Original full action/rest/driver RNA unchanged; nine fresh GLB skin-matrix samples per clip. Original center-scale lids retained; no anatomical closure or collision-free motion claim.",
+  "likeness_limit": "Face-only sculpt interpreted from unchanged original artwork. Hidden angles inferred. Not a 100-percent likeness or human identity acceptance claim."
+}
