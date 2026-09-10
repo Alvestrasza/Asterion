@@ -1,5 +1,17 @@
 # Asterion project status
 
+## Current project update — 2026-09-10
+
+Version 0.8.0 has reached the pilot environment. It includes case-preserving player names, a collapsible friends panel, friend-code invitations, one-to-one text messaging between confirmed friends, and companion presentation improvements.
+
+Final end-to-end acceptance is still pending. A simplified pilot administration setup has been approved, but completion has not yet been confirmed. The remaining checks cover sign-in, first-companion selection, friendship confirmation, messaging and continuity in a new browser. This is not a general-release announcement.
+
+Current progress is tracked in [administration #4](https://github.com/Alvestrasza/Asterion/issues/4), [release acceptance #11](https://github.com/Alvestrasza/Asterion/issues/11), and [friends and chat #14](https://github.com/Alvestrasza/Asterion/issues/14). These issues remain open. Issue #13 remains deferred.
+
+This is a documentation-only update. No new application source, build or deployment is included, and no runtime checks were repeated for this publication. Operational details are maintained separately. The existing 3D publication and review evidence below remains unchanged; 3D production acceptance is not implied.
+
+The sections below retain their original evidence dates and describe historical snapshots, not a fresh statement of the running application.
+
 Website-foundation and internal deployment status: 2026-09-05
 
 Both existing internal web nodes now serve version `0.5.2`, built from commit [`9163a78`](https://github.com/Alvestrasza/Asterion/commit/9163a78f5ffd2b2ebc252701d8d23e8c673c1d23). The same SHA-256-verified Linux artifact was installed on both nodes. The previous immutable `0.4.1` release is retained. No public cutover, database migration, Keycloak change, or firewall widening was performed.
