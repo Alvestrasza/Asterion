@@ -2,7 +2,7 @@
 
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
-import { LANGUAGE_COOKIE, languageCookieOptions, languageReturnPath, normalizeLocale } from "@/lib/i18n";
+import { DEFAULT_LOCALE, LANGUAGE_COOKIE, languageCookieOptions, languageReturnPath, localizedPath, normalizeLocale } from "@/lib/i18n";
 
 export async function changeLanguage(formData: FormData) {
   const locale = normalizeLocale(formData.get("locale"));
@@ -13,5 +13,5 @@ export async function changeLanguage(formData: FormData) {
       process.env.ASTERION_INTERNAL_TEST_MODE?.trim().toLowerCase() === "true"
     ));
   }
-  redirect(languageReturnPath(formData.get("returnTo")));
+  redirect(localizedPath(languageReturnPath(formData.get("returnTo")), locale ?? DEFAULT_LOCALE));
 }

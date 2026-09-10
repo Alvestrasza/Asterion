@@ -2,8 +2,9 @@
 
 import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
-import { logout } from "@/app/actions";
 import { AsterionModel } from "@/app/asterion-model";
+import { SiteHeader } from "./site-header";
+import type { Locale } from "@/lib/i18n";
 import {
   ageInDays,
   applyCareAction,
@@ -27,6 +28,8 @@ import {
 import type { PetCommand, PetCommandResponse, PetSnapshot } from "@/lib/pet-contract";
 import { createRequestId } from "@/lib/request-id";
 import { formatJournalTime } from "@/lib/journal-time";
+import { CompanionBackground } from "@/app/companion-background";
+import { CompanionArt } from "./companion-art";
 
 const ASTERION_3D_ENABLED = process.env.NEXT_PUBLIC_ASTERION_3D_ENABLED === "true";
 
@@ -47,11 +50,11 @@ class CommandError extends Error {
   }
 }
 
-async function postCommand(command: PetCommand): Promise<PetCommandResponse> {
+async function postCommand(command: PetCommand, userId: string, petId: string): Promise<PetCommandResponse> {
   const response = await fetch("/api/pet/actions", {
     method: "POST",
     credentials: "same-origin",
-    headers: { "Content-Type": "application/json" },
+    headers: { "Content-Type": "application/json", "X-Asterion-Actor": userId, "X-Asterion-Pet": petId },
     body: JSON.stringify(command)
   });
 
@@ -122,12 +125,16 @@ export function AsterionClient({
   initialPet,
   userId,
   userName,
-  internalTestMode
+  internalTestMode,
+  isAdmin = false,
+  locale = "de"
 }: {
   initialPet: PetSnapshot;
   userId: string;
   userName: string;
   internalTestMode: boolean;
+  isAdmin?: boolean;
+  locale?: Locale;
 }) {
   const [pet, setPet] = useState(initialPet);
   const initialMood = moodPresentation(deriveMood(initialPet), companionProfile(initialPet.kind).name);
@@ -144,11 +151,38 @@ export function AsterionClient({
   const [installPrompt, setInstallPrompt] = useState<InstallPromptEvent | null>(null);
   const [reducedMotion, setReducedMotion] = useState(false);
   const [timeZone, setTimeZone] = useState<string>();
+  const [sessionChanged, setSessionChanged] = useState(false);
+  const flushing = useRef(false);
+  const queueRetryTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const settingsDialog = useRef<HTMLDialogElement>(null);
   const confirmDialog = useRef<HTMLDialogElement>(null);
   const transientTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const toastTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const queueKey = `asterion.pending-actions.v1.${userId}`;
+
+  useEffect(() => {
+    if (internalTestMode) return;
+    let active = true;
+    const check = async () => {
+      if (document.visibilityState === "hidden" || !navigator.onLine) return;
+      try {
+        const result = await fetch("/api/actor", { cache: "no-store", credentials: "same-origin", headers: { "X-Asterion-Actor": userId } });
+        if (active && [401, 403, 409].includes(result.status)) {
+          setSessionChanged(true);
+          window.location.replace("/login");
+        }
+      } catch { /* Offline care may remain queued for the same identity. */ }
+    };
+    const onStorage = (event: StorageEvent) => {
+      if (event.key === "asterion.session-ended") { setSessionChanged(true); window.location.replace("/login"); }
+    };
+    void check();
+    const timer = setInterval(() => void check(), 15_000);
+    window.addEventListener("focus", check);
+    document.addEventListener("visibilitychange", check);
+    window.addEventListener("storage", onStorage);
+    return () => { active = false; clearInterval(timer); window.removeEventListener("focus", check); document.removeEventListener("visibilitychange", check); window.removeEventListener("storage", onStorage); };
+  }, [internalTestMode, userId]);
 
   const showToast = useCallback((copy: string) => {
     if (toastTimer.current) clearTimeout(toastTimer.current);
@@ -179,16 +213,18 @@ export function AsterionClient({
     }, 3_400);
   }, []);
 
-  const flushQueue = useCallback(async () => {
+  const flushQueue = useCallback(async function flushPending(): Promise<void> {
+    if (flushing.current) return;
     const pending = readQueue(queueKey);
     if (pending.length === 0 || !navigator.onLine) return;
+    flushing.current = true;
 
     setBusy(true);
     let remaining = [...pending];
     try {
       while (remaining.length > 0) {
         const command = remaining[0];
-        const result = await postCommand({ requestId: command.requestId, action: command.action });
+        const result = await postCommand({ requestId: command.requestId, action: command.action }, userId, initialPet.id);
         setPet(result.pet);
         showTransient(
           result.pet,
@@ -202,11 +238,17 @@ export function AsterionClient({
       }
       showToast("Alle vorgemerkten Augenblicke wurden synchronisiert.");
     } catch (error) {
-      if (error instanceof CommandError && error.status === 401) window.location.assign("/login");
+      if (error instanceof CommandError && [401, 403, 409].includes(error.status)) { setSessionChanged(true); window.location.replace("/login"); }
+      else {
+        if (error instanceof CommandError && error.status === 429) showToast("Deine übrigen Augenblicke werden in einer Minute weiter synchronisiert.");
+        if (queueRetryTimer.current) clearTimeout(queueRetryTimer.current);
+        queueRetryTimer.current = setTimeout(() => void flushPending(), 61_000);
+      }
     } finally {
       setBusy(false);
+      flushing.current = false;
     }
-  }, [queueKey, showToast, showTransient]);
+  }, [queueKey, showToast, showTransient, userId, initialPet.id]);
 
   useEffect(() => {
     setTimeZone(Intl.DateTimeFormat().resolvedOptions().timeZone);
@@ -247,6 +289,7 @@ export function AsterionClient({
       window.removeEventListener("beforeinstallprompt", handleInstall);
       if (transientTimer.current) clearTimeout(transientTimer.current);
       if (toastTimer.current) clearTimeout(toastTimer.current);
+      if (queueRetryTimer.current) clearTimeout(queueRetryTimer.current);
     };
   }, [flushQueue, queueKey]);
 
@@ -268,7 +311,7 @@ export function AsterionClient({
     if (navigator.onLine) {
       setBusy(true);
       try {
-        const result = await postCommand(command);
+        const result = await postCommand(command, userId, initialPet.id);
         setPet(result.pet);
         showTransient(
           result.pet,
@@ -279,7 +322,7 @@ export function AsterionClient({
         return;
       } catch (error) {
         if (error instanceof CommandError && error.status < 500) {
-          if (error.status === 401) window.location.assign("/login");
+          if ([401, 403, 409].includes(error.status)) { setSessionChanged(true); window.location.replace("/login"); }
           else showToast("Diese Aktion konnte nicht angenommen werden.");
           return;
         }
@@ -288,7 +331,9 @@ export function AsterionClient({
       }
     }
 
-    const queue = [...readQueue(queueKey), { requestId, action, queuedAt: Date.now() }];
+    const previous = readQueue(queueKey);
+    if (previous.length >= 50) { showToast("Bitte synchronisiere zuerst deine vorgemerkten Augenblicke."); return; }
+    const queue = [...previous, { requestId, action, queuedAt: Date.now() }];
     if (!writeQueue(queueKey, queue)) {
       showToast("Der Offline-Augenblick konnte auf diesem Gerät nicht vorgemerkt werden.");
       return;
@@ -322,19 +367,25 @@ export function AsterionClient({
 
     setBusy(true);
     try {
-      const result = await postCommand(command);
+      const result = await postCommand(command, userId, initialPet.id);
       setPet(result.pet);
       showTransient(result.pet, result.feedback.animation, result.feedback.message);
       showToast(successMessage);
     } catch (error) {
-      if (error instanceof CommandError && error.status === 401) window.location.assign("/login");
+      if (error instanceof CommandError && [401, 403, 409].includes(error.status)) { setSessionChanged(true); window.location.replace("/login"); }
       else showToast("Die gemeinsame Chronik konnte nicht aktualisiert werden.");
     } finally {
       setBusy(false);
     }
   }
 
-  function exportSave() {
+  async function exportSave() {
+    if (!internalTestMode) {
+      try {
+        const check = await fetch("/api/actor", { cache: "no-store", credentials: "same-origin", headers: { "X-Asterion-Actor": userId } });
+        if (!check.ok) { setSessionChanged(true); window.location.replace("/login"); return; }
+      } catch { showToast("Bitte verbinde dich vor dem Export erneut."); return; }
+    }
     const payload = new Blob(
       [`${JSON.stringify({ format: "asterion-save-v2", exportedAt: new Date().toISOString(), pet }, null, 2)}\n`],
       { type: "application/json" }
@@ -345,7 +396,7 @@ export function AsterionClient({
     anchor.download = `${pet.kind}-erinnerung-${new Date().toISOString().slice(0, 10)}.json`;
     anchor.click();
     URL.revokeObjectURL(url);
-    showToast(`${companionProfile(pet.kind).name}s Erinnerung wurde gesichert.`);
+    showToast("Spielstand heruntergeladen.");
   }
 
   async function importSave(event: React.ChangeEvent<HTMLInputElement>) {
@@ -359,11 +410,11 @@ export function AsterionClient({
       if (!requestId) return;
       await runImmediate(
         { requestId, action: "restore", state: parsed.pet ?? parsed },
-        "Die Erinnerung deines Begleiters wurde wiederhergestellt."
+        "Spielstand wiederhergestellt."
       );
       settingsDialog.current?.close();
     } catch {
-      showToast("Diese Datei enthält keine gültige Begleiter-Erinnerung.");
+      showToast("Diese Datei enthält keinen gültigen Spielstand.");
     }
   }
 
@@ -402,7 +453,9 @@ export function AsterionClient({
       ? `Offline · ${queueCount} vorgemerkt`
       : queueCount > 0
         ? `${queueCount} wartet auf Synchronisierung`
-        : "Server synchronisiert";
+        : "Gespeichert";
+
+  if (sessionChanged) return <main className="login-shell"><p role="status">Deine Anmeldung hat sich geändert. Die Seite wird neu geladen …</p></main>;
 
   return (
     <>
@@ -411,13 +464,10 @@ export function AsterionClient({
       </div>
 
       <div className="app-shell">
-        <header className="topbar">
-          <a className="brand" href="#companion" aria-label="Zum Begleiter springen">
-            <span className="brand-mark" aria-hidden="true">✦</span>
-            <span><strong>ASTERION</strong><small>STERNENBEGLEITER</small></span>
-          </a>
-          <div className="topbar-actions">
-            <span className="user-chip" title={userName}>{userName}</span>
+        <SiteHeader locale={locale} currentPath="/care" actor={{ id: userId, name: userName, isAdmin, internalTestMode }} onLogout={() => {
+          try { localStorage.removeItem(queueKey); } catch { /* Storage is optional. */ }
+          setSessionChanged(true);
+        }}>
             {installPrompt ? (
               <button
                 className="quiet-button"
@@ -432,11 +482,7 @@ export function AsterionClient({
               </button>
             ) : null}
             <button className="icon-button" type="button" aria-label="Einstellungen öffnen" onClick={() => settingsDialog.current?.showModal()}>⚙</button>
-            {internalTestMode ? null : (
-              <form action={logout}><button className="icon-button" type="submit" aria-label="Abmelden">↪</button></form>
-            )}
-          </div>
-        </header>
+        </SiteHeader>
 
         {internalTestMode ? (
           <aside className="test-mode-banner" role="status">
@@ -448,11 +494,10 @@ export function AsterionClient({
         <main>
           <section className="hero" id="companion" aria-labelledby="pageTitle">
             <div className="hero-copy">
-              <p className="eyebrow">{companion.tagline.toUpperCase()}</p>
-              <h1 id="pageTitle">{companion.introduction}</h1>
+              <p className="eyebrow">{companion.species}</p>
+              <h1 id="pageTitle">{companion.name}</h1>
               <p className="hero-intro">
-                Kümmere dich um {companion.name}, sammle gemeinsame Augenblicke und lass eure Bindung wachsen.
-                Eure Chronik folgt dir sicher von Gerät zu Gerät.
+                Wie geht es {companion.name}? Schau nach, ob dein Freund Hunger hat, spielen möchte oder müde ist.
               </p>
               <div className="identity-strip" aria-label={`${companion.name}s Entwicklung`}>
                 <div><span>TAG</span><strong>{ageInDays(pet, pet.lastUpdatedAt)}</strong></div>
@@ -464,6 +509,7 @@ export function AsterionClient({
             <div className="companion-column">
               <div className="speech-bubble" role="status" aria-live="polite">{message}</div>
               <div className="pet-stage">
+                <CompanionBackground kind={companion.kind} />
                 <div className="orbit orbit-outer" aria-hidden="true" />
                 <div className="orbit orbit-inner" aria-hidden="true" />
                 <div className="moon-glow" aria-hidden="true" />
@@ -481,6 +527,8 @@ export function AsterionClient({
                       reducedMotion={reducedMotion}
                       replayKey={animationKey}
                     />
+                  ) : companion.kind === "asterion" ? (
+                    <CompanionArt alt={companion.ariaLabel} animation={animation} reducedMotion={reducedMotion} fill />
                   ) : (
                     <Image
                       src={spriteSource}
@@ -525,18 +573,18 @@ export function AsterionClient({
                   <span className="action-glyph" aria-hidden="true">✦</span><span><strong>Spielen</strong><small>Einem Lichtfunken folgen</small></span>
                 </button>
                 <button className="care-action pet-action" disabled={busy} type="button" onClick={() => void handleCare("pet")}>
-                  <span className="action-glyph" aria-hidden="true">♡</span><span><strong>Streicheln</strong><small>Einen ruhigen Moment teilen</small></span>
+                  <span className="action-glyph" aria-hidden="true">♡</span><span><strong>Streicheln</strong><small>Ein bisschen Zuwendung</small></span>
                 </button>
                 <button className="care-action sleep-action" disabled={busy} type="button" onClick={() => void handleCare(pet.sleeping ? "wake" : "sleep")}>
-                  <span className="action-glyph" aria-hidden="true">☾</span><span><strong>{pet.sleeping ? "Wecken" : "Schlafen"}</strong><small>{pet.sleeping ? "Sanft ins Heute zurückholen" : "Unter Sternen ausruhen"}</small></span>
+                  <span className="action-glyph" aria-hidden="true">☾</span><span><strong>{pet.sleeping ? "Wecken" : "Schlafen"}</strong><small>{pet.sleeping ? "Aufstehen" : "Energie tanken"}</small></span>
                 </button>
               </div>
             </article>
 
             <article className="panel journal-panel">
               <div className="panel-heading">
-                <div><p className="eyebrow">STERNENCHRONIK</p><h2>Eure letzten Augenblicke</h2></div>
-                <span className="journal-count">{pet.interactions} {pet.interactions === 1 ? "Begegnung" : "Begegnungen"}</span>
+                <div><p className="eyebrow">VERLAUF</p><h2>Zuletzt gemacht</h2></div>
+                <span className="journal-count">{pet.interactions} {pet.interactions === 1 ? "Aktion" : "Aktionen"}</span>
               </div>
               <ol className="journal-list">
                 {pet.journal.slice(0, 3).map((entry) => (
@@ -552,19 +600,18 @@ export function AsterionClient({
           </section>
         </main>
 
-        <footer><span>ASTERION · SERVER FIRST</span><span>Ein Konto. Ein Begleiter. Eine Chronik auf all deinen Geräten.</span></footer>
       </div>
 
       <dialog className="settings-dialog" ref={settingsDialog} aria-labelledby="settingsTitle">
         <form method="dialog">
           <div className="dialog-heading">
-            <div><p className="eyebrow">EINSTELLUNGEN</p><h2 id="settingsTitle">Dein Sternengefährte</h2></div>
+            <div><p className="eyebrow">EINSTELLUNGEN</p><h2 id="settingsTitle">Dein Spiel</h2></div>
             <button className="icon-button" value="close" aria-label="Einstellungen schließen">×</button>
           </div>
-          <p className="dialog-copy">Der Zustand deines Begleiters liegt geschützt in deinem Konto und wird zwischen deinen Geräten synchronisiert.</p>
+          <p className="dialog-copy">Dein Spielstand wird online in deinem Konto gespeichert.</p>
           <fieldset className="companion-picker">
             <legend>Begleiter wählen</legend>
-            <p>Beim Wechsel bleiben Werte, Stufe und Chronik erhalten.</p>
+            <p>Beim Wechsel bleiben Werte, Stufe und Verlauf erhalten.</p>
             <div className="companion-options">
               {Object.values(COMPANIONS).map((option) => (
                 <button
@@ -577,7 +624,7 @@ export function AsterionClient({
                   onClick={() => void selectCompanion(option.kind)}
                 >
                   <span className="companion-option-image">
-                    <Image src={option.stillAsset} alt="" fill sizes="72px" unoptimized />
+                    {option.kind === "asterion" ? <CompanionArt alt="" fill /> : <Image src={option.stillAsset} alt="" fill sizes="72px" unoptimized />}
                   </span>
                   <span><strong>{option.name}</strong><small>{option.species}</small></span>
                 </button>
@@ -585,10 +632,10 @@ export function AsterionClient({
             </div>
           </fieldset>
           <div className="settings-actions">
-            <button className="settings-action" type="button" onClick={exportSave}><strong>Erinnerung sichern</strong><small>Spielstand als JSON herunterladen</small></button>
-            <label className="settings-action import-label" htmlFor="importInput"><strong>Erinnerung wiederherstellen</strong><small>Einen lokalen oder früheren Spielstand übernehmen</small></label>
-            <input id="importInput" type="file" accept="application/json,.json" hidden onChange={(event) => void importSave(event)} />
-            <button className="settings-action danger-action" type="button" onClick={() => confirmDialog.current?.showModal()}><strong>Neu beginnen</strong><small>Die serverseitige Chronik nach Bestätigung zurücksetzen</small></button>
+            <button className="settings-action" type="button" onClick={exportSave}><strong>Spielstand herunterladen</strong><small>Als JSON-Datei speichern</small></button>
+            {internalTestMode && <><label className="settings-action import-label" htmlFor="importInput"><strong>Spielstand wiederherstellen</strong><small>Eine gespeicherte Datei laden</small></label>
+            <input id="importInput" type="file" accept="application/json,.json" hidden onChange={(event) => void importSave(event)} /></>}
+            <button className="settings-action danger-action" type="button" onClick={() => confirmDialog.current?.showModal()}><strong>Neu beginnen</strong><small>Werte und Verlauf zurücksetzen</small></button>
           </div>
         </form>
       </dialog>

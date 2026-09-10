@@ -1,0 +1,11 @@
+[Unit]
+Description=Run Asterion permission synchronization every minute
+
+[Timer]
+OnBootSec=30s
+OnUnitInactiveSec=60s
+AccuracySec=5s
+Unit=asterion-public-access-sync.service
+
+[Install]
+WantedBy=timers.target

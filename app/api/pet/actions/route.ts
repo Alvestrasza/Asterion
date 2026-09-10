@@ -1,8 +1,10 @@
 import { z } from "zod";
 import { COMPANION_KINDS } from "@/lib/companions";
 import { getCurrentActor } from "@/lib/current-actor";
-import { hasSameOrigin } from "@/lib/http";
-import { performPetCommand } from "@/lib/pet-service";
+import { hasSameOrigin, readBoundedJson } from "@/lib/http";
+import { performPetCommand, PetRequestError } from "@/lib/pet-service";
+import { matchesExpectedActor } from "@/lib/actor-binding";
+import { AccessPolicyError } from "@/lib/access-policy";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -24,10 +26,13 @@ export async function POST(request: Request) {
   if (!actor) {
     return Response.json({ error: "authentication_required" }, { status: 401 });
   }
+  if (!matchesExpectedActor(request.headers.get("x-asterion-actor"), actor.id)) {
+    return Response.json({ error: "session_changed" }, { status: 409, headers: { "Cache-Control": "no-store" } });
+  }
 
   let body: unknown;
   try {
-    body = await request.json();
+    body = await readBoundedJson(request);
   } catch {
     return Response.json({ error: "invalid_json" }, { status: 400 });
   }
@@ -37,10 +42,13 @@ export async function POST(request: Request) {
     return Response.json({ error: "invalid_command" }, { status: 400 });
   }
 
-  const result = await performPetCommand(actor.id, parsed.data);
-  return Response.json(result, {
-    headers: {
-      "Cache-Control": "private, no-store"
-    }
-  });
+  try {
+    const result = await performPetCommand(actor.id, parsed.data, request.headers.get("x-asterion-pet") ?? undefined);
+    return Response.json(result, { headers: { "Cache-Control": "private, no-store" } });
+  } catch (error) {
+    const status = error instanceof AccessPolicyError ? 403 : error instanceof PetRequestError ? error.status : 503;
+    return Response.json({ error: status === 503 ? "temporarily_unavailable" : "command_rejected" }, {
+      status, headers: { "Cache-Control": "no-store", ...(status === 429 ? { "Retry-After": "60" } : {}) }
+    });
+  }
 }

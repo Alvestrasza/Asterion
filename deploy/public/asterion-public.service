@@ -1,0 +1,32 @@
+[Unit]
+Description=Asterion authenticated public web service
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=webapps
+Group=www-data
+WorkingDirectory=/opt/sites/asterion-public/current
+EnvironmentFile=/etc/asterion-public/asterion.env
+ExecStartPre=/usr/bin/node /opt/sites/asterion-public/current/.asterion-operations/public-config.mjs --check
+ExecStart=/usr/bin/node /opt/sites/asterion-public/current/start-asterion.mjs
+Restart=on-failure
+RestartSec=10
+TimeoutStartSec=120
+TimeoutStopSec=30
+SyslogIdentifier=asterion-public
+UMask=0027
+
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectHome=true
+ProtectSystem=strict
+ReadWritePaths=-/opt/sites/asterion-public/current/.next/cache
+CapabilityBoundingSet=
+AmbientCapabilities=
+LockPersonality=true
+MemoryDenyWriteExecute=false
+
+[Install]
+WantedBy=multi-user.target

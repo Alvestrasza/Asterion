@@ -2,7 +2,7 @@
 
 Asterion is a gentle, multi-user Tamagotchi service built as an installable web application. Each authenticated user has one active server-authoritative companion whose state follows them across devices.
 
-Version `0.5.2` delivers the website foundation and internal-browser fixes for internal testing, not a public-service launch. The public introduction is at `/`; the existing care prototype has moved to `/care`. Its Keycloak integration and ownership model still require real multi-user acceptance. The internal test profile intentionally shares one test account. Consult the project status for separately verified deployment evidence.
+Version `0.8.0` brings onboarding, a friends panel, friend-code invitations and optional one-to-one text messaging to the pilot. The public introduction is at `/`; companion care is at `/care`. Final multi-user and new-browser acceptance remains pending. This source release is not a general-launch announcement. The internal test profile intentionally shares one test account and does not support social features.
 
 ## Features
 
@@ -10,6 +10,10 @@ Version `0.5.2` delivers the website foundation and internal-browser fixes for i
 - Keycloak OpenID Connect integration through Auth.js; the login button is unavailable until the three provider settings are present
 - PostgreSQL persistence with one owner-linked pet per user; live authentication and per-user isolation acceptance remain pending
 - Eight selectable companions: Asterion, Liora the rabbit, Nyra the cat, Brumo the young orc, Caelo the pony, Selya the fairy, Fenn the dog, and Aelira the elf
+- First-companion selection after sign-in and case-preserving player names
+- Collapsible friends panel, consent-based friend-code invitations, and confirmed-friend presence and level
+- Optional encrypted text messaging between confirmed friends, with account-based restoration in a new browser
+- Individual companion backgrounds and an atlas-based Asterion presentation
 - Server-authoritative satiety, energy, joy, bond, age, and experience
 - Feed, play, pet, sleep, wake, restore, and confirmed reset interactions
 - Serializable transactions and idempotency keys for safe multi-node operation
@@ -26,7 +30,7 @@ The browser communicates only with the Next.js application. Auth.js uses Keycloa
 
 See [Project status](docs/PROJECT-STATUS.md), [Architecture](docs/ARCHITECTURE.md), and [Operations](docs/OPERATIONS.md) for the verified baseline, full design, and rollout procedure.
 
-See [Website foundation](docs/WEBSITE-FOUNDATION.md) for the new route contract and the partial delivery of issues [#2](https://github.com/Alvestrasza/Asterion/issues/2) and [#5](https://github.com/Alvestrasza/Asterion/issues/5). The care interface and stored care-event messages remain German in this slice. Multi-companion progression, the private diary, friendship/chat, and the device API are roadmap work, not available features. Issue [#13](https://github.com/Alvestrasza/Asterion/issues/13) remains explicitly deferred.
+The care interface and stored care-event messages remain German in this slice. Multi-companion progression, the private diary, and the device API remain roadmap work. The messenger is a pilot feature, not an independently audited messaging service; account-based recovery is not operator-blind encryption. See [v0.8.0](docs/RELEASE-0.8.0.md) for the publication boundary. Issue [#13](https://github.com/Alvestrasza/Asterion/issues/13) remains explicitly deferred.
 
 ## Continue on another workstation
 

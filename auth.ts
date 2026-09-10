@@ -1,30 +1,13 @@
 import NextAuth from "next-auth";
 import Keycloak from "next-auth/providers/keycloak";
-import { PrismaAdapter } from "@auth/prisma-adapter";
-import { prisma } from "@/lib/db";
 import { isKeycloakConfigured } from "@/lib/auth-config";
-
-type KeycloakProfile = {
-  groups?: unknown;
-  realm_access?: { roles?: unknown };
-  resource_access?: Record<string, { roles?: unknown }>;
-};
-
-function strings(value: unknown): string[] {
-  return Array.isArray(value) ? value.filter((entry): entry is string => typeof entry === "string") : [];
-}
-
-function profileAssignments(profile: unknown) {
-  const source = (profile ?? {}) as KeycloakProfile;
-  const clientId = process.env.AUTH_KEYCLOAK_ID;
-  const assignments = new Set([
-    ...strings(source.groups),
-    ...strings(source.realm_access?.roles),
-    ...(clientId ? strings(source.resource_access?.[clientId]?.roles) : [])
-  ]);
-
-  return assignments;
-}
+import { identityAdapter } from "@/lib/identity-adapter";
+import { isPublicDeployment, publicRuntimeErrors } from "@/lib/deployment-config";
+import { identitySubject, mayBootstrapAdmin } from "@/lib/identity-policy";
+import { registerIdentity } from "@/lib/access-service";
+import { prisma } from "@/lib/db";
+import { ensureFriendCode } from "@/lib/friend-code-service";
+import { keycloakStorageConfigured } from "@/lib/keycloak-storage";
 
 declare module "next-auth" {
   interface Session {
@@ -38,37 +21,52 @@ declare module "next-auth" {
 }
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
-  adapter: PrismaAdapter(prisma),
-  session: { strategy: "database" },
+  adapter: identityAdapter,
+  session: { strategy: "database", maxAge: 8 * 60 * 60, updateAge: 60 * 60 },
+  logger: { error(error) {
+    const category = "type" in error && typeof error.type === "string" ? error.type : error.name;
+    const code = /^[A-Za-z]{1,64}$/.test(category) ? category : "AuthenticationError";
+    console.error(`Authentication operation failed (${code}); inspect provider and deployment configuration.`);
+  } },
   providers:
     isKeycloakConfigured()
       ? [
           Keycloak({
             clientId: process.env.AUTH_KEYCLOAK_ID,
             clientSecret: process.env.AUTH_KEYCLOAK_SECRET,
-            issuer: process.env.AUTH_KEYCLOAK_ISSUER
+            issuer: process.env.AUTH_KEYCLOAK_ISSUER,
+            checks: ["pkce", "state", "nonce"],
+            authorization: { params: { scope: "openid profile email", prompt: "login" } }
           })
         ]
       : [],
   callbacks: {
     async signIn({ account, profile }) {
       if (account?.provider !== "keycloak") return false;
-
-      const required = process.env.ASTERION_REQUIRED_ROLE?.trim();
-      if (!required) {
-        if (process.env.NODE_ENV === "production") {
-          console.error("Asterion sign-in denied: ASTERION_REQUIRED_ROLE is not configured.");
-          return false;
-        }
-        return true;
+      if (isPublicDeployment()) {
+        // Verified identities receive basic membership; admin roles remain separately controlled.
+        return publicRuntimeErrors().length === 0 && identitySubject(profile) === account.providerAccountId;
       }
 
-      const assignments = profileAssignments(profile);
-      return assignments.has(required) || assignments.has(`/${required}`);
+      return false;
     },
     session({ session, user }) {
       if (session.user) session.user.id = user.id;
       return session;
+    }
+  },
+  events: {
+    async signIn({ user, account, profile }) {
+      if (!isPublicDeployment() || !user.id || account?.provider !== "keycloak") return;
+      await registerIdentity(user.id, process.env.AUTH_KEYCLOAK_ISSUER!, account.providerAccountId, mayBootstrapAdmin(profile));
+      // First successful StarFriends admission creates the immutable code in a
+      // standard Keycloak attribute. Existing accounts use the same guarded path.
+      if (keycloakStorageConfigured()) await ensureFriendCode(user.id);
+      // Retain fresh provider verification as identity metadata, not social lookup.
+      // Never link accounts or grant membership through this display attribute.
+      await prisma.user.update({ where: { id: user.id }, data: {
+        emailVerified: typeof profile?.email === "string" && profile.email === user.email && profile.email_verified === true ? new Date() : null
+      } });
     }
   },
   pages: {

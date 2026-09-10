@@ -1,0 +1,9 @@
+# Asterion optional chat credential delivery, v1.0.0, 2026-09-09.
+# Author: Alice Endelgard. INSTALL ONLY as part of the reviewed complete upgrade.
+# Do not install this alone: the key-path variable opts into storage at runtime.
+# The protected EnvironmentFile must contain both storage-client settings and
+# must NOT override ASTERION_CHAT_RECOVERY_KEY_FILE with an old source path.
+# Retain /etc/asterion-public at root:root 0700 and the source key at 0400.
+[Service]
+LoadCredential=chat-recovery.key:/etc/asterion-public/chat-recovery.key
+Environment=ASTERION_CHAT_RECOVERY_KEY_FILE=%d/chat-recovery.key

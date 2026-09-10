@@ -1,0 +1,17 @@
+.social-shell { max-width: 1100px; margin: 0 auto; padding: 32px 24px 70px; }
+.social-shell h1 { font-size: clamp(1.8rem, 5vw, 3rem); }
+.social-shell p { line-height: 1.6; }
+.social-card { border: 1px solid #ffffff24; border-radius: 20px; padding: 24px; margin: 20px 0; background: #142436; }
+.social-card form { display: grid; gap: 14px; }
+.social-card input:not([type=checkbox]) { width: 100%; box-sizing: border-box; background: #0b1825; color: #fff; border: 1px solid #91adc7; border-radius: 8px; padding: 12px; font: inherit; }
+.social-card button { justify-self: start; white-space: normal; }
+.social-card button:disabled { opacity: .5; cursor: wait; }
+.social-checkbox { display: flex; gap: 12px; align-items: start; }
+.social-checkbox input { margin-top: 6px; }
+.friend-list { padding: 0; list-style: none; }
+.friend-list li { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; padding: 16px 0; border-top: 1px solid #ffffff24; overflow-wrap: anywhere; }
+.friend-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+.adoption-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 20px; }
+.adoption-grid .social-card { margin: 0; text-align: center; }
+.adoption-grid img { max-width: 100%; }
+.social-shell :focus-visible { outline: 3px solid #f6ce74; outline-offset: 4px; }

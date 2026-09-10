@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import { getMessages, MESSAGES } from "../lib/messages.ts";
+import { readFile } from "node:fs/promises";
 
 const locales = ["de", "en", "fr", "es"];
 const companionKinds = ["asterion", "rabbit", "cat", "orc", "pony", "fairy", "dog", "elf"];
@@ -57,4 +58,28 @@ test("translations preserve interpolation placeholders", () => {
       assert.deepEqual(placeholders(value), placeholders(reference.get(path)), `${locale}.${path}`);
     }
   }
+});
+
+test("public copy describes immediate onboarding without a manual approval requirement", () => {
+  for (const locale of locales) {
+    const t = MESSAGES[locale];
+    assert.ok(t.hero.description.length <= 200, locale);
+    assert.ok(t.hero.note.length <= 100, locale);
+    assert.ok(t.login.title.length <= 40, locale);
+    assert.ok(t.login.description.length <= 150, locale);
+    assert.doesNotMatch(t.hero.description + t.login.description, /prototype|Prototyp|prototipo|universum|universe|univers /i);
+  }
+  assert.match(MESSAGES.de.login.register, /Konto erstellen/);
+  assert.match(MESSAGES.en.login.register, /Create account/);
+  for (const locale of locales) {
+    assert.equal("apply" in MESSAGES[locale].nav, false);
+    assert.doesNotMatch(MESSAGES[locale].hero.note + MESSAGES[locale].footer.status, /Freigabe|freigeschaltet|approved|approval|approuvé|aprobada|aprobación/);
+  }
+});
+
+test("the landing page does not market unfinished diary, chat or progression features", async () => {
+  const page = await readFile(new URL("../app/page.tsx", import.meta.url), "utf8");
+  assert.doesNotMatch(page, /t\.roadmap|href="#roadmap"/);
+  assert.match(page, /t\.hero\.note/);
+  assert.match(page, /t\.footer\.status/);
 });

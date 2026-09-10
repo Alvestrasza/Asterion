@@ -11,6 +11,12 @@ import {
 import { companionProfile, isCompanionKind, type CompanionKind } from "@/lib/companions";
 import { prisma } from "@/lib/db";
 import type { PetCommand, PetCommandResponse, PetEventView, PetSnapshot } from "@/lib/pet-contract";
+import { assertAccess, consumeCareBudget } from "@/lib/access-service";
+import { isPublicDeployment } from "@/lib/deployment-config";
+
+export class PetRequestError extends Error {
+  constructor(readonly code: string, readonly status: number) { super(code); }
+}
 
 const MAX_TRANSACTION_ATTEMPTS = 5;
 const HATCH_MESSAGE = "Asterion ist geschlüpft. Ein ruhiger Sternenfunke begleitet dich von nun an.";
@@ -114,13 +120,15 @@ async function eventsForPet(tx: Prisma.TransactionClient, petId: string) {
   });
 }
 
-async function ensurePet(tx: Prisma.TransactionClient, ownerId: string, now: Date) {
+async function ensurePet(tx: Prisma.TransactionClient, ownerId: string, now: Date, chosenKind?: CompanionKind) {
   const existing = await tx.pet.findUnique({ where: { ownerId } });
   if (existing) return existing;
+  if (isPublicDeployment() && !chosenKind) throw new PetRequestError("companion_selection_required", 409);
 
   const pet = await tx.pet.create({
     data: {
       ownerId,
+      kind: chosenKind ?? "asterion",
       bornAt: now,
       lastAdvancedAt: now
     }
@@ -131,13 +139,27 @@ async function ensurePet(tx: Prisma.TransactionClient, ownerId: string, now: Dat
       petId: pet.id,
       requestId: "system:hatch",
       action: "hatch",
-      message: HATCH_MESSAGE,
+      message: chosenKind ? `${companionProfile(chosenKind).name} ist jetzt dein Sternenfreund.` : HATCH_MESSAGE,
       animation: "waving",
       occurredAt: now
     }
   });
 
   return pet;
+}
+
+export async function hasPet(ownerId: string): Promise<boolean> {
+  return Boolean(await prisma.pet.findUnique({ where: { ownerId }, select: { id: true } }));
+}
+
+/** First choice is idempotent: another tab cannot replace an existing companion. */
+export async function chooseFirstPet(ownerId: string, kind: CompanionKind): Promise<PetSnapshot> {
+  if (!isCompanionKind(kind)) throw new PetRequestError("invalid_companion", 400);
+  return serializable(async (tx) => {
+    if (isPublicDeployment()) await assertAccess(tx, ownerId);
+    const pet = await ensurePet(tx, ownerId, new Date(), kind);
+    return snapshot(pet, await eventsForPet(tx, pet.id));
+  });
 }
 
 async function persistState(
@@ -160,6 +182,7 @@ async function persistState(
 
 export async function getPetSnapshot(ownerId: string): Promise<PetSnapshot> {
   return serializable(async (tx) => {
+    if (isPublicDeployment()) await assertAccess(tx, ownerId);
     const now = new Date();
     const pet = await ensurePet(tx, ownerId, now);
     const advanced = advanceState(petToState(pet), now.getTime());
@@ -169,10 +192,15 @@ export async function getPetSnapshot(ownerId: string): Promise<PetSnapshot> {
   });
 }
 
-export async function performPetCommand(ownerId: string, command: PetCommand): Promise<PetCommandResponse> {
+export async function performPetCommand(ownerId: string, command: PetCommand, expectedPetId?: string): Promise<PetCommandResponse> {
   return serializable(async (tx) => {
+    if (isPublicDeployment()) {
+      await assertAccess(tx, ownerId);
+      if (command.action === "restore") throw new PetRequestError("restore_not_available", 403);
+    }
     const now = new Date();
     let pet = await ensurePet(tx, ownerId, now);
+    if (!expectedPetId || pet.id !== expectedPetId) throw new PetRequestError("companion_context_changed", 409);
     const prior = await tx.petEvent.findUnique({
       where: { petId_requestId: { petId: pet.id, requestId: command.requestId } }
     });
@@ -180,6 +208,11 @@ export async function performPetCommand(ownerId: string, command: PetCommand): P
     if (prior) {
       const events = await eventsForPet(tx, pet.id);
       return { pet: snapshot(pet, events), feedback: eventView(prior), replayed: true };
+    }
+
+    // The actor lock serializes this database-backed limit across web nodes.
+    if (isPublicDeployment()) {
+      if (!await consumeCareBudget(tx, ownerId, now)) throw new PetRequestError("too_many_actions", 429);
     }
 
     let state = advanceState(petToState(pet), now.getTime());

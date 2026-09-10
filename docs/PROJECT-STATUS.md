@@ -2,6 +2,17 @@
 
 ## Current project update — 2026-09-10
 
+### v0.8.0 source publication
+
+The v0.8.0 application source has been reconciled with the existing 3D work.
+Fresh Windows checks passed: frozen-lockfile installation, 363 automated tests
+(12 platform-dependent skips, no failures), TypeScript and production build.
+The 3D sources and opt-in presentation remain preserved. See
+[release notes](RELEASE-0.8.0.md). These checks do not establish Linux runtime or
+real multi-user acceptance; no deployment is included in this source update.
+
+### Earlier pilot status update
+
 Version 0.8.0 has reached the pilot environment. It includes case-preserving player names, a collapsible friends panel, friend-code invitations, one-to-one text messaging between confirmed friends, and companion presentation improvements.
 
 Final end-to-end acceptance is still pending. A simplified pilot administration setup has been approved, but completion has not yet been confirmed. The remaining checks cover sign-in, first-companion selection, friendship confirmation, messaging and continuity in a new browser. This is not a general-release announcement.

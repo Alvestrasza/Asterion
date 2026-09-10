@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { normalizeLocale, resolveLocale, languageReturnPath, languageCookieOptions } from "../lib/i18n.ts";
+import { normalizeLocale, resolveLocale, languageReturnPath, languageCookieOptions, localizedPath, pageRoute, keycloakLoginParameters } from "../lib/i18n.ts";
 
 test("locale normalization supports regional tags but rejects unsupported input", () => {
   assert.equal(normalizeLocale("FR-ca"), "fr");
@@ -46,4 +46,25 @@ test("preference cookies support isolated HTTP testing without weakening public 
   assert.equal(languageCookieOptions(false, false).secure, false);
   assert.equal(languageCookieOptions(true, true).httpOnly, true);
   assert.equal(languageCookieOptions(true, false).sameSite, "lax");
+});
+
+test("localized page routes never rewrite API, asset or arbitrary redirect targets", () => {
+  for (const locale of ["de", "en", "fr", "es"]) {
+    for (const path of ["/", "/login", "/care", "/friends", "/admin", "/access"]) {
+      const localized = localizedPath(path, locale);
+      assert.deepEqual(pageRoute(localized), { path, locale });
+      assert.equal(localizedPath(localized, "fr"), localizedPath(path, "fr"));
+    }
+  }
+  for (const path of ["/de/api/internal/access-sync", "/en/api/auth/signin", "/fr/assets/a.png", "/it/care", "//evil.invalid", "/de/../api/auth", "/de/care?next=bad"]) {
+    assert.equal(pageRoute(path), null);
+    assert.equal(localizedPath(path, "de"), "/de");
+  }
+});
+
+test("OIDC login and registration carry a supported UI locale and distinct prompts", () => {
+  for (const locale of ["de", "en", "fr", "es"]) {
+    assert.deepEqual(keycloakLoginParameters(locale), { ui_locales: locale, prompt: "login" });
+    assert.deepEqual(keycloakLoginParameters(locale, true), { ui_locales: locale, prompt: "create" });
+  }
 });

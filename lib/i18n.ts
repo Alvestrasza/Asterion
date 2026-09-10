@@ -2,6 +2,25 @@ export const LOCALES = ["de", "en", "fr", "es"] as const;
 export type Locale = (typeof LOCALES)[number];
 export const DEFAULT_LOCALE: Locale = "en";
 export const LANGUAGE_COOKIE = "asterion-locale";
+export const LOCALE_HEADER = "x-asterion-locale";
+const PAGE_PATHS = ["/", "/login", "/care", "/friends", "/admin", "/access"] as const;
+
+/** Only UI pages may be localized; never expose API routes through a rewrite. */
+export function pageRoute(pathname: string): { path: string; locale: Locale | null } | null {
+  if (PAGE_PATHS.some((path) => path === pathname)) return { path: pathname, locale: null };
+  const match = /^\/(de|en|fr|es)(\/.*)?$/.exec(pathname);
+  const path = match?.[2] || "/";
+  return match && PAGE_PATHS.some((known) => known === path) ? { path, locale: match[1] as Locale } : null;
+}
+
+export function localizedPath(pathname: string, locale: Locale): string {
+  const path = pageRoute(pathname)?.path ?? "/";
+  return `/${locale}${path === "/" ? "" : path}`;
+}
+
+export function keycloakLoginParameters(locale: Locale, register = false) {
+  return { ui_locales: locale, prompt: register ? "create" : "login" };
+}
 
 export function normalizeLocale(value: unknown): Locale | null {
   if (typeof value !== "string") return null;
@@ -35,8 +54,8 @@ export function resolveLocale(saved: unknown, acceptLanguage?: string | null): L
 }
 
 /** Forms cannot turn a language change into an arbitrary redirect. */
-export function languageReturnPath(value: unknown): "/" | "/login" | "/care" {
-  return value === "/login" || value === "/care" ? value : "/";
+export function languageReturnPath(value: unknown): string {
+  return typeof value === "string" ? pageRoute(value)?.path ?? "/" : "/";
 }
 
 export function languageCookieOptions(production: boolean, internalTestMode: boolean) {

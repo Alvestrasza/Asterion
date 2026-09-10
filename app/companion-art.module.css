@@ -1,0 +1,92 @@
+.viewport { display: block; overflow: hidden; max-width: 100%; margin-inline: auto; }
+.fill { position: absolute; inset: 0; width: 100%; height: 100%; }
+.sprite { transform: translate(0, var(--atlas-row, 0px)); animation-timing-function: steps(1, end); animation-iteration-count: infinite; }
+.idle { animation-name: idle; }
+.running-right { animation-name: running-right; }
+.running-left { animation-name: running-left; }
+.waving { animation-name: waving; }
+.jumping { animation-name: jumping; }
+.failed { animation-name: failed; }
+.waiting { animation-name: waiting; }
+.running { animation-name: running; }
+.review { animation-name: review; }
+
+@keyframes idle {
+  0% { transform: translate(0px, var(--atlas-row)); }
+  25.454545% { transform: translate(-192px, var(--atlas-row)); }
+  35.454545% { transform: translate(-384px, var(--atlas-row)); }
+  45.454545% { transform: translate(-576px, var(--atlas-row)); }
+  58.181818% { transform: translate(-768px, var(--atlas-row)); }
+  70.909091%, 100% { transform: translate(-960px, var(--atlas-row)); }
+}
+@keyframes running-right {
+  0% { transform: translate(0px, var(--atlas-row)); }
+  11.320755% { transform: translate(-192px, var(--atlas-row)); }
+  22.641509% { transform: translate(-384px, var(--atlas-row)); }
+  33.962264% { transform: translate(-576px, var(--atlas-row)); }
+  45.283019% { transform: translate(-768px, var(--atlas-row)); }
+  56.603774% { transform: translate(-960px, var(--atlas-row)); }
+  67.924528% { transform: translate(-1152px, var(--atlas-row)); }
+  79.245283%, 100% { transform: translate(-1344px, var(--atlas-row)); }
+}
+@keyframes running-left {
+  0% { transform: translate(0px, var(--atlas-row)); }
+  11.320755% { transform: translate(-192px, var(--atlas-row)); }
+  22.641509% { transform: translate(-384px, var(--atlas-row)); }
+  33.962264% { transform: translate(-576px, var(--atlas-row)); }
+  45.283019% { transform: translate(-768px, var(--atlas-row)); }
+  56.603774% { transform: translate(-960px, var(--atlas-row)); }
+  67.924528% { transform: translate(-1152px, var(--atlas-row)); }
+  79.245283%, 100% { transform: translate(-1344px, var(--atlas-row)); }
+}
+@keyframes waving {
+  0% { transform: translate(0px, var(--atlas-row)); }
+  20% { transform: translate(-192px, var(--atlas-row)); }
+  40% { transform: translate(-384px, var(--atlas-row)); }
+  60%, 100% { transform: translate(-576px, var(--atlas-row)); }
+}
+@keyframes jumping {
+  0% { transform: translate(0px, var(--atlas-row)); }
+  16.666667% { transform: translate(-192px, var(--atlas-row)); }
+  33.333333% { transform: translate(-384px, var(--atlas-row)); }
+  50% { transform: translate(-576px, var(--atlas-row)); }
+  66.666667%, 100% { transform: translate(-768px, var(--atlas-row)); }
+}
+@keyframes failed {
+  0% { transform: translate(0px, var(--atlas-row)); }
+  11.475410% { transform: translate(-192px, var(--atlas-row)); }
+  22.950820% { transform: translate(-384px, var(--atlas-row)); }
+  34.426230% { transform: translate(-576px, var(--atlas-row)); }
+  45.901639% { transform: translate(-768px, var(--atlas-row)); }
+  57.377049% { transform: translate(-960px, var(--atlas-row)); }
+  68.852459% { transform: translate(-1152px, var(--atlas-row)); }
+  80.327869%, 100% { transform: translate(-1344px, var(--atlas-row)); }
+}
+@keyframes waiting {
+  0% { transform: translate(0px, var(--atlas-row)); }
+  14.851485% { transform: translate(-192px, var(--atlas-row)); }
+  29.702970% { transform: translate(-384px, var(--atlas-row)); }
+  44.554455% { transform: translate(-576px, var(--atlas-row)); }
+  59.405941% { transform: translate(-768px, var(--atlas-row)); }
+  74.257426%, 100% { transform: translate(-960px, var(--atlas-row)); }
+}
+@keyframes running {
+  0% { transform: translate(0px, var(--atlas-row)); }
+  14.634146% { transform: translate(-192px, var(--atlas-row)); }
+  29.268293% { transform: translate(-384px, var(--atlas-row)); }
+  43.902439% { transform: translate(-576px, var(--atlas-row)); }
+  58.536585% { transform: translate(-768px, var(--atlas-row)); }
+  73.170732%, 100% { transform: translate(-960px, var(--atlas-row)); }
+}
+@keyframes review {
+  0% { transform: translate(0px, var(--atlas-row)); }
+  14.563107% { transform: translate(-192px, var(--atlas-row)); }
+  29.126214% { transform: translate(-384px, var(--atlas-row)); }
+  43.689320% { transform: translate(-576px, var(--atlas-row)); }
+  58.252427% { transform: translate(-768px, var(--atlas-row)); }
+  72.815534%, 100% { transform: translate(-960px, var(--atlas-row)); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sprite { animation: none; transform: translate(0px, 0px); }
+}

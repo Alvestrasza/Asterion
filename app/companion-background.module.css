@@ -1,0 +1,32 @@
+.background {
+  position: absolute;
+  z-index: 0;
+  inset: 12px 0 24px;
+  overflow: hidden;
+  pointer-events: none;
+  user-select: none;
+  border: 1px solid rgba(138, 213, 241, 0.18);
+  border-radius: 36px;
+  background: #102536;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+.image {
+  object-fit: cover;
+  object-position: center;
+}
+
+.background::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background:
+    linear-gradient(180deg, rgba(5, 20, 35, 0.12), transparent 35%, rgba(5, 20, 35, 0.18)),
+    radial-gradient(ellipse at center, transparent 42%, rgba(5, 20, 35, 0.24));
+}
+
+@media (max-width: 590px) {
+  .background {
+    border-radius: 26px;
+  }
+}

@@ -19,6 +19,148 @@ model User {
   sessions       Session[]
   authenticators Authenticator[]
   pet            Pet?
+  access         UserAccess?
+  socialProfile  SocialProfile?
+  friendshipsLeft Friendship[] @relation("FriendLeft")
+  friendshipsRight Friendship[] @relation("FriendRight")
+  chatIdentity ChatIdentity?
+  chatBudget ChatBudget?
+  chatReads ChatRead[]
+}
+
+model SocialProfile {
+  userId String @id
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  username String? @unique @db.VarChar(32)
+  usernameDisplay String? @db.VarChar(32)
+  friendCodeHash String? @unique @db.VarChar(64)
+  discoverable Boolean @default(false)
+  lastSeenAt DateTime?
+  windowStartedAt DateTime @default(now())
+  windowCount Int @default(0)
+  requestDay DateTime @default(now())
+  requestCount Int @default(0)
+}
+
+model Friendship {
+  id String @id @default(cuid())
+  leftId String
+  rightId String
+  left User @relation("FriendLeft", fields: [leftId], references: [id], onDelete: Cascade)
+  right User @relation("FriendRight", fields: [rightId], references: [id], onDelete: Cascade)
+  requestedBy String
+  status String @default("pending") @db.VarChar(16)
+  leftBlocked Boolean @default(false)
+  rightBlocked Boolean @default(false)
+  updatedAt DateTime @updatedAt
+  createdAt DateTime @default(now())
+  chatMessages ChatMessage[]
+  chatReads ChatRead[]
+  @@unique([leftId, rightId])
+  @@index([rightId, status])
+}
+
+// Immutable public keys and an opaque, client-encrypted recovery bundle only.
+model ChatIdentity {
+  userId String @id
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  fingerprint String @unique @db.VarChar(64)
+  registration Json
+  createdAt DateTime @default(now())
+}
+
+model ChatBudget {
+  userId String @id
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  windowStartedAt DateTime @default(now())
+  windowCount Int @default(0)
+  sendCount Int @default(0)
+  registrationCount Int @default(0)
+  dayStartedAt DateTime @default(now())
+  daySendCount Int @default(0)
+}
+
+model ChatMessage {
+  sequence BigInt @id @default(autoincrement())
+  id String @unique @db.VarChar(36)
+  friendshipId String
+  friendship Friendship @relation(fields: [friendshipId], references: [id], onDelete: Cascade)
+  senderId String
+  recipientId String
+  envelope Json
+  digest String @db.VarChar(128)
+  createdAt DateTime @default(now())
+  @@index([friendshipId, sequence])
+  @@index([recipientId, friendshipId, sequence])
+}
+
+model ChatRead {
+  userId String
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  friendshipId String
+  friendship Friendship @relation(fields: [friendshipId], references: [id], onDelete: Cascade)
+  sequence BigInt @default(0)
+  @@id([userId, friendshipId])
+}
+
+enum AccessRole {
+  none
+  member
+  admin
+}
+
+enum AccessSyncStatus {
+  pending
+  applied
+  failed
+  blocked
+}
+
+// Desired state and its durable, coalesced synchronization job share one row.
+model UserAccess {
+  userId         String           @id
+  user           User             @relation(fields: [userId], references: [id], onDelete: Cascade)
+  issuer         String           @db.VarChar(512)
+  subject        String           @db.VarChar(255)
+  desiredRole    AccessRole       @default(none)
+  effectiveRole  AccessRole       @default(none)
+  revision       Int              @default(1)
+  syncedRevision Int              @default(0)
+  syncStatus     AccessSyncStatus @default(pending)
+  attempts       Int              @default(0)
+  retryAt        DateTime?
+  checkedAt      DateTime?
+  errorCode      String?          @db.VarChar(64)
+  careWindowStartedAt DateTime?
+  careWindowCount Int             @default(0)
+  createdAt      DateTime         @default(now())
+  updatedAt      DateTime         @updatedAt
+
+  @@unique([issuer, subject])
+  @@index([syncStatus, retryAt])
+  @@index([syncStatus, checkedAt])
+}
+
+// This tombstone survives user deletion, preventing accidental re-bootstrap.
+model AccessBootstrap {
+  id         String   @id
+  userId     String
+  consumedAt DateTime @default(now())
+}
+
+// Metadata only: no identity-provider tokens, free text, diary data, or keys.
+model AccessAudit {
+  id            String      @id @default(cuid())
+  actorId       String?
+  targetId      String
+  action        String      @db.VarChar(40)
+  desiredRole   AccessRole
+  effectiveRole AccessRole
+  revision      Int
+  outcome       String      @db.VarChar(64)
+  occurredAt    DateTime    @default(now())
+
+  @@index([targetId, occurredAt(sort: Desc)])
 }
 
 model Account {
@@ -103,4 +245,20 @@ model PetEvent {
 
   @@unique([petId, requestId])
   @@index([petId, occurredAt(sort: Desc)])
+}
+
+// Metadata-only tombstones prevent replaying identity attribute writes after uncertain outcomes.
+// Deliberately no user foreign key: deleting an app account must not authorize a second write.
+model IdentityStorageWrite {
+  userId String @db.VarChar(128)
+  issuer String @db.VarChar(512)
+  subject String @db.VarChar(255)
+  attribute String @db.VarChar(40)
+  digest String @db.VarChar(64)
+  confirmed Boolean @default(false)
+  friendCodeHash String? @unique @db.VarChar(64)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@id([issuer, subject, attribute])
 }

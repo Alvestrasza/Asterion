@@ -11,7 +11,6 @@ export type Messages = {
     signIn: string;
     care: string;
     language: string;
-    apply: string;
     skip: string;
   };
   hero: {
@@ -52,6 +51,7 @@ export type Messages = {
     title: string;
     description: string;
     submit: string;
+    register: string;
     unavailableTitle: string;
     unavailableText: string;
     denied: string;
@@ -65,83 +65,82 @@ export type Messages = {
 export const MESSAGES: Record<Locale, Messages> = {
   de: {
     meta: {
-      title: "Sternenfreunde · Kleine Freunde, gemeinsame Geschichten",
-      description: "Lerne Asterion und die Sternenfreunde kennen: ein liebevoll gestaltetes Projekt rund um virtuelle Begleiter, kleine Pflegemomente und gemeinsame Geschichten."
+      title: "Sternenfreunde · Dein virtuelles Haustier",
+      description: "Wähle deinen Sternenfreund, füttere ihn und spiele mit ihm. Ein Haustierspiel im Browser für Handy, Tablet und Computer."
     },
     nav: {
       home: "Startseite",
-      about: "Die Idee",
+      about: "Das Spiel",
       companions: "Sternenfreunde",
       roadmap: "Was noch kommt",
       signIn: "Anmelden",
       care: "Mein Sternenfreund",
       language: "Sprache",
-      apply: "Übernehmen",
       skip: "Zum Inhalt springen"
     },
     hero: {
-      eyebrow: "Willkommen bei den Sternenfreunden",
-      title: "Ein kleiner Freund. Eure eigene Geschichte.",
-      description: "Ein ruhiger Moment, ein neugieriger Blick und ein bisschen Zeit füreinander. Entdecke Asterion und seine Freunde in einem liebevoll gezeichneten kleinen Universum.",
-      primary: "Anmelden und ausprobieren",
-      secondary: "Die Freunde kennenlernen",
-      note: "Das Projekt wächst noch. Der Pflege-Prototyp ist für freigeschaltete Testkonten verfügbar."
+      eyebrow: "Sternenfreunde",
+      title: "Wer wird dein Sternenfreund?",
+      description: "Ein Drache, ein Kaninchen oder doch ein Ork? Such dir einen Freund aus, füttere ihn, spiele mit ihm und kümmere dich um ihn.",
+      primary: "Anmelden",
+      secondary: "Alle Freunde ansehen",
+      note: "Melde dich an oder erstelle ein Konto und wähle deinen ersten Sternenfreund."
     },
     about: {
-      eyebrow: "Die Idee",
-      title: "Kleine gemeinsame Momente zählen.",
-      description: "Sternenfreunde ist ein Tamagotchi-inspiriertes Webprojekt für Kinder und Familien. Wir entwickeln einen gemütlichen Ort zum Spielen, Kümmern und Entdecken.",
-      careTitle: "Zeit füreinander",
-      careText: "Im aktuellen Prototyp kannst du deinen ausgewählten Begleiter füttern, mit ihm spielen und ihn ausruhen lassen.",
-      devicesTitle: "Im Browser zu Hause",
-      devicesText: "Du brauchst keine Spielinstallation. Die Website ist für Handy, Tablet und Computer gedacht; der Spielstand wird auf dem Server gespeichert.",
-      paceTitle: "Freude statt Pflicht",
-      paceText: "Unser Ziel ist ein freundlicher Alltag mit deinem Begleiter. Ruhepausen und ein entspannter Wiedereinstieg gehören zu den geplanten Erweiterungen."
+      eyebrow: "Das Spiel",
+      title: "Ein Haustier in deinem Browser",
+      description: "Sternenfreunde ist ein Haustierspiel nach dem Tamagotchi-Prinzip. Du kümmerst dich um einen Begleiter und siehst, wie es ihm geht.",
+      careTitle: "Füttern und spielen",
+      careText: "Hat dein Freund Hunger? Möchte er spielen oder schlafen? Seine Werte zeigen dir, was er braucht.",
+      devicesTitle: "Ohne Installation",
+      devicesText: "Spiele auf dem Handy, Tablet oder Computer. Mit demselben Konto kannst du deinen Spielstand auf einem anderen Gerät öffnen.",
+      paceTitle: "Eure letzten Aktivitäten",
+      paceText: "Im Verlauf kannst du nachsehen, wann du deinen Freund gefüttert, gestreichelt oder mit ihm gespielt hast."
     },
     gallery: {
-      eyebrow: "Acht kleine Persönlichkeiten",
-      title: "Wer begleitet dich?",
-      description: "Lerne die acht gezeichneten Figuren kennen. Im aktuellen Pflege-Prototyp kümmerst du dich um einen ausgewählten Begleiter; individuellere Bedürfnisse und gemeinsame Abenteuer sind geplant."
+      eyebrow: "Die Figuren",
+      title: "Acht Freunde zur Auswahl",
+      description: "Du kümmerst dich um einen Sternenfreund. In den Einstellungen kannst du die Figur wechseln; dein Spielstand bleibt dabei erhalten."
     },
     companions: {
       asterion: {
         species: "Sternendrache",
-        description: "Ein ruhiger kleiner Hüter mit einem wachsamen Blick und einem warmen Herzen.",
+        description: "Klein, neugierig und mit goldenen Hörnern: Das ist Asterion.",
         alt: "Asterion, ein kleiner goldener und azurblauer Sternendrache"
       },
       rabbit: {
         species: "Sternenkaninchen",
-        description: "Liora entdeckt mit sanften Pfoten die kleinen Wunder am Wegesrand.",
+        description: "Liora hat lange Ohren und ein weiches, lavendelfarbenes Fell.",
         alt: "Liora, ein mondfarbenes und lavendelfarbenes Sternenkaninchen"
       },
       cat: {
         species: "Sternenkatze",
-        description: "Nyra beobachtet aufmerksam und findet die gemütlichsten Plätze für stille Momente.",
+        description: "Nyra macht es sich am liebsten an einem warmen Platz gemütlich.",
         alt: "Nyra, eine anthrazitfarbene Sternenkatze mit grünen Augen"
       },
       orc: {
         species: "Junger Ork",
-        description: "Brumo hat ein großes Herz und Freude an kleinen gemeinsamen Abenteuern.",
+        description: "Brumo sieht in seiner Rüstung wild aus, ist aber ein freundlicher Kerl.",
         alt: "Brumo, ein freundlicher junger Ork in auberginefarbener und bronzener Rüstung"
       },
       pony: {
         species: "Sternenpony",
-        description: "Caelo schaut neugierig hinter die nächste Wolke und bringt ein wenig Abenteuer mit.",
+        description: "Caelo erkennst du an seiner himmelblauen Mähne.",
         alt: "Caelo, ein weißes Sternenpony mit himmelblauer Mähne"
       },
       fairy: {
         species: "Lichtfee",
-        description: "Selya entdeckt selbst im kleinsten Licht einen Grund zum Staunen.",
+        description: "Selya ist die kleine Fee mit rosa Haaren und zarten Flügeln.",
         alt: "Selya, eine kleine Lichtfee mit rosafarbenem Haar und zarten Flügeln"
       },
       dog: {
         species: "Sternenhund",
-        description: "Fenn ist gern an deiner Seite und freut sich auf jeden gemeinsamen Weg.",
+        description: "Fenn ist ein neugieriger Hund, der gern mit dir spielt.",
         alt: "Fenn, ein karamellfarbener Sternenhund mit blauen Augen"
       },
       elf: {
         species: "Waldelfe",
-        description: "Aelira lauscht geduldig dem Wald und entdeckt, was andere leicht übersehen.",
+        description: "Aelira ist eine Waldelfe mit grünem Haar und spitzen Ohren.",
         alt: "Aelira, eine junge Waldelfe mit grünem Haar und amethystfarbenen Augen"
       }
     },
@@ -157,110 +156,110 @@ export const MESSAGES: Record<Locale, Messages> = {
       socialText: "Geplant sind eine Freundesliste mit gegenseitiger Bestätigung und ein geschützter Chat. Regeln für Kontakte, Blockieren und Melden sowie das Sicherheitskonzept werden vor einer Einführung ausgearbeitet."
     },
     footer: {
-      tagline: "Sternenfreunde · Kleine Freunde, gemeinsame Geschichten.",
-      status: "In Entwicklung · Pflege-Prototyp für freigeschaltete Testkonten"
+      tagline: "Sternenfreunde",
+      status: "Testphase"
     },
     login: {
       eyebrow: "Willkommen zurück",
-      title: "Dein Sternenfreund wartet auf einen gemeinsamen Moment.",
-      description: "Melde dich mit deinem freigeschalteten Konto an, um den Pflege-Prototyp auszuprobieren. Für die Anmeldung wirst du zu unserem Anmeldedienst weitergeleitet.",
-      submit: "Mit meinem Konto anmelden",
+      title: "Bei Sternenfreunde anmelden",
+      description: "Melde dich mit deinem Konto an. Dafür öffnet sich unser Anmeldedienst; anschließend kommst du hierher zurück.",
+      submit: "Anmelden",
+      register: "Konto erstellen",
       unavailableTitle: "Die Anmeldung ist noch nicht verfügbar.",
       unavailableText: "In dieser Umgebung ist die Anmeldung noch nicht eingerichtet. Du kannst die Sternenfreunde auf der Startseite kennenlernen und es später erneut versuchen.",
-      denied: "Dein Konto hat noch keinen Zugang zum Pflege-Prototyp. Bitte frage den Projektverantwortlichen nach einer Freischaltung.",
+      denied: "Die Anmeldung wurde nicht abgeschlossen. Versuche es erneut oder wende dich an einen Administrator.",
       error: "Die Anmeldung konnte nicht abgeschlossen werden. Bitte versuche es erneut.",
       back: "Zur Startseite"
     },
     care: {
-      legacyLanguage: "Der Pflegebereich ist derzeit auf Deutsch. Die Übersetzung seiner Aktionen, Sprechblasen und des Verlaufs folgt in einem weiteren Schritt.",
+      legacyLanguage: "Der Spielbereich ist derzeit nur auf Deutsch verfügbar.",
       back: "Zur Startseite"
     },
     errors: {
       title: "Das hat gerade nicht geklappt.",
       description: "Diese Seite konnte nicht geladen werden. Bitte versuche es noch einmal.",
       retry: "Erneut versuchen",
-      loading: "Ein kleiner Moment …"
+      loading: "Wird geladen …"
     }
   },
   en: {
     meta: {
-      title: "Starfriends · Little friends, shared stories",
-      description: "Meet Asterion and the Starfriends: a lovingly illustrated project about virtual companions, small moments of care and shared stories."
+      title: "Starfriends · Your virtual pet",
+      description: "Choose your Starfriend, feed them and play together. A browser pet game for phones, tablets and computers."
     },
     nav: {
       home: "Home",
-      about: "The idea",
+      about: "The game",
       companions: "Starfriends",
       roadmap: "Coming later",
       signIn: "Sign in",
       care: "My companion",
       language: "Language",
-      apply: "Apply",
       skip: "Skip to content"
     },
     hero: {
-      eyebrow: "Welcome to Starfriends",
-      title: "A little friend. A story of your own.",
-      description: "A quiet moment, a curious glance and a little time together. Discover Asterion and friends in a small, lovingly illustrated universe.",
-      primary: "Sign in and try it",
-      secondary: "Meet the friends",
-      note: "The project is still growing. The care prototype is available to approved test accounts."
+      eyebrow: "Starfriends",
+      title: "Who will be your Starfriend?",
+      description: "A dragon, a rabbit or perhaps an orc? Choose a friend, feed them, play together and look after them.",
+      primary: "Sign in",
+      secondary: "Meet all the friends",
+      note: "Sign in or create an account and choose your first Starfriend."
     },
     about: {
-      eyebrow: "The idea",
-      title: "Little moments together matter.",
-      description: "Starfriends is a Tamagotchi-inspired web project for children and families. We are creating a cozy place to play, care and discover.",
-      careTitle: "Time for each other",
-      careText: "In the current prototype, you can feed your chosen companion, play together and let them rest.",
-      devicesTitle: "At home in your browser",
-      devicesText: "No game installation is needed. The website is designed for phones, tablets and computers, with game progress stored on the server.",
-      paceTitle: "Joy, not chores",
-      paceText: "Our aim is a friendly daily rhythm with your companion. Rest breaks and a gentle return after time away are among the planned additions."
+      eyebrow: "The game",
+      title: "A pet in your browser",
+      description: "Starfriends is a Tamagotchi-style pet game. Look after your companion and see how they are doing.",
+      careTitle: "Feed and play",
+      careText: "Is your friend hungry, ready to play or tired? Their stats show you what they need.",
+      devicesTitle: "No installation",
+      devicesText: "Play on your phone, tablet or computer. Sign in with the same account to open your saved game on another device.",
+      paceTitle: "Recent activities",
+      paceText: "Check the activity history to see when you fed, petted or played with your friend."
     },
     gallery: {
-      eyebrow: "Eight little personalities",
-      title: "Who will join you?",
-      description: "Meet the eight illustrated characters. In the current care prototype, you look after one chosen companion; more individual needs and shared adventures are planned."
+      eyebrow: "The characters",
+      title: "Eight friends to choose from",
+      description: "You look after one Starfriend. You can switch characters in settings without losing your progress."
     },
     companions: {
       asterion: {
         species: "Star dragon",
-        description: "A calm little guardian with a watchful gaze and a warm heart.",
+        description: "Small, curious and sporting golden horns: meet Asterion.",
         alt: "Asterion, a small gold and azure-blue star dragon"
       },
       rabbit: {
         species: "Star rabbit",
-        description: "With gentle paws, Liora discovers little wonders along the path.",
+        description: "Liora has long ears and soft lavender fur.",
         alt: "Liora, a moon-white and lavender star rabbit"
       },
       cat: {
         species: "Star cat",
-        description: "Nyra watches closely and finds the coziest places for quiet moments.",
+        description: "Nyra loves curling up somewhere warm.",
         alt: "Nyra, a charcoal-colored star cat with green eyes"
       },
       orc: {
         species: "Young orc",
-        description: "Brumo has a big heart and enjoys little adventures together.",
+        description: "Brumo looks fierce in his armor, but he is a friendly fellow.",
         alt: "Brumo, a friendly young orc in purple and bronze armor"
       },
       pony: {
         species: "Star pony",
-        description: "Caelo peeks curiously beyond the next cloud and brings a little adventure along.",
+        description: "You can spot Caelo by his sky-blue mane.",
         alt: "Caelo, a white star pony with a sky-blue mane"
       },
       fairy: {
         species: "Light fairy",
-        description: "Selya finds a reason for wonder in even the smallest spark of light.",
+        description: "Selya is the little fairy with pink hair and delicate wings.",
         alt: "Selya, a small light fairy with pink hair and delicate wings"
       },
       dog: {
         species: "Star dog",
-        description: "Fenn loves being by your side and looks forward to every path you share.",
+        description: "Fenn is a curious dog who loves to play with you.",
         alt: "Fenn, a caramel-colored star dog with blue eyes"
       },
       elf: {
         species: "Wood elf",
-        description: "Aelira listens patiently to the forest and notices what others might miss.",
+        description: "Aelira is a wood elf with green hair and pointed ears.",
         alt: "Aelira, a young wood elf with green hair and amethyst eyes"
       }
     },
@@ -276,110 +275,110 @@ export const MESSAGES: Record<Locale, Messages> = {
       socialText: "Plans include mutually confirmed friendships and a protected chat. Contact rules, blocking, reporting and the security design will be worked out before these features are introduced."
     },
     footer: {
-      tagline: "Starfriends · Little friends, shared stories.",
-      status: "In development · Care prototype for approved test accounts"
+      tagline: "Starfriends",
+      status: "Testing"
     },
     login: {
       eyebrow: "Welcome back",
-      title: "Share a little moment with your Starfriend.",
-      description: "Sign in with your approved account to try the care prototype. You will be taken to our sign-in service to log in.",
-      submit: "Sign in with my account",
+      title: "Sign in to Starfriends",
+      description: "Sign in with your account. Our sign-in service will open, then return you here.",
+      submit: "Sign in",
+      register: "Create account",
       unavailableTitle: "Sign-in is not available yet.",
       unavailableText: "Sign-in has not been set up in this environment yet. You can meet the Starfriends on the home page and try again later.",
-      denied: "Your account does not have access to the care prototype yet. Please ask the project administrator about access.",
+      denied: "Sign-in was not completed. Try again or contact an administrator.",
       error: "Sign-in could not be completed. Please try again.",
       back: "Back to home"
     },
     care: {
-      legacyLanguage: "The care screen is currently in German. Its actions, speech bubbles and history will be translated in a later step.",
+      legacyLanguage: "The game screen is currently only available in German.",
       back: "Back to home"
     },
     errors: {
       title: "That did not work just now.",
       description: "This page could not be loaded. Please try again.",
       retry: "Try again",
-      loading: "Just a little moment …"
+      loading: "Loading …"
     }
   },
   fr: {
     meta: {
-      title: "Starfriends · Petits amis, histoires partagées",
-      description: "Découvre Asterion et les Starfriends : un projet illustré avec soin, autour de compagnons virtuels, de petits moments d'attention et d'histoires partagées."
+      title: "Starfriends · Ton compagnon virtuel",
+      description: "Choisis ton Starfriend, nourris-le et joue avec lui. Un jeu de compagnons dans ton navigateur, sur téléphone, tablette et ordinateur."
     },
     nav: {
       home: "Accueil",
-      about: "L'idée",
+      about: "Le jeu",
       companions: "Les Starfriends",
       roadmap: "À venir",
       signIn: "Se connecter",
       care: "Mon compagnon",
       language: "Langue",
-      apply: "Appliquer",
       skip: "Aller au contenu"
     },
     hero: {
-      eyebrow: "Bienvenue chez les Starfriends",
-      title: "Un petit compagnon. Ta propre histoire.",
-      description: "Un moment de calme, un regard curieux et un peu de temps ensemble. Découvre Asterion et ses amis dans un petit univers dessiné avec tendresse.",
-      primary: "Se connecter et essayer",
-      secondary: "Rencontrer les amis",
-      note: "Le projet grandit encore. Le prototype de soin est accessible aux comptes de test autorisés."
+      eyebrow: "Starfriends",
+      title: "Qui sera ton Starfriend ?",
+      description: "Un dragon, un lapin ou plutôt un orc ? Choisis un ami, nourris-le, joue avec lui et prends soin de lui.",
+      primary: "Se connecter",
+      secondary: "Voir tous les amis",
+      note: "Connecte-toi ou crée un compte et choisis ton premier compagnon."
     },
     about: {
-      eyebrow: "L'idée",
-      title: "Les petits moments ensemble comptent.",
-      description: "Starfriends est un projet web inspiré des Tamagotchi, pour les enfants et les familles. Nous créons un lieu douillet pour jouer, prendre soin et découvrir.",
-      careTitle: "Du temps ensemble",
-      careText: "Dans le prototype actuel, tu peux nourrir le compagnon de ton choix, jouer avec lui et le laisser se reposer.",
-      devicesTitle: "Chez toi, dans ton navigateur",
-      devicesText: "Pas besoin d'installer un jeu. Le site est conçu pour les téléphones, tablettes et ordinateurs ; la progression est enregistrée sur le serveur.",
-      paceTitle: "Du plaisir, pas des corvées",
-      paceText: "Nous souhaitons un quotidien agréable avec ton compagnon. Des pauses et un retour en douceur après une absence font partie des ajouts prévus."
+      eyebrow: "Le jeu",
+      title: "Un compagnon dans ton navigateur",
+      description: "Starfriends est un jeu inspiré des Tamagotchi. Occupe-toi de ton compagnon et regarde comment il se porte.",
+      careTitle: "Nourrir et jouer",
+      careText: "Ton ami a faim, envie de jouer ou besoin de dormir ? Ses indicateurs te montrent ce dont il a besoin.",
+      devicesTitle: "Sans installation",
+      devicesText: "Joue sur téléphone, tablette ou ordinateur. Connecte-toi avec le même compte pour retrouver ta partie sur un autre appareil.",
+      paceTitle: "Les dernières activités",
+      paceText: "Consulte l'historique pour savoir quand tu as nourri ou caressé ton ami, ou joué avec lui."
     },
     gallery: {
-      eyebrow: "Huit petites personnalités",
-      title: "Qui t'accompagnera ?",
-      description: "Découvre les huit personnages illustrés. Dans le prototype actuel, tu prends soin d'un compagnon choisi ; des besoins plus individuels et des aventures partagées sont prévus."
+      eyebrow: "Les personnages",
+      title: "Huit amis au choix",
+      description: "Tu t'occupes d'un Starfriend. Tu peux changer de personnage dans les paramètres sans perdre ta progression."
     },
     companions: {
       asterion: {
         species: "Dragon des étoiles",
-        description: "Un petit gardien paisible au regard attentif et au grand cœur.",
+        description: "Petit, curieux et coiffé de cornes dorées : voici Asterion.",
         alt: "Asterion, un petit dragon des étoiles doré et bleu azur"
       },
       rabbit: {
         species: "Lapin des étoiles",
-        description: "De ses pattes légères, Liora découvre les petites merveilles du chemin.",
+        description: "Liora a de longues oreilles et une douce fourrure lavande.",
         alt: "Liora, un lapin des étoiles blanc lunaire et lavande"
       },
       cat: {
         species: "Chat des étoiles",
-        description: "Nyra observe avec attention et trouve les coins les plus douillets pour les moments calmes.",
+        description: "Nyra aime se blottir dans un coin bien chaud.",
         alt: "Nyra, un chat des étoiles gris anthracite aux yeux verts"
       },
       orc: {
         species: "Jeune orc",
-        description: "Brumo a un grand cœur et aime les petites aventures à partager.",
+        description: "Brumo a l'air féroce dans son armure, mais c'est un gentil compagnon.",
         alt: "Brumo, un jeune orc amical en armure aubergine et bronze"
       },
       pony: {
         species: "Poney des étoiles",
-        description: "Caelo regarde avec curiosité derrière le prochain nuage et apporte un peu d'aventure.",
+        description: "Tu reconnaîtras Caelo à sa crinière bleu ciel.",
         alt: "Caelo, un poney des étoiles blanc à la crinière bleu ciel"
       },
       fairy: {
         species: "Fée de lumière",
-        description: "Selya trouve une raison de s'émerveiller dans la plus petite lueur.",
+        description: "Selya est la petite fée aux cheveux roses et aux ailes délicates.",
         alt: "Selya, une petite fée de lumière aux cheveux roses et aux ailes délicates"
       },
       dog: {
         species: "Chien des étoiles",
-        description: "Fenn aime rester à tes côtés et se réjouit de chaque chemin parcouru ensemble.",
+        description: "Fenn est un chien curieux qui aime jouer avec toi.",
         alt: "Fenn, un chien des étoiles couleur caramel aux yeux bleus"
       },
       elf: {
         species: "Elfe des bois",
-        description: "Aelira écoute patiemment la forêt et remarque ce qui échappe aux autres.",
+        description: "Aelira est une elfe des bois aux cheveux verts et aux oreilles pointues.",
         alt: "Aelira, une jeune elfe des bois aux cheveux verts et aux yeux améthyste"
       }
     },
@@ -395,110 +394,110 @@ export const MESSAGES: Record<Locale, Messages> = {
       socialText: "Une liste d'amis avec confirmation mutuelle et un chat protégé sont prévus. Les règles de contact, le blocage, le signalement et la conception de la sécurité seront définis avant leur introduction."
     },
     footer: {
-      tagline: "Starfriends · Petits amis, histoires partagées.",
-      status: "En développement · Prototype de soin pour les comptes de test autorisés"
+      tagline: "Starfriends",
+      status: "Phase de test"
     },
     login: {
       eyebrow: "Heureux de te revoir",
-      title: "Partage un petit moment avec ton Starfriend.",
-      description: "Connecte-toi avec ton compte autorisé pour essayer le prototype de soin. Tu seras redirigé vers notre service de connexion.",
-      submit: "Me connecter avec mon compte",
+      title: "Se connecter à Starfriends",
+      description: "Connecte-toi avec ton compte. Notre service de connexion s'ouvrira, puis te ramènera ici.",
+      submit: "Se connecter",
+      register: "Créer un compte",
       unavailableTitle: "La connexion n'est pas encore disponible.",
       unavailableText: "La connexion n'est pas encore configurée dans cet environnement. Tu peux découvrir les Starfriends sur la page d'accueil et réessayer plus tard.",
-      denied: "Ton compte n'a pas encore accès au prototype de soin. Demande l'accès au responsable du projet.",
+      denied: "La connexion n'a pas abouti. Réessaie ou contacte un administrateur.",
       error: "La connexion n'a pas pu aboutir. Merci de réessayer.",
       back: "Retour à l'accueil"
     },
     care: {
-      legacyLanguage: "L'espace de soin est actuellement en allemand. Ses actions, bulles de dialogue et son historique seront traduits lors d'une prochaine étape.",
+      legacyLanguage: "Le jeu est actuellement disponible uniquement en allemand.",
       back: "Retour à l'accueil"
     },
     errors: {
       title: "Cela n'a pas fonctionné cette fois.",
       description: "Cette page n'a pas pu être chargée. Merci de réessayer.",
       retry: "Réessayer",
-      loading: "Un petit instant …"
+      loading: "Chargement …"
     }
   },
   es: {
     meta: {
-      title: "Starfriends · Pequeños amigos, historias compartidas",
-      description: "Conoce a Asterion y los Starfriends: un proyecto ilustrado con cariño sobre compañeros virtuales, pequeños momentos de cuidado e historias compartidas."
+      title: "Starfriends · Tu mascota virtual",
+      description: "Elige a tu Starfriend, dale de comer y juega con él. Un juego de mascotas en el navegador para móviles, tabletas y ordenadores."
     },
     nav: {
       home: "Inicio",
-      about: "La idea",
+      about: "El juego",
       companions: "Los Starfriends",
       roadmap: "Más adelante",
       signIn: "Iniciar sesión",
       care: "Mi compañero",
       language: "Idioma",
-      apply: "Aplicar",
       skip: "Saltar al contenido"
     },
     hero: {
-      eyebrow: "Te damos la bienvenida a Starfriends",
-      title: "Un pequeño amigo. Tu propia historia.",
-      description: "Un momento tranquilo, una mirada curiosa y un poco de tiempo juntos. Descubre a Asterion y sus amigos en un pequeño universo dibujado con cariño.",
-      primary: "Iniciar sesión y probar",
-      secondary: "Conocer a los amigos",
-      note: "El proyecto sigue creciendo. El prototipo de cuidado está disponible para cuentas de prueba autorizadas."
+      eyebrow: "Starfriends",
+      title: "¿Quién será tu Starfriend?",
+      description: "¿Un dragón, un conejo o quizá un orco? Elige un amigo, dale de comer, juega con él y cuídalo.",
+      primary: "Iniciar sesión",
+      secondary: "Ver a todos los amigos",
+      note: "Inicia sesión o crea una cuenta y elige a tu primer compañero."
     },
     about: {
-      eyebrow: "La idea",
-      title: "Los pequeños momentos juntos importan.",
-      description: "Starfriends es un proyecto web inspirado en los Tamagotchi para niños y familias. Estamos creando un lugar acogedor para jugar, cuidar y descubrir.",
-      careTitle: "Tiempo para estar juntos",
-      careText: "En el prototipo actual puedes alimentar al compañero que elijas, jugar con él y dejarlo descansar.",
-      devicesTitle: "En casa, en tu navegador",
-      devicesText: "No necesitas instalar ningún juego. La web está pensada para móviles, tabletas y ordenadores; el progreso se guarda en el servidor.",
-      paceTitle: "Diversión, no obligaciones",
-      paceText: "Queremos un día a día agradable con tu compañero. Las pausas y una vuelta tranquila después de un tiempo fuera forman parte de las mejoras previstas."
+      eyebrow: "El juego",
+      title: "Una mascota en tu navegador",
+      description: "Starfriends es un juego de mascotas inspirado en los Tamagotchi. Cuida de tu compañero y comprueba cómo está.",
+      careTitle: "Comer y jugar",
+      careText: "¿Tu amigo tiene hambre, ganas de jugar o sueño? Sus indicadores te muestran lo que necesita.",
+      devicesTitle: "Sin instalación",
+      devicesText: "Juega en el móvil, la tableta o el ordenador. Usa la misma cuenta para abrir tu partida en otro dispositivo.",
+      paceTitle: "Últimas actividades",
+      paceText: "Consulta el historial para ver cuándo diste de comer a tu amigo, lo acariciaste o jugaste con él."
     },
     gallery: {
-      eyebrow: "Ocho pequeñas personalidades",
-      title: "¿Quién te acompañará?",
-      description: "Conoce a los ocho personajes ilustrados. En el prototipo actual cuidas de un compañero elegido; más necesidades individuales y aventuras compartidas están previstas para más adelante."
+      eyebrow: "Los personajes",
+      title: "Ocho amigos para elegir",
+      description: "Cuidas de un Starfriend. Puedes cambiar de personaje en los ajustes sin perder tu progreso."
     },
     companions: {
       asterion: {
         species: "Dragón de las estrellas",
-        description: "Un pequeño guardián tranquilo, de mirada atenta y corazón cálido.",
+        description: "Pequeño, curioso y con cuernos dorados: así es Asterion.",
         alt: "Asterion, un pequeño dragón de las estrellas dorado y azul celeste"
       },
       rabbit: {
         species: "Conejo de las estrellas",
-        description: "Con sus suaves patitas, Liora descubre pequeñas maravillas junto al camino.",
+        description: "Liora tiene orejas largas y un suave pelaje lavanda.",
         alt: "Liora, un conejo de las estrellas blanco lunar y lavanda"
       },
       cat: {
         species: "Gato de las estrellas",
-        description: "Nyra observa con atención y encuentra los rincones más acogedores para los momentos tranquilos.",
+        description: "A Nyra le encanta acurrucarse en un rincón cálido.",
         alt: "Nyra, un gato de las estrellas gris antracita con ojos verdes"
       },
       orc: {
         species: "Orco joven",
-        description: "Brumo tiene un gran corazón y disfruta de las pequeñas aventuras en compañía.",
+        description: "Brumo parece feroz con su armadura, pero es muy amistoso.",
         alt: "Brumo, un orco joven y amable con armadura color berenjena y bronce"
       },
       pony: {
         species: "Poni de las estrellas",
-        description: "Caelo mira con curiosidad detrás de la siguiente nube y trae un poquito de aventura.",
+        description: "Reconocerás a Caelo por su crin azul cielo.",
         alt: "Caelo, un poni de las estrellas blanco con crin azul cielo"
       },
       fairy: {
         species: "Hada de luz",
-        description: "Selya encuentra una razón para maravillarse incluso en la luz más pequeña.",
+        description: "Selya es la pequeña hada de pelo rosa y alas delicadas.",
         alt: "Selya, una pequeña hada de luz con pelo rosa y alas delicadas"
       },
       dog: {
         species: "Perro de las estrellas",
-        description: "A Fenn le encanta estar a tu lado y espera con ilusión cada camino compartido.",
+        description: "Fenn es un perro curioso al que le encanta jugar contigo.",
         alt: "Fenn, un perro de las estrellas color caramelo con ojos azules"
       },
       elf: {
         species: "Elfa del bosque",
-        description: "Aelira escucha al bosque con paciencia y descubre lo que otros pasan por alto.",
+        description: "Aelira es una elfa del bosque de pelo verde y orejas puntiagudas.",
         alt: "Aelira, una joven elfa del bosque con pelo verde y ojos amatista"
       }
     },
@@ -514,29 +513,30 @@ export const MESSAGES: Record<Locale, Messages> = {
       socialText: "Están previstas una lista de amigos con confirmación mutua y un chat protegido. Las reglas de contacto, el bloqueo, las denuncias y el diseño de seguridad se definirán antes de su introducción."
     },
     footer: {
-      tagline: "Starfriends · Pequeños amigos, historias compartidas.",
-      status: "En desarrollo · Prototipo de cuidado para cuentas de prueba autorizadas"
+      tagline: "Starfriends",
+      status: "Fase de pruebas"
     },
     login: {
       eyebrow: "Qué bien verte de nuevo",
-      title: "Comparte un pequeño momento con tu Starfriend.",
-      description: "Inicia sesión con tu cuenta autorizada para probar el prototipo de cuidado. Te llevaremos a nuestro servicio de inicio de sesión.",
-      submit: "Iniciar sesión con mi cuenta",
+      title: "Iniciar sesión en Starfriends",
+      description: "Inicia sesión con tu cuenta. Se abrirá nuestro servicio de acceso y después volverás aquí.",
+      submit: "Iniciar sesión",
+      register: "Crear cuenta",
       unavailableTitle: "El inicio de sesión aún no está disponible.",
       unavailableText: "El inicio de sesión aún no está configurado en este entorno. Puedes conocer a los Starfriends en la página de inicio e intentarlo más tarde.",
-      denied: "Tu cuenta aún no tiene acceso al prototipo de cuidado. Pide acceso al responsable del proyecto.",
+      denied: "No se ha completado el inicio de sesión. Inténtalo de nuevo o contacta con un administrador.",
       error: "No se pudo completar el inicio de sesión. Inténtalo de nuevo.",
       back: "Volver al inicio"
     },
     care: {
-      legacyLanguage: "La pantalla de cuidado está actualmente en alemán. Sus acciones, bocadillos de diálogo e historial se traducirán en un próximo paso.",
+      legacyLanguage: "El juego está disponible actualmente solo en alemán.",
       back: "Volver al inicio"
     },
     errors: {
       title: "Esta vez no ha funcionado.",
       description: "No se ha podido cargar esta página. Inténtalo de nuevo.",
       retry: "Volver a intentar",
-      loading: "Un pequeño momento …"
+      loading: "Cargando …"
     }
   }
 };

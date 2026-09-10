@@ -1,0 +1,22 @@
+[Unit]
+Description=Asterion permission synchronization heartbeat
+After=asterion-public.service
+Requires=asterion-public.service
+
+[Service]
+Type=oneshot
+User=webapps
+Group=www-data
+WorkingDirectory=/opt/sites/asterion-public/current
+EnvironmentFile=/etc/asterion-public/asterion.env
+ExecStart=/usr/bin/node /opt/sites/asterion-public/current/.asterion-operations/run-access-sync.mjs
+TimeoutStartSec=120
+SyslogIdentifier=asterion-public-access-sync
+UMask=0027
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectHome=true
+ProtectSystem=strict
+CapabilityBoundingSet=
+AmbientCapabilities=
+RestrictAddressFamilies=AF_INET AF_INET6 AF_UNIX

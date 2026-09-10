@@ -9,8 +9,29 @@
 .public-nav a:hover, .public-back:hover, .care-navigation a:hover { color: var(--gold-soft); text-decoration: underline; text-underline-offset: 5px; }
 .language-selector { display: flex; align-items: center; flex-wrap: wrap; gap: 7px; }
 .language-selector select, .language-selector button { min-height: 40px; border: 1px solid var(--line-strong); border-radius: 10px; background: #0a2238; color: var(--text); font: inherit; font-size: .8rem; padding: 8px 10px; }
-.language-selector button { cursor: pointer; }
-.language-selector button:hover { border-color: var(--gold); }
+.public-header-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; }
+.public-header-actions .public-button { min-height: 40px; padding: 8px 14px; font-size: .85rem; }
+.site-header a { color: var(--text); text-decoration: none; }
+.site-header .public-nav a[aria-current="page"] { color: var(--gold-soft); text-decoration: underline; text-underline-offset: 6px; }
+.site-header .public-nav a:hover { color: var(--gold-soft); }
+.site-header .public-brand { white-space: nowrap; }
+.site-header .user-chip { max-width: 160px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.site-header .public-header-actions { justify-content: flex-end; }
+.site-header .public-header-actions form { margin: 0; }
+.admin-section h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); overflow-wrap: anywhere; hyphens: auto; }
+.admin-section article { min-width: 0; overflow-wrap: anywhere; }
+.admin-section select { max-width: 100%; min-height: 40px; border: 1px solid var(--line-strong); border-radius: 10px; background: #0a2238; color: var(--text); font: inherit; padding: 8px 10px; }
+@media (max-width: 1100px) {
+  .site-header .public-nav { order: 3; width: 100%; gap: 12px 22px; }
+}
+@media (max-width: 600px) {
+  .site-header { justify-content: center; }
+  .site-header .public-header-actions { justify-content: center; width: 100%; }
+  .site-header .user-chip { max-width: 120px; }
+}
+.public-login .login-registration { margin-top: 12px; }
+.public-login .login-card { padding-top: 28px; padding-bottom: 28px; }
+.public-login .login-card h1 { font-size: clamp(1.8rem, 5vw, 2.4rem); }
 .language-selector select:focus-visible { outline: 3px solid var(--azure-soft); outline-offset: 3px; }
 .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 .skip-link { position: fixed; left: 20px; top: -100px; padding: 14px 20px; background: #0a2238; border: 2px solid var(--gold); border-radius: 10px; z-index: 20; }
@@ -49,8 +70,8 @@
 .public-roadmap .public-feature-grid h3 { margin-top: 0; }
 .public-footer { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px 32px; padding: 28px 0 36px; border-top: 1px solid var(--line); color: var(--muted); font-size: .8rem; line-height: 1.7; }
 .public-footer p { margin: 0; }
-.public-login .language-selector { justify-content: center; margin-bottom: 18px; }
-.public-login .login-asterion { object-fit: contain; }
+.public-login .language-selector { justify-content: center; margin-top: 0; margin-bottom: 18px; }
+.public-login .login-asterion { width: 144px; object-fit: contain; }
 .public-back { display: inline-block; margin-top: 26px; font-size: .85rem; }
 .care-navigation { width: min(1240px, calc(100% - 40px)); display: flex; flex-wrap: wrap; align-items: center; gap: 10px 24px; margin: 20px auto 0; font-size: .8rem; }
 .care-navigation p { color: var(--muted); }

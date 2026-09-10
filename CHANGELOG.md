@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.8.0 - 2026-09-10
+
+- Add localized onboarding, first-companion selection and account administration.
+- Preserve player-name spelling and add a collapsible friends panel.
+- Add friend-code invitations, confirmed friendships and optional text messaging.
+- Add account-based chat restoration and supporting database migrations.
+- Add individual companion backgrounds and atlas-based Asterion rendering.
+- Integrate with the existing optional 3D presentation without replacing its assets.
+
+This is a pilot source release. Functional acceptance and deployment are separate;
+see [the release notes](docs/RELEASE-0.8.0.md).
+
 All notable changes to Asterion are documented in this file.
 
 ## Unreleased
