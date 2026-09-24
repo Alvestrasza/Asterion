@@ -29,7 +29,9 @@ async function fixture(file) {
       if (name === '@/lib/pet-service') return {
         PetRequestError,
         getPetSnapshot: async () => { throw new PetRequestError('companion_selection_required', 409); },
-        chooseFirstPet: async (...args) => { calls.push(args); return { id: 'one' }; }
+        chooseFirstPet: async (...args) => { calls.push(args); return { id: 'one' }; },
+        adoptAdditionalPet: async (...args) => { calls.push(args); return { id: 'two' }; },
+        selectOwnedPet: async (...args) => { calls.push(args); if (args[1] === 'not-owned') throw new PetRequestError('companion_not_owned', 404); }
       };
       throw new Error(name);
     }
@@ -46,6 +48,27 @@ test('pet read before first selection returns a non-cacheable conflict, not an i
   assert.equal(response.status, 409);
   assert.match(response.headers.get('Cache-Control'), /no-store/);
   assert.equal((await response.json()).error, 'companion_selection_required');
+});
+test('additional adoption requires a valid request ID and binds the caller to the actor', async () => {
+  const f = await fixture('../app/api/pet/adopt/route.ts');
+  assert.equal((await f.post(f.request({ kind: 'cat', requestId: 'bad' }))).status, 400);
+  const response = await f.post(f.request({ kind: 'cat', requestId: '9a23e695-7db3-4b08-8915-a526cf3cbe4f' }));
+  assert.equal(response.status, 200);
+  assert.equal(f.calls[0][0], 'a');
+  assert.equal(f.calls[0][1], 'cat');
+  assert.equal(f.calls[0][2], '9a23e695-7db3-4b08-8915-a526cf3cbe4f');
+});
+test('companion selection rejects foreign origin, actor drift and unowned pet IDs', async () => {
+  const f = await fixture('../app/api/pet/select/route.ts');
+  assert.equal((await f.post(f.request({ petId: 'pet-one' }, 'https://foreign.example.invalid'))).status, 403);
+  f.actor(null); assert.equal((await f.post(f.request({ petId: 'pet-one' }))).status, 401);
+  f.actor({ id: 'b' }); assert.equal((await f.post(f.request({ petId: 'pet-one' }))).status, 409);
+  f.actor({ id: 'a' });
+  assert.equal((await f.post(f.request({ petId: '' }))).status, 400);
+  assert.equal((await f.post(f.request({ petId: 'pet-one', ownerId: 'victim' }))).status, 400);
+  assert.equal((await f.post(f.request({ petId: 'not-owned' }))).status, 404);
+  assert.equal((await f.post(f.request({ petId: 'pet-one' }))).status, 200);
+  assert.equal(f.calls[1][0], 'a'); assert.equal(f.calls[1][1], 'pet-one');
 });
 for (const [file, command] of [['../app/api/friends/route.ts', { action: 'search', query: 'BBBBB-BBB-BBBBB' }], ['../app/api/pet/adopt/route.ts', { kind: 'rabbit' }]]) {
   test(`${file}: origin, authentication, session binding and bounded input precede service calls`, async () => {

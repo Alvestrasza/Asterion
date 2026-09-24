@@ -15,6 +15,7 @@ import type { PetCommand, PetCommandResponse, PetEventView, PetSnapshot } from "
 import { assertAccess, consumeCareBudget } from "@/lib/access-service";
 import { isPublicDeployment } from "@/lib/deployment-config";
 import { grantCareReward, type RewardLedger } from "@/lib/progression";
+import { availableSlots } from "@/lib/companion-slots";
 
 export class PetRequestError extends Error {
   constructor(readonly code: string, readonly status: number) { super(code); }
@@ -153,7 +154,7 @@ async function eventsForPet(tx: Prisma.TransactionClient, petId: string) {
 }
 
 async function ensurePet(tx: Prisma.TransactionClient, ownerId: string, now: Date, chosenKind?: CompanionKind) {
-  const existing = await tx.pet.findUnique({ where: { ownerId } });
+  const existing = await tx.pet.findFirst({ where: { ownerId }, orderBy: [{ createdAt: "asc" }, { id: "asc" }] });
   if (existing) return existing;
   if (isPublicDeployment() && !chosenKind) throw new PetRequestError("companion_selection_required", 409);
 
@@ -169,6 +170,7 @@ async function ensurePet(tx: Prisma.TransactionClient, ownerId: string, now: Dat
   await tx.petEvent.create({
     data: {
       petId: pet.id,
+      ownerId,
       requestId: "system:hatch",
       action: "hatch",
       message: chosenKind ? `${companionProfile(chosenKind).name} ist jetzt dein Sternenfreund.` : HATCH_MESSAGE,
@@ -181,7 +183,7 @@ async function ensurePet(tx: Prisma.TransactionClient, ownerId: string, now: Dat
 }
 
 export async function hasPet(ownerId: string): Promise<boolean> {
-  return Boolean(await prisma.pet.findUnique({ where: { ownerId }, select: { id: true } }));
+  return Boolean(await prisma.pet.findFirst({ where: { ownerId }, select: { id: true } }));
 }
 
 /** First choice is idempotent: another tab cannot replace an existing companion. */
@@ -191,7 +193,65 @@ export async function chooseFirstPet(ownerId: string, kind: CompanionKind): Prom
     if (isPublicDeployment()) await assertAccess(tx, ownerId);
     const pet = await ensurePet(tx, ownerId, new Date(), kind);
     const progress = await ensurePlayerProgress(tx, ownerId, pet);
+    if (!progress.activePetId) await tx.playerProgress.update({ where: { userId: ownerId }, data: { activePetId: pet.id } });
     return snapshot(pet, progress, await eventsForPet(tx, pet.id));
+  });
+}
+
+export type CompanionSummary = Pick<Pet, "id" | "kind" | "level" | "xp" | "sleeping" | "satiety" | "energy" | "joy" | "bond">;
+
+/** Every adoption uses the same account-level serializable transaction and a durable request ID. */
+export async function adoptAdditionalPet(ownerId: string, kind: CompanionKind, requestId: string): Promise<PetSnapshot> {
+  if (!isCompanionKind(kind)) throw new PetRequestError("invalid_companion", 400);
+  return serializable(async (tx) => {
+    if (isPublicDeployment()) await assertAccess(tx, ownerId);
+    const first = await tx.pet.findFirst({ where: { ownerId }, orderBy: [{ createdAt: "asc" }, { id: "asc" }] });
+    if (!first) throw new PetRequestError("first_companion_required", 409);
+    const progress = await ensurePlayerProgress(tx, ownerId, first);
+    const prior = await tx.pet.findUnique({ where: { ownerId_adoptionRequestId: { ownerId, adoptionRequestId: requestId } } });
+    if (prior) {
+      if (prior.kind !== kind) throw new PetRequestError("adoption_request_changed", 409);
+      return snapshot(prior, progress, await eventsForPet(tx, prior.id));
+    }
+    const count = await tx.pet.count({ where: { ownerId } });
+    const slots = availableSlots(progress.level, progress.unlockedSlots);
+    if (count >= slots) throw new PetRequestError("companion_slots_full", 409);
+    if (await tx.pet.findUnique({ where: { ownerId_kind: { ownerId, kind } } })) {
+      throw new PetRequestError("companion_kind_owned", 409);
+    }
+    const now = new Date();
+    const pet = await tx.pet.create({ data: { ownerId, kind, adoptionRequestId: requestId, bornAt: now, lastAdvancedAt: now } });
+    await tx.petEvent.create({ data: {
+      petId: pet.id, ownerId, requestId: `system:hatch:${pet.id}`, action: "hatch",
+      message: `${companionProfile(kind).name} ist jetzt dein Sternenfreund.`, animation: "waving", occurredAt: now
+    } });
+    await tx.playerProgress.update({ where: { userId: ownerId }, data: { unlockedSlots: slots, activePetId: pet.id } });
+    return snapshot(pet, progress, await eventsForPet(tx, pet.id));
+  });
+}
+
+export async function getPetCollection(ownerId: string) {
+  return serializable(async (tx) => {
+    if (isPublicDeployment()) await assertAccess(tx, ownerId);
+    const pets = await tx.pet.findMany({ where: { ownerId }, orderBy: [{ createdAt: "asc" }, { id: "asc" }] });
+    if (pets.length === 0) return { pets: [] as CompanionSummary[], activePetId: null as string | null, unlockedSlots: 1, playerLevel: 1 };
+    const progress = await ensurePlayerProgress(tx, ownerId, pets[0]);
+    const slots = availableSlots(progress.level, progress.unlockedSlots);
+    const activePetId = pets.some((pet) => pet.id === progress.activePetId) ? progress.activePetId : pets[0].id;
+    if (progress.unlockedSlots < slots || progress.activePetId !== activePetId) {
+      await tx.playerProgress.update({ where: { userId: ownerId }, data: { unlockedSlots: slots, activePetId } });
+    }
+    return { pets: pets.map(({ id, kind, level, xp, sleeping, satiety, energy, joy, bond }) => ({ id, kind, level, xp, sleeping, satiety, energy, joy, bond })), activePetId, unlockedSlots: slots, playerLevel: progress.level };
+  });
+}
+
+export async function selectOwnedPet(ownerId: string, petId: string): Promise<void> {
+  await serializable(async (tx) => {
+    if (isPublicDeployment()) await assertAccess(tx, ownerId);
+    const pet = await tx.pet.findFirst({ where: { id: petId, ownerId } });
+    if (!pet) throw new PetRequestError("companion_not_owned", 404);
+    await ensurePlayerProgress(tx, ownerId, pet);
+    await tx.playerProgress.update({ where: { userId: ownerId }, data: { activePetId: petId } });
   });
 }
 
@@ -217,8 +277,11 @@ export async function getPetSnapshot(ownerId: string): Promise<PetSnapshot> {
   return serializable(async (tx) => {
     if (isPublicDeployment()) await assertAccess(tx, ownerId);
     const now = new Date();
-    const pet = await ensurePet(tx, ownerId, now);
-    const progress = await ensurePlayerProgress(tx, ownerId, pet);
+    const first = await ensurePet(tx, ownerId, now);
+    const progress = await ensurePlayerProgress(tx, ownerId, first);
+    const pet = progress.activePetId
+      ? await tx.pet.findFirst({ where: { id: progress.activePetId, ownerId } }) ?? first
+      : first;
     const advanced = advanceState(petToState(pet), now.getTime());
     const persisted = await persistState(tx, pet, advanced);
     const events = await eventsForPet(tx, pet.id);
@@ -231,16 +294,19 @@ export async function performPetCommand(ownerId: string, command: PetCommand, ex
     if (isPublicDeployment()) {
       await assertAccess(tx, ownerId);
       if (command.action === "restore") throw new PetRequestError("restore_not_available", 403);
+      if (command.action === "reset" || command.action === "select") throw new PetRequestError("companion_permanent", 403);
     }
     const now = new Date();
-    let pet = await ensurePet(tx, ownerId, now);
+    if (!expectedPetId) throw new PetRequestError("companion_context_changed", 409);
+    let pet = await tx.pet.findFirst({ where: { id: expectedPetId, ownerId } });
+    if (!pet) throw new PetRequestError("companion_context_changed", 409);
     let progress = await ensurePlayerProgress(tx, ownerId, pet);
-    if (!expectedPetId || pet.id !== expectedPetId) throw new PetRequestError("companion_context_changed", 409);
     const prior = await tx.petEvent.findUnique({
-      where: { petId_requestId: { petId: pet.id, requestId: command.requestId } }
+      where: { ownerId_requestId: { ownerId, requestId: command.requestId } }
     });
 
     if (prior) {
+      if (prior.petId !== pet.id || prior.action !== command.action) throw new PetRequestError("companion_context_changed", 409);
       const events = await eventsForPet(tx, pet.id);
       return { pet: snapshot(pet, progress, events), feedback: eventView(prior), replayed: true };
     }
@@ -295,16 +361,21 @@ export async function performPetCommand(ownerId: string, command: PetCommand, ex
           if (playerLeveled) message += ` Du erreichst Stufe ${playerValues.level}.`;
           progress = await tx.playerProgress.update({
             where: { userId: ownerId },
-            data: { ...ledgerUpdate(reward.ledger), level: playerValues.level, xp: playerValues.xp }
+            data: { ...ledgerUpdate(reward.ledger), level: playerValues.level, xp: playerValues.xp,
+              unlockedSlots: availableSlots(playerValues.level, progress.unlockedSlots) }
           });
         }
       }
     }
 
+    if (nextKind && nextKind !== pet.kind && await tx.pet.findUnique({ where: { ownerId_kind: { ownerId, kind: nextKind } } })) {
+      throw new PetRequestError("companion_kind_owned", 409);
+    }
     pet = await persistState(tx, pet, state, nextKind);
     const event = await tx.petEvent.create({
       data: {
         petId: pet.id,
+        ownerId,
         requestId: command.requestId,
         action: command.action,
         message,
