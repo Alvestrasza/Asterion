@@ -59,6 +59,8 @@ daily reward bookkeeping, and an audited XP amount on pet events. Existing
 users' account level/XP is initialized from their current pet. Existing pet
 levels beyond 99 are archived in `preCapLevel` and `preCapXp` before capping;
 those columns are not used for gameplay but must be retained for recovery.
+The migration's SQL runs in one PostgreSQL transaction so a failed statement
+cannot leave a partially applied backfill.
 
 Do not apply this migration to an active public release. Before any rollout,
 verify the exact database and writable primary, take and read back a fresh
