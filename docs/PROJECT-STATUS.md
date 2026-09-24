@@ -1,5 +1,13 @@
 # Asterion project status
 
+## v0.9.0 production rollout — 2026-09-24
+
+Issue [#6](https://github.com/Alvestrasza/Asterion/issues/6) now has separate player and companion levels (1–99), gentler need decay, and safeguards against XP from sleep or ineffective repeated care. The reviewed progression migration and v0.9.0 application activation completed. Automated Windows and Linux CI checks passed before release. The public HTTPS health and login paths respond, and anonymous friend-list access is rejected.
+
+This verifies deployment and basic availability, not two-user gameplay acceptance. Player and companion progression, XP limits, sleep behavior, and cross-device continuity still require real-user checks; issue #6 remains open until those pass. Additional-companion unlocks and achievements are separate follow-up work. No operational addresses, credentials or private release details are published here.
+
+The dated v0.8.0 and earlier sections below are historical snapshots, not the current release status.
+
 ## User-reported acceptance correction — 2026-09-24
 
 The project owner reports that v0.8.0 acceptance has been completed. This
