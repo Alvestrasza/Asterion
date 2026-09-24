@@ -1,5 +1,13 @@
 # Asterion project status
 
+## User-reported acceptance correction — 2026-09-24
+
+The project owner reports that v0.8.0 acceptance has been completed. This
+corrects the older pending-acceptance statement below, which is retained as a
+historical publication snapshot. The exact test record and current node state
+were not independently rechecked for this source change. Issue #6 progression
+and needs balancing is being developed separately; it is not deployed here.
+
 ## Current project update — 2026-09-10
 
 ### v0.8.0 source publication

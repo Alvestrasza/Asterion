@@ -14,7 +14,7 @@ export type SocialCommand =
   | { action: "request"; friendCode: string }
   | { action: "accept" | "decline" | "remove" | "block" | "unblock"; friendshipId: string };
 
-const userSelect = { id: true, socialProfile: true, access: true, pet: { select: { level: true } } } as const;
+const userSelect = { id: true, socialProfile: true, access: true, playerProgress: { select: { level: true } } } as const;
 const failure = (error: string) => ({ error });
 
 /** One shared database governs both nodes. Expected denials commit the abuse budget. */
@@ -75,7 +75,7 @@ async function runSocialCommand(actorId: string, command: SocialCommand, db: Pri
             return [{ id: row.id, username: displayUsername(other.socialProfile)!,
               status: visible ? "accepted" : row.requestedBy === actorId ? "outgoing" : "incoming",
               online: visible ? isOnline(other.socialProfile.lastSeenAt, now) : null,
-              level: visible ? other.pet?.level ?? 1 : null }];
+              level: visible ? other.playerProgress?.level ?? 1 : null }];
           });
           return { profile: { username: displayUsername(profile) ?? "", discoverable: profile.discoverable }, friends };
         }

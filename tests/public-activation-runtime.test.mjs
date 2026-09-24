@@ -8,7 +8,9 @@ import { spawnSync } from "node:child_process";
 // Run the actual activation tail, with OS/network boundaries replaced by fakes.
 // No sudo, real service, live listener, certificate or protected file is used.
 const source = (await readFile(new URL("../deploy/public/activate-public.sh", import.meta.url), "utf8")).replaceAll("\r\n", "\n");
-const tail = source.slice(source.indexOf("backend_request() {"));
+// The deployed script deliberately pins /usr/bin/node; the CI runner installs
+// Node elsewhere. Substitute only that executable in this isolated harness.
+const tail = source.slice(source.indexOf("backend_request() {")).replaceAll("/usr/bin/node", JSON.stringify(process.execPath));
 const linux = process.platform === "linux";
 
 async function runActivation(scenario) {

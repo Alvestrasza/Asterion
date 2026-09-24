@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.9.0 - 2026-09-24
+
+- Add separate player and companion levels from 1 to 99 with a versioned XP curve.
+- Retune care needs and stop XP gains from sleep, wake, sleeping care and rapid repeated actions.
+- Add a per-player daily XP budget, event audit and migration preserving legacy progress.
+- Display both progress tracks and the player's level to confirmed friends.
+
+Source validation and production acceptance are separate; see [progression notes](docs/PROGRESSION.md).
+
 ## 0.8.0 - 2026-09-10
 
 - Add localized onboarding, first-companion selection and account administration.
