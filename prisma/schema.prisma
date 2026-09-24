@@ -18,7 +18,7 @@ model User {
   accounts       Account[]
   sessions       Session[]
   authenticators Authenticator[]
-  pet            Pet?
+  pets           Pet[]
   playerProgress PlayerProgress?
   access         UserAccess?
   socialProfile  SocialProfile?
@@ -214,9 +214,10 @@ model Authenticator {
 
 model Pet {
   id             String     @id @default(cuid())
-  ownerId        String     @unique
+  ownerId        String
   owner          User       @relation(fields: [ownerId], references: [id], onDelete: Cascade)
   kind           String     @default("asterion") @db.VarChar(32)
+  adoptionRequestId String? @db.VarChar(36)
   bornAt         DateTime   @default(now())
   lastAdvancedAt DateTime   @default(now())
   satiety        Float      @default(76)
@@ -233,6 +234,10 @@ model Pet {
   createdAt      DateTime   @default(now())
   updatedAt      DateTime   @updatedAt
   events         PetEvent[]
+
+  @@unique([ownerId, kind])
+  @@unique([ownerId, adoptionRequestId])
+  @@index([ownerId, createdAt, id])
 }
 
 // Account-wide progression and reward budget. Pet.level/xp remains companion-specific.
@@ -241,6 +246,8 @@ model PlayerProgress {
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
   level Int @default(1)
   xp Int @default(0)
+  activePetId String?
+  unlockedSlots Int @default(1)
   rewardDay String? @db.VarChar(10)
   earnedToday Int @default(0)
   lastFeedRewardAt DateTime?
@@ -253,6 +260,7 @@ model PlayerProgress {
 model PetEvent {
   id         String   @id @default(cuid())
   petId      String
+  ownerId    String
   pet        Pet      @relation(fields: [petId], references: [id], onDelete: Cascade)
   requestId  String   @db.VarChar(64)
   action     String   @db.VarChar(32)
@@ -263,6 +271,7 @@ model PetEvent {
   occurredAt DateTime @default(now())
 
   @@unique([petId, requestId])
+  @@unique([ownerId, requestId])
   @@index([petId, occurredAt(sort: Desc)])
 }
 

@@ -1,5 +1,11 @@
 # Asterion project status
 
+## Issue #7 source candidate — not deployed
+
+The companion-collection source candidate supports one companion kind per account, five permanent slots unlocked by account levels 1/15/30/45/60, independent pet state and events, and owner-bound selection and care. Its additive migration preserves existing pets. The browser queue retains the original pet for each pending action. This section describes source work only: the new migration has not been applied, the candidate has not been published or activated, and real-user acceptance remains open.
+
+The project owner reports completing v0.9.0 gameplay acceptance for issue #6. That report does not substitute for #7 migration or multi-pet acceptance.
+
 ## v0.9.0 production rollout — 2026-09-24
 
 Issue [#6](https://github.com/Alvestrasza/Asterion/issues/6) now has separate player and companion levels (1–99), gentler need decay, and safeguards against XP from sleep or ineffective repeated care. The reviewed progression migration and v0.9.0 application activation completed. Automated Windows and Linux CI checks passed before release. The public HTTPS health and login paths respond, and anonymous friend-list access is rejected.

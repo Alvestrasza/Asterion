@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Asterion is an account-backed Tamagotchi-style web service. A user owns exactly one companion, and that companion must remain consistent when the user changes devices or when requests reach different web nodes.
+Asterion is an account-backed Tamagotchi-style web service. A user starts with one companion and can unlock up to five independent companions. Their state must remain consistent across devices and web nodes.
 
 ## Components
 
@@ -30,7 +30,7 @@ The web nodes are stateless. PostgreSQL is the only authoritative store for pet 
 
 ## Identity and ownership
 
-Keycloak remains the identity source. Auth.js stores provider accounts and database sessions locally. Every pet row has a unique foreign key to the Auth.js user row. API handlers derive that user id exclusively from the authenticated server session; no owner identifier is accepted from a request body.
+Keycloak remains the identity source. Auth.js stores provider accounts and database sessions locally. Every pet row belongs to an Auth.js user; `(ownerId, kind)` is unique, so an account cannot adopt the same kind twice. API handlers derive the owner exclusively from the authenticated server session; no owner identifier is accepted from a request body.
 
 Production authentication fails closed unless `ASTERION_REQUIRED_ROLE` is configured. The configured assignment may be delivered as a Keycloak group, realm role, or client role.
 
@@ -42,11 +42,12 @@ Production authentication fails closed unless `ASTERION_REQUIRED_ROLE` is config
 - satiety, energy, joy, and bond
 - sleeping state
 - level, experience, and interaction count
-- the currently selected companion kind
+- an immutable companion kind in the public profile
 - an optimistic concurrency version
 
-`PlayerProgress` stores a separate account level and XP. This is the future
-source for account-wide companion-slot unlocks; each `Pet` retains its own level,
+`PlayerProgress` stores a separate account level and XP, the active companion ID,
+and the highest unlocked slot count. Slots unlock at account levels 1, 15, 30,
+45, and 60, with an absolute maximum of five. Each `Pet` retains its own level,
 XP and needs. The same care reward currently advances the account and the cared-for
 pet, but the counters are independent. Friend cards show the account level.
 
@@ -55,7 +56,7 @@ care action. These fields are committed in the same serializable transaction as
 the pet change and `PetEvent.xpAwarded`; a retried request ID cannot award again.
 See [progression and needs](PROGRESSION.md) for the versioned curve and pacing.
 
-`PetEvent` stores the journal and the idempotency key for every command. The `(petId, requestId)` unique constraint guarantees that a retried browser request cannot apply an action twice.
+`PetEvent` stores each pet's journal. A unique `(ownerId, requestId)` constraint prevents a retried browser request from applying to a different pet or awarding account XP twice. Additional adoption has its own durable request ID. Selection changes only `PlayerProgress.activePetId`; it never copies or resets pet state. Public companion deletion, replacement and reset are unavailable.
 
 ## Time progression and consistency
 
@@ -65,7 +66,7 @@ This design prevents lost updates when two devices or two web nodes act at nearl
 
 ## Offline behavior
 
-An already-open client can queue care actions while disconnected. Each queued action receives its final UUID before it is stored. Reconnection retries the same UUID, making an uncertain response safe even if the first request reached the server.
+An already-open client can queue care actions while disconnected. Each queued action receives its final UUID and pet ID before storage. Reconnection retries the same pair even if another pet is now selected. Legacy one-pet queued actions are assigned to the original pet during migration.
 
 The service worker caches only public artwork, the manifest, immutable Next.js assets, and a generic offline page. It never caches authenticated HTML, API responses, session cookies, or personal pet state. The latest state is kept in a user-keyed browser cache only for continuity in the open application.
 

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { redirect } from "next/navigation";
 import { getCurrentActor } from "@/lib/current-actor";
-import { getPetSnapshot, hasPet } from "@/lib/pet-service";
+import { getPetCollection, getPetSnapshot, hasPet } from "@/lib/pet-service";
 import { getRequestLocale } from "@/lib/request-locale";
 import { getMessages } from "@/lib/messages";
 import { AsterionClient } from "../asterion-client";
@@ -9,6 +9,7 @@ import { ChooseCompanion } from "../choose-companion";
 import { localizedPath } from "@/lib/i18n";
 import { SiteHeader } from "../site-header";
 import "../social.css";
+import "../companion-collection.css";
 
 export const dynamic = "force-dynamic";
 export const metadata: Metadata = { robots: { index: false, follow: false } };
@@ -22,13 +23,14 @@ export default async function CarePage() {
     <ChooseCompanion actorId={actor.id} locale={locale} />
   </>;
   const pet = await getPetSnapshot(actor.id);
+  const collection = await getPetCollection(actor.id);
   const t = getMessages(locale);
   return (
     <>
       {locale !== "de" && <p className="care-navigation">{t.care.legacyLanguage}</p>}
       {/* The existing care screen is migrated in the next localization slice. */}
       <div lang="de">
-        <AsterionClient initialPet={pet} userId={actor.id} userName={actor.name} internalTestMode={actor.internalTestMode} isAdmin={actor.isAdmin} locale={locale} />
+        <AsterionClient key={pet.id} initialPet={pet} collection={collection} userId={actor.id} userName={actor.name} internalTestMode={actor.internalTestMode} isAdmin={actor.isAdmin} locale={locale} originalPetId={collection.pets[0]?.id ?? pet.id} />
       </div>
     </>
   );

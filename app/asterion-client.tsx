@@ -30,11 +30,13 @@ import { createRequestId } from "@/lib/request-id";
 import { formatJournalTime } from "@/lib/journal-time";
 import { CompanionBackground } from "@/app/companion-background";
 import { CompanionArt } from "./companion-art";
+import { CompanionCollection, type CompanionCollectionView } from "./companion-collection";
 
 const ASTERION_3D_ENABLED = process.env.NEXT_PUBLIC_ASTERION_3D_ENABLED === "true";
 
 type PendingCare = {
   requestId: string;
+  petId: string;
   action: CareAction;
   queuedAt: number;
 };
@@ -70,6 +72,7 @@ function readQueue(key: string): PendingCare[] {
       (entry): entry is PendingCare =>
         Boolean(entry) &&
         typeof entry.requestId === "string" &&
+        typeof entry.petId === "string" && entry.petId.length > 0 &&
         ["feed", "play", "pet", "sleep", "wake"].includes(entry.action) &&
         typeof entry.queuedAt === "number"
     );
@@ -123,18 +126,22 @@ function Stat({
 
 export function AsterionClient({
   initialPet,
+  collection,
   userId,
   userName,
   internalTestMode,
   isAdmin = false,
-  locale = "de"
+  locale = "de",
+  originalPetId
 }: {
   initialPet: PetSnapshot;
+  collection: CompanionCollectionView;
   userId: string;
   userName: string;
   internalTestMode: boolean;
   isAdmin?: boolean;
   locale?: Locale;
+  originalPetId: string;
 }) {
   const [pet, setPet] = useState(initialPet);
   const initialMood = moodPresentation(deriveMood(initialPet), companionProfile(initialPet.kind).name);
@@ -158,7 +165,23 @@ export function AsterionClient({
   const confirmDialog = useRef<HTMLDialogElement>(null);
   const transientTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const toastTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const queueKey = `asterion.pending-actions.v1.${userId}`;
+  const queueKey = `asterion.pending-actions.v2.${userId}`;
+
+  useEffect(() => {
+    // The old app had exactly one companion, so all v1 commands belong to it.
+    const oldKey = `asterion.pending-actions.v1.${userId}`;
+    try {
+      const old = JSON.parse(localStorage.getItem(oldKey) ?? "[]") as unknown;
+      if (!Array.isArray(old) || old.length === 0) return;
+      const migrated = old.filter((entry): entry is Omit<PendingCare, "petId"> =>
+        Boolean(entry) && typeof entry.requestId === "string" &&
+        ["feed", "play", "pet", "sleep", "wake"].includes(entry.action) &&
+        typeof entry.queuedAt === "number").map((entry) => ({ ...entry, petId: originalPetId }));
+      const current = readQueue(queueKey);
+      const ids = new Set(current.map((entry) => entry.requestId));
+      if (writeQueue(queueKey, [...current, ...migrated.filter((entry) => !ids.has(entry.requestId))])) localStorage.removeItem(oldKey);
+    } catch { /* Keep the old queue until storage is available again. */ }
+  }, [originalPetId, queueKey, userId]);
 
   useEffect(() => {
     if (internalTestMode) return;
@@ -224,14 +247,12 @@ export function AsterionClient({
     try {
       while (remaining.length > 0) {
         const command = remaining[0];
-        const result = await postCommand({ requestId: command.requestId, action: command.action }, userId, initialPet.id);
-        setPet(result.pet);
-        showTransient(
-          result.pet,
-          result.feedback.animation,
-          result.feedback.message,
-          result.feedback.accepted ? command.action : undefined
-        );
+        const result = await postCommand({ requestId: command.requestId, action: command.action }, userId, command.petId);
+        if (result.pet.id === initialPet.id) {
+          setPet(result.pet);
+          showTransient(result.pet, result.feedback.animation, result.feedback.message,
+            result.feedback.accepted ? command.action : undefined);
+        }
         remaining = remaining.slice(1);
         writeQueue(queueKey, remaining);
         setQueueCount(remaining.length);
@@ -333,7 +354,7 @@ export function AsterionClient({
 
     const previous = readQueue(queueKey);
     if (previous.length >= 50) { showToast("Bitte synchronisiere zuerst deine vorgemerkten Augenblicke."); return; }
-    const queue = [...previous, { requestId, action, queuedAt: Date.now() }];
+    const queue = [...previous, { requestId, petId: initialPet.id, action, queuedAt: Date.now() }];
     if (!writeQueue(queueKey, queue)) {
       showToast("Der Offline-Augenblick konnte auf diesem Gerät nicht vorgemerkt werden.");
       return;
@@ -467,7 +488,10 @@ export function AsterionClient({
 
       <div className="app-shell">
         <SiteHeader locale={locale} currentPath="/care" actor={{ id: userId, name: userName, isAdmin, internalTestMode }} onLogout={() => {
-          try { localStorage.removeItem(queueKey); } catch { /* Storage is optional. */ }
+          try {
+            localStorage.removeItem(queueKey);
+            localStorage.removeItem(`asterion.pending-actions.v1.${userId}`);
+          } catch { /* Storage is optional. */ }
           setSessionChanged(true);
         }}>
             {installPrompt ? (
@@ -485,6 +509,8 @@ export function AsterionClient({
             ) : null}
             <button className="icon-button" type="button" aria-label="Einstellungen öffnen" onClick={() => settingsDialog.current?.showModal()}>⚙</button>
         </SiteHeader>
+
+        <div lang={locale}><CompanionCollection collection={collection} userId={userId} locale={locale} /></div>
 
         {internalTestMode ? (
           <aside className="test-mode-banner" role="status">
@@ -614,7 +640,7 @@ export function AsterionClient({
             <button className="icon-button" value="close" aria-label="Einstellungen schließen">×</button>
           </div>
           <p className="dialog-copy">Dein Spielstand wird online in deinem Konto gespeichert.</p>
-          <fieldset className="companion-picker">
+          {internalTestMode && <fieldset className="companion-picker">
             <legend>Begleiter wählen</legend>
             <p>Beim Wechsel bleiben Werte, Stufe und Verlauf erhalten.</p>
             <div className="companion-options">
@@ -635,12 +661,12 @@ export function AsterionClient({
                 </button>
               ))}
             </div>
-          </fieldset>
+          </fieldset>}
           <div className="settings-actions">
             <button className="settings-action" type="button" onClick={exportSave}><strong>Spielstand herunterladen</strong><small>Als JSON-Datei speichern</small></button>
             {internalTestMode && <><label className="settings-action import-label" htmlFor="importInput"><strong>Spielstand wiederherstellen</strong><small>Eine gespeicherte Datei laden</small></label>
             <input id="importInput" type="file" accept="application/json,.json" hidden onChange={(event) => void importSave(event)} /></>}
-            <button className="settings-action danger-action" type="button" onClick={() => confirmDialog.current?.showModal()}><strong>Neu beginnen</strong><small>Werte und Verlauf zurücksetzen</small></button>
+            {internalTestMode && <button className="settings-action danger-action" type="button" onClick={() => confirmDialog.current?.showModal()}><strong>Neu beginnen</strong><small>Werte und Verlauf zurücksetzen</small></button>}
           </div>
         </form>
       </dialog>
