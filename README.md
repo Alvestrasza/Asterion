@@ -2,13 +2,13 @@
 
 Asterion is a gentle, multi-user Tamagotchi service built as an installable web application. Each authenticated user has one active server-authoritative companion whose state follows them across devices.
 
-Version `0.8.0` brings onboarding, a friends panel, friend-code invitations and optional one-to-one text messaging to the pilot. The public introduction is at `/`; companion care is at `/care`. Final multi-user and new-browser acceptance remains pending. This source release is not a general-launch announcement. The internal test profile intentionally shares one test account and does not support social features.
+Version `0.8.0` brings onboarding, a friends panel, friend-code invitations and optional one-to-one text messaging to the pilot. The public introduction is at `/`; companion care is at `/care`. The project owner reports that v0.8.0 acceptance is complete; it was not independently repeated for this source update. This is not a general-launch announcement. The internal test profile intentionally shares one test account and does not support social features.
 
 ## Features
 
 - Public introduction and login interface in German, English, French, and Spanish, with a saved language preference, browser detection, and English fallback
 - Keycloak OpenID Connect integration through Auth.js; the login button is unavailable until the three provider settings are present
-- PostgreSQL persistence with one owner-linked pet per user; live authentication and per-user isolation acceptance remain pending
+- PostgreSQL persistence with one owner-linked pet per user; the internal shared-user profile does not prove per-user isolation
 - Eight selectable companions: Asterion, Liora the rabbit, Nyra the cat, Brumo the young orc, Caelo the pony, Selya the fairy, Fenn the dog, and Aelira the elf
 - First-companion selection after sign-in and case-preserving player names
 - Collapsible friends panel, consent-based friend-code invitations, and confirmed-friend presence and level
@@ -28,7 +28,9 @@ Version `0.8.0` brings onboarding, a friends panel, friend-code invitations and 
 
 The browser communicates only with the Next.js application. Auth.js uses Keycloak for identity and database sessions. Prisma stores pets and their event journal in a dedicated PostgreSQL database. The same build can run on multiple stateless web nodes because all mutable state is in PostgreSQL.
 
-See [Project status](docs/PROJECT-STATUS.md), [Architecture](docs/ARCHITECTURE.md), and [Operations](docs/OPERATIONS.md) for the verified baseline, full design, and rollout procedure.
+See [Project status](docs/PROJECT-STATUS.md), [Architecture](docs/ARCHITECTURE.md),
+[Progression and needs](docs/PROGRESSION.md), and [Operations](docs/OPERATIONS.md)
+for the verified baseline, candidate balancing design, and rollout procedure.
 
 The care interface and stored care-event messages remain German in this slice. Multi-companion progression, the private diary, and the device API remain roadmap work. The messenger is a pilot feature, not an independently audited messaging service; account-based recovery is not operator-blind encryption. See [v0.8.0](docs/RELEASE-0.8.0.md) for the publication boundary. Issue [#13](https://github.com/Alvestrasza/Asterion/issues/13) remains explicitly deferred.
 

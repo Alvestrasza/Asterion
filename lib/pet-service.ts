@@ -1,10 +1,11 @@
-import type { Pet, PetEvent, Prisma } from "@prisma/client";
+import type { Pet, PetEvent, PlayerProgress, Prisma } from "@prisma/client";
 import { Prisma as PrismaRuntime } from "@prisma/client";
 import {
   SCHEMA_VERSION,
   advanceState,
   applyCareAction,
   createInitialState,
+  grantExperience,
   normalizeState,
   type CompanionState
 } from "@/lib/care-engine";
@@ -13,6 +14,7 @@ import { prisma } from "@/lib/db";
 import type { PetCommand, PetCommandResponse, PetEventView, PetSnapshot } from "@/lib/pet-contract";
 import { assertAccess, consumeCareBudget } from "@/lib/access-service";
 import { isPublicDeployment } from "@/lib/deployment-config";
+import { grantCareReward, type RewardLedger } from "@/lib/progression";
 
 export class PetRequestError extends Error {
   constructor(readonly code: string, readonly status: number) { super(code); }
@@ -92,23 +94,53 @@ function eventView(event: PetEvent): PetEventView {
     message: event.message,
     animation: event.animation,
     accepted: event.accepted,
+    xpAwarded: event.xpAwarded,
     occurredAt: event.occurredAt.toISOString()
   };
 }
 
-function snapshot(pet: Pet, events: PetEvent[]): PetSnapshot {
+function snapshot(pet: Pet, progress: PlayerProgress, events: PetEvent[]): PetSnapshot {
   const state = petToState(pet);
   return {
     ...state,
     id: pet.id,
     kind: isCompanionKind(pet.kind) ? pet.kind : "asterion",
     version: pet.version,
+    playerLevel: progress.level,
+    playerXp: progress.xp,
     journal: events.map((event) => ({
       id: event.id,
       at: event.occurredAt.getTime(),
       text: event.message,
       action: event.action
     }))
+  };
+}
+
+async function ensurePlayerProgress(tx: Prisma.TransactionClient, ownerId: string, pet: Pet) {
+  const existing = await tx.playerProgress.findUnique({ where: { userId: ownerId } });
+  if (existing) return existing;
+  // Existing users retain their pet's current progress even if creation races a migration.
+  return tx.playerProgress.create({ data: { userId: ownerId, level: pet.level, xp: pet.xp } });
+}
+
+function rewardLedger(progress: PlayerProgress): RewardLedger {
+  return {
+    rewardDay: progress.rewardDay,
+    earnedToday: progress.earnedToday,
+    lastFeedRewardAt: progress.lastFeedRewardAt?.getTime() ?? null,
+    lastPlayRewardAt: progress.lastPlayRewardAt?.getTime() ?? null,
+    lastPetRewardAt: progress.lastPetRewardAt?.getTime() ?? null
+  };
+}
+
+function ledgerUpdate(ledger: RewardLedger) {
+  return {
+    rewardDay: ledger.rewardDay,
+    earnedToday: ledger.earnedToday,
+    lastFeedRewardAt: ledger.lastFeedRewardAt === null ? null : new Date(ledger.lastFeedRewardAt),
+    lastPlayRewardAt: ledger.lastPlayRewardAt === null ? null : new Date(ledger.lastPlayRewardAt),
+    lastPetRewardAt: ledger.lastPetRewardAt === null ? null : new Date(ledger.lastPetRewardAt)
   };
 }
 
@@ -158,7 +190,8 @@ export async function chooseFirstPet(ownerId: string, kind: CompanionKind): Prom
   return serializable(async (tx) => {
     if (isPublicDeployment()) await assertAccess(tx, ownerId);
     const pet = await ensurePet(tx, ownerId, new Date(), kind);
-    return snapshot(pet, await eventsForPet(tx, pet.id));
+    const progress = await ensurePlayerProgress(tx, ownerId, pet);
+    return snapshot(pet, progress, await eventsForPet(tx, pet.id));
   });
 }
 
@@ -185,10 +218,11 @@ export async function getPetSnapshot(ownerId: string): Promise<PetSnapshot> {
     if (isPublicDeployment()) await assertAccess(tx, ownerId);
     const now = new Date();
     const pet = await ensurePet(tx, ownerId, now);
+    const progress = await ensurePlayerProgress(tx, ownerId, pet);
     const advanced = advanceState(petToState(pet), now.getTime());
     const persisted = await persistState(tx, pet, advanced);
     const events = await eventsForPet(tx, pet.id);
-    return snapshot(persisted, events);
+    return snapshot(persisted, progress, events);
   });
 }
 
@@ -200,6 +234,7 @@ export async function performPetCommand(ownerId: string, command: PetCommand, ex
     }
     const now = new Date();
     let pet = await ensurePet(tx, ownerId, now);
+    let progress = await ensurePlayerProgress(tx, ownerId, pet);
     if (!expectedPetId || pet.id !== expectedPetId) throw new PetRequestError("companion_context_changed", 409);
     const prior = await tx.petEvent.findUnique({
       where: { petId_requestId: { petId: pet.id, requestId: command.requestId } }
@@ -207,7 +242,7 @@ export async function performPetCommand(ownerId: string, command: PetCommand, ex
 
     if (prior) {
       const events = await eventsForPet(tx, pet.id);
-      return { pet: snapshot(pet, events), feedback: eventView(prior), replayed: true };
+      return { pet: snapshot(pet, progress, events), feedback: eventView(prior), replayed: true };
     }
 
     // The actor lock serializes this database-backed limit across web nodes.
@@ -219,6 +254,7 @@ export async function performPetCommand(ownerId: string, command: PetCommand, ex
     let message: string;
     let animation: string;
     let accepted = true;
+    let xpAwarded = 0;
     let nextKind: CompanionKind | undefined;
     const currentCompanion = companionProfile(pet.kind);
 
@@ -245,6 +281,24 @@ export async function performPetCommand(ownerId: string, command: PetCommand, ex
       message = result.message;
       animation = result.animation;
       accepted = result.accepted;
+      if (accepted) {
+        const reward = grantCareReward(rewardLedger(progress), command.action, result.rewardCandidate, now.getTime());
+        xpAwarded = reward.xp;
+        if (xpAwarded > 0) {
+          const petLeveled = grantExperience(state, xpAwarded);
+          const playerValues = { level: progress.level, xp: progress.xp };
+          const playerLeveled = grantExperience(playerValues, xpAwarded);
+          if (petLeveled) {
+            state.stats.bond = Math.min(100, state.stats.bond + 5);
+            message += ` Eure Bindung erreicht Stufe ${state.level}.`;
+          }
+          if (playerLeveled) message += ` Du erreichst Stufe ${playerValues.level}.`;
+          progress = await tx.playerProgress.update({
+            where: { userId: ownerId },
+            data: { ...ledgerUpdate(reward.ledger), level: playerValues.level, xp: playerValues.xp }
+          });
+        }
+      }
     }
 
     pet = await persistState(tx, pet, state, nextKind);
@@ -256,11 +310,12 @@ export async function performPetCommand(ownerId: string, command: PetCommand, ex
         message,
         animation,
         accepted,
+        xpAwarded,
         occurredAt: now
       }
     });
     const events = await eventsForPet(tx, pet.id);
 
-    return { pet: snapshot(pet, events), feedback: eventView(event), replayed: false };
+    return { pet: snapshot(pet, progress, events), feedback: eventView(event), replayed: false };
   });
 }

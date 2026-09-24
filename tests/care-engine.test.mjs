@@ -7,7 +7,10 @@ import {
   bondTitle,
   createInitialState,
   deriveMood,
+  grantExperience,
+  MAX_LEVEL,
   normalizeState,
+  totalXpForLevel,
   xpRequiredForLevel
 } from "../lib/care-engine.ts";
 
@@ -25,9 +28,9 @@ test("creates a healthy initial companion", () => {
 test("advances awake needs by elapsed real time", () => {
   const initial = createInitialState(1_000);
   const advanced = advanceState(initial, 1_000 + HOUR);
-  assert.equal(advanced.stats.satiety, 73.9);
-  assert.equal(advanced.stats.energy, 80.85);
-  assert.equal(advanced.stats.joy, 73.35);
+  assert.equal(advanced.stats.satiety, 74.65);
+  assert.equal(advanced.stats.energy, 81.55);
+  assert.equal(advanced.stats.joy, 73.6);
 });
 
 test("sleep restores energy while needs still change gently", () => {
@@ -35,16 +38,19 @@ test("sleep restores energy while needs still change gently", () => {
   initial.sleeping = true;
   initial.stats.energy = 40;
   const advanced = advanceState(initial, 1_000 + 2 * HOUR);
-  assert.equal(advanced.stats.energy, 55);
-  assert.equal(advanced.stats.satiety, 73.4);
+  assert.equal(advanced.stats.energy, 58);
+  assert.equal(advanced.stats.satiety, 74.5);
 });
 
-test("feeding clamps satiety and avoids over-rewarding a full companion", () => {
+test("feeding a full companion is refused without XP or interaction", () => {
   const initial = createInitialState(1_000);
   initial.stats.satiety = 98;
   const result = applyCareAction(initial, "feed", 1_000);
-  assert.equal(result.state.stats.satiety, 100);
-  assert.equal(result.state.xp, 1);
+  assert.equal(result.state.stats.satiety, 98);
+  assert.equal(result.state.xp, 0);
+  assert.equal(result.state.interactions, 0);
+  assert.equal(result.rewardCandidate, 0);
+  assert.equal(result.accepted, false);
 });
 
 test("play is refused when energy is too low", () => {
@@ -60,19 +66,48 @@ test("sleep and wake are explicit reversible actions", () => {
   let state = createInitialState(1_000);
   state = applyCareAction(state, "sleep", 1_000).state;
   assert.equal(state.sleeping, true);
+  assert.equal(state.xp, 0);
   state = applyCareAction(state, "wake", 2_000).state;
   assert.equal(state.sleeping, false);
+  assert.equal(state.xp, 0);
 });
 
-test("care actions level the bond without unbounded stats", () => {
-  let state = createInitialState(1_000);
-  for (let index = 0; index < 10; index += 1) {
-    state = applyCareAction(state, "pet", 1_000 + index).state;
+test("sleeping blocks feeding, playing and petting without state gains", () => {
+  const sleeping = applyCareAction(createInitialState(1_000), "sleep", 1_000).state;
+  for (const action of ["feed", "play", "pet"]) {
+    const result = applyCareAction(sleeping, action, 1_000);
+    assert.equal(result.accepted, false);
+    assert.equal(result.rewardCandidate, 0);
+    assert.equal(result.state.interactions, 1);
+    assert.equal(result.state.level, 1);
+    assert.deepEqual(result.state.stats, sleeping.stats);
   }
-  assert.equal(state.level, 2);
-  assert.equal(state.xp, 0);
-  assert.equal(state.stats.joy, 100);
-  assert.equal(xpRequiredForLevel(state.level), 60);
+  assert.equal(applyCareAction(sleeping, "sleep", 1_000).accepted, false);
+  assert.equal(applyCareAction(createInitialState(1_000), "wake", 1_000).accepted, false);
+});
+
+test("progression curve has a hard cap and preserves level thresholds", () => {
+  assert.equal(MAX_LEVEL, 99);
+  assert.equal(totalXpForLevel(5), 268);
+  assert.equal(totalXpForLevel(10), 1_008);
+  assert.ok(totalXpForLevel(99) > 100_000);
+  assert.equal(xpRequiredForLevel(99), 0);
+  const progress = { level: 98, xp: xpRequiredForLevel(98) - 1 };
+  assert.equal(grantExperience(progress, 50), true);
+  assert.deepEqual(progress, { level: 99, xp: 0 });
+  assert.equal(grantExperience(progress, 500), false);
+  assert.deepEqual(progress, { level: 99, xp: 0 });
+});
+
+test("care at full joy and bond remains expressive but gives no XP", () => {
+  const full = createInitialState(1_000);
+  full.stats.joy = 100;
+  full.stats.bond = 100;
+  for (const action of ["play", "pet"]) {
+    const result = applyCareAction(full, action, 1_000);
+    assert.equal(result.accepted, true);
+    assert.equal(result.rewardCandidate, 0);
+  }
 });
 
 test("mood priorities sleeping and urgent needs", () => {
@@ -99,8 +134,8 @@ test("normalization repairs malformed persisted values", () => {
   assert.equal(state.stats.energy, 0);
   assert.equal(state.stats.joy, 74);
   assert.equal(state.createdAt, 0);
-  assert.equal(state.level, 10_000);
-  assert.equal(state.xp, 1_000_000);
+  assert.equal(state.level, 99);
+  assert.equal(state.xp, 0);
   assert.equal(state.interactions, 2_000_000_000);
 });
 

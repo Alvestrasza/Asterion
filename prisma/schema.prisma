@@ -19,6 +19,7 @@ model User {
   sessions       Session[]
   authenticators Authenticator[]
   pet            Pet?
+  playerProgress PlayerProgress?
   access         UserAccess?
   socialProfile  SocialProfile?
   friendshipsLeft Friendship[] @relation("FriendLeft")
@@ -225,11 +226,28 @@ model Pet {
   sleeping       Boolean    @default(false)
   level          Int        @default(1)
   xp             Int        @default(0)
+  preCapLevel    Int?
+  preCapXp       Int?
   interactions   Int        @default(0)
   version        Int        @default(1)
   createdAt      DateTime   @default(now())
   updatedAt      DateTime   @updatedAt
   events         PetEvent[]
+}
+
+// Account-wide progression and reward budget. Pet.level/xp remains companion-specific.
+model PlayerProgress {
+  userId String @id
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  level Int @default(1)
+  xp Int @default(0)
+  rewardDay String? @db.VarChar(10)
+  earnedToday Int @default(0)
+  lastFeedRewardAt DateTime?
+  lastPlayRewardAt DateTime?
+  lastPetRewardAt DateTime?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 }
 
 model PetEvent {
@@ -241,6 +259,7 @@ model PetEvent {
   message    String   @db.VarChar(320)
   animation  String   @db.VarChar(32)
   accepted   Boolean  @default(true)
+  xpAwarded  Int      @default(0)
   occurredAt DateTime @default(now())
 
   @@unique([petId, requestId])

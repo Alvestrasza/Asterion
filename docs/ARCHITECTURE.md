@@ -45,6 +45,16 @@ Production authentication fails closed unless `ASTERION_REQUIRED_ROLE` is config
 - the currently selected companion kind
 - an optimistic concurrency version
 
+`PlayerProgress` stores a separate account level and XP. This is the future
+source for account-wide companion-slot unlocks; each `Pet` retains its own level,
+XP and needs. The same care reward currently advances the account and the cared-for
+pet, but the counters are independent. Friend cards show the account level.
+
+The account row also holds the UTC-day XP budget and last rewarded time for each
+care action. These fields are committed in the same serializable transaction as
+the pet change and `PetEvent.xpAwarded`; a retried request ID cannot award again.
+See [progression and needs](PROGRESSION.md) for the versioned curve and pacing.
+
 `PetEvent` stores the journal and the idempotency key for every command. The `(petId, requestId)` unique constraint guarantees that a retried browser request cannot apply an action twice.
 
 ## Time progression and consistency

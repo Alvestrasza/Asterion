@@ -7,6 +7,7 @@ export type PetEventView = {
   message: string;
   animation: string;
   accepted: boolean;
+  xpAwarded: number;
   occurredAt: string;
 };
 
@@ -14,6 +15,8 @@ export type PetSnapshot = Omit<CompanionState, "journal"> & {
   id: string;
   kind: CompanionKind;
   version: number;
+  playerLevel: number;
+  playerXp: number;
   journal: Array<{ id: string; at: number; text: string; action: string }>;
 };
 

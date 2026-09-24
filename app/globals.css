@@ -702,6 +702,10 @@ h2 {
   font-variant-numeric: tabular-nums;
 }
 
+.xp-meter + .xp-copy {
+  margin-top: 18px;
+}
+
 .xp-meter > span {
   background: linear-gradient(90deg, #9f7831, var(--gold-soft));
 }
@@ -1360,13 +1364,22 @@ dialog::backdrop {
 
   .identity-strip {
     width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .identity-strip > div,
   .identity-strip .bond-identity {
     min-width: 0;
-    flex: 1;
     padding: 12px;
+  }
+
+  .identity-strip > div:nth-child(2) {
+    border-right: 0;
+  }
+
+  .identity-strip > div:nth-child(-n + 2) {
+    border-bottom: 1px solid var(--line);
   }
 
   .identity-strip strong {

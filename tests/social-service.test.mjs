@@ -16,7 +16,7 @@ function fixture() {
   let inTransaction = false;
   for (const id of ['a', 'b', 'c']) {
     profiles.set(id, { userId: id, username: `player_${id}`, friendCodeHash: hash(codes[id]), discoverable: true, lastSeenAt: new Date(), windowStartedAt: new Date(), windowCount: 0, requestDay: new Date(), requestCount: 0 });
-    users.set(id, { id, email: `${id}@example.invalid`, emailVerified: new Date(), access: { allowed: true }, pet: { level: 7 } });
+    users.set(id, { id, email: `${id}@example.invalid`, emailVerified: new Date(), access: { allowed: true }, playerProgress: { level: 7 } });
   }
   const user = id => users.has(id) ? { ...users.get(id), socialProfile: profiles.get(id) } : null;
   const findPair = where => where.id ? pairs.get(where.id) : [...pairs.values()].find(p => p.leftId === where.leftId_rightId.leftId && p.rightId === where.leftId_rightId.rightId);

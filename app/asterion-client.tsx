@@ -444,7 +444,9 @@ export function AsterionClient({
   const companion = companionProfile(pet.kind);
   const mood = moodPresentation(deriveMood(pet), companion.name);
   const requiredXp = xpRequiredForLevel(pet.level);
-  const xpPercent = Math.min(100, (pet.xp / requiredXp) * 100);
+  const xpPercent = requiredXp === 0 ? 100 : Math.min(100, (pet.xp / requiredXp) * 100);
+  const playerRequiredXp = xpRequiredForLevel(pet.playerLevel);
+  const playerXpPercent = playerRequiredXp === 0 ? 100 : Math.min(100, (pet.playerXp / playerRequiredXp) * 100);
   const spriteSource = companionAnimationAsset(companion.kind, animation, reducedMotion);
   const modelAsset = companion3DModelAsset(companion.kind);
   const syncLabel = busy
@@ -501,7 +503,8 @@ export function AsterionClient({
               </p>
               <div className="identity-strip" aria-label={`${companion.name}s Entwicklung`}>
                 <div><span>TAG</span><strong>{ageInDays(pet, pet.lastUpdatedAt)}</strong></div>
-                <div><span>STUFE</span><strong>{pet.level}</strong></div>
+                <div><span>PET-STUFE</span><strong>{pet.level}</strong></div>
+                <div><span>DEINE STUFE</span><strong>{pet.playerLevel}</strong></div>
                 <div className="bond-identity"><span>BINDUNG</span><strong>{bondTitle(pet.stats.bond)}</strong></div>
               </div>
             </div>
@@ -558,8 +561,10 @@ export function AsterionClient({
                 <Stat name="bond" label="Bindung" glyph="∞" value={pet.stats.bond} />
               </div>
               <div className="xp-block">
-                <div className="xp-copy"><span>Nächste Bindungsstufe</span><strong>{pet.xp} / {requiredXp} XP</strong></div>
+                <div className="xp-copy"><span>Bindungsstufe</span><strong>{requiredXp === 0 ? "MAX" : `${pet.xp} / ${requiredXp} XP`}</strong></div>
                 <div className="xp-meter" aria-hidden="true"><span style={{ width: `${xpPercent}%` }} /></div>
+                <div className="xp-copy"><span>Deine Stufe</span><strong>{playerRequiredXp === 0 ? "MAX" : `${pet.playerXp} / ${playerRequiredXp} XP`}</strong></div>
+                <div className="xp-meter" aria-hidden="true"><span style={{ width: `${playerXpPercent}%` }} /></div>
               </div>
             </article>
 
