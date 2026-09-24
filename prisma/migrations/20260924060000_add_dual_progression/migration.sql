@@ -1,5 +1,7 @@
 -- Apply only in a maintenance window after a verified backup and before the new app starts.
 -- Preserve any out-of-range legacy progress before enforcing the level-99 cap.
+BEGIN;
+
 ALTER TABLE "Pet"
   ADD COLUMN "preCapLevel" INTEGER,
   ADD COLUMN "preCapXp" INTEGER;
@@ -37,3 +39,5 @@ ALTER TABLE "PlayerProgress" ADD CONSTRAINT "PlayerProgress_range" CHECK (
   "level" BETWEEN 1 AND 99 AND "xp" >= 0 AND "earnedToday" BETWEEN 0 AND 160
 );
 ALTER TABLE "PetEvent" ADD CONSTRAINT "PetEvent_xp_nonnegative" CHECK ("xpAwarded" >= 0);
+
+COMMIT;
