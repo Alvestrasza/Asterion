@@ -1,10 +1,16 @@
 # Asterion project status
 
-## Issue #7 source candidate — not deployed
+## Current status — 2026-09-25
 
-The companion-collection source candidate supports one companion kind per account, five permanent slots unlocked by account levels 1/15/30/45/60, independent pet state and events, and owner-bound selection and care. Its additive migration preserves existing pets. The browser queue retains the original pet for each pending action. This section describes source work only: the new migration has not been applied, the candidate has not been published or activated, and real-user acceptance remains open.
+Issue [#7](https://github.com/Alvestrasza/Asterion/issues/7) adds a permanent collection of up to five distinct companions, with account-level unlocks at 1/15/30/45/60. The source was merged through [PR #17](https://github.com/Alvestrasza/Asterion/pull/17) after automated Windows checks and Linux CI. The reviewed additive database migration and sequential application activation completed on both public web nodes. Both nodes passed database-backed readiness; public HTTPS health and login responded, and anonymous pet access was rejected. The project owner reports that the requested two-account functional checks passed. Issue #7 is accepted on that owner report.
 
-The project owner reports completing v0.9.0 gameplay acceptance for issue #6. That report does not substitute for #7 migration or multi-pet acceptance.
+The functional acceptance is owner-reported, not an independently replayed browser test. Source checks, database migration, service readiness, public HTTPS and user acceptance are separate evidence levels. No operational addresses, credentials or private logs are published here. The dated sections below preserve earlier snapshots and their pending statements are superseded by this current status.
+
+## Historical issue #7 source candidate — 2026-09-24
+
+At the source-candidate cutoff, the companion collection supported one companion kind per account, five permanent slots unlocked by account levels 1/15/30/45/60, independent pet state and events, and owner-bound selection and care. Its additive migration was designed to preserve existing pets, and the browser queue retained the original pet for each pending action. At that earlier cutoff the migration, publication, activation and real-user acceptance were still pending.
+
+The project owner had already reported completing v0.9.0 gameplay acceptance for issue #6. That earlier report did not substitute for the subsequent #7 migration or multi-pet acceptance.
 
 ## v0.9.0 production rollout — 2026-09-24
 
