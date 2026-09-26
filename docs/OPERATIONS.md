@@ -39,6 +39,8 @@ Use the same immutable build on both nodes.
 
 Application rollback is an atomic switch to the previous immutable release followed by a service restart. Database rollback requires a migration-specific plan; never reverse a schema migration by restoring an old application alone. Prefer backward-compatible expand-and-contract migrations.
 
+The issue #8 event-key migration only adds nullable columns. The preceding companion-collection application can run against that expanded schema, so an application rollback may retain the added columns. Do not drop the columns during a rollback: that would discard localized event metadata. Verify the exact previous release and migration state before any live switch.
+
 ## Health and acceptance levels
 
 - Process: systemd reports the unit active.

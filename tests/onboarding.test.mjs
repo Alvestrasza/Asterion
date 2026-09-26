@@ -7,6 +7,7 @@ import * as engine from '../lib/care-engine.ts';
 import * as progression from '../lib/progression.ts';
 import { availableSlots, slotsForLevel } from '../lib/companion-slots.ts';
 import * as companions from '../lib/companions.ts';
+import * as speech from '../lib/companion-speech.ts';
 import { getSocialMessages } from '../lib/social-messages.ts';
 const compiled = ts.transpileModule(await readFile(new URL('../lib/pet-service.ts', import.meta.url), 'utf8'), { compilerOptions: { target: ts.ScriptTarget.ES2022, module: ts.ModuleKind.CommonJS } }).outputText;
 function fixture() {
@@ -33,6 +34,7 @@ function fixture() {
     },
     petEvent: {
       async create({ data }) { const row = { id: `event-${events.length}`, xpAwarded: 0, ...data }; events.push(row); return row; },
+      async findFirst({ where }) { return events.filter(e => e.petId === where.petId).at(-1) ?? null; },
       async findMany({ where }) { return events.filter(e => e.petId === where.petId).toReversed().slice(0, 10); },
       async findUnique({ where }) { return events.find(e => e.ownerId === where.ownerId_requestId.ownerId && e.requestId === where.ownerId_requestId.requestId) ?? null; },
       async deleteMany({ where }) { for (let i = events.length - 1; i >= 0; i--) if (events[i].petId === where.petId) events.splice(i, 1); }
@@ -47,6 +49,7 @@ function fixture() {
       if (name === '@/lib/progression') return progression;
       if (name === '@/lib/companion-slots') return { availableSlots, slotsForLevel };
       if (name === '@/lib/companions') return companions;
+      if (name === '@/lib/companion-speech') return speech;
       if (name === '@/lib/db') return { prisma: { ...tx, $transaction: fn => fn(tx) } };
       if (name === '@/lib/deployment-config') return { isPublicDeployment: () => true };
       if (name === '@/lib/access-service') return { assertAccess: async (_, id) => accessChecks.push(id), consumeCareBudget: async () => true };
@@ -103,6 +106,74 @@ test('care XP is idempotent, shared by player and pet, and never awarded during 
   assert.equal(feed.feedback.xpAwarded, 15);
   assert.equal(feed.pet.xp, 31);
   assert.equal(feed.pet.playerXp, 31);
+});
+test('event keys survive locale changes and retries while old text remains readable', async () => {
+  const f = fixture();
+  const pet = await f.service.chooseFirstPet('pilot', 'rabbit', 'en');
+  assert.match(pet.journal[0].text, /Liora/);
+  assert.match(f.events[0].messageKey, /^v1\.rabbit\.adoption\.[01]$/);
+  const first = await f.service.performPetCommand('pilot', { requestId: 'care-1', action: 'pet' }, pet.id, 'fr');
+  assert.match(first.feedback.message, /Liora/);
+  assert.equal(first.feedback.localized, true);
+  assert.match(f.events[1].messageKey, /^v1\.rabbit\.pet\.[01]$/);
+  const replay = await f.service.performPetCommand('pilot', { requestId: 'care-1', action: 'pet' }, pet.id, 'es');
+  assert.equal(replay.replayed, true);
+  assert.equal(f.events.length, 2);
+  assert.equal(replay.feedback.message, speech.renderSpeech(f.events[1].messageKey, 'es'));
+  f.events[1].messageKey = null;
+  assert.equal((await f.service.getPetSnapshot('pilot', 'en')).journal[0].text, f.events[1].message);
+  const legacy = await f.service.performPetCommand('pilot', { requestId: 'care-1', action: 'pet' }, pet.id, 'en');
+  assert.equal(legacy.feedback.localized, false);
+});
+test('repeated care alternates authored feedback and level messages follow the requested locale', async () => {
+  const f = fixture();
+  const pet = await f.service.chooseFirstPet('pilot', 'dog');
+  await f.service.performPetCommand('pilot', { requestId: 'pet-a', action: 'pet' }, pet.id, 'en');
+  await f.service.performPetCommand('pilot', { requestId: 'pet-b', action: 'pet' }, pet.id, 'en');
+  assert.notEqual(f.events[1].messageKey, f.events[2].messageKey);
+  await f.service.performPetCommand('pilot', { requestId: 'feed-a', action: 'feed' }, pet.id, 'en');
+  const level = await f.service.performPetCommand('pilot', { requestId: 'play-a', action: 'play' }, pet.id, 'fr');
+  assert.equal(level.pet.level, 2);
+  assert.match(level.feedback.message, /niveau 2/);
+  assert.match(f.events.at(-1).messageKey, /^v1\.dog\.play\.[01]$/);
+  const replay = await f.service.performPetCommand('pilot', { requestId: 'play-a', action: 'play' }, pet.id, 'es');
+  assert.match(replay.feedback.message, /nivel 2/);
+  assert.equal(replay.replayed, true);
+});
+test('inactive companions show independent offline needs without changing stored state on collection read', async () => {
+  const f = fixture();
+  const first = await f.service.chooseFirstPet('pilot', 'elf');
+  f.progress.get('pilot').level = 15;
+  const second = await f.service.adoptAdditionalPet('pilot', 'pony', 'adopt-pony');
+  const old = new Date(Date.now() - 8 * 60 * 60 * 1000);
+  f.pets.get(first.id).bornAt = old;
+  f.pets.get(second.id).bornAt = old;
+  f.pets.get(first.id).lastAdvancedAt = old;
+  f.pets.get(second.id).lastAdvancedAt = old;
+  f.pets.get(first.id).sleeping = true;
+  f.pets.get(first.id).energy = 40;
+  const collection = await f.service.getPetCollection('pilot');
+  assert.ok(collection.pets[0].energy > 40);
+  assert.ok(collection.pets[1].energy < 82);
+  assert.equal(f.pets.get(first.id).energy, 40);
+  assert.equal(f.pets.get(second.id).energy, 82);
+  assert.equal((await f.service.getPetSnapshot('pilot')).returnedAfterAbsence, true);
+});
+test('sleep and full-care feedback describe the actual state without awarding XP', async () => {
+  const f = fixture();
+  const pet = await f.service.chooseFirstPet('pilot', 'cat');
+  await f.service.performPetCommand('pilot', { requestId: 'sleep-1', action: 'sleep' }, pet.id, 'en');
+  const blocked = await f.service.performPetCommand('pilot', { requestId: 'feed-asleep', action: 'feed' }, pet.id, 'en');
+  assert.equal(blocked.feedback.accepted, false);
+  assert.equal(blocked.feedback.xpAwarded, 0);
+  assert.match(f.events.at(-1).messageKey, /^v1\.cat\.resting\.[01]$/);
+  assert.match(blocked.feedback.message, /rest/i);
+  await f.service.performPetCommand('pilot', { requestId: 'wake-1', action: 'wake' }, pet.id, 'en');
+  f.pets.get(pet.id).satiety = 98;
+  const full = await f.service.performPetCommand('pilot', { requestId: 'feed-full', action: 'feed' }, pet.id, 'en');
+  assert.equal(full.feedback.accepted, false);
+  assert.equal(full.feedback.xpAwarded, 0);
+  assert.match(f.events.at(-1).messageKey, /^v1\.cat\.satisfied\.[01]$/);
 });
 test('account milestones unlock at most five permanent, distinct companions', async () => {
   assert.deepEqual([1, 14, 15, 29, 30, 44, 45, 59, 60, 99].map(slotsForLevel), [1, 1, 2, 2, 3, 3, 4, 4, 5, 5]);

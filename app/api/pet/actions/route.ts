@@ -5,6 +5,7 @@ import { hasSameOrigin, readBoundedJson } from "@/lib/http";
 import { performPetCommand, PetRequestError } from "@/lib/pet-service";
 import { matchesExpectedActor } from "@/lib/actor-binding";
 import { AccessPolicyError } from "@/lib/access-policy";
+import { getRequestLocale } from "@/lib/request-locale";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -43,7 +44,7 @@ export async function POST(request: Request) {
   }
 
   try {
-    const result = await performPetCommand(actor.id, parsed.data, request.headers.get("x-asterion-pet") ?? undefined);
+    const result = await performPetCommand(actor.id, parsed.data, request.headers.get("x-asterion-pet") ?? undefined, await getRequestLocale());
     return Response.json(result, { headers: { "Cache-Control": "private, no-store" } });
   } catch (error) {
     const status = error instanceof AccessPolicyError ? 403 : error instanceof PetRequestError ? error.status : 503;

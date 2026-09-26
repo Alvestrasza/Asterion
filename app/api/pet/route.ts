@@ -1,6 +1,7 @@
 import { getCurrentActor } from "@/lib/current-actor";
 import { getPetCollection, getPetSnapshot, PetRequestError } from "@/lib/pet-service";
 import { matchesExpectedActor } from "@/lib/actor-binding";
+import { getRequestLocale } from "@/lib/request-locale";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -15,7 +16,7 @@ export async function GET(request: Request) {
   let pet;
   let collection;
   try {
-    pet = await getPetSnapshot(actor.id);
+    pet = await getPetSnapshot(actor.id, await getRequestLocale());
     collection = await getPetCollection(actor.id);
   } catch (error) {
     if (error instanceof PetRequestError) {

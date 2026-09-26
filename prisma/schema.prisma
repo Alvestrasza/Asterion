@@ -265,6 +265,8 @@ model PetEvent {
   requestId  String   @db.VarChar(64)
   action     String   @db.VarChar(32)
   message    String   @db.VarChar(320)
+  messageKey String?  @db.VarChar(80)
+  messageParams Json?
   animation  String   @db.VarChar(32)
   accepted   Boolean  @default(true)
   xpAwarded  Int      @default(0)
