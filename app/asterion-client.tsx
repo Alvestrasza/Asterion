@@ -28,6 +28,15 @@ import {
 import type { PetCommand, PetCommandResponse, PetSnapshot } from "@/lib/pet-contract";
 import { createRequestId } from "@/lib/request-id";
 import { formatJournalTime } from "@/lib/journal-time";
+import { getMessages } from "@/lib/messages";
+import {
+  careSpeechContext,
+  chooseSpeechKey,
+  moodLabel,
+  offlinePendingText,
+  renderSpeech,
+  speechForMood
+} from "@/lib/companion-speech";
 import { CompanionBackground } from "@/app/companion-background";
 import { CompanionArt } from "./companion-art";
 import { CompanionCollection, type CompanionCollectionView } from "./companion-collection";
@@ -145,7 +154,10 @@ export function AsterionClient({
 }) {
   const [pet, setPet] = useState(initialPet);
   const initialMood = moodPresentation(deriveMood(initialPet), companionProfile(initialPet.kind).name);
-  const [message, setMessage] = useState(initialMood.message);
+  const [message, setMessage] = useState(() => initialPet.returnedAfterAbsence
+    ? renderSpeech(chooseSpeechKey(initialPet.kind, "return", `${initialPet.id}:${initialPet.lastUpdatedAt}`), locale) ?? initialMood.message
+    : speechForMood(deriveMood(initialPet), initialPet.kind, locale, `${initialPet.id}:${initialPet.interactions}`));
+  const [messageLanguage, setMessageLanguage] = useState<Locale>(locale);
   const [animation, setAnimation] = useState(initialMood.animation);
   const [modelClip, setModelClip] = useState(() =>
     asterionClipForPresentation(initialMood.animation, initialPet.sleeping)
@@ -217,7 +229,8 @@ export function AsterionClient({
     nextPet: PetSnapshot,
     nextAnimation: string,
     nextMessage: string,
-    careAction?: CareAction
+    careAction?: CareAction,
+    localized = true
   ) => {
     if (transientTimer.current) clearTimeout(transientTimer.current);
     setAnimation(nextAnimation);
@@ -227,14 +240,16 @@ export function AsterionClient({
         : asterionClipForPresentation(nextAnimation, nextPet.sleeping)
     );
     setMessage(nextMessage);
+    setMessageLanguage(localized ? locale : "de");
     setAnimationKey((value) => value + 1);
     transientTimer.current = setTimeout(() => {
       const presentation = moodPresentation(deriveMood(nextPet), companionProfile(nextPet.kind).name);
       setAnimation(presentation.animation);
       setModelClip(asterionClipForPresentation(presentation.animation, nextPet.sleeping));
-      setMessage(presentation.message);
+      setMessage(speechForMood(deriveMood(nextPet), nextPet.kind, locale, `${nextPet.id}:${nextPet.interactions}`));
+      setMessageLanguage(locale);
     }, 3_400);
-  }, []);
+  }, [locale]);
 
   const flushQueue = useCallback(async function flushPending(): Promise<void> {
     if (flushing.current) return;
@@ -251,7 +266,7 @@ export function AsterionClient({
         if (result.pet.id === initialPet.id) {
           setPet(result.pet);
           showTransient(result.pet, result.feedback.animation, result.feedback.message,
-            result.feedback.accepted ? command.action : undefined);
+            result.feedback.accepted ? command.action : undefined, result.feedback.localized);
         }
         remaining = remaining.slice(1);
         writeQueue(queueKey, remaining);
@@ -338,7 +353,8 @@ export function AsterionClient({
           result.pet,
           result.feedback.animation,
           result.feedback.message,
-          result.feedback.accepted ? action : undefined
+          result.feedback.accepted ? action : undefined,
+          result.feedback.localized
         );
         return;
       } catch (error) {
@@ -362,12 +378,14 @@ export function AsterionClient({
     setQueueCount(queue.length);
     setOnline(false);
 
-    const optimistic = applyCareAction(pet, action, Date.now());
+    const optimistic = applyCareAction(pet, action, Date.now(), companionProfile(pet.kind).name, pet.kind);
+    const optimisticKey = chooseSpeechKey(pet.kind, careSpeechContext(action, optimistic.accepted, optimistic.state.sleeping), `${pet.id}:${requestId}`);
+    const optimisticMessage = renderSpeech(optimisticKey, locale) ?? optimistic.message;
     const optimisticPet: PetSnapshot = {
       ...pet,
       ...optimistic.state,
       journal: [
-        { id: `pending:${requestId}`, at: Date.now(), text: optimistic.message, action },
+        { id: `pending:${requestId}`, at: Date.now(), text: optimisticMessage, action, localized: true },
         ...pet.journal
       ].slice(0, 10)
     };
@@ -375,7 +393,7 @@ export function AsterionClient({
     showTransient(
       optimisticPet,
       optimistic.animation,
-      `${optimistic.message} Wird synchronisiert, sobald du wieder online bist.`,
+      `${optimisticMessage} ${offlinePendingText(locale)}`,
       optimistic.accepted ? action : undefined
     );
   }
@@ -390,7 +408,7 @@ export function AsterionClient({
     try {
       const result = await postCommand(command, userId, initialPet.id);
       setPet(result.pet);
-      showTransient(result.pet, result.feedback.animation, result.feedback.message);
+      showTransient(result.pet, result.feedback.animation, result.feedback.message, undefined, result.feedback.localized);
       showToast(successMessage);
     } catch (error) {
       if (error instanceof CommandError && [401, 403, 409].includes(error.status)) { setSessionChanged(true); window.location.replace("/login"); }
@@ -463,7 +481,7 @@ export function AsterionClient({
   }
 
   const companion = companionProfile(pet.kind);
-  const mood = moodPresentation(deriveMood(pet), companion.name);
+  const companionCopy = getMessages(locale).companions[pet.kind];
   const requiredXp = xpRequiredForLevel(pet.level);
   const xpPercent = requiredXp === 0 ? 100 : Math.min(100, (pet.xp / requiredXp) * 100);
   const playerRequiredXp = xpRequiredForLevel(pet.playerLevel);
@@ -522,7 +540,7 @@ export function AsterionClient({
         <main>
           <section className="hero" id="companion" aria-labelledby="pageTitle">
             <div className="hero-copy">
-              <p className="eyebrow">{companion.species}</p>
+              <p className="eyebrow" lang={locale}>{companionCopy.species}</p>
               <h1 id="pageTitle">{companion.name}</h1>
               <p className="hero-intro">
                 Wie geht es {companion.name}? Schau nach, ob dein Freund Hunger hat, spielen möchte oder müde ist.
@@ -536,7 +554,7 @@ export function AsterionClient({
             </div>
 
             <div className="companion-column">
-              <div className="speech-bubble" role="status" aria-live="polite">{message}</div>
+              <div className="speech-bubble" role="status" aria-live="polite" lang={messageLanguage}>{message}</div>
               <div className="pet-stage">
                 <CompanionBackground kind={companion.kind} />
                 <div className="orbit orbit-outer" aria-hidden="true" />
@@ -548,7 +566,7 @@ export function AsterionClient({
                 >
                   {modelAsset && ASTERION_3D_ENABLED ? (
                     <AsterionModel
-                      alt={companion.ariaLabel}
+                      alt={companionCopy.alt}
                       clip={modelClip}
                       enabled
                       fallbackSrc={spriteSource}
@@ -557,11 +575,11 @@ export function AsterionClient({
                       replayKey={animationKey}
                     />
                   ) : companion.kind === "asterion" ? (
-                    <CompanionArt alt={companion.ariaLabel} animation={animation} reducedMotion={reducedMotion} fill />
+                    <CompanionArt alt={companionCopy.alt} animation={animation} reducedMotion={reducedMotion} fill />
                   ) : (
                     <Image
                       src={spriteSource}
-                      alt={companion.ariaLabel}
+                      alt={companionCopy.alt}
                       fill
                       sizes="(max-width: 590px) 290px, 330px"
                       priority
@@ -570,7 +588,7 @@ export function AsterionClient({
                   )}
                 </div>
               </div>
-              <div className="mood-chip"><span className="mood-dot" aria-hidden="true" /><span>{mood.label}</span></div>
+              <div className="mood-chip" lang={locale}><span className="mood-dot" aria-hidden="true" /><span>{moodLabel(deriveMood(pet), locale)}</span></div>
             </div>
           </section>
 
@@ -623,7 +641,7 @@ export function AsterionClient({
                     <time dateTime={new Date(entry.at).toISOString()}>
                       {formatJournalTime(entry.at, timeZone)}
                     </time>
-                    <p>{entry.text}</p>
+                    <p lang={entry.localized ? locale : "de"}>{entry.text}</p>
                   </li>
                 ))}
               </ol>

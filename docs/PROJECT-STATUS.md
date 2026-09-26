@@ -1,5 +1,11 @@
 # Asterion project status
 
+## Issue #8 draft source — 2026-09-26
+
+This source branch adds eight versioned companion care profiles and four-language speech. The candidate gives each kind gentle, measurable need and care differences; keeps per-pet state and account XP rules separate; stores new event keys and typed level parameters while rendering existing German events as legacy text; and adds localized speech, mood labels and image descriptions to the care view. See [the profile and content contract](COMPANION-PERSONALITIES.md).
+
+Windows validation of this candidate passed a frozen-lockfile installation, 396 automated tests (384 passed, 12 platform-dependent skips), TypeScript checking and a production build. This is source/build evidence only. The additive event migration has not been applied, no new release has been activated, and there is no Linux CI or real-user/browser acceptance for #8. The owner accepted the first editorial draft on 2026-09-26. Full localization of the remaining care controls belongs to issue #5; achievements are still issue #9.
+
 ## Current status — 2026-09-25
 
 Issue [#7](https://github.com/Alvestrasza/Asterion/issues/7) adds a permanent collection of up to five distinct companions, with account-level unlocks at 1/15/30/45/60. The source was merged through [PR #17](https://github.com/Alvestrasza/Asterion/pull/17) after automated Windows checks and Linux CI. The reviewed additive database migration and sequential application activation completed on both public web nodes. Both nodes passed database-backed readiness; public HTTPS health and login responded, and anonymous pet access was rejected. The project owner reports that the requested two-account functional checks passed. Issue #7 is accepted on that owner report.

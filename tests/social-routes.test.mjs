@@ -22,6 +22,7 @@ async function fixture(file) {
       if (name === '@/lib/current-actor') return { getCurrentActor: async () => actor };
       if (name === '@/lib/http') return { readBoundedJson, hasSameOrigin: request => hasSameOrigin(request, {}) };
       if (name === '@/lib/actor-binding') return { matchesExpectedActor };
+      if (name === '@/lib/request-locale') return { getRequestLocale: async () => 'en' };
       if (name === '@/lib/access-policy') return { AccessPolicyError };
       if (name === '@/lib/friend-code-policy') return { normalizeFriendCode };
       if (name === '@/lib/companions') return { COMPANION_KINDS };
@@ -57,6 +58,7 @@ test('additional adoption requires a valid request ID and binds the caller to th
   assert.equal(f.calls[0][0], 'a');
   assert.equal(f.calls[0][1], 'cat');
   assert.equal(f.calls[0][2], '9a23e695-7db3-4b08-8915-a526cf3cbe4f');
+  assert.equal(f.calls[0][3], 'en');
 });
 test('companion selection rejects foreign origin, actor drift and unowned pet IDs', async () => {
   const f = await fixture('../app/api/pet/select/route.ts');

@@ -22,7 +22,7 @@ export default async function CarePage() {
     <div className="public-shell"><SiteHeader locale={locale} currentPath="/care" actor={actor} /></div>
     <ChooseCompanion actorId={actor.id} locale={locale} />
   </>;
-  const pet = await getPetSnapshot(actor.id);
+  const pet = await getPetSnapshot(actor.id, locale);
   const collection = await getPetCollection(actor.id);
   const t = getMessages(locale);
   return (
@@ -30,7 +30,7 @@ export default async function CarePage() {
       {locale !== "de" && <p className="care-navigation">{t.care.legacyLanguage}</p>}
       {/* The existing care screen is migrated in the next localization slice. */}
       <div lang="de">
-        <AsterionClient key={pet.id} initialPet={pet} collection={collection} userId={actor.id} userName={actor.name} internalTestMode={actor.internalTestMode} isAdmin={actor.isAdmin} locale={locale} originalPetId={collection.pets[0]?.id ?? pet.id} />
+        <AsterionClient key={`${pet.id}:${locale}`} initialPet={pet} collection={collection} userId={actor.id} userName={actor.name} internalTestMode={actor.internalTestMode} isAdmin={actor.isAdmin} locale={locale} originalPetId={collection.pets[0]?.id ?? pet.id} />
       </div>
     </>
   );

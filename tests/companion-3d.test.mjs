@@ -41,7 +41,7 @@ test("care actions and mood presentations select stable Asterion clips", () => {
   assert.equal(asterionClipForPresentation("idle", true), "sleep");
   assert.equal(asterionClipForPresentation("idle", false), "idle");
   assert.equal(asterionClipForPresentation("waiting", false), "walk");
-  assert.equal(asterionClipForPresentation("failed", false), "sleep");
+  assert.equal(asterionClipForPresentation("failed", false), "idle");
   assert.equal(asterionClipForPresentation("waving", false), "happy");
   assert.equal(asterionClipForPresentation("review", false), "idle");
 });

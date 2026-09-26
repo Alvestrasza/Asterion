@@ -1,3 +1,5 @@
+import { companionProfile, type CompanionKind } from "./companions.ts";
+
 export const SCHEMA_VERSION = 1;
 
 const HOUR_MS = 60 * 60 * 1000;
@@ -56,7 +58,7 @@ export const ACTION_DETAILS = Object.freeze({
   pet: {
     animation: "waving",
     label: "Streicheln",
-    message: "Er schmiegt den Kopf an deine Hand. Sein Sternenglanz wird wärmer."
+    message: (name: string) => `${name} schmiegt sich an deine Hand. Ein warmes Funkeln bleibt zurück.`
   },
   sleep: {
     animation: "idle",
@@ -135,19 +137,20 @@ export function normalizeState(candidate: unknown, now = Date.now()): CompanionS
   };
 }
 
-export function advanceState(input: unknown, now = Date.now()) {
+export function advanceState(input: unknown, now = Date.now(), kind: CompanionKind = "asterion") {
   const state = normalizeState(input, now);
+  const care = companionProfile(kind).care;
   const elapsedHours = clamp((now - state.lastUpdatedAt) / HOUR_MS, 0, MAX_OFFLINE_HOURS);
   if (elapsedHours === 0) return state;
 
   if (state.sleeping) {
-    state.stats.energy = clamp(state.stats.energy + 9 * elapsedHours);
-    state.stats.satiety = clamp(state.stats.satiety - 0.75 * elapsedHours);
-    state.stats.joy = clamp(state.stats.joy - 0.1 * elapsedHours);
+    state.stats.energy = clamp(state.stats.energy + care.sleepEnergyPerHour * elapsedHours);
+    state.stats.satiety = clamp(state.stats.satiety - care.sleepSatietyPerHour * elapsedHours);
+    state.stats.joy = clamp(state.stats.joy - care.sleepJoyPerHour * elapsedHours);
   } else {
-    state.stats.satiety = clamp(state.stats.satiety - 1.35 * elapsedHours);
-    state.stats.energy = clamp(state.stats.energy - 0.45 * elapsedHours);
-    state.stats.joy = clamp(state.stats.joy - 0.4 * elapsedHours);
+    state.stats.satiety = clamp(state.stats.satiety - care.awakeSatietyPerHour * elapsedHours);
+    state.stats.energy = clamp(state.stats.energy - care.awakeEnergyPerHour * elapsedHours);
+    state.stats.joy = clamp(state.stats.joy - care.awakeJoyPerHour * elapsedHours);
   }
 
   state.lastUpdatedAt = now;
@@ -200,9 +203,11 @@ export function applyCareAction(
   input: unknown,
   action: CareAction,
   now = Date.now(),
-  companionName = "Asterion"
+  companionName = "Asterion",
+  kind: CompanionKind = "asterion"
 ): CareResult {
-  const state = advanceState(input, now);
+  const state = advanceState(input, now, kind);
+  const care = companionProfile(kind).care;
   let message = `${companionName} beobachtet dich aufmerksam.`;
   let animation = "idle";
   let xp = 0;
@@ -215,7 +220,7 @@ export function applyCareAction(
     if (before >= 95) {
       return { state, animation: "idle", message: `${companionName} ist satt und bewahrt die Sternenbeere für später auf.`, leveledUp: false, accepted: false, rewardCandidate: 0 };
     }
-    state.stats.satiety = clamp(before + 22);
+    state.stats.satiety = clamp(before + care.feedSatietyGain);
     state.stats.joy = clamp(state.stats.joy + 2);
     state.stats.bond = clamp(state.stats.bond + 0.8);
     message = ACTION_DETAILS.feed.message(companionName);
@@ -245,7 +250,7 @@ export function applyCareAction(
     const canBenefit = state.stats.joy < 100 || state.stats.bond < 100;
     state.stats.energy = clamp(state.stats.energy - 4);
     state.stats.satiety = clamp(state.stats.satiety - 2);
-    state.stats.joy = clamp(state.stats.joy + 12);
+    state.stats.joy = clamp(state.stats.joy + care.playJoyGain);
     state.stats.bond = clamp(state.stats.bond + 2.2);
     message = ACTION_DETAILS.play.message(companionName);
     animation = ACTION_DETAILS.play.animation;
@@ -256,8 +261,8 @@ export function applyCareAction(
     }
     const canBenefit = state.stats.joy < 100 || state.stats.bond < 100;
     state.stats.joy = clamp(state.stats.joy + 9);
-    state.stats.bond = clamp(state.stats.bond + 2.8);
-    message = ACTION_DETAILS.pet.message;
+    state.stats.bond = clamp(state.stats.bond + care.petBondGain);
+    message = ACTION_DETAILS.pet.message(companionName);
     animation = ACTION_DETAILS.pet.animation;
     xp = canBenefit ? 16 : 0;
   } else if (action === "sleep") {
@@ -305,7 +310,7 @@ export function moodPresentation(mood: Mood, companionName = "Asterion") {
     sleeping: { label: "Schläft", animation: "idle", message: `${companionName} träumt zwischen stillen Sternen.` },
     hungry: { label: "Hungrig", animation: "waiting", message: "Eine Sternenbeere wäre jetzt genau richtig." },
     tired: { label: "Müde", animation: "failed", message: `${companionName} braucht langsam eine Pause.` },
-    lonely: { label: "Sehnsüchtig", animation: "waiting", message: "Er rückt ein kleines Stück näher und wartet auf dich." },
+    lonely: { label: "Sehnsüchtig", animation: "waiting", message: `${companionName} rückt ein kleines Stück näher und wartet auf dich.` },
     radiant: { label: "Strahlend", animation: "waving", message: `${companionName} leuchtet heute besonders hell.` },
     attentive: { label: "Aufmerksam", animation: "review", message: `${companionName} beobachtet die Sterne und dich sehr genau.` },
     calm: { label: "Geborgen", animation: "idle", message: `Alles ist ruhig. ${companionName} bleibt einfach bei dir.` }

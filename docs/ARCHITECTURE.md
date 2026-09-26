@@ -58,9 +58,11 @@ See [progression and needs](PROGRESSION.md) for the versioned curve and pacing.
 
 `PetEvent` stores each pet's journal. A unique `(ownerId, requestId)` constraint prevents a retried browser request from applying to a different pet or awarding account XP twice. Additional adoption has its own durable request ID. Selection changes only `PlayerProgress.activePetId`; it never copies or resets pet state. Public companion deletion, replacement and reset are unavailable.
 
+Issue #8 adds nullable `messageKey` and `messageParams` columns. New automatic events carry stable versioned speech keys and typed level parameters; `message` remains a German compatibility fallback during the additive rollout. Existing events without keys retain their stored German text. The API renders keyed events in the request locale without rewriting event identity, time, XP or history. The versioned profile and content matrix is described in [companion personalities](COMPANION-PERSONALITIES.md).
+
 ## Time progression and consistency
 
-Needs advance lazily whenever the pet is read or changed. The server calculates elapsed time, not the browser. Writes run in PostgreSQL `SERIALIZABLE` transactions and additionally require the expected pet version. Serialization failures, creation races, and version conflicts are retried within a small fixed bound.
+Needs advance lazily whenever the active pet is read or changed. Collection summaries project the other pets' elapsed needs without writing them; selecting or caring for one persists that pet's catch-up. The server calculates elapsed time, not the browser. Writes run in PostgreSQL `SERIALIZABLE` transactions and additionally require the expected pet version. Serialization failures, creation races, and version conflicts are retried within a small fixed bound.
 
 This design prevents lost updates when two devices or two web nodes act at nearly the same time.
 

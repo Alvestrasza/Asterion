@@ -5,6 +5,7 @@ import { hasSameOrigin, readBoundedJson } from "@/lib/http";
 import { matchesExpectedActor } from "@/lib/actor-binding";
 import { adoptAdditionalPet, chooseFirstPet, PetRequestError } from "@/lib/pet-service";
 import { AccessPolicyError } from "@/lib/access-policy";
+import { getRequestLocale } from "@/lib/request-locale";
 export const runtime = "nodejs";
 const schema = z.object({ kind: z.enum(COMPANION_KINDS), requestId: z.string().uuid().optional() }).strict();
 const reply = (body: unknown, status = 200) => Response.json(body, { status, headers: { "Cache-Control": "private, no-store" } });
@@ -17,9 +18,10 @@ export async function POST(request: Request) {
     let input;
     try { input = schema.safeParse(await readBoundedJson(request, 1024)); } catch { return reply({ error: "invalid_command" }, 400); }
     if (!input.success) return reply({ error: "invalid_command" }, 400);
+    const locale = await getRequestLocale();
     return reply({ pet: input.data.requestId
-      ? await adoptAdditionalPet(actor.id, input.data.kind, input.data.requestId)
-      : await chooseFirstPet(actor.id, input.data.kind) });
+      ? await adoptAdditionalPet(actor.id, input.data.kind, input.data.requestId, locale)
+      : await chooseFirstPet(actor.id, input.data.kind, locale) });
   } catch (error) {
     const status = error instanceof AccessPolicyError ? 403 : error instanceof PetRequestError ? error.status : 503;
     return reply({ error: error instanceof PetRequestError ? error.code : "temporarily_unavailable" }, status);

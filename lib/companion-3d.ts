@@ -36,7 +36,7 @@ export function asterionClipForPresentation(animation: string, sleeping: boolean
   if (sleeping) return "sleep";
 
   const clips: Record<string, AsterionClip> = {
-    failed: "sleep",
+    failed: "idle",
     idle: "idle",
     jumping: "play",
     review: "idle",
