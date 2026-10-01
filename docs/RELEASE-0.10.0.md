@@ -1,6 +1,6 @@
 # Starfriends 0.10.0
 
-Version: 1.0.0 | Updated: 2026-10-01 | Status: release candidate
+Version: 1.1.0 | Updated: 2026-10-01 | Status: source merged; production activation pending
 
 ## Changes
 
@@ -46,3 +46,12 @@ Confirm sleep controls, automatic rest, earned/locked presentation and language
 changes in a real authenticated session. Availability and functional acceptance
 remain separate. Current dated evidence is recorded in
 [project status](PROJECT-STATUS.md).
+
+## Verified staging — 2026-10-01
+
+PR #19 is merged. Exact-head Linux CI and the target Linux x86_64 build each
+passed all 408 tests, Prisma/TypeScript and production build. The identical
+verified artifact is installed inactive with preflight passed on both public
+nodes. Existing production remains on the accepted issue #8 application.
+Fresh owner backup, SQL migration, activation and authenticated acceptance are
+pending; no later evidence level is implied by source or artifact verification.

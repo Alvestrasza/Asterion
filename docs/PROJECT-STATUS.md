@@ -1,33 +1,47 @@
 # Asterion project status
 
-## Starfriends 0.10.0 — release candidate 2026-10-01
+## Starfriends 0.10.0 — source merged and release staged, 2026-10-01
 
-The next implementation adds a first catalog of eight account/companion
-achievements, permanent owner-bound progress, four-language earned/locked
-presentation and idempotent transactional awarding. The initial catalog adds
-no XP bonuses. Existing adoption/level and accepted positive-XP care evidence
-has an explicit additive backfill; historical healthy days are not invented.
+[PR #19](https://github.com/Alvestrasza/Asterion/pull/19) was merged as
+`9ba7a6bdd04de622f4ed1868e3bfffb164ef2bb9`, with the same tree as the tested
+release head. Version 0.10.0 adds eight private, permanent account/companion
+achievements with four-language presentation and replay-safe transactional
+recognition. The first catalog grants no bonus XP and does not invent
+historical healthy days. Feed, play and pet controls are disabled while asleep;
+zero energy starts automatic rest with correct awake/sleep elapsed rates.
+Visible care sessions refresh authoritative state while preserving queued care
+and rejecting obsolete responses. See [release notes](RELEASE-0.10.0.md) and
+[the achievement contract](ACHIEVEMENTS.md).
 
-The accompanying care correction disables feeding, playing and petting while
-asleep and starts sleep automatically at zero energy. Offline elapsed time
-splits at exhaustion and then restores energy using the companion's sleep
-rates. See [the source contract](ACHIEVEMENTS.md).
+Fresh Windows checks passed with Node 24.19.0 and pinned pnpm 11.19.0: frozen
+installation, 408 tests (396 passed, 12 platform skips, no failures),
+Prisma/TypeScript and production build. Exact-head
+[Linux CI](https://github.com/Alvestrasza/Asterion/actions/runs/36882808257)
+passed all 408 tests with no skips on Ubuntu 24.04, Node 22.23.3 and pnpm
+11.19.0. The merged-source CI also passed.
 
-Fresh Windows validation passed with Node 24.19.0 and the pinned pnpm 11.19.0:
-frozen-lockfile installation, 408 tests (396 passed, 12 platform-dependent
-skips, no failures), Prisma/TypeScript checks and the production build.
-The new tests include isolated PostgreSQL backfill/rollback/ownership checks,
-actual React markup, persisted auto-rest and out-of-order refresh protection.
-They do not establish actual Prisma transport or two-node gameplay acceptance.
+The exact merged source then passed frozen installation, all 408 tests with
+no skips, Prisma/TypeScript and production build on the target Linux x86_64
+architecture with Node 22.22.2. All tracked LFS content was checked against its
+source pointers for full target tests. The deployment artifact contains the
+eight unchanged approved runtime models; historical and editable models remain
+in the repository/build source. Archive integrity and the existing installation
+contract passed. The identical immutable artifact is installed **inactive** on
+both public web nodes, with service-account preflight passed.
 
-Linux CI for the original feature head passed all 408 tests, Prisma/TypeScript
-checks and a production build. Version 0.10.0 advances the application version
-and static cache generation; see [the release notes](RELEASE-0.10.0.md).
-The exact release head requires its own CI check. Issue #9 remains open;
-the target Linux artifact, migration, production activation and authenticated
-acceptance are separate.
-The accepted issue #8 deployment below remains the latest deployed application
-evidence. Full care-control localization remains issue #5.
+Both nodes still run the accepted issue #8 application and passed
+database-backed readiness after staging. The fresh owner backup, atomic
+achievement migration, coordinated activation and authenticated acceptance
+have **not** run. A source-pinned one-shot helper and recovery plan are prepared.
+The old care/adoption writers must remain stopped through evidence backfill
+and activation on both nodes. Owner secret entry remains local to the operator.
+
+The isolated full-migration verification accepts exact backfill and unchanged
+legacy rows and rejects fabricated healthy days, corrupted recognition and
+cross-owner care facts. Its PGlite transport adapter is separate from actual
+Prisma wire transport and multi-node/browser acceptance. Issue #9 remains open
+until the remaining runtime checks pass. Full care-control localization remains
+issue #5. The dated sections below preserve prior proof and acceptance.
 
 ## Issue #8 production acceptance — 2026-10-01
 

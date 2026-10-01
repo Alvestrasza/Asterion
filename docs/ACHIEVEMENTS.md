@@ -1,6 +1,6 @@
-# Achievements and automatic rest — source candidate v1
+# Achievements and automatic rest — catalog v1
 
-Version: 1.0.0 | Updated: 2026-10-01 | Status: source candidate, not deployed
+Version: 1.1.0 | Updated: 2026-10-01 | Status: source merged; production activation pending
 
 Issue [#9](https://github.com/Alvestrasza/Asterion/issues/9) introduces permanent,
 private account and companion recognition. The initial authored catalog is a
@@ -118,3 +118,8 @@ Application rollback retains the additive tables and earned records; it does
 not undo committed data. Before later forward activation after old-app writes,
 review a care-event catch-up using only provable facts, with no fabricated
 healthy days. Do not drop recognition tables or restore a backup automatically.
+
+Current release evidence: exact-head Linux CI and the target Linux x86_64
+artifact both passed all 408 tests, Prisma/TypeScript and production build.
+The artifact is installed inactive on both public nodes; migration and runtime
+acceptance remain pending. See [project status](PROJECT-STATUS.md).
