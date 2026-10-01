@@ -1,6 +1,6 @@
 # Asterion project status
 
-## Issue #8 production activation — 2026-10-01
+## Issue #8 production acceptance — 2026-10-01
 
 Issue [#8](https://github.com/Alvestrasza/Asterion/issues/8) was merged through [PR #18](https://github.com/Alvestrasza/Asterion/pull/18). It adds eight versioned care profiles with distinct voices, authored German/English/French/Spanish speech, stable event keys and typed level parameters, localized journal rendering, and readable fallback for legacy German entries. See [the profile and content contract](COMPANION-PERSONALITIES.md).
 
@@ -8,7 +8,7 @@ Windows tests, TypeScript checks and production build passed, followed by [Linux
 
 Both nodes passed database-backed readiness after activation. Public HTTPS health reported a reachable database, the login page loaded after its language redirect, and anonymous pet access returned HTTP 401. The public home and identity-provider login path also loaded in a browser.
 
-The owner accepted the first editorial draft. Authenticated companion-action persistence, four-language journal rendering, companion switching and two-account isolation are awaiting the owner's runtime check; issue #8 remains open. This rollout evidence does not substitute for those checks. Full localization of the remaining care controls belongs to issue #5; achievement awarding belongs to issue #9. The deployed application source remains pinned to the commit above; this status update changes documentation only.
+The owner accepted the first editorial draft and confirmed production acceptance of issue #8 on 2026-10-01 in response to the requested runtime checklist covering preserved companions and journals, state-appropriate speech, four-language keyed journal rendering, action persistence, companion switching and two-account isolation. This is owner-reported functional acceptance; source/build and independently checked availability evidence are recorded separately above. Issue #8 is complete. Full localization of the remaining care controls belongs to issue #5; achievement awarding belongs to issue #9. The deployed application source remains pinned to the commit above; this status update changes documentation only.
 
 ## Historical issue #8 source candidate — 2026-09-26
 
