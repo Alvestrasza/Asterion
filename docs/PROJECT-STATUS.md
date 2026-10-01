@@ -1,5 +1,31 @@
 # Asterion project status
 
+## Issue #9 and automatic rest — source candidate 2026-10-01
+
+The next implementation adds a first catalog of eight account/companion
+achievements, permanent owner-bound progress, four-language earned/locked
+presentation and idempotent transactional awarding. The initial catalog adds
+no XP bonuses. Existing adoption/level and accepted positive-XP care evidence
+has an explicit additive backfill; historical healthy days are not invented.
+
+The accompanying care correction disables feeding, playing and petting while
+asleep and starts sleep automatically at zero energy. Offline elapsed time
+splits at exhaustion and then restores energy using the companion's sleep
+rates. See [the source contract](ACHIEVEMENTS.md).
+
+Fresh Windows validation passed with Node 24.19.0 and the pinned pnpm 11.19.0:
+frozen-lockfile installation, 408 tests (396 passed, 12 platform-dependent
+skips, no failures), Prisma/TypeScript checks and the production build.
+The new tests include isolated PostgreSQL backfill/rollback/ownership checks,
+actual React markup, persisted auto-rest and out-of-order refresh protection.
+They do not establish actual Prisma transport or two-node gameplay acceptance.
+
+This is source-candidate evidence. Issue #9 remains open; Linux CI and the
+target Linux artifact, migration, production activation and authenticated
+acceptance are separate.
+The accepted issue #8 deployment below remains the latest deployed application
+evidence. Full care-control localization remains issue #5.
+
 ## Issue #8 production acceptance — 2026-10-01
 
 Issue [#8](https://github.com/Alvestrasza/Asterion/issues/8) was merged through [PR #18](https://github.com/Alvestrasza/Asterion/pull/18). It adds eight versioned care profiles with distinct voices, authored German/English/French/Spanish speech, stable event keys and typed level parameters, localized journal rendering, and readable fallback for legacy German entries. See [the profile and content contract](COMPANION-PERSONALITIES.md).

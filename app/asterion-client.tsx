@@ -40,6 +40,8 @@ import {
 import { CompanionBackground } from "@/app/companion-background";
 import { CompanionArt } from "./companion-art";
 import { CompanionCollection, type CompanionCollectionView } from "./companion-collection";
+import { AchievementCollection } from "./achievement-collection";
+import { achievementCopy } from "@/lib/achievements";
 
 const ASTERION_3D_ENABLED = process.env.NEXT_PUBLIC_ASTERION_3D_ENABLED === "true";
 
@@ -171,6 +173,9 @@ export function AsterionClient({
   const [reducedMotion, setReducedMotion] = useState(false);
   const [timeZone, setTimeZone] = useState<string>();
   const [sessionChanged, setSessionChanged] = useState(false);
+  const [achievementNotice, setAchievementNotice] = useState("");
+  const confirmedVersion = useRef(initialPet.version);
+  const achievementTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const flushing = useRef(false);
   const queueRetryTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const settingsDialog = useRef<HTMLDialogElement>(null);
@@ -178,6 +183,45 @@ export function AsterionClient({
   const transientTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const toastTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const queueKey = `asterion.pending-actions.v2.${userId}`;
+
+  const acceptServerResult = useCallback((result: PetCommandResponse) => {
+    confirmedVersion.current = Math.max(confirmedVersion.current, result.pet.version);
+    setPet(current => result.pet.version >= current.version ? result.pet : current);
+    if (result.replayed || !result.unlockedAchievements?.length) return;
+    const names = result.pet.achievements.filter(entry => result.unlockedAchievements.includes(entry.id)).map(entry => entry.name);
+    if (achievementTimer.current) clearTimeout(achievementTimer.current);
+    setAchievementNotice(`${achievementCopy(locale).unlocked}: ${names.join(", ")}`);
+    achievementTimer.current = setTimeout(() => setAchievementNotice(""), 6_000);
+  }, [locale]);
+
+  // Refresh elapsed server time while the page is open, without overriding queued care.
+  useEffect(() => {
+    let active = true;
+    const controller = new AbortController();
+    const refresh = async () => {
+      if (busy || queueCount > 0 || flushing.current || !navigator.onLine || document.visibilityState === "hidden") return;
+      try {
+        const response = await fetch("/api/pet", { cache: "no-store", credentials: "same-origin", signal: controller.signal,
+          headers: { "X-Asterion-Actor": userId } });
+        if (!response.ok) return;
+        const body = await response.json() as { pet: PetSnapshot };
+        if (!active || body.pet.id !== initialPet.id || body.pet.version <= confirmedVersion.current) return;
+        confirmedVersion.current = body.pet.version;
+        setPet(body.pet);
+        if (body.pet.sleeping !== pet.sleeping) {
+          if (transientTimer.current) clearTimeout(transientTimer.current);
+          const presentation = moodPresentation(deriveMood(body.pet), companionProfile(body.pet.kind).name);
+          setAnimation(presentation.animation);
+          setModelClip(asterionClipForPresentation(presentation.animation, body.pet.sleeping));
+          setMessage(speechForMood(deriveMood(body.pet), body.pet.kind, locale, `${body.pet.id}:${body.pet.interactions}`));
+          setMessageLanguage(locale);
+        }
+      } catch { /* The last confirmed state remains available while disconnected. */ }
+    };
+    const timer = setInterval(() => void refresh(), 30_000);
+    window.addEventListener("focus", refresh);
+    return () => { active = false; controller.abort(); clearInterval(timer); window.removeEventListener("focus", refresh); };
+  }, [busy, queueCount, userId, initialPet.id, pet.sleeping, locale]);
 
   useEffect(() => {
     // The old app had exactly one companion, so all v1 commands belong to it.
@@ -264,7 +308,7 @@ export function AsterionClient({
         const command = remaining[0];
         const result = await postCommand({ requestId: command.requestId, action: command.action }, userId, command.petId);
         if (result.pet.id === initialPet.id) {
-          setPet(result.pet);
+          acceptServerResult(result);
           showTransient(result.pet, result.feedback.animation, result.feedback.message,
             result.feedback.accepted ? command.action : undefined, result.feedback.localized);
         }
@@ -284,7 +328,7 @@ export function AsterionClient({
       setBusy(false);
       flushing.current = false;
     }
-  }, [queueKey, showToast, showTransient, userId, initialPet.id]);
+  }, [queueKey, showToast, showTransient, acceptServerResult, userId, initialPet.id]);
 
   useEffect(() => {
     setTimeZone(Intl.DateTimeFormat().resolvedOptions().timeZone);
@@ -326,6 +370,7 @@ export function AsterionClient({
       if (transientTimer.current) clearTimeout(transientTimer.current);
       if (toastTimer.current) clearTimeout(toastTimer.current);
       if (queueRetryTimer.current) clearTimeout(queueRetryTimer.current);
+      if (achievementTimer.current) clearTimeout(achievementTimer.current);
     };
   }, [flushQueue, queueKey]);
 
@@ -339,7 +384,7 @@ export function AsterionClient({
   }
 
   async function handleCare(action: CareAction) {
-    if (busy) return;
+    if (busy || (pet.sleeping && ["feed", "play", "pet"].includes(action))) return;
     const requestId = requestIdOrNotify();
     if (!requestId) return;
     const command = { requestId, action } satisfies PetCommand;
@@ -348,7 +393,7 @@ export function AsterionClient({
       setBusy(true);
       try {
         const result = await postCommand(command, userId, initialPet.id);
-        setPet(result.pet);
+        acceptServerResult(result);
         showTransient(
           result.pet,
           result.feedback.animation,
@@ -407,7 +452,7 @@ export function AsterionClient({
     setBusy(true);
     try {
       const result = await postCommand(command, userId, initialPet.id);
-      setPet(result.pet);
+      acceptServerResult(result);
       showTransient(result.pet, result.feedback.animation, result.feedback.message, undefined, result.feedback.localized);
       showToast(successMessage);
     } catch (error) {
@@ -529,6 +574,8 @@ export function AsterionClient({
         </SiteHeader>
 
         <div lang={locale}><CompanionCollection collection={collection} userId={userId} locale={locale} /></div>
+        <p className="achievement-notice" role="status" aria-live="polite" lang={locale}>{achievementNotice}</p>
+        <AchievementCollection achievements={pet.achievements ?? []} locale={locale} />
 
         {internalTestMode ? (
           <aside className="test-mode-banner" role="status">
@@ -615,13 +662,13 @@ export function AsterionClient({
             <article className="panel actions-panel">
               <div className="panel-heading"><div><p className="eyebrow">GEMEINSAME ZEIT</p><h2>Was möchtest du tun?</h2></div></div>
               <div className="action-grid">
-                <button className="care-action feed-action" disabled={busy} type="button" onClick={() => void handleCare("feed")}>
+                <button className="care-action feed-action" disabled={busy || pet.sleeping} type="button" onClick={() => void handleCare("feed")}>
                   <span className="action-glyph" aria-hidden="true">●</span><span><strong>Füttern</strong><small>Eine Sternenbeere</small></span>
                 </button>
-                <button className="care-action play-action" disabled={busy} type="button" onClick={() => void handleCare("play")}>
+                <button className="care-action play-action" disabled={busy || pet.sleeping} type="button" onClick={() => void handleCare("play")}>
                   <span className="action-glyph" aria-hidden="true">✦</span><span><strong>Spielen</strong><small>Einem Lichtfunken folgen</small></span>
                 </button>
-                <button className="care-action pet-action" disabled={busy} type="button" onClick={() => void handleCare("pet")}>
+                <button className="care-action pet-action" disabled={busy || pet.sleeping} type="button" onClick={() => void handleCare("pet")}>
                   <span className="action-glyph" aria-hidden="true">♡</span><span><strong>Streicheln</strong><small>Ein bisschen Zuwendung</small></span>
                 </button>
                 <button className="care-action sleep-action" disabled={busy} type="button" onClick={() => void handleCare(pet.sleeping ? "wake" : "sleep")}>

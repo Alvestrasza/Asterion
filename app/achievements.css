@@ -1,0 +1,13 @@
+/* Asterion achievements. Version: 1.0.0 | License: UNLICENSED | Updated: 2026-10-01 */
+.achievement-panel { margin-top: 1rem; }
+.achievement-panel h3 { margin-top: 1.2rem; }
+.achievement-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr)); gap: .75rem; list-style: none; padding: 0; }
+.achievement-card { display: flex; align-items: flex-start; gap: .7rem; padding: 1rem; border: 1px solid #dad4c9; border-radius: 1rem; background: #fffdf7; }
+.achievement-card > div { min-width: 0; flex: 1; }
+.achievement-card h4 { margin: 0 0 .4rem; }
+.achievement-card p { overflow-wrap: anywhere; margin: 0 0 .6rem; line-height: 1.5; }
+.achievement-card[data-earned="true"] { border-color: #6a8465; }
+.achievement-status { font-weight: 600; }
+.achievement-progress { display: block; margin-top: .4rem; }
+.achievement-card progress { display: block; width: 100%; margin-top: .4rem; accent-color: #6a8465; }
+.achievement-notice { min-height: 1.5rem; margin-block: .5rem; }

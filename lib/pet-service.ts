@@ -25,6 +25,7 @@ import {
   type SpeechContext
 } from "@/lib/companion-speech";
 import type { Locale } from "@/lib/i18n";
+import { readAchievements, recordAdoptionAchievements, recordCareAchievements } from "@/lib/achievement-service";
 
 export class PetRequestError extends Error {
   constructor(readonly code: string, readonly status: number) { super(code); }
@@ -125,7 +126,7 @@ function eventView(event: PetEvent, locale: Locale): PetEventView {
   };
 }
 
-function snapshot(pet: Pet, progress: PlayerProgress, events: PetEvent[], locale: Locale, returnedAfterAbsence = false): PetSnapshot {
+async function snapshot(tx: Prisma.TransactionClient, pet: Pet, progress: PlayerProgress, events: PetEvent[], locale: Locale, returnedAfterAbsence = false): Promise<PetSnapshot> {
   const state = petToState(pet);
   return {
     ...state,
@@ -135,6 +136,7 @@ function snapshot(pet: Pet, progress: PlayerProgress, events: PetEvent[], locale
     playerLevel: progress.level,
     playerXp: progress.xp,
     returnedAfterAbsence,
+    achievements: await readAchievements(tx, pet.ownerId, pet.id, locale),
     journal: events.map((event) => ({
       id: event.id,
       at: event.occurredAt.getTime(),
@@ -207,6 +209,7 @@ async function ensurePet(tx: Prisma.TransactionClient, ownerId: string, now: Dat
     }
   });
 
+  await recordAdoptionAchievements(tx, ownerId, now);
   return pet;
 }
 
@@ -222,7 +225,7 @@ export async function chooseFirstPet(ownerId: string, kind: CompanionKind, local
     const pet = await ensurePet(tx, ownerId, new Date(), kind);
     const progress = await ensurePlayerProgress(tx, ownerId, pet);
     if (!progress.activePetId) await tx.playerProgress.update({ where: { userId: ownerId }, data: { activePetId: pet.id } });
-    return snapshot(pet, progress, await eventsForPet(tx, pet.id), locale);
+    return snapshot(tx, pet, progress, await eventsForPet(tx, pet.id), locale);
   });
 }
 
@@ -239,7 +242,7 @@ export async function adoptAdditionalPet(ownerId: string, kind: CompanionKind, r
     const prior = await tx.pet.findUnique({ where: { ownerId_adoptionRequestId: { ownerId, adoptionRequestId: requestId } } });
     if (prior) {
       if (prior.kind !== kind) throw new PetRequestError("adoption_request_changed", 409);
-      return snapshot(prior, progress, await eventsForPet(tx, prior.id), locale);
+      return snapshot(tx, prior, progress, await eventsForPet(tx, prior.id), locale);
     }
     const count = await tx.pet.count({ where: { ownerId } });
     const slots = availableSlots(progress.level, progress.unlockedSlots);
@@ -257,7 +260,8 @@ export async function adoptAdditionalPet(ownerId: string, kind: CompanionKind, r
       animation: "waving", occurredAt: now
     } });
     await tx.playerProgress.update({ where: { userId: ownerId }, data: { unlockedSlots: slots, activePetId: pet.id } });
-    return snapshot(pet, progress, await eventsForPet(tx, pet.id), locale);
+    await recordAdoptionAchievements(tx, ownerId, now);
+    return snapshot(tx, pet, progress, await eventsForPet(tx, pet.id), locale);
   });
 }
 
@@ -276,7 +280,7 @@ export async function getPetCollection(ownerId: string) {
     return {
       pets: pets.map((pet) => {
         const advanced = advanceState(petToState(pet), now, companionProfile(pet.kind).kind);
-        return { id: pet.id, kind: pet.kind, level: pet.level, xp: pet.xp, sleeping: pet.sleeping,
+        return { id: pet.id, kind: pet.kind, level: pet.level, xp: pet.xp, sleeping: advanced.sleeping,
           satiety: advanced.stats.satiety, energy: advanced.stats.energy, joy: advanced.stats.joy, bond: advanced.stats.bond };
       }),
       activePetId, unlockedSlots: slots, playerLevel: progress.level
@@ -325,7 +329,7 @@ export async function getPetSnapshot(ownerId: string, locale: Locale = "de"): Pr
     const advanced = advanceState(petToState(pet), now.getTime(), companionProfile(pet.kind).kind);
     const persisted = await persistState(tx, pet, advanced);
     const events = await eventsForPet(tx, pet.id);
-    return snapshot(persisted, progress, events, locale, returnedAfterAbsence);
+    return snapshot(tx, persisted, progress, events, locale, returnedAfterAbsence);
   });
 }
 
@@ -348,7 +352,8 @@ export async function performPetCommand(ownerId: string, command: PetCommand, ex
     if (prior) {
       if (prior.petId !== pet.id || prior.action !== command.action) throw new PetRequestError("companion_context_changed", 409);
       const events = await eventsForPet(tx, pet.id);
-      return { pet: snapshot(pet, progress, events, locale), feedback: eventView(prior, locale), replayed: true };
+      const current = await persistState(tx, pet, advanceState(petToState(pet), now.getTime(), companionProfile(pet.kind).kind));
+      return { pet: await snapshot(tx, current, progress, events, locale), feedback: eventView(prior, locale), replayed: true, unlockedAchievements: [] };
     }
 
     // The actor lock serializes this database-backed limit across web nodes.
@@ -380,7 +385,7 @@ export async function performPetCommand(ownerId: string, command: PetCommand, ex
       animation = "waving";
       await tx.petEvent.deleteMany({ where: { petId: pet.id } });
     } else if (command.action === "restore") {
-      state = normalizeState(command.state, now.getTime());
+      state = advanceState(normalizeState(command.state, now.getTime()), now.getTime(), currentCompanion.kind);
       state.lastUpdatedAt = now.getTime();
       message = `${currentCompanion.name} erinnert sich wieder an eure gemeinsame Zeit.`;
       animation = "waving";
@@ -451,7 +456,7 @@ export async function performPetCommand(ownerId: string, command: PetCommand, ex
       }
     });
     const events = await eventsForPet(tx, pet.id);
-
-    return { pet: snapshot(pet, progress, events, locale), feedback: eventView(event, locale), replayed: false };
+    const unlockedAchievements = await recordCareAchievements(tx, ownerId, pet, event, now, progress.level);
+    return { pet: await snapshot(tx, pet, progress, events, locale), feedback: eventView(event, locale), replayed: false, unlockedAchievements };
   });
 }

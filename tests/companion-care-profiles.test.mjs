@@ -35,8 +35,10 @@ test("long offline periods remain bounded and do not cause irreversible harm", (
     const later = advanceState(initial, 1_000 + 90 * 24 * HOUR, kind);
     assert.ok(Object.values(later.stats).every((value) => value >= 0 && value <= 100), kind);
     assert.equal(later.level, 1);
-    assert.equal(later.sleeping, false);
-    const fed = applyCareAction(later, "feed", later.lastUpdatedAt, kind, kind);
+    assert.equal(later.sleeping, true);
+    assert.equal(later.stats.energy, 100);
+    const awake = applyCareAction(later, "wake", later.lastUpdatedAt, kind, kind).state;
+    const fed = applyCareAction(awake, "feed", later.lastUpdatedAt, kind, kind);
     assert.equal(fed.accepted, true, kind);
   }
 });

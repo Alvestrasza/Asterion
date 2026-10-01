@@ -28,6 +28,11 @@ Identity: Keycloak OIDC -> Auth.js database session
 
 The web nodes are stateless. PostgreSQL is the only authoritative store for pet state, action history, and Auth.js sessions.
 
+The issue #9 source candidate adds owner-bound permanent achievement progress
+and per-companion UTC care-day facts inside the existing serializable mutation
+transaction. See [achievements and automatic rest](ACHIEVEMENTS.md) for the
+versioned catalog, legacy policy and distinct rollout evidence.
+
 ## Identity and ownership
 
 Keycloak remains the identity source. Auth.js stores provider accounts and database sessions locally. Every pet row belongs to an Auth.js user; `(ownerId, kind)` is unique, so an account cannot adopt the same kind twice. API handlers derive the owner exclusively from the authenticated server session; no owner identifier is accepted from a request body.

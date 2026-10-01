@@ -37,6 +37,12 @@ Use the same immutable build on both nodes.
 
 ## Rollback
 
+The issue #9 source candidate requires a fresh backup and quiesced care/adoption
+writes through the atomic achievement backfill and both-node activation.
+The previous app is schema-compatible but cannot maintain the new ledger.
+Verify application DML privileges for both new tables; keep schema expansion
+and application rollback separate. See [the candidate contract](ACHIEVEMENTS.md).
+
 Application rollback is an atomic switch to the previous immutable release followed by a service restart. Database rollback requires a migration-specific plan; never reverse a schema migration by restoring an old application alone. Prefer backward-compatible expand-and-contract migrations.
 
 The issue #8 event-key migration only adds nullable columns. The preceding companion-collection application can run against that expanded schema, so an application rollback may retain the added columns. Do not drop the columns during a rollback: that would discard localized event metadata. Verify the exact previous release and migration state before any live switch.

@@ -1,5 +1,6 @@
 import type { CareAction, CompanionState } from "@/lib/care-engine";
 import type { CompanionKind } from "@/lib/companions";
+import type { AchievementId, AchievementView } from "@/lib/achievements";
 
 export type PetEventView = {
   id: string;
@@ -19,6 +20,7 @@ export type PetSnapshot = Omit<CompanionState, "journal"> & {
   playerLevel: number;
   playerXp: number;
   returnedAfterAbsence: boolean;
+  achievements: AchievementView[];
   journal: Array<{ id: string; at: number; text: string; action: string; localized: boolean }>;
 };
 
@@ -32,4 +34,5 @@ export type PetCommandResponse = {
   pet: PetSnapshot;
   feedback: PetEventView;
   replayed: boolean;
+  unlockedAchievements: AchievementId[];
 };

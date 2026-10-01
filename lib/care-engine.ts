@@ -141,16 +141,17 @@ export function advanceState(input: unknown, now = Date.now(), kind: CompanionKi
   const state = normalizeState(input, now);
   const care = companionProfile(kind).care;
   const elapsedHours = clamp((now - state.lastUpdatedAt) / HOUR_MS, 0, MAX_OFFLINE_HOURS);
+  if (state.stats.energy === 0) state.sleeping = true;
   if (elapsedHours === 0) return state;
 
-  if (state.sleeping) {
-    state.stats.energy = clamp(state.stats.energy + care.sleepEnergyPerHour * elapsedHours);
-    state.stats.satiety = clamp(state.stats.satiety - care.sleepSatietyPerHour * elapsedHours);
-    state.stats.joy = clamp(state.stats.joy - care.sleepJoyPerHour * elapsedHours);
-  } else {
-    state.stats.satiety = clamp(state.stats.satiety - care.awakeSatietyPerHour * elapsedHours);
-    state.stats.energy = clamp(state.stats.energy - care.awakeEnergyPerHour * elapsedHours);
-    state.stats.joy = clamp(state.stats.joy - care.awakeJoyPerHour * elapsedHours);
+  const hoursUntilSleep = state.stats.energy / care.awakeEnergyPerHour;
+  const awakeHours = state.sleeping ? 0 : Math.min(elapsedHours, hoursUntilSleep);
+  const sleepHours = elapsedHours - awakeHours;
+  state.stats.satiety = clamp(state.stats.satiety - care.awakeSatietyPerHour * awakeHours - care.sleepSatietyPerHour * sleepHours);
+  state.stats.joy = clamp(state.stats.joy - care.awakeJoyPerHour * awakeHours - care.sleepJoyPerHour * sleepHours);
+  state.stats.energy = clamp(state.stats.energy - care.awakeEnergyPerHour * awakeHours + care.sleepEnergyPerHour * sleepHours);
+  if (awakeHours < elapsedHours || (!state.sleeping && elapsedHours >= hoursUntilSleep)) {
+    state.sleeping = true;
   }
 
   state.lastUpdatedAt = now;
@@ -274,6 +275,9 @@ export function applyCareAction(
     animation = ACTION_DETAILS.sleep.animation;
     xp = 0;
   } else {
+    if (state.sleeping && state.stats.energy === 0) {
+      return { state, animation: "idle", message: `${companionName} braucht erst etwas Ruhe.`, leveledUp: false, accepted: false, rewardCandidate: 0 };
+    }
     if (!state.sleeping) {
       return { state, animation: "idle", message: `${companionName} ist schon wach.`, leveledUp: false, accepted: false, rewardCandidate: 0 };
     }
