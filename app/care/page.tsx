@@ -10,6 +10,7 @@ import { localizedPath } from "@/lib/i18n";
 import { SiteHeader } from "../site-header";
 import "../social.css";
 import "../companion-collection.css";
+import "../achievements.css";
 
 export const dynamic = "force-dynamic";
 export const metadata: Metadata = { robots: { index: false, follow: false } };

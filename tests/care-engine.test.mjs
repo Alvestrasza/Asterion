@@ -16,6 +16,35 @@ import {
 
 const HOUR = 60 * 60 * 1000;
 
+test("zero energy starts sleep even without elapsed time and blocks care", () => {
+  const state = createInitialState(1_000);
+  state.stats.energy = 0;
+  assert.equal(advanceState(state, 1_000).sleeping, true);
+  for (const action of ["feed", "pet", "play", "wake"]) {
+    const result = applyCareAction(state, action, 1_000);
+    assert.equal(result.state.sleeping, true);
+    assert.equal(result.accepted, false);
+    assert.equal(result.rewardCandidate, 0);
+    assert.equal(result.state.interactions, 0);
+  }
+});
+
+test("offline exhaustion splits awake decay and subsequent sleep recovery", () => {
+  const state = createInitialState(1_000);
+  state.stats.energy = 0.45;
+  const exhausted = advanceState(state, 1_000 + HOUR);
+  assert.equal(exhausted.sleeping, true);
+  assert.equal(exhausted.stats.energy, 0);
+  const after = advanceState(state, 1_000 + 3 * HOUR);
+  assert.equal(after.sleeping, true);
+  assert.equal(after.stats.energy, 18);
+  assert.ok(Math.abs(after.stats.satiety - (76 - 1.35 - 2 * 0.75)) < 1e-9);
+  assert.ok(Math.abs(after.stats.joy - (74 - 0.4 - 2 * 0.1)) < 1e-9);
+  const incremental = advanceState(exhausted, 1_000 + 3 * HOUR);
+  assert.deepEqual(incremental, after);
+  assert.equal(applyCareAction(after, "wake", 1_000 + 3 * HOUR).state.sleeping, false);
+});
+
 test("creates a healthy initial companion", () => {
   const state = createInitialState(1_000);
   assert.equal(state.schemaVersion, 1);

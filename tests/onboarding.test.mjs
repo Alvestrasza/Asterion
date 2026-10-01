@@ -8,10 +8,16 @@ import * as progression from '../lib/progression.ts';
 import { availableSlots, slotsForLevel } from '../lib/companion-slots.ts';
 import * as companions from '../lib/companions.ts';
 import * as speech from '../lib/companion-speech.ts';
+import * as achievements from '../lib/achievements.ts';
 import { getSocialMessages } from '../lib/social-messages.ts';
 const compiled = ts.transpileModule(await readFile(new URL('../lib/pet-service.ts', import.meta.url), 'utf8'), { compilerOptions: { target: ts.ScriptTarget.ES2022, module: ts.ModuleKind.CommonJS } }).outputText;
+const achievementCode = ts.transpileModule(await readFile(new URL('../lib/achievement-service.ts', import.meta.url), 'utf8'), { compilerOptions: { target: ts.ScriptTarget.ES2022, module: ts.ModuleKind.CommonJS } }).outputText;
 function fixture() {
   const pets = new Map(), progress = new Map(), events = [], accessChecks = [];
+  const achievementRows = new Map(), days = new Map();
+  const achievementModule = { exports: {} };
+  vm.runInNewContext(achievementCode, { exports: achievementModule.exports, module: achievementModule,
+    require: name => name === './achievements.ts' ? achievements : name === './progression.ts' ? progression : (() => { throw new Error(name); })() });
   const allPets = () => [...pets.values()];
   const matching = where => allPets().filter(p => Object.entries(where).every(([key, value]) => p[key] === value));
   const tx = {
@@ -32,6 +38,16 @@ function fixture() {
       async create({ data }) { const row = { level: 1, xp: 0, activePetId: null, unlockedSlots: 1, rewardDay: null, earnedToday: 0, lastFeedRewardAt: null, lastPlayRewardAt: null, lastPetRewardAt: null, ...data }; progress.set(data.userId, row); return row; },
       async update({ where, data }) { const row = progress.get(where.userId); Object.assign(row, data); return row; }
     },
+    achievementProgress: {
+      async findUnique({ where }) { const k = where.ownerId_scopeKey_achievementId; return structuredClone(achievementRows.get(JSON.stringify([k.ownerId,k.scopeKey,k.achievementId])) ?? null); },
+      async findMany({ where }) { return [...achievementRows.values()].filter(row => row.ownerId === where.ownerId && (row.scopeKey === where.OR[0].scopeKey || row.petId === where.OR[1].petId)); },
+      async upsert({ create, update }) { const key = JSON.stringify([create.ownerId,create.scopeKey,create.achievementId]); const prior = achievementRows.get(key); const row = prior ? { ...prior,...update } : { ...create }; achievementRows.set(key,row); return structuredClone(row); }
+    },
+    achievementCareDay: {
+      async findUnique({ where }) { const k = where.petId_day; return structuredClone(days.get(JSON.stringify([k.petId,k.day])) ?? null); },
+      async findMany({ where }) { return [...days.values()].filter(row => row.petId === where.petId && row.ownerId === where.ownerId); },
+      async upsert({ create, update }) { const key = JSON.stringify([create.petId,create.day]); const prior = days.get(key); const row = prior ? { ...prior,...update } : { ...create }; days.set(key,row); return structuredClone(row); }
+    },
     petEvent: {
       async create({ data }) { const row = { id: `event-${events.length}`, xpAwarded: 0, ...data }; events.push(row); return row; },
       async findFirst({ where }) { return events.filter(e => e.petId === where.petId).at(-1) ?? null; },
@@ -50,6 +66,7 @@ function fixture() {
       if (name === '@/lib/companion-slots') return { availableSlots, slotsForLevel };
       if (name === '@/lib/companions') return companions;
       if (name === '@/lib/companion-speech') return speech;
+      if (name === '@/lib/achievement-service') return achievementModule.exports;
       if (name === '@/lib/db') return { prisma: { ...tx, $transaction: fn => fn(tx) } };
       if (name === '@/lib/deployment-config') return { isPublicDeployment: () => true };
       if (name === '@/lib/access-service') return { assertAccess: async (_, id) => accessChecks.push(id), consumeCareBudget: async () => true };
@@ -89,9 +106,12 @@ test('care XP is idempotent, shared by player and pet, and never awarded during 
   assert.equal(first.feedback.xpAwarded, 16);
   assert.equal(first.pet.xp, 16);
   assert.equal(first.pet.playerXp, 16);
+  assert.ok(first.unlockedAchievements.includes('v1.first-care'));
+  assert.ok(first.pet.achievements.find(entry => entry.id === 'v1.first-care').earnedAt);
   const replay = await f.service.performPetCommand('pilot', { requestId: 'first', action: 'pet' }, adopted.id);
   assert.equal(replay.replayed, true);
   assert.equal(replay.pet.xp, 16);
+  assert.equal(replay.unlockedAchievements.length, 0);
   const rapid = await f.service.performPetCommand('pilot', { requestId: 'rapid', action: 'pet' }, adopted.id);
   assert.equal(rapid.feedback.xpAwarded, 0);
   const sleep = await f.service.performPetCommand('pilot', { requestId: 'sleep', action: 'sleep' }, adopted.id);
@@ -106,6 +126,25 @@ test('care XP is idempotent, shared by player and pet, and never awarded during 
   assert.equal(feed.feedback.xpAwarded, 15);
   assert.equal(feed.pet.xp, 31);
   assert.equal(feed.pet.playerXp, 31);
+});
+
+test('automatic sleep is persisted on reads and all care remains blocked at exhaustion', async () => {
+  const f = fixture();
+  const adopted = await f.service.chooseFirstPet('pilot', 'asterion');
+  const stored = f.pets.get(adopted.id);
+  stored.energy = 0.45;
+  stored.lastAdvancedAt = new Date(Date.now() - 2 * 60 * 60 * 1000);
+  stored.bornAt = stored.lastAdvancedAt;
+  const current = await f.service.getPetSnapshot('pilot');
+  assert.equal(current.sleeping, true);
+  assert.equal(stored.sleeping, true);
+  assert.ok(current.stats.energy >= 9 && current.stats.energy < 10);
+  for (const action of ['feed','play','pet']) {
+    const result = await f.service.performPetCommand('pilot', { requestId:`asleep-${action}`,action },adopted.id);
+    assert.equal(result.feedback.accepted,false);
+    assert.equal(result.feedback.xpAwarded,0);
+    assert.equal(result.unlockedAchievements.length,0);
+  }
 });
 test('event keys survive locale changes and retries while old text remains readable', async () => {
   const f = fixture();

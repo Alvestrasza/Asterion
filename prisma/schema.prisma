@@ -27,6 +27,8 @@ model User {
   chatIdentity ChatIdentity?
   chatBudget ChatBudget?
   chatReads ChatRead[]
+  achievements AchievementProgress[]
+  achievementDays AchievementCareDay[]
 }
 
 model SocialProfile {
@@ -234,7 +236,10 @@ model Pet {
   createdAt      DateTime   @default(now())
   updatedAt      DateTime   @updatedAt
   events         PetEvent[]
+  achievements AchievementProgress[]
+  achievementDays AchievementCareDay[]
 
+  @@unique([id, ownerId])
   @@unique([ownerId, kind])
   @@unique([ownerId, adoptionRequestId])
   @@index([ownerId, createdAt, id])
@@ -275,6 +280,36 @@ model PetEvent {
   @@unique([petId, requestId])
   @@unique([ownerId, requestId])
   @@index([petId, occurredAt(sort: Desc)])
+}
+
+// Permanent recognition: reset/import cannot delete or award these records.
+model AchievementProgress {
+  ownerId String
+  scopeKey String @db.VarChar(64)
+  achievementId String @db.VarChar(64)
+  petId String?
+  owner User @relation(fields: [ownerId], references: [id], onDelete: Cascade)
+  pet Pet? @relation(fields: [petId, ownerId], references: [id, ownerId], onDelete: Cascade)
+  catalogVersion Int @default(1)
+  progress Int @default(0)
+  earnedAt DateTime?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @default(now()) @updatedAt
+  @@id([ownerId, scopeKey, achievementId])
+  @@index([ownerId, petId])
+}
+
+// One qualified day per companion; pauses never remove prior progress.
+model AchievementCareDay {
+  ownerId String
+  petId String
+  day String @db.VarChar(10)
+  careMask Int
+  healthy Boolean @default(false)
+  owner User @relation(fields: [ownerId], references: [id], onDelete: Cascade)
+  pet Pet @relation(fields: [petId, ownerId], references: [id, ownerId], onDelete: Cascade)
+  @@id([petId, day])
+  @@index([ownerId, petId])
 }
 
 // Metadata-only tombstones prevent replaying identity attribute writes after uncertain outcomes.
