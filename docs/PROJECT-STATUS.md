@@ -1,12 +1,22 @@
 # Asterion project status
 
-## Issue #8 draft source — 2026-09-26
+## Issue #8 production activation — 2026-10-01
 
-This source branch adds eight versioned companion care profiles and four-language speech. The candidate gives each kind gentle, measurable need and care differences; keeps per-pet state and account XP rules separate; stores new event keys and typed level parameters while rendering existing German events as legacy text; and adds localized speech, mood labels and image descriptions to the care view. See [the profile and content contract](COMPANION-PERSONALITIES.md).
+Issue [#8](https://github.com/Alvestrasza/Asterion/issues/8) was merged through [PR #18](https://github.com/Alvestrasza/Asterion/pull/18). It adds eight versioned care profiles with distinct voices, authored German/English/French/Spanish speech, stable event keys and typed level parameters, localized journal rendering, and readable fallback for legacy German entries. See [the profile and content contract](COMPANION-PERSONALITIES.md).
 
-Windows validation of this candidate passed a frozen-lockfile installation, 396 automated tests (384 passed, 12 platform-dependent skips), TypeScript checking and a production build. This is source/build evidence only. The additive event migration has not been applied, no new release has been activated, and there is no Linux CI or real-user/browser acceptance for #8. The owner accepted the first editorial draft on 2026-09-26. Full localization of the remaining care controls belongs to issue #5; achievements are still issue #9.
+Windows tests, TypeScript checks and production build passed, followed by [Linux CI](https://github.com/Alvestrasza/Asterion/actions/runs/36225257136) and a build on the target Linux architecture. The project owner reports that the reviewed additive migration completed with all eleven migration checksums, nullable column types, preserved legacy rows and application privileges verified. The same verified standalone artifact from source commit `74c2ea145dc22b37686ada00f008d31776af9785` was then activated sequentially on both public web nodes.
 
-## Current status — 2026-09-25
+Both nodes passed database-backed readiness after activation. Public HTTPS health reported a reachable database, the login page loaded after its language redirect, and anonymous pet access returned HTTP 401. The public home and identity-provider login path also loaded in a browser.
+
+The owner accepted the first editorial draft. Authenticated companion-action persistence, four-language journal rendering, companion switching and two-account isolation are awaiting the owner's runtime check; issue #8 remains open. This rollout evidence does not substitute for those checks. Full localization of the remaining care controls belongs to issue #5; achievement awarding belongs to issue #9. The deployed application source remains pinned to the commit above; this status update changes documentation only.
+
+## Historical issue #8 source candidate — 2026-09-26
+
+The source candidate added eight versioned companion care profiles and four-language speech. The candidate gives each kind gentle, measurable need and care differences; keeps per-pet state and account XP rules separate; stores new event keys and typed level parameters while rendering existing German events as legacy text; and adds localized speech, mood labels and image descriptions to the care view. See [the profile and content contract](COMPANION-PERSONALITIES.md).
+
+Windows validation of this candidate passed a frozen-lockfile installation, 396 automated tests (384 passed, 12 platform-dependent skips), TypeScript checking and a production build. At the original source-candidate cutoff, this was source/build evidence only: the additive event migration, release activation, Linux CI and real-user/browser acceptance were still pending. The later CI and rollout evidence is recorded above. The owner accepted the first editorial draft on 2026-09-26. Full localization of the remaining care controls belongs to issue #5; achievements are still issue #9.
+
+## Historical issue #7 acceptance — 2026-09-25
 
 Issue [#7](https://github.com/Alvestrasza/Asterion/issues/7) adds a permanent collection of up to five distinct companions, with account-level unlocks at 1/15/30/45/60. The source was merged through [PR #17](https://github.com/Alvestrasza/Asterion/pull/17) after automated Windows checks and Linux CI. The reviewed additive database migration and sequential application activation completed on both public web nodes. Both nodes passed database-backed readiness; public HTTPS health and login responded, and anonymous pet access was rejected. The project owner reports that the requested two-account functional checks passed. Issue #7 is accepted on that owner report.
 
