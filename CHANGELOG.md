@@ -1,5 +1,20 @@
 # Changelog
 
+## 0.10.0 - 2026-10-01
+
+- Add eight private account and companion achievements with permanent progress,
+  owner-bound persistence, four-language presentation and replay-safe awarding.
+- Recognize existing adoption, level and retained rewarded-care evidence without
+  inventing historical healthy days or changing the existing XP budget.
+- Disable feeding, playing and petting during sleep, and start sleep automatically
+  at zero energy with correct elapsed awake/sleep recovery.
+- Refresh visible care sessions from the server while preserving pending actions
+  and rejecting obsolete responses before updating speech or animation.
+- Advance the application version and static cache generation together.
+
+The release retains the accepted companion collection and personality work.
+See [the release notes](docs/RELEASE-0.10.0.md) for migration and acceptance gates.
+
 ## 0.9.0 - 2026-09-24
 
 - Add separate player and companion levels from 1 to 99 with a versioned XP curve.

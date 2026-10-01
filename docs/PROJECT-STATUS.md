@@ -1,6 +1,6 @@
 # Asterion project status
 
-## Issue #9 and automatic rest — source candidate 2026-10-01
+## Starfriends 0.10.0 — release candidate 2026-10-01
 
 The next implementation adds a first catalog of eight account/companion
 achievements, permanent owner-bound progress, four-language earned/locked
@@ -20,8 +20,11 @@ The new tests include isolated PostgreSQL backfill/rollback/ownership checks,
 actual React markup, persisted auto-rest and out-of-order refresh protection.
 They do not establish actual Prisma transport or two-node gameplay acceptance.
 
-This is source-candidate evidence. Issue #9 remains open; Linux CI and the
-target Linux artifact, migration, production activation and authenticated
+Linux CI for the original feature head passed all 408 tests, Prisma/TypeScript
+checks and a production build. Version 0.10.0 advances the application version
+and static cache generation; see [the release notes](RELEASE-0.10.0.md).
+The exact release head requires its own CI check. Issue #9 remains open;
+the target Linux artifact, migration, production activation and authenticated
 acceptance are separate.
 The accepted issue #8 deployment below remains the latest deployed application
 evidence. Full care-control localization remains issue #5.
