@@ -1,6 +1,6 @@
 # Achievements and automatic rest — catalog v1
 
-Version: 1.2.0 | Updated: 2026-10-05 | Status: 0.10.0 active; 0.10.1 presentation correction in progress
+Version: 1.3.0 | Updated: 2026-10-05 | Status: 0.10.1 active; authenticated functional acceptance open
 
 Issue [#9](https://github.com/Alvestrasza/Asterion/issues/9) introduces permanent,
 private account and companion recognition. The initial authored catalog is a
@@ -125,5 +125,7 @@ Current release evidence: exact-head Linux CI and the target Linux x86_64
 artifact both passed all 408 tests, Prisma/TypeScript and production build.
 The operator reported successful migration and the artifact was activated on
 both public nodes on 2026-10-05, with database readiness and public availability
-verified. The separate-page/theme correction and authenticated functional
-acceptance remain open. See [project status](PROJECT-STATUS.md).
+verified. The 0.10.1 separate-page/theme correction then passed Windows
+validation, all 410 Linux CI/target tests and both production-node readiness
+checks. The schema and award rules are unchanged. Authenticated functional
+acceptance remains open. See [project status](PROJECT-STATUS.md).

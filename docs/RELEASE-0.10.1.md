@@ -1,6 +1,6 @@
 # Starfriends 0.10.1
 
-Version: 1.0.0 | Updated: 2026-10-05 | Status: source verified; Linux and deployment gates pending
+Version: 1.1.0 | Updated: 2026-10-05 | Status: production active; functional acceptance open
 
 ## Changes
 
@@ -31,5 +31,14 @@ actor-scoped active-companion reads, internal shared-user warnings, four-languag
 navigation and accessible expanded collections. A synthetic browser preview
 of the actual React components passed desktop and 390px/320px layouts in all
 four languages, with card text contrast 17.42:1 and description contrast 9.12:1.
-Linux checks and production activation are tracked in
-[project status](PROJECT-STATUS.md). Authenticated user acceptance remains open.
+Exact-head Linux CI, merge CI and the target Linux x86_64 build each passed all
+410 tests without skips, Prisma/TypeScript and production build. PR #20 merged
+as `fb78408523ca47b1056e8528a28ec3a6056fd75c` with the same tested tree.
+
+The identical verified artifact was activated sequentially on both public
+nodes on 2026-10-05. Both passed database-backed readiness. Public checks
+confirmed cache version 0.10.1, healthy readiness, localized login and private
+non-cacheable anonymous achievements redirects without card disclosure. A
+browser reached login from the German achievements URL. No new migration or
+restoration ran. See [project status](PROJECT-STATUS.md) for the dated evidence;
+authenticated user acceptance remains open.

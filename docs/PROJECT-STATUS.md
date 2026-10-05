@@ -1,18 +1,37 @@
 # Asterion project status
 
-## Starfriends 0.10.1 — requested presentation correction, 2026-10-05
+## Starfriends 0.10.1 — production active, 2026-10-05
 
 The owner requested a separate achievements page and corrected dark-mode
 colors after the 0.10.0 activation. The patch introduces localized authenticated
 navigation, account and active-companion sections, and theme-based cards and
-progress bars. Care keeps its short unlock notices. No schema change is planned.
+progress bars. Care keeps its short unlock notices. The schema and all twelve
+migrations are unchanged.
 The final Windows checks passed frozen installation with pnpm 11.19.0, all 410
 tests (398 passed, 12 platform skips, no failures), Prisma/TypeScript and the
 production build. Both localized and unprefixed routes are dynamic. A browser
 preview of the actual React components with synthetic data passed desktop,
 390px and 320px layout checks in all four languages without horizontal overflow.
 Measured card text contrast is 17.42:1 and description contrast is 9.12:1.
-Publication, exact-head Linux CI, target artifact and activation are pending.
+[PR #20](https://github.com/Alvestrasza/Asterion/pull/20) merged as
+`fb78408523ca47b1056e8528a28ec3a6056fd75c`, with the same tree as the tested
+head. [Exact-head Linux CI](https://github.com/Alvestrasza/Asterion/actions/runs/37326219214),
+merge CI and the target Linux x86_64 build passed all 410 tests without skips,
+Prisma/TypeScript and production build. Approved runtime assets are unchanged.
+
+The identical verified immutable artifact was installed and activated
+sequentially on both public web nodes. Both passed separate status and
+database-backed readiness checks at the 2026-10-05 14:48 UTC cutoff. Public
+checks at 14:51 UTC confirmed healthy database readiness, static cache version
+0.10.1, the canonical redirect, the localized login page and anonymous API
+denials. All four achievements routes redirect anonymous visitors through the
+access gate without disclosing achievement cards; their dynamic responses are
+private and non-cacheable. A browser followed the German route to the login
+page. No new migration, database restoration or identity change was performed.
+
+Authenticated persistence, companion switching, cross-node replay/isolation and
+the owner's functional acceptance of issue #9 remain open. Layout previews use
+synthetic data and do not establish production authentication or gameplay.
 See [0.10.1 release notes](RELEASE-0.10.1.md).
 
 ## Starfriends 0.10.0 — production active, 2026-10-05
