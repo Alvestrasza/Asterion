@@ -1,4 +1,4 @@
-/** Asterion achievement regressions. Version: 1.0.0 | License: UNLICENSED | Updated: 2026-10-01 */
+/** Asterion achievement regressions. Version: 1.1.0 | License: UNLICENSED | Updated: 2026-10-05 */
 import test from "node:test";
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
@@ -174,8 +174,12 @@ test("additional adoption is permanent account recognition and cannot leak anoth
 test("actual React collection exposes locked/earned progress in each language without relying on color", () => {
   for (const locale of ["de","en","fr","es"]) {
     const entries = catalog.achievementViews(locale,[{achievementId:"v1.first-care",progress:1,earnedAt:now}]);
-    const html = renderToStaticMarkup(React.createElement(collection.AchievementCollection,{achievements:entries,locale}));
-    assert.match(html, /<details/);
+    const html = renderToStaticMarkup(React.createElement(collection.AchievementCollection,{achievements:entries,companionName:"Asterion",locale}));
+    assert.doesNotMatch(html, /<details/);
+    assert.equal((html.match(/<section/g) ?? []).length, 2);
+    assert.equal((html.match(/<h2/g) ?? []).length, 2);
+    assert.equal((html.match(/<h3/g) ?? []).length, 8);
+    assert.match(html, /Asterion/);
     assert.equal((html.match(/<progress/g) ?? []).length, 8);
     assert.ok(html.includes(catalog.achievementCopy(locale).earned));
     assert.ok(html.includes(catalog.achievementCopy(locale).locked));

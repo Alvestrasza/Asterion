@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.10.1 - 2026-10-05
+
+- Move achievements to their own authenticated page with localized navigation,
+  separate account and active-companion sections, and a return link to care.
+- Use the existing dark theme for achievement cards, text and progress bars.
+- Keep polite unlock notices on the care page and preserve progress, ownership,
+  automatic rest and sleep controls. No schema migration is introduced.
+
+See [the release notes](docs/RELEASE-0.10.1.md) for verification and rollout status.
+
 ## 0.10.0 - 2026-10-01
 
 - Add eight private account and companion achievements with permanent progress,

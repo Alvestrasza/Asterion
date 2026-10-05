@@ -1,5 +1,41 @@
 # Asterion project status
 
+## Starfriends 0.10.1 — requested presentation correction, 2026-10-05
+
+The owner requested a separate achievements page and corrected dark-mode
+colors after the 0.10.0 activation. The patch introduces localized authenticated
+navigation, account and active-companion sections, and theme-based cards and
+progress bars. Care keeps its short unlock notices. No schema change is planned.
+The final Windows checks passed frozen installation with pnpm 11.19.0, all 410
+tests (398 passed, 12 platform skips, no failures), Prisma/TypeScript and the
+production build. Both localized and unprefixed routes are dynamic. A browser
+preview of the actual React components with synthetic data passed desktop,
+390px and 320px layout checks in all four languages without horizontal overflow.
+Measured card text contrast is 17.42:1 and description contrast is 9.12:1.
+Publication, exact-head Linux CI, target artifact and activation are pending.
+See [0.10.1 release notes](RELEASE-0.10.1.md).
+
+## Starfriends 0.10.0 — production active, 2026-10-05
+
+The operator reports successful execution of the reviewed single achievement
+migration after a fresh fully readable backup with both old writers stopped.
+The twelve final migration checksums, unchanged companion/event/player rows,
+exact evidence backfill, owner constraints, indexes and application privileges
+passed according to the reported helper output.
+
+The verified immutable 0.10.0 artifact was then activated sequentially on both
+public web nodes. Separate status and database-backed readiness checks passed
+on both. Public HTTPS health, localized home/login pages and the canonical
+redirect passed; anonymous pet and actor endpoints rejected access. Browser
+navigation reached the identity-provider login form without an authenticated
+session. The synchronization timer remains enabled on one node only.
+
+These checks establish deployment and availability. Authenticated action
+persistence, cross-node continuity, replay, isolation and issue #9 functional
+acceptance remain open. The owner's presentation correction above is required
+follow-up work. The staging record below is historical and superseded by this
+activation milestone.
+
 ## Starfriends 0.10.0 — source merged and release staged, 2026-10-01
 
 [PR #19](https://github.com/Alvestrasza/Asterion/pull/19) was merged as

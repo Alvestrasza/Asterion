@@ -1,3 +1,4 @@
+/** Asterion dock rendering regressions. Version: 1.1.0 | License: UNLICENSED | Updated: 2026-10-05 */
 import test from "node:test";
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
@@ -11,6 +12,7 @@ import { getSocialMessages } from "../lib/social-messages.ts";
 import { getDockMessages } from "../lib/dock-messages.ts";
 import { getMessages } from "../lib/messages.ts";
 import { getAccessMessages } from "../lib/access-messages.ts";
+import { achievementCopy } from "../lib/achievements.ts";
 import { createDockPolling } from "../lib/dock-polling.ts";
 
 const require = createRequire(import.meta.url);
@@ -22,6 +24,7 @@ async function component(file, extra = {}) {
     "next/link": { default: ({ prefetch, ...props }) => React.createElement("a", props) },
     "@/lib/i18n": i18n, "@/lib/social-messages": { getSocialMessages }, "@/lib/dock-messages": { getDockMessages },
     "@/lib/dock-polling": { createDockPolling }, "@/lib/messages": { getMessages }, "@/lib/access-messages": { getAccessMessages },
+    "@/lib/achievements": { achievementCopy },
     "./friends-dock.module.css": { default: {} }, "./messenger": { Messenger: () => { throw new Error("No SSR conversation may open"); } },
     "./language-selector": { LanguageSelector: () => null }, "./actions": { logout: async () => {} },
     "./presence": { Presence: ({ actorId }) => React.createElement("span", { "data-presence": actorId }) },
@@ -46,7 +49,7 @@ test("server-rendered dock starts collapsed with a named accessible toggle and l
 
 test("all shared signed-in headers bind a single dock and presence worker to the actor; guests and internal mode do not", async () => {
   const { SiteHeader } = await component("../app/site-header.tsx");
-  for (const currentPath of ["/", "/care", "/friends", "/admin"]) {
+  for (const currentPath of ["/", "/care", "/achievements", "/friends", "/admin"]) {
     for (const actor of [null, { id: "player-a", name: "Player", isAdmin: true, internalTestMode: false }, { id: "shared", name: "Internal", isAdmin: false, internalTestMode: true }]) {
       const html = renderToStaticMarkup(React.createElement(SiteHeader, { locale: "en", currentPath, actor }));
       const publicActor = actor && !actor.internalTestMode;

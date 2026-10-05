@@ -1,3 +1,4 @@
+/** Asterion navigation and authorization regressions. Version: 1.1.0 | License: UNLICENSED | Updated: 2026-10-05 */
 import test from "node:test";
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
@@ -9,6 +10,8 @@ import { renderToStaticMarkup } from "react-dom/server";
 import { getMessages } from "../lib/messages.ts";
 import { getSocialMessages } from "../lib/social-messages.ts";
 import { getAccessMessages } from "../lib/access-messages.ts";
+import { achievementCopy, achievementViews } from "../lib/achievements.ts";
+import { companionProfile } from "../lib/companions.ts";
 import * as i18n from "../lib/i18n.ts";
 import { displayUsername } from "../lib/social-policy.ts";
 
@@ -22,6 +25,8 @@ async function component(file, extra = {}) {
     "next/navigation": { useRouter: () => ({ refresh() {} }) },
     "@/lib/messages": { getMessages }, "@/lib/social-messages": { getSocialMessages },
     "@/lib/access-messages": { getAccessMessages }, "@/lib/i18n": i18n,
+    "@/lib/achievements": { achievementCopy },
+    "@/lib/companions": { companionProfile },
     "@/lib/social-policy": { displayUsername },
     "./language-selector": { LanguageSelector: ({ locale }) => React.createElement("select", { "aria-label": "Language", defaultValue: locale }, React.createElement("option", { value: locale }, locale)) },
     "./actions": { logout: async () => {} },
@@ -51,9 +56,66 @@ test("shared navigation localizes routes and distinguishes anonymous, member, ad
       assert.equal(html.includes(`href="/${locale}/login"`), actor === null);
       assert.equal(html.includes(`href="/${locale}/admin"`), !!actor?.isAdmin && !actor.internalTestMode);
       assert.equal(html.includes(`href="/${locale}/friends"`), !!actor && !actor.internalTestMode);
+      assert.equal(html.includes(`href="/${locale}/achievements"`), !!actor);
       assert.equal(html.includes(getAccessMessages(locale).logout), !!actor && !actor.internalTestMode);
-      assert.doesNotMatch(html, /href="\/(care|friends|admin|login)"/);
+      assert.doesNotMatch(html, /href="\/(care|achievements|friends|admin|login)"/);
       if (actor && !actor.internalTestMode) assert.match(html, /aria-current="page"/);
+    }
+  }
+});
+
+test("achievements navigation preserves the current page when changing language", async () => {
+  for (const locale of i18n.LOCALES) {
+    const { SiteHeader } = await component("../app/site-header.tsx", {
+      "./language-selector": { LanguageSelector: ({ returnTo }) => {
+        assert.equal(returnTo, "/achievements");
+        assert.equal(i18n.languageReturnPath(returnTo), "/achievements");
+        return null;
+      } }
+    });
+    const html = renderToStaticMarkup(React.createElement(SiteHeader, { locale, currentPath: "/achievements", actor: { id: "member", name: "Member", isAdmin: false, internalTestMode: false } }));
+    assert.match(html, new RegExp(`<a[^>]+href="/${locale}/achievements"[^>]+aria-current="page">${achievementCopy(locale).nav}</a>`));
+  }
+});
+
+test("private achievements page gates reads, keeps onboarding and shows only the actor's active companion", async () => {
+  const { AchievementCollection } = await component("../app/achievement-collection.tsx");
+  for (const locale of i18n.LOCALES) {
+    for (const mode of ["anonymous", "new", "member-a", "member-b", "internal"]) {
+      const actor = mode === "anonymous" ? null : { id: mode, name: mode, isAdmin: false, internalTestMode: mode === "internal" };
+      const kind = mode === "member-b" ? "cat" : "asterion";
+      let petChecks = 0, snapshots = 0;
+      const { default: Page, metadata, dynamic } = await component("../app/achievements/page.tsx", {
+        "@/lib/current-actor": { getCurrentActor: async () => actor },
+        "@/lib/request-locale": { getRequestLocale: async () => locale },
+        "next/navigation": { redirect: path => { throw new Error(`redirect:${path}`); } },
+        "@/lib/pet-service": {
+          hasPet: async id => { assert.equal(id, actor.id); petChecks++; return mode !== "new"; },
+          getPetSnapshot: async (id, language) => {
+            assert.equal(id, actor.id); assert.equal(language, locale); snapshots++;
+            return { kind, achievements: achievementViews(locale, mode === "member-a" ? [{ achievementId: "v1.first-care", progress: 1, earnedAt: new Date("2026-10-01T12:00:00Z") }] : []) };
+          }
+        },
+        "../site-header": { SiteHeader: props => { assert.equal(props.currentPath, "/achievements"); assert.equal(props.actor, actor); return null; } },
+        "../achievement-collection": { AchievementCollection }, "../achievements.css": {}
+      });
+      assert.equal(dynamic, "force-dynamic");
+      assert.equal(metadata.robots.index, false);
+      if (mode === "anonymous" || mode === "new") {
+        await assert.rejects(Page(), new RegExp(`redirect:/${locale}/${mode === "anonymous" ? "access" : "care"}`));
+        assert.equal(snapshots, 0);
+        assert.equal(petChecks, mode === "anonymous" ? 0 : 1);
+      } else {
+        const html = renderToStaticMarkup(await Page());
+        assert.equal(petChecks, 1); assert.equal(snapshots, 1);
+        assert.ok(html.includes(companionProfile(kind).name));
+        assert.ok(!html.includes(companionProfile(kind === "cat" ? "asterion" : "cat").name));
+        assert.ok(html.includes(achievementCopy(locale).heading));
+        assert.match(html, new RegExp(`href="/${locale}/care"`));
+        assert.equal((html.match(/<h1/g) ?? []).length, 1);
+        assert.equal((html.match(/data-earned="true"/g) ?? []).length, mode === "member-a" ? 1 : 0);
+        assert.equal(html.includes("Alle Tester auf diesem Dienst teilen momentan denselben Spielstand"), mode === "internal");
+      }
     }
   }
 });

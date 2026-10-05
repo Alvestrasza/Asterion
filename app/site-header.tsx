@@ -1,18 +1,21 @@
 "use client";
 
+/** Asterion shared navigation. Version: 1.1.0 | License: UNLICENSED | Updated: 2026-10-05 */
+
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { localizedPath, type Locale } from "@/lib/i18n";
 import { getMessages } from "@/lib/messages";
 import { getAccessMessages } from "@/lib/access-messages";
 import { getSocialMessages } from "@/lib/social-messages";
+import { achievementCopy } from "@/lib/achievements";
 import { LanguageSelector } from "./language-selector";
 import { logout } from "./actions";
 import { FriendsDock } from "./friends/friends-dock";
 import { Presence } from "./presence";
 
 type HeaderActor = { id: string; name: string; isAdmin: boolean; internalTestMode: boolean };
-type PagePath = "/" | "/care" | "/friends" | "/admin";
+type PagePath = "/" | "/care" | "/achievements" | "/friends" | "/admin";
 
 export function SiteHeader({ locale, currentPath, actor, children, onLogout }: {
   locale: Locale; currentPath: PagePath; actor: HeaderActor | null;
@@ -23,6 +26,7 @@ export function SiteHeader({ locale, currentPath, actor, children, onLogout }: {
   const links: { path: PagePath; label: string }[] = [{ path: "/", label: t.nav.home }];
   if (actor) {
     links.push({ path: "/care", label: t.nav.care });
+    links.push({ path: "/achievements", label: achievementCopy(locale).nav });
     if (!actor.internalTestMode) links.push({ path: "/friends", label: getSocialMessages(locale).title });
     if (actor.isAdmin && !actor.internalTestMode) links.push({ path: "/admin", label: access.admin });
   }

@@ -1,4 +1,5 @@
-const CACHE_NAME = "asterion-static-v0.10.0";
+/* Asterion static cache. Version: 0.10.1 | License: UNLICENSED | Updated: 2026-10-05 */
+const CACHE_NAME = "asterion-static-v0.10.1";
 const STATIC_ASSETS = [
   "/offline.html",
   "/manifest.webmanifest",

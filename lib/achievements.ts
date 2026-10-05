@@ -1,6 +1,6 @@
 /**
  * Asterion: versioned achievement catalog and public view contract.
- * Version: 1.0.0 | License: UNLICENSED | Updated: 2026-10-01
+ * Version: 1.1.0 | License: UNLICENSED | Updated: 2026-10-05
  */
 import type { Locale } from "./i18n.ts";
 
@@ -23,9 +23,13 @@ export type AchievementView = {
 };
 
 type Copy = { heading: string; account: string; pet: string; earned: string; locked: string; unlocked: string;
+  nav: string; introduction: string; accountHint: string; petHint: string; careLink: string;
   entries: Record<AchievementId, readonly [string, string]> };
 const COPY: Record<Locale, Copy> = {
   de: { heading: "Deine Erfolge", account: "Deine Sammlung", pet: "Dieser Begleiter", earned: "Erreicht", locked: "Noch unterwegs", unlocked: "Neuer Erfolg",
+    nav: "Erfolge", introduction: "Kleine Schritte, die bleiben. Entdecke, was ihr gemeinsam schon erreicht habt und was noch vor euch liegt.",
+    accountHint: "Diese Erfolge gelten für deine gesamte Begleiterfamilie.",
+    petHint: "Hier siehst du die Erfolge deines aktiven Begleiters. Auf der Begleiterseite kannst du zu einem anderen wechseln.", careLink: "Zum Begleiter",
     entries: {
       "v1.first-adoption": ["Ein erster Stern", "Adoptiere deinen ersten Begleiter."],
       "v1.companion-family": ["Gemeinsam zu Hause", "Adoptiere zwei unterschiedliche Begleiter."],
@@ -37,6 +41,9 @@ const COPY: Record<Locale, Copy> = {
       "v1.healthy-bond": ["Vertraute Augenblicke", "Sammle 7 UTC-Tage mit XP-belohnter Pflege bei mindestens 50 Sättigung, Energie und Freude sowie 45 Bindung. Pausen sind willkommen."]
     } },
   en: { heading: "Your achievements", account: "Your collection", pet: "This companion", earned: "Earned", locked: "In progress", unlocked: "Achievement unlocked",
+    nav: "Achievements", introduction: "Small steps that stay with you. Discover what you have shared and what still lies ahead.",
+    accountHint: "These achievements belong to your whole companion family.",
+    petHint: "These are your active companion’s achievements. You can choose another companion on the care page.", careLink: "Visit your companion",
     entries: {
       "v1.first-adoption": ["A first star", "Adopt your first companion."],
       "v1.companion-family": ["At home together", "Adopt two different companions."],
@@ -48,6 +55,9 @@ const COPY: Record<Locale, Copy> = {
       "v1.healthy-bond": ["Familiar moments", "Collect 7 UTC days with XP-rewarded care at 50 or more satiety, energy and joy, and 45 bond. Breaks are welcome."]
     } },
   fr: { heading: "Tes réussites", account: "Ta collection", pet: "Ce compagnon", earned: "Obtenue", locked: "En chemin", unlocked: "Nouvelle réussite",
+    nav: "Réussites", introduction: "De petits pas qui restent. Découvre ce que vous avez déjà accompli ensemble et ce qui vous attend.",
+    accountHint: "Ces réussites concernent toute ta famille de compagnons.",
+    petHint: "Voici les réussites de ton compagnon actif. Tu peux en choisir un autre sur la page de soins.", careLink: "Retrouver ton compagnon",
     entries: {
       "v1.first-adoption": ["Une première étoile", "Adopte ton premier compagnon."],
       "v1.companion-family": ["Chez nous, ensemble", "Adopte deux compagnons différents."],
@@ -59,6 +69,9 @@ const COPY: Record<Locale, Copy> = {
       "v1.healthy-bond": ["Des moments familiers", "Cumule 7 jours UTC avec un soin récompensé par de l’XP, au moins 50 de satiété, d’énergie et de joie, et 45 de lien. Les pauses sont bienvenues."]
     } },
   es: { heading: "Tus logros", account: "Tu colección", pet: "Este compañero", earned: "Conseguido", locked: "En camino", unlocked: "Nuevo logro",
+    nav: "Logros", introduction: "Pequeños pasos que perduran. Descubre lo que habéis conseguido juntos y lo que aún os espera.",
+    accountHint: "Estos logros pertenecen a toda tu familia de compañeros.",
+    petHint: "Estos son los logros de tu compañero activo. Puedes elegir otro en la página de cuidados.", careLink: "Visitar a tu compañero",
     entries: {
       "v1.first-adoption": ["Una primera estrella", "Adopta a tu primer compañero."],
       "v1.companion-family": ["En casa, juntos", "Adopta a dos compañeros diferentes."],
