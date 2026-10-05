@@ -1,5 +1,7 @@
 "use client";
 
+/** Asterion care interface. Version: 1.1.1 | License: UNLICENSED | Updated: 2026-10-05 */
+
 import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { AsterionModel } from "@/app/asterion-model";
@@ -40,7 +42,6 @@ import {
 import { CompanionBackground } from "@/app/companion-background";
 import { CompanionArt } from "./companion-art";
 import { CompanionCollection, type CompanionCollectionView } from "./companion-collection";
-import { AchievementCollection } from "./achievement-collection";
 import { achievementCopy } from "@/lib/achievements";
 
 const ASTERION_3D_ENABLED = process.env.NEXT_PUBLIC_ASTERION_3D_ENABLED === "true";
@@ -575,7 +576,6 @@ export function AsterionClient({
 
         <div lang={locale}><CompanionCollection collection={collection} userId={userId} locale={locale} /></div>
         <p className="achievement-notice" role="status" aria-live="polite" lang={locale}>{achievementNotice}</p>
-        <AchievementCollection achievements={pet.achievements ?? []} locale={locale} />
 
         {internalTestMode ? (
           <aside className="test-mode-banner" role="status">

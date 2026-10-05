@@ -1,6 +1,6 @@
 # Starfriends 0.10.0
 
-Version: 1.1.0 | Updated: 2026-10-01 | Status: source merged; production activation pending
+Version: 1.2.0 | Updated: 2026-10-05 | Status: production active; functional acceptance open
 
 ## Changes
 
@@ -55,3 +55,13 @@ verified artifact is installed inactive with preflight passed on both public
 nodes. Existing production remains on the accepted issue #8 application.
 Fresh owner backup, SQL migration, activation and authenticated acceptance are
 pending; no later evidence level is implied by source or artifact verification.
+
+## Production activation — 2026-10-05
+
+The operator reports a successful fresh backup and single reviewed migration,
+with all twelve migration checksums, preserved legacy rows, evidence backfill,
+constraints and application privileges verified. The immutable artifact was
+then activated sequentially on both nodes and passed separate database-backed
+readiness and public availability checks. Authenticated functional acceptance
+remains open. The owner requested a dedicated achievements page and dark-mode
+correction, tracked in the [0.10.1 follow-up](RELEASE-0.10.1.md).

@@ -1,13 +1,41 @@
-/* Asterion achievements. Version: 1.0.0 | License: UNLICENSED | Updated: 2026-10-01 */
-.achievement-panel { margin-top: 1rem; }
-.achievement-panel h3 { margin-top: 1.2rem; }
-.achievement-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr)); gap: .75rem; list-style: none; padding: 0; }
-.achievement-card { display: flex; align-items: flex-start; gap: .7rem; padding: 1rem; border: 1px solid #dad4c9; border-radius: 1rem; background: #fffdf7; }
+/* Asterion achievements. Version: 1.1.0 | License: UNLICENSED | Updated: 2026-10-05 */
+.achievement-shell { width: min(100% - 40px, 1180px); margin: 0 auto; padding: 36px 0 72px; }
+.achievement-page-heading { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px; margin-bottom: 28px; }
+.achievement-page-heading > div { flex: 1 1 24rem; min-width: 0; }
+.achievement-page-heading h1 { margin: 0 0 12px; font-size: clamp(2rem, 5vw, 3rem); }
+.achievement-page-heading p, .achievement-hint { color: var(--muted); line-height: 1.65; max-width: 65ch; }
+.achievement-page-heading p { margin: 0; }
+.achievement-page-heading > .public-button { color: var(--text); text-decoration: none; background: var(--panel); }
+.achievement-collection { display: grid; gap: 24px; }
+.achievement-section { padding: clamp(18px, 3vw, 28px); }
+.achievement-section-heading { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+.achievement-section h2 { margin: 0; font-size: 1.4rem; }
+.achievement-companion { display: block; margin-top: 6px; color: var(--gold-soft); overflow-wrap: anywhere; }
+.achievement-total { margin: 0; color: var(--gold-soft); font-variant-numeric: tabular-nums; }
+.achievement-total span { color: var(--muted); font-size: .9rem; }
+.achievement-hint { margin: 12px 0 20px; }
+.achievement-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; list-style: none; margin: 0; padding: 0; }
+.achievement-card { display: flex; align-items: flex-start; gap: 12px; padding: 20px; border: 1px solid var(--line); border-radius: var(--radius-md); background: var(--bg); color: var(--text); }
+.achievement-card > img { flex: 0 0 36px; }
 .achievement-card > div { min-width: 0; flex: 1; }
-.achievement-card h4 { margin: 0 0 .4rem; }
-.achievement-card p { overflow-wrap: anywhere; margin: 0 0 .6rem; line-height: 1.5; }
-.achievement-card[data-earned="true"] { border-color: #6a8465; }
-.achievement-status { font-weight: 600; }
-.achievement-progress { display: block; margin-top: .4rem; }
-.achievement-card progress { display: block; width: 100%; margin-top: .4rem; accent-color: #6a8465; }
-.achievement-notice { min-height: 1.5rem; margin-block: .5rem; }
+.achievement-card h3 { margin: 0 0 8px; font-size: 1.05rem; line-height: 1.4; overflow-wrap: anywhere; }
+.achievement-card p { overflow-wrap: anywhere; margin: 0 0 16px; color: var(--muted); line-height: 1.6; }
+.achievement-card[data-earned="true"] { border-color: var(--line-strong); }
+.achievement-status { color: var(--azure-soft); font-weight: 600; }
+.achievement-card[data-earned="true"] .achievement-status { color: var(--gold-soft); }
+.achievement-progress { display: block; margin-top: 12px; color: var(--muted); font-size: .9rem; font-variant-numeric: tabular-nums; }
+.achievement-card progress { appearance: none; display: block; width: 100%; height: 8px; margin-top: 6px; overflow: hidden; border: 0; border-radius: 8px; background: var(--panel-strong); color: var(--azure); accent-color: var(--azure); }
+.achievement-card progress::-webkit-progress-bar { background: var(--panel-strong); border-radius: 8px; }
+.achievement-card progress::-webkit-progress-value { background: var(--azure); border-radius: 8px; }
+.achievement-card progress::-moz-progress-bar { background: var(--azure); border-radius: 8px; }
+.achievement-card[data-earned="true"] progress { color: var(--gold); accent-color: var(--gold); }
+.achievement-card[data-earned="true"] progress::-webkit-progress-value { background: var(--gold); }
+.achievement-card[data-earned="true"] progress::-moz-progress-bar { background: var(--gold); }
+.achievement-shell :focus-visible { outline: 3px solid var(--gold); outline-offset: 4px; }
+@media (max-width: 700px) {
+  .achievement-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 480px) {
+  .achievement-shell { width: calc(100% - 24px); padding-top: 24px; }
+  .achievement-card { padding: 16px; }
+}

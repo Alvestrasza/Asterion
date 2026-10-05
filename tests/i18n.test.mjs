@@ -1,3 +1,4 @@
+/** Asterion locale regressions. Version: 1.1.0 | License: UNLICENSED | Updated: 2026-10-05 */
 import test from "node:test";
 import assert from "node:assert/strict";
 import { normalizeLocale, resolveLocale, languageReturnPath, languageCookieOptions, localizedPath, pageRoute, keycloakLoginParameters } from "../lib/i18n.ts";
@@ -34,7 +35,7 @@ test("invalid qualities and excluded languages do not override a valid preferenc
 });
 
 test("language forms can only return to known local pages", () => {
-  for (const path of ["/", "/login", "/care"]) assert.equal(languageReturnPath(path), path);
+  for (const path of ["/", "/login", "/care", "/achievements"]) assert.equal(languageReturnPath(path), path);
   for (const path of ["https://evil.invalid", "//evil.invalid", "/\\evil.invalid", "/api/auth/signout", "/care?next=bad", null]) {
     assert.equal(languageReturnPath(path), "/");
   }
@@ -50,7 +51,7 @@ test("preference cookies support isolated HTTP testing without weakening public 
 
 test("localized page routes never rewrite API, asset or arbitrary redirect targets", () => {
   for (const locale of ["de", "en", "fr", "es"]) {
-    for (const path of ["/", "/login", "/care", "/friends", "/admin", "/access"]) {
+    for (const path of ["/", "/login", "/care", "/achievements", "/friends", "/admin", "/access"]) {
       const localized = localizedPath(path, locale);
       assert.deepEqual(pageRoute(localized), { path, locale });
       assert.equal(localizedPath(localized, "fr"), localizedPath(path, "fr"));

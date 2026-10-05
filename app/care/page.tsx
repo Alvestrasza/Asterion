@@ -1,3 +1,4 @@
+/** Asterion care page. Version: 1.1.1 | License: UNLICENSED | Updated: 2026-10-05 */
 import type { Metadata } from "next";
 import { redirect } from "next/navigation";
 import { getCurrentActor } from "@/lib/current-actor";
@@ -10,7 +11,6 @@ import { localizedPath } from "@/lib/i18n";
 import { SiteHeader } from "../site-header";
 import "../social.css";
 import "../companion-collection.css";
-import "../achievements.css";
 
 export const dynamic = "force-dynamic";
 export const metadata: Metadata = { robots: { index: false, follow: false } };

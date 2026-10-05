@@ -1,6 +1,6 @@
 # Achievements and automatic rest — catalog v1
 
-Version: 1.1.0 | Updated: 2026-10-01 | Status: source merged; production activation pending
+Version: 1.2.0 | Updated: 2026-10-05 | Status: 0.10.0 active; 0.10.1 presentation correction in progress
 
 Issue [#9](https://github.com/Alvestrasza/Asterion/issues/9) introduces permanent,
 private account and companion recognition. The initial authored catalog is a
@@ -49,9 +49,11 @@ care and recognition; normal unique/serialization retries remain bounded.
 The authenticated pet snapshot carries account and selected-companion
 achievements. The existing actor/ownership/access checks and private,
 no-store response remain in force. There is no public achievement feed or
-friend-profile disclosure. A collapsed collection on the care screen shows
-earned/locked text and labelled progress; icons are decorative and status
-does not depend on color. New care unlocks use a polite, temporary status
+friend-profile disclosure. The 0.10.1 correction moves the collection to its
+own authenticated localized achievements page with a shared navigation entry.
+Account and named active-companion sections show earned/locked text and labelled
+progress on dark theme surfaces. Icons are decorative and status does not depend
+on color. New care unlocks retain a polite, temporary status
 announcement. Offline care waits for server confirmation to earn recognition.
 
 ## Existing data, resets and imports
@@ -121,5 +123,7 @@ healthy days. Do not drop recognition tables or restore a backup automatically.
 
 Current release evidence: exact-head Linux CI and the target Linux x86_64
 artifact both passed all 408 tests, Prisma/TypeScript and production build.
-The artifact is installed inactive on both public nodes; migration and runtime
-acceptance remain pending. See [project status](PROJECT-STATUS.md).
+The operator reported successful migration and the artifact was activated on
+both public nodes on 2026-10-05, with database readiness and public availability
+verified. The separate-page/theme correction and authenticated functional
+acceptance remain open. See [project status](PROJECT-STATUS.md).

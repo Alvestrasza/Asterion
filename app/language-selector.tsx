@@ -1,5 +1,7 @@
 "use client";
 
+/** Asterion language navigation. Version: 1.1.0 | License: UNLICENSED | Updated: 2026-10-05 */
+
 import { LOCALES, localizedPath, type Locale } from "@/lib/i18n";
 import type { Messages } from "@/lib/messages";
 import { changeLanguage } from "./language-actions";
@@ -9,7 +11,7 @@ const languageNames = { de: "Deutsch", en: "English", fr: "Français", es: "Espa
 export function LanguageSelector({ locale, labels, returnTo }: {
   locale: Locale;
   labels: Messages["nav"];
-  returnTo: "/" | "/login" | "/care" | "/friends" | "/admin" | "/access";
+  returnTo: "/" | "/login" | "/care" | "/achievements" | "/friends" | "/admin" | "/access";
 }) {
   return (
     <form action={changeLanguage} className="language-selector">
